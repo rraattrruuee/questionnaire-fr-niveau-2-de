@@ -11,6 +11,7 @@ on:
       - "**/*.svg"
       - "**/*.png"
       - "scripts/generate-sw.sh"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 permissions:
