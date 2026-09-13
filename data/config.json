@@ -111,12 +111,12 @@
   "resources": [
     {
       "title": "Depot GitHub",
-      "url": "https://github.com/rraattrruuee/questionnaire-fr--niveau-2-de",
+      "url": "https://github.com/rraattrruuee/questionnaire-fr-niveau-2-de",
       "icon": "🐙"
     },
     {
       "title": "Signaler un probleme / Me contacter",
-      "url": "https://github.com/rraattrruuee/questionnaire-fr--niveau-2-de/issues",
+      "url": "https://github.com/rraattrruuee/questionnaire-fr-niveau-2-de/issues",
       "icon": "✉️"
     }
   ]
