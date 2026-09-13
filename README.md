@@ -226,12 +226,22 @@ Puissances : `x<sup>2</sup>` — Multiplication : `×` (pas `*`).
 
 ## QuizMaster Dynamique
 
-Outil de generation et d'importation de questionnaires :
+Outil de generation et d'importation de questionnaires (`quizmaster.html`) :
 
-1. **Prompt IA** : Copiez le prompt genere et utilisez-le avec une IA pour generer des questions au format JSON
-2. **Importer** : Chargez un fichier JSON ou collez le code directement
-3. **Tester** : Le quiz se lance automatiquement pour tester les questions
-4. **Exporter** : Exportez en fichier HTML autonome partageable
+1. **Prompt IA** : le **prompt complet** (format categorise, images, regles) est
+   integre dans la page ; bouton *Copier le prompt*.
+2. **Importer** : chargez un fichier JSON ou collez le code (formats simple ou
+   categorise, tous deux acceptes).
+3. **Apercu** : le quiz s'affiche dans un cadre avec **le moteur reel du site**
+   (`js/quiz.js` + `css/quiz.css`).
+4. **Exporter** : produit un **HTML autonome** qui embarque ce meme moteur, les
+   styles et les donnees.
+
+> QuizMaster ne recopie pas le moteur : il **lit les vrais fichiers** au moment
+> de l'apercu et de l'export. Toute modification de `quiz.html`, `js/quiz.js` ou
+> `css/quiz.css` est donc repercutee automatiquement, sans rien changer ici.
+> Pensez a relancer `bash scripts/generate-sw.sh` apres un changement de fichiers
+> pour rafraichir le cache hors-ligne.
 
 ---
 

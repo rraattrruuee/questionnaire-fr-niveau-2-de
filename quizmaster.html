@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/quiz.css" />
   <style>
     .qm-container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 2rem;
       background: var(--quiz-card-bg);
@@ -50,15 +50,21 @@
     }
     .prompt-label { margin: 0 0 10px; font-weight: 700; color: var(--quiz-btn-text); font-size: 0.9rem; }
     .prompt-box {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 170px;
+      max-height: 340px;
+      resize: vertical;
       background: var(--quiz-card-bg);
       border: 1px solid var(--quiz-border);
       padding: 10px;
       border-radius: 8px;
       font-family: ui-monospace, monospace;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      line-height: 1.45;
       color: var(--quiz-text);
       margin-bottom: 10px;
-      word-break: break-word;
     }
     .btn-prompt-copy {
       width: 100%;
@@ -119,6 +125,18 @@
     .modal-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
     .qm-grid { display: grid; gap: 15px; }
     @media (min-width: 768px) { .qm-grid { grid-template-columns: 1fr 1fr; } }
+    .preview-label {
+      display: block; margin: 1.5rem 0 0.5rem; font-weight: 700;
+      color: var(--quiz-btn-text); font-size: 0.9rem;
+    }
+    .preview-placeholder {
+      padding: 2rem 1rem; text-align: center; color: var(--quiz-text);
+      border: 2px dashed var(--quiz-border); border-radius: 14px; opacity: 0.75;
+    }
+    .preview-frame {
+      width: 100%; height: 680px; border: 1px solid var(--quiz-border);
+      border-radius: 14px; background: var(--quiz-bg, #0b1020);
+    }
   </style>
 </head>
 <body>
@@ -142,11 +160,8 @@
     </h1>
 
     <div class="prompt-container">
-      <p class="prompt-label">Prompt pour l'IA :</p>
-      <div class="prompt-box" id="prompt-text">
-        Génère un questionnaire de 25 questions sur [TON SUJET] au format JSON strictement comme ceci :
-        [{"q": "Question", "answers": ["R1", "R2", "R3", "R4"], "correct": "R1"}]
-      </div>
+      <p class="prompt-label">Prompt pour l'IA (génère le format complet avec catégories) :</p>
+      <textarea class="prompt-box" id="prompt-text" readonly spellcheck="false"></textarea>
       <button class="btn-prompt-copy" id="copy-btn" type="button">Copier le prompt</button>
     </div>
 
@@ -180,65 +195,191 @@
       </div>
     </div>
 
-    <header class="header" style="margin-top:1.5rem">
-      <p>Question <span id="current-q-number">0</span> / <span id="total-q-number">0</span></p>
-    </header>
-
-    <div id="quiz-area">
-      <div id="current-question-card" class="question-card"></div>
-      <div id="feedback-area" class="hidden"></div>
-      <div class="main-btn-container">
-        <button id="main-btn" type="button">Valider la Réponse</button>
-      </div>
+    <label class="preview-label">Aperçu (moteur réel de quiz.html) :</label>
+    <div id="preview-placeholder" class="preview-placeholder">
+      Importez un JSON pour voir l'aperçu avec le moteur du site.
     </div>
-
-    <div id="results" class="hidden">
-      <h2>Quiz Terminé !</h2>
-      <p id="score-display"></p>
-      <p id="feedback-message"></p>
-      <button id="qm-restart" type="button">Recommencer le Quiz</button>
-    </div>
+    <iframe id="preview-frame" class="preview-frame hidden" title="Aperçu du quiz"></iframe>
   </div>
 
   <script>
-    var questions = [];
-    var currentQuestionIndex = 0;
-    var score = 0;
-    var userSelection = null;
-    var questionsShuffled = [];
-    var quizInProgress = false;
+    var loadedQuiz = null;
 
     function byId(id) { return document.getElementById(id); }
 
+    var GENERATION_PROMPT = [
+      "Tu es professeur et generateur de questionnaires scolaires pour une application",
+      "web. Produis LE FICHIER JSON COMPLET d'un questionnaire, pret a etre enregistre.",
+      "Reponds UNIQUEMENT avec le JSON : aucun texte, aucune balise markdown.",
+      "",
+      "=== COMMENT LE MOTEUR LIT CE FICHIER (a respecter a la lettre) ===",
+      "Le fichier decrit un questionnaire divise en categories. Chaque question est",
+      "soit un QCM (\"mcq\"), soit une reponse libre (\"text\"). Le moteur interprete :",
+      "- \"type\": \"mcq\"  -> boutons ; \"options\" = liste des choix ;",
+      "                    \"correct\" = INDEX de la bonne reponse (0 = 1er choix).",
+      "- \"type\": \"text\" -> champ de saisie ; \"accepted\" = TOUTES les reponses acceptees",
+      "                    (majuscules, espaces et virgules sont ignores).",
+      "- \"solution\"     -> explication affichee a l'eleve apres sa reponse.",
+      "- \"image\"        -> (facultatif) URL ou base64 affichee au-dessus des reponses.",
+      "",
+      "=== STRUCTURE EXACTE (memes cles, memes niveaux) ===",
+      "{",
+      "  \"subject\": \"[MATIERE]\",",
+      "  \"title\": \"[TITRE DU QUESTIONNAIRE]\",",
+      "  \"description\": \"[COURTE DESCRIPTION]\",",
+      "  \"css\": \"[CSS PERSONNALISE FACULTATIF, ex : .important{color:#f59e0b;font-weight:900;}]\",",
+      "  \"categories\": [",
+      "    {",
+      "      \"category\": \"1. [NOM DE LA CATEGORIE]\",",
+      "      \"questions\": [",
+      "        {",
+      "          \"text\": \"Question a choix multiple ?\",",
+      "          \"type\": \"mcq\",",
+      "          \"image\": \"[FACULTATIF : URL, chemin, ou data:image/png;base64,...]\",",
+      "          \"options\": [\"Choix A\", \"Choix B\", \"Choix C\"],",
+      "          \"correct\": 0,",
+      "          \"solution\": \"Explication claire de la bonne reponse.\"",
+      "        },",
+      "        {",
+      "          \"text\": \"Question a reponse libre ? (tu peux aussi mettre <img src='...'> dans le texte)\",",
+      "          \"type\": \"text\",",
+      "          \"accepted\": [\"reponse attendue\", \"variante acceptee\"],",
+      "          \"solution\": \"Explication detaillee.\"",
+      "        }",
+      "      ]",
+      "    }",
+      "  ]",
+      "}",
+      "",
+      "=== PARAMETRES DE CE QUESTIONNAIRE ===",
+      "- Matiere : [MATIERE]                 (ex : Italien)",
+      "- Niveau : [NIVEAU]                   (ex : Seconde)",
+      "- Theme : [SUJET DETAILLE]",
+      "- Nombre de categories : [N]          (ex : 5)",
+      "- Questions par categorie : entre [X] et [Y]",
+      "- Total minimum : [TOTAL]",
+      "- Langue des intitules et explications : [LANGUE]",
+      "",
+      "=== REGLES STRICTES ===",
+      "1. Reponds UNIQUEMENT par le fichier JSON (pas de texte, pas de balises).",
+      "2. Utilise EXACTEMENT ces cles : subject, title, description, css (facultatif),",
+      "   categories, category, questions, text, type, image (facultatif), options,",
+      "   correct, accepted, solution.",
+      "3. \"correct\" est un NOMBRE (index) pour \"mcq\" : n'y mets jamais du texte.",
+      "4. \"accepted\" est une LISTE de chaines pour \"text\".",
+      "5. Dans les chaines : guillemets simples (') pour le HTML, guillemets francais",
+      "   « » pour citer. Jamais de guillemets doubles non echappes.",
+      "6. Aucun retour a la ligne reel dans une chaine : utilise <br> ou <p>.",
+      "7. Aucun LaTeX. Puissances : x<sup>2</sup>. Multiplication : ×.",
+      "8. Tu peux utiliser du HTML/des classes dans \"text\" et definir les styles dans",
+      "   \"css\" (ex : <span class='important'>mot</span>). Classes fournies :",
+      "   couleur-qui-change, clignotant, anim-border-fade.",
+      "9. IMAGES : tu peux ajouter une image a une question avec le champ \"image\"",
+      "   (URL, chemin, ou data-URI base64 : \"data:image/png;base64,....\") OU une balise",
+      "   <img src='...'> dans le \"text\". Si j'ai fourni le base64, recopie-le tel quel.",
+      "10. Varie les questions (vocabulaire, comprehension, application, production) et",
+      "    les distracteurs. Accorde correctement genre et nombre.",
+      "11. Verifie que le JSON est valide (virgules, accolades, crochets) avant de repondre.",
+      "",
+      "THEME A TRAITER : [SUJET DETAILLE]"
+    ].join("\n");
+
     function copyPrompt() {
-      var text = byId("prompt-text").innerText;
       var btn = byId("copy-btn");
-      navigator.clipboard.writeText(text).then(function () {
-        var original = btn.innerHTML;
-        btn.innerHTML = "Copié !";
+      navigator.clipboard.writeText(GENERATION_PROMPT).then(function () {
+        btn.textContent = "Copié !";
         btn.classList.add("success");
-        setTimeout(function () { btn.innerHTML = original; btn.classList.remove("success"); }, 2000);
+        setTimeout(function () { btn.textContent = "Copier le prompt"; btn.classList.remove("success"); }, 2000);
       });
     }
 
     function updateExportButtonVisibility() {
       var exportBtn = byId("export-btn");
-      if (exportBtn) exportBtn.style.display = questions.length > 0 ? "inline-flex" : "none";
+      if (exportBtn) exportBtn.style.display = loadedQuiz ? "inline-flex" : "none";
+    }
+
+    /* ---------------------------------------------------------
+       Chargement des vrais fichiers du site (moteur + styles).
+       => QuizMaster se met a jour automatiquement quand quiz.html,
+          quiz.js ou quiz.css changent.
+       --------------------------------------------------------- */
+    function fetchText(url) {
+      return fetch(url, { cache: "no-store" }).then(function (res) {
+        if (!res.ok) throw new Error("Impossible de charger " + url);
+        return res.text();
+      });
+    }
+
+    function loadAssets() {
+      return Promise.all([
+        fetchText("quiz.html"),
+        fetchText("css/theme.css"),
+        fetchText("css/quiz.css"),
+        fetchText("js/quiz.js")
+      ]).then(function (a) {
+        return { quizHtml: a[0], themeCss: a[1], quizCss: a[2], quizJs: a[3] };
+      });
+    }
+
+    function extractQuizContainer(quizHtml) {
+      var doc = new DOMParser().parseFromString(quizHtml, "text/html");
+      var el = doc.querySelector(".quiz-container");
+      return el ? el.outerHTML : "";
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
+    function buildStandalone(data, title, assets) {
+      var payloadData = {};
+      for (var k in data) { if (Object.prototype.hasOwnProperty.call(data, k)) payloadData[k] = data[k]; }
+      payloadData.title = title;
+      var payload = JSON.stringify(payloadData).replace(/<\//g, "<\\/");
+      var container = extractQuizContainer(assets.quizHtml);
+
+      return "<!doctype html>\n<html lang=\"fr\" data-theme=\"dark\">\n<head>\n" +
+        "<meta charset=\"UTF-8\" />\n" +
+        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
+        "<meta name=\"theme-color\" content=\"#0b1020\" />\n" +
+        "<title>" + escapeHtml(title) + "</title>\n" +
+        "<style>\n" + assets.themeCss + "\n</style>\n" +
+        "<style>\n" + assets.quizCss + "\n</style>\n" +
+        "<style>.quiz-nav-bar{display:none}.results-actions #back-btn-results{display:none}</style>\n" +
+        "</head>\n<body>\n" +
+        container + "\n" +
+        "<script>window.__EMBED_QUIZ__=" + payload + ";<\/script>\n" +
+        "<script>\n" + assets.quizJs + "\n<\/script>\n" +
+        "</body>\n</html>";
+    }
+
+    function mountPreview(data) {
+      var frame = byId("preview-frame");
+      var title = (data && data.title) ? data.title : "Aperçu";
+      loadAssets().then(function (assets) {
+        frame.srcdoc = buildStandalone(data, title, assets);
+        byId("preview-placeholder").classList.add("hidden");
+        frame.classList.remove("hidden");
+      }).catch(function (err) {
+        alert("Impossible de charger le moteur du quiz : " + err.message);
+      });
     }
 
     function applyNewQuestions(data) {
+      var parsed;
       try {
-        var parsed = typeof data === "string" ? JSON.parse(data) : data;
-        if (Array.isArray(parsed) && parsed.length > 0 && parsed[0].q) {
-          questions = parsed;
-          restartQuiz();
-          updateExportButtonVisibility();
-        } else {
-          throw new Error();
-        }
+        parsed = typeof data === "string" ? JSON.parse(data) : data;
+        if (!parsed || typeof parsed !== "object") throw new Error();
+        if (!parsed.categories && !parsed.questions && !Array.isArray(parsed)) throw new Error();
       } catch (e) {
         alert("Erreur : le format JSON n'est pas valide.");
+        return;
       }
+      loadedQuiz = parsed;
+      updateExportButtonVisibility();
+      mountPreview(parsed);
     }
 
     function handleFileSelect(event) {
@@ -255,8 +396,8 @@
     }
 
     function openExportModal() {
-      if (questions.length === 0) { alert("Chargez d'abord un questionnaire JSON avant d'exporter."); return; }
-      byId("export-title").value = "";
+      if (!loadedQuiz) { alert("Chargez d'abord un questionnaire JSON avant d'exporter."); return; }
+      byId("export-title").value = (loadedQuiz && loadedQuiz.title) || "";
       byId("export-modal").classList.remove("hidden");
       byId("export-title").focus();
     }
@@ -266,16 +407,23 @@
     function confirmExport() {
       var title = byId("export-title").value.trim();
       if (!title) { alert("Entrez un titre pour le quiz."); return; }
-      exportQuizHtml(title);
-      closeExportModal();
+      var btn = byId("export-confirm");
+      btn.disabled = true;
+      btn.textContent = "Préparation...";
+      loadAssets().then(function (assets) {
+        var doc = buildStandalone(loadedQuiz, title, assets);
+        downloadFile(sanitizeFileName(title) + ".html", doc);
+      }).catch(function (err) {
+        alert("Erreur lors de l'export : " + err.message);
+      }).then(function () {
+        btn.disabled = false;
+        btn.textContent = "Exporter";
+        closeExportModal();
+      });
     }
 
     function sanitizeFileName(name) {
       return (name.replace(/[<>:"/\\|?*\x00-\x1F]/g, "").trim().replace(/\s+/g, "_") || "quiz");
-    }
-
-    function escapeHtml(str) {
-      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
     }
 
     function downloadFile(filename, content) {
@@ -287,166 +435,13 @@
       document.body.removeChild(link); URL.revokeObjectURL(url);
     }
 
-    var EXPORT_CSS = "" +
-      ":root{color-scheme:dark;--bg:#0b1020;--card:#141b30;--inner:#1b2440;--text:#e6ebf5;--muted:#9aa7bd;--border:rgba(255,255,255,.09);--btn:#1b2440;--btnb:rgba(255,255,255,.18);--btnt:#e6ebf5;--main:#6366f1;--mainh:#4f46e5;--ok:#22c55e;--okb:#16a34a;--ko:#ef4444;--kob:#dc2626;}" +
-      "@media (prefers-color-scheme: light){:root{color-scheme:light;--bg:#eef2f7;--card:#fff;--inner:#f6f8fc;--text:#0f1b2d;--muted:#4a5a72;--border:rgba(15,27,45,.1);--btn:#f6f8fc;--btnb:rgba(15,27,45,.22);--btnt:#1d4ed8;--main:#4f46e5;--mainh:#4338ca;}}" +
-      "*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,Segoe UI,Arial,sans-serif;line-height:1.6;padding:1rem}" +
-      ".quiz-container{max-width:800px;margin:0 auto 2rem;padding:2rem;background:var(--card);border:1px solid var(--border);border-radius:22px;box-shadow:0 14px 40px rgba(0,0,0,.2)}" +
-      ".header{text-align:center;margin-bottom:1.5rem}.header h1{font-size:1.8rem;margin:0 0 .4rem}.header p{color:var(--muted);font-weight:600;margin:0}" +
-      ".question-card{min-height:200px;padding:1.5rem;margin-bottom:1.25rem;border-radius:14px;background:var(--inner);border:2px solid var(--border)}" +
-      ".question-text{font-size:1.25rem;font-weight:700;margin:0 0 1.25rem}.options-container{display:flex;flex-direction:column;gap:.7rem}" +
-      ".answer-btn{display:block;width:100%;padding:.95rem 1.1rem;text-align:left;border-radius:10px;font-weight:600;font-size:1rem;border:1px solid var(--btnb);color:var(--btnt);background:var(--btn);cursor:pointer}" +
-      ".answer-btn:hover:not(.selected):not(.correct):not(.incorrect){border-color:var(--main)}" +
-      ".selected{background:var(--main)!important;border-color:var(--mainh)!important;color:#fff!important}" +
-      ".correct{background:var(--ok)!important;border-color:var(--okb)!important;color:#fff!important;pointer-events:none}" +
-      ".incorrect{background:var(--ko)!important;border-color:var(--kob)!important;color:#fff!important;pointer-events:none}" +
-      "#feedback-area{margin-top:1rem;padding:.9rem;border-radius:10px;font-weight:600;text-align:center}" +
-      ".feedback-correct{background:rgba(34,197,94,.15);color:var(--okb);border:1px solid var(--ok)}" +
-      ".feedback-incorrect{background:rgba(239,68,68,.15);color:var(--ko);border:1px solid var(--ko)}" +
-      ".main-btn-container{margin-top:2rem;display:flex;justify-content:center}" +
-      "#main-btn{background:var(--main);color:#fff;padding:.95rem 2.5rem;border-radius:12px;font-weight:800;font-size:1.05rem;border:none;cursor:pointer;width:100%;max-width:320px}" +
-      "#main-btn:disabled{background:var(--muted);cursor:not-allowed}" +
-      "#results{margin-top:2rem;padding:1.75rem;background:rgba(34,197,94,.12);border:2px solid var(--ok);border-radius:14px;text-align:center}" +
-      "#results h2{color:var(--okb);margin:0 0 .75rem}#score-display{font-weight:700;color:var(--okb)}" +
-      "#results button{margin-top:1.25rem;padding:.7rem 1.8rem;background:var(--ok);color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer}" +
-      ".hidden{display:none}";
-
-    function exportQuizHtml(title) {
-      var questionsJson = JSON.stringify(questions, null, 4);
-      var safeTitle = escapeHtml(title);
-      var html =
-        "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n<meta charset=\"UTF-8\" />\n" +
-        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
-        "<title>" + safeTitle + "</title>\n<style>\n" + EXPORT_CSS + "\n</style>\n</head>\n<body>\n" +
-        "<div class=\"quiz-container\">\n<header class=\"header\"><h1>" + safeTitle + "</h1>\n" +
-        "<p>Question <span id=\"current-q-number\">1</span> / <span id=\"total-q-number\">0</span></p></header>\n" +
-        "<div id=\"quiz-area\"><div id=\"current-question-card\" class=\"question-card\"></div>\n" +
-        "<div id=\"feedback-area\" class=\"hidden\"></div>\n" +
-        "<div class=\"main-btn-container\"><button id=\"main-btn\">Valider la Reponse</button></div></div>\n" +
-        "<div id=\"results\" class=\"hidden\"><h2>Quiz Termine !</h2>\n" +
-        "<p id=\"score-display\"></p><p id=\"feedback-message\"></p>\n" +
-        "<button id=\"restart\">Recommencer le Quiz</button></div>\n</div>\n" +
-        "<script>\n" +
-        "var questions=" + questionsJson + ";\n" +
-        "var i=0,score=0,sel=null,order=[],live=false;\n" +
-        "function shuffle(a){for(var k=a.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=a[k];a[k]=a[j];a[j]=t;}return a;}\n" +
-        "function render(){if(i>=order.length){showResults();return;}var q=order[i];var c=document.getElementById('current-question-card');document.getElementById('current-q-number').textContent=i+1;document.getElementById('total-q-number').textContent=order.length;var b=document.getElementById('main-btn');b.textContent='Valider la Reponse';b.disabled=true;c.innerHTML='<p class=\"question-text\">'+q.q+'</p><div class=\"options-container\"></div>';document.getElementById('feedback-area').classList.add('hidden');sel=null;live=true;var oc=c.querySelector('.options-container');shuffle(q.answers.slice()).forEach(function(a){var x=document.createElement('button');x.className='answer-btn';x.textContent=a;x.onclick=function(){if(!live)return;oc.querySelectorAll('.answer-btn').forEach(function(y){y.classList.remove('selected');});x.classList.add('selected');sel=a;b.disabled=false;};oc.appendChild(x);});}\n" +
-        "function check(){if(sel===null||!live)return;live=false;var b=document.getElementById('main-btn');b.disabled=true;var q=order[i];var ok=sel===q.correct;var fa=document.getElementById('feedback-area');fa.classList.remove('hidden');document.querySelectorAll('.answer-btn').forEach(function(x){var a=x.textContent;x.classList.remove('selected');if(a===q.correct)x.classList.add('correct');else if(a===sel&&!ok)x.classList.add('incorrect');});if(ok){score++;fa.textContent='Bravo !';fa.className='feedback-correct';}else{fa.textContent='Faux. Reponse : '+q.correct;fa.className='feedback-incorrect';}setTimeout(function(){i++;if(i>=order.length)showResults();else render();},ok?600:2200);}\n" +
-        "function showResults(){document.getElementById('quiz-area').classList.add('hidden');var r=document.getElementById('results');var t=order.length;var p=Math.round(score/t*100);document.getElementById('score-display').textContent='Score : '+score+' / '+t+' ('+p+'%)';document.getElementById('feedback-message').textContent=p>=80?'Excellent !':'Continuez vos efforts.';r.classList.remove('hidden');}\n" +
-        "function restart(){i=0;score=0;sel=null;order=shuffle(questions.slice());document.getElementById('total-q-number').textContent=questions.length;document.getElementById('quiz-area').classList.remove('hidden');document.getElementById('results').classList.add('hidden');document.getElementById('main-btn').onclick=check;render();}\n" +
-        "document.getElementById('main-btn').onclick=check;\n" +
-        "document.getElementById('restart').onclick=restart;\n" +
-        "window.onload=restart;\n" +
-        "<\/script>\n</body>\n</html>";
-      downloadFile(sanitizeFileName(title) + ".html", html);
-    }
-
-    function shuffle(array) {
-      for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var t = array[i]; array[i] = array[j]; array[j] = t;
-      }
-      return array;
-    }
-
-    function renderQuestion() {
-      if (currentQuestionIndex >= questionsShuffled.length) { showResults(); return; }
-      var q = questionsShuffled[currentQuestionIndex];
-      var card = byId("current-question-card");
-      card.classList.remove("slow-exit", "fast-exit");
-      card.classList.add("entering");
-      byId("current-q-number").textContent = currentQuestionIndex + 1;
-      byId("total-q-number").textContent = questionsShuffled.length;
-      byId("main-btn").textContent = "Valider la Réponse";
-      byId("main-btn").disabled = true;
-      card.innerHTML = '<p class="question-text">' + q.q + '</p><div id="options-container" class="options-container"></div>';
-      byId("feedback-area").classList.add("hidden");
-      userSelection = null;
-      quizInProgress = true;
-      var oc = card.querySelector("#options-container");
-      shuffle(q.answers.slice()).forEach(function (ans) {
-        var b = document.createElement("button");
-        b.type = "button";
-        b.className = "answer-btn";
-        b.textContent = ans;
-        b.onclick = function () { selectAnswer(ans, b); };
-        oc.appendChild(b);
-      });
-      setTimeout(function () { card.classList.remove("entering"); }, 500);
-    }
-
-    function selectAnswer(ans, btn) {
-      if (!quizInProgress) return;
-      document.querySelectorAll("#options-container .answer-btn").forEach(function (b) { b.classList.remove("selected"); });
-      btn.classList.add("selected");
-      userSelection = ans;
-      byId("main-btn").disabled = false;
-    }
-
-    function checkAnswerAndProceed() {
-      if (userSelection === null || !quizInProgress) return;
-      quizInProgress = false;
-      byId("main-btn").disabled = true;
-      var q = questionsShuffled[currentQuestionIndex];
-      var ok = userSelection === q.correct;
-      var fa = byId("feedback-area");
-      var card = byId("current-question-card");
-      fa.classList.remove("hidden");
-      document.querySelectorAll("#options-container .answer-btn").forEach(function (b) {
-        var a = b.textContent;
-        b.classList.remove("selected");
-        if (a === q.correct) b.classList.add("correct");
-        else if (a === userSelection && !ok) b.classList.add("incorrect");
-      });
-      fa.classList.remove("feedback-correct", "feedback-incorrect");
-      if (ok) { score++; fa.textContent = "Bravo !"; fa.classList.add("feedback-correct"); card.classList.add("fast-exit"); }
-      else { fa.textContent = "Faux. Réponse : " + q.correct; fa.classList.add("feedback-incorrect"); card.classList.add("slow-exit"); }
-      byId("main-btn").textContent = "Question Suivante";
-      setTimeout(function () {
-        currentQuestionIndex++;
-        if (currentQuestionIndex >= questionsShuffled.length) showResults();
-        else renderQuestion();
-        byId("main-btn").onclick = checkAnswerAndProceed;
-      }, ok ? 600 : 2500);
-    }
-
-    function showResults() {
-      byId("quiz-area").classList.add("hidden");
-      var rd = byId("results");
-      var t = questionsShuffled.length;
-      var p = Math.round((score / t) * 100);
-      byId("score-display").textContent = "Score : " + score + " / " + t + " (" + p + "%)";
-      byId("feedback-message").textContent = p >= 80 ? "Excellent !" : "Continuez vos efforts.";
-      rd.classList.remove("hidden");
-      rd.classList.add("entering");
-    }
-
-    function restartQuiz() {
-      if (questions.length === 0) {
-        byId("quiz-area").classList.add("hidden");
-        updateExportButtonVisibility();
-        return;
-      }
-      currentQuestionIndex = 0;
-      score = 0;
-      userSelection = null;
-      questionsShuffled = shuffle(questions.slice());
-      byId("total-q-number").textContent = questions.length;
-      byId("quiz-area").classList.remove("hidden");
-      byId("results").classList.add("hidden");
-      byId("main-btn").onclick = checkAnswerAndProceed;
-      renderQuestion();
-      updateExportButtonVisibility();
-    }
-
+    byId("prompt-text").value = GENERATION_PROMPT;
     byId("copy-btn").onclick = copyPrompt;
     byId("load-paste").onclick = loadPastedJson;
     byId("export-btn").onclick = openExportModal;
     byId("export-confirm").onclick = confirmExport;
     byId("export-cancel").onclick = closeExportModal;
-    byId("qm-restart").onclick = restartQuiz;
     byId("file-input").addEventListener("change", handleFileSelect);
-    window.addEventListener("load", restartQuiz);
   </script>
   <script src="js/theme.js"></script>
 </body>

@@ -138,6 +138,15 @@
   }
 
   function goToPortal() {
+    // En mode integre (apercu QuizMaster / export autonome), on relance le quiz
+    // au lieu de renvoyer vers le portail.
+    if (window.__EMBED_QUIZ__) {
+      startQuiz({
+        title: window.__EMBED_QUIZ__.title || "Quiz",
+        _data: window.__EMBED_QUIZ__
+      });
+      return;
+    }
     window.location.href = "index.html";
   }
 
@@ -187,7 +196,7 @@
     categories = normalizeQuiz(quiz._data, quiz.title || "Questions");
 
     if (categories.length === 0) {
-      window.location.replace("index.html");
+      if (!window.__EMBED_QUIZ__) window.location.replace("index.html");
       return;
     }
 
@@ -456,6 +465,16 @@
      Init
      --------------------------------------------------------- */
   function init() {
+    // Mode integre (apercu QuizMaster / export autonome) : les donnees sont
+    // fournies dans window.__EMBED_QUIZ__, sans config.json ni parametre ?id.
+    if (window.__EMBED_QUIZ__) {
+      startQuiz({
+        title: window.__EMBED_QUIZ__.title || "Quiz",
+        _data: window.__EMBED_QUIZ__
+      });
+      return;
+    }
+
     var quizId = getQuizIdFromURL();
 
     // Acces direct : sans identifiant de quiz, on renvoie au portail
