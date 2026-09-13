@@ -1,11 +1,11 @@
 # Questionnaires 2nde
 
-[![Deploy](https://github.com/rraattrruuee/questionnaire-fr--niveau-2-de/actions/workflows/static.yml/badge.svg)](https://github.com/rraattrruuee/questionnaire-fr--niveau-2-de/actions/workflows/static.yml)
-[![PWA Status](https://img.shields.io/badge/PWA-Ready-green.svg)](https://rraattrruuee.github.io/questionnaire-fr--niveau-2-de/)
+[![Deploy](https://github.com/rraattrruuee/questionnaire-fr-niveau-2-de/actions/workflows/static.yml/badge.svg)](https://github.com/rraattrruuee/questionnaire-fr-niveau-2-de/actions/workflows/static.yml)
+[![PWA Status](https://img.shields.io/badge/PWA-Ready-green.svg)](https://rraattrruuee.github.io/questionnaire-fr-niveau-2-de/)
 
 Portail de questionnaires interactifs pour le niveau **Seconde**. Architecture JSON-driven : ajoutez des quiz en ajoutant des fichiers JSON, sans toucher au code.
 
-**Acces :** [**https://rraattrruuee.github.io/questionnaire-fr--niveau-2-de/**](https://rraattrruuee.github.io/questionnaire-fr--niveau-2-de/)
+**Acces :** [**https://rraattrruuee.github.io/questionnaire-fr-niveau-2-de/**](https://rraattrruuee.github.io/questionnaire-fr-niveau-2-de/)
 
 ---
 
@@ -37,7 +37,7 @@ Portail de questionnaires interactifs pour le niveau **Seconde**. Architecture J
 ## Architecture
 
 ```
-questionnaire-fr--niveau-2-de/
+questionnaire-fr-niveau-2-de/
 ├── index.html              ← Portail dynamique
 ├── quiz.html               ← Moteur de quiz (charge depuis JSON)
 ├── quizmaster.html         ← Generateur & importateur de questionnaires
