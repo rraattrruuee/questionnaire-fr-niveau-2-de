@@ -22,7 +22,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1789314135";
+const CACHE_NAME = "quiz-cache-57d4d59";
 
 function cacheAllAssets() {
   return caches.open(CACHE_NAME).then((cache) => {
