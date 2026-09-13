@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Questionnaires" />
+        <meta name="theme-color" content="#0b1020" />
+        <link rel="icon" href="quiz_icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="quiz_icon.png" />
+        <link rel="manifest" href="manifest.json" />
+        <title>Portail Questionnaires 2nde</title>
+        <script>
+            (function () {
+                try {
+                    var t = localStorage.getItem("theme-preference");
+                    if (t !== "light" && t !== "dark") {
+                        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                    }
+                    document.documentElement.setAttribute("data-theme", t);
+                    document.documentElement.style.colorScheme = t;
+                } catch (e) {}
+            })();
+        </script>
+        <link rel="stylesheet" href="css/theme.css" />
+        <link rel="stylesheet" href="css/portal.css" />
+    </head>
+    <body>
+        <div id="caching-indicator">Téléchargement...</div>
+
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="index.html">
+                    <img src="quiz_icon.svg" alt="" width="30" height="30" />
+                    <span>Questionnaires <span class="brand-sub">2nde</span></span>
+                </a>
+                <button class="theme-toggle" type="button" data-theme-toggle>
+                    <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                    <span class="theme-toggle-label">Thème clair</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-header">
+            <nav class="labels-selection tabs" id="labels-selection" aria-label="Filtrer les questionnaires"></nav>
+            <h1>Portail Questionnaires 2nde</h1>
+            <p>
+                Naviguez à travers les matières ou utilisez la
+                <strong>barre de recherche</strong> pour trouver votre
+                questionnaire.
+            </p>
+            <div class="search-bar">
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Rechercher un questionnaire..."
+                    aria-label="Rechercher un questionnaire"
+                />
+            </div>
+        </main>
+
+        <div class="container" id="sections-container"></div>
+        <button id="scrollToTopBtn" class="scroll-to-top" title="Retour en haut" aria-label="Retour en haut">↑</button>
+
+        <script src="js/theme.js"></script>
+        <script src="js/portal.js"></script>
+    </body>
+</html>

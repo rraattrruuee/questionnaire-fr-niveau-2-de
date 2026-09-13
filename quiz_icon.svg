@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Questionnaires 2nde">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="55%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="22%" cy="16%" r="80%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="512" height="512" rx="118" fill="url(#bg)"/>
+  <rect x="0" y="0" width="512" height="512" rx="118" fill="url(#sheen)"/>
+
+  <g filter="url(#soft)">
+    <rect x="150" y="98" width="212" height="300" rx="28" fill="#ffffff"/>
+    <!-- header band -->
+    <rect x="150" y="98" width="212" height="62" rx="28" fill="#e2e8f0"/>
+    <rect x="150" y="132" width="212" height="28" fill="#e2e8f0"/>
+    <!-- text lines -->
+    <rect x="188" y="196" width="136" height="18" rx="9" fill="#cbd5e1"/>
+    <rect x="188" y="238" width="136" height="18" rx="9" fill="#cbd5e1"/>
+    <rect x="188" y="280" width="92" height="18" rx="9" fill="#cbd5e1"/>
+  </g>
+
+  <!-- check badge -->
+  <g filter="url(#soft)">
+    <circle cx="356" cy="372" r="74" fill="#16a34a"/>
+    <circle cx="356" cy="372" r="74" fill="none" stroke="#ffffff" stroke-width="10"/>
+    <path d="M322 372 L346 396 L392 348" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

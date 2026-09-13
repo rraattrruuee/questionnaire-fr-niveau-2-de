@@ -1,0 +1,123 @@
+{
+  "app": {
+    "name": "Questionnaires 2nde",
+    "description": "Portail de questionnaires scolaires - Seconde",
+    "version": "2.1.0"
+  },
+  "subjects": [
+    {
+      "id": "francais",
+      "name": "Francais",
+      "icon": "🇫🇷",
+      "color": "#002395",
+      "description": "Grammaire, litterature et comprehension"
+    },
+    {
+      "id": "anglais",
+      "name": "Anglais",
+      "icon": "🇬🇧",
+      "color": "#012169",
+      "description": "Vocabulary, grammar and comprehension"
+    },
+    {
+      "id": "italien",
+      "name": "Italien",
+      "icon": "🇮🇹",
+      "color": "#008C45",
+      "description": "Grammatica, vocabolario e comprensione"
+    },
+    {
+      "id": "ses",
+      "name": "Sciences Economiques & Sociales",
+      "icon": "📊",
+      "color": "#E67E22",
+      "description": "Economie, sociologie et sciences politiques"
+    },
+    {
+      "id": "histoire-geo",
+      "name": "Histoire-Geographie",
+      "icon": "📜",
+      "color": "#8B4513",
+      "description": "Histoire, geographie et geopolitique"
+    },
+    {
+      "id": "emc",
+      "name": "Enseignement Moral & Civique",
+      "icon": "⚖️",
+      "color": "#6C3483",
+      "description": "Citoennete, valeurs et institutions"
+    },
+    {
+      "id": "mathematiques",
+      "name": "Mathematiques",
+      "icon": "🔢",
+      "color": "#2E86C1",
+      "description": "Calcul, algebre, geometrie et probabilites"
+    },
+    {
+      "id": "snat",
+      "name": "Sciences Numeriques & Technologie",
+      "icon": "💻",
+      "color": "#1ABC9C",
+      "description": "Informatique, algorithmique et reseaux"
+    },
+    {
+      "id": "physique-chimie",
+      "name": "Physique-Chimie",
+      "icon": "⚛️",
+      "color": "#E74C3C",
+      "description": "Physique, chimie et sciences de l'ingenieur"
+    },
+    {
+      "id": "svt",
+      "name": "Sciences de la Vie & de la Terre",
+      "icon": "🌱",
+      "color": "#27AE60",
+      "description": "Biologie, geologie et ecologie"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "francais-outils-analyse-litteraire",
+      "title": "Outils d'analyse litteraire — le grand recapitulatif",
+      "subject": "francais",
+      "file": "data/francais/outils-analyse-litteraire.json",
+      "questionsCount": 195,
+      "description": "Registres, niveaux de langue, figures de style, phrase et subordination, texte narratif, genres et courants litteraires (195 questions).",
+      "tags": ["francais", "litterature", "analyse", "figures-de-style"],
+      "added": "2026-09-13"
+    },
+    {
+      "id": "italien-presentare-persona",
+      "title": "Presentare una persona — aspetto e abbigliamento",
+      "subject": "italien",
+      "file": "data/italien/presentare-una-persona.json",
+      "questionsCount": 84,
+      "description": "Descrivere una persona in italiano (84 questions) : aspetto fisico, abbigliamento, strutture di frase.",
+      "tags": ["italien", "descrizione", "vocabolario"],
+      "added": "2026-09-12"
+    }
+  ],
+  "tools": [
+    {
+      "id": "quizmaster",
+      "title": "QuizMaster Dynamique - Generateur & Importateur",
+      "description": "Generez des questionnaires via IA, importez des JSON, testez et exportez en HTML autonome",
+      "url": "quizmaster.html",
+      "icon": "⚡",
+      "color": "#f59e0b"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Depot GitHub",
+      "url": "https://github.com/rraattrruuee/questionnaire-fr--niveau-2-de",
+      "icon": "🐙"
+    },
+    {
+      "title": "Signaler un probleme / Me contacter",
+      "url": "https://github.com/rraattrruuee/questionnaire-fr--niveau-2-de/issues",
+      "icon": "✉️"
+    }
+  ]
+}

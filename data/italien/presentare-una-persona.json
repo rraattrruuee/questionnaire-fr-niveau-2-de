@@ -1,0 +1,624 @@
+{
+  "subject": "Italien",
+  "title": "Presentare una persona — aspetto e abbigliamento",
+  "description": "Descrivere una persona in italiano : aspetto fisico, abbigliamento, strutture di frase (avere / essere / portare / indossare).",
+  "categories": [
+    {
+      "category": "1. L'aspetto fisico — vocabolario",
+      "questions": [
+        {
+          "text": "Come si dice « les cheveux lisses » in italiano ?",
+          "type": "mcq",
+          "options": ["i capelli lisci", "i capelli ricci", "i capelli corti"],
+          "correct": 0,
+          "solution": "« lisse » = liscio → « i capelli lisci »."
+        },
+        {
+          "text": "« les cheveux longs » = ?",
+          "type": "mcq",
+          "options": ["i capelli lunghi", "i capelli corti", "i capelli mossi"],
+          "correct": 0,
+          "solution": "« long » = lungo → « i capelli lunghi »."
+        },
+        {
+          "text": "« les cheveux courts » = ?",
+          "type": "mcq",
+          "options": ["i capelli corti", "i capelli lunghi", "i capelli ricci"],
+          "correct": 0,
+          "solution": "« court » = corto → « i capelli corti »."
+        },
+        {
+          "text": "« les cheveux noirs » = ?",
+          "type": "mcq",
+          "options": ["i capelli neri", "i capelli biondi", "i capelli rossi"],
+          "correct": 0,
+          "solution": "« noir » = nero → « i capelli neri »."
+        },
+        {
+          "text": "« les cheveux blonds » = ?",
+          "type": "mcq",
+          "options": ["i capelli biondi", "i capelli neri", "i capelli grigi"],
+          "correct": 0,
+          "solution": "« blond » = biondo → « i capelli biondi »."
+        },
+        {
+          "text": "« les cheveux frisés » = ?",
+          "type": "mcq",
+          "options": ["i capelli ricci", "i capelli lisci", "i capelli corti"],
+          "correct": 0,
+          "solution": "« frisé » = riccio → « i capelli ricci »."
+        },
+        {
+          "text": "« les yeux marron » = ?",
+          "type": "mcq",
+          "options": ["gli occhi marroni", "gli occhi azzurri", "gli occhi verdi"],
+          "correct": 0,
+          "solution": "« marron » = marrone → « gli occhi marroni » (accord au pluriel)."
+        },
+        {
+          "text": "« les yeux bleus » = ?",
+          "type": "mcq",
+          "options": ["gli occhi azzurri", "gli occhi marroni", "gli occhi neri"],
+          "correct": 0,
+          "solution": "« bleu » (yeux) = azzurro → « gli occhi azzurri »."
+        },
+        {
+          "text": "« les yeux verts » = ?",
+          "type": "mcq",
+          "options": ["gli occhi verdi", "gli occhi grigi", "gli occhi castani"],
+          "correct": 0,
+          "solution": "« vert » = verde → « gli occhi verdi »."
+        },
+        {
+          "text": "« les yeux noirs » = ?",
+          "type": "mcq",
+          "options": ["gli occhi neri", "gli occhi azzurri", "gli occhi verdi"],
+          "correct": 0,
+          "solution": "« noir » = nero → « gli occhi neri »."
+        },
+        {
+          "text": "« un grand sourire » = ?",
+          "type": "mcq",
+          "options": ["un grande sorriso", "un piccolo sorriso", "un bel viso"],
+          "correct": 0,
+          "solution": "« un grande sorriso » = un grand sourire. On peut aussi dire « sorride » (il sourit) ou « è sorridente » (il est souriant)."
+        },
+        {
+          "text": "« grand » (taille) = ?",
+          "type": "mcq",
+          "options": ["alto", "basso", "magro"],
+          "correct": 0,
+          "solution": "« grand » (taille) = alto."
+        },
+        {
+          "text": "« petit » (taille) = ?",
+          "type": "mcq",
+          "options": ["basso", "alto", "grasso"],
+          "correct": 0,
+          "solution": "« petit » (taille) = basso."
+        },
+        {
+          "text": "« mince » = ?",
+          "type": "mcq",
+          "options": ["magro", "grasso", "alto"],
+          "correct": 0,
+          "solution": "« mince » = magro."
+        },
+        {
+          "text": "« gros » = ?",
+          "type": "mcq",
+          "options": ["grasso", "magro", "basso"],
+          "correct": 0,
+          "solution": "« gros » = grasso."
+        },
+        {
+          "text": "« la barbe » = ?",
+          "type": "mcq",
+          "options": ["la barba", "i baffi", "le lentiggini"],
+          "correct": 0,
+          "solution": "« la barbe » = la barba."
+        },
+        {
+          "text": "« la moustache » = ?",
+          "type": "mcq",
+          "options": ["i baffi", "la barba", "i capelli"],
+          "correct": 0,
+          "solution": "« la moustache » = i baffi (toujours au pluriel)."
+        },
+        {
+          "text": "« des lunettes » = ?",
+          "type": "mcq",
+          "options": ["gli occhiali", "le lenti", "i capelli"],
+          "correct": 0,
+          "solution": "« des lunettes » = gli occhiali."
+        }
+      ]
+    },
+    {
+      "category": "2. L'abbigliamento — vocabolario",
+      "questions": [
+        {
+          "text": "« une chemise » = ?",
+          "type": "mcq",
+          "options": ["una camicia", "una maglietta", "una gonna"],
+          "correct": 0,
+          "solution": "« une chemise » = una camicia."
+        },
+        {
+          "text": "« une chemise à carreaux » = ?",
+          "type": "mcq",
+          "options": ["una camicia a quadri", "una camicia a righe", "una camicia bianca"],
+          "correct": 0,
+          "solution": "« à carreaux » = a quadri ; « à rayures » = a righe."
+        },
+        {
+          "text": "« un t-shirt » = ?",
+          "type": "mcq",
+          "options": ["una maglietta", "una maglia", "una camicia"],
+          "correct": 0,
+          "solution": "« un t-shirt » = una maglietta."
+        },
+        {
+          "text": "« un pull » = ?",
+          "type": "mcq",
+          "options": ["un maglione", "una giacca", "un cappotto"],
+          "correct": 0,
+          "solution": "« un pull » = un maglione (ou « una maglia »)."
+        },
+        {
+          "text": "« un jean » = ?",
+          "type": "mcq",
+          "options": ["un jeans", "una gonna", "un vestito"],
+          "correct": 0,
+          "solution": "« un jean » = un jeans."
+        },
+        {
+          "text": "« un pantalon » = ?",
+          "type": "mcq",
+          "options": ["i pantaloni", "le scarpe", "i calzini"],
+          "correct": 0,
+          "solution": "« un pantalon » = i pantaloni (souvent au pluriel). On rencontre aussi « un pantalone »."
+        },
+        {
+          "text": "« une jupe » = ?",
+          "type": "mcq",
+          "options": ["una gonna", "un vestito", "una camicia"],
+          "correct": 0,
+          "solution": "« une jupe » = una gonna."
+        },
+        {
+          "text": "« une robe » = ?",
+          "type": "mcq",
+          "options": ["un vestito", "una gonna", "una giacca"],
+          "correct": 0,
+          "solution": "« une robe » = un vestito (ou « un abito »)."
+        },
+        {
+          "text": "« des chaussures » = ?",
+          "type": "mcq",
+          "options": ["le scarpe", "i calzini", "i guanti"],
+          "correct": 0,
+          "solution": "« des chaussures » = le scarpe."
+        },
+        {
+          "text": "« des baskets » = ?",
+          "type": "mcq",
+          "options": ["le scarpe da ginnastica", "le scarpe eleganti", "i sandali"],
+          "correct": 0,
+          "solution": "« des baskets » = le scarpe da ginnastica."
+        },
+        {
+          "text": "« une ceinture » = ?",
+          "type": "mcq",
+          "options": ["una cintura", "una borsa", "una sciarpa"],
+          "correct": 0,
+          "solution": "« une ceinture » = una cintura."
+        },
+        {
+          "text": "« un manteau » = ?",
+          "type": "mcq",
+          "options": ["un cappotto", "una giacca", "un maglione"],
+          "correct": 0,
+          "solution": "« un manteau » = un cappotto."
+        },
+        {
+          "text": "« une veste » = ?",
+          "type": "mcq",
+          "options": ["una giacca", "un cappotto", "una camicia"],
+          "correct": 0,
+          "solution": "« une veste » = una giacca."
+        },
+        {
+          "text": "« un chapeau » = ?",
+          "type": "mcq",
+          "options": ["un cappello", "una sciarpa", "una cintura"],
+          "correct": 0,
+          "solution": "« un chapeau » = un cappello."
+        },
+        {
+          "text": "« des chaussettes » = ?",
+          "type": "mcq",
+          "options": ["i calzini", "le scarpe", "i guanti"],
+          "correct": 0,
+          "solution": "« des chaussettes » = i calzini."
+        },
+        {
+          "text": "« un sweat » = ?",
+          "type": "mcq",
+          "options": ["una felpa", "una maglietta", "un maglione"],
+          "correct": 0,
+          "solution": "« un sweat » = una felpa."
+        },
+        {
+          "text": "« un short » = ?",
+          "type": "mcq",
+          "options": ["i pantaloncini", "i pantaloni", "i calzini"],
+          "correct": 0,
+          "solution": "« un short » = i pantaloncini (ou « gli shorts »)."
+        },
+        {
+          "text": "« un cahier » = ?",
+          "type": "mcq",
+          "options": ["un quaderno", "un libro", "uno zaino"],
+          "correct": 0,
+          "solution": "« un cahier » = un quaderno."
+        },
+        {
+          "text": "« un sac à dos » = ?",
+          "type": "mcq",
+          "options": ["uno zaino", "una borsa", "un quaderno"],
+          "correct": 0,
+          "solution": "« un sac à dos » = uno zaino."
+        },
+        {
+          "text": "« un sac » = ?",
+          "type": "mcq",
+          "options": ["una borsa", "uno zaino", "un cappello"],
+          "correct": 0,
+          "solution": "« un sac » = una borsa."
+        },
+        {
+          "text": "Couleur « bleu » = ?",
+          "type": "mcq",
+          "options": ["blu", "rosso", "verde"],
+          "correct": 0,
+          "solution": "« bleu » = blu (invariable)."
+        },
+        {
+          "text": "Couleur « rouge » = ?",
+          "type": "mcq",
+          "options": ["rosso", "blu", "giallo"],
+          "correct": 0,
+          "solution": "« rouge » = rosso."
+        },
+        {
+          "text": "Couleur « vert » = ?",
+          "type": "mcq",
+          "options": ["verde", "nero", "marrone"],
+          "correct": 0,
+          "solution": "« vert » = verde."
+        },
+        {
+          "text": "Couleur « marron » = ?",
+          "type": "mcq",
+          "options": ["marrone", "nero", "grigio"],
+          "correct": 0,
+          "solution": "« marron » = marrone."
+        },
+        {
+          "text": "Couleur « noir » = ?",
+          "type": "mcq",
+          "options": ["nero", "bianco", "marrone"],
+          "correct": 0,
+          "solution": "« noir » = nero."
+        },
+        {
+          "text": "Comment dit-on « Il porte une chemise » ?",
+          "type": "mcq",
+          "options": ["Porta una camicia", "È una camicia", "Ha una camicia"],
+          "correct": 0,
+          "solution": "Pour un vêtement on utilise « portare » ou « indossare » : « Porta / Indossa una camicia »."
+        }
+      ]
+    },
+    {
+      "category": "3. Le strutture — verbi e frasi",
+      "questions": [
+        {
+          "text": "« indossare / portare » signifie :",
+          "type": "mcq",
+          "options": ["porter (un vêtement)", "avoir", "être"],
+          "correct": 0,
+          "solution": "« indossare » et « portare » = porter (un vêtement / un objet)."
+        },
+        {
+          "text": "Complète : « Marzio ___ un ragazzo. »",
+          "type": "mcq",
+          "options": ["è", "ha", "porta"],
+          "correct": 0,
+          "solution": "Présenter une personne : « è un ragazzo » (verbe essere)."
+        },
+        {
+          "text": "Complète : « Gemma è una ___ . »",
+          "type": "mcq",
+          "options": ["ragazza", "ragazzo", "ragazze"],
+          "correct": 0,
+          "solution": "Gemma est une fille → « una ragazza »."
+        },
+        {
+          "text": "Complète : « Ha gli occhi ___ (marron). »",
+          "type": "mcq",
+          "options": ["marroni", "marrone", "marrona"],
+          "correct": 0,
+          "solution": "« gli occhi » est pluriel → « marroni »."
+        },
+        {
+          "text": "« Elle a un grand sourire » = ?",
+          "type": "mcq",
+          "options": ["Ha un grande sorriso", "È un grande sorriso", "Ha un grande sorridere"],
+          "correct": 0,
+          "solution": "On utilise « avere » : « Ha un grande sorriso »."
+        },
+        {
+          "text": "« elle » (familier) = ?",
+          "type": "mcq",
+          "options": ["lei", "lui", "loro"],
+          "correct": 0,
+          "solution": "« lei » = elle ; « lui » = lui ; « loro » = ils/elles."
+        },
+        {
+          "text": "Conjugue « avere » : io ___",
+          "type": "mcq",
+          "options": ["ho", "hai", "ha"],
+          "correct": 0,
+          "solution": "avere : io ho, tu hai, lui/lei ha, noi abbiamo, voi avete, loro hanno."
+        },
+        {
+          "text": "Conjugue « avere » : tu ___",
+          "type": "mcq",
+          "options": ["hai", "ho", "ha"],
+          "correct": 0,
+          "solution": "avere : io ho, tu hai, lui/lei ha…"
+        },
+        {
+          "text": "Conjugue « avere » : noi ___",
+          "type": "mcq",
+          "options": ["abbiamo", "avete", "hanno"],
+          "correct": 0,
+          "solution": "avere : noi abbiamo."
+        },
+        {
+          "text": "Conjugue « avere » : loro ___",
+          "type": "mcq",
+          "options": ["hanno", "abbiamo", "avete"],
+          "correct": 0,
+          "solution": "avere : loro hanno."
+        },
+        {
+          "text": "Conjugue « essere » : io ___",
+          "type": "mcq",
+          "options": ["sono", "sei", "è"],
+          "correct": 0,
+          "solution": "essere : io sono, tu sei, lui/lei è, noi siamo, voi siete, loro sono."
+        },
+        {
+          "text": "Conjugue « essere » : lui/lei ___",
+          "type": "mcq",
+          "options": ["è", "sono", "sei"],
+          "correct": 0,
+          "solution": "essere : lui/lei è."
+        },
+        {
+          "text": "Conjugue « essere » : noi ___",
+          "type": "mcq",
+          "options": ["siamo", "siete", "sono"],
+          "correct": 0,
+          "solution": "essere : noi siamo."
+        },
+        {
+          "text": "Complète : « Lei ___ i capelli lunghi. »",
+          "type": "text",
+          "accepted": ["ha", "lei ha"],
+          "solution": "avere → « Lei ha i capelli lunghi. »"
+        },
+        {
+          "text": "Conjugue « essere » : « Io ___ una ragazza. »",
+          "type": "text",
+          "accepted": ["sono", "io sono"],
+          "solution": "essere → « Io sono una ragazza. »"
+        },
+        {
+          "text": "Traduis : « Il porte un jean bleu. »",
+          "type": "text",
+          "accepted": [
+            "porta un jeans blu",
+            "indossa un jeans blu",
+            "lui porta un jeans blu",
+            "lui indossa un jeans blu"
+          ],
+          "solution": "« Porta / Indossa un jeans blu. »"
+        },
+        {
+          "text": "Traduis : « Elle a les yeux marron. »",
+          "type": "text",
+          "accepted": ["ha gli occhi marroni", "lei ha gli occhi marroni"],
+          "solution": "« (Lei) ha gli occhi marroni. »"
+        },
+        {
+          "text": "Traduis : « J'ai les cheveux courts et noirs. »",
+          "type": "text",
+          "accepted": ["ho i capelli corti e neri", "io ho i capelli corti e neri"],
+          "solution": "« (Io) ho i capelli corti e neri. »"
+        },
+        {
+          "text": "Remets dans l'ordre : « ha / capelli / i / lunghi / Lei »",
+          "type": "mcq",
+          "options": ["Lei ha i capelli lunghi", "Lei i capelli ha lunghi", "Ha Lei i capelli lunghi"],
+          "correct": 0,
+          "solution": "Ordre : sujet + verbe + complément → « Lei ha i capelli lunghi. »"
+        },
+        {
+          "text": "Remets dans l'ordre : « una / è / ragazza / Gemma »",
+          "type": "mcq",
+          "options": ["Gemma è una ragazza", "Gemma una è ragazza", "È Gemma una ragazza"],
+          "correct": 0,
+          "solution": "→ « Gemma è una ragazza. »"
+        }
+      ]
+    },
+    {
+      "category": "4. Capire una descrizione",
+      "questions": [
+        {
+          "text": "Testo : « Gemma è una ragazza. Ha i capelli lisci, lunghi e neri. Ha gli occhi marroni, un grande sorriso. Porta una camicia a quadri e un jeans blu. Porta un quaderno rosso in mano. » — Come sono i capelli di Gemma ?",
+          "type": "mcq",
+          "options": ["lisci, lunghi e neri", "corti e neri", "ricci e biondi"],
+          "correct": 0,
+          "solution": "Il testo dice : « Ha i capelli lisci, lunghi e neri. »"
+        },
+        {
+          "text": "Cosa porta Gemma ?",
+          "type": "mcq",
+          "options": ["una camicia a quadri e un jeans blu", "una maglia blu e i pantaloni", "una gonna rossa"],
+          "correct": 0,
+          "solution": "« Porta una camicia a quadri e un jeans blu. »"
+        },
+        {
+          "text": "Cosa ha in mano Gemma ?",
+          "type": "mcq",
+          "options": ["un quaderno rosso", "una borsa blu", "un libro verde"],
+          "correct": 0,
+          "solution": "« Porta un quaderno rosso in mano. »"
+        },
+        {
+          "text": "Testo : « Marzio è un ragazzo, ha i capelli corti e neri. Ha gli occhi neri. Ha un grande sorriso. Indossa una maglia blu, un pantalone blu e una cintura marrone. » — Come sono i capelli di Marzio ?",
+          "type": "mcq",
+          "options": ["corti e neri", "lunghi e biondi", "ricci e marroni"],
+          "correct": 0,
+          "solution": "« Ha i capelli corti e neri. »"
+        },
+        {
+          "text": "Cosa indossa Marzio ?",
+          "type": "mcq",
+          "options": [
+            "una maglia blu, un pantalone blu e una cintura marrone",
+            "una camicia a quadri e un jeans",
+            "un vestito nero"
+          ],
+          "correct": 0,
+          "solution": "« Indossa una maglia blu, un pantalone blu e una cintura marrone. »"
+        },
+        {
+          "text": "Quale espressione significa « il sourit » ?",
+          "type": "mcq",
+          "options": ["sorride / è sorridente", "ha i capelli", "porta un sorriso"],
+          "correct": 0,
+          "solution": "« sorride » = il sourit ; « è sorridente » = il est souriant ; « ha un grande sorriso » = il a un grand sourire."
+        },
+        {
+          "text": "Complète d'après le modèle : « Gemma ha i capelli ___, ___ e ___. »",
+          "type": "text",
+          "accepted": ["lisci, lunghi e neri", "lisci lunghi e neri"],
+          "solution": "« Gemma ha i capelli lisci, lunghi e neri. »"
+        },
+        {
+          "text": "Complète : « Marzio ___ una maglia blu. »",
+          "type": "text",
+          "accepted": ["indossa", "porta"],
+          "solution": "« Marzio indossa / porta una maglia blu. »"
+        },
+        {
+          "text": "Complète : « Gemma porta un ___ rosso in mano. »",
+          "type": "text",
+          "accepted": ["quaderno"],
+          "solution": "« un quaderno rosso »."
+        },
+        {
+          "text": "« in mano » signifie :",
+          "type": "mcq",
+          "options": ["à la main / en main", "dans le pied", "sur la tête"],
+          "correct": 0,
+          "solution": "« in mano » = à la main / en main."
+        }
+      ]
+    },
+    {
+      "category": "5. Produrre — descrivi tu",
+      "questions": [
+        {
+          "text": "Transforme : « I capelli di Gemma sono neri. » → « Gemma ___ i capelli neri. »",
+          "type": "text",
+          "accepted": ["ha", "gemma ha"],
+          "solution": "On utilise « avere » : « Gemma ha i capelli neri. »"
+        },
+        {
+          "text": "Transforme : « Gli occhi di Marzio sono neri. » → « Marzio ___ gli occhi neri. »",
+          "type": "text",
+          "accepted": ["ha", "marzio ha"],
+          "solution": "« Marzio ha gli occhi neri. »"
+        },
+        {
+          "text": "Décris en une phrase : Gemma / capelli / lisci / lunghi / neri",
+          "type": "text",
+          "accepted": [
+            "gemma ha i capelli lisci, lunghi e neri",
+            "gemma ha i capelli lisci lunghi e neri"
+          ],
+          "solution": "« Gemma ha i capelli lisci, lunghi e neri. »"
+        },
+        {
+          "text": "Décris en une phrase : Marzio / occhi / neri",
+          "type": "text",
+          "accepted": ["marzio ha gli occhi neri"],
+          "solution": "« Marzio ha gli occhi neri. »"
+        },
+        {
+          "text": "Traduis : « Gemma porte une chemise à carreaux et un jean bleu. »",
+          "type": "text",
+          "accepted": [
+            "gemma porta una camicia a quadri e un jeans blu",
+            "gemma indossa una camicia a quadri e un jeans blu"
+          ],
+          "solution": "« Gemma porta / indossa una camicia a quadri e un jeans blu. »"
+        },
+        {
+          "text": "Traduis : « Marzio porte un pull bleu et une ceinture marron. »",
+          "type": "text",
+          "accepted": [
+            "marzio porta una maglia blu e una cintura marrone",
+            "marzio indossa una maglia blu e una cintura marrone",
+            "marzio porta un maglione blu e una cintura marrone",
+            "marzio indossa un maglione blu e una cintura marrone"
+          ],
+          "solution": "« Marzio porta / indossa una maglia (un maglione) blu e una cintura marrone. »"
+        },
+        {
+          "text": "Quel mot interrogatif pour « Comment sont ses cheveux ? »",
+          "type": "mcq",
+          "options": ["Come sono i suoi capelli?", "Cosa sono i suoi capelli?", "Chi sono i suoi capelli?"],
+          "correct": 0,
+          "solution": "« Come » = comment → « Come sono i suoi capelli? »"
+        },
+        {
+          "text": "Complète : « È un ragazzo, ___ i capelli corti. »",
+          "type": "text",
+          "accepted": ["ha"],
+          "solution": "« È un ragazzo, ha i capelli corti. »"
+        },
+        {
+          "text": "Complète : « È una ragazza. Ha gli occhi ___ (bleus). »",
+          "type": "text",
+          "accepted": ["azzurri"],
+          "solution": "« Ha gli occhi azzurri. »"
+        },
+        {
+          "text": "« alto » signifie :",
+          "type": "mcq",
+          "options": ["grand (taille)", "petit", "mince"],
+          "correct": 0,
+          "solution": "« alto » = grand (taille) ; « basso » = petit ; « magro » = mince."
+        }
+      ]
+    }
+  ]
+}

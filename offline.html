@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#0b1020" />
+        <link rel="icon" href="quiz_icon.svg" type="image/svg+xml" />
+        <title>Hors ligne - Questionnaires 2nde</title>
+        <script>
+            (function () {
+                try {
+                    var t = localStorage.getItem("theme-preference");
+                    if (t !== "light" && t !== "dark") {
+                        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                    }
+                    document.documentElement.setAttribute("data-theme", t);
+                    document.documentElement.style.colorScheme = t;
+                } catch (e) {}
+            })();
+        </script>
+        <link rel="stylesheet" href="css/theme.css" />
+        <style>
+            .offline-wrap {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.5rem;
+            }
+
+            .offline-box {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 2.5rem 2rem;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow);
+                max-width: 420px;
+                text-align: center;
+            }
+
+            .offline-box img {
+                width: 64px;
+                height: 64px;
+                border-radius: 16px;
+                margin-bottom: 1rem;
+            }
+
+            .offline-box h1 {
+                color: var(--primary);
+                margin: 0 0 0.5rem;
+                font-size: 1.5rem;
+            }
+
+            .offline-box p {
+                color: var(--text-muted);
+                line-height: 1.6;
+                margin: 0 0 1.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="offline-wrap">
+            <div class="offline-box">
+                <img src="quiz_icon.svg" alt="" width="64" height="64" />
+                <h1>Vous êtes hors ligne</h1>
+                <p>
+                    Impossible de charger la page. Vérifiez votre connexion
+                    internet et réessayez.
+                </p>
+                <a class="btn" href="index.html">Retour à l'accueil</a>
+            </div>
+        </div>
+        <script src="js/theme.js"></script>
+    </body>
+</html>

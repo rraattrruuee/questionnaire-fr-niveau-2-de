@@ -1,0 +1,372 @@
+/* ============================================================
+   portal.css - Styles for the dynamic portal (index.html)
+   Relies on tokens defined in theme.css
+   ============================================================ */
+
+@keyframes fondChange {
+  0% { background-color: var(--bg); }
+  50% { background-color: var(--bg-2); }
+  100% { background-color: var(--bg); }
+}
+
+@keyframes neonPulse {
+  0%, 100% { text-shadow: 0 0 6px var(--glow); }
+  50% { text-shadow: 0 0 14px var(--glow-strong); }
+}
+
+@keyframes linkHoverPulse {
+  0% { box-shadow: var(--ombre-neon); }
+  50% { box-shadow: var(--ombre-neon-intense); }
+  100% { box-shadow: var(--ombre-neon); }
+}
+
+@keyframes fadeInSlideUp {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  animation: fondChange 26s ease-in-out infinite;
+}
+
+/* ---------- Header ---------- */
+.main-header {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 1.25rem;
+  padding: 2rem 1.25rem;
+  background-color: var(--surface);
+  border-bottom: 3px solid var(--primary);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.main-header h1 {
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
+  color: var(--primary);
+  animation: neonPulse 4s ease-in-out infinite alternate;
+  text-align: center;
+}
+
+.main-header p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  max-width: 640px;
+}
+
+.main-header strong {
+  color: var(--text);
+}
+
+/* ---------- Search ---------- */
+.search-bar {
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 1.25rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1.25rem;
+  border: 2px solid var(--border-strong);
+  border-radius: 999px;
+  background-color: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-input::placeholder {
+  color: var(--text-dim);
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: var(--glow);
+}
+
+/* ---------- Filter labels ---------- */
+.labels-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.label-button {
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: all 0.25s ease;
+}
+
+.label-button:hover:not(.active) {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.label-button.active {
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+  border-color: var(--primary);
+  box-shadow: var(--glow);
+}
+
+/* ---------- Onglets (tout en haut) ---------- */
+.tabs {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.label-button.tab-recent {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.label-button.tab-recent:hover:not(.active) {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.label-button.tab-recent.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
+}
+
+/* ---------- Sections ---------- */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.25rem;
+  animation: fadeInSlideUp 0.7s ease-out;
+}
+
+.menu-section {
+  margin: 0 0 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-section.is-animated {
+  animation: fadeInSlideUp 0.6s ease-out forwards;
+}
+
+.menu-title {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed var(--border-strong);
+}
+
+/* ---------- Quiz / tool rows ---------- */
+.quiz-wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.bouton-lien {
+  flex: 1;
+  min-width: 0;
+  padding: 0.95rem 1rem;
+  text-decoration: none;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  border-right: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+  transition: all 0.25s ease-in-out;
+}
+
+.bouton-lien:hover {
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+  animation: linkHoverPulse 1.4s ease-in-out infinite;
+}
+
+.btn-dl {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-2);
+  color: var(--primary-contrast);
+  text-decoration: none;
+  padding: 0 1.1rem;
+  border: 2px solid var(--primary);
+  border-left: 1px solid var(--border);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 1.2rem;
+  transition: filter 0.25s ease;
+}
+
+.btn-dl:hover {
+  filter: brightness(0.92);
+}
+
+/* ---------- Nouveautes ---------- */
+.recent-section {
+  border: 1px solid var(--primary);
+  box-shadow: var(--glow);
+}
+
+.bouton-lien-label {
+  min-width: 0;
+}
+
+.badge-new {
+  margin-left: 0.6rem;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-contrast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.bouton-lien:hover .badge-new {
+  background: var(--primary-contrast);
+  color: var(--primary);
+}
+
+.no-quiz-msg {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ---------- Scroll to top ---------- */
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  z-index: 999;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+/* ---------- Caching indicator ---------- */
+#caching-indicator {
+  display: none;
+  position: fixed;
+  top: 3.6rem;
+  right: 0.75rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  z-index: 1200;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .main-header {
+    padding: 1.4rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .main-header p {
+    font-size: 0.95rem;
+  }
+
+  .labels-selection {
+    gap: 0.4rem;
+  }
+
+  .label-button {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .menu-section {
+    padding: 1.1rem;
+    border-radius: var(--radius);
+  }
+
+  .menu-title {
+    font-size: 1.25rem;
+  }
+
+  .quiz-wrapper {
+    margin-bottom: 0.9rem;
+  }
+
+  .bouton-lien {
+    font-size: 0.92rem;
+    padding: 0.8rem 0.75rem;
+  }
+
+  .btn-dl {
+    padding: 0 0.9rem;
+  }
+
+  .scroll-to-top {
+    display: none !important;
+  }
+}

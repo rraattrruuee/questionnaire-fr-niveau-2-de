@@ -1,0 +1,2165 @@
+{
+  "subject": "Francais",
+  "title": "Outils d'analyse litteraire - le grand recapitulatif",
+  "description": "Registres, niveaux de langue, figures de style, phrase et subordination, texte narratif, genres et courants litteraires depuis la Renaissance.",
+  "categories": [
+    {
+      "category": "1. Le registre litteraire (la tonalite d'un texte)",
+      "questions": [
+        {
+          "text": "Qu'appelle-t-on le registre (ou tonalite) d'un texte ?",
+          "type": "mcq",
+          "options": [
+            "Le nombre de personnages du recit",
+            "Le but que se donne l'auteur et l'effet qu'il veut produire sur le lecteur",
+            "La longueur des phrases"
+          ],
+          "correct": 1,
+          "solution": "Le registre est la tonalite du texte : on se demande quel est le but de l'auteur (faire rire, faire peur, faire pleurer, faire rever...)."
+        },
+        {
+          "text": "Quel registre vise avant tout a faire rire ?",
+          "type": "mcq",
+          "options": [
+            "Le lyrique",
+            "Le tragique",
+            "Le comique"
+          ],
+          "correct": 2,
+          "solution": "Le registre comique cherche a provoquer le rire (jeux de mots, quiproquos, exagerations...)."
+        },
+        {
+          "text": "Quel registre inspire la pitie et l'effroi devant un destin ineluctable ?",
+          "type": "mcq",
+          "options": [
+            "Le comique",
+            "Le merveilleux",
+            "Le tragique"
+          ],
+          "correct": 2,
+          "solution": "Le registre tragique montre des personnages ecrases par le destin, un sort ineluctable ; il inspire la pitie et la terreur."
+        },
+        {
+          "text": "Quel registre insiste sur la souffrance et cherche a faire naitre la pitie ?",
+          "type": "mcq",
+          "options": [
+            "Le comique",
+            "L'epique",
+            "Le pathétique"
+          ],
+          "correct": 2,
+          "solution": "Le pathétique (souvent confondu avec le tragique) insiste sur la souffrance et la pitie. Le tragique ajoute l'idee de fatalite."
+        },
+        {
+          "text": "Le registre lyrique sert a :",
+          "type": "mcq",
+          "options": [
+            "Critiquer la societe",
+            "Exprimer les sentiments personnels de l'emetteur",
+            "Raconter un combat"
+          ],
+          "correct": 1,
+          "solution": "Le registre lyrique exprime des sentiments personnels (joie, tristesse, amour, nostalgie), souvent a la 1re personne."
+        },
+        {
+          "text": "Quel registre est lie a un combat, a des actions heroiques de grande ampleur ?",
+          "type": "mcq",
+          "options": [
+            "L'epique",
+            "Le lyrique",
+            "Le satirique"
+          ],
+          "correct": 0,
+          "solution": "Le registre epique celebre les exploits, les combats, les heros, souvent avec une amplification (hyperboles, enumérations)."
+        },
+        {
+          "text": "Le registre satirique sert a :",
+          "type": "mcq",
+          "options": [
+            "Faire rever dans un monde magique",
+            "Exprimer la peur",
+            "Se moquer pour critiquer (individus, mœurs, societe)"
+          ],
+          "correct": 2,
+          "solution": "Le registre satirique se moque (souvent avec ironie) pour denoncer et critiquer."
+        },
+        {
+          "text": "Le registre merveilleux se caracterise par :",
+          "type": "mcq",
+          "options": [
+            "L'irruption du surnaturel dans un cadre reel qui fait douter",
+            "Une simple description realiste",
+            "Un surnaturel accepte et qui fait rever, sans etonnement"
+          ],
+          "correct": 2,
+          "solution": "Dans le merveilleux (contes, contes de fees), le surnaturel est accepte normalement : il fait rever."
+        },
+        {
+          "text": "Le registre fantastique se caracterise par :",
+          "type": "mcq",
+          "options": [
+            "Un monde entierement magique accepte par tous",
+            "Une fin toujours heureuse",
+            "L'irruption du surnaturel dans un cadre reel, ce qui provoque le doute et l'inquietude"
+          ],
+          "correct": 2,
+          "solution": "Dans le fantastique, le surnaturel surgit dans un monde reel et le lecteur (comme le personnage) hesite entre explication rationnelle et surnaturelle."
+        },
+        {
+          "text": "Quel registre joue sur la tension, le suspense et des evenements graves ?",
+          "type": "mcq",
+          "options": [
+            "Le comique",
+            "Le dramatique",
+            "Le didactique"
+          ],
+          "correct": 1,
+          "solution": "Le registre dramatique installe la tension, le suspense, des situations graves (danger, conflit, mort imminente)."
+        },
+        {
+          "text": "Quel registre cherche a instruire, a transmettre un savoir ?",
+          "type": "mcq",
+          "options": [
+            "Le didactique",
+            "Le lyrique",
+            "L'epique"
+          ],
+          "correct": 0,
+          "solution": "Le registre didactique vise a instruire, expliquer, enseigner."
+        },
+        {
+          "text": "Quel registre attaque et debat avec violence pour defendre une cause ?",
+          "type": "mcq",
+          "options": [
+            "Le pathétique",
+            "Le merveilleux",
+            "Le polémique"
+          ],
+          "correct": 2,
+          "solution": "Le registre polémique attaque, denonce, prend violemment parti pour defendre une thèse."
+        },
+        {
+          "text": "« Il pleurait, seul, abandonne de tous, sans aucun espoir de retour. » Quel registre domine ?",
+          "type": "mcq",
+          "options": [
+            "Pathétique",
+            "Comique",
+            "Epique"
+          ],
+          "correct": 0,
+          "solution": "La solitude, la souffrance et l'abandon font naitre la pitie : registre pathétique."
+        },
+        {
+          "text": "« Il brandit son epee et, d'un seul coup, terrassa mille ennemis. » Quel registre domine ?",
+          "type": "mcq",
+          "options": [
+            "Lyrique",
+            "Satirique",
+            "Epique"
+          ],
+          "correct": 2,
+          "solution": "L'exploit heroique et l'amplification (« mille ennemis ») relevent du registre epique."
+        },
+        {
+          "text": "« Soudain, la porte claqua ; une ombre glissa le long du couloir et pourtant, il n'y avait personne. » Quel registre domine ?",
+          "type": "mcq",
+          "options": [
+            "Fantastique",
+            "Merveilleux",
+            "Comique"
+          ],
+          "correct": 0,
+          "solution": "Le surnaturel surgit dans un decor realiste et fait douter : registre fantastique."
+        },
+        {
+          "text": "« Il etait une fois un roi dont tous les vœux se realisaient. » Quel registre domine ?",
+          "type": "mcq",
+          "options": [
+            "Merveilleux",
+            "Realiste",
+            "Fantastique"
+          ],
+          "correct": 0,
+          "solution": "Le surnaturel est accepte naturellement et fait rever : registre merveilleux."
+        },
+        {
+          "text": "Le registre qui exprime les sentiments personnels est le registre ___.",
+          "type": "text",
+          "accepted": [
+            "lyrique",
+            "le lyrique",
+            "le registre lyrique"
+          ],
+          "solution": "Registre lyrique (du lyrisme, lie a la lyre d'Orphee)."
+        },
+        {
+          "text": "Le registre de la moquerie et de la critique est le registre ___.",
+          "type": "text",
+          "accepted": [
+            "satirique",
+            "le satirique",
+            "le registre satirique"
+          ],
+          "solution": "Registre satirique."
+        },
+        {
+          "text": "Le registre du combat heroique est le registre ___.",
+          "type": "text",
+          "accepted": [
+            "epique",
+            "épique",
+            "le epique",
+            "l'epique",
+            "l'épique",
+            "le registre epique",
+            "le registre épique"
+          ],
+          "solution": "Registre epique."
+        },
+        {
+          "text": "Le registre du surnaturel qui surgit dans un cadre reel et fait douter est le registre ___.",
+          "type": "text",
+          "accepted": [
+            "fantastique",
+            "le fantastique",
+            "le registre fantastique"
+          ],
+          "solution": "Registre fantastique."
+        },
+        {
+          "text": "Quel registre traite un sujet noble (ou serieux) sur un ton vulgaire et grotesque ?",
+          "type": "mcq",
+          "options": [
+            "L'heroi-comique",
+            "Le pathétique",
+            "Le burlesque"
+          ],
+          "correct": 2,
+          "solution": "Le burlesque abaisse un sujet noble par un style bas et vulgaire (ex : « L'Iliade travestie »)."
+        },
+        {
+          "text": "Quel registre traite un sujet vulgaire (ou banal) sur un ton noble et epique ?",
+          "type": "mcq",
+          "options": [
+            "Le tragique",
+            "L'heroi-comique",
+            "Le burlesque"
+          ],
+          "correct": 1,
+          "solution": "L'heroi-comique est l'inverse du burlesque : sujet bas, style noble (ex : « Le Lutrin » de Boileau)."
+        },
+        {
+          "text": "Le registre elegiaque exprime :",
+          "type": "mcq",
+          "options": [
+            "Le combat heroique",
+            "La moquerie et la critique",
+            "La plainte, la tristesse et le deuil (proche du lyrique)"
+          ],
+          "correct": 2,
+          "solution": "L'elegie est un poeme de plainte et de tristesse, souvent lie a la perte d'un etre cher."
+        },
+        {
+          "text": "Quel registre fait l'eloge ou le blame de quelqu'un (discours oratoire) ?",
+          "type": "mcq",
+          "options": [
+            "Le registre fantastique",
+            "Le registre epique",
+            "Le registre épidictique"
+          ],
+          "correct": 2,
+          "solution": "L'épidictique (ou demonstratif) celebre l'eloge ou prononce le blame dans un discours."
+        },
+        {
+          "text": "Quel registre decrit le quotidien et la societe sans les embellir, avec precision ?",
+          "type": "mcq",
+          "options": [
+            "Le realiste",
+            "Le lyrique",
+            "Le merveilleux"
+          ],
+          "correct": 0,
+          "solution": "Le registre realiste represente le monde tel qu'il est, sans idealisation."
+        },
+        {
+          "text": "Le registre de l'absurde montre :",
+          "type": "mcq",
+          "options": [
+            "Un bonheur eternel",
+            "Un ordre parfait du monde",
+            "L'absence de sens et une condition humaine privee de logique"
+          ],
+          "correct": 2,
+          "solution": "L'absurde met en scene le non-sens de l'existence (theatre de l'absurde : Ionesco, Beckett)."
+        },
+        {
+          "text": "« Quelle horreur ! Cela me glace le sang. » Quel registre domine ?",
+          "type": "mcq",
+          "options": [
+            "Le comique",
+            "L'angoisse / l'epouvante (horrifique)",
+            "Le didactique"
+          ],
+          "correct": 1,
+          "solution": "La peur intense et le frisson relevent du registre de l'angoisse ou de l'epouvante (proche du fantastique)."
+        },
+        {
+          "text": "L'ironie repose principalement sur quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "La gradation",
+            "L'antiphrase (dire le contraire de ce que l'on pense)",
+            "La comparaison"
+          ],
+          "correct": 1,
+          "solution": "L'ironie dit le contraire de sa pensee pour se moquer : c'est l'antiphrase."
+        },
+        {
+          "text": "« Un pauvre homme, courbe sous le poids des ans, tendait une main tremblante. » Quel registre domine ?",
+          "type": "mcq",
+          "options": [
+            "Pathétique",
+            "Epique",
+            "Burlesque"
+          ],
+          "correct": 0,
+          "solution": "La souffrance et la misere du personnage font naitre la pitie : registre pathétique."
+        },
+        {
+          "text": "Le registre qui exprime la plainte et le deuil est le registre ___.",
+          "type": "text",
+          "accepted": [
+            "elegiaque",
+            "élégiaque",
+            "le registre elegiaque",
+            "le registre élégiaque"
+          ],
+          "solution": "Le registre elegiaque."
+        }
+      ]
+    },
+    {
+      "category": "2. Les niveaux de langue",
+      "questions": [
+        {
+          "text": "Qu'appelle-t-on le niveau de langue ?",
+          "type": "mcq",
+          "options": [
+            "La facon de parler (registre de vocabulaire et de syntaxe) adaptee a la situation",
+            "Le sujet du texte",
+            "Le nombre de mots d'une phrase"
+          ],
+          "correct": 0,
+          "solution": "Le niveau de langue est la facon de s'exprimer selon la situation et l'interlocuteur."
+        },
+        {
+          "text": "Quels sont les trois niveaux de langue principaux ?",
+          "type": "mcq",
+          "options": [
+            "Rapide, lent, moyen",
+            "Courant, familier, soutenu",
+            "Ecrit, oral, chanté"
+          ],
+          "correct": 1,
+          "solution": "Les trois niveaux principaux sont : courant, familier et soutenu (on ajoute parfois le niveau tres soutenu/litteraire)."
+        },
+        {
+          "text": "A quel niveau appartient le verbe « bouffer » ?",
+          "type": "mcq",
+          "options": [
+            "Courant",
+            "Familier",
+            "Soutenu"
+          ],
+          "correct": 1,
+          "solution": "« Bouffer » est familier ; le niveau courant dit « manger »."
+        },
+        {
+          "text": "A quel niveau appartient le verbe « se sustenter » ?",
+          "type": "mcq",
+          "options": [
+            "Familier",
+            "Courant",
+            "Soutenu"
+          ],
+          "correct": 2,
+          "solution": "« Se sustenter » (ou « se restaurer ») appartient au niveau soutenu."
+        },
+        {
+          "text": "A quel niveau appartient le verbe « manger » ?",
+          "type": "mcq",
+          "options": [
+            "Soutenu",
+            "Courant",
+            "Familier"
+          ],
+          "correct": 1,
+          "solution": "« Manger » est le mot courant, neutre, compris de tous."
+        },
+        {
+          "text": "« Ce gars est sympa » releve du niveau :",
+          "type": "mcq",
+          "options": [
+            "Soutenu",
+            "Litteraire",
+            "Familier"
+          ],
+          "correct": 2,
+          "solution": "« Ce gars », « sympa » sont familiers. Niveau courant : « Ce garcon est sympathique. »"
+        },
+        {
+          "text": "« Cette personne est fort aimable » releve du niveau :",
+          "type": "mcq",
+          "options": [
+            "Soutenu",
+            "Courant",
+            "Familier"
+          ],
+          "correct": 0,
+          "solution": "« Fort aimable » est une tournure soutenue ; le courant serait « tres gentille »."
+        },
+        {
+          "text": "Quel niveau de langue utilise-t-on dans une lettre administrative ou un discours officiel ?",
+          "type": "mcq",
+          "options": [
+            "Soutenu",
+            "Argotique",
+            "Familier"
+          ],
+          "correct": 0,
+          "solution": "Le niveau soutenu convient aux situations officielles et a l'ecrit soigne."
+        },
+        {
+          "text": "Quel niveau de langue emploie-t-on spontanement a l'oral entre proches ?",
+          "type": "mcq",
+          "options": [
+            "Litteraire",
+            "Soutenu",
+            "Familier"
+          ],
+          "correct": 2,
+          "solution": "Le niveau familier est utilise a l'oral, entre proches, dans une situation detendue."
+        },
+        {
+          "text": "Transforme au niveau courant : « J'me casse. »",
+          "type": "mcq",
+          "options": [
+            "Je m'en vais, c'est clair",
+            "Je m'en vais",
+            "Je me carapate"
+          ],
+          "correct": 1,
+          "solution": "« J'me casse » (familier) devient « Je m'en vais » au niveau courant."
+        },
+        {
+          "text": "Transforme au niveau courant : « Ouais, c'est cool. »",
+          "type": "mcq",
+          "options": [
+            "Oui, c'est agreable",
+            "Oui, c'est mortel",
+            "Ouais, c'est top"
+          ],
+          "correct": 0,
+          "solution": "« Ouais, c'est cool » (familier) → « Oui, c'est agreable » (courant)."
+        },
+        {
+          "text": "A quel niveau de langue appartient le mot « bouffer » ?",
+          "type": "text",
+          "accepted": [
+            "familier"
+          ],
+          "solution": "Familier."
+        },
+        {
+          "text": "A quel niveau de langue appartient le mot « se sustenter » ?",
+          "type": "text",
+          "accepted": [
+            "soutenu"
+          ],
+          "solution": "Soutenu."
+        },
+        {
+          "text": "Le niveau de langue depend surtout :",
+          "type": "mcq",
+          "options": [
+            "Du nombre de phrases",
+            "De la situation de communication et de l'interlocuteur",
+            "De la longueur du texte"
+          ],
+          "correct": 1,
+          "solution": "On adapte son niveau de langue a la situation (courrier officiel, discussion entre amis...)."
+        }
+      ]
+    },
+    {
+      "category": "3. Figures de style I - analogie, remplacement, opposition",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'un procede stylistique (figure de style) ?",
+          "type": "mcq",
+          "options": [
+            "Une faute de grammaire",
+            "Un ecart par rapport a l'usage ordinaire du langage, pour creer un effet",
+            "Un type de phrase"
+          ],
+          "correct": 1,
+          "solution": "Une figure de style est un ecart volontaire par rapport a la norme, qui produit un effet (image, insistance, ironie...)."
+        },
+        {
+          "text": "« Il est fort comme un lion. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Metaphore",
+            "Comparaison",
+            "Personnification"
+          ],
+          "correct": 1,
+          "solution": "Il y a un outil de comparaison (« comme ») : c'est une comparaison."
+        },
+        {
+          "text": "« Cet homme est un lion. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Hyperbole",
+            "Comparaison",
+            "Metaphore"
+          ],
+          "correct": 2,
+          "solution": "Il n'y a pas d'outil de comparaison : l'assimilation est directe, c'est une metaphore."
+        },
+        {
+          "text": "Quelle est la difference entre la comparaison et la metaphore ?",
+          "type": "mcq",
+          "options": [
+            "La comparaison utilise un outil de comparaison (comme, tel que...), pas la metaphore",
+            "Il n'y a aucune difference",
+            "La metaphore utilise toujours « comme »"
+          ],
+          "correct": 0,
+          "solution": "Comparaison = deux elements + un outil (comme, tel que, ressembler a...). Metaphore = meme assimilation, sans outil."
+        },
+        {
+          "text": "Quels mots sont des outils de comparaison ?",
+          "type": "mcq",
+          "options": [
+            "Mais, ou, et, donc, or, ni, car",
+            "Comme, tel que, pareil a, ressembler a",
+            "Donc, car, parce que"
+          ],
+          "correct": 1,
+          "solution": "Les outils de comparaison introduisent le comparant : comme, tel que, pareil a, ressembler a, ainsi que..."
+        },
+        {
+          "text": "« Le vent murmurait a mon oreille. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Personnification",
+            "Antithese",
+            "Litote"
+          ],
+          "correct": 0,
+          "solution": "On attribue une action humaine (murmurer) a un element naturel : personnification."
+        },
+        {
+          "text": "« La Mort, une femme voilee, tendait la main vers lui. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Comparaison",
+            "Euphémisme",
+            "Allegorie"
+          ],
+          "correct": 2,
+          "solution": "Une idee abstraite (la Mort) est representee par une figure, une image concrete : allegorie."
+        },
+        {
+          "text": "« Il a lu tout Moliere. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Metaphore",
+            "Periphrase",
+            "Metonimie"
+          ],
+          "correct": 2,
+          "solution": "On designe l'œuvre par l'auteur (« Moliere » pour les pieces de Moliere) : metonimie."
+        },
+        {
+          "text": "« La capitale de la France s'est reveillee en colere. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Periphrase",
+            "Anaphore",
+            "Metonimie"
+          ],
+          "correct": 0,
+          "solution": "On remplace « Paris » par une expression plus longue qui le decrit : periphrase."
+        },
+        {
+          "text": "« Je meurs de faim. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Litote",
+            "Euphémisme",
+            "Hyperbole"
+          ],
+          "correct": 2,
+          "solution": "On exagere fortement : hyperbole (amplification)."
+        },
+        {
+          "text": "« Va, je ne te hais point. » (Corneille) Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Litote",
+            "Hyperbole",
+            "Antithese"
+          ],
+          "correct": 0,
+          "solution": "La litote dit le moins pour suggerer le plus : « je ne te hais point » signifie « je t'aime »."
+        },
+        {
+          "text": "« Il nous a quittes. » pour dire « il est mort ». Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Oxymore",
+            "Hyperbole",
+            "Euphémisme"
+          ],
+          "correct": 2,
+          "solution": "On adoucit une idee desagreable ou brutale (la mort) : euphémisme."
+        },
+        {
+          "text": "« Cette obscure clarte » (Corneille). Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Oxymore",
+            "Paradoxe",
+            "Antithese"
+          ],
+          "correct": 0,
+          "solution": "Deux mots opposes sont reunis dans une meme expression, sans lien logique : oxymore."
+        },
+        {
+          "text": "« Le jour et la nuit, la vie et la mort. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Gradation",
+            "Oxymore",
+            "Antithese"
+          ],
+          "correct": 2,
+          "solution": "Deux termes opposes sont mis en parallele dans une meme phrase : antithese."
+        },
+        {
+          "text": "« Bravo ! Quel exploit ! » dit devant un echec complet. Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Litote",
+            "Hyperbole",
+            "Antiphrase (ironie)"
+          ],
+          "correct": 2,
+          "solution": "On dit le contraire de ce qu'on pense pour se moquer : antiphrase, qui produit l'ironie."
+        },
+        {
+          "text": "Quelle figure consiste a dire le moins pour faire entendre le plus ?",
+          "type": "mcq",
+          "options": [
+            "La litote",
+            "L'hyperbole",
+            "L'accumulation"
+          ],
+          "correct": 0,
+          "solution": "Litote : « Ce n'est pas mal » = « c'est tres bien »."
+        },
+        {
+          "text": "Quelle figure consiste a amplifier, exagerer une idee ?",
+          "type": "mcq",
+          "options": [
+            "L'hyperbole",
+            "La litote",
+            "L'euphémisme"
+          ],
+          "correct": 0,
+          "solution": "Hyperbole : « un siecle que je ne t'ai pas vu », « je meurs de faim »."
+        },
+        {
+          "text": "Quelle figure remplace un mot par un autre qui lui est lie (contenant, matiere, auteur) ?",
+          "type": "mcq",
+          "options": [
+            "La metonimie",
+            "La periphrase",
+            "La personnification"
+          ],
+          "correct": 0,
+          "solution": "Metonimie : « boire un verre » (contenant pour contenu), « tout Moliere » (auteur pour l'œuvre)."
+        },
+        {
+          "text": "Quelle figure designe une realite par une expression qui la decrit au lieu de la nommer ?",
+          "type": "mcq",
+          "options": [
+            "L'oxymore",
+            "La periphrase",
+            "La litote"
+          ],
+          "correct": 1,
+          "solution": "Periphrase : « l'astre du jour » pour le soleil, « la capitale de la France » pour Paris."
+        },
+        {
+          "text": "Quelle figure de style dans « Il court comme le vent » ?",
+          "type": "text",
+          "accepted": [
+            "comparaison",
+            "la comparaison"
+          ],
+          "solution": "Comparaison (outil « comme »)."
+        },
+        {
+          "text": "Quelle figure de style dans « Cet homme est un roc » ?",
+          "type": "text",
+          "accepted": [
+            "metaphore",
+            "la metaphore"
+          ],
+          "solution": "Metaphore."
+        },
+        {
+          "text": "Quelle figure designe « la Mort » comme une femme voilee ?",
+          "type": "text",
+          "accepted": [
+            "allegorie",
+            "l'allegorie"
+          ],
+          "solution": "Allegorie."
+        },
+        {
+          "text": "Quelle figure dans « Il nous a quittes » pour dire qu'il est mort ?",
+          "type": "text",
+          "accepted": [
+            "euphémisme",
+            "euphemisme",
+            "l'euphémisme"
+          ],
+          "solution": "Euphémisme."
+        },
+        {
+          "text": "Quelle figure dans « Cette obscure clarte » (deux mots opposes reunis) ?",
+          "type": "text",
+          "accepted": [
+            "oxymore",
+            "l'oxymore"
+          ],
+          "solution": "Oxymore."
+        },
+        {
+          "text": "Quelle figure dans « Je meurs de faim » (exageration) ?",
+          "type": "text",
+          "accepted": [
+            "hyperbole",
+            "l'hyperbole"
+          ],
+          "solution": "Hyperbole."
+        },
+        {
+          "text": "Quelle figure dans « Va, je ne te hais point » (dire le moins pour dire le plus) ?",
+          "type": "text",
+          "accepted": [
+            "litote",
+            "la litote"
+          ],
+          "solution": "Litote."
+        }
+      ]
+    },
+    {
+      "category": "4. Figures de style II - repetition et sonorites",
+      "questions": [
+        {
+          "text": "« Des valises, des sacs, des malles, des cartons. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Anaphore",
+            "Gradation",
+            "Accumulation"
+          ],
+          "correct": 2,
+          "solution": "On entasse plusieurs elements de meme nature : accumulation."
+        },
+        {
+          "text": "« Je les ai vus, entendus, compris, adores. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Accumulation",
+            "Antithese",
+            "Gradation"
+          ],
+          "correct": 2,
+          "solution": "L'enumeration progresse d'intensite : gradation (ici croissante)."
+        },
+        {
+          "text": "Quelle figure repete un meme mot ou groupe au debut de plusieurs phrases ou vers (au moins trois fois) ?",
+          "type": "mcq",
+          "options": [
+            "Epiphore",
+            "Anagramme",
+            "Anaphore"
+          ],
+          "correct": 2,
+          "solution": "L'anaphore repete un element en tete de phrase ou de vers. Dans « Moi, president... », le mot « Moi » est anaphorique."
+        },
+        {
+          "text": "« Pour qui sont ces serpents qui sifflent sur vos tetes ? » (Racine). Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Assonance",
+            "Alliteration",
+            "Parallellisme"
+          ],
+          "correct": 1,
+          "solution": "Repetition du son consonantique [s] : alliteration."
+        },
+        {
+          "text": "« Les sanglots longs des violons de l'automne » (Verlaine). Quelle figure sonore ?",
+          "type": "mcq",
+          "options": [
+            "Assonance en [on]",
+            "Alliteration en [l] seulement",
+            "Aucune figure"
+          ],
+          "correct": 0,
+          "solution": "La repetition de la voyelle nasale [on] est une assonance ; il y a aussi une alliteration en [l]."
+        },
+        {
+          "text": "Quelle figure repete une meme consonne dans une phrase ?",
+          "type": "mcq",
+          "options": [
+            "Assonance",
+            "Alliteration",
+            "Rime"
+          ],
+          "correct": 1,
+          "solution": "L'alliteration repete un son consonantique. Ex : « Le soleil se couche »."
+        },
+        {
+          "text": "Quelle figure repete une meme voyelle dans une phrase ?",
+          "type": "mcq",
+          "options": [
+            "Assonance",
+            "Anaphore",
+            "Alliteration"
+          ],
+          "correct": 0,
+          "solution": "L'assonance repete un son vocalique (voyelle)."
+        },
+        {
+          "text": "« La nuit nous partimes, le jour nous revinmes. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Parallellisme",
+            "Anaphore",
+            "Antithese"
+          ],
+          "correct": 0,
+          "solution": "Deux propositions ont la meme construction : parallellisme de construction (ici renforce par une antithese nuit/jour)."
+        },
+        {
+          "text": "Quelle figure construit deux propositions de meme structure syntaxique ?",
+          "type": "mcq",
+          "options": [
+            "Parallellisme",
+            "Gradation",
+            "Metonimie"
+          ],
+          "correct": 0,
+          "solution": "Le parallellisme de construction reprend la meme structure grammaticale."
+        },
+        {
+          "text": "« Je suis arrive, j'ai vu, j'ai vaincu. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Litote",
+            "Gradation",
+            "Personnification"
+          ],
+          "correct": 1,
+          "solution": "Progression d'intensite en trois temps : gradation."
+        },
+        {
+          "text": "« Vingt fois sur le metier remettez votre ouvrage. » Quelle est la figure dominante ?",
+          "type": "mcq",
+          "options": [
+            "Anaphore",
+            "Hyperbole",
+            "Oxymore"
+          ],
+          "correct": 1,
+          "solution": "« Vingt fois » est une exageration : hyperbole (conseil de Boileau sur le travail de reecriture)."
+        },
+        {
+          "text": "« Une fee, une princesse, un prince, un ogre. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Accumulation",
+            "Antithese",
+            "Assonance"
+          ],
+          "correct": 0,
+          "solution": "Liste d'elements de meme nature : accumulation."
+        },
+        {
+          "text": "« Il est mort de rire, il est mort de joie, il est mort d'amour. » Quelle figure ?",
+          "type": "mcq",
+          "options": [
+            "Anaphore",
+            "Alliteration",
+            "Litote"
+          ],
+          "correct": 0,
+          "solution": "Le groupe « il est mort de » est repete en debut de proposition : anaphore."
+        },
+        {
+          "text": "Quelle figure repete un meme son consonne ?",
+          "type": "text",
+          "accepted": [
+            "alliteration",
+            "l'alliteration"
+          ],
+          "solution": "Alliteration."
+        },
+        {
+          "text": "Quelle figure repete un meme son voyelle ?",
+          "type": "text",
+          "accepted": [
+            "assonance",
+            "l'assonance"
+          ],
+          "solution": "Assonance."
+        },
+        {
+          "text": "Quelle figure repete un mot en debut de phrase ou de vers ?",
+          "type": "text",
+          "accepted": [
+            "anaphore",
+            "l'anaphore"
+          ],
+          "solution": "Anaphore."
+        },
+        {
+          "text": "Quelle figure emboite deux propositions de meme structure ?",
+          "type": "text",
+          "accepted": [
+            "parallellisme",
+            "parallelisme",
+            "le parallellisme",
+            "le parallelisme"
+          ],
+          "solution": "Parallellisme de construction."
+        },
+        {
+          "text": "Quelle figure enumere du plus faible au plus fort ?",
+          "type": "text",
+          "accepted": [
+            "gradation",
+            "la gradation"
+          ],
+          "solution": "Gradation."
+        }
+      ]
+    },
+    {
+      "category": "5. La phrase - types, formes, subordination et fonctions",
+      "questions": [
+        {
+          "text": "Quels sont les trois types de phrases ?",
+          "type": "mcq",
+          "options": [
+            "Active, passive, pronominale",
+            "Affirmatif, negatif, exclamatif",
+            "Declaratif, interrogatif, injonctif"
+          ],
+          "correct": 2,
+          "solution": "Types : declaratif (on declare), interrogatif (on pose une question), injonctif (on donne un ordre/conseil). L'exclamatif est souvent traite comme un type a part."
+        },
+        {
+          "text": "« Le ciel est bleu. » Cette phrase est de type :",
+          "type": "mcq",
+          "options": [
+            "Injonctif",
+            "Declaratif",
+            "Interrogatif"
+          ],
+          "correct": 1,
+          "solution": "Elle declare un fait : type declaratif."
+        },
+        {
+          "text": "« Viens-tu avec nous ? » Cette phrase est de type :",
+          "type": "mcq",
+          "options": [
+            "Injonctif",
+            "Interrogatif",
+            "Declaratif"
+          ],
+          "correct": 1,
+          "solution": "Elle pose une question : type interrogatif."
+        },
+        {
+          "text": "« Ferme la porte, s'il te plait. » Cette phrase est de type :",
+          "type": "mcq",
+          "options": [
+            "Injonctif",
+            "Declaratif",
+            "Interrogatif"
+          ],
+          "correct": 0,
+          "solution": "Elle exprime un ordre ou un conseil : type injonctif (souvent a l'imperatif)."
+        },
+        {
+          "text": "Les formes de phrase opposent notamment :",
+          "type": "mcq",
+          "options": [
+            "Longue/courte, simple/complexe",
+            "Affirmative/negative, active/passive, exclamative, positive",
+            "Nominale/verbale"
+          ],
+          "correct": 1,
+          "solution": "Les formes sont des variantes d'un meme type : affirmative/negative, active/passive, exclamative, positive/neutre."
+        },
+        {
+          "text": "« Je ne mange pas de bonbons. » Quelle forme ?",
+          "type": "mcq",
+          "options": [
+            "Positive",
+            "Negative",
+            "Exclamative"
+          ],
+          "correct": 1,
+          "solution": "Presence de la negation « ne... pas » : forme negative."
+        },
+        {
+          "text": "« Cette maison a ete construite en 1900. » Quelle forme ?",
+          "type": "mcq",
+          "options": [
+            "Passive",
+            "Active",
+            "Pronominale"
+          ],
+          "correct": 0,
+          "solution": "Le sujet subit l'action : forme passive (active : « On a construit cette maison en 1900 »)."
+        },
+        {
+          "text": "« Comme tu es grand ! » Quelle forme ?",
+          "type": "mcq",
+          "options": [
+            "Injonctive",
+            "Exclamative",
+            "Interrogative"
+          ],
+          "correct": 1,
+          "solution": "Exclamation (point d'exclamation, intensite) : forme exclamative."
+        },
+        {
+          "text": "Qu'est-ce que la subordination ?",
+          "type": "mcq",
+          "options": [
+            "Une phrase sans verbe",
+            "Une faute de conjugaison",
+            "Un rapport grammatical ou une proposition depend d'une autre (la principale)"
+          ],
+          "correct": 2,
+          "solution": "La subordination relie une proposition subordonnee a une proposition principale dont elle depend."
+        },
+        {
+          "text": "Une proposition subordonnee :",
+          "type": "mcq",
+          "options": [
+            "Est toujours independante",
+            "N'a jamais de verbe",
+            "Ne peut pas exister seule et depend de la principale"
+          ],
+          "correct": 2,
+          "solution": "La subordonnee est introduite par un mot subordonnant (que, qui, quand, parce que...) et depend de la principale."
+        },
+        {
+          "text": "Dans « Je pense qu'il viendra. », la subordonnee est :",
+          "type": "mcq",
+          "options": [
+            "« qu'il viendra »",
+            "« Je pense »",
+            "Il n'y a pas de subordonnee"
+          ],
+          "correct": 0,
+          "solution": "« qu'il viendra » est une proposition subordonnee conjonctive (complétive), introduite par « que »."
+        },
+        {
+          "text": "Dans « L'homme qui parle est mon voisin. », la subordonnee relative est :",
+          "type": "mcq",
+          "options": [
+            "« L'homme »",
+            "« qui parle »",
+            "« est mon voisin »"
+          ],
+          "correct": 1,
+          "solution": "« qui parle » est une subordonnee relative introduite par le pronom relatif « qui »."
+        },
+        {
+          "text": "Dans « Quand il pleut, je reste a la maison. », la subordonnee est circonstancielle de :",
+          "type": "mcq",
+          "options": [
+            "But",
+            "Lieu",
+            "Temps"
+          ],
+          "correct": 2,
+          "solution": "« Quand il pleut » indique le temps : subordonnee circonstancielle de temps."
+        },
+        {
+          "text": "Qu'est-ce qu'un complément d'objet direct (COD) ?",
+          "type": "mcq",
+          "options": [
+            "Il indique le lieu",
+            "Il complete le verbe directement, sans preposition, et peut etre remplace par un pronom (le, la, les)",
+            "Il complete le verbe avec une preposition"
+          ],
+          "correct": 1,
+          "solution": "Le COD suit le verbe sans preposition : « il mange une pomme » → « il la mange »."
+        },
+        {
+          "text": "Qu'est-ce qu'un complément d'objet indirect (COI) ?",
+          "type": "mcq",
+          "options": [
+            "Il complete le verbe sans preposition",
+            "Il exprime le temps",
+            "Il complete le verbe par l'intermediaire d'une preposition (a, de...)"
+          ],
+          "correct": 2,
+          "solution": "Le COI est introduit par une preposition : « il parle a son frere » → COI « a son frere » (remplacable par « lui »)."
+        },
+        {
+          "text": "Dans « Il mange une pomme. », « une pomme » est :",
+          "type": "mcq",
+          "options": [
+            "COI",
+            "COD",
+            "Sujet"
+          ],
+          "correct": 1,
+          "solution": "« une pomme » complete directement « mange » : COD (remplacable par « il la mange »)."
+        },
+        {
+          "text": "Dans « Il parle a son frere. », « a son frere » est :",
+          "type": "mcq",
+          "options": [
+            "CC de lieu",
+            "COD",
+            "COI"
+          ],
+          "correct": 2,
+          "solution": "« a son frere » est introduit par la preposition « a » : COI (remplacable par « il lui parle »)."
+        },
+        {
+          "text": "Dans « Il va a Paris. », « a Paris » est :",
+          "type": "mcq",
+          "options": [
+            "COD",
+            "COI",
+            "Complément circonstanciel de lieu"
+          ],
+          "correct": 2,
+          "solution": "« a Paris » indique le lieu : CC de lieu (il peut etre supprime : « Il va »)."
+        },
+        {
+          "text": "Dans « Il part demain. », « demain » est :",
+          "type": "mcq",
+          "options": [
+            "COI",
+            "COD",
+            "Complément circonstanciel de temps"
+          ],
+          "correct": 2,
+          "solution": "« demain » indique le temps : CC de temps."
+        },
+        {
+          "text": "Dans « Il travaille avec soin. », « avec soin » est :",
+          "type": "mcq",
+          "options": [
+            "COD",
+            "Complément circonstanciel de maniere",
+            "Sujet"
+          ],
+          "correct": 1,
+          "solution": "« avec soin » indique la maniere : CC de maniere."
+        },
+        {
+          "text": "Comment reconnait-on un COD ?",
+          "type": "mcq",
+          "options": [
+            "On peut le remplacer par un pronom (le, la, les) et il n'est pas introduit par une preposition",
+            "Il repond a la question « ou ? »",
+            "Il est toujours introduit par « a » ou « de »"
+          ],
+          "correct": 0,
+          "solution": "COD : pas de preposition, remplacable par le, la, les, l'."
+        },
+        {
+          "text": "Comment reconnait-on un COI ?",
+          "type": "mcq",
+          "options": [
+            "Il n'a jamais de preposition",
+            "Il indique toujours le lieu",
+            "Il est introduit par une preposition (a, de...) et se remplace souvent par lui/leur"
+          ],
+          "correct": 2,
+          "solution": "COI : introduit par une preposition, remplacable par lui, leur, en, y."
+        },
+        {
+          "text": "« Le chien attrape la balle. » Quelle est la fonction de « la balle » ?",
+          "type": "text",
+          "accepted": [
+            "cod",
+            "cod.",
+            "complement d'objet direct",
+            "complément d'objet direct",
+            "complement objet direct"
+          ],
+          "solution": "COD (remplacable par « le chien l'attrape »)."
+        },
+        {
+          "text": "« Elle pense a ses vacances. » Quelle est la fonction de « a ses vacances » ?",
+          "type": "text",
+          "accepted": [
+            "coi",
+            "coi.",
+            "complement d'objet indirect",
+            "complément d'objet indirect"
+          ],
+          "solution": "COI (introduit par « a »)."
+        },
+        {
+          "text": "Quel est le type de la phrase « Peux-tu fermer la fenetre ? »",
+          "type": "text",
+          "accepted": [
+            "interrogatif",
+            "interrogative",
+            "interrogatif."
+          ],
+          "solution": "Type interrogatif."
+        },
+        {
+          "text": "Quel est le type de la phrase « Sortez de la salle. »",
+          "type": "text",
+          "accepted": [
+            "injonctif",
+            "injonctive",
+            "imperatif",
+            "impératif",
+            "injonctif."
+          ],
+          "solution": "Type injonctif (imperatif)."
+        },
+        {
+          "text": "Quelle est la forme de la phrase « Je n'ai pas faim. »",
+          "type": "text",
+          "accepted": [
+            "negative",
+            "négative",
+            "negatif",
+            "négatif"
+          ],
+          "solution": "Forme negative."
+        }
+      ]
+    },
+    {
+      "category": "6. Le texte narratif - narrateur, focalisation, discours",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'un texte narratif ?",
+          "type": "mcq",
+          "options": [
+            "Un texte qui raconte une succession d'evenements, avec des personnages dans un cadre donne",
+            "Un texte qui donne des ordres",
+            "Un texte qui explique une recette"
+          ],
+          "correct": 0,
+          "solution": "Le recit enchaine des evenements, souvent fictifs, avec des personnages qui evoluent dans un lieu et une epoque."
+        },
+        {
+          "text": "Le narrateur est :",
+          "type": "mcq",
+          "options": [
+            "Celui qui raconte l'histoire (a ne pas confondre avec l'auteur)",
+            "Le personnage principal",
+            "L'auteur du livre"
+          ],
+          "correct": 0,
+          "solution": "Le narrateur est l'instance qui raconte ; il peut etre un personnage ou exterieur a l'histoire, et n'est pas forcement l'auteur."
+        },
+        {
+          "text": "Un recit peut etre raconte :",
+          "type": "mcq",
+          "options": [
+            "A la 1re personne (« je ») ou a la 3e personne (« il/elle »)",
+            "Uniquement au « nous »",
+            "Uniquement a la 2e personne"
+          ],
+          "correct": 0,
+          "solution": "Le narrateur peut parler a la 1re personne (narrateur-personnage) ou a la 3e personne (narrateur exterieur)."
+        },
+        {
+          "text": "Qu'appelle-t-on la focalisation (ou point de vue) ?",
+          "type": "mcq",
+          "options": [
+            "La longueur du texte",
+            "Le genre du texte",
+            "Le point de vue adopte par le narrateur"
+          ],
+          "correct": 2,
+          "solution": "La focalisation est l'angle de vision du narrateur : omnisciente, interne ou externe."
+        },
+        {
+          "text": "Dans la focalisation omnisciente, le narrateur :",
+          "type": "mcq",
+          "options": [
+            "Ne sait rien",
+            "Raconte a la 1re personne",
+            "Sait tout (pensees, passe, avenir de tous les personnages)"
+          ],
+          "correct": 2,
+          "solution": "Omniscient = « qui sait tout » : il connait les pensees secretes et peut anticiper la suite."
+        },
+        {
+          "text": "Dans la focalisation interne, le narrateur :",
+          "type": "mcq",
+          "options": [
+            "Sait tout de tous",
+            "Adopte le point de vue d'un personnage dont il connait les pensees",
+            "Reste exterieur a toute pensee"
+          ],
+          "correct": 1,
+          "solution": "Focalisation interne : on voit l'histoire a travers un personnage, on connait ses pensees et sensations."
+        },
+        {
+          "text": "Dans la focalisation externe, le narrateur :",
+          "type": "mcq",
+          "options": [
+            "Connait toutes les pensees",
+            "Observe de l'exterieur, comme une camera, sans entrer dans les pensees",
+            "Raconte ses propres souvenirs"
+          ],
+          "correct": 1,
+          "solution": "Focalisation externe : le narrateur ne dit que ce qui est observable (gestes, paroles), sans acceder a l'interiorite."
+        },
+        {
+          "text": "« Elle ignorait ce qui l'attendait et sourit pourtant. » Quelle focalisation ?",
+          "type": "mcq",
+          "options": [
+            "Externe",
+            "Omnisciente",
+            "Interne"
+          ],
+          "correct": 1,
+          "solution": "Le narrateur connait ce que le personnage ignore : focalisation omnisciente."
+        },
+        {
+          "text": "« Il marchait, le regard fixe, et serrait les poings ; il avait peur. » Quelle focalisation ?",
+          "type": "mcq",
+          "options": [
+            "Externe",
+            "Omnisciente",
+            "Interne"
+          ],
+          "correct": 2,
+          "solution": "On a acces a son emotion (« il avait peur ») a travers lui : focalisation interne."
+        },
+        {
+          "text": "« L'homme entra, s'assit et regarda par la fenetre. » Quelle focalisation ?",
+          "type": "mcq",
+          "options": [
+            "Interne",
+            "Externe",
+            "Omnisciente"
+          ],
+          "correct": 1,
+          "solution": "On ne decrit que des actions visibles, sans pensees : focalisation externe."
+        },
+        {
+          "text": "Qu'est-ce que l'incipit d'un recit ?",
+          "type": "mcq",
+          "options": [
+            "La fin du texte",
+            "Le milieu de l'action",
+            "Le debut du texte narratif"
+          ],
+          "correct": 2,
+          "solution": "L'incipit est le commencement du recit ; il installe le cadre, les personnages, l'intrigue."
+        },
+        {
+          "text": "Qu'appelle-t-on un debut in medias res ?",
+          "type": "mcq",
+          "options": [
+            "Commencer par une description",
+            "Commencer par la fin",
+            "Commencer directement au milieu de l'action, sans preface"
+          ],
+          "correct": 2,
+          "solution": "In medias res = « au milieu des choses » : le recit debute en pleine action."
+        },
+        {
+          "text": "Le discours direct se reconnait a :",
+          "type": "mcq",
+          "options": [
+            "Une subordonnee avec « que »",
+            "L'absence de ponctuation",
+            "Des paroles rapportees telles quelles, entre guillemets, introduites par un verbe de parole"
+          ],
+          "correct": 2,
+          "solution": "Discours direct : « Marie s'ecria : \"Quoi ! Jules va au cinema sans moi ?\" » (guillemets, ponctuation expressive)."
+        },
+        {
+          "text": "Le discours indirect se reconnait a :",
+          "type": "mcq",
+          "options": [
+            "Les paroles sont rapportees par le narrateur dans une subordonnee (souvent avec « que »)",
+            "Il n'y a aucun verbe de parole",
+            "Les paroles sont entre guillemets"
+          ],
+          "correct": 0,
+          "solution": "Discours indirect : « Marie a dit qu'elle etait surprise que Jules aille au cinema sans elle. »"
+        },
+        {
+          "text": "Le discours indirect libre se caracterise par :",
+          "type": "mcq",
+          "options": [
+            "Des paroles toujours entre guillemets",
+            "Un dialogue theatral",
+            "Des paroles rapportees sans guillemets ni verbe de parole introducteur, melangees au recit"
+          ],
+          "correct": 2,
+          "solution": "Discours indirect libre : « Marie etait surprise. Quoi ! Jules allait au cinema sans elle ? »"
+        },
+        {
+          "text": "« Marie a dit qu'elle etait surprise que Jules aille au cinema sans elle. » Quel type de discours ?",
+          "type": "mcq",
+          "options": [
+            "Indirect",
+            "Direct",
+            "Indirect libre"
+          ],
+          "correct": 0,
+          "solution": "Les paroles sont integrees a une subordonnee introduite par « que » : discours indirect."
+        },
+        {
+          "text": "« Marie etait surprise. \"Quoi ! Jules va au cinema sans moi ?\" » Quel type de discours ?",
+          "type": "mcq",
+          "options": [
+            "Indirect libre",
+            "Indirect",
+            "Direct"
+          ],
+          "correct": 2,
+          "solution": "Guillemets et ponctuation expressive : discours direct."
+        },
+        {
+          "text": "« Marie etait surprise. Quoi ! Jules allait au cinema sans elle. » Quel type de discours ?",
+          "type": "mcq",
+          "options": [
+            "Indirect",
+            "Indirect libre",
+            "Direct"
+          ],
+          "correct": 1,
+          "solution": "Ni guillemets ni verbe introducteur : discours indirect libre (melange recit/paroles)."
+        },
+        {
+          "text": "Dans un recit au passe, quel temps sert a la description et a l'arriere-plan ?",
+          "type": "mcq",
+          "options": [
+            "Le passe simple",
+            "Le futur",
+            "L'imparfait"
+          ],
+          "correct": 2,
+          "solution": "L'imparfait decrit le decor, les habitudes, l'arriere-plan ; le passe simple marque les actions de premier plan."
+        },
+        {
+          "text": "Dans un recit au passe, quel temps marque les actions de premier plan ?",
+          "type": "mcq",
+          "options": [
+            "Le passe simple",
+            "L'imparfait",
+            "Le conditionnel"
+          ],
+          "correct": 0,
+          "solution": "Le passe simple exprime les evenements ponctuels qui font avancer le recit."
+        },
+        {
+          "text": "Les personnages d'un recit evoluent :",
+          "type": "mcq",
+          "options": [
+            "Dans un lieu et une epoque donnes (le cadre spatio-temporel)",
+            "Toujours dans un reve",
+            "Nulle part, sans cadre"
+          ],
+          "correct": 0,
+          "solution": "Le cadre spatio-temporel situe l'action (ou et quand)."
+        },
+        {
+          "text": "« Il a dit qu'il viendrait demain. » Quel type de discours ?",
+          "type": "text",
+          "accepted": [
+            "indirect",
+            "discours indirect",
+            "indirect."
+          ],
+          "solution": "Discours indirect."
+        },
+        {
+          "text": "« Il s'ecria : \"Je viendrai demain !\" » Quel type de discours ?",
+          "type": "text",
+          "accepted": [
+            "direct",
+            "discours direct",
+            "direct."
+          ],
+          "solution": "Discours direct."
+        },
+        {
+          "text": "Comment appelle-t-on le debut d'un texte narratif ?",
+          "type": "text",
+          "accepted": [
+            "incipit",
+            "l'incipit"
+          ],
+          "solution": "L'incipit."
+        },
+        {
+          "text": "Comment appelle-t-on un debut qui commence en pleine action ?",
+          "type": "text",
+          "accepted": [
+            "in medias res",
+            "in media res",
+            "in medias-res"
+          ],
+          "solution": "In medias res."
+        },
+        {
+          "text": "Le narrateur qui sait tout est dit ___.",
+          "type": "text",
+          "accepted": [
+            "omniscient",
+            "omnisciente"
+          ],
+          "solution": "Omniscient."
+        }
+      ]
+    },
+    {
+      "category": "7. Les genres litteraires - poetique, theatral, argumentatif",
+      "questions": [
+        {
+          "text": "Le texte poetique est le plus souvent :",
+          "type": "mcq",
+          "options": [
+            "En vers, mais il peut aussi etre en prose",
+            "En dialogue uniquement",
+            "En prose uniquement"
+          ],
+          "correct": 0,
+          "solution": "Le poeme est le plus souvent en vers, mais il existe de la poesie en prose (ex : Baudelaire, Le Spleen de Paris)."
+        },
+        {
+          "text": "Le texte poetique privilegie :",
+          "type": "mcq",
+          "options": [
+            "Une histoire tres detaillee",
+            "L'expressivite de la forme et le travail sur la langue plus que le recit",
+            "Des ordres et des conseils"
+          ],
+          "correct": 1,
+          "solution": "Le poete cherche moins a raconter qu'a jouer sur les sens, les images, les rythmes et les sonorites."
+        },
+        {
+          "text": "Le texte poetique s'adresse surtout :",
+          "type": "mcq",
+          "options": [
+            "A la raison du lecteur",
+            "Aux sens et a la sensibilite du lecteur",
+            "Au gout du lecteur uniquement"
+          ],
+          "correct": 1,
+          "solution": "Par la musicalite et les images, la poesie touche la sensibilité, les sensations du lecteur."
+        },
+        {
+          "text": "Un vers est :",
+          "type": "mcq",
+          "options": [
+            "Une phrase de theatre",
+            "Un groupe de plusieurs vers",
+            "Une ligne de poeme (souvent terminee par un retour a la ligne)"
+          ],
+          "correct": 2,
+          "solution": "Le vers est une unite rythmique ; un ensemble de vers forme une strophe."
+        },
+        {
+          "text": "Un quatrain est une strophe de :",
+          "type": "mcq",
+          "options": [
+            "Quatre vers",
+            "Deux vers",
+            "Trois vers"
+          ],
+          "correct": 0,
+          "solution": "Quatrain = 4 vers ; distique = 2 vers ; tercet = 3 vers ; sizain = 6 vers."
+        },
+        {
+          "text": "Le texte theatral contient des didascalies : ce sont :",
+          "type": "mcq",
+          "options": [
+            "Les paroles des personnages",
+            "Les noms des acteurs",
+            "Des indications sceniques (decor, jeu, ton) souvent en italique"
+          ],
+          "correct": 2,
+          "solution": "Les didascalies (a ne pas lire a voix haute) precisent le decor, les gestes, les tons, les deplacements."
+        },
+        {
+          "text": "Le texte theatral est d'abord fait pour :",
+          "type": "mcq",
+          "options": [
+            "Etre lu silencieusement",
+            "Etre chante",
+            "Etre represente sur scene, joue par des comediens"
+          ],
+          "correct": 2,
+          "solution": "Le theatre est un texte de spectacle : il est concu pour la scene, meme s'il peut aussi etre lu."
+        },
+        {
+          "text": "Le texte theatral utilise principalement :",
+          "type": "mcq",
+          "options": [
+            "Le discours direct (dialogue, repliques)",
+            "Le discours indirect",
+            "Le recit a la 3e personne"
+          ],
+          "correct": 0,
+          "solution": "Au theatre, les personnages parlent eux-memes : discours direct (dialogue, tirade, monologue)."
+        },
+        {
+          "text": "Une longue replique prononcee par un personnage seul sur scene s'appelle :",
+          "type": "mcq",
+          "options": [
+            "Une didascalie",
+            "Un aparte",
+            "Un monologue"
+          ],
+          "correct": 2,
+          "solution": "Le monologue est une tirade prononcee par un personnage seul ; l'aparte est dit en marge des autres personnages."
+        },
+        {
+          "text": "Une tirade est :",
+          "type": "mcq",
+          "options": [
+            "Une indication de decor",
+            "Une courte reponse",
+            "Une longue replique d'un personnage"
+          ],
+          "correct": 2,
+          "solution": "La tirade est un developpement long prononce par un personnage, sans interruption."
+        },
+        {
+          "text": "Le texte argumentatif cherche a :",
+          "type": "mcq",
+          "options": [
+            "Faire rire uniquement",
+            "Convaincre ou persuader le lecteur d'adherer a une these",
+            "Raconter une histoire"
+          ],
+          "correct": 1,
+          "solution": "L'argumentatif defend une thèse (opinion) avec des arguments et des exemples, pour convaincre ou persuader."
+        },
+        {
+          "text": "Convaincre, c'est s'adresser :",
+          "type": "mcq",
+          "options": [
+            "A son gout esthetique",
+            "Aux emotions uniquement",
+            "A la raison du lecteur (arguments logiques)"
+          ],
+          "correct": 2,
+          "solution": "Convaincre = raisonnement, logique, preuves ; persuader = toucher les emotions, la sensibilité."
+        },
+        {
+          "text": "Les elements essentiels d'un texte argumentatif sont :",
+          "type": "mcq",
+          "options": [
+            "Narrateur, personnages, cadre",
+            "These, arguments, exemples",
+            "Vers, rimes, strophes"
+          ],
+          "correct": 1,
+          "solution": "On annonce une thèse, on la defend par des arguments, illustres par des exemples."
+        },
+        {
+          "text": "Un apologue est :",
+          "type": "mcq",
+          "options": [
+            "Un poeme lyrique",
+            "Une piece de theatre",
+            "Un recit court a visee argumentative ou morale (fable, conte)"
+          ],
+          "correct": 2,
+          "solution": "L'apologue raconte une histoire pour faire passer une morale ou une lecon (ex : les Fables de La Fontaine)."
+        },
+        {
+          "text": "« Convaincre » et « persuader » : quelle difference ?",
+          "type": "mcq",
+          "options": [
+            "Les deux sont identiques",
+            "Persuader s'adresse a la raison",
+            "Convaincre s'adresse a la raison, persuader aux emotions"
+          ],
+          "correct": 2,
+          "solution": "Convaincre = logique et preuves ; persuader = seduction, emotion, sensibilité."
+        },
+        {
+          "text": "Quel genre litteraire est fait pour etre joue sur scene ?",
+          "type": "text",
+          "accepted": [
+            "theatre",
+            "théâtre",
+            "le theatre",
+            "le théâtre",
+            "theatral",
+            "théâtral"
+          ],
+          "solution": "Le theatre."
+        },
+        {
+          "text": "Comment appelle-t-on les indications sceniques dans une piece de theatre ?",
+          "type": "text",
+          "accepted": [
+            "didascalies",
+            "les didascalies"
+          ],
+          "solution": "Les didascalies."
+        },
+        {
+          "text": "Quel genre privilegie le travail sur la forme et les sonorites ?",
+          "type": "text",
+          "accepted": [
+            "poesie",
+            "poésie",
+            "la poesie",
+            "la poésie",
+            "poetique",
+            "poétique"
+          ],
+          "solution": "La poesie (genre poetique)."
+        },
+        {
+          "text": "Quel genre cherche a convaincre le lecteur ?",
+          "type": "text",
+          "accepted": [
+            "argumentatif",
+            "argumentation",
+            "le texte argumentatif",
+            "l'argumentatif"
+          ],
+          "solution": "Le genre argumentatif."
+        }
+      ]
+    },
+    {
+      "category": "8. Les courants litteraires depuis la Renaissance",
+      "questions": [
+        {
+          "text": "A quel siecle se developpe l'humanisme ?",
+          "type": "mcq",
+          "options": [
+            "Au 20e siecle",
+            "Au 18e siecle",
+            "Au 16e siecle"
+          ],
+          "correct": 2,
+          "solution": "L'humanisme nait a la Renaissance (16e siecle) : retour aux textes anciens et foi dans l'homme et le savoir."
+        },
+        {
+          "text": "Quel est l'idee centrale de l'humanisme ?",
+          "type": "mcq",
+          "options": [
+            "Placer l'homme et le savoir au centre, renouer avec les textes antiques",
+            "Refuser toute regle",
+            "Exalter l'inconscient et le reve"
+          ],
+          "correct": 0,
+          "solution": "L'humanisme valorise l'education, le savoir, la dignite humaine, a partir des textes grecs et latins."
+        },
+        {
+          "text": "La Pleiade est un groupe de poetes de :",
+          "type": "mcq",
+          "options": [
+            "La fin du 19e siecle",
+            "La fin du 17e siecle",
+            "La fin du 16e siecle"
+          ],
+          "correct": 2,
+          "solution": "La Pleiade (Ronsard, du Bellay...) enrichit la langue francaise et definit de nouvelles formes poetiques (fin 16e)."
+        },
+        {
+          "text": "Quel poete appartient a la Pleiade ?",
+          "type": "mcq",
+          "options": [
+            "Voltaire",
+            "Zola",
+            "Ronsard"
+          ],
+          "correct": 2,
+          "solution": "Pierre de Ronsard et Joachim du Bellay sont les figures majeures de la Pleiade."
+        },
+        {
+          "text": "Le baroque se situe :",
+          "type": "mcq",
+          "options": [
+            "Au 20e siecle",
+            "A la fin du 16e et au debut du 17e siecle",
+            "Au 18e siecle"
+          ],
+          "correct": 1,
+          "solution": "Le baroque (fin 16e - debut 17e) aime l'instabilite, le mouvement, les metamorphoses, l'illusion."
+        },
+        {
+          "text": "Quel courant aime l'instabilite, les metamorphoses et l'illusion ?",
+          "type": "mcq",
+          "options": [
+            "Le baroque",
+            "Le realisme",
+            "Le classicisme"
+          ],
+          "correct": 0,
+          "solution": "Le baroque exprime un monde en mouvement, incertain, ou les apparences trompent."
+        },
+        {
+          "text": "Le classicisme se developpe :",
+          "type": "mcq",
+          "options": [
+            "Au 17e siecle",
+            "Au 20e siecle",
+            "Au 16e siecle"
+          ],
+          "correct": 0,
+          "solution": "Le classicisme (17e) recherche l'ordre, la mesure, la vraisemblance et la bienséance (Boileau, Racine, Moliere)."
+        },
+        {
+          "text": "Quelles valeurs defend le classicisme ?",
+          "type": "mcq",
+          "options": [
+            "Ordre, mesure, vraisemblance, bienséance, imitation des Anciens",
+            "Exces, desordre, provocation",
+            "Reve, inconscient, hasard"
+          ],
+          "correct": 0,
+          "solution": "Le classicisme soumet l'art a des regles (trois unites au theatre) et recherche la perfection formelle."
+        },
+        {
+          "text": "Les Lumieres se developpent :",
+          "type": "mcq",
+          "options": [
+            "Au 16e siecle",
+            "Au 19e siecle",
+            "Au 18e siecle"
+          ],
+          "correct": 2,
+          "solution": "Les Lumieres (18e) defendent la raison, la tolerance, la liberte et le savoir contre l'obscurantisme (Voltaire, Rousseau, Diderot)."
+        },
+        {
+          "text": "Quel mouvement defend la raison, la tolerance et la liberte ?",
+          "type": "mcq",
+          "options": [
+            "Le naturalisme",
+            "Les Lumieres",
+            "Le symbolisme"
+          ],
+          "correct": 1,
+          "solution": "Les philosophes des Lumieres combattent les prejuges et l'intolerance au nom de la raison."
+        },
+        {
+          "text": "Le romantisme se developpe :",
+          "type": "mcq",
+          "options": [
+            "Au 17e siecle",
+            "Au 20e siecle",
+            "Au 19e siecle"
+          ],
+          "correct": 2,
+          "solution": "Le romantisme (19e) exalte le « moi », la sensibilité, la nature et le lyrisme (Hugo, Lamartine, Musset)."
+        },
+        {
+          "text": "Quel courant exalte le « moi », les sentiments et la nature ?",
+          "type": "mcq",
+          "options": [
+            "Le romantisme",
+            "Le classicisme",
+            "Le naturalisme"
+          ],
+          "correct": 0,
+          "solution": "Le romantisme met au premier plan l'expression personnelle et l'emotion."
+        },
+        {
+          "text": "Le realisme se developpe :",
+          "type": "mcq",
+          "options": [
+            "Au 18e siecle",
+            "Au 20e siecle",
+            "Au 19e siecle"
+          ],
+          "correct": 2,
+          "solution": "Le realisme (19e) veut representer la societe et le reel avec precision (Balzac, Stendhal, Flaubert)."
+        },
+        {
+          "text": "Quel courant cherche a representer la realite et la societe avec precision ?",
+          "type": "mcq",
+          "options": [
+            "Le realisme",
+            "Le baroque",
+            "Le surréalisme"
+          ],
+          "correct": 0,
+          "solution": "Le realisme observe et decrit le monde contemporain, parfois de facon critique."
+        },
+        {
+          "text": "Le naturalisme est porte par :",
+          "type": "mcq",
+          "options": [
+            "Victor Hugo",
+            "Emile Zola",
+            "Ronsard"
+          ],
+          "correct": 1,
+          "solution": "Zola est le chef de file du naturalisme, qui applique une demarche quasi scientifique au roman."
+        },
+        {
+          "text": "Quel courant prolonge le realisme en s'appuyant sur les sciences (heredite, milieu) ?",
+          "type": "mcq",
+          "options": [
+            "Le classicisme",
+            "Les Lumieres",
+            "Le naturalisme"
+          ],
+          "correct": 2,
+          "solution": "Le naturalisme (19e) veut expliquer les comportements par l'heredite et le milieu social."
+        },
+        {
+          "text": "Le symbolisme se situe :",
+          "type": "mcq",
+          "options": [
+            "Au 16e siecle",
+            "Au 17e siecle",
+            "A la fin du 19e et au debut du 20e siecle"
+          ],
+          "correct": 2,
+          "solution": "Le symbolisme (fin 19e - debut 20e) privilegie le mystere, les symboles et la musicalité (Verlaine, Mallarme, Rimbaud)."
+        },
+        {
+          "text": "Quel courant privilegie les symboles, le mystere et la musicalite du langage ?",
+          "type": "mcq",
+          "options": [
+            "Le realisme",
+            "Le symbolisme",
+            "Le naturalisme"
+          ],
+          "correct": 1,
+          "solution": "Le symbolisme suggere plutot qu'il ne decrit, grace aux images et a la musique des mots."
+        },
+        {
+          "text": "Le Parnasse est un mouvement de :",
+          "type": "mcq",
+          "options": [
+            "Du 16e siecle",
+            "La seconde moitie du 19e siecle",
+            "De la fin du 17e siecle"
+          ],
+          "correct": 1,
+          "solution": "Le Parnasse (Leconte de Lisle, Heredia) defend « l'art pour l'art » et la perfection formelle au 19e siecle."
+        },
+        {
+          "text": "Que defend le Parnasse ?",
+          "type": "mcq",
+          "options": [
+            "L'ecriture automatique",
+            "« L'art pour l'art » : la beaute formelle avant tout",
+            "L'engagement politique"
+          ],
+          "correct": 1,
+          "solution": "Pour les Parnassiens, l'art n'a pas besoin d'etre utile : la perfection du vers compte avant tout."
+        },
+        {
+          "text": "Le poete baroque Theophile de Viau a ete associe, par erreur, a quel courant ?",
+          "type": "mcq",
+          "options": [
+            "Au classicisme",
+            "Au Parnasse",
+            "Au surrealisme"
+          ],
+          "correct": 1,
+          "solution": "Theophile de Viau est un poete baroque (debut 17e), et non parnassien : le Parnasse date du 19e siecle."
+        },
+        {
+          "text": "Le dadaisme se developpe :",
+          "type": "mcq",
+          "options": [
+            "Au 16e siecle",
+            "Au 20e siecle",
+            "Au 18e siecle"
+          ],
+          "correct": 1,
+          "solution": "Dada (20e) est un mouvement de revolte et de provocation qui refuse l'art traditionnel et le sens."
+        },
+        {
+          "text": "Quel mouvement surrealiste explore le reve et l'inconscient ?",
+          "type": "mcq",
+          "options": [
+            "Le naturalisme",
+            "Le surréalisme",
+            "Le classicisme"
+          ],
+          "correct": 1,
+          "solution": "Le surrealisme (20e) explore le reve, l'inconscient et l'ecriture automatique (Breton, Aragon, Eluard)."
+        },
+        {
+          "text": "L'ecriture automatique est une technique du :",
+          "type": "mcq",
+          "options": [
+            "Surréalisme",
+            "Parnasse",
+            "Realisme"
+          ],
+          "correct": 0,
+          "solution": "Les surrealistes ecrivent sans controle de la raison, pour laisser parler l'inconscient."
+        },
+        {
+          "text": "Le theatre de l'absurde se developpe :",
+          "type": "mcq",
+          "options": [
+            "Au 19e siecle",
+            "Au 20e siecle",
+            "Au 17e siecle"
+          ],
+          "correct": 1,
+          "solution": "Le theatre de l'absurde (20e) montrent des existences privees de sens (Ionesco, Beckett)."
+        },
+        {
+          "text": "Quel auteur est associe au theatre de l'absurde ?",
+          "type": "mcq",
+          "options": [
+            "Samuel Beckett",
+            "Gustave Flaubert",
+            "Pierre de Ronsard"
+          ],
+          "correct": 0,
+          "solution": "Beckett (« En attendant Godot ») et Ionesco sont les grands auteurs de l'absurde."
+        },
+        {
+          "text": "Le Nouveau Roman se developpe :",
+          "type": "mcq",
+          "options": [
+            "Au 16e siecle",
+            "Au 18e siecle",
+            "Au 20e siecle"
+          ],
+          "correct": 2,
+          "solution": "Le Nouveau Roman (20e) remet en cause le recit traditionnel : intrigue et personnages s'effacent (Robbe-Grillet, Duras)."
+        },
+        {
+          "text": "Quelle est la principale caracteristique du Nouveau Roman ?",
+          "type": "mcq",
+          "options": [
+            "Il exalte le moi romantique",
+            "Il remet en cause le recit traditionnel (intrigue, personnage, chronologie)",
+            "Il imite les Anciens"
+          ],
+          "correct": 1,
+          "solution": "Le Nouveau Roman expérimente de nouvelles formes et refuse les conventions du roman realiste."
+        },
+        {
+          "text": "A quel siecle appartient l'humanisme ?",
+          "type": "text",
+          "accepted": [
+            "16",
+            "16e",
+            "16eme",
+            "xvie",
+            "16e siecle",
+            "16eme siecle"
+          ],
+          "solution": "Le 16e siecle (Renaissance)."
+        },
+        {
+          "text": "A quel siecle appartient le classicisme ?",
+          "type": "text",
+          "accepted": [
+            "17",
+            "17e",
+            "17eme",
+            "xviie",
+            "17e siecle",
+            "17eme siecle"
+          ],
+          "solution": "Le 17e siecle."
+        },
+        {
+          "text": "A quel siecle appartiennent les Lumieres ?",
+          "type": "text",
+          "accepted": [
+            "18",
+            "18e",
+            "18eme",
+            "xviiie",
+            "18e siecle",
+            "18eme siecle"
+          ],
+          "solution": "Le 18e siecle."
+        },
+        {
+          "text": "A quel siecle appartient le romantisme ?",
+          "type": "text",
+          "accepted": [
+            "19",
+            "19e",
+            "19eme",
+            "xixe",
+            "19e siecle",
+            "19eme siecle"
+          ],
+          "solution": "Le 19e siecle."
+        },
+        {
+          "text": "Quel courant du 19e siecle s'appuie sur les sciences (heredite, milieu) ?",
+          "type": "text",
+          "accepted": [
+            "naturalisme",
+            "le naturalisme"
+          ],
+          "solution": "Le naturalisme."
+        },
+        {
+          "text": "Quel courant du 20e siecle explore le reve et l'inconscient ?",
+          "type": "text",
+          "accepted": [
+            "surrealisme",
+            "surréalisme",
+            "le surrealisme",
+            "le surréalisme"
+          ],
+          "solution": "Le surrealisme."
+        },
+        {
+          "text": "Quel courant remet en cause le recit traditionnel au 20e siecle ?",
+          "type": "text",
+          "accepted": [
+            "nouveau roman",
+            "le nouveau roman"
+          ],
+          "solution": "Le Nouveau Roman."
+        }
+      ]
+    }
+  ]
+}
