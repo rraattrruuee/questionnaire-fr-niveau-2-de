@@ -86,6 +86,11 @@
     _currentPage = page;
   }
 
+  function identify(distinctId) {
+    if (!distinctId) return;
+    localStorage.setItem("ph_distinct_id", distinctId);
+  }
+
   window.addEventListener("beforeunload", function () {
     track("quiz_abandon_page", {
       page: _currentPage,
