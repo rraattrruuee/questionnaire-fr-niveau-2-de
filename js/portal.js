@@ -116,11 +116,14 @@
 
     if (quiz.file && !isRunningAsPWA()) {
       const dlBtn = document.createElement("a");
-      dlBtn.href = quiz.file;
-      dlBtn.download = "";
+      dlBtn.href = "#";
       dlBtn.className = "btn-dl";
       dlBtn.innerHTML = "📥";
-      dlBtn.title = "Télécharger le fichier";
+      dlBtn.title = "Télécharger le quiz complet (.html)";
+      dlBtn.onclick = function (e) {
+        e.preventDefault();
+        downloadStandalone(quiz);
+      };
       wrapper.appendChild(dlBtn);
     }
 
@@ -174,6 +177,73 @@
     });
 
     return section;
+  }
+
+  /* ---------------------------------------------------------
+     Téléchargement standalone (.html hors-ligne)
+     --------------------------------------------------------- */
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function sanitizeFileName(name) {
+    return (name.replace(/[<>:"/\\|?*\x00-\x1F]/g, "").trim().replace(/\s+/g, "_") || "quiz");
+  }
+
+  function extractQuizContainer(html) {
+    var doc = new DOMParser().parseFromString(html, "text/html");
+    var el = doc.querySelector(".quiz-container");
+    return el ? el.outerHTML : "";
+  }
+
+  function buildStandaloneHtml(data, title, assets) {
+    var payloadData = {};
+    for (var k in data) { if (Object.prototype.hasOwnProperty.call(data, k)) payloadData[k] = data[k]; }
+    payloadData.title = title;
+    var payload = JSON.stringify(payloadData).replace(/<\//g, "<\\/");
+    var container = extractQuizContainer(assets.quizHtml);
+
+    return "<!doctype html>\n<html lang=\"fr\" data-theme=\"dark\">\n<head>\n" +
+      "<meta charset=\"UTF-8\" />\n" +
+      "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n" +
+      "<meta name=\"theme-color\" content=\"#0b1020\" />\n" +
+      "<title>" + escapeHtml(title) + "</title>\n" +
+      "<style>\n" + assets.themeCss + "\n</style>\n" +
+      "<style>\n" + assets.quizCss + "\n</style>\n" +
+      "<style>.quiz-nav-bar{display:none}.results-actions #back-btn-results{display:none}</style>\n" +
+      "</head>\n<body>\n" + container + "\n" +
+      "<script>window.__EMBED_QUIZ__=" + payload + ";<\/script>\n" +
+      "<script>\n" + assets.quizJs + "\n<\/script>\n" +
+      "</body>\n</html>";
+  }
+
+  function downloadStandalone(quiz) {
+    var btn = document.querySelector('.btn-dl[title*="complet"]');
+    if (btn) { btn.innerHTML = "⏳"; btn.style.pointerEvents = "none"; }
+
+    Promise.all([
+      fetch(quiz.file).then(function (r) { return r.json(); }),
+      fetch("quiz.html").then(function (r) { return r.text(); }),
+      fetch("css/theme.css").then(function (r) { return r.text(); }),
+      fetch("css/quiz.css").then(function (r) { return r.text(); }),
+      fetch("js/quiz.js").then(function (r) { return r.text(); })
+    ]).then(function (files) {
+      var assets = { quizHtml: files[1], themeCss: files[2], quizCss: files[3], quizJs: files[4] };
+      var html = buildStandaloneHtml(files[0], quiz.title, assets);
+      var blob = new Blob([html], { type: "text/html;charset=utf-8" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = sanitizeFileName(quiz.title) + ".html";
+      document.body.appendChild(a); a.click();
+      document.body.removeChild(a); URL.revokeObjectURL(url);
+      if (btn) { btn.innerHTML = "📥"; btn.style.pointerEvents = ""; }
+    }).catch(function (err) {
+      console.error("Erreur téléchargement:", err);
+      alert("Erreur lors du téléchargement du quiz.");
+      if (btn) { btn.innerHTML = "📥"; btn.style.pointerEvents = ""; }
+    });
   }
 
   function buildPortal(config) {

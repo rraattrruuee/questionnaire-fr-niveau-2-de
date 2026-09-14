@@ -127,6 +127,33 @@
       .replace(/,/g, ".");
   }
 
+  /* ---------------------------------------------------------
+     Progression (localStorage)
+     --------------------------------------------------------- */
+  var PROGRESS_KEY = "quiz-progress";
+
+  function loadProgress() {
+    try { return JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}"); }
+    catch (e) { return {}; }
+  }
+
+  function getQuizId() {
+    if (window.__EMBED_QUIZ__) return null;
+    return getQuizIdFromURL();
+  }
+
+  function saveProgress(quizId, catIdx, score, total) {
+    if (!quizId) return;
+    var all = loadProgress();
+    if (!all[quizId]) all[quizId] = {};
+    var pct = total ? Math.round((score / total) * 100) : 0;
+    var prev = all[quizId][catIdx];
+    if (!prev || pct > prev.pct) {
+      all[quizId][catIdx] = { score: score, total: total, pct: pct };
+      try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(all)); } catch (e) {}
+    }
+  }
+
   function setBack(handler) {
     $("back-btn").onclick = handler;
   }
@@ -163,14 +190,32 @@
     var list = $("category-list");
     list.innerHTML = "";
 
+    var quizId = getQuizId();
+    var allProgress = loadProgress();
+    var quizProgress = quizId && allProgress[quizId] ? allProgress[quizId] : {};
+
     categories.forEach(function (cat, idx) {
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "selector-item category-item";
+
+      var prog = quizProgress[idx];
+      var progHtml = "";
+      if (prog) {
+        progHtml =
+          '<div class="category-progress">' +
+            '<div class="category-progress-fill" style="width:' + prog.pct + '%"></div>' +
+          "</div>" +
+          '<span class="category-progress-text">' +
+            prog.score + " / " + prog.total + " (" + prog.pct + "%)" +
+          "</span>";
+      }
+
       btn.innerHTML =
         '<span class="selector-title">' + cat.name + "</span>" +
         '<span class="selector-desc">' + cat.questions.length + " question" +
-        (cat.questions.length > 1 ? "s" : "") + "</span>";
+        (cat.questions.length > 1 ? "s" : "") + "</span>" +
+        progHtml;
       btn.onclick = function () { startCategory(idx); };
       list.appendChild(btn);
     });
@@ -228,6 +273,15 @@
     $("main-btn").onclick = checkAnswerAndProceed;
     $("restart-btn").onclick = function () { startCategory(currentCategoryIndex); };
     $("back-btn-results").onclick = goToPortal;
+
+    var menuBtn = $("menu-btn");
+    if (menuBtn) {
+      menuBtn.classList.toggle("hidden", categories.length <= 1);
+      menuBtn.onclick = function () {
+        if (categories.length > 1) renderCategoryMenu();
+        else goToPortal();
+      };
+    }
 
     updateProgress();
     renderQuestion();
@@ -432,6 +486,22 @@
 
     var total = questionsShuffled.length;
     var percentage = total ? Math.round((score / total) * 100) : 0;
+
+    // Sauvegarder la progression
+    var quizId = getQuizId();
+    if (quizId && categories.length > 1) {
+      saveProgress(quizId, currentCategoryIndex, score, total);
+    }
+
+    // Bouton "Retour au menu"
+    var menuBtn = $("menu-btn");
+    if (menuBtn) {
+      menuBtn.classList.toggle("hidden", categories.length <= 1);
+      menuBtn.onclick = function () {
+        if (categories.length > 1) renderCategoryMenu();
+        else goToPortal();
+      };
+    }
 
     $("score-display").textContent =
       "Votre score : " + score + " / " + total + " (" + percentage + "%)";
