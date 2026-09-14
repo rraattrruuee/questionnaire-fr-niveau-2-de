@@ -383,17 +383,21 @@
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.addEventListener("message", (event) => {
       if (!cachingIndicator) return;
-      const { type, completed, total } = event.data || {};
+      const { type, completed, total, downloaded, unchanged } = event.data || {};
       if (type === "caching-start") {
         cachingIndicator.style.display = "block";
-        cachingIndicator.textContent = "Téléchargement... 0%";
+        cachingIndicator.textContent = "Vérification... 0%";
       } else if (type === "caching-progress") {
         if (typeof completed === "number" && typeof total === "number") {
           const pct = Math.floor((completed / total) * 100);
-          cachingIndicator.textContent = "Téléchargement... " + pct + "%";
+          cachingIndicator.textContent = "Vérification... " + pct + "%";
         }
       } else if (type === "caching-complete") {
-        cachingIndicator.textContent = "Téléchargement terminé";
+        if (typeof downloaded === "number" && downloaded > 0) {
+          cachingIndicator.textContent = downloaded + " mis à jour";
+        } else {
+          cachingIndicator.textContent = "Tout est à jour";
+        }
         setTimeout(() => { cachingIndicator.style.display = "none"; }, 2000);
       }
     });

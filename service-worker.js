@@ -22,7 +22,8 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1789414436";
+const CACHE_NAME = "quiz-cache-1789414658";
+const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
   return self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
@@ -30,39 +31,74 @@ function notifyClients(msg) {
   });
 }
 
-function cacheAllAssets(force) {
-  return caches.open(CACHE_NAME).then((cache) => {
-    return cache.keys().then((cachedRequests) => {
-      const cachedUrls = new Set(cachedRequests.map((r) => r.url));
+function getCacheMeta(cache) {
+  return cache.match(META_KEY).then(function (r) {
+    return r ? r.json() : {};
+  });
+}
 
-      const toFetch = force
-        ? STATIC_ASSETS
-        : STATIC_ASSETS.filter((url) => !cachedUrls.has(new URL(url, self.location.origin).href));
+function saveCacheMeta(cache, meta) {
+  var blob = new Blob([JSON.stringify(meta)], { type: "application/json" });
+  return cache.put(META_KEY, new Response(blob));
+}
+
+function cacheAllAssets(force) {
+  return caches.open(CACHE_NAME).then(function (cache) {
+    return getCacheMeta(cache).then(function (meta) {
+      var toFetch = STATIC_ASSETS.map(function (url) {
+        var abs = new URL(url, self.location.origin).href;
+        var m = meta[abs];
+        var headers = {};
+
+        if (!force && m) {
+          if (m.etag) headers["If-None-Match"] = m.etag;
+          if (m.lastModified) headers["If-Modified-Since"] = m.lastModified;
+        }
+
+        return { url: url, abs: abs, headers: headers, hasMeta: !!m };
+      });
 
       if (toFetch.length === 0) {
         notifyClients({ type: "caching-complete" });
         return Promise.resolve();
       }
 
-      const total = toFetch.length;
-      let completed = 0;
+      var total = toFetch.length;
+      var completed = 0;
+      var downloaded = 0;
+      var unchanged = 0;
 
-      notifyClients({ type: "caching-start", total });
+      notifyClients({ type: "caching-start", total: total });
 
       return Promise.all(
-        toFetch.map((url) =>
-          fetch(url, { cache: "no-cache" })
-            .then((res) => {
-              if (res.ok) return cache.put(url, res);
+        toFetch.map(function (item) {
+          var fetchOpts = { cache: "no-store" };
+          if (Object.keys(item.headers).length > 0) {
+            fetchOpts.headers = item.headers;
+          }
+
+          return fetch(item.url, fetchOpts)
+            .then(function (res) {
+              if (res.status === 304) {
+                unchanged++;
+              } else if (res.ok) {
+                downloaded++;
+                var etag = res.headers.get("ETag") || "";
+                var lm = res.headers.get("Last-Modified") || "";
+                meta[item.abs] = { etag: etag, lastModified: lm };
+                return cache.put(item.url, res);
+              }
             })
-            .catch(() => {})
-            .finally(() => {
+            .catch(function () {})
+            .finally(function () {
               completed++;
-              notifyClients({ type: "caching-progress", completed, total });
-            })
-        )
-      ).then(() => {
-        notifyClients({ type: "caching-complete" });
+              notifyClients({ type: "caching-progress", completed: completed, total: total });
+            });
+        })
+      ).then(function () {
+        return saveCacheMeta(cache, meta);
+      }).then(function () {
+        notifyClients({ type: "caching-complete", downloaded: downloaded, unchanged: unchanged });
       });
     });
   });
