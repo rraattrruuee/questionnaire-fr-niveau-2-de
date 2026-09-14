@@ -100,6 +100,18 @@
     link.rel = "noopener";
     link.className = "bouton-lien";
 
+    link.addEventListener("click", function () {
+      if (window.__analytics) {
+        window.__analytics.track("portal_quiz_click", {
+          quiz_id: quiz.id,
+          quiz_title: quiz.title,
+          subject_id: quiz.subject,
+          subject_name: subject ? subject.name : "",
+          questions_count: quiz.questionsCount || 0
+        });
+      }
+    });
+
     const label = document.createElement("span");
     label.className = "bouton-lien-label";
     label.textContent = (subject ? subject.icon + " " : "") + quiz.title;
@@ -122,6 +134,13 @@
       dlBtn.title = "Télécharger le quiz complet (.html)";
       dlBtn.onclick = function (e) {
         e.preventDefault();
+        if (window.__analytics) {
+          window.__analytics.track("portal_quiz_download", {
+            quiz_id: quiz.id,
+            quiz_title: quiz.title,
+            subject_id: quiz.subject
+          });
+        }
         downloadStandalone(quiz);
       };
       wrapper.appendChild(dlBtn);
@@ -171,6 +190,16 @@
       link.rel = "noopener";
       link.className = "bouton-lien";
       link.textContent = (item.icon ? item.icon + " " : "") + item.title;
+
+      link.addEventListener("click", function () {
+        if (window.__analytics) {
+          window.__analytics.track("portal_link_click", {
+            link_url: item.url,
+            link_title: item.title,
+            section_id: id
+          });
+        }
+      });
 
       wrapper.appendChild(link);
       section.appendChild(wrapper);
@@ -239,6 +268,15 @@
       document.body.appendChild(a); a.click();
       document.body.removeChild(a); URL.revokeObjectURL(url);
       if (btn) { btn.innerHTML = "📥"; btn.style.pointerEvents = ""; }
+
+      if (window.__analytics) {
+        window.__analytics.track("portal_quiz_downloaded", {
+          quiz_id: quiz.id,
+          quiz_title: quiz.title,
+          subject_id: quiz.subject,
+          file_size_kb: Math.round(blob.size / 1024)
+        });
+      }
     }).catch(function (err) {
       console.error("Erreur téléchargement:", err);
       alert("Erreur lors du téléchargement du quiz.");
@@ -348,13 +386,31 @@
         searchInput.value = "";
         updateURLParameter("filtre", target);
         filterElements("", target);
+
+        if (window.__analytics) {
+          window.__analytics.track("portal_filter", {
+            filter_target: target,
+            filter_label: this.textContent.trim()
+          });
+        }
       });
     });
 
+    let searchTimeout = null;
     searchInput.addEventListener("keyup", function () {
       labelButtons.forEach((b) => b.classList.remove("active"));
       updateURLParameter("filtre", "all");
       filterElements(this.value, "all");
+
+      clearTimeout(searchTimeout);
+      var query = this.value.trim();
+      if (query.length > 0) {
+        searchTimeout = setTimeout(function () {
+          if (window.__analytics) {
+            window.__analytics.track("portal_search", { query: query });
+          }
+        }, 800);
+      }
     });
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -373,7 +429,18 @@
 
   fetch("data/config.json")
     .then((res) => res.json())
-    .then(buildPortal)
+    .then((config) => {
+      buildPortal(config);
+      if (window.__analytics) {
+        window.__analytics.track("portal_page_view", {
+          total_quizzes: (config.quizzes || []).length,
+          total_subjects: (config.subjects || []).length,
+          total_tools: (config.tools || []).length,
+          referrer: document.referrer || "direct",
+          is_pwa: isRunningAsPWA()
+        });
+      }
+    })
     .catch((err) => {
       console.error("Erreur chargement config:", err);
       sectionsContainer.innerHTML =

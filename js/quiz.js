@@ -216,7 +216,18 @@
         '<span class="selector-desc">' + cat.questions.length + " question" +
         (cat.questions.length > 1 ? "s" : "") + "</span>" +
         progHtml;
-      btn.onclick = function () { startCategory(idx); };
+      btn.onclick = function () {
+        if (window.__analytics) {
+          window.__analytics.track("quiz_category_click", {
+            quiz_id: getQuizIdFromURL(),
+            quiz_title: currentQuiz ? currentQuiz.title : "",
+            category_index: idx,
+            category_name: cat.name,
+            questions_count: cat.questions.length
+          });
+        }
+        startCategory(idx);
+      };
       list.appendChild(btn);
     });
   }
@@ -240,6 +251,15 @@
     applyQuizCss(quiz._data);
     categories = normalizeQuiz(quiz._data, quiz.title || "Questions");
 
+    if (window.__analytics) {
+      window.__analytics.track("quiz_page_view", {
+        quiz_id: getQuizIdFromURL(),
+        quiz_title: quiz.title,
+        categories_count: categories.length,
+        total_questions: categories.reduce(function (sum, c) { return sum + c.questions.length; }, 0)
+      });
+    }
+
     if (categories.length === 0) {
       if (!window.__EMBED_QUIZ__) window.location.replace("index.html");
       return;
@@ -259,6 +279,29 @@
     score = 0;
     answeredCount = 0;
 
+    if (window.__analytics) {
+      window.__analytics.track("quiz_category_start", {
+        quiz_id: getQuizIdFromURL(),
+        quiz_title: currentQuiz ? currentQuiz.title : "",
+        category_index: idx,
+        category_name: categories[idx].name,
+        questions_count: questionsShuffled.length
+      });
+      window.__analytics.setQuizState({
+        inProgress: true,
+        quizId: getQuizIdFromURL(),
+        quizTitle: currentQuiz ? currentQuiz.title : "",
+        categoryName: categories[idx].name,
+        categoryIndex: idx,
+        questionIndex: 0,
+        questionText: "",
+        questionType: "",
+        score: 0,
+        answeredCount: 0,
+        totalQuestions: questionsShuffled.length
+      });
+    }
+
     showOnly("quiz-area");
 
     $("quiz-title").innerHTML =
@@ -266,18 +309,61 @@
     $("cat-label").textContent = categories[idx].name;
 
     setBack(function () {
+      if (window.__analytics) {
+        window.__analytics.track("quiz_menu_back", {
+          quiz_id: getQuizIdFromURL(),
+          quiz_title: currentQuiz ? currentQuiz.title : "",
+          category_name: categories[currentCategoryIndex].name,
+          category_index: currentCategoryIndex,
+          from: "quiz"
+        });
+        window.__analytics.setQuizState(null);
+      }
       if (categories.length > 1) renderCategoryMenu();
       else goToPortal();
     });
 
     $("main-btn").onclick = checkAnswerAndProceed;
-    $("restart-btn").onclick = function () { startCategory(currentCategoryIndex); };
-    $("back-btn-results").onclick = goToPortal;
+    $("restart-btn").onclick = function () {
+      if (window.__analytics) {
+        window.__analytics.track("quiz_restart", {
+          quiz_id: getQuizIdFromURL(),
+          quiz_title: currentQuiz ? currentQuiz.title : "",
+          category_name: categories[currentCategoryIndex].name,
+          category_index: currentCategoryIndex,
+          previous_score: score,
+          previous_answered: answeredCount,
+          total_questions: questionsShuffled.length
+        });
+      }
+      startCategory(currentCategoryIndex);
+    };
+    $("back-btn-results").onclick = function () {
+      if (window.__analytics) {
+        window.__analytics.track("quiz_portal_back", {
+          quiz_id: getQuizIdFromURL(),
+          quiz_title: currentQuiz ? currentQuiz.title : "",
+          from: "results"
+        });
+      }
+      window.__analytics.setQuizState(null);
+      goToPortal();
+    };
 
     var menuBtn = $("menu-btn");
     if (menuBtn) {
       menuBtn.classList.toggle("hidden", categories.length <= 1);
       menuBtn.onclick = function () {
+        if (window.__analytics) {
+          window.__analytics.track("quiz_menu_back", {
+            quiz_id: getQuizIdFromURL(),
+            quiz_title: currentQuiz ? currentQuiz.title : "",
+            category_name: categories[currentCategoryIndex].name,
+            category_index: currentCategoryIndex,
+            from: "quiz_menu_btn"
+          });
+          window.__analytics.setQuizState(null);
+        }
         if (categories.length > 1) renderCategoryMenu();
         else goToPortal();
       };
@@ -370,6 +456,33 @@
     }
 
     updateProgress();
+
+    if (window.__analytics) {
+      window.__analytics.track("quiz_question_view", {
+        quiz_id: getQuizIdFromURL(),
+        quiz_title: currentQuiz ? currentQuiz.title : "",
+        category_name: categories[currentCategoryIndex].name,
+        category_index: currentCategoryIndex,
+        question_index: currentQuestionIndex,
+        question_text: q.text,
+        question_type: q.type,
+        total_questions: questionsShuffled.length
+      });
+      window.__analytics.setQuizState({
+        inProgress: true,
+        quizId: getQuizIdFromURL(),
+        quizTitle: currentQuiz ? currentQuiz.title : "",
+        categoryName: categories[currentCategoryIndex].name,
+        categoryIndex: currentCategoryIndex,
+        questionIndex: currentQuestionIndex,
+        questionText: q.text,
+        questionType: q.type,
+        score: score,
+        answeredCount: answeredCount,
+        totalQuestions: questionsShuffled.length
+      });
+    }
+
     setTimeout(function () { block.classList.remove("enter"); }, 500);
   }
 
@@ -424,6 +537,44 @@
     answeredCount++;
     if (isCorrect) score++;
     updateProgress();
+
+    if (window.__analytics) {
+      var answerGiven = "";
+      if (q.type === "text") {
+        answerGiven = $("text-answer") ? $("text-answer").value : "";
+      } else if (userSelection) {
+        var selectedBtn = document.querySelector(".answer-btn.selected");
+        answerGiven = selectedBtn ? selectedBtn.textContent : "";
+      }
+
+      window.__analytics.track("quiz_question_answer", {
+        quiz_id: getQuizIdFromURL(),
+        quiz_title: currentQuiz ? currentQuiz.title : "",
+        category_name: categories[currentCategoryIndex].name,
+        category_index: currentCategoryIndex,
+        question_index: currentQuestionIndex,
+        question_text: q.text,
+        question_type: q.type,
+        is_correct: isCorrect,
+        answer_given: answerGiven,
+        score: score,
+        answered_count: answeredCount,
+        total_questions: questionsShuffled.length
+      });
+      window.__analytics.setQuizState({
+        inProgress: true,
+        quizId: getQuizIdFromURL(),
+        quizTitle: currentQuiz ? currentQuiz.title : "",
+        categoryName: categories[currentCategoryIndex].name,
+        categoryIndex: currentCategoryIndex,
+        questionIndex: currentQuestionIndex,
+        questionText: q.text,
+        questionType: q.type,
+        score: score,
+        answeredCount: answeredCount,
+        totalQuestions: questionsShuffled.length
+      });
+    }
 
     var feedback = $("feedback-area");
     var block = $("question-block");
@@ -487,6 +638,20 @@
     var total = questionsShuffled.length;
     var percentage = total ? Math.round((score / total) * 100) : 0;
 
+    if (window.__analytics) {
+      window.__analytics.track("quiz_complete", {
+        quiz_id: getQuizIdFromURL(),
+        quiz_title: currentQuiz ? currentQuiz.title : "",
+        category_name: categories[currentCategoryIndex].name,
+        category_index: currentCategoryIndex,
+        score: score,
+        total: total,
+        percentage: percentage,
+        questions_count: questionsShuffled.length
+      });
+      window.__analytics.setQuizState(null);
+    }
+
     // Sauvegarder la progression
     var quizId = getQuizId();
     if (quizId && categories.length > 1) {
@@ -498,6 +663,16 @@
     if (menuBtn) {
       menuBtn.classList.toggle("hidden", categories.length <= 1);
       menuBtn.onclick = function () {
+        if (window.__analytics) {
+          window.__analytics.track("quiz_menu_back", {
+            quiz_id: getQuizIdFromURL(),
+            quiz_title: currentQuiz ? currentQuiz.title : "",
+            category_name: categories[currentCategoryIndex].name,
+            category_index: currentCategoryIndex,
+            from: "results_menu_btn"
+          });
+          window.__analytics.setQuizState(null);
+        }
         if (categories.length > 1) renderCategoryMenu();
         else goToPortal();
       };
