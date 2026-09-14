@@ -408,7 +408,18 @@
       });
       navigator.serviceWorker
         .register("service-worker.js", { scope: "./" })
+        .then((reg) => {
+          if (navigator.onLine && reg.active) {
+            reg.active.postMessage({ type: "cache-assets" });
+          }
+        })
         .catch((err) => console.warn("Erreur SW:", err));
+    });
+
+    window.addEventListener("online", () => {
+      if (navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ type: "cache-assets" });
+      }
     });
   }
 

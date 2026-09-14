@@ -307,13 +307,15 @@ body {
   top: 3.6rem;
   right: 0.75rem;
   background: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: 0.35rem 0.75rem;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.5rem 1rem;
   border-radius: var(--radius-sm);
-  font-size: 0.75rem;
-  box-shadow: var(--shadow-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(var(--primary-rgb, 59, 130, 246), 0.3);
   z-index: 1200;
+  animation: fadeInSlideUp 0.3s ease-out;
 }
 
 /* ---------- Responsive ---------- */

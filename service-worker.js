@@ -22,16 +22,20 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-7d81d73";
+const CACHE_NAME = "quiz-cache-0fe866a";
+
+function notifyClients(msg) {
+  return self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
+    clients.forEach((c) => c.postMessage(msg));
+  });
+}
 
 function cacheAllAssets() {
   return caches.open(CACHE_NAME).then((cache) => {
     const total = STATIC_ASSETS.length;
     let completed = 0;
 
-    self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
-      clients.forEach((c) => c.postMessage({ type: "caching-start", total }));
-    });
+    notifyClients({ type: "caching-start", total });
 
     return Promise.all(
       STATIC_ASSETS.map((url) =>
@@ -42,17 +46,11 @@ function cacheAllAssets() {
           .catch(() => {})
           .finally(() => {
             completed++;
-            self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
-              clients.forEach((c) =>
-                c.postMessage({ type: "caching-progress", completed, total })
-              );
-            });
+            notifyClients({ type: "caching-progress", completed, total });
           })
       )
     ).then(() => {
-      self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
-        clients.forEach((c) => c.postMessage({ type: "caching-complete" }));
-      });
+      notifyClients({ type: "caching-complete" });
     });
   });
 }
@@ -77,6 +75,10 @@ self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "cache-assets") {
     cacheAllAssets();
   }
+});
+
+self.addEventListener("online", () => {
+  cacheAllAssets();
 });
 
 self.addEventListener("fetch", (event) => {
