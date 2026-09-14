@@ -22,7 +22,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-0fe866a";
+const CACHE_NAME = "quiz-cache-1789414436";
 
 function notifyClients(msg) {
   return self.clients.matchAll({ includeUncontrolled: true }).then((clients) => {
@@ -30,34 +30,47 @@ function notifyClients(msg) {
   });
 }
 
-function cacheAllAssets() {
+function cacheAllAssets(force) {
   return caches.open(CACHE_NAME).then((cache) => {
-    const total = STATIC_ASSETS.length;
-    let completed = 0;
+    return cache.keys().then((cachedRequests) => {
+      const cachedUrls = new Set(cachedRequests.map((r) => r.url));
 
-    notifyClients({ type: "caching-start", total });
+      const toFetch = force
+        ? STATIC_ASSETS
+        : STATIC_ASSETS.filter((url) => !cachedUrls.has(new URL(url, self.location.origin).href));
 
-    return Promise.all(
-      STATIC_ASSETS.map((url) =>
-        fetch(url, { cache: "no-cache" })
-          .then((res) => {
-            if (res.ok) return cache.put(url, res);
-          })
-          .catch(() => {})
-          .finally(() => {
-            completed++;
-            notifyClients({ type: "caching-progress", completed, total });
-          })
-      )
-    ).then(() => {
-      notifyClients({ type: "caching-complete" });
+      if (toFetch.length === 0) {
+        notifyClients({ type: "caching-complete" });
+        return Promise.resolve();
+      }
+
+      const total = toFetch.length;
+      let completed = 0;
+
+      notifyClients({ type: "caching-start", total });
+
+      return Promise.all(
+        toFetch.map((url) =>
+          fetch(url, { cache: "no-cache" })
+            .then((res) => {
+              if (res.ok) return cache.put(url, res);
+            })
+            .catch(() => {})
+            .finally(() => {
+              completed++;
+              notifyClients({ type: "caching-progress", completed, total });
+            })
+        )
+      ).then(() => {
+        notifyClients({ type: "caching-complete" });
+      });
     });
   });
 }
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
-  event.waitUntil(cacheAllAssets());
+  event.waitUntil(cacheAllAssets(true));
 });
 
 self.addEventListener("activate", (event) => {
@@ -73,12 +86,12 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "cache-assets") {
-    cacheAllAssets();
+    cacheAllAssets(false);
   }
 });
 
 self.addEventListener("online", () => {
-  cacheAllAssets();
+  cacheAllAssets(false);
 });
 
 self.addEventListener("fetch", (event) => {

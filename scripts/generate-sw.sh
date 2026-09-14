@@ -31,8 +31,8 @@ awk -v files="$FILES" '
 
 echo "✅ service-worker.js assets list updated."
 
-# 3. Update cache version (git short hash or timestamp)
-VERSION=$(git rev-parse --short HEAD 2>/dev/null || date +%s)
+# 3. Update cache version (timestamp-based for unique deploys)
+VERSION=$(date +%s)
 sed -i "s/^const CACHE_NAME = .*$/const CACHE_NAME = \"quiz-cache-${VERSION}\";/" service-worker.js
 
 echo "✅ Cache version set to $VERSION."
