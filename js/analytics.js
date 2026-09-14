@@ -39,6 +39,8 @@
           capture_pageview: false,
           capture_pageleave: false,
           autocapture: false,
+          capture_network_errors: false,
+          disable_session_recording: true,
           persistence: "localStorage+cookie",
           loaded: function () {
             window.posthog.__loaded = true;
