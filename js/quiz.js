@@ -193,6 +193,7 @@
   function renderCategoryMenu() {
     showOnly("category-area");
     setBack(goToPortal);
+    if (window.__analytics) window.__analytics.setPage("quiz-menu");
 
     $("category-title").innerHTML =
       'Quiz <span class="couleur-qui-change">' + currentQuiz.title + "</span>";
@@ -403,6 +404,7 @@
       showResults();
       return;
     }
+    if (window.__analytics) window.__analytics.setPage("quiz-question");
 
     var q = questionsShuffled[currentQuestionIndex];
     var block = $("question-block");
@@ -663,6 +665,7 @@
   function showResults() {
     showOnly("results");
     setBack(goToPortal);
+    if (window.__analytics) window.__analytics.setPage("quiz-results");
 
     var total = questionsShuffled.length;
     var percentage = total ? Math.round((score / total) * 100) : 0;

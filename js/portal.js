@@ -442,6 +442,7 @@
           referrer: document.referrer || "direct",
           is_pwa: isRunningAsPWA()
         });
+        window.__analytics.setPage("portal");
       }
     })
     .catch((err) => {

@@ -76,50 +76,56 @@
      Page leave tracking
      --------------------------------------------------------- */
   var _lastQuizState = null;
+  var _currentPage = "portal";
 
   function setQuizState(state) {
     _lastQuizState = state;
   }
 
+  function setPage(page) {
+    _currentPage = page;
+  }
+
   window.addEventListener("beforeunload", function () {
-    if (_lastQuizState && _lastQuizState.inProgress) {
-      track("quiz_abandon_page", {
-        quiz_id: _lastQuizState.quizId,
-        quiz_title: _lastQuizState.quizTitle,
-        subject_name: _lastQuizState.subjectName,
-        category_name: _lastQuizState.categoryName,
-        category_index: _lastQuizState.categoryIndex,
-        question_index: _lastQuizState.questionIndex,
-        question_text: _lastQuizState.questionText,
-        question_type: _lastQuizState.questionType,
-        question_location: _lastQuizState.questionLocation,
-        score: _lastQuizState.score,
-        answered_count: _lastQuizState.answeredCount,
-        total_questions: _lastQuizState.totalQuestions,
-        completion_pct: _lastQuizState.totalQuestions
-          ? Math.round((_lastQuizState.answeredCount / _lastQuizState.totalQuestions) * 100)
-          : 0
-      });
-      // Envoie immediatement avant fermeture
-      flushQueue();
-    }
+    track("quiz_abandon_page", {
+      page: _currentPage,
+      quiz_id: _lastQuizState ? _lastQuizState.quizId : "",
+      quiz_title: _lastQuizState ? _lastQuizState.quizTitle : "",
+      quiz_name: _lastQuizState ? _lastQuizState.quizTitle : "",
+      subject_name: _lastQuizState ? _lastQuizState.subjectName : "",
+      category_name: _lastQuizState ? _lastQuizState.categoryName : "",
+      category_index: _lastQuizState ? _lastQuizState.categoryIndex : 0,
+      question_index: _lastQuizState ? _lastQuizState.questionIndex : 0,
+      question_text: _lastQuizState ? _lastQuizState.questionText : "",
+      question_type: _lastQuizState ? _lastQuizState.questionType : "",
+      question_location: _lastQuizState ? _lastQuizState.questionLocation : "",
+      score: _lastQuizState ? _lastQuizState.score : 0,
+      answered_count: _lastQuizState ? _lastQuizState.answeredCount : 0,
+      total_questions: _lastQuizState ? _lastQuizState.totalQuestions : 0,
+      completion_pct: _lastQuizState && _lastQuizState.totalQuestions
+        ? Math.round((_lastQuizState.answeredCount / _lastQuizState.totalQuestions) * 100)
+        : 0
+    });
+    flushQueue();
   });
 
   document.addEventListener("visibilitychange", function () {
-    if (document.visibilityState === "hidden" && _lastQuizState && _lastQuizState.inProgress) {
+    if (document.visibilityState === "hidden") {
       track("quiz_visibility_hidden", {
-        quiz_id: _lastQuizState.quizId,
-        quiz_title: _lastQuizState.quizTitle,
-        subject_name: _lastQuizState.subjectName,
-        category_name: _lastQuizState.categoryName,
-        category_index: _lastQuizState.categoryIndex,
-        question_index: _lastQuizState.questionIndex,
-        question_text: _lastQuizState.questionText,
-        question_type: _lastQuizState.questionType,
-        question_location: _lastQuizState.questionLocation,
-        score: _lastQuizState.score,
-        answered_count: _lastQuizState.answeredCount,
-        total_questions: _lastQuizState.totalQuestions
+        page: _currentPage,
+        quiz_id: _lastQuizState ? _lastQuizState.quizId : "",
+        quiz_title: _lastQuizState ? _lastQuizState.quizTitle : "",
+        quiz_name: _lastQuizState ? _lastQuizState.quizTitle : "",
+        subject_name: _lastQuizState ? _lastQuizState.subjectName : "",
+        category_name: _lastQuizState ? _lastQuizState.categoryName : "",
+        category_index: _lastQuizState ? _lastQuizState.categoryIndex : 0,
+        question_index: _lastQuizState ? _lastQuizState.questionIndex : 0,
+        question_text: _lastQuizState ? _lastQuizState.questionText : "",
+        question_type: _lastQuizState ? _lastQuizState.questionType : "",
+        question_location: _lastQuizState ? _lastQuizState.questionLocation : "",
+        score: _lastQuizState ? _lastQuizState.score : 0,
+        answered_count: _lastQuizState ? _lastQuizState.answeredCount : 0,
+        total_questions: _lastQuizState ? _lastQuizState.totalQuestions : 0
       });
       flushQueue();
     }
@@ -130,8 +136,9 @@
      --------------------------------------------------------- */
   window.__analytics = {
     track: track,
-    flushQueue: flushQueue,
-    setQuizState: setQuizState
+    identify: identify,
+    setQuizState: setQuizState,
+    setPage: setPage
   };
 
   ready = true;
