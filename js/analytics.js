@@ -41,6 +41,7 @@
           autocapture: false,
           capture_network_errors: false,
           disable_session_recording: true,
+          advanced_disable_decide: true,
           persistence: "localStorage+cookie",
           loaded: function () {
             window.posthog.__loaded = true;
