@@ -1,98 +1,75 @@
 /* ---------------------------------------------------------
-   analytics.js — PostHog analytics wrapper
-   Remplace PH_API_KEY par ta cle PostHog dans le init().
+   analytics.js — PostHog HTTP API (sans loader JS externe)
+   Envoie les evenements directement via fetch, pas de script
+   tiers charge = pas de probleme CORS/Brave.
    --------------------------------------------------------- */
 (function () {
   "use strict";
 
   var PH_KEY = "phc_xa8HpshuaLbaviE2c7pKoAwe7DfwcsgveTnDRDTxWcRV";
-  var PH_HOST = "https://us.i.posthog.com";
-  var PH_PROXY = "https://posthog-proxy.rrraattrruuee.workers.dev";
+  var PH_HOST = "https://posthog-proxy.rrraattrruuee.workers.dev";
 
-  /* ---------------------------------------------------------
-     PostHog loader
-     --------------------------------------------------------- */
-  function loadPostHog(callback) {
-    if (window.posthog && window.posthog.__loaded) {
-      callback();
-      return;
+  // Genere un ID stable par appareil (localStorage)
+  function getDistinctId() {
+    var id = null;
+    try { id = localStorage.getItem("ph_distinct_id"); } catch (e) {}
+    if (!id) {
+      id = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0;
+        return (c === "x" ? r : (r & 0x3 | 0x8)).toString(16);
+      });
+      try { localStorage.setItem("ph_distinct_id", id); } catch (e) {}
     }
-
-    var host = PH_PROXY || PH_HOST;
-    var assetsHost = PH_PROXY
-      ? PH_PROXY
-      : PH_HOST.replace(".i.posthog.com", "-assets.i.posthog.com");
-
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.crossOrigin = "anonymous";
-    script.async = true;
-    script.src = assetsHost + "/static/array.js";
-
-    var firstScript = document.getElementsByTagName("script")[0];
-    firstScript.parentNode.insertBefore(script, firstScript);
-
-    script.onload = function () {
-      if (window.posthog) {
-        window.posthog.init(PH_KEY, {
-          api_host: host,
-          capture_pageview: false,
-          capture_pageleave: false,
-          autocapture: false,
-          capture_network_errors: false,
-          disable_session_recording: true,
-          advanced_disable_decide: true,
-          persistence: "localStorage+cookie",
-          loaded: function () {
-            window.posthog.__loaded = true;
-            if (callback) callback();
-          }
-        });
-      }
-    };
-
-    script.onerror = function () {
-      console.warn("PostHog: impossible de charger le script.");
-    };
+    return id;
   }
 
   /* ---------------------------------------------------------
-     Tracking helpers — fonctionnent meme si PostHog n'est pas charge
+     Tracking via HTTP POST direct vers PostHog /capture
      --------------------------------------------------------- */
   var queue = [];
+  var ready = false;
+
+  function flushQueue() {
+    if (!ready || queue.length === 0) return;
+    var batch = queue.splice(0, queue.length);
+    var did = getDistinctId();
+    var payload = {
+      api_key: PH_KEY,
+      batch: batch.map(function (item) {
+        return {
+          event: item.event,
+          properties: item.props,
+          distinct_id: did,
+          timestamp: item.timestamp
+        };
+      })
+    };
+
+    fetch(PH_HOST + "/batch", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).catch(function () {
+      // Remet en queue en cas d'echec
+      batch.forEach(function (item) { queue.push(item); });
+    });
+  }
 
   function track(eventName, properties) {
     properties = properties || {};
-    properties.timestamp = new Date().toISOString();
     properties.page_url = window.location.href;
     properties.is_embed = !!window.__EMBED_QUIZ__;
 
-    if (window.posthog && window.posthog.__loaded) {
-      window.posthog.capture(eventName, properties);
-    } else {
-      queue.push({ event: eventName, props: properties });
-    }
-  }
+    var item = {
+      event: eventName,
+      props: properties,
+      timestamp: new Date().toISOString()
+    };
 
-  function flushQueue() {
-    if (window.posthog && window.posthog.__loaded && queue.length > 0) {
-      queue.forEach(function (item) {
-        window.posthog.capture(item.event, item.props);
-      });
-      queue = [];
-    }
-  }
-
-  function identify(distinctId) {
-    if (window.posthog && window.posthog.__loaded) {
-      window.posthog.identify(distinctId);
-    }
-  }
-
-  function reset() {
-    if (window.posthog && window.posthog.__loaded) {
-      window.posthog.reset();
-    }
+    queue.push(item);
+    // Envoie apres un petit delay pour batcher les appels proches
+    clearTimeout(track._timer);
+    track._timer = setTimeout(flushQueue, 500);
   }
 
   /* ---------------------------------------------------------
@@ -121,6 +98,8 @@
           ? Math.round((_lastQuizState.answeredCount / _lastQuizState.totalQuestions) * 100)
           : 0
       });
+      // Envoie immediatement avant fermeture
+      flushQueue();
     }
   });
 
@@ -138,6 +117,7 @@
         answered_count: _lastQuizState.answeredCount,
         total_questions: _lastQuizState.totalQuestions
       });
+      flushQueue();
     }
   });
 
@@ -145,14 +125,10 @@
      Expose API globale
      --------------------------------------------------------- */
   window.__analytics = {
-    load: loadPostHog,
     track: track,
     flushQueue: flushQueue,
-    identify: identify,
-    reset: reset,
     setQuizState: setQuizState
   };
 
-  /* Auto-load au chargement de la page */
-  loadPostHog(flushQueue);
+  ready = true;
 })();
