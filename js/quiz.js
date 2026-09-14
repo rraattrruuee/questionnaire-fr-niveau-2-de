@@ -13,6 +13,7 @@
   var answeredCount = 0;
   var userSelection = null;   // { isCorrect } for mcq | string for text
   var quizInProgress = false;
+  var subjectName = "";
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -158,6 +159,15 @@
     $("back-btn").onclick = handler;
   }
 
+  function buildQuestionLocation(q) {
+    var parts = [];
+    if (subjectName) parts.push(subjectName);
+    if (currentQuiz && currentQuiz.title) parts.push(currentQuiz.title);
+    if (categories[currentCategoryIndex]) parts.push(categories[currentCategoryIndex].name);
+    if (q && q.text) parts.push(q.text);
+    return parts.join(" > ");
+  }
+
   function showOnly(id) {
     ["category-area", "quiz-area", "results"].forEach(function (x) {
       $(x).classList.toggle("hidden", x !== id);
@@ -246,8 +256,9 @@
     }
   }
 
-  function startQuiz(quiz) {
+  function startQuiz(quiz, subject) {
     currentQuiz = quiz;
+    subjectName = subject || "";
     applyQuizCss(quiz._data);
     categories = normalizeQuiz(quiz._data, quiz.title || "Questions");
 
@@ -458,25 +469,30 @@
     updateProgress();
 
     if (window.__analytics) {
+      var qloc = buildQuestionLocation(q);
       window.__analytics.track("quiz_question_view", {
         quiz_id: getQuizIdFromURL(),
         quiz_title: currentQuiz ? currentQuiz.title : "",
+        subject_name: subjectName,
         category_name: categories[currentCategoryIndex].name,
         category_index: currentCategoryIndex,
         question_index: currentQuestionIndex,
         question_text: q.text,
         question_type: q.type,
+        question_location: qloc,
         total_questions: questionsShuffled.length
       });
       window.__analytics.setQuizState({
         inProgress: true,
         quizId: getQuizIdFromURL(),
         quizTitle: currentQuiz ? currentQuiz.title : "",
+        subjectName: subjectName,
         categoryName: categories[currentCategoryIndex].name,
         categoryIndex: currentCategoryIndex,
         questionIndex: currentQuestionIndex,
         questionText: q.text,
         questionType: q.type,
+        questionLocation: qloc,
         score: score,
         answeredCount: answeredCount,
         totalQuestions: questionsShuffled.length
@@ -547,14 +563,17 @@
         answerGiven = selectedBtn ? selectedBtn.textContent : "";
       }
 
+      var qloc2 = buildQuestionLocation(q);
       window.__analytics.track("quiz_question_answer", {
         quiz_id: getQuizIdFromURL(),
         quiz_title: currentQuiz ? currentQuiz.title : "",
+        subject_name: subjectName,
         category_name: categories[currentCategoryIndex].name,
         category_index: currentCategoryIndex,
         question_index: currentQuestionIndex,
         question_text: q.text,
         question_type: q.type,
+        question_location: qloc2,
         is_correct: isCorrect,
         answer_given: answerGiven,
         score: score,
@@ -565,11 +584,13 @@
         inProgress: true,
         quizId: getQuizIdFromURL(),
         quizTitle: currentQuiz ? currentQuiz.title : "",
+        subjectName: subjectName,
         categoryName: categories[currentCategoryIndex].name,
         categoryIndex: currentCategoryIndex,
         questionIndex: currentQuestionIndex,
         questionText: q.text,
         questionType: q.type,
+        questionLocation: qloc2,
         score: score,
         answeredCount: answeredCount,
         totalQuestions: questionsShuffled.length
@@ -740,11 +761,15 @@
           return;
         }
 
+        var subjectObj = (config.subjects || []).find(function (s) {
+          return s.id === quiz.subject;
+        });
+
         return fetch(quiz.file)
           .then(function (res) { return res.json(); })
           .then(function (data) {
             quiz._data = data;
-            startQuiz(quiz);
+            startQuiz(quiz, subjectObj ? subjectObj.name : "");
           });
       })
       .catch(function (err) {

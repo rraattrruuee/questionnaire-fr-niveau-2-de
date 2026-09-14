@@ -86,11 +86,13 @@
       track("quiz_abandon_page", {
         quiz_id: _lastQuizState.quizId,
         quiz_title: _lastQuizState.quizTitle,
+        subject_name: _lastQuizState.subjectName,
         category_name: _lastQuizState.categoryName,
         category_index: _lastQuizState.categoryIndex,
         question_index: _lastQuizState.questionIndex,
         question_text: _lastQuizState.questionText,
         question_type: _lastQuizState.questionType,
+        question_location: _lastQuizState.questionLocation,
         score: _lastQuizState.score,
         answered_count: _lastQuizState.answeredCount,
         total_questions: _lastQuizState.totalQuestions,
@@ -108,11 +110,13 @@
       track("quiz_visibility_hidden", {
         quiz_id: _lastQuizState.quizId,
         quiz_title: _lastQuizState.quizTitle,
+        subject_name: _lastQuizState.subjectName,
         category_name: _lastQuizState.categoryName,
         category_index: _lastQuizState.categoryIndex,
         question_index: _lastQuizState.questionIndex,
         question_text: _lastQuizState.questionText,
         question_type: _lastQuizState.questionType,
+        question_location: _lastQuizState.questionLocation,
         score: _lastQuizState.score,
         answered_count: _lastQuizState.answeredCount,
         total_questions: _lastQuizState.totalQuestions
