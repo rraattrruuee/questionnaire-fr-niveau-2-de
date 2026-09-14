@@ -105,6 +105,7 @@
         window.__analytics.track("portal_quiz_click", {
           quiz_id: quiz.id,
           quiz_title: quiz.title,
+            quiz_name: quiz.title,
           subject_id: quiz.subject,
           subject_name: subject ? subject.name : "",
           questions_count: quiz.questionsCount || 0
@@ -138,6 +139,7 @@
           window.__analytics.track("portal_quiz_download", {
             quiz_id: quiz.id,
             quiz_title: quiz.title,
+            quiz_name: quiz.title,
             subject_id: quiz.subject
           });
         }
@@ -273,6 +275,7 @@
         window.__analytics.track("portal_quiz_downloaded", {
           quiz_id: quiz.id,
           quiz_title: quiz.title,
+            quiz_name: quiz.title,
           subject_id: quiz.subject,
           file_size_kb: Math.round(blob.size / 1024)
         });

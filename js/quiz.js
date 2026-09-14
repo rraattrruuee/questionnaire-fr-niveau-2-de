@@ -231,6 +231,7 @@
           window.__analytics.track("quiz_category_click", {
             quiz_id: getQuizIdFromURL(),
             quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
             category_index: idx,
             category_name: cat.name,
             questions_count: cat.questions.length
@@ -294,6 +295,7 @@
       window.__analytics.track("quiz_category_start", {
         quiz_id: getQuizIdFromURL(),
         quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
         category_index: idx,
         category_name: categories[idx].name,
         questions_count: questionsShuffled.length
@@ -324,6 +326,7 @@
         window.__analytics.track("quiz_menu_back", {
           quiz_id: getQuizIdFromURL(),
           quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
           category_name: categories[currentCategoryIndex].name,
           category_index: currentCategoryIndex,
           from: "quiz"
@@ -340,6 +343,7 @@
         window.__analytics.track("quiz_restart", {
           quiz_id: getQuizIdFromURL(),
           quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
           category_name: categories[currentCategoryIndex].name,
           category_index: currentCategoryIndex,
           previous_score: score,
@@ -354,6 +358,7 @@
         window.__analytics.track("quiz_portal_back", {
           quiz_id: getQuizIdFromURL(),
           quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
           from: "results"
         });
       }
@@ -369,6 +374,7 @@
           window.__analytics.track("quiz_menu_back", {
             quiz_id: getQuizIdFromURL(),
             quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
             category_name: categories[currentCategoryIndex].name,
             category_index: currentCategoryIndex,
             from: "quiz_menu_btn"
@@ -473,6 +479,7 @@
       window.__analytics.track("quiz_question_view", {
         quiz_id: getQuizIdFromURL(),
         quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
         subject_name: subjectName,
         category_name: categories[currentCategoryIndex].name,
         category_index: currentCategoryIndex,
@@ -567,6 +574,7 @@
       window.__analytics.track("quiz_question_answer", {
         quiz_id: getQuizIdFromURL(),
         quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
         subject_name: subjectName,
         category_name: categories[currentCategoryIndex].name,
         category_index: currentCategoryIndex,
@@ -663,6 +671,7 @@
       window.__analytics.track("quiz_complete", {
         quiz_id: getQuizIdFromURL(),
         quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
         category_name: categories[currentCategoryIndex].name,
         category_index: currentCategoryIndex,
         score: score,
@@ -688,6 +697,7 @@
           window.__analytics.track("quiz_menu_back", {
             quiz_id: getQuizIdFromURL(),
             quiz_title: currentQuiz ? currentQuiz.title : "",
+        quiz_name: currentQuiz ? currentQuiz.title : "",
             category_name: categories[currentCategoryIndex].name,
             category_index: currentCategoryIndex,
             from: "results_menu_btn"
