@@ -1,0 +1,617 @@
+{
+  "subject": "SES - Introduction & Chapitre 1",
+  "title": "Introduction & Chapitre 1 — Travailler et raisonner en SES (ECO1)",
+  "description": "Cours de SES de Karine CHAKIR : introduction au fonctionnement des SES, les trois disciplines, enquêtes et données, corrélation et causalité.",
+  "categories": [
+    {
+      "category": "Introduction — Fonctionnement du cours",
+      "questions": [
+        {
+          "text": "Quelles sont les trois sciences qui composent les SES ?",
+          "type": "mcq",
+          "options": [
+            "L'économie, la sociologie et la science politique",
+            "L'histoire, la géographie et l'économie",
+            "La philosophie, la sociologie et la politique",
+            "La psychologie, l'économie et l'histoire"
+          ],
+          "correct": 0,
+          "solution": "Les SES mobilisent l'économie, la sociologie et la science politique."
+        },
+        {
+          "text": "Combien de semaines de cours effectives l'enseignante estime-t-elle dans l'année scolaire ?",
+          "type": "mcq",
+          "options": [
+            "36 semaines",
+            "52 semaines",
+            "27 semaines",
+            "20 semaines"
+          ],
+          "correct": 2,
+          "solution": "L'enseignante tabler sur 27 semaines de cours (36 semaines moins les sorties et séjours)."
+        },
+        {
+          "text": "Comment les évaluations se feront-elles selon l'enseignante ?",
+          "type": "mcq",
+          "options": [
+            "Uniquement à l'oral",
+            "À la maison avec des devoirs écrits",
+            "En classe, à l'oral et à l'écrit",
+            "Uniquement par des exposés"
+          ],
+          "correct": 2,
+          "solution": "Les évaluations se feront en classe, à l'oral et à l'écrit. Il n'y a jamais de devoirs écrits à la maison."
+        },
+        {
+          "text": "Quel est le premier des six chapitres du programme de SES en seconde ?",
+          "type": "text",
+          "accepted": ["Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ?"],
+          "solution": "Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ? (ECO1)"
+        },
+        {
+          "text": "Qu'est-ce que le B2B ?",
+          "type": "mcq",
+          "options": [
+            "Business to Consumer",
+            "Business to Business",
+            "Bureau des Budgets",
+            "Banque des Billets"
+          ],
+          "correct": 1,
+          "solution": "B2B = Business to Business : une entreprise fabrique un bien destiné à d'autres entreprises."
+        },
+        {
+          "text": "Un citoyen qui achète une voiture pour un usage familial, c'est du B2C ou du B2B ?",
+          "type": "mcq",
+          "options": [
+            "Du B2C (Business to Consumer)",
+            "Du B2B (Business to Business)",
+            "Les deux à la fois",
+            "Aucun des deux"
+          ],
+          "correct": 0,
+          "solution": "C'est du B2C : le bien est acheté par un particulier pour un usage personnel."
+        }
+      ]
+    },
+    {
+      "category": "Les trois disciplines des SES",
+      "questions": [
+        {
+          "text": "Quelle est la question de base de l'économie selon le cours ?",
+          "type": "text",
+          "accepted": ["Qu'est-ce qu'une allocation efficace des ressources rares ?"],
+          "solution": "Qu'est-ce qu'une allocation efficace des ressources rares ?"
+        },
+        {
+          "text": "Quelles sont les deux questions de base de la sociologie ?",
+          "type": "mcq",
+          "options": [
+            "Comment se conquiert le pouvoir politique ? et Comment fonctionne le marché ?",
+            "Comment fait-on société ? et Comment explique-t-on les comportements sociaux ?",
+            "Comment mesure-t-on le PIB ? et Qu'est-ce que le chômage ?",
+            "Comment votent les citoyens ? et Qu'est-ce qu'un parti politique ?"
+          ],
+          "correct": 1,
+          "solution": "La sociologie cherche à comprendre comment fait-on société et comment explique-t-on les comportements sociaux."
+        },
+        {
+          "text": "Quelle est la question de base de la science politique ?",
+          "type": "text",
+          "accepted": ["Comment se conquiert et s'exerce le pouvoir politique ?"],
+          "solution": "Comment se conquiert et s'exerce le pouvoir politique ?"
+        },
+        {
+          "text": "Selon Pierre Bourdieu, les goûts et les dégoûts reflètent la _________ d'un individu.",
+          "type": "text",
+          "accepted": ["position sociale"],
+          "solution": "Les goûts et les dégoûts reflètent la position sociale d'un individu (aliments, sports, vêtements, musique…)."
+        },
+        {
+          "text": "Quel article de la constitution française stipule que le principe de la République est « gouvernement du peuple, par le peuple, pour le peuple » ?",
+          "type": "mcq",
+          "options": [
+            "Article 1",
+            "Article 2",
+            "Article 3",
+            "Article 5"
+          ],
+          "correct": 1,
+          "solution": "L'article 2 de la constitution de la Vème République."
+        },
+        {
+          "text": "Quelles sont les trois caractéristiques de la science politique selon Philippe Raynaud ?",
+          "type": "mcq",
+          "options": [
+            "Science de l'État, rapport avec la démocratie, explication des comportements politiques",
+            "Science des partis, science du vote, science des élections",
+            "Science des lois, science du gouvernement, science desTraités",
+            "Science de la Constitution, science des Droits de l'Homme, science internationale"
+          ],
+          "correct": 0,
+          "solution": "1/ Science de l'État et du gouvernement, 2/ Rapport privilégié avec la démocratie, 3/ Explication des comportements politiques."
+        },
+        {
+          "text": "La sociologie est la science qui étudie les relations sociales et les _____________.",
+          "type": "text",
+          "accepted": ["comportements sociaux"],
+          "solution": "La sociologie étudie les relations sociales et les comportements sociaux."
+        },
+        {
+          "text": "La science politique est la science qui étudie la façon dont le pouvoir politique _____________.",
+          "type": "text",
+          "accepted": ["se conquiert et s'exerce"],
+          "solution": "La science politique étudie la façon dont le pouvoir politique se conquiert et s'exerce."
+        }
+      ]
+    },
+    {
+      "category": "Économie — Ressources rares et allocation",
+      "questions": [
+        {
+          "text": "Quelles sont les trois éléments qui fournissent les ressources d'une économie ?",
+          "type": "mcq",
+          "options": [
+            "La terre, le travail humain et le capital",
+            "L'argent, les machines et les emplois",
+            "La technologie, l'énergie et les matières premières",
+            "Le marché, l'État et les entreprises"
+          ],
+          "correct": 0,
+          "solution": "Les ressources proviennent de la terre, du travail humain et du capital (bâtiments, machines…)."
+        },
+        {
+          "text": "Qu'est-ce qu'un coût d'opportunité ?",
+          "type": "mcq",
+          "options": [
+            "Le prix payé pour acheter un bien",
+            "La valeur des biens auxquels on renonce en faisant un choix",
+            "Le coût de production d'un bien",
+            "La perte causée par une mauvaise décision"
+          ],
+          "correct": 1,
+          "solution": "Le coût d'opportunité est la valeur des biens B auxquels je renonce en choisissant les biens A."
+        },
+        {
+          "text": "La réserve mondiale de pétrole est estimée à combien de milliards de barils fin 2025 ?",
+          "type": "mcq",
+          "options": [
+            "500 milliards",
+            "1 000 milliards",
+            "1 765 milliards",
+            "2 500 milliards"
+          ],
+          "correct": 2,
+          "solution": "La réserve mondiale est estimée à 1 765 milliards de barils, soit environ 47 ans de consommation."
+        },
+        {
+          "text": "Un baril de pétrole brut contient combien de litres ?",
+          "type": "mcq",
+          "options": [
+            "100 litres",
+            "159 litres",
+            "200 litres",
+            "250 litres"
+          ],
+          "correct": 1,
+          "solution": "Un baril de pétrole brut fait 159 litres."
+        },
+        {
+          "text": "Quelles sont les quatre modalités d'allocation des ressources citées dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "File d'attente, tirage au sort, décision politique, vol",
+            "Marché, troc, don, vol",
+            "État, marché, famille, association",
+            "Production, distribution, consommation, épargne"
+          ],
+          "correct": 0,
+          "solution": "File d'attente, tirage au sort, décision du pouvoir politique, et le vol (exclu dans une société civilisée)."
+        },
+        {
+          "text": "Quelle est la modalité la plus importante d'allocation des ressources aujourd'hui ?",
+          "type": "mcq",
+          "options": [
+            "Le tirage au sort",
+            "La décision politique",
+            "Le marché et le système des prix",
+            "La file d'attente"
+          ],
+          "correct": 2,
+          "solution": "Le marché et le système des prix sont la modalité la plus importante d'allocation des ressources."
+        },
+        {
+          "text": "En quoi les métaux dits « rares » sont-ils qualifiés de rares ?",
+          "type": "mcq",
+          "options": [
+            "Parce qu'il y en a très peu sur Terre",
+            "Parce que leur extraction est coûteuse et qu'ils sont peu concentrés",
+            "Parce qu'ils sont interdits à l'exportation",
+            "Parce qu'ils sont impossibles à recycler"
+          ],
+          "correct": 1,
+          "solution": "Les métaux rares sont peu concentrés, leur extraction est coûteuse et ils sont stratégiques car la demande augmente."
+        },
+        {
+          "text": "Qu'est-ce que l'allocation des ressources ?",
+          "type": "text",
+          "accepted": ["L'affectation des ressources à divers secteurs et agents de l'économie"],
+          "solution": "L'affectation des ressources à divers secteurs et agents de l'économie."
+        },
+        {
+          "text": "Selon le cours, une autre ressource rare souvent oubliée est ___________.",
+          "type": "text",
+          "accepted": ["le temps"],
+          "solution": "Le temps est une ressource rare oubliée : même avec toutes les richesses, nous n'aurions pas le temps de les dépenser."
+        }
+      ]
+    },
+    {
+      "category": "Économie — Cinq concepts du raisonnement économique",
+      "questions": [
+        {
+          "text": "Quels sont les cinq concepts du raisonnement économique selon Stiglitz, Lafay et Walsh ?",
+          "type": "mcq",
+          "options": [
+            "Arbitrages, incitations, échange, information et distribution",
+            "Production, consommation, épargne, investissement et redistribution",
+            "Offre, demande, prix, marché et concurrence",
+            "Capital, travail, terre, technologie et organisation"
+          ],
+          "correct": 0,
+          "solution": "Les cinq concepts sont : arbitrages, incitations, échange, information et distribution."
+        },
+        {
+          "text": "Quand le prix des lecteurs MP3 Sony baisse par rapport à celui des iPods, nous sommes plus incités à acheter un Sony. Il s'agit du concept d'__________.",
+          "type": "text",
+          "accepted": ["incitation", "incitations"],
+          "solution": "Les incitations : quand un prix baisse, les individus sont plus incités à acheter ce bien."
+        },
+        {
+          "text": "Quand nous faisons un échange avec une autre personne, l'éventail des choix possibles pour chacun ___________.",
+          "type": "text",
+          "accepted": ["s'élargit", "s'elargit"],
+          "solution": "L'échange élargit l'éventail des choix possibles pour chacun."
+        },
+        {
+          "text": "Les choix que nous faisons concernant la durée des études, la profession ou les biens à acheter déterminent la ___________ de la richesse dans la société.",
+          "type": "text",
+          "accepted": ["distribution"],
+          "solution": "Ces choix déterminent la distribution de la richesse et du revenu dans la société."
+        },
+        {
+          "text": "Pour effectuer des choix judicieux en économie, il est nécessaire de disposer d'___________ et de l'exploiter au mieux.",
+          "type": "text",
+          "accepted": ["information"],
+          "solution": "Il est nécessaire de disposer d'information et de l'exploiter au mieux."
+        }
+      ]
+    },
+    {
+      "category": "Enquêtes et données",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'une enquête selon le cours ?",
+          "type": "mcq",
+          "options": [
+            "Un examen médical d'un groupe de personnes",
+            "Une démarche pour obtenir des informations sur une réalité économique, sociale ou politique",
+            "Un interrogatoire de police",
+            "Un sondage politique pour mesurer les intentions de vote"
+          ],
+          "correct": 1,
+          "solution": "Une enquête est une démarche qui a pour objectif d'obtenir des informations sur une réalité économique, sociale ou politique."
+        },
+        {
+          "text": "Quel organisme public en France fournit la statistique officielle ?",
+          "type": "mcq",
+          "options": [
+            "Le ministère de l'Économie",
+            "L'INSEE et les SSM (Services Statistiques Ministériels)",
+            "La Cour des Comptes",
+            "Le Conseil Économique, Social et Environnemental"
+          ],
+          "correct": 1,
+          "solution": "La statistique publique est fournie par l'INSEE et les SSM (Services Statistiques Ministériels)."
+        },
+        {
+          "text": "Au niveau européen, quel est le fournisseur officiel de données statistiques ?",
+          "type": "text",
+          "accepted": ["Eurostat", "EUROSTAT"],
+          "solution": "EUROSTAT est le fournisseur officiel de données au niveau européen."
+        },
+        {
+          "text": "Une enquête quantitative fournit des données ___________, tandis qu'une enquête qualitative fournit des ___________.",
+          "type": "mcq",
+          "options": [
+            "Numériques (statistiques), réponses à des questions ouvertes",
+            "Qualitatives, réponses chiffrées",
+            "Orales, écrites",
+            "Courtes, longues"
+          ],
+          "correct": 0,
+          "solution": "L'enquête quantitative fournit des données statistiques numériques, l'enquête qualitative des réponses à des questions ouvertes."
+        },
+        {
+          "text": "Quand les populations sont trop importantes, le chercheur construit des ___________ qui doivent être représentatifs.",
+          "type": "text",
+          "accepted": ["échantillons"],
+          "solution": "On construit des échantillons représentatifs de la population étudiée."
+        },
+        {
+          "text": "Parmi ces organismes privés d'enquêtes, lequel a été créé en 1975 ?",
+          "type": "mcq",
+          "options": [
+            "KANTAR",
+            "IPSOS",
+            "ELABE",
+            "ODOXA"
+          ],
+          "correct": 1,
+          "solution": "IPSOS a été créé en 1975."
+        },
+        {
+          "text": "Quel site regroupe les diverses sources de données statistiques en France ?",
+          "type": "text",
+          "accepted": ["DATAGOUV", "datagouv", "data.gouv.fr"],
+          "solution": "DATAGOUV regroupe les diverses sources de données."
+        }
+      ]
+    },
+    {
+      "category": "Modèles et démarche scientifique",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'un modèle selon le cours ?",
+          "type": "text",
+          "accepted": ["Une représentation simplifiée de la réalité"],
+          "solution": "Un modèle est une représentation simplifiée de la réalité."
+        },
+        {
+          "text": "Quel est l'objectif double des modèles ?",
+          "type": "mcq",
+          "options": [
+            "Comprendre et prévoir",
+            "Décrire et classer",
+            "Mesurer et comparer",
+            "Produire et consommer"
+          ],
+          "correct": 0,
+          "solution": "L'objectif des modèles est double : comprendre des concepts/interactions et prévoir pour anticiper les évolutions."
+        },
+        {
+          "text": "Une carte routière est-elle un modèle ?",
+          "type": "mcq",
+          "options": [
+            "Non, c'est une photo de la réalité",
+            "Oui, c'est une représentation simplifiée de la réalité",
+            "Non, c'est un outil de navigation",
+            "Oui, c'est une approximation inutile"
+          ],
+          "correct": 1,
+          "solution": "Une carte routière est un modèle : représentation simplifiée de la réalité qui met en valeur ce qui compte."
+        },
+        {
+          "text": "Quelle est la démarche scientifique en sciences sociales ?",
+          "type": "mcq",
+          "options": [
+            "Hypothèse → Enquête → Confrontation aux faits → Conclusion",
+            "Observation → Hypothèse → Expérience → Publication",
+            "Question → Recherche → Rédaction → Correction",
+            "Théorie → Pratique → Évaluation → Validation"
+          ],
+          "correct": 0,
+          "solution": "Formulation d'hypothèses → Réalisation d'enquêtes → Confrontation aux faits → Conclusion."
+        },
+        {
+          "text": "Pourquoi un modèle n'est-il pas la réalité ?",
+          "type": "mcq",
+          "options": [
+            "Parce qu'il est trop compliqué",
+            "Parce qu'il prend des hypothèses simplificatrices",
+            "Parce qu'il est fait par des humains",
+            "Parce qu'il utilise trop de données"
+          ],
+          "correct": 1,
+          "solution": "Un modèle prend des hypothèses simplificatrices (ex: le marché suppose que tous les agents raisonnent de la même façon)."
+        }
+      ]
+    },
+    {
+      "category": "Corrélation et causalité",
+      "questions": [
+        {
+          "text": "Quand deux variables évoluent dans le même sens, on parle de corrélation ___________.",
+          "type": "text",
+          "accepted": ["positive"],
+          "solution": "Une corrélation positive : les deux variables évoluent dans le même sens."
+        },
+        {
+          "text": "Quand deux variables évoluent dans le sens opposé, on parle de corrélation ___________.",
+          "type": "text",
+          "accepted": ["négative"],
+          "solution": "Une corrélation négative : les deux variables évoluent en sens opposé."
+        },
+        {
+          "text": "Une corrélation signifie-t-elle nécessairement une causalité ?",
+          "type": "mcq",
+          "options": [
+            "Oui, toujours",
+            "Non, une corrélation n'implique pas nécessairement une causalité",
+            "Oui, si la corrélation est forte",
+            "Oui, si les variables sont quantitatives"
+          ],
+          "correct": 1,
+          "solution": "Une corrélation ne signifie pas l'existence d'un lien de cause à effet."
+        },
+        {
+          "text": "Pourquoi les gens portent-ils à la fois des bonnets et des écharpes en hiver ?",
+          "type": "mcq",
+          "options": [
+            "Parce que le bonnet cause le port de l'écharpe",
+            "Parce que le froid est une variable confondante",
+            "Parce que c'est la mode",
+            "Parce qu'ils sont vendus ensemble"
+          ],
+          "correct": 1,
+          "solution": "Le froid est une troisième variable (variable confondante) qui explique l'évolution des deux autres."
+        },
+        {
+          "text": "Pour les habitants des beaux quartiers parisiens plus bronzés en hiver, quelle est la variable explicative déterminante ?",
+          "type": "mcq",
+          "options": [
+            "Le prix au m2 des appartements",
+            "Les lampes bronzantes",
+            "Le séjour lointain (et indirectement le revenu)",
+            "La qualité de l'air"
+          ],
+          "correct": 2,
+          "solution": "La variable déterminante est le séjour lointain (ski, îles), et indirectement le revenu."
+        },
+        {
+          "text": "90% des êtres humains meurent dans un lit. Peut-on en déduire que dormir dans un canapé augmente l'espérance de vie ?",
+          "type": "mcq",
+          "options": [
+            "Oui, c'est logique",
+            "Non, la corrélation ne vaut pas causalité",
+            "Oui, si on dort assez",
+            "Non, car le canapé est moins confortable"
+          ],
+          "correct": 1,
+          "solution": "La corrélation entre décès et lit ne vaut pas causalité. La personne est dans le lit car elle est en mauvaise santé ou très âgée."
+        },
+        {
+          "text": "Dans l'exemple du café et du cancer de la gorge, quelle était la variable déterminante réelle ?",
+          "type": "mcq",
+          "options": [
+            "La caféine",
+            "La théine",
+            "La trop forte température de la boisson",
+            "Le nombre de tasses par jour"
+          ],
+          "correct": 2,
+          "solution": "La variable déterminante est la température trop élevée de la boisson, pas la caféine ni la théine."
+        },
+        {
+          "text": "Un lien de causalité nécessite que deux conditions soient réunies : une ___________ et un lien de cause à effet.",
+          "type": "text",
+          "accepted": ["corrélation"],
+          "solution": "Un lien de causalité nécessite une corrélation entre les variables ET un lien de cause à effet."
+        },
+        {
+          "text": "Quel domaine de recherche est le premier à s'être posé la question de la corrélation entre plusieurs facteurs ?",
+          "type": "mcq",
+          "options": [
+            "La médecine",
+            "La biologie",
+            "L'économie (économie de l'agriculture)",
+            "La physique"
+          ],
+          "correct": 2,
+          "solution": "Ce sont les économistes, en particulier en économie de l'agriculture, qui les premiers ont étudié la corrélation."
+        },
+        {
+          "text": "La causalité est une condition nécessaire mais pas ___________ à la corrélation.",
+          "type": "text",
+          "accepted": ["suffisante"],
+          "solution": "La causalité est une condition nécessaire mais pas suffisante à la corrélation."
+        }
+      ]
+    },
+    {
+      "category": "Synthèse — Définitions et concepts clés",
+      "questions": [
+        {
+          "text": "Donnez la définition de la science économique selon le cours.",
+          "type": "text",
+          "accepted": ["La science économique étudie comment les individus, les entreprises, les pouvoirs publics et d'autres organisations sociales font des choix et comment ces choix déterminent la façon dont sont utilisées les ressources de la société"],
+          "solution": "La science économique étudie comment les individus, les entreprises, les pouvoirs publics et d'autres organisations sociales font des choix et comment ces choix déterminent la façon dont sont utilisées les ressources de la société."
+        },
+        {
+          "text": "Selon Edmond Malinvaud, l'économie est la science qui étudie l'allocation des ressources rares, c'est-à-dire la ___________, la ___________ et la ___________ de biens et services.",
+          "type": "mcq",
+          "options": [
+            "Production, répartition et consommation",
+            "Vente, achat et stockage",
+            "Importation, exportation et transformation",
+            "Innovation, reproduction et distribution"
+          ],
+          "correct": 0,
+          "solution": "L'économie étudie la production, la répartition et la consommation de biens et services."
+        },
+        {
+          "text": "Qu'est-ce qu'une société selon le cours ?",
+          "type": "text",
+          "accepted": ["Un ensemble d'êtres humains vivant en groupe organisé, étant en relation et ayant certains comportements communs"],
+          "solution": "La société est un ensemble d'êtres humains vivant en groupe organisé, étant en relation et ayant certains comportements communs."
+        },
+        {
+          "text": "Le pouvoir politique est le pouvoir d'organiser les ___________ de la vie collective dans une société.",
+          "type": "text",
+          "accepted": ["modalités"],
+          "solution": "Le pouvoir politique est le pouvoir d'organiser les modalités de la vie collective dans une société."
+        },
+        {
+          "text": "Que signifie objectiver le réel pour un chercheur en sciences sociales ?",
+          "type": "mcq",
+          "options": [
+            "Transformer la réalité en données numériques",
+            "Se méfier de l'évidence pour écarter tout jugement de valeur",
+            "Raconter la réalité telle qu'elle apparaît",
+            "Utiliser uniquement des modèles mathématiques"
+          ],
+          "correct": 1,
+          "solution": "Objectiver le réel, c'est se méfier de l'évidence pour écarter tout jugement de valeur."
+        },
+        {
+          "text": "Citez au moins trois organismes privés français d'enquêtes cités dans le cours.",
+          "type": "text",
+          "accepted": ["IPSOS, KANTAR, ELABE, ODOXA, BLACKBONE, OPINIONWAY"],
+          "solution": "IPSOS, KANTAR (TNS-SOFRES), ELABE, ODOXA, BLACKBONE, OPINIONWAY."
+        },
+        {
+          "text": "Selon le comte de Montalembert, même si on ne s'occupe pas de politique, la politique ___________.",
+          "type": "text",
+          "accepted": ["s'occupe de vous"],
+          "solution": "« Vous avez beau ne pas vous occuper de la politique, la politique s'occupe de vous tout de même »."
+        },
+        {
+          "text": "Quelle est la population mondiale estimée fin 2026 selon le cours ?",
+          "type": "mcq",
+          "options": [
+            "6 milliards",
+            "7 milliards",
+            "8,3 milliards",
+            "10 milliards"
+          ],
+          "correct": 2,
+          "solution": "La population mondiale est estimée à 8,3 milliards d'individus fin 2026."
+        },
+        {
+          "text": "Combien de temps faut-il pour qu'un baril de pétrole se crée naturellement ?",
+          "type": "mcq",
+          "options": [
+            "Quelques années",
+            "Des siècles",
+            "Des millions d'années",
+            "C'est instantané"
+          ],
+          "correct": 2,
+          "solution": "Le pétrole est un hydrocarbure fossilisé qui met des millions d'années à se créer."
+        },
+        {
+          "text": "La démarche scientifique en sciences sociales commence par la formulation d'___________ et se termine par une ___________.",
+          "type": "mcq",
+          "options": [
+            "Hypothèses, conclusion",
+            "Thèses, réfutation",
+            "Observations, généralisation",
+            "Expériences, validation"
+          ],
+          "correct": 0,
+          "solution": "Formulation d'hypothèses → Réalisation d'enquêtes → Confrontation aux faits → Conclusion."
+        }
+      ]
+    }
+  ]
+}

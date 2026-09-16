@@ -96,6 +96,16 @@
       "description": "Descrivere una persona in italiano (84 questions) : aspetto fisico, abbigliamento, strutture di frase.",
       "tags": ["italien", "descrizione", "vocabolario"],
       "added": "2026-09-12"
+    },
+    {
+      "id": "ses-introduction-chapitre1-eco1",
+      "title": "Introduction & Chapitre 1 — Travailler et raisonner en SES (ECO1)",
+      "subject": "ses",
+      "file": "data/ses/introduction-chapitre1-eco1.json",
+      "questionsCount": 60,
+      "description": "Cours de SES de Karine CHAKIR : les trois disciplines, ressources rares, enquêtes et données, corrélation et causalité (60 questions).",
+      "tags": ["ses", "economie", "sociologie", "science-politique", "eco1"],
+      "added": "2026-09-14"
     }
   ],
   "tools": [
