@@ -106,6 +106,16 @@
       "description": "Cours de SES de Karine CHAKIR : les trois disciplines, ressources rares, enquêtes et données, corrélation et causalité (60 questions).",
       "tags": ["ses", "economie", "sociologie", "science-politique", "eco1"],
       "added": "2026-09-14"
+    },
+    {
+      "id": "anglais-verbes-irreguliers",
+      "title": "Verbes irréguliers — Les 3 formes",
+      "subject": "anglais",
+      "file": "data/anglais/verbes-irreguliers.json",
+      "questionsCount": 110,
+      "description": "Tous les verbes irréguliers courants classés par groupe : formes identiques, formes en D, T, GHT, et les trois formes différentes (110 questions).",
+      "tags": ["anglais", "verbes", "irreguliers", "grammaire"],
+      "added": "2026-09-14"
     }
   ],
   "tools": [

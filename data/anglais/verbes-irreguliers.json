@@ -1,0 +1,817 @@
+{
+  "subject": "Anglais",
+  "title": "Verbes irréguliers — Les 3 formes",
+  "description": "Tous les verbes irréguliers courants classés par groupe : formes identiques, formes en D, T, GHT, et les trois formes différentes.",
+  "categories": [
+    {
+      "category": "Groupe 1 — Les trois formes identiques",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BET ?",
+          "type": "mcq",
+          "options": ["bet / bet", "betted / betted", "bat / bat", "bet / betted"],
+          "correct": 0,
+          "solution": "bet — bet — bet (parier)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de BURST ?",
+          "type": "mcq",
+          "options": ["bursted / bursted", "burst / burst", "busted / busted", "bursted / burst"],
+          "correct": 1,
+          "solution": "burst — burst — burst (éclater)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de CAST ?",
+          "type": "mcq",
+          "options": ["casted / casted", "cast / cast", "cost / cost", "cast / casted"],
+          "correct": 1,
+          "solution": "cast — cast — cast (lancer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de CUT ?",
+          "type": "mcq",
+          "options": ["cutted / cutted", "cut / cut", "cut / cutted", "cot / cot"],
+          "correct": 1,
+          "solution": "cut — cut — cut (couper)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de HIT ?",
+          "type": "mcq",
+          "options": ["hitted / hitted", "hit / hit", "hat / hat", "hit / hitted"],
+          "correct": 1,
+          "solution": "hit — hit — hit (frapper)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de HURT ?",
+          "type": "mcq",
+          "options": ["hurted / hurted", "hurt / hurt", "hart / hart", "hurt / hurted"],
+          "correct": 1,
+          "solution": "hurt — hurt — hurt (blesser)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LET ?",
+          "type": "mcq",
+          "options": ["letted / letted", "let / let", "lit / lit", "let / letted"],
+          "correct": 1,
+          "solution": "let — let — let (laisser)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de PUT ?",
+          "type": "mcq",
+          "options": ["putted / putted", "put / put", "pat / pat", "put / putted"],
+          "correct": 1,
+          "solution": "put — put — put (mettre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SET ?",
+          "type": "mcq",
+          "options": ["setted / setted", "set / set", "sat / sat", "set / setted"],
+          "correct": 1,
+          "solution": "set — set — set (placer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SHUT ?",
+          "type": "mcq",
+          "options": ["shutted / shutted", "shut / shut", "shot / shot", "shut / shutted"],
+          "correct": 1,
+          "solution": "shut — shut — shut (fermer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SPLIT ?",
+          "type": "mcq",
+          "options": ["splitted / splitted", "split / split", "splet / splet", "split / splitted"],
+          "correct": 1,
+          "solution": "split — split — split (fendre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SPREAD ?",
+          "type": "mcq",
+          "options": ["spreaded / spreaded", "spread / spread", "sproad / sproad", "spread / spreaded"],
+          "correct": 1,
+          "solution": "spread — spread — spread (répandre, étaler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de COST ?",
+          "type": "mcq",
+          "options": ["costed / costed", "cost / cost", "cust / cust", "cost / costed"],
+          "correct": 1,
+          "solution": "cost — cost — cost (me coûter)"
+        }
+      ]
+    },
+    {
+      "category": "Groupe 2 — Formes en D",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BLEED ?",
+          "type": "mcq",
+          "options": ["bleed / bleed", "bled / bled", "bloded / bloded", "bled / bleed"],
+          "correct": 1,
+          "solution": "bleed — bled — bled (saigner)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FEED ?",
+          "type": "mcq",
+          "options": ["feed / feed", "fed / fed", "food / food", "fed / feed"],
+          "correct": 1,
+          "solution": "feed — fed — fed (nourrir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FIND ?",
+          "type": "mcq",
+          "options": ["find / find", "found / found", "fond / fond", "found / find"],
+          "correct": 1,
+          "solution": "find — found — found (trouver)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de HAVE ?",
+          "type": "mcq",
+          "options": ["have / have", "had / had", "haved / haved", "had / have"],
+          "correct": 1,
+          "solution": "have — had — had (avoir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de HEAR ?",
+          "type": "mcq",
+          "options": ["hear / hear", "heard / heard", "herd / herd", "heard / hear"],
+          "correct": 1,
+          "solution": "hear — heard — heard (entendre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de HOLD ?",
+          "type": "mcq",
+          "options": ["hold / hold", "held / held", "holed / holed", "held / hold"],
+          "correct": 1,
+          "solution": "hold — held — held (tenir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LAY ?",
+          "type": "mcq",
+          "options": ["lay / lay", "laid / laid", "layed / layed", "laid / lay"],
+          "correct": 1,
+          "solution": "lay — laid — laid (poser à plat)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LEAD ?",
+          "type": "mcq",
+          "options": ["lead / lead", "led / led", "leaded / leaded", "led / lead"],
+          "correct": 1,
+          "solution": "lead — led — led (mener)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de MAKE ?",
+          "type": "mcq",
+          "options": ["make / make", "made / made", "maked / maked", "made / make"],
+          "correct": 1,
+          "solution": "make — made — made (faire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de PAY ?",
+          "type": "mcq",
+          "options": ["pay / pay", "paid / paid", "payed / payed", "paid / pay"],
+          "correct": 1,
+          "solution": "pay — paid — paid (payer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SAY ?",
+          "type": "mcq",
+          "options": ["say / say", "said / said", "sayed / sayed", "said / say"],
+          "correct": 1,
+          "solution": "say — said — said (dire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SELL ?",
+          "type": "mcq",
+          "options": ["sell / sell", "sold / sold", "selled / selled", "sold / sell"],
+          "correct": 1,
+          "solution": "sell — sold — sold (vendre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de STAND ?",
+          "type": "mcq",
+          "options": ["stand / stand", "stood / stood", "standed / standed", "stood / stand"],
+          "correct": 1,
+          "solution": "stand — stood — stood (être debout)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de TELL ?",
+          "type": "mcq",
+          "options": ["tell / tell", "told / told", "telled / telled", "told / tell"],
+          "correct": 1,
+          "solution": "tell — told — told (dire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de UNDERSTAND ?",
+          "type": "mcq",
+          "options": ["understand / understand", "understood / understood", "understanded / understanded", "understood / understand"],
+          "correct": 1,
+          "solution": "understand — understood — understood (comprendre)"
+        }
+      ]
+    },
+    {
+      "category": "Groupe 2 — Formes en T",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BEND ?",
+          "type": "mcq",
+          "options": ["bend / bend", "bent / bent", "bended / bended", "bent / bend"],
+          "correct": 1,
+          "solution": "bend — bent — bent (courber)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de BUILD ?",
+          "type": "mcq",
+          "options": ["build / build", "built / built", "builded / builded", "built / build"],
+          "correct": 1,
+          "solution": "build — built — built (construire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de BURN ?",
+          "type": "mcq",
+          "options": ["burn / burn", "burnt / burnt (ou burned / burned)", "burned / burned", "burnt / burn"],
+          "correct": 1,
+          "solution": "burn — burnt/burned — burnt/burned (brûler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de DEAL ?",
+          "type": "mcq",
+          "options": ["deal / deal", "dealt / dealt", "dealed / dealed", "dealt / deal"],
+          "correct": 1,
+          "solution": "deal — dealt — dealt (distribuer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de DREAM ?",
+          "type": "mcq",
+          "options": ["dream / dream", "dreamt / dreamt (ou dreamed / dreamed)", "dreamed / dreamed", "dreamt / dream"],
+          "correct": 1,
+          "solution": "dream — dreamt/dreamed — dreamt/dreamed (rêver)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FEEL ?",
+          "type": "mcq",
+          "options": ["feel / feel", "felt / felt", "feeled / feeled", "felt / feel"],
+          "correct": 1,
+          "solution": "feel — felt — felt ((res)sentir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de GET ?",
+          "type": "mcq",
+          "options": ["get / get", "got / got, gotten (US)", "getted / getted", "got / get"],
+          "correct": 1,
+          "solution": "get — got — got/gotten (US) (obtenir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de KEEP ?",
+          "type": "mcq",
+          "options": ["keep / keep", "kept / kept", "keeped / keeped", "kept / keep"],
+          "correct": 1,
+          "solution": "keep — kept — kept (garder)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LEAP ?",
+          "type": "mcq",
+          "options": ["leap / leap", "leapt / leapt", "leaped / leaped", "leapt / leap"],
+          "correct": 1,
+          "solution": "leap — leapt — leapt (sauter)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LEARN ?",
+          "type": "mcq",
+          "options": ["learn / learn", "learnt / learnt (ou learned / learned)", "learned / learned", "learnt / learn"],
+          "correct": 1,
+          "solution": "learn — learnt/learned — learnt/learned (apprendre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LEAVE ?",
+          "type": "mcq",
+          "options": ["leave / leave", "left / left", "leaved / leaved", "left / leave"],
+          "correct": 1,
+          "solution": "leave — left — left (quitter)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LEND ?",
+          "type": "mcq",
+          "options": ["lend / lend", "lent / lent", "lended / lended", "lent / lend"],
+          "correct": 1,
+          "solution": "lend — lent — lent (prêter)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LIGHT ?",
+          "type": "mcq",
+          "options": ["light / light", "lit / lit", "lighted / lighted", "lit / light"],
+          "correct": 1,
+          "solution": "light — lit — lit (allumer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LOSE ?",
+          "type": "mcq",
+          "options": ["lose / lose", "lost / lost", "losed / losed", "lost / lose"],
+          "correct": 1,
+          "solution": "lose — lost — lost (perdre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de MEAN ?",
+          "type": "mcq",
+          "options": ["mean / mean", "meant / meant", "meaned / meaned", "meant / mean"],
+          "correct": 1,
+          "solution": "mean — meant — meant (signifier)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de MEET ?",
+          "type": "mcq",
+          "options": ["meet / meet", "met / met", "meeted / meeted", "met / meet"],
+          "correct": 1,
+          "solution": "meet — met — met (rencontrer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SEND ?",
+          "type": "mcq",
+          "options": ["send / send", "sent / sent", "sended / sended", "sent / send"],
+          "correct": 1,
+          "solution": "send — sent — sent (envoyer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SHOOT ?",
+          "type": "mcq",
+          "options": ["shoot / shoot", "shot / shot", "shooted / shooted", "shot / shoot"],
+          "correct": 1,
+          "solution": "shoot — shot — shot (faire feu, tirer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SIT ?",
+          "type": "mcq",
+          "options": ["sit / sit", "sat / sat", "sited / sited", "sat / sit"],
+          "correct": 1,
+          "solution": "sit — sat — sat (être assis)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SLEEP ?",
+          "type": "mcq",
+          "options": ["sleep / sleep", "slept / slept", "sleeped / sleeped", "slept / sleep"],
+          "correct": 1,
+          "solution": "sleep — slept — slept (dormir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SMELL ?",
+          "type": "mcq",
+          "options": ["smell / smell", "smelt / smelt", "smelled / smelled", "smelt / smell"],
+          "correct": 1,
+          "solution": "smell — smelt — smelt (sentir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SPELL ?",
+          "type": "mcq",
+          "options": ["spell / spell", "spelt / spelt", "spelled / spelled", "spelt / spell"],
+          "correct": 1,
+          "solution": "spell — spelt — spelt (épeler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SPEND ?",
+          "type": "mcq",
+          "options": ["spend / spend", "spent / spent", "spended / spended", "spent / spend"],
+          "correct": 1,
+          "solution": "spend — spent — spent (dépenser)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SPILL ?",
+          "type": "mcq",
+          "options": ["spill / spill", "spilt / spilt", "spilled / spilled", "spilt / spill"],
+          "correct": 1,
+          "solution": "spill — spilt — spilt (répandre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SPOIL ?",
+          "type": "mcq",
+          "options": ["spoil / spoil", "spoilt / spoilt", "spoiled / spoiled", "spoilt / spoil"],
+          "correct": 1,
+          "solution": "spoil — spoilt — spoilt (gâter)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SWEEP ?",
+          "type": "mcq",
+          "options": ["sweep / sweep", "swept / swept", "sweeped / sweeped", "swept / sweep"],
+          "correct": 1,
+          "solution": "sweep — swept — swept (balayer)"
+        }
+      ]
+    },
+    {
+      "category": "Groupe 2 — Formes en GHT",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BRING ?",
+          "type": "mcq",
+          "options": ["bring / bring", "brought / brought", "bringed / bringed", "brought / bring"],
+          "correct": 1,
+          "solution": "bring — brought — brought (apporter)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de BUY ?",
+          "type": "mcq",
+          "options": ["buy / buy", "bought / bought", "buyed / buyed", "bought / buy"],
+          "correct": 1,
+          "solution": "buy — bought — bought (acheter)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de CATCH ?",
+          "type": "mcq",
+          "options": ["catch / catch", "caught / caught", "catched / catched", "caught / catch"],
+          "correct": 1,
+          "solution": "catch — caught — caught (attraper)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FIGHT ?",
+          "type": "mcq",
+          "options": ["fight / fight", "fought / fought", "fighted / fighted", "fought / fight"],
+          "correct": 1,
+          "solution": "fight — fought — fought (combattre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de READ ?",
+          "type": "mcq",
+          "options": ["read / read", "read / read (prononcé /ɛ/)", "readed / readed", "read / read (prononcé /i:/)"],
+          "correct": 1,
+          "solution": "read — read — read (prononcé /ɛ/ au prétérit et participe passé) (lire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de TEACH ?",
+          "type": "mcq",
+          "options": ["teach / teach", "taught / taught", "teached / teached", "taught / teach"],
+          "correct": 1,
+          "solution": "teach — taught — taught (enseigner)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de THINK ?",
+          "type": "mcq",
+          "options": ["think / think", "thought / thought", "thinked / thinked", "thought / think"],
+          "correct": 1,
+          "solution": "think — thought — thought (penser)"
+        }
+      ]
+    },
+    {
+      "category": "Groupe 2 — Autres verbes avec 2 formes identiques",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BECOME ?",
+          "type": "mcq",
+          "options": ["become / become", "became / become", "becomed / becomed", "became / become"],
+          "correct": 1,
+          "solution": "become — became — become (devenir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de COME ?",
+          "type": "mcq",
+          "options": ["come / come", "came / come", "comed / comed", "came / come"],
+          "correct": 1,
+          "solution": "come — came — come (venir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de HANG ?",
+          "type": "mcq",
+          "options": ["hang / hang", "hung / hung", "hanged / hanged", "hung / hang"],
+          "correct": 1,
+          "solution": "hang — hung — hung (pendre, suspendre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de RUN ?",
+          "type": "mcq",
+          "options": ["run / run", "ran / run", "runned / runned", "ran / run"],
+          "correct": 1,
+          "solution": "run — ran — run (courir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de STICK ?",
+          "type": "mcq",
+          "options": ["stick / stick", "stuck / stuck", "sticked / sticked", "stuck / stick"],
+          "correct": 1,
+          "solution": "stick — stuck — stuck (coller)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de STRIKE ?",
+          "type": "mcq",
+          "options": ["strike / strike", "struck / struck", "striked / striked", "struck / strike"],
+          "correct": 1,
+          "solution": "strike — struck — struck (frapper)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SWING ?",
+          "type": "mcq",
+          "options": ["swing / swing", "swung / swung", "swinged / swinged", "swung / swing"],
+          "correct": 1,
+          "solution": "swing — swung — swung ((se) balancer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de WIN ?",
+          "type": "mcq",
+          "options": ["win / win", "won / won", "winned / winned", "won / win"],
+          "correct": 1,
+          "solution": "win — won — won (gagner)"
+        }
+      ]
+    },
+    {
+      "category": "Groupe 3 — Participe passé en EN",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BE ?",
+          "type": "mcq",
+          "options": ["was/were / been", "been / was/were", "was/were / was/were", "been / been"],
+          "correct": 0,
+          "solution": "be — was/were — been (être)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de BITE ?",
+          "type": "mcq",
+          "options": ["bit / bitten", "bitten / bit", "bit / bit", "bitten / bitten"],
+          "correct": 0,
+          "solution": "bite — bit — bitten (mordre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de BREAK ?",
+          "type": "mcq",
+          "options": ["broke / broken", "broken / broke", "breaked / breaked", "broke / breaked"],
+          "correct": 0,
+          "solution": "break — broke — broken (casser)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de CHOOSE ?",
+          "type": "mcq",
+          "options": ["chose / chosen", "chosen / chose", "choosed / choosed", "chose / choosed"],
+          "correct": 0,
+          "solution": "choose — chose — chosen (choisir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de DRIVE ?",
+          "type": "mcq",
+          "options": ["drove / driven", "driven / drove", "drived / drived", "drove / drived"],
+          "correct": 0,
+          "solution": "drive — drove — driven (conduire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de EAT ?",
+          "type": "mcq",
+          "options": ["ate / eaten", "eaten / ate", "eated / eated", "ate / eated"],
+          "correct": 0,
+          "solution": "eat — ate — eaten (manger)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FALL ?",
+          "type": "mcq",
+          "options": ["fell / fallen", "fallen / fell", "falled / falled", "fell / falled"],
+          "correct": 0,
+          "solution": "fall — fell — fallen (tomber)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FORBID ?",
+          "type": "mcq",
+          "options": ["forbad(e) / forbidden", "forbidden / forbad(e)", "forbided / forbided", "forbad(e) / forbided"],
+          "correct": 0,
+          "solution": "forbid — forbad(e) — forbidden (interdire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FORGIVE ?",
+          "type": "mcq",
+          "options": ["forgave / forgiven", "forgiven / forgave", "forgived / forgived", "forgave / forgived"],
+          "correct": 0,
+          "solution": "forgive — forgave — forgiven (pardonner)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FORGET ?",
+          "type": "mcq",
+          "options": ["forgot / forgotten", "forgotten / forgot", "forgeted / forgeted", "forgot / forgeted"],
+          "correct": 0,
+          "solution": "forget — forgot — forgotten (oublier)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FREEZE ?",
+          "type": "mcq",
+          "options": ["froze / frozen", "frozen / froze", "freezed / freezed", "froze / freezed"],
+          "correct": 0,
+          "solution": "freeze — froze — frozen (geler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de GIVE ?",
+          "type": "mcq",
+          "options": ["gave / given", "given / gave", "gived / gived", "gave / gived"],
+          "correct": 0,
+          "solution": "give — gave — given (donner)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de HIDE ?",
+          "type": "mcq",
+          "options": ["hid / hidden", "hidden / hid", "hided / hided", "hid / hided"],
+          "correct": 0,
+          "solution": "hide — hid — hidden (cacher)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de RIDE ?",
+          "type": "mcq",
+          "options": ["rode / ridden", "ridden / rode", "rided / rided", "rode / rided"],
+          "correct": 0,
+          "solution": "ride — rode — ridden (aller à cheval)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de RISE ?",
+          "type": "mcq",
+          "options": ["rose / risen", "risen / rose", "rised / rised", "rose / rised"],
+          "correct": 0,
+          "solution": "rise — rose — risen (s'élever)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SEE ?",
+          "type": "mcq",
+          "options": ["saw / seen", "seen / saw", "seed / seed", "saw / seed"],
+          "correct": 0,
+          "solution": "see — saw — seen (voir)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SHAKE ?",
+          "type": "mcq",
+          "options": ["shook / shaken", "shaken / shook", "shaked / shaked", "shook / shaked"],
+          "correct": 0,
+          "solution": "shake — shook — shaken (secouer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SPEAK ?",
+          "type": "mcq",
+          "options": ["spoke / spoken", "spoken / spoke", "speaked / speaked", "spoke / speaked"],
+          "correct": 0,
+          "solution": "speak — spoke — spoken (parler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de STEAL ?",
+          "type": "mcq",
+          "options": ["stole / stolen", "stolen / stole", "stealed / stealed", "stole / stealed"],
+          "correct": 0,
+          "solution": "steal — stole — stolen (voler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de TAKE ?",
+          "type": "mcq",
+          "options": ["took / taken", "taken / took", "taked / taked", "took / taked"],
+          "correct": 0,
+          "solution": "take — took — taken (prendre)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de WAKE ?",
+          "type": "mcq",
+          "options": ["woke / woken", "woken / woke", "waked / waked", "woke / waked"],
+          "correct": 0,
+          "solution": "wake — woke — woken (réveiller)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de WRITE ?",
+          "type": "mcq",
+          "options": ["wrote / written", "written / wrote", "writed / writed", "wrote / writed"],
+          "correct": 0,
+          "solution": "write — wrote — written (écrire)"
+        }
+      ]
+    },
+    {
+      "category": "Groupe 3 — Participe passé en N ou NE",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BLOW ?",
+          "type": "mcq",
+          "options": ["blew / blown", "blown / blew", "blowed / blowed", "blew / blowed"],
+          "correct": 0,
+          "solution": "blow — blew — blown (souffler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de DO ?",
+          "type": "mcq",
+          "options": ["did / done", "done / did", "doed / doed", "did / doed"],
+          "correct": 0,
+          "solution": "do — did — done (faire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de DRAW ?",
+          "type": "mcq",
+          "options": ["drew / drawn", "drawn / drew", "drawed / drawed", "drew / drawed"],
+          "correct": 0,
+          "solution": "draw — drew — drawn (dessiner)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de FLY ?",
+          "type": "mcq",
+          "options": ["flew / flown", "flown / flew", "flyed / flyed", "flew / flyed"],
+          "correct": 0,
+          "solution": "fly — flew — flown (voler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de GO ?",
+          "type": "mcq",
+          "options": ["went / gone", "gone / went", "goed / goed", "went / goed"],
+          "correct": 0,
+          "solution": "go — went — gone (aller)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de GROW ?",
+          "type": "mcq",
+          "options": ["grew / grown", "grown / grew", "growed / growed", "grew / growed"],
+          "correct": 0,
+          "solution": "grow — grew — grown (pousser, croître)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de KNOW ?",
+          "type": "mcq",
+          "options": ["knew / known", "known / knew", "knowed / knowed", "knew / knowed"],
+          "correct": 0,
+          "solution": "know — knew — known (connaître)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de LIE (être couché) ?",
+          "type": "mcq",
+          "options": ["lay / lain", "lain / lay", "lied / lied", "lay / lied"],
+          "correct": 0,
+          "solution": "lie — lay — lain (être couché)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SHOW ?",
+          "type": "mcq",
+          "options": ["showed / shown", "shown / showed", "showed / showed", "shown / showed"],
+          "correct": 0,
+          "solution": "show — showed — shown (montrer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SWEAR ?",
+          "type": "mcq",
+          "options": ["swore / sworn", "sworn / swore", "swear / swear", "swore / swear"],
+          "correct": 0,
+          "solution": "swear — swore — sworn (jurer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de TEAR ?",
+          "type": "mcq",
+          "options": ["tore / torn", "torn / tore", "teared / teared", "tore / teared"],
+          "correct": 0,
+          "solution": "tear — tore — torn (déchirer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de THROW ?",
+          "type": "mcq",
+          "options": ["threw / thrown", "thrown / threw", "throwed / throwed", "threw / throwed"],
+          "correct": 0,
+          "solution": "throw — threw — thrown (lancer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de WEAR ?",
+          "type": "mcq",
+          "options": ["wore / worn", "worn / wore", "weared / weared", "wore / weared"],
+          "correct": 0,
+          "solution": "wear — wore — worn (porter un vêtement)"
+        }
+      ]
+    },
+    {
+      "category": "Groupe 3 — Changement de voyelle I-A-U",
+      "questions": [
+        {
+          "text": "Quel est le prétérit et le participe passé de BEGIN ?",
+          "type": "mcq",
+          "options": ["began / begun", "begun / began", "beginned / beginned", "began / beginned"],
+          "correct": 0,
+          "solution": "begin — began — begun (commencer)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de DRINK ?",
+          "type": "mcq",
+          "options": ["drank / drunk", "drunk / drank", "drinked / drinked", "drank / drinked"],
+          "correct": 0,
+          "solution": "drink — drank — drunk (boire)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de RING ?",
+          "type": "mcq",
+          "options": ["rang / rung", "rung / rang", "ringed / ringed", "rang / ringed"],
+          "correct": 0,
+          "solution": "ring — rang — rung (sonner)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SING ?",
+          "type": "mcq",
+          "options": ["sang / sung", "sung / sang", "singed / singed", "sang / singed"],
+          "correct": 0,
+          "solution": "sing — sang — sung (chanter)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SINK ?",
+          "type": "mcq",
+          "options": ["sank / sunk", "sunk / sank", "sinked / sinked", "sank / sinked"],
+          "correct": 0,
+          "solution": "sink — sank — sunk (couler)"
+        },
+        {
+          "text": "Quel est le prétérit et le participe passé de SWIM ?",
+          "type": "mcq",
+          "options": ["swam / swum", "swum / swam", "swimmed / swimmed", "swam / swimmed"],
+          "correct": 0,
+          "solution": "swim — swam — swum (nager)"
+        }
+      ]
+    }
+  ]
+}

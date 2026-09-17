@@ -3,6 +3,7 @@ const STATIC_ASSETS = [
   "./css/portal.css",
   "./css/quiz.css",
   "./css/theme.css",
+  "./data/anglais/verbes-irreguliers.json",
   "./data/config.json",
   "./data/francais/outils-analyse-litteraire.json",
   "./data/italien/presentare-una-persona.json",
@@ -24,7 +25,11 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1789664168";
+<<<<<<< HEAD
+const CACHE_NAME = "quiz-cache-1789666617";
+=======
+const CACHE_NAME = "quiz-cache-1789666617";
+>>>>>>> 086ff4e (add verbes irreguliers anglais)
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
