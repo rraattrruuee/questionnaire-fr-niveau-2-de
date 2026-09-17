@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -40,6 +40,18 @@ jobs:
           chmod +x scripts/generate-sw.sh
           bash scripts/generate-sw.sh
           rm -f service-worker.js.tmp
+
+      - name: Commit updated service-worker.js
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add service-worker.js
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update service-worker.js assets and cache version"
+            git push
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

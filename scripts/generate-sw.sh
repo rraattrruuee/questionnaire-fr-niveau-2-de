@@ -11,6 +11,7 @@ FILES=$(find . -maxdepth 4 -type f \( -name "*.html" -o -name "*.css" -o -name "
     ! -path "./.*" \
     ! -path "./scripts/*" \
     ! -path "./capture/*" \
+    ! -path "./cloudflare-worker-posthog/*" \
     | sed 's|^\.||' | sort \
     | python3 -c "
 import sys, urllib.parse

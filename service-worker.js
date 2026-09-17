@@ -6,6 +6,7 @@ const STATIC_ASSETS = [
   "./data/config.json",
   "./data/francais/outils-analyse-litteraire.json",
   "./data/italien/presentare-una-persona.json",
+  "./data/ses/introduction-chapitre1-eco1.json",
   "./index.html",
   "./js/analytics.js",
   "./js/portal.js",
@@ -23,7 +24,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1789915819";
+const CACHE_NAME = "quiz-cache-1789661993";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
