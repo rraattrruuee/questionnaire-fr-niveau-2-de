@@ -32,6 +32,13 @@ awk -v files="$FILES" '
 
 echo "✅ service-worker.js assets list updated."
 
+# 2b. Defensive: remove any leftover git conflict markers and duplicate
+# CACHE_NAME declarations (a rebase conflict can leave them outside the
+# BEGIN_ASSETS/END_ASSETS block, producing invalid JavaScript).
+sed -i -E '/^(<<<<<<<|=======|>>>>>>>)/d' service-worker.js
+awk '/^const CACHE_NAME = / { if (seen++) next } { print }' service-worker.js > service-worker.js.tmp \
+  && mv service-worker.js.tmp service-worker.js
+
 # 3. Update cache version (timestamp-based for unique deploys)
 VERSION=$(date +%s)
 sed -i "s/^const CACHE_NAME = .*$/const CACHE_NAME = \"quiz-cache-${VERSION}\";/" service-worker.js

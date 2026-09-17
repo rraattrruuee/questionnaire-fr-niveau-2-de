@@ -25,11 +25,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-<<<<<<< HEAD
-const CACHE_NAME = "quiz-cache-1789666645";
-=======
-const CACHE_NAME = "quiz-cache-1789666645";
->>>>>>> 086ff4e (add verbes irreguliers anglais)
+const CACHE_NAME = "quiz-cache-1789668923";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
