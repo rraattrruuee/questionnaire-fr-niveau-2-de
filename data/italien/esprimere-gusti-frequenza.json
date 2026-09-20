@@ -1,0 +1,526 @@
+{
+  "subject": "italien",
+  "title": "Esprimere i gusti e la frequenza",
+  "description": "Grammaire italienne : exprimer les gouts (piacere, adorare, odiare, detestare) et adverbes de frequence — 53 questions autonomes.",
+  "categories": [
+    {
+      "category": "Esprimere i gusti — struttura",
+      "questions": [
+        {
+          "text": "Comment dit-on « j adore jouer aux jeux video » en italien ?",
+          "type": "mcq",
+          "options": [
+            "Adoro giocare a videogiochi",
+            "Mi piace giocare a videogiochi",
+            "Odiare giocare a videogiochi",
+            "Detesto giocare a videogiochi"
+          ],
+          "correct": "Adoro giocare a videogiochi",
+          "solution": "Adoro = j adore (forte preference positive)"
+        },
+        {
+          "text": "Quel verbe signifie « detester » ?",
+          "type": "mcq",
+          "options": [
+            "detestare",
+            "odiare",
+            "apprezzare",
+            "piacere"
+          ],
+          "correct": "detestare",
+          "solution": "Detestare = detester"
+        },
+        {
+          "text": "Que signifie « odiare » ?",
+          "type": "mcq",
+          "options": [
+            "hair",
+            "apprecier",
+            "adorer",
+            "aimer"
+          ],
+          "correct": "hair",
+          "solution": "Odiare = hair"
+        },
+        {
+          "text": "Comment dit-on « j aime la pizza » ?",
+          "type": "mcq",
+          "options": [
+            "Mi piace la pizza",
+            "Adoro la pizza",
+            "Odiare la pizza",
+            "Detesto la pizza"
+          ],
+          "correct": "Mi piace la pizza",
+          "solution": "Mi piace = j aime (mi piace + nom singulier)"
+        },
+        {
+          "text": "Quelle structure utilise-t-on avec « piacere » pour parler d une activite ?",
+          "type": "mcq",
+          "options": [
+            "Mi piace + infinitif",
+            "Io piace + infinitif",
+            "Mi piacere + infinitif",
+            "A piace + infinitif"
+          ],
+          "correct": "Mi piace + infinitif",
+          "solution": "Mi piace + infinitif = j aime + infinitif (ex: Mi piace leggere)"
+        },
+        {
+          "text": "Comment dit-on « j aime nager » ?",
+          "type": "mcq",
+          "options": [
+            "Mi piace nuotare",
+            "Io nuoto piace",
+            "Mi piacere nuotare",
+            "A me piace nuotare"
+          ],
+          "correct": "Mi piace nuotare",
+          "solution": "Mi piace nuotare = j aime nager"
+        },
+        {
+          "text": "Quel verbe signifie « apprecier » ?",
+          "type": "mcq",
+          "options": [
+            "apprezzare",
+            "piacere",
+            "detestare",
+            "adorare"
+          ],
+          "correct": "apprezzare",
+          "solution": "Apprezzare = apprecier"
+        },
+        {
+          "text": "Comment dit-on « je deteste les mathematiques » ?",
+          "type": "mcq",
+          "options": [
+            "Detesto la matematica",
+            "Odiare la matematica",
+            "Non mi piace la matematica",
+            "Adoro la matematica"
+          ],
+          "correct": "Detesto la matematica",
+          "solution": "Detesto = je deteste"
+        },
+        {
+          "text": "Que signifie « non mi piace » ?",
+          "type": "mcq",
+          "options": [
+            "je n aime pas",
+            "je deteste",
+            "j aime",
+            "j apprecie"
+          ],
+          "correct": "je n aime pas",
+          "solution": "Non mi piace = je n aime pas"
+        },
+        {
+          "text": "Comment dit-on « j apprecie voyager » ?",
+          "type": "mcq",
+          "options": [
+            "Apprezzare viaggiare",
+            "Mi piace viaggiare",
+            "Adoro viaggiare",
+            "Detesto viaggiare"
+          ],
+          "correct": "Apprezzare viaggiare",
+          "solution": "Apprezzare viaggiare = apprecier voyager"
+        },
+        {
+          "text": "Quelle est la difference entre « mi piace » et « adoro » ?",
+          "type": "mcq",
+          "options": [
+            "mi piace = j aime, adoro = j adore (plus fort)",
+            "mi piace = je deteste, adoro = j aime",
+            "pas de difference",
+            "mi piace = j apprecie, adoro = je n aime pas"
+          ],
+          "correct": "mi piace = j aime, adoro = j adore (plus fort)",
+          "solution": "Mi piace = j aime, Adoro = j adore (intensite plus grande)"
+        },
+        {
+          "text": "Comment dit-on « je n aime pas le cafe » ?",
+          "type": "mcq",
+          "options": [
+            "Non mi piace il caffe",
+            "Detesto il caffe",
+            "Adoro il caffe",
+            "Odiare il caffe"
+          ],
+          "correct": "Non mi piace il caffe",
+          "solution": "Non mi piace = je n aime pas"
+        },
+        {
+          "text": "Quel verbe est le plus fort pour exprimer un goit negatif ?",
+          "type": "mcq",
+          "options": [
+            "odiare",
+            "detestare",
+            "non piacere",
+            "non apprezzare"
+          ],
+          "correct": "odiare",
+          "solution": "Odiare = hair (le plus fort)"
+        },
+        {
+          "text": "Comment dit-on « j adore danser » ?",
+          "type": "mcq",
+          "options": [
+            "Adoro ballare",
+            "Mi piace ballare",
+            "Detesto ballare",
+            "Odiare ballare"
+          ],
+          "correct": "Adoro ballare",
+          "solution": "Adoro ballare = j adore danser"
+        },
+        {
+          "text": "Comment dit-on « j aime cuisiner » ?",
+          "type": "mcq",
+          "options": [
+            "Mi piace fare cucina",
+            "Adoro fare cucina",
+            "Detesto fare cucina",
+            "Odiare fare cucina"
+          ],
+          "correct": "Mi piace fare cucina",
+          "solution": "Mi piace fare cucina = j aime cuisiner"
+        },
+        {
+          "text": "Que signifie « Mi piacciono i gatti » ?",
+          "type": "mcq",
+          "options": [
+            "J aime les chats",
+            "J aime le chat",
+            "Je n aime pas les chats",
+            "J adore le chat"
+          ],
+          "correct": "J aime les chats",
+          "solution": "Mi piacciono = j aime (pluriel : piacere au pluriel donne piacciono)"
+        }
+      ]
+    },
+    {
+      "category": "Adverbi della frequenza",
+      "questions": [
+        {
+          "text": "Quel adverbe signifie « toujours » ?",
+          "type": "mcq",
+          "options": [
+            "sempre",
+            "spesso",
+            "mai",
+            "a volte"
+          ],
+          "correct": "sempre",
+          "solution": "Sempre = toujours"
+        },
+        {
+          "text": "Que signifie « spesso » ?",
+          "type": "mcq",
+          "options": [
+            "souvent",
+            "toujours",
+            "rarement",
+            "jamais"
+          ],
+          "correct": "souvent",
+          "solution": "Spesso = souvent"
+        },
+        {
+          "text": "Quel adverbe signifie « parfois » ?",
+          "type": "mcq",
+          "options": [
+            "a volte",
+            "sempre",
+            "mai",
+            "spesso"
+          ],
+          "correct": "a volte",
+          "solution": "A volte = parfois"
+        },
+        {
+          "text": "Que signifie « qualche volta » ?",
+          "type": "mcq",
+          "options": [
+            "quelquefois",
+            "toujours",
+            "jamais",
+            "souvent"
+          ],
+          "correct": "quelquefois",
+          "solution": "Qualche volta = quelquefois"
+        },
+        {
+          "text": "Quel adverbe signifie « chaque jour » ?",
+          "type": "mcq",
+          "options": [
+            "ogni giorno",
+            "sempre",
+            "mai",
+            "a volte"
+          ],
+          "correct": "ogni giorno",
+          "solution": "Ogni giorno = chaque jour / tous les jours"
+        },
+        {
+          "text": "Que signifie « raramente » ?",
+          "type": "mcq",
+          "options": [
+            "rarement",
+            "souvent",
+            "toujours",
+            "jamais"
+          ],
+          "correct": "rarement",
+          "solution": "Raramente = rarement"
+        },
+        {
+          "text": "Quel adverbe signifie « jamais » ?",
+          "type": "mcq",
+          "options": [
+            "mai",
+            "sempre",
+            "spesso",
+            "a volte"
+          ],
+          "correct": "mai",
+          "solution": "Mai = jamais (utilise dans une phrase negative)"
+        },
+        {
+          "text": "Comment dit-on « je ne nage jamais » ?",
+          "type": "mcq",
+          "options": [
+            "Non nuoto mai",
+            "Nuoto mai",
+            "Mai nuoto",
+            "Non mai nuoto"
+          ],
+          "correct": "Non nuoto mai",
+          "solution": "Non nuoto mai = je ne nage jamais (non + verbe + mai)"
+        },
+        {
+          "text": "Que signifie « ogni tanto » ?",
+          "type": "mcq",
+          "options": [
+            "de temps en temps",
+            "chaque jour",
+            "toujours",
+            "jamais"
+          ],
+          "correct": "de temps en temps",
+          "solution": "Ogni tanto = de temps en temps"
+        },
+        {
+          "text": "Quel adverbe exprime la frequence positive maximale ?",
+          "type": "mcq",
+          "options": [
+            "sempre",
+            "spesso",
+            "a volte",
+            "qualche volta"
+          ],
+          "correct": "sempre",
+          "solution": "Sempre = toujours (frequence maximale)"
+        },
+        {
+          "text": "Comment dit-on « je joue souvent aux jeux video » ?",
+          "type": "mcq",
+          "options": [
+            "Gioco spesso a videogiochi",
+            "Gioco sempre a videogiochi",
+            "Mai gioco a videogiochi",
+            "A volte gioco a videogiochi"
+          ],
+          "correct": "Gioco spesso a videogiochi",
+          "solution": "Spesso = souvent"
+        },
+        {
+          "text": "Comment dit-on « je ne fais jamais de sport » ?",
+          "type": "mcq",
+          "options": [
+            "Non faccio mai sport",
+            "Faccio mai sport",
+            "Mai faccio sport",
+            "Non mai faccio sport"
+          ],
+          "correct": "Non faccio mai sport",
+          "solution": "Non + verbe + mai = ne + verbe + jamais"
+        },
+        {
+          "text": "Ou place-t-on l adverbe de frequence dans la phrase ?",
+          "type": "mcq",
+          "options": [
+            "Apres le verbe conjugue",
+            "Avant le verbe conjugue",
+            "Au debut de la phrase",
+            "A la fin de la phrase seulement"
+          ],
+          "correct": "Apres le verbe conjugue",
+          "solution": "L adverbe se place apres le verbe conjugue (ex: Io mangio sempre la pizza)"
+        },
+        {
+          "text": "Comment dit-on « je lis toujours le soir » ?",
+          "type": "mcq",
+          "options": [
+            "Leggo sempre la sera",
+            "Sempre leggo la sera",
+            "La sera leggo sempre",
+            "Mai leggo la sera"
+          ],
+          "correct": "Leggo sempre la sera",
+          "solution": "Leggo sempre la sera = je lis toujours le soir"
+        },
+        {
+          "text": "Que signifie « di solito » ?",
+          "type": "mcq",
+          "options": [
+            "d habitude",
+            "toujours",
+            "jamais",
+            "rarement"
+          ],
+          "correct": "d habitude",
+          "solution": "Di solito = d habitude"
+        },
+        {
+          "text": "Que signifie « quasi mai » ?",
+          "type": "mcq",
+          "options": [
+            "presque jamais",
+            "toujours",
+            "souvent",
+            "parfois"
+          ],
+          "correct": "presque jamais",
+          "solution": "Quasi mai = presque jamais"
+        }
+      ]
+    },
+    {
+      "category": "Frasi complete — gusti e frequenza",
+      "questions": [
+        {
+          "text": "Completez : « Io ___ leggere i libri » (j aime lire).",
+          "type": "mcq",
+          "options": [
+            "mi piace",
+            "adoro",
+            "detesto",
+            "odiare"
+          ],
+          "correct": "mi piace",
+          "solution": "Mi piace leggere = j aime lire"
+        },
+        {
+          "text": "Completez : « ___ guardare film la sera » (j adore regarder le soir).",
+          "type": "mcq",
+          "options": [
+            "Adoro",
+            "Non mi piace",
+            "Detesto",
+            "Odiare"
+          ],
+          "correct": "Adoro",
+          "solution": "Adoro guardare film = j adore regarder des films"
+        },
+        {
+          "text": "Completez : « Non ___ mai la pizza » (je n aime pas la pizza).",
+          "type": "mcq",
+          "options": [
+            "mi piace",
+            "adoro",
+            "detesto",
+            "odiare"
+          ],
+          "correct": "mi piace",
+          "solution": "Non mi piace la pizza = je n aime pas la pizza"
+        },
+        {
+          "text": "Completez : « ___ nuotare ogni giorno » (j adore nager chaque jour).",
+          "type": "mcq",
+          "options": [
+            "Adoro",
+            "Non mi piace",
+            "Detesto",
+            "Odiare"
+          ],
+          "correct": "Adoro",
+          "solution": "Adoro nuotare ogni giorno = j adore nager chaque jour"
+        },
+        {
+          "text": "Completez : « ___ il calcio, ma ___ il tennis » (j aime le football mais je deteste le tennis).",
+          "type": "mcq",
+          "options": [
+            "Mi piace ... detesto",
+            "Detesto ... mi piace",
+            "Adoro ... adoro",
+            "Non mi piace ... non mi piace"
+          ],
+          "correct": "Mi piace ... detesto",
+          "solution": "Mi piace il calcio, ma detesto il tennis"
+        },
+        {
+          "text": "Completez : « Non ___ mai la politica » (la politique ne m interesse jamais).",
+          "type": "mcq",
+          "options": [
+            "mi interessa",
+            "mi piace",
+            "adoro",
+            "detesto"
+          ],
+          "correct": "mi interessa",
+          "solution": "Non mi interessa mai la politica"
+        },
+        {
+          "text": "Completez : « ___ a volte il weekend » (je lis parfois le week-end).",
+          "type": "mcq",
+          "options": [
+            "Leggo",
+            "Vado",
+            "Mangio",
+            "Dormo"
+          ],
+          "correct": "Leggo",
+          "solution": "Leggo a volte il weekend = je lis parfois le week-end"
+        },
+        {
+          "text": "Completez : « ___ raramente la TV » (je regarde rarement la tele).",
+          "type": "mcq",
+          "options": [
+            "Guardo",
+            "Vado",
+            "Faccio",
+            "Ho"
+          ],
+          "correct": "Guardo",
+          "solution": "Guardo raramente la TV = je regarde rarement la tele"
+        },
+        {
+          "text": "Completez : « Io ___ sempre presto la mattina » (je me leve tot le matin).",
+          "type": "mcq",
+          "options": [
+            "mi alzo",
+            "mi piace",
+            "adoro",
+            "detesto"
+          ],
+          "correct": "mi alzo",
+          "solution": "Mi alzo sempre presto = je me leve toujours tot"
+        },
+        {
+          "text": "Completez : « ___ spesso al cinema con gli amici » (je vais souvent au cinema).",
+          "type": "mcq",
+          "options": [
+            "Vado",
+            "Voglio",
+            "Ho",
+            "Faccio"
+          ],
+          "correct": "Vado",
+          "solution": "Vado spesso al cinema = je vais souvent au cinema"
+        }
+      ]
+    }
+  ]
+}

@@ -98,6 +98,26 @@
       "added": "2026-09-12"
     },
     {
+      "id": "italien-carattere-hobby-segni",
+      "title": "Carattere, hobby e segni zodiacali",
+      "subject": "italien",
+      "file": "data/italien/carattere-hobby-segni.json",
+      "questionsCount": 67,
+      "description": "Vocabulaire italien : adjectifs de caractere et personnalite (13 definitions), passe-temps et activites, signes du zodiaque (67 questions autonomes).",
+      "tags": ["italien", "carattere", "hobby", "segni-zodiacali", "vocabolario"],
+      "added": "2026-09-20"
+    },
+    {
+      "id": "italien-esprimere-gusti-frequenza",
+      "title": "Esprimere i gusti e la frequenza",
+      "subject": "italien",
+      "file": "data/italien/esprimere-gusti-frequenza.json",
+      "questionsCount": 42,
+      "description": "Grammaire italienne : exprimer les gouts (mi piace, adoro, odiare, detestare) et adverbes de frequence (sempre, spesso, a volte, mai...) (42 questions autonomes).",
+      "tags": ["italien", "gusti", "frequenza", "grammatica"],
+      "added": "2026-09-20"
+    },
+    {
       "id": "ses-introduction-chapitre1-eco1",
       "title": "Introduction & Chapitre 1 — Travailler et raisonner en SES (ECO1)",
       "subject": "ses",

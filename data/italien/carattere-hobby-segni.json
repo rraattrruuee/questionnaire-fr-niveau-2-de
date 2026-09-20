@@ -1,0 +1,496 @@
+{
+  "subject": "italien",
+  "title": "Carattere, hobby e segni zodiacali",
+  "description": "Vocabulaire italien : caractère et personnalité, passe-temps, signes du zodiaque — 112 questions autonomes.",
+  "categories": [
+    {
+      "category": "Il carattere — aggettivi",
+      "questions": [
+        {
+          "text": "Quel adjectif italien signifie « timide » (qui a besoin de temps pour donner sa confiance) ?",
+          "type": "mcq",
+          "options": ["riservato", "ambizioso", "curioso", "permaloso"],
+          "correct": "riservato",
+          "solution": "Riservato = Ho bisogno di tempo per dare confidenza"
+        },
+        {
+          "text": "Comment dit-on « qui s'intéresse à tout » en italien ?",
+          "type": "mcq",
+          "options": ["curioso", "chicchierone", "sognatore", "generoso"],
+          "correct": "curioso",
+          "solution": "Curioso = Mi interesso di tutto"
+        },
+        {
+          "text": "Quel adjectif décrit une personne qui « aime commander et décider » ?",
+          "type": "mcq",
+          "options": ["autoritario", "ostinato", "audace", "pigro"],
+          "correct": "autoritario",
+          "solution": "Autoritario = Mi piace comandare e decidere"
+        },
+        {
+          "text": "Quel adjectif signifie « j'aime le repos » ?",
+          "type": "mcq",
+          "options": ["pigro", "ordinato", "sognatore", "ambizioso"],
+          "correct": "pigro",
+          "solution": "Pigro = Mi piace il riposo"
+        },
+        {
+          "text": "Comment dit-on « qui renonce difficilement à son idée » ?",
+          "type": "mcq",
+          "options": ["ostinato", "permaloso", "audace", "curioso"],
+          "correct": "ostinato",
+          "solution": "Ostinato = Rinuncio difficilmente alla mia idea"
+        },
+        {
+          "text": "Quel adjectif décrit quelqu'un qui « passe des heures au téléphone » ?",
+          "type": "mcq",
+          "options": ["chicchierone", "riservato", "pigro", "generoso"],
+          "correct": "chicchierone",
+          "solution": "Chiacchierone = Adoro chiacchierare, passo ore al telefono"
+        },
+        {
+          "text": "Comment dit-on « qui met à disposition les choses des autres » ?",
+          "type": "mcq",
+          "options": ["ordinato", "ambizioso", "sognatore", "audace"],
+          "correct": "ordinato",
+          "solution": "Ordinato = Metto a posto le mie cose e quelle degli altri"
+        },
+        {
+          "text": "Quel adjectif signifie « je m'offense facilement » ?",
+          "type": "mcq",
+          "options": ["permaloso", "curioso", "chicchierone", "ostinato"],
+          "correct": "permaloso",
+          "solution": "Permaloso = Mi offendo facilmente"
+        },
+        {
+          "text": "Comment dit-on « qui a beaucoup d'imagination » ?",
+          "type": "mcq",
+          "options": ["sognatore", "autoritario", "pigro", "ordinato"],
+          "correct": "sognatore",
+          "solution": "Sognatore = Ho molta immaginazione"
+        },
+        {
+          "text": "Quel adjectif signifie « je veux devenir quelqu'un d'important » ?",
+          "type": "mcq",
+          "options": ["ambizioso", "generoso", "audace", "riservato"],
+          "correct": "ambizioso",
+          "solution": "Ambizioso = Voglio diventare qualcuno di importante"
+        },
+        {
+          "text": "Comment dit-on « j'aime les aventures et le risque » ?",
+          "type": "mcq",
+          "options": ["audace", "ostinato", "permaloso", "chicchierone"],
+          "correct": "audace",
+          "solution": "Audace = Mi piacciono l'avventura e il rischio"
+        },
+        {
+          "text": "Quel adjectif décrit quelqu'un qui « aime aider les autres » ?",
+          "type": "mcq",
+          "options": ["generoso", "pigro", "sognatore", "autoritario"],
+          "correct": "generoso",
+          "solution": "Generoso = Mi piace aiutare gli altri"
+        },
+        {
+          "text": "Que signifie « pigro » en français ?",
+          "type": "mcq",
+          "options": ["fainéant", "généreux", "ambitieux", "timide"],
+          "correct": "fainéant",
+          "solution": "Pigro = fainéant"
+        },
+        {
+          "text": "Que signifie « sognatore » en français ?",
+          "type": "mcq",
+          "options": ["rêveur", "gros parleur", "timide", "ordonné"],
+          "correct": "rêveur",
+          "solution": "Sognatore = rêveur"
+        },
+        {
+          "text": "Que signifie « chicchierone » en français ?",
+          "type": "mcq",
+          "options": ["gros parleur", "timide", "ordonné", "rêveur"],
+          "correct": "gros parleur",
+          "solution": "Chiacchierone = gros parleur"
+        },
+        {
+          "text": "Que signifie « ordinato » en français ?",
+          "type": "mcq",
+          "options": ["ordonné", "ambitieux", "audacieux", "gros parleur"],
+          "correct": "ordonné",
+          "solution": "Ordinato = ordonné"
+        },
+        {
+          "text": "Que signifie « ostinato » en français ?",
+          "type": "mcq",
+          "options": ["obstiné", "généreux", "timide", "rêveur"],
+          "correct": "obstiné",
+          "solution": "Ostinato = obstiné"
+        },
+        {
+          "text": "Que signifie « permaloso » en français ?",
+          "type": "mcq",
+          "options": ["facilement offensé", "audacieux", "gros parleur", "fainéant"],
+          "correct": "facilement offensé",
+          "solution": "Permaloso = facilement offensé"
+        }
+      ]
+    },
+    {
+      "category": "Il carattere — in contesto",
+      "questions": [
+        {
+          "text": "Marco è molto _____ : vuole diventare direttore di una grande azienda.",
+          "type": "mcq",
+          "options": ["ambizioso", "pigro", "riservato", "permaloso"],
+          "correct": "ambizioso",
+          "solution": "Ambizioso = veut devenir quelqu'un d'important"
+        },
+        {
+          "text": "Anna è _____ : non ha paura di provare sport pericolosi.",
+          "type": "mcq",
+          "options": ["audace", "chicchierone", "ordinato", "sognatore"],
+          "correct": "audace",
+          "solution": "Audace = aime les aventures et le risque"
+        },
+        {
+          "text": "Il nostro professore è un po' _____ : decide sempre tutto lui.",
+          "type": "mcq",
+          "options": ["autoritario", "generoso", "curioso", "ostinato"],
+          "correct": "autoritario",
+          "solution": "Autoritario = aime commander et décider"
+        },
+        {
+          "text": "Marta è veramente _____ : parla con tutti e racconta molte storie.",
+          "type": "mcq",
+          "options": ["chicchierone", "riservato", "pigro", "ambizioso"],
+          "correct": "chicchierone",
+          "solution": "Chiacchierone = adore bavarder"
+        },
+        {
+          "text": "Paolo è _____ : fa sempre tante domande su ogni argomento.",
+          "type": "mcq",
+          "options": ["curioso", "ostinato", "audace", "sognatore"],
+          "correct": "curioso",
+          "solution": "Curioso = s'intéresse à tout"
+        },
+        {
+          "text": "Mia zia è molto _____ : regala sempre qualcosa a tutti.",
+          "type": "mcq",
+          "options": ["generoso", "pigro", "permaloso", "autoritario"],
+          "correct": "generoso",
+          "solution": "Generoso = aime aider les autres"
+        },
+        {
+          "text": "Luca è _____ : la sua scrivania è sempre in perfetto ordine.",
+          "type": "mcq",
+          "options": ["ordinato", "chicchierone", "audace", "curioso"],
+          "correct": "ordinato",
+          "solution": "Ordinato = met les choses en ordre"
+        },
+        {
+          "text": "Mia sorella è _____ : non cambia mai idea anche se sbaglia.",
+          "type": "mcq",
+          "options": ["ostinato", "riservato", "generoso", "ambizioso"],
+          "correct": "ostinato",
+          "solution": "Ostinato = ne renonce pas à son idée"
+        },
+        {
+          "text": "Non dire niente a Giulia, è _____ e si offende facilmente.",
+          "type": "mcq",
+          "options": ["permaloso", "curioso", "audace", "sognatore"],
+          "correct": "permaloso",
+          "solution": "Permaloso = s'offense facilement"
+        },
+        {
+          "text": "Andrea è _____ : preferisce guardare la TV piuttosto che fare sport.",
+          "type": "mcq",
+          "options": ["pigro", "ambizioso", "chicchierone", "ordinato"],
+          "correct": "pigro",
+          "solution": "Pigro = aime le repos"
+        },
+        {
+          "text": "Sara è _____ : non parla molto di sé alle persone nuove.",
+          "type": "mcq",
+          "options": ["riservato", "audace", "generoso", "ostinato"],
+          "correct": "riservato",
+          "solution": "Riservato = a besoin de temps pour donner confiance"
+        },
+        {
+          "text": "Quando ero piccolo ero un vero _____ : passavo le giornate a immaginare mondi fantastici.",
+          "type": "mcq",
+          "options": ["sognatore", "pigro", "autoritario", "permaloso"],
+          "correct": "sognatore",
+          "solution": "Sognatore = ho molta immaginazione"
+        }
+      ]
+    },
+    {
+      "category": "I passatempi — vocabolario",
+      "questions": [
+        {
+          "text": "Comment dit-on « voyager » en italien ?",
+          "type": "mcq",
+          "options": ["viaggiare", "ballare", "leggere", "dipingere"],
+          "correct": "viaggiare",
+          "solution": "Viaggiare = voyager"
+        },
+        {
+          "text": "Que signifie « fare sport » ?",
+          "type": "mcq",
+          "options": ["faire du sport", "jouer à des jeux vidéo", "écouter de la musique", "dormir"],
+          "correct": "faire du sport",
+          "solution": "Fare sport = faire du sport"
+        },
+        {
+          "text": "Comment dit-on « écrire des chansons » ?",
+          "type": "mcq",
+          "options": ["scrivere canzoni", "guardare film", "giocare a videogiochi", "fare fotografia"],
+          "correct": "scrivere canzoni",
+          "solution": "Scrivere canzoni = écrire des chansons"
+        },
+        {
+          "text": "Que signifie « leggere » ?",
+          "type": "mcq",
+          "options": ["lire", "danser", "dessiner", "voyager"],
+          "correct": "lire",
+          "solution": "Leggere = lire"
+        },
+        {
+          "text": "Comment dit-on « regarder des films / séries TV » ?",
+          "type": "mcq",
+          "options": ["guardare film / serie TV", "ascoltare musica", "fare shopping", "nuotare"],
+          "correct": "guardare film / serie TV",
+          "solution": "Guardare film / serie TV = regarder des films/séries"
+        },
+        {
+          "text": "Que signifie « giocare a videogiochi » ?",
+          "type": "mcq",
+          "options": ["jouer à des jeux vidéo", "faire de la photo", "voyager", "lire"],
+          "correct": "jouer à des jeux vidéo",
+          "solution": "Giocare a videogiochi = jouer à des jeux vidéo"
+        },
+        {
+          "text": "Comment dit-on « faire de la photo » ?",
+          "type": "mcq",
+          "options": ["fare fotografia", "ballare", "dipingere", "scrivere"],
+          "correct": "fare fotografia",
+          "solution": "Fare fotografia = faire de la photo"
+        },
+        {
+          "text": "Que signifie « ballare » ?",
+          "type": "mcq",
+          "options": ["danser", "nager", "voyager", "lire"],
+          "correct": "danser",
+          "solution": "Ballare = danser"
+        },
+        {
+          "text": "Comment dit-on « dessiner / peindre » ?",
+          "type": "mcq",
+          "options": ["disegnare / dipingere", "viaggiare", "leggere", "ballare"],
+          "correct": "disegnare / dipingere",
+          "solution": "Disegnare / dipingere = dessiner / peindre"
+        },
+        {
+          "text": "Que signifie « ascoltare musica » ?",
+          "type": "mcq",
+          "options": ["écouter de la musique", "jouer de la musique", "chanter", "danser"],
+          "correct": "écouter de la musique",
+          "solution": "Ascoltare musica = écouter de la musique"
+        },
+        {
+          "text": "Comment dit-on « manger une pizza » ?",
+          "type": "mcq",
+          "options": ["mangiare una pizza", "fare una pizza", "cuocere una pizza", "comprare una pizza"],
+          "correct": "mangiare una pizza",
+          "solution": "Mangiare una pizza = manger une pizza"
+        },
+        {
+          "text": "Que signifie « nuotare » ?",
+          "type": "mcq",
+          "options": ["nager", "danser", "courir", "voyager"],
+          "correct": "nager",
+          "solution": "Nuotare = nager"
+        },
+        {
+          "text": "Comment dit-on « faire du shopping » ?",
+          "type": "mcq",
+          "options": ["fare shopping", "fare sport", "fare fotografia", "fare vacanze"],
+          "correct": "fare shopping",
+          "solution": "Fare shopping = faire du shopping"
+        },
+        {
+          "text": "Que signifie « dormire » ?",
+          "type": "mcq",
+          "options": ["dormir", "manger", "boire", "lire"],
+          "correct": "dormir",
+          "solution": "Dormire = dormir"
+        },
+        {
+          "text": "Comment dit-on « aller au cinéma » ?",
+          "type": "mcq",
+          "options": ["andare al cinema", "guardare film", "ascoltare musica", "fare shopping"],
+          "correct": "andare al cinema",
+          "solution": "Andare al cinema = aller au cinéma"
+        },
+        {
+          "text": "Que signifie « fare vacanze » ?",
+          "type": "mcq",
+          "options": ["faire des vacances", "faire du sport", "faire du shopping", "faire la cuisine"],
+          "correct": "faire des vacances",
+          "solution": "Fare vacanze = faire des vacances"
+        },
+        {
+          "text": "Comment dit-on « cuisiner » ?",
+          "type": "mcq",
+          "options": ["fare cucina", "mangiare", "fare shopping", "dormire"],
+          "correct": "fare cucina",
+          "solution": "Fare cucina = cuisiner"
+        },
+        {
+          "text": "Que signifie « andare a scuola » ?",
+          "type": "mcq",
+          "options": ["aller à l'école", "aller au travail", "aller au cinéma", "aller au sport"],
+          "correct": "aller à l'école",
+          "solution": "Andare a scuola = aller à l'école"
+        }
+      ]
+    },
+    {
+      "category": "I segni zodiacali",
+      "questions": [
+        {
+          "text": "Qual è il segno zodiacale per le persone nate a marzo (21 marzo – 19 aprile) ?",
+          "type": "mcq",
+          "options": ["Ariete", "Toro", "Gemelli", "Cancro"],
+          "correct": "Ariete",
+          "solution": "Ariete (Aries) = 21 marzo – 19 aprile"
+        },
+        {
+          "text": "Il segno zodiacale Toro (Taurus) corrisponde a quali dates ?",
+          "type": "mcq",
+          "options": ["20 aprile – 20 maggio", "21 marzo – 19 aprile", "21 maggio – 20 giugno", "22 giugno – 22 luglio"],
+          "correct": "20 aprile – 20 maggio",
+          "solution": "Toro = 20 aprile – 20 maggio"
+        },
+        {
+          "text": "Qual è il segno zodiacale per le persone nate a giugno (21 maggio – 20 giugno) ?",
+          "type": "mcq",
+          "options": ["Gemelli", "Toro", "Cancro", "Leone"],
+          "correct": "Gemelli",
+          "solution": "Gemelli (Gemini) = 21 maggio – 20 giugno"
+        },
+        {
+          "text": "Il segno zodiacale Cancro (Cancer) va da quale data a quale ?",
+          "type": "mcq",
+          "options": ["21 giugno – 22 luglio", "23 luglio – 22 agosto", "20 aprile – 20 maggio", "21 marzo – 19 aprile"],
+          "correct": "21 giugno – 22 luglio",
+          "solution": "Cancro = 21 giugno – 22 luglio"
+        },
+        {
+          "text": "Qual è il segno zodiacale per le personnes nées en juillet/août (23 juil. – 22 août) ?",
+          "type": "mcq",
+          "options": ["Leone", "Cancro", "Vergine", "Bilancia"],
+          "correct": "Leone",
+          "solution": "Leone (Lion) = 23 luglio – 22 agosto"
+        },
+        {
+          "text": "Il segno zodiacale Vergine (Vierge) corrisponde a quali dates ?",
+          "type": "mcq",
+          "options": ["23 agosto – 22 settembre", "23 luglio – 22 agosto", "23 settembre – 22 ottobre", "21 giugno – 22 luglio"],
+          "correct": "23 agosto – 22 settembre",
+          "solution": "Vergine = 23 agosto – 22 settembre"
+        },
+        {
+          "text": "Qual è il segno zodiacale per le persone nate a ottobre (23 set. – 22 ott.) ?",
+          "type": "mcq",
+          "options": ["Bilancia", "Vergine", "Scorpione", "Sagittario"],
+          "correct": "Bilancia",
+          "solution": "Bilancia (Balance) = 23 settembre – 22 ottobre"
+        },
+        {
+          "text": "Il segno zodiacale Scorpione (Scorpion) va da quale data a quale ?",
+          "type": "mcq",
+          "options": ["23 ottobre – 21 novembre", "23 settembre – 22 ottobre", "22 novembre – 21 dicembre", "23 agosto – 22 settembre"],
+          "correct": "23 ottobre – 21 novembre",
+          "solution": "Scorpione = 23 ottobre – 21 novembre"
+        },
+        {
+          "text": "Qual è il segno zodiacale per les personnes nées en novembre/décembre ?",
+          "type": "mcq",
+          "options": ["Sagittario", "Scorpione", "Capricorno", "Acquario"],
+          "correct": "Sagittario",
+          "solution": "Sagittario (Sagittaire) = 22 novembre – 21 dicembre"
+        },
+        {
+          "text": "Il segno zodiacale Capricorno (Capricorne) va da quale data a quale ?",
+          "type": "mcq",
+          "options": ["22 dicembre – 19 gennaio", "20 gennaio – 18 febbraio", "22 novembre – 21 dicembre", "23 ottobre – 21 novembre"],
+          "correct": "22 dicembre – 19 gennaio",
+          "solution": "Capricorno = 22 dicembre – 19 gennaio"
+        },
+        {
+          "text": "Qual è il segno zodiacale pour les personnes nées en janvier/février ?",
+          "type": "mcq",
+          "options": ["Acquario", "Capricorno", "Pesci", "Ariete"],
+          "correct": "Acquario",
+          "solution": "Acquario (Verseau) = 20 gennaio – 18 febbraio"
+        },
+        {
+          "text": "Il segno zodiacale Pesci (Poissons) corrisponde a quali dates ?",
+          "type": "mcq",
+          "options": ["19 febbraio – 20 marzo", "20 gennaio – 18 febbraio", "21 marzo – 19 aprile", "22 dicembre – 19 gennaio"],
+          "correct": "19 febbraio – 20 marzo",
+          "solution": "Pesci = 19 febbraio – 20 marzo"
+        },
+        {
+          "text": "Sono nato il 22 luglio. Qual è il mio segno zodiacale ?",
+          "type": "mcq",
+          "options": ["Cancro", "Leone", "Gemelli", "Toro"],
+          "correct": "Cancro",
+          "solution": "Cancro = 21 giugno – 22 luglio, il 22 luglio est Cancer"
+        },
+        {
+          "text": "Sono nata il 15 maggio. Qual è il mio segno zodiacale ?",
+          "type": "mcq",
+          "options": ["Toro", "Gemelli", "Ariete", "Cancro"],
+          "correct": "Toro",
+          "solution": "Toro = 20 aprile – 20 maggio"
+        },
+        {
+          "text": "Sono nato il 5 settembre. Qual è il mio segno zodiacale ?",
+          "type": "mcq",
+          "options": ["Vergine", "Bilancia", "Leone", "Scorpione"],
+          "correct": "Vergine",
+          "solution": "Vergine = 23 agosto – 22 settembre"
+        },
+        {
+          "text": "Sono nata il 12 novembre. Qual è il mio segno zodiacale ?",
+          "type": "mcq",
+          "options": ["Scorpione", "Sagittario", "Bilancia", "Capricorno"],
+          "correct": "Scorpione",
+          "solution": "Scorpione = 23 ottobre – 21 novembre"
+        },
+        {
+          "text": "Comment dit-on « le signe du zodiaque » en italien ?",
+          "type": "mcq",
+          "options": ["il segno zodiacale", "il segno dell'anno", "il segno del cielo", "il segno della fortuna"],
+          "correct": "il segno zodiacale",
+          "solution": "Il segno zodiacale = le signe du zodiaque"
+        },
+        {
+          "text": "Comment dit-on « quel est ton signe du zodiaque ? » ?",
+          "type": "mcq",
+          "options": ["Qual è il tuo segno zodiacale ?", "Qual è il tuo segno dell'anno ?", "Qual è il tuo segno del cielo ?", "Qual è il tuo segno della fortuna ?"],
+          "correct": "Qual è il tuo segno zodiacale ?",
+          "solution": "Qual è il tuo segno zodiacale ? = quel est ton signe du zodiaque ?"
+        },
+        {
+          "text": "Qual è il tuo segno zodiacale ? — Sono _____. (Scorpio)",
+          "type": "mcq",
+          "options": ["scorpione", "sagittario", "bilancia", "vergine"],
+          "correct": "scorpione",
+          "solution": "Sono scorpione = je suis Scorpion"
+        }
+      ]
+    }
+  ]
+}

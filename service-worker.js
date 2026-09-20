@@ -6,6 +6,8 @@ const STATIC_ASSETS = [
   "./data/anglais/verbes-irreguliers.json",
   "./data/config.json",
   "./data/francais/outils-analyse-litteraire.json",
+  "./data/italien/carattere-hobby-segni.json",
+  "./data/italien/esprimere-gusti-frequenza.json",
   "./data/italien/presentare-una-persona.json",
   "./data/ses/introduction-chapitre1-eco1.json",
   "./index.html",
@@ -25,7 +27,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1789669001";
+const CACHE_NAME = "quiz-cache-1789894690";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
