@@ -15,7 +15,7 @@
             "Odiare giocare a videogiochi",
             "Detesto giocare a videogiochi"
           ],
-          "correct": "Adoro giocare a videogiochi",
+          "correct": 0,
           "solution": "Adoro = j adore (forte preference positive)"
         },
         {
@@ -27,7 +27,7 @@
             "apprezzare",
             "piacere"
           ],
-          "correct": "detestare",
+          "correct": 0,
           "solution": "Detestare = detester"
         },
         {
@@ -39,7 +39,7 @@
             "adorer",
             "aimer"
           ],
-          "correct": "hair",
+          "correct": 0,
           "solution": "Odiare = hair"
         },
         {
@@ -51,7 +51,7 @@
             "Odiare la pizza",
             "Detesto la pizza"
           ],
-          "correct": "Mi piace la pizza",
+          "correct": 0,
           "solution": "Mi piace = j aime (mi piace + nom singulier)"
         },
         {
@@ -63,7 +63,7 @@
             "Mi piacere + infinitif",
             "A piace + infinitif"
           ],
-          "correct": "Mi piace + infinitif",
+          "correct": 0,
           "solution": "Mi piace + infinitif = j aime + infinitif (ex: Mi piace leggere)"
         },
         {
@@ -75,7 +75,7 @@
             "Mi piacere nuotare",
             "A me piace nuotare"
           ],
-          "correct": "Mi piace nuotare",
+          "correct": 0,
           "solution": "Mi piace nuotare = j aime nager"
         },
         {
@@ -87,7 +87,7 @@
             "detestare",
             "adorare"
           ],
-          "correct": "apprezzare",
+          "correct": 0,
           "solution": "Apprezzare = apprecier"
         },
         {
@@ -99,7 +99,7 @@
             "Non mi piace la matematica",
             "Adoro la matematica"
           ],
-          "correct": "Detesto la matematica",
+          "correct": 0,
           "solution": "Detesto = je deteste"
         },
         {
@@ -111,7 +111,7 @@
             "j aime",
             "j apprecie"
           ],
-          "correct": "je n aime pas",
+          "correct": 0,
           "solution": "Non mi piace = je n aime pas"
         },
         {
@@ -123,7 +123,7 @@
             "Adoro viaggiare",
             "Detesto viaggiare"
           ],
-          "correct": "Apprezzare viaggiare",
+          "correct": 0,
           "solution": "Apprezzare viaggiare = apprecier voyager"
         },
         {
@@ -135,7 +135,7 @@
             "pas de difference",
             "mi piace = j apprecie, adoro = je n aime pas"
           ],
-          "correct": "mi piace = j aime, adoro = j adore (plus fort)",
+          "correct": 0,
           "solution": "Mi piace = j aime, Adoro = j adore (intensite plus grande)"
         },
         {
@@ -147,7 +147,7 @@
             "Adoro il caffe",
             "Odiare il caffe"
           ],
-          "correct": "Non mi piace il caffe",
+          "correct": 0,
           "solution": "Non mi piace = je n aime pas"
         },
         {
@@ -159,7 +159,7 @@
             "non piacere",
             "non apprezzare"
           ],
-          "correct": "odiare",
+          "correct": 0,
           "solution": "Odiare = hair (le plus fort)"
         },
         {
@@ -171,7 +171,7 @@
             "Detesto ballare",
             "Odiare ballare"
           ],
-          "correct": "Adoro ballare",
+          "correct": 0,
           "solution": "Adoro ballare = j adore danser"
         },
         {
@@ -183,7 +183,7 @@
             "Detesto fare cucina",
             "Odiare fare cucina"
           ],
-          "correct": "Mi piace fare cucina",
+          "correct": 0,
           "solution": "Mi piace fare cucina = j aime cuisiner"
         },
         {
@@ -195,7 +195,7 @@
             "Je n aime pas les chats",
             "J adore le chat"
           ],
-          "correct": "J aime les chats",
+          "correct": 0,
           "solution": "Mi piacciono = j aime (pluriel : piacere au pluriel donne piacciono)"
         }
       ]
@@ -212,7 +212,7 @@
             "mai",
             "a volte"
           ],
-          "correct": "sempre",
+          "correct": 0,
           "solution": "Sempre = toujours"
         },
         {
@@ -224,7 +224,7 @@
             "rarement",
             "jamais"
           ],
-          "correct": "souvent",
+          "correct": 0,
           "solution": "Spesso = souvent"
         },
         {
@@ -236,7 +236,7 @@
             "mai",
             "spesso"
           ],
-          "correct": "a volte",
+          "correct": 0,
           "solution": "A volte = parfois"
         },
         {
@@ -248,7 +248,7 @@
             "jamais",
             "souvent"
           ],
-          "correct": "quelquefois",
+          "correct": 0,
           "solution": "Qualche volta = quelquefois"
         },
         {
@@ -260,7 +260,7 @@
             "mai",
             "a volte"
           ],
-          "correct": "ogni giorno",
+          "correct": 0,
           "solution": "Ogni giorno = chaque jour / tous les jours"
         },
         {
@@ -272,7 +272,7 @@
             "toujours",
             "jamais"
           ],
-          "correct": "rarement",
+          "correct": 0,
           "solution": "Raramente = rarement"
         },
         {
@@ -284,7 +284,7 @@
             "spesso",
             "a volte"
           ],
-          "correct": "mai",
+          "correct": 0,
           "solution": "Mai = jamais (utilise dans une phrase negative)"
         },
         {
@@ -296,7 +296,7 @@
             "Mai nuoto",
             "Non mai nuoto"
           ],
-          "correct": "Non nuoto mai",
+          "correct": 0,
           "solution": "Non nuoto mai = je ne nage jamais (non + verbe + mai)"
         },
         {
@@ -308,7 +308,7 @@
             "toujours",
             "jamais"
           ],
-          "correct": "de temps en temps",
+          "correct": 0,
           "solution": "Ogni tanto = de temps en temps"
         },
         {
@@ -320,7 +320,7 @@
             "a volte",
             "qualche volta"
           ],
-          "correct": "sempre",
+          "correct": 0,
           "solution": "Sempre = toujours (frequence maximale)"
         },
         {
@@ -332,7 +332,7 @@
             "Mai gioco a videogiochi",
             "A volte gioco a videogiochi"
           ],
-          "correct": "Gioco spesso a videogiochi",
+          "correct": 0,
           "solution": "Spesso = souvent"
         },
         {
@@ -344,7 +344,7 @@
             "Mai faccio sport",
             "Non mai faccio sport"
           ],
-          "correct": "Non faccio mai sport",
+          "correct": 0,
           "solution": "Non + verbe + mai = ne + verbe + jamais"
         },
         {
@@ -356,7 +356,7 @@
             "Au debut de la phrase",
             "A la fin de la phrase seulement"
           ],
-          "correct": "Apres le verbe conjugue",
+          "correct": 0,
           "solution": "L adverbe se place apres le verbe conjugue (ex: Io mangio sempre la pizza)"
         },
         {
@@ -368,7 +368,7 @@
             "La sera leggo sempre",
             "Mai leggo la sera"
           ],
-          "correct": "Leggo sempre la sera",
+          "correct": 0,
           "solution": "Leggo sempre la sera = je lis toujours le soir"
         },
         {
@@ -380,7 +380,7 @@
             "jamais",
             "rarement"
           ],
-          "correct": "d habitude",
+          "correct": 0,
           "solution": "Di solito = d habitude"
         },
         {
@@ -392,7 +392,7 @@
             "souvent",
             "parfois"
           ],
-          "correct": "presque jamais",
+          "correct": 0,
           "solution": "Quasi mai = presque jamais"
         }
       ]
@@ -409,7 +409,7 @@
             "detesto",
             "odiare"
           ],
-          "correct": "mi piace",
+          "correct": 0,
           "solution": "Mi piace leggere = j aime lire"
         },
         {
@@ -421,7 +421,7 @@
             "Detesto",
             "Odiare"
           ],
-          "correct": "Adoro",
+          "correct": 0,
           "solution": "Adoro guardare film = j adore regarder des films"
         },
         {
@@ -433,7 +433,7 @@
             "detesto",
             "odiare"
           ],
-          "correct": "mi piace",
+          "correct": 0,
           "solution": "Non mi piace la pizza = je n aime pas la pizza"
         },
         {
@@ -445,7 +445,7 @@
             "Detesto",
             "Odiare"
           ],
-          "correct": "Adoro",
+          "correct": 0,
           "solution": "Adoro nuotare ogni giorno = j adore nager chaque jour"
         },
         {
@@ -457,7 +457,7 @@
             "Adoro ... adoro",
             "Non mi piace ... non mi piace"
           ],
-          "correct": "Mi piace ... detesto",
+          "correct": 0,
           "solution": "Mi piace il calcio, ma detesto il tennis"
         },
         {
@@ -469,7 +469,7 @@
             "adoro",
             "detesto"
           ],
-          "correct": "mi interessa",
+          "correct": 0,
           "solution": "Non mi interessa mai la politica"
         },
         {
@@ -481,7 +481,7 @@
             "Mangio",
             "Dormo"
           ],
-          "correct": "Leggo",
+          "correct": 0,
           "solution": "Leggo a volte il weekend = je lis parfois le week-end"
         },
         {
@@ -493,7 +493,7 @@
             "Faccio",
             "Ho"
           ],
-          "correct": "Guardo",
+          "correct": 0,
           "solution": "Guardo raramente la TV = je regarde rarement la tele"
         },
         {
@@ -505,7 +505,7 @@
             "adoro",
             "detesto"
           ],
-          "correct": "mi alzo",
+          "correct": 0,
           "solution": "Mi alzo sempre presto = je me leve toujours tot"
         },
         {
@@ -517,7 +517,7 @@
             "Ho",
             "Faccio"
           ],
-          "correct": "Vado",
+          "correct": 0,
           "solution": "Vado spesso al cinema = je vais souvent au cinema"
         }
       ]
