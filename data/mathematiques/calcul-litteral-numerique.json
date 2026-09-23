@@ -1,0 +1,1522 @@
+{
+  "subject": "mathematiques",
+  "title": "Chapitre 1 — Calcul litteral et numerique",
+  "description": "Fractions, puissances, racines carrees et developpement d'expression litterale (120 questions).",
+  "categories": [
+    {
+      "category": "Fractions — definitions et vocabulaire",
+      "questions": [
+        {
+          "text": "Comment ecrit-on une fraction ?",
+          "type": "mcq",
+          "options": [
+            "a/b avec b different de 0",
+            "a/b avec a different de 0",
+            "a*b",
+            "a+b"
+          ],
+          "correct": 0,
+          "solution": "Une fraction s'ecrit a/b ou b != 0"
+        },
+        {
+          "text": "Comment s'appelle le nombre 'a' dans la fraction a/b ?",
+          "type": "mcq",
+          "options": [
+            "le numerateur",
+            "le denominateur",
+            "le facteur",
+            "le quotient"
+          ],
+          "correct": 0,
+          "solution": "a est le numerateur"
+        },
+        {
+          "text": "Comment s'appelle le nombre 'b' dans la fraction a/b ?",
+          "type": "mcq",
+          "options": [
+            "le denominateur",
+            "le numerateur",
+            "le facteur",
+            "le reste"
+          ],
+          "correct": 0,
+          "solution": "b est le denominateur"
+        },
+        {
+          "text": "Peut-on avoir b = 0 dans une fraction a/b ?",
+          "type": "mcq",
+          "options": [
+            "Non, b doit etre different de 0",
+            "Oui, toujours",
+            "Oui, si a = 0",
+            "Oui, si a et b sont entiers"
+          ],
+          "correct": 0,
+          "solution": "b != 0 car la division par zero n'est pas definie"
+        },
+        {
+          "text": "Les nombres a et b doivent-ils etre entiers ?",
+          "type": "mcq",
+          "options": [
+            "Non, ils peuvent etre des decimaux",
+            "Oui, uniquement des entiers",
+            "Uniquement des entiers naturels",
+            "Uniquement des positifs"
+          ],
+          "correct": 0,
+          "solution": "a et b peuvent etre des nombres entiers ou decimaux"
+        },
+        {
+          "text": "Que vaut la fraction 0/5 ?",
+          "type": "mcq",
+          "options": [
+            "0",
+            "5",
+            "undefined",
+            "1"
+          ],
+          "correct": 0,
+          "solution": "0/5 = 0"
+        },
+        {
+          "text": "Que vaut la fraction 7/1 ?",
+          "type": "mcq",
+          "options": [
+            "7",
+            "1",
+            "8",
+            "0"
+          ],
+          "correct": 0,
+          "solution": "7/1 = 7"
+        },
+        {
+          "text": "Comment appelle-t-on la fraction 3/3 ?",
+          "type": "mcq",
+          "options": [
+            "fraction egale a 1",
+            "fraction nulle",
+            "fraction improprie",
+            "fraction irrationnelle"
+          ],
+          "correct": 0,
+          "solution": "3/3 = 1"
+        }
+      ]
+    },
+    {
+      "category": "Fractions — egalite et simplification",
+      "questions": [
+        {
+          "text": "Deux fractions a/b et c/d sont egales si et seulement si :",
+          "type": "mcq",
+          "options": [
+            "a*d = c*b",
+            "a*c = b*d",
+            "a+b = c+d",
+            "a/b = c+d"
+          ],
+          "correct": 0,
+          "solution": "Egalite des produits en croix : a*d = c*b"
+        },
+        {
+          "text": "Verifiez : 4/8 = 2/4. Quel est le produit en croix ?",
+          "type": "mcq",
+          "options": [
+            "4*4 = 2*8 soit 16 = 16",
+            "4*2 = 8*4 soit 8 = 32",
+            "4*8 = 2*4 soit 32 = 8",
+            "4+4 = 2+8 soit 8 = 10"
+          ],
+          "correct": 0,
+          "solution": "4/8 = 2/4 car 4*4 = 16 et 2*8 = 16"
+        },
+        {
+          "text": "Comment simplifie-t-on la fraction 160/40 ?",
+          "type": "mcq",
+          "options": [
+            "4",
+            "8",
+            "20",
+            "40"
+          ],
+          "correct": 0,
+          "solution": "160/40 = (16*10)/(4*10) = 16/4 = 4"
+        },
+        {
+          "text": "Quelle est la forme irreductible de 6/8 ?",
+          "type": "mcq",
+          "options": [
+            "3/4",
+            "2/4",
+            "6/4",
+            "12/16"
+          ],
+          "correct": 0,
+          "solution": "6/8 = (3*2)/(4*2) = 3/4"
+        },
+        {
+          "text": "Quelle est la forme irreductible de 15/25 ?",
+          "type": "mcq",
+          "options": [
+            "3/5",
+            "5/5",
+            "15/5",
+            "1/2"
+          ],
+          "correct": 0,
+          "solution": "15/25 = (3*5)/(5*5) = 3/5"
+        },
+        {
+          "text": "Pour simplifier a/b, on peut multiplier numerateur et denominateur par :",
+          "type": "mcq",
+          "options": [
+            "un meme nombre k different de 0",
+            "n'importe quel nombre",
+            "uniquement 1",
+            "uniquement des entiers"
+          ],
+          "correct": 0,
+          "solution": "(a*k)/(b*k) = a/b pour tout k != 0"
+        },
+        {
+          "text": "Quelle est la forme irreductible de 24/36 ?",
+          "type": "mcq",
+          "options": [
+            "2/3",
+            "1/2",
+            "3/4",
+            "4/6"
+          ],
+          "correct": 0,
+          "solution": "24/36 = (12*2)/(12*3) = 2/3"
+        },
+        {
+          "text": "Si 3/7 = x/21, quelle est la valeur de x ?",
+          "type": "mcq",
+          "options": [
+            "9",
+            "7",
+            "21",
+            "3"
+          ],
+          "correct": 0,
+          "solution": "3/7 = x/21 donne 3*21 = 7x donc x = 63/7 = 9"
+        }
+      ],
+      "notepad": true
+    },
+    {
+      "category": "Fractions — addition et soustraction",
+      "questions": [
+        {
+          "text": "Comment calcule-t-on a/b + c/b ?",
+          "type": "mcq",
+          "options": [
+            "(a+c)/b",
+            "(a+b)/(c+b)",
+            "ac/b",
+            "a/(b+c)"
+          ],
+          "correct": 0,
+          "solution": "Meme denominateur : on additionne les numerateurs"
+        },
+        {
+          "text": "Comment calcule-t-on a/b - c/b ?",
+          "type": "mcq",
+          "options": [
+            "(a-c)/b",
+            "(a-b)/(c-b)",
+            "ac/b",
+            "a/(b-c)"
+          ],
+          "correct": 0,
+          "solution": "Meme denominateur : on soustrait les numerateurs"
+        },
+        {
+          "text": "Quelle est la somme 3/5 + 7/5 ?",
+          "type": "mcq",
+          "options": [
+            "10/5 = 2",
+            "10/10 = 1",
+            "21/25",
+            "10/5 = 10"
+          ],
+          "correct": 0,
+          "solution": "3/5 + 7/5 = (3+7)/5 = 10/5 = 2"
+        },
+        {
+          "text": "Quelle est la difference 3/5 - 7/5 ?",
+          "type": "mcq",
+          "options": [
+            "-4/5",
+            "4/5",
+            "-4/10",
+            "4/10"
+          ],
+          "correct": 0,
+          "solution": "3/5 - 7/5 = (3-7)/5 = -4/5"
+        },
+        {
+          "text": "Comment calcule-t-on 1/3 + 3/4 ?",
+          "type": "mcq",
+          "options": [
+            "13/12",
+            "4/7",
+            "4/12",
+            "13/7"
+          ],
+          "correct": 0,
+          "solution": "1/3 + 3/4 = 4/12 + 9/12 = 13/12"
+        },
+        {
+          "text": "Quel est le denominateur commun de 1/3 et 3/4 ?",
+          "type": "mcq",
+          "options": [
+            "12",
+            "7",
+            "3",
+            "4"
+          ],
+          "correct": 0,
+          "solution": "PPCM de 3 et 4 = 12"
+        },
+        {
+          "text": "Comment calcule-t-on a/b + c/d ?",
+          "type": "mcq",
+          "options": [
+            "(ad + cb)/(bd)",
+            "(a+c)/(b+d)",
+            "ac/(bd)",
+            "ad/(bc)"
+          ],
+          "correct": 0,
+          "solution": "a/b + c/d = (ad)/(bd) + (cb)/(bd) = (ad+cb)/(bd)"
+        },
+        {
+          "text": "Quelle est la somme 2/3 + 1/6 ?",
+          "type": "mcq",
+          "options": [
+            "5/6",
+            "3/9",
+            "5/9",
+            "3/6"
+          ],
+          "correct": 0,
+          "solution": "2/3 + 1/6 = 4/6 + 1/6 = 5/6"
+        }
+      ],
+      "notepad": true
+    },
+    {
+      "category": "Fractions — multiplication et division",
+      "questions": [
+        {
+          "text": "Comment calcule-t-on (a/b) * (c/d) ?",
+          "type": "mcq",
+          "options": [
+            "(a*c)/(b*d)",
+            "ad/(bc)",
+            "ac/(b+d)",
+            "(a+b)/(c+d)"
+          ],
+          "correct": 0,
+          "solution": "On multiplie les numerateurs entre eux et les denominateurs entre eux"
+        },
+        {
+          "text": "Quel est le resultat de 2/5 * 3/7 ?",
+          "type": "mcq",
+          "options": [
+            "6/35",
+            "6/12",
+            "5/35",
+            "6/35 = 2/5"
+          ],
+          "correct": 0,
+          "solution": "2/5 * 3/7 = (2*3)/(5*7) = 6/35"
+        },
+        {
+          "text": "Comment calcule-t-on (a/b) / (c/d) ?",
+          "type": "mcq",
+          "options": [
+            "a/b * d/c",
+            "a/b * c/d",
+            "ac/(bd)",
+            "ad/(bc)"
+          ],
+          "correct": 0,
+          "solution": "On inverse la deuxieme fraction et on multiplie"
+        },
+        {
+          "text": "Quel est le resultat de (1/2) / (4/7) ?",
+          "type": "mcq",
+          "options": [
+            "7/8",
+            "4/14",
+            "8/7",
+            "4/7"
+          ],
+          "correct": 0,
+          "solution": "(1/2)/(4/7) = 1/2 * 7/4 = 7/8"
+        },
+        {
+          "text": "Quel est le resultat de 3/4 * 8/9 ?",
+          "type": "mcq",
+          "options": [
+            "2/3",
+            "24/36",
+            "11/13",
+            "8/9"
+          ],
+          "correct": 0,
+          "solution": "3/4 * 8/9 = 24/36 = 2/3"
+        },
+        {
+          "text": "Quel est le resultat de (2/3) / (4/5) ?",
+          "type": "mcq",
+          "options": [
+            "10/12 = 5/6",
+            "8/15",
+            "5/6",
+            "10/12"
+          ],
+          "correct": 0,
+          "solution": "(2/3)/(4/5) = 2/3 * 5/4 = 10/12 = 5/6"
+        },
+        {
+          "text": "Quel est l'inverse de 5/8 ?",
+          "type": "mcq",
+          "options": [
+            "8/5",
+            "-5/8",
+            "5/8",
+            "-8/5"
+          ],
+          "correct": 0,
+          "solution": "L'inverse obtient en permutant numerateur et denominateur"
+        },
+        {
+          "text": "Quel est l'oppose de 7 ?",
+          "type": "mcq",
+          "options": [
+            "-7",
+            "1/7",
+            "-1/7",
+            "7"
+          ],
+          "correct": 0,
+          "solution": "Oppose : 7 + (-7) = 0"
+        },
+        {
+          "text": "Quelle est la difference entre l'oppose et l'inverse ?",
+          "type": "mcq",
+          "options": [
+            "Oppose de 7 = -7, inverse de 7 = 1/7",
+            "Ils sont identiques",
+            "Oppose = 1/7, inverse = -7",
+            "Oppose = 0, inverse = 1"
+          ],
+          "correct": 0,
+          "solution": "Oppose : 7+(-7) = 0. Inverse : 7*1/7 = 1"
+        },
+        {
+          "text": "Que vaut (3/4) * (4/3) ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "12/12",
+            "7/7"
+          ],
+          "correct": 0,
+          "solution": "Un nombre multiplie par son inverse = 1"
+        }
+      ],
+      "notepad": true
+    },
+    {
+      "category": "Puissances — definitions et vocabulaire",
+      "questions": [
+        {
+          "text": "Que signifie a^n pour un entier n >= 1 ?",
+          "type": "mcq",
+          "options": [
+            "a * a * a * ... (n fois)",
+            "a * n",
+            "a + a + ... (n fois)",
+            "n / a"
+          ],
+          "correct": 0,
+          "solution": "a^n = a*a*a*... (n facteurs a)"
+        },
+        {
+          "text": "Que vaut 2^4 ?",
+          "type": "mcq",
+          "options": [
+            "16",
+            "8",
+            "32",
+            "24"
+          ],
+          "correct": 0,
+          "solution": "2^4 = 2*2*2*2 = 16"
+        },
+        {
+          "text": "Que vaut 5^3 ?",
+          "type": "mcq",
+          "options": [
+            "125",
+            "15",
+            "25",
+            "53"
+          ],
+          "correct": 0,
+          "solution": "5^3 = 5*5*5 = 125"
+        },
+        {
+          "text": "Que vaut a^0 (pour a != 0) ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "a",
+            "undefined"
+          ],
+          "correct": 0,
+          "solution": "Par convention a^0 = 1 pour a != 0"
+        },
+        {
+          "text": "Que vaut 7^0 ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "7",
+            "undefined"
+          ],
+          "correct": 0,
+          "solution": "7^0 = 1"
+        },
+        {
+          "text": "Que vaut 3^1 ?",
+          "type": "mcq",
+          "options": [
+            "3",
+            "1",
+            "0",
+            "9"
+          ],
+          "correct": 0,
+          "solution": "3^1 = 3"
+        },
+        {
+          "text": "Que signifie a^(-n) pour a != 0 ?",
+          "type": "mcq",
+          "options": [
+            "1/(a^n)",
+            "-a^n",
+            "0",
+            "a^n - 1"
+          ],
+          "correct": 0,
+          "solution": "a^(-n) = 1/a^n"
+        },
+        {
+          "text": "Que vaut 2^(-3) ?",
+          "type": "mcq",
+          "options": [
+            "1/8",
+            "-8",
+            "1/6",
+            "-1/8"
+          ],
+          "correct": 0,
+          "solution": "2^(-3) = 1/2^3 = 1/8"
+        },
+        {
+          "text": "Que vaut 10^2 ?",
+          "type": "mcq",
+          "options": [
+            "100",
+            "20",
+            "102",
+            "1"
+          ],
+          "correct": 0,
+          "solution": "10^2 = 100"
+        },
+        {
+          "text": "Que vaut 10^3 ?",
+          "type": "mcq",
+          "options": [
+            "1000",
+            "30",
+            "103",
+            "100"
+          ],
+          "correct": 0,
+          "solution": "10^3 = 1000"
+        }
+      ]
+    },
+    {
+      "category": "Puissances — proprietes de calcul",
+      "questions": [
+        {
+          "text": "Simplifier a^m * a^n =",
+          "type": "mcq",
+          "options": [
+            "a^(m+n)",
+            "a^(m*n)",
+            "a^(m-n)",
+            "a^(m^n)"
+          ],
+          "correct": 0,
+          "solution": "Meme base : on additionne les exposants"
+        },
+        {
+          "text": "Simplifier (a^m) / (a^n) =",
+          "type": "mcq",
+          "options": [
+            "a^(m-n)",
+            "a^(m+n)",
+            "a^(m*n)",
+            "a^(m/n)"
+          ],
+          "correct": 0,
+          "solution": "Meme base : on soustrait les exposants"
+        },
+        {
+          "text": "Simplifier ((a^m))^n =",
+          "type": "mcq",
+          "options": [
+            "a^(m*n)",
+            "a^(m+n)",
+            "a^(m^n)",
+            "a^(m-n)"
+          ],
+          "correct": 0,
+          "solution": "Puissance d'une puissance : on multiplie les exposants"
+        },
+        {
+          "text": "Developper (a*b)^n =",
+          "type": "mcq",
+          "options": [
+            "a^n * b^n",
+            "(ab)^n",
+            "a*n*b*n",
+            "a^n + b^n"
+          ],
+          "correct": 0,
+          "solution": "Le produit eleve a la puissance = chaque facteur eleve a la puissance"
+        },
+        {
+          "text": "Developper (a/b)^n =",
+          "type": "mcq",
+          "options": [
+            "(a^n)/(b^n)",
+            "a/b * n",
+            "(a/b)^n = a^(1/n)",
+            "a^n/b"
+          ],
+          "correct": 0,
+          "solution": "Le quotient eleve a la puissance = numerateur^n / denominateur^n"
+        },
+        {
+          "text": "Calculer 2^4 * 2^3 =",
+          "type": "mcq",
+          "options": [
+            "2^7 = 128",
+            "2^12 = 4096",
+            "2^1 = 2",
+            "4^7"
+          ],
+          "correct": 0,
+          "solution": "2^4 * 2^3 = 2^(4+3) = 2^7 = 128"
+        },
+        {
+          "text": "Calculer (2^4) / (2^6) =",
+          "type": "mcq",
+          "options": [
+            "2^(-2) = 1/4",
+            "2^10",
+            "2^24",
+            "2^(-10)"
+          ],
+          "correct": 0,
+          "solution": "2^4 / 2^6 = 2^(4-6) = 2^(-2) = 1/4"
+        },
+        {
+          "text": "Calculer ((4^5))^3 =",
+          "type": "mcq",
+          "options": [
+            "4^15",
+            "4^8",
+            "4^15",
+            "16^15"
+          ],
+          "correct": 0,
+          "solution": "4^(5*3) = 4^15"
+        },
+        {
+          "text": "Calculer (6*7)^5 =",
+          "type": "mcq",
+          "options": [
+            "6^5 * 7^5",
+            "42^5",
+            "6^5 + 7^5",
+            "6*7^5"
+          ],
+          "correct": 0,
+          "solution": "(6*7)^5 = 6^5 * 7^5"
+        },
+        {
+          "text": "Calculer (5/3)^2 =",
+          "type": "mcq",
+          "options": [
+            "25/9",
+            "10/6",
+            "25/6",
+            "5/9"
+          ],
+          "correct": 0,
+          "solution": "(5/3)^2 = 5^2/3^2 = 25/9"
+        },
+        {
+          "text": "Existe-t-il une regle pour a^2 + a^3 ?",
+          "type": "mcq",
+          "options": [
+            "Non, 10^2+10^3 = 100+1000 = 1100",
+            "Oui, 10^5",
+            "Oui, 10^6",
+            "Oui, 20^5"
+          ],
+          "correct": 0,
+          "solution": "Pas de regle pour l'addition des puissances"
+        },
+        {
+          "text": "Calculer 3^2 * 3^4 =",
+          "type": "mcq",
+          "options": [
+            "3^6 = 729",
+            "3^8",
+            "6^6",
+            "9^6"
+          ],
+          "correct": 0,
+          "solution": "3^2 * 3^4 = 3^(2+4) = 3^6 = 729"
+        },
+        {
+          "text": "Calculer (5^3)^2 =",
+          "type": "mcq",
+          "options": [
+            "5^6 = 15625",
+            "5^5",
+            "5^9",
+            "10^6"
+          ],
+          "correct": 0,
+          "solution": "5^(3*2) = 5^6 = 15625"
+        },
+        {
+          "text": "Simplifier x^5 * x^3 * x^2 =",
+          "type": "mcq",
+          "options": [
+            "x^10",
+            "x^6",
+            "x^30",
+            "x^5+3+2 = x^10"
+          ],
+          "correct": 0,
+          "solution": "x^(5+3+2) = x^10"
+        }
+      ],
+      "notepad": true
+    },
+    {
+      "category": "Racines carrees — definitions",
+      "questions": [
+        {
+          "text": "Comment definit-on la racine carree de a (notée √a) ?",
+          "type": "mcq",
+          "options": [
+            "L'unique nombre positif ou nul dont le carre est egale a a",
+            "Le nombre negatif dont le carre est a",
+            "La moitie de a",
+            "Le carre de a"
+          ],
+          "correct": 0,
+          "solution": "√a est l'unique nombre >= 0 tel que (√a)^2 = a"
+        },
+        {
+          "text": "Que vaut √(5^2) ?",
+          "type": "mcq",
+          "options": [
+            "5",
+            "-5",
+            "25",
+            "10"
+          ],
+          "correct": 0,
+          "solution": "√(25) = 5"
+        },
+        {
+          "text": "Que vaut √((-5)^2) ?",
+          "type": "mcq",
+          "options": [
+            "5",
+            "-5",
+            "25",
+            "-25"
+          ],
+          "correct": 0,
+          "solution": "√((-5)^2) = √(25) = 5"
+        },
+        {
+          "text": "Existe-t-on √(-9) dans les reels ?",
+          "type": "mcq",
+          "options": [
+            "Non, la racine carree d'un negatif n'existe pas dans les reels",
+            "Oui, = 3",
+            "Oui, = -3",
+            "Oui, = 0"
+          ],
+          "correct": 0,
+          "solution": "La racine carree d'un nombre negatif n'existe pas dans les reels"
+        },
+        {
+          "text": "Que vaut √(a^2) pour tout reel a ?",
+          "type": "mcq",
+          "options": [
+            "|a|",
+            "a",
+            "-a",
+            "a^2"
+          ],
+          "correct": 0,
+          "solution": "√(a^2) = |a| (valeur absolue)"
+        },
+        {
+          "text": "Si a >= 0, que vaut √(a^2) ?",
+          "type": "mcq",
+          "options": [
+            "a",
+            "-a",
+            "|a|",
+            "a^2"
+          ],
+          "correct": 0,
+          "solution": "Si a >= 0 alors |a| = a"
+        },
+        {
+          "text": "Que vaut √0 ?",
+          "type": "mcq",
+          "options": [
+            "0",
+            "1",
+            "undefined",
+            "-0"
+          ],
+          "correct": 0,
+          "solution": "√0 = 0"
+        },
+        {
+          "text": "Que vaut √1 ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "-1",
+            "2"
+          ],
+          "correct": 0,
+          "solution": "√1 = 1 car 1*1 = 1"
+        }
+      ]
+    },
+    {
+      "category": "Racines carrees — proprietes et simplification",
+      "questions": [
+        {
+          "text": "Pour a >= 0 et b >= 0, que vaut √(a*b) ?",
+          "type": "mcq",
+          "options": [
+            "√a * √b",
+            "√a + √b",
+            "a*b",
+            "√(a+b)"
+          ],
+          "correct": 0,
+          "solution": "√(ab) = √a * √b pour a >= 0 et b >= 0"
+        },
+        {
+          "text": "Pour a >= 0 et b >= 0, que vaut √(a/b) ?",
+          "type": "mcq",
+          "options": [
+            "√a / √b",
+            "√a + √b",
+            "a/b",
+            "√(a+b)"
+          ],
+          "correct": 0,
+          "solution": "√(a/b) = √a / √b pour a >= 0 et b > 0"
+        },
+        {
+          "text": "Est-ce que √(a+b) = √a + √b ?",
+          "type": "mcq",
+          "options": [
+            "Non, faux en general",
+            "Oui, toujours",
+            "Oui, si a > 0",
+            "Oui, si b > 0"
+          ],
+          "correct": 0,
+          "solution": "Attention : √(a+b) != √a + √b"
+        },
+        {
+          "text": "Simplifier √75",
+          "type": "mcq",
+          "options": [
+            "5√3",
+            "3√5",
+            "25√3",
+            "75"
+          ],
+          "correct": 0,
+          "solution": "√75 = √(3*25) = √3 * √(5^2) = 5√3"
+        },
+        {
+          "text": "Simplifier √50",
+          "type": "mcq",
+          "options": [
+            "5√2",
+            "2√5",
+            "10√5",
+            "50"
+          ],
+          "correct": 0,
+          "solution": "√50 = √(2*25) = 5√2"
+        },
+        {
+          "text": "Simplifier √98",
+          "type": "mcq",
+          "options": [
+            "7√2",
+            "2√7",
+            "14√2",
+            "49√2"
+          ],
+          "correct": 0,
+          "solution": "√98 = √(2*49) = 7√2"
+        },
+        {
+          "text": "Simplifier √12",
+          "type": "mcq",
+          "options": [
+            "2√3",
+            "3√2",
+            "4√3",
+            "6√2"
+          ],
+          "correct": 0,
+          "solution": "√12 = √(4*3) = 2√3"
+        },
+        {
+          "text": "Simplifier √18",
+          "type": "mcq",
+          "options": [
+            "3√2",
+            "2√3",
+            "6√3",
+            "9√2"
+          ],
+          "correct": 0,
+          "solution": "√18 = √(9*2) = 3√2"
+        },
+        {
+          "text": "Simplifier √27",
+          "type": "mcq",
+          "options": [
+            "3√3",
+            "√27",
+            "9√3",
+            "27"
+          ],
+          "correct": 0,
+          "solution": "√27 = √(9*3) = 3√3"
+        },
+        {
+          "text": "Simplifier √45",
+          "type": "mcq",
+          "options": [
+            "3√5",
+            "5√3",
+            "9√5",
+            "45"
+          ],
+          "correct": 0,
+          "solution": "√45 = √(9*5) = 3√5"
+        },
+        {
+          "text": "Calculer √98 + 3√32 - √50 =",
+          "type": "mcq",
+          "options": [
+            "14√2",
+            "7√2",
+            "14√3",
+            "21√2"
+          ],
+          "correct": 0,
+          "solution": "7√2 + 3*4√2 - 5√2 = 7√2 + 12√2 - 5√2 = 14√2"
+        },
+        {
+          "text": "Simplifier √200",
+          "type": "mcq",
+          "options": [
+            "10√2",
+            "2√10",
+            "20√2",
+            "50√2"
+          ],
+          "correct": 0,
+          "solution": "√200 = √(100*2) = 10√2"
+        },
+        {
+          "text": "Simplifier √144",
+          "type": "mcq",
+          "options": [
+            "12",
+            "6√2",
+            "24",
+            "144"
+          ],
+          "correct": 0,
+          "solution": "√144 = 12"
+        },
+        {
+          "text": "Simplifier √(16*9)",
+          "type": "mcq",
+          "options": [
+            "12",
+            "25",
+            "5√3",
+            "4*3 = 12"
+          ],
+          "correct": 0,
+          "solution": "√16 * √9 = 4*3 = 12"
+        }
+      ],
+      "notepad": true
+    },
+    {
+      "category": "Racines carrees — carrees parfaits",
+      "questions": [
+        {
+          "text": "Quel est le carre de 7 ?",
+          "type": "mcq",
+          "options": [
+            "49",
+            "14",
+            "56",
+            "70"
+          ],
+          "correct": 0,
+          "solution": "7^2 = 49"
+        },
+        {
+          "text": "Quel est le carre de 11 ?",
+          "type": "mcq",
+          "options": [
+            "121",
+            "111",
+            "22",
+            "112"
+          ],
+          "correct": 0,
+          "solution": "11^2 = 121"
+        },
+        {
+          "text": "Quel est le carre de 13 ?",
+          "type": "mcq",
+          "options": [
+            "169",
+            "139",
+            "26",
+            "133"
+          ],
+          "correct": 0,
+          "solution": "13^2 = 169"
+        },
+        {
+          "text": "Quel est le carre de 14 ?",
+          "type": "mcq",
+          "options": [
+            "196",
+            "149",
+            "28",
+            "144"
+          ],
+          "correct": 0,
+          "solution": "14^2 = 196"
+        },
+        {
+          "text": "Quel est le carre de 15 ?",
+          "type": "mcq",
+          "options": [
+            "225",
+            "159",
+            "30",
+            "255"
+          ],
+          "correct": 0,
+          "solution": "15^2 = 225"
+        },
+        {
+          "text": "Quel est √100 ?",
+          "type": "mcq",
+          "options": [
+            "10",
+            "50",
+            "20",
+            "100"
+          ],
+          "correct": 0,
+          "solution": "10^2 = 100"
+        },
+        {
+          "text": "Quel est √81 ?",
+          "type": "mcq",
+          "options": [
+            "9",
+            "18",
+            "40",
+            "81"
+          ],
+          "correct": 0,
+          "solution": "9^2 = 81"
+        },
+        {
+          "text": "Quel est √64 ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "16",
+            "32",
+            "64"
+          ],
+          "correct": 0,
+          "solution": "8^2 = 64"
+        },
+        {
+          "text": "Quel est √49 ?",
+          "type": "mcq",
+          "options": [
+            "7",
+            "14",
+            "24",
+            "49"
+          ],
+          "correct": 0,
+          "solution": "7^2 = 49"
+        },
+        {
+          "text": "Quel est √36 ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "12",
+            "18",
+            "36"
+          ],
+          "correct": 0,
+          "solution": "6^2 = 36"
+        }
+      ],
+      "notepad": true
+    },
+    {
+      "category": "Developpement — distributivite",
+      "questions": [
+        {
+          "text": "Que signifie developper une expression litterale ?",
+          "type": "mcq",
+          "options": [
+            "Transformer un produit de facteurs en une somme de termes",
+            "Transformer une somme en produit",
+            "Calculer la valeur numerique",
+            "Simplifier une fraction"
+          ],
+          "correct": 0,
+          "solution": "Developper = transformer un produit en somme"
+        },
+        {
+          "text": "Distributivite : k(a+b) =",
+          "type": "mcq",
+          "options": [
+            "ka + kb",
+            "k(a+b) = ab",
+            "ka + b",
+            "kab"
+          ],
+          "correct": 0,
+          "solution": "k(a+b) = ka + kb"
+        },
+        {
+          "text": "Distributivite : k(a-b) =",
+          "type": "mcq",
+          "options": [
+            "ka - kb",
+            "ka + kb",
+            "k(a-b)",
+            "ab - k"
+          ],
+          "correct": 0,
+          "solution": "k(a-b) = ka - kb"
+        },
+        {
+          "text": "Distributivite : (a+b)(c+d) =",
+          "type": "mcq",
+          "options": [
+            "ac + ad + bc + bd",
+            "ac + bd",
+            "ab + cd",
+            "(a+c)(b+d)"
+          ],
+          "correct": 0,
+          "solution": "(a+b)(c+d) = ac + ad + bc + bd"
+        },
+        {
+          "text": "Developper 3(x+2) =",
+          "type": "mcq",
+          "options": [
+            "3x + 6",
+            "3x + 2",
+            "x + 6",
+            "3x + 5"
+          ],
+          "correct": 0,
+          "solution": "3*x + 3*2 = 3x + 6"
+        },
+        {
+          "text": "Developper 5(a-3) =",
+          "type": "mcq",
+          "options": [
+            "5a - 15",
+            "5a - 3",
+            "a - 15",
+            "5a + 15"
+          ],
+          "correct": 0,
+          "solution": "5*a - 5*3 = 5a - 15"
+        },
+        {
+          "text": "Developper (x+3)(x+4) =",
+          "type": "mcq",
+          "options": [
+            "x^2 + 7x + 12",
+            "x^2 + 12",
+            "x + 7",
+            "x^2 + 4x + 3"
+          ],
+          "correct": 0,
+          "solution": "x*x + x*4 + 3*x + 3*4 = x^2 + 7x + 12"
+        },
+        {
+          "text": "Developper (x+2)(x+5) =",
+          "type": "mcq",
+          "options": [
+            "x^2 + 7x + 10",
+            "x^2 + 10",
+            "x + 7",
+            "x^2 + 5x + 2"
+          ],
+          "correct": 0,
+          "solution": "x*x + x*5 + 2*x + 2*5 = x^2 + 7x + 10"
+        },
+        {
+          "text": "Developper (x-1)(x+6) =",
+          "type": "mcq",
+          "options": [
+            "x^2 + 5x - 6",
+            "x^2 - 5x + 6",
+            "x^2 + 5x + 6",
+            "x - 6"
+          ],
+          "correct": 0,
+          "solution": "x*x + x*6 - 1*x - 1*6 = x^2 + 5x - 6"
+        },
+        {
+          "text": "Developper (2x+3)(x+4) =",
+          "type": "mcq",
+          "options": [
+            "2x^2 + 11x + 12",
+            "2x^2 + 8x + 3",
+            "2x + 12",
+            "2x^2 + 7x + 12"
+          ],
+          "correct": 0,
+          "solution": "2x*x + 2x*4 + 3*x + 3*4 = 2x^2 + 11x + 12"
+        },
+        {
+          "text": "Developper 7(2a+5) =",
+          "type": "mcq",
+          "options": [
+            "14a + 35",
+            "14a + 5",
+            "2a + 35",
+            "7a + 35"
+          ],
+          "correct": 0,
+          "solution": "7*2a + 7*5 = 14a + 35"
+        },
+        {
+          "text": "Developper -3(x-4) =",
+          "type": "mcq",
+          "options": [
+            "-3x + 12",
+            "-3x - 12",
+            "3x - 12",
+            "-x + 12"
+          ],
+          "correct": 0,
+          "solution": "-3*x - (-3)*4 = -3x + 12"
+        },
+        {
+          "text": "Developper (x+7)(x-2) =",
+          "type": "mcq",
+          "options": [
+            "x^2 + 5x - 14",
+            "x^2 - 5x + 14",
+            "x^2 + 5x + 14",
+            "x - 14"
+          ],
+          "correct": 0,
+          "solution": "x*x + x*(-2) + 7*x + 7*(-2) = x^2 + 5x - 14"
+        },
+        {
+          "text": "Developper (3a+2)(a+1) =",
+          "type": "mcq",
+          "options": [
+            "3a^2 + 5a + 2",
+            "3a^2 + 3a + 2",
+            "3a + 2",
+            "3a^2 + 5a + 1"
+          ],
+          "correct": 0,
+          "solution": "3a*a + 3a*1 + 2*a + 2*1 = 3a^2 + 5a + 2"
+        },
+        {
+          "text": "Que produit-on dans (a+b)(c+d) pour obtenir le terme ad ?",
+          "type": "mcq",
+          "options": [
+            "a*d",
+            "a*c",
+            "b*c",
+            "b*d"
+          ],
+          "correct": 0,
+          "solution": "a*d = ad"
+        },
+        {
+          "text": "Distributivite : k(a+b+c) =",
+          "type": "mcq",
+          "options": [
+            "ka + kb + kc",
+            "k(a+b+c)",
+            "kab + kbc",
+            "ka + bc"
+          ],
+          "correct": 0,
+          "solution": "k(a+b+c) = ka + kb + kc"
+        }
+      ],
+      "notepad": true
+    },
+    {
+      "category": "Mixed — melange de toutes les notions",
+      "questions": [
+        {
+          "text": "Simplifier (1/2 + 1/3) * 6 =",
+          "type": "mcq",
+          "options": [
+            "5",
+            "3",
+            "6",
+            "12"
+          ],
+          "correct": 0,
+          "solution": "1/2 + 1/3 = 3/6 + 2/6 = 5/6, puis 5/6 * 6 = 5"
+        },
+        {
+          "text": "Calculer 2^3 + 3^2 =",
+          "type": "mcq",
+          "options": [
+            "17",
+            "64",
+            "125",
+            "36"
+          ],
+          "correct": 0,
+          "solution": "2^3 + 3^2 = 8 + 9 = 17"
+        },
+        {
+          "text": "Calculer √(16*25) =",
+          "type": "mcq",
+          "options": [
+            "20",
+            "16",
+            "25",
+            "41"
+          ],
+          "correct": 0,
+          "solution": "√16 * √25 = 4 * 5 = 20"
+        },
+        {
+          "text": "Developper puis evaluer pour x=2 : 3(x+4)",
+          "type": "mcq",
+          "options": [
+            "18",
+            "14",
+            "12",
+            "24"
+          ],
+          "correct": 0,
+          "solution": "3*2 + 12 = 6 + 12 = 18"
+        },
+        {
+          "text": "Simplifier (2/3)^3 =",
+          "type": "mcq",
+          "options": [
+            "8/27",
+            "6/9",
+            "8/9",
+            "2/27"
+          ],
+          "correct": 0,
+          "solution": "(2/3)^3 = 2^3/3^3 = 8/27"
+        },
+        {
+          "text": "Calculer 5^0 + 2^4 =",
+          "type": "mcq",
+          "options": [
+            "17",
+            "16",
+            "15",
+            "20"
+          ],
+          "correct": 0,
+          "solution": "1 + 16 = 17"
+        },
+        {
+          "text": "Simplifier √(49*4) =",
+          "type": "mcq",
+          "options": [
+            "14",
+            "7",
+            "4",
+            "53"
+          ],
+          "correct": 0,
+          "solution": "√49 * √4 = 7 * 2 = 14"
+        },
+        {
+          "text": "Quelle est la valeur de 2^(-2) ?",
+          "type": "mcq",
+          "options": [
+            "1/4",
+            "-4",
+            "1/2",
+            "4"
+          ],
+          "correct": 0,
+          "solution": "2^(-2) = 1/2^2 = 1/4"
+        },
+        {
+          "text": "Simplifier 3/4 + 1/4 =",
+          "type": "mcq",
+          "options": [
+            "1",
+            "4/8",
+            "4/4",
+            "1/2"
+          ],
+          "correct": 0,
+          "solution": "3/4 + 1/4 = 4/4 = 1"
+        },
+        {
+          "text": "Developper (x-3)^2 =",
+          "type": "mcq",
+          "options": [
+            "x^2 - 6x + 9",
+            "x^2 - 9",
+            "x^2 + 6x + 9",
+            "x^2 - 3x + 9"
+          ],
+          "correct": 0,
+          "solution": "(x-3)(x-3) = x^2 - 3x - 3x + 9 = x^2 - 6x + 9"
+        },
+        {
+          "text": "Simplifier √(3*7)^2 pour tout reel ?",
+          "type": "mcq",
+          "options": [
+            "|21| = 21",
+            "21",
+            "-21",
+            "√21"
+          ],
+          "correct": 0,
+          "solution": "√(21^2) = |21| = 21"
+        },
+        {
+          "text": "Calculer 10^0 * 10^3 =",
+          "type": "mcq",
+          "options": [
+            "1000",
+            "10000",
+            "0",
+            "103"
+          ],
+          "correct": 0,
+          "solution": "10^0 * 10^3 = 10^(0+3) = 10^3 = 1000"
+        },
+        {
+          "text": "Quelle est la forme irreductible de 50/75 ?",
+          "type": "mcq",
+          "options": [
+            "2/3",
+            "5/7",
+            "25/50",
+            "1/2"
+          ],
+          "correct": 0,
+          "solution": "50/75 = (25*2)/(25*3) = 2/3"
+        },
+        {
+          "text": "Simplifier x^4 * x^3 =",
+          "type": "mcq",
+          "options": [
+            "x^7",
+            "x^12",
+            "x",
+            "x^1"
+          ],
+          "correct": 0,
+          "solution": "x^(4+3) = x^7"
+        },
+        {
+          "text": "Developper (a+b)^2 =",
+          "type": "mcq",
+          "options": [
+            "a^2 + 2ab + b^2",
+            "a^2 + b^2",
+            "a^2 + ab + b^2",
+            "2a^2 + 2b^2"
+          ],
+          "correct": 0,
+          "solution": "(a+b)(a+b) = a^2 + 2ab + b^2"
+        }
+      ],
+      "notepad": true
+    }
+  ]
+}

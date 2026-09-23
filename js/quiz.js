@@ -14,6 +14,7 @@
   var userSelection = null;   // { isCorrect } for mcq | string for text
   var quizInProgress = false;
   var subjectName = "";
+  var notepadEnabled = false;
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -292,6 +293,26 @@
     score = 0;
     answeredCount = 0;
 
+    // Per-category notepad: read raw flag from JSON (internal, not displayed)
+    var rawCats = (currentQuiz && currentQuiz._data && currentQuiz._data.categories) || [];
+    var rawCat = rawCats[idx] || {};
+    notepadEnabled = rawCat.notepad === true;
+    var npContainer = $("notepad-container");
+    if (npContainer) {
+      npContainer.classList.toggle("hidden", !notepadEnabled);
+      if (notepadEnabled) {
+        var npTa = $("notepad-textarea");
+        if (npTa) npTa.value = "";
+        var npClear = $("notepad-clear");
+        if (npClear) {
+          npClear.onclick = function () {
+            var ta = $("notepad-textarea");
+            if (ta) ta.value = "";
+          };
+        }
+      }
+    }
+
     if (window.__analytics) {
       window.__analytics.track("quiz_category_start", {
         quiz_id: getQuizIdFromURL(),
@@ -421,6 +442,12 @@
 
     userSelection = null;
     quizInProgress = true;
+
+    // Reset notepad at each question
+    if (notepadEnabled) {
+      var npTa = $("notepad-textarea");
+      if (npTa) npTa.value = "";
+    }
 
     var btn = $("main-btn");
     btn.textContent = "Valider la Réponse";
