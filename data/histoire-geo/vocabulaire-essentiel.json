@@ -1,0 +1,483 @@
+{
+  "subject": "histoire-geo",
+  "title": "Histoire — Vocabulaire essentiel (Partie 1)",
+  "description": "Vocabulaire fondamental d'histoire : cite, citoyen, democratie, institutions atheniennes (60 questions).",
+  "categories": [
+    {
+      "category": "La cite et ses habitants",
+      "questions": [
+        {
+          "text": "Que designe « cite » dans le monde antique ?",
+          "type": "mcq",
+          "options": [
+            "Petit Etat independant compose d'une ville et de la campagne",
+            "Une grande metropole",
+            "Un empire",
+            "Un royaume"
+          ],
+          "correct": 0,
+          "solution": "Cite = petit Etat independant : une ville + la campagne environnante"
+        },
+        {
+          "text": "Qui designe le « citoyen » a Athenes ?",
+          "type": "mcq",
+          "options": [
+            "Celui qui beneficie du droit de cite et participe au gouvernement",
+            "Tout habitant d'Athenes",
+            "L'etranger libre",
+            "Le soldat"
+          ],
+          "correct": 0,
+          "solution": "Citoyen = beneficie du droit de cite et participe au gouvernement"
+        },
+        {
+          "text": "Qu'est-ce qu'un « dème » ?",
+          "type": "mcq",
+          "options": [
+            "Division territoriale et unite administrative",
+            "Une assemblee",
+            "Un tribunal",
+            "Un marche"
+          ],
+          "correct": 0,
+          "solution": "Deme = division territoriale ; le jeune Athenien s'y inscrit a 18 ans"
+        },
+        {
+          "text": "Qu'est-ce qu'un « meteque » ?",
+          "type": "mcq",
+          "options": [
+            "Etranger libre installe durablement a Athenes, sans droits politiques",
+            "Un esclave",
+            "Un citoyen pauvre",
+            "Un noble"
+          ],
+          "correct": 0,
+          "solution": "Meteque = etranger libre, paie un impot mais aucun droit politique"
+        },
+        {
+          "text": "Qu'est-ce qu'un « hoplite » ?",
+          "type": "mcq",
+          "options": [
+            "Fantassin lourdement arme",
+            "Un magistrat",
+            "Un rameur",
+            "Un philosophe"
+          ],
+          "correct": 0,
+          "solution": "Hoplite = fantassin lourdement arme"
+        },
+        {
+          "text": "Combien de citoyens Athenes comptait-elle environ ?",
+          "type": "mcq",
+          "options": [
+            "40 000 sur 300 000 habitants",
+            "100 000 sur 300 000",
+            "200 000 sur 300 000",
+            "300 000 sur 300 000"
+          ],
+          "correct": 0,
+          "solution": "40 000 citoyens sur pres de 300 000 habitants"
+        },
+        {
+          "text": "Combien d'habitants Athenes comptait-elle au Ve siecle av. J.-C. ?",
+          "type": "mcq",
+          "options": [
+            "295 000 a 340 000",
+            "100 000 a 150 000",
+            "50 000 a 80 000",
+            "500 000 a 600 000"
+          ],
+          "correct": 0,
+          "solution": "295 000 a 340 000 habitants"
+        },
+        {
+          "text": "Quelles categories d'habitants sont exclues de la citoyennete ?",
+          "type": "mcq",
+          "options": [
+            "Femmes, meteques et esclaves",
+            "Seulement les esclaves",
+            "Seulement les femmes",
+            "Les enfants et les etrangers"
+          ],
+          "correct": 0,
+          "solution": "Femmes, meteques et esclaves sont exclus de la citoyennete"
+        },
+        {
+          "text": "Qu'est-ce que l'« ephébie » ?",
+          "type": "mcq",
+          "options": [
+            "Institution rassemblant les jeunes citoyens de 18 a 20 ans, service militaire",
+            "Un tribunal",
+            "Une assemblee",
+            "Une fete religieuse"
+          ],
+          "correct": 0,
+          "solution": "Ephebie = institution des jeunes citoyens de 18 a 20 ans (service militaire)"
+        },
+        {
+          "text": "Les meteques paient-ils des impots ?",
+          "type": "mcq",
+          "options": [
+            "Oui, un impot specifique, mais aucun droit politique",
+            "Non, ils sont exemptes",
+            "Oui, et ils ont le droit de vote",
+            "Non, mais ils peuvent voter"
+          ],
+          "correct": 0,
+          "solution": "Le meteque paie un impot specifique mais ne possede aucun droit politique"
+        }
+      ]
+    },
+    {
+      "category": "Les regimes politiques",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'une « tyrannie » ?",
+          "type": "mcq",
+          "options": [
+            "Regime dirige par un seul homme qui s'est approprie le pouvoir",
+            "Un regime democratique",
+            "Un regime parlementaire",
+            "Une monarchie constitutionnelle"
+          ],
+          "correct": 0,
+          "solution": "Tyrannie = regime dirige par un seul homme ; mot pejoratif depuis Platon et Aristote"
+        },
+        {
+          "text": "Qu'est-ce qu'une « oligarchie » ?",
+          "type": "mcq",
+          "options": [
+            "Regime ou seul un petit nombre de citoyens exerce le pouvoir",
+            "Le pouvoir du peuple",
+            "Le pouvoir d'un seul homme",
+            "Le pouvoir des militaires"
+          ],
+          "correct": 0,
+          "solution": "Oligarchie = regime ou un petit nombre de citoyens exerce le pouvoir"
+        },
+        {
+          "text": "Qu'est-ce que l'« isonomie » ?",
+          "type": "mcq",
+          "options": [
+            "Le fait d'etre soumis a la meme loi, egalite des droits civiques",
+            "La liberte d'expression",
+            "Le vote universel",
+            "La separation des pouvoirs"
+          ],
+          "correct": 0,
+          "solution": "Isonomie = meme loi pour tous, egalite des droits civiques"
+        },
+        {
+          "text": "Qu'est-ce qu'une « democratie directe » ?",
+          "type": "mcq",
+          "options": [
+            "Les citoyens votent eux-memes les lois, sans representants",
+            "Les citoyens elisent des representants",
+            "Un regime dirige par un roi",
+            "Un regime militaire"
+          ],
+          "correct": 0,
+          "solution": "Democratie directe = les citoyens votent eux-memes les lois et decisions"
+        },
+        {
+          "text": "L'isonomie est-elle fondee sur l'egalite de tous les habitants ?",
+          "type": "mcq",
+          "options": [
+            "Non, seulement les citoyens (hommes) beneficient de l'isonomie",
+            "Oui, tous les habitants",
+            "Oui, hommes et femmes",
+            "Oui, memes les esclaves"
+          ],
+          "correct": 0,
+          "solution": "L'isonomie s'applique uniquement aux citoyens (hommes libres)"
+        },
+        {
+          "text": "En quoi la democratie athénienne se distingue-t-elle d'un regime representatif ?",
+          "type": "mcq",
+          "options": [
+            "Les citoyens votent directement les lois a l'assemblee",
+            "Les citoyens elisent des deputes",
+            "Le roi decide",
+            "Les senateurs votent"
+          ],
+          "correct": 0,
+          "solution": "Democratie directe = vote direct a l'assemblee, sans representants"
+        }
+      ]
+    },
+    {
+      "category": "Les institutions democratiques",
+      "questions": [
+        {
+          "text": "Que signifie « Ecclésia » en grec ?",
+          "type": "mcq",
+          "options": [
+            "Assemblee",
+            "Tribunal",
+            "Conseil",
+            "Marche"
+          ],
+          "correct": 0,
+          "solution": "Ecclésia = assemblee ; reunion des citoyens sur la colline de la Pynx"
+        },
+        {
+          "text": "Combien de seances l'Ecclésia tient-elle par an ?",
+          "type": "mcq",
+          "options": [
+            "40 seances",
+            "12 seances",
+            "100 seances",
+            "4 seances"
+          ],
+          "correct": 0,
+          "solution": "L'Ecclésia tient environ 40 seances par an"
+        },
+        {
+          "text": "Quel est le role de l'Ecclésia ?",
+          "type": "mcq",
+          "options": [
+            "Voter les lois, les decrets, la guerre et la paix",
+            "Rendre la justice",
+            "Preparer les lois",
+            "Diriger l'armee"
+          ],
+          "correct": 0,
+          "solution": "L'Ecclésia vote les lois, les decrets, la guerre/la paix, controle les magistrats"
+        },
+        {
+          "text": "Où se reunissait l'Ecclésia ?",
+          "type": "mcq",
+          "options": [
+            "Sur la colline de la Pynx",
+            "A l'Agora",
+            "A l'Acropole",
+            "Au Pirée"
+          ],
+          "correct": 0,
+          "solution": "L'Ecclésia se reunissait sur la colline de la Pynx"
+        },
+        {
+          "text": "Combien de citoyens composent la « Boulè » ?",
+          "type": "mcq",
+          "options": [
+            "500 citoyens",
+            "100 citoyens",
+            "1 000 citoyens",
+            "6 000 citoyens"
+          ],
+          "correct": 0,
+          "solution": "La Boule = 500 citoyens tires au sort chaque annee"
+        },
+        {
+          "text": "Quel est le role de la Boulè ?",
+          "type": "mcq",
+          "options": [
+            "Preparer les seances de l'Ecclésia et les lois",
+            "Rendre la justice",
+            "Diriger l'armee",
+            "Percevoir les impots"
+          ],
+          "correct": 0,
+          "solution": "La Boule prepare les seances de l'Ecclésia et gere les affaires courantes"
+        },
+        {
+          "text": "Comment sont designes les membres de la Boulè ?",
+          "type": "mcq",
+          "options": [
+            "Tires au sort",
+            "Elus",
+            "Hereditaires",
+            "Nominatifs par le stratège"
+          ],
+          "correct": 0,
+          "solution": "Les 500 membres de la Boule sont tires au sort"
+        },
+        {
+          "text": "Combien de citoyens composent l'« Héliée » ?",
+          "type": "mcq",
+          "options": [
+            "6 000 citoyens",
+            "500 citoyens",
+            "40 citoyens",
+            "10 citoyens"
+          ],
+          "correct": 0,
+          "solution": "L'Heliée = environ 6 000 citoyens tires au sort"
+        },
+        {
+          "text": "Quel est le role de l'Héliée ?",
+          "type": "mcq",
+          "options": [
+            "Rendre la justice",
+            "Voter les lois",
+            "Preparer les lois",
+            "Diriger l'armee"
+          ],
+          "correct": 0,
+          "solution": "L'Heliée rend la justice (procès criminels et politiques)"
+        },
+        {
+          "text": "Combien de stratèges y a-t-il a Athenes ?",
+          "type": "mcq",
+          "options": [
+            "10 stratèges",
+            "5 stratèges",
+            "100 stratèges",
+            "500 stratèges"
+          ],
+          "correct": 0,
+          "solution": "10 stratèges, charges principalement des affaires militaires"
+        },
+        {
+          "text": "Comment sont designes les stratèges ?",
+          "type": "mcq",
+          "options": [
+            "Elus annuellement par le peuple",
+            "Tires au sort",
+            "Hereditaires",
+            "Nominatifs"
+          ],
+          "correct": 0,
+          "solution": "Les 10 stratèges sont ELUS annuellement par le peuple"
+        },
+        {
+          "text": "Combien de magistrats y a-t-il environ a Athenes ?",
+          "type": "mcq",
+          "options": [
+            "700 environ",
+            "500 environ",
+            "100 environ",
+            "10 environ"
+          ],
+          "correct": 0,
+          "solution": "Environ 700 magistrats, tires au sort pour un an"
+        },
+        {
+          "text": "Qu'est-ce que l'« Agora » ?",
+          "type": "mcq",
+          "options": [
+            "Place centrale : marche, lieux de rituels et affaires politiques",
+            "Le tribunal",
+            "Le port",
+            "L'assemblee"
+          ],
+          "correct": 0,
+          "solution": "Agora = place centrale : marche + lieux religieux et politiques"
+        },
+        {
+          "text": "Qu'est-ce que l'« ostracisme » ?",
+          "type": "mcq",
+          "options": [
+            "Procedure permettant d'exiler un citoyen pendant 10 ans",
+            "Un proces judiciaire",
+            "Une election",
+            "Une charge politique"
+          ],
+          "correct": 0,
+          "solution": "Ostracisme = exil d'un citoyen dangereux pendant 10 ans (nom inscrit sur un tesson)"
+        }
+      ]
+    },
+    {
+      "category": "L'empire et les guerres",
+      "questions": [
+        {
+          "text": "Que sont les « guerres médiques » ?",
+          "type": "mcq",
+          "options": [
+            "Affrontements entre cites grecques et l'Empire perse (Marathon -490, Salamine -480)",
+            "Guerres civiles a Athenes",
+            "Guerres entre Sparte et Athenes",
+            "Conflits avec Carthage"
+          ],
+          "correct": 0,
+          "solution": "Guerres mediques = cites grecques vs Empire perse : Marathon (490), Salamine (480)"
+        },
+        {
+          "text": "Quand a eu lieu la bataille de Marathon ?",
+          "type": "mcq",
+          "options": [
+            "490 av. J.-C.",
+            "480 av. J.-C.",
+            "478 av. J.-C.",
+            "431 av. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Marathon = 490 av. J.-C."
+        },
+        {
+          "text": "Quand a eu lieu la bataille de Salamine ?",
+          "type": "mcq",
+          "options": [
+            "480 av. J.-C.",
+            "490 av. J.-C.",
+            "478 av. J.-C.",
+            "404 av. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Salamine = 480 av. J.-C."
+        },
+        {
+          "text": "Qu'est-ce que la « Ligue de Délos » ?",
+          "type": "mcq",
+          "options": [
+            "Alliance militaire creee par Athenes en 478 av. J.-C. contre les Perses",
+            "Une ligue sportive",
+            "Une alliance entre Sparte et Athenes",
+            "Un traité de paix"
+          ],
+          "correct": 0,
+          "solution": "Ligue de Delos = alliance creee en 478 av. J.-C. pour proteger contre les Perses"
+        },
+        {
+          "text": "Qu'est-ce que le « tribut (phoros) » ?",
+          "type": "mcq",
+          "options": [
+            "Somme d'argent ou vaisseaux que les cites de la Ligue versent a Athenes",
+            "Un impot sur le commerce",
+            "Un salaire des magistrats",
+            "Une amende"
+          ],
+          "correct": 0,
+          "solution": "Tribut = argent ou navires verses chaque annee a Athenes par les cites alliees"
+        },
+        {
+          "text": "Qu'est-ce qu'une « thalassocratie » ?",
+          "type": "mcq",
+          "options": [
+            "Puissance politique fondee sur la domination de la mer",
+            "Une democratie",
+            "Un empire terrestre",
+            "Une tyrannie"
+          ],
+          "correct": 0,
+          "solution": "Thalassocratie = puissance politique basee sur la domination maritime"
+        },
+        {
+          "text": "Quand a eu lieu la guerre du Péloponnèse ?",
+          "type": "mcq",
+          "options": [
+            "431-404 av. J.-C.",
+            "490-480 av. J.-C.",
+            "478-454 av. J.-C.",
+            "411-400 av. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Guerre du Peloponnese = 431-404 av. J.-C."
+        },
+        {
+          "text": "Quand la democratie a-t-elle ete renversee a Athenes ?",
+          "type": "mcq",
+          "options": [
+            "En 411 puis en 404 av. J.-C.",
+            "En 490 av. J.-C.",
+            "En 478 av. J.-C.",
+            "En 451 av. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Democratie renversee en 411 puis en 404 av. J.-C."
+        }
+      ]
+    }
+  ]
+}

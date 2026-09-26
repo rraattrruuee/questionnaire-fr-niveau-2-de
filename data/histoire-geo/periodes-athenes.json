@@ -1,0 +1,584 @@
+{
+  "subject": "histoire-geo",
+  "title": "Histoire — Periodisation et democratie athenienne (Partie 2)",
+  "description": "Les periodes historiques, Jack Goody, la democratie athénienne, Pericles, l'empire maritime (70 questions).",
+  "categories": [
+    {
+      "category": "Les periodes historiques",
+      "questions": [
+        {
+          "text": "Quand debute la Prehistoire selon la periodisation traditionnelle ?",
+          "type": "mcq",
+          "options": [
+            "3 millions d'ans av. J.-C.",
+            "3300 av. J.-C.",
+            "476 ap. J.-C.",
+            "1492 ap. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Prehistoire : 3 M av. J.-C. a 3300 av. J.-C."
+        },
+        {
+          "text": "Quand l'Antiquité debute-t-elle et quand se termine-t-elle ?",
+          "type": "mcq",
+          "options": [
+            "3300 av. J.-C. a 476 ap. J.-C.",
+            "3 M av. J.-C. a 476",
+            "476 a 1492",
+            "1492 a 1789"
+          ],
+          "correct": 0,
+          "solution": "Antiquite : 3300 av. J.-C. a 476 ap. J.-C."
+        },
+        {
+          "text": "Quelles bornes definissent le Moyen Age ?",
+          "type": "mcq",
+          "options": [
+            "476 a 1492",
+            "3300 av. a 476",
+            "1492 a 1789",
+            "1789 a nos jours"
+          ],
+          "correct": 0,
+          "solution": "Moyen Age : 476 a 1492"
+        },
+        {
+          "text": "Quelles bornes definissent l'Epoque moderne ?",
+          "type": "mcq",
+          "options": [
+            "1492 a 1789",
+            "476 a 1492",
+            "1789 a nos jours",
+            "3300 av. a 476"
+          ],
+          "correct": 0,
+          "solution": "Epoque moderne : 1492 a 1789"
+        },
+        {
+          "text": "Quand debute l'Epoque contemporaine ?",
+          "type": "mcq",
+          "options": [
+            "1789",
+            "1492",
+            "476",
+            "3300 av. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Epoque contemporaine : 1789 a nos jours"
+        },
+        {
+          "text": "Pourquoi la borne de 476 est-elle contestee ?",
+          "type": "mcq",
+          "options": [
+            "La chute de Rome n'est pas une rupture brutale ; l'Empire romain d'Orient subsiste",
+            "Parce que 476 est une date incorrecte",
+            "Parce que Rome n'est jamais tombee",
+            "Parce que le christianisme n'existait pas"
+          ],
+          "correct": 0,
+          "solution": "476 n'est pas une rupture brutale ; l'Empire romain d'Orient continue d'exister"
+        },
+        {
+          "text": "Pourquoi la borne de 1492 est-elle contestee ?",
+          "type": "mcq",
+          "options": [
+            "1492 prolonge des dynamiques medievales (Reconquete, christianisation)",
+            "Parce que Colomb n'a pas existe",
+            "Parce que 1492 est une date fausse",
+            "Parce que l'Amerique existait deja"
+          ],
+          "correct": 0,
+          "solution": "1492 prolonge la Reconquete et la christianisation : plusieurs dates de fin sont possibles"
+        },
+        {
+          "text": "Pourquoi la periode de Prehistoire est-elle contestee ?",
+          "type": "mcq",
+          "options": [
+            "L'ecriture n'apparait pas partout au meme moment",
+            "Parce que la Prehistoire n'existe pas",
+            "Parce que l'ecriture est universelle",
+            "Parce que les dates sont inventees"
+          ],
+          "correct": 0,
+          "solution": "L'ecriture n'apparait pas partout au meme moment"
+        },
+        {
+          "text": "Pourquoi la periode contemporaine est-elle rattachee a la France ?",
+          "type": "mcq",
+          "options": [
+            "La Revolution de 1789 est une rupture liee a l'histoire francaise",
+            "1789 est universel",
+            "La Revolution est europeenne uniquement",
+            "1789 n'est pas importante"
+          ],
+          "correct": 0,
+          "solution": "La periode contemporaine est definie par la Revolution francaise de 1789"
+        },
+        {
+          "text": "Que signifie « protohistoire » ?",
+          "type": "mcq",
+          "options": [
+            "Periode entre Prehistoire et Antiquite : agriculture et metallurgie developpees, ecriture partielle",
+            "La periode avant l'ecriture",
+            "Le debut de l'ecriture",
+            "La periode moderne"
+          ],
+          "correct": 0,
+          "solution": "Protohistoire = entre Prehistoire et Antiquite (agriculture, metallurgie, ecriture partielle)"
+        }
+      ]
+    },
+    {
+      "category": "Jack Goody et le « vol de l'histoire »",
+      "questions": [
+        {
+          "text": "De quoi Jack Goody parle-t-il quand il evoque un « vol de l'histoire » ?",
+          "type": "mcq",
+          "options": [
+            "La periodisation europee presentee comme universelle par les historiens du XIXe s.",
+            "Le vol de documents historiques",
+            "L'appropriation de l'ecriture",
+            "La disparition de textes antiques"
+          ],
+          "correct": 0,
+          "solution": "Goody = les historiens europeens ont presente leur periodisation comme universelle"
+        },
+        {
+          "text": "Pourquoi Goody estime-t-il que la periodisation occidentale n'est pas pertinente pour d'autres regions ?",
+          "type": "mcq",
+          "options": [
+            "Les coupures (Antiquite, Moyen Age, Temps modernes) sont propres a l'histoire europeenne",
+            "Parce que l'ecriture n'existe pas ailleurs",
+            "Parce que les autres cultures n'ont pas d'histoire",
+            "Parce que l'Europe est superieure"
+          ],
+          "correct": 0,
+          "solution": "Ces coupures correspondent a des transformations europeennes, pas universelles"
+        },
+        {
+          "text": "Selon Goody, quelles regions ne correspondent pas a la periodisation occidentale ?",
+          "type": "mcq",
+          "options": [
+            "Afrique, Asie, Inde, Chine",
+            "Uniquement l'Afrique",
+            "Uniquement l'Asie",
+            "L'Amerique uniquement"
+          ],
+          "correct": 0,
+          "solution": "La periodisation n'est pas applicable a l'Afrique, l'Asie, l'Inde, la Chine"
+        },
+        {
+          "text": "Quel historien japonais utilise le terme de Moyen Age et pourquoi ?",
+          "type": "mcq",
+          "options": [
+            "Hara Katsurō, pour designer une periode intermediaire entre la cour imperiale et le shogunat",
+            "Hara Katsurō, pour humilier le Japon",
+            "Un historien europeen",
+            "Platon"
+          ],
+          "correct": 0,
+          "solution": "Hara Katsurō (debut XXe s.) = periode intermediaire : cour imperiale vs shogunat Tokugawa"
+        },
+        {
+          "text": "Pourquoi Hara Katsurō a-t-il utilise la periodisation occidentale pour le Japon ?",
+          "type": "mcq",
+          "options": [
+            "Pour affirmer que le Japon a suivi un developpement comparable a l'Occident",
+            "Pour nier l'histoire japonaise",
+            "Par ordre des Europeens",
+            "Parce qu'il n'avait pas de propres termes"
+          ],
+          "correct": 0,
+          "solution": "Pour montrer que le Japon est devenu une puissance moderne comparable a l'Occident"
+        },
+        {
+          "text": "Qui a forge la tripartition Antiquite / Moyen Age / Modernite ?",
+          "type": "mcq",
+          "options": [
+            "Les humanistes europeens au XVe siecle",
+            "Les Grecs antiques",
+            "Les Romains",
+            "Jack Goody"
+          ],
+          "correct": 0,
+          "solution": "La tripartition a ete forgee en Europe au XVe siecle par les humanistes"
+        },
+        {
+          "text": "Quelle vision de l'histoire sous-tend la periodisation occidentale ?",
+          "type": "mcq",
+          "options": [
+            "Une vision cyclique : Antiquite glorieuse, Moyen Age sombre, Renaissance",
+            "Une vision lineaire",
+            "Une vision divine",
+            "Une vision marxiste"
+          ],
+          "correct": 0,
+          "solution": "Vision cyclique : Antiquite = age glorieux, Moyen Age = parenthese, Renaissance = retour"
+        },
+        {
+          "text": "Quand la notion de Prehistoire apparait-elle en France ?",
+          "type": "mcq",
+          "options": [
+            "Au XIXe siecle",
+            "Au XVe siecle",
+            "Au XVIe siecle",
+            "Au XXe siecle"
+          ],
+          "correct": 0,
+          "solution": "La notion de Prehistoire apparait en France au XIXe siecle"
+        }
+      ]
+    },
+    {
+      "category": "Le monde grec et Athenes",
+      "questions": [
+        {
+          "text": "Combien de cites composent le monde grec au Ve siecle av. J.-C. ?",
+          "type": "mcq",
+          "options": [
+            "Plus d'un millier",
+            "Une dizaine",
+            "Une centaine",
+            "Cinq"
+          ],
+          "correct": 0,
+          "solution": "Plus d'un millier de cites independantes"
+        },
+        {
+          "text": "Qu'est-ce qui unit les cites grecques ?",
+          "type": "mcq",
+          "options": [
+            "Une meme langue et les memes dieux",
+            "Un meme roi",
+            "Une meme armee",
+            "Un meme marche"
+          ],
+          "correct": 0,
+          "solution": "Meme langue et memes dieux, mais se font souvent la guerre"
+        },
+        {
+          "text": "Quelles sont les principales mers qui structurent l'espace grec ?",
+          "type": "mcq",
+          "options": [
+            "Mer Egée, mer Ionienne, mer Tyrrhenienne, mer Adriatique, mer Noire",
+            "Mer du Nord, mer Baltique",
+            "Ocean Atlantique, ocean Indien",
+            "Mer Rouge, mer Caspienne"
+          ],
+          "correct": 0,
+          "solution": "Mer Egée, Ionienne, Tyrrhenienne, Adriatique, Mediterranee, mer Noire"
+        },
+        {
+          "text": "Quelles colonies grecques citez-vous ?",
+          "type": "mcq",
+          "options": [
+            "Massalia, Alalia, Pithécusses",
+            "Rome, Carthage, Alexandrie",
+            "Londres, Paris, Berlin",
+            "New York, Boston, Miami"
+          ],
+          "correct": 0,
+          "solution": "Massalia (Marseille), Alalia (Corse), Pithécusses (Ischia)"
+        },
+        {
+          "text": "Quelles autres puissances se partagent la Mediterranée a l'epoque grecque ?",
+          "type": "mcq",
+          "options": [
+            "Romains, Egyptiens, Pheniciens, Empire perse, Etrusques, Macedoine",
+            "Chinois, Indiens, Japonais",
+            "Vikings, Francs, Wisigoths",
+            "Arabes, Turcs, Mongols"
+          ],
+          "correct": 0,
+          "solution": "Romains, Egyptiens, Pheniciens, Empire perse, Etrusques, Royaume de Macedoine"
+        },
+        {
+          "text": "Quelles reformes Clisthène met-il en place (508-507 av. J.-C.) ?",
+          "type": "mcq",
+          "options": [
+            "L'isonomie, fondement de la democratie",
+            "La tyrannie",
+            "L'oligarchie",
+            "Le tribut"
+          ],
+          "correct": 0,
+          "solution": "Clisthene : isonomie = fondement de la democratie"
+        },
+        {
+          "text": "Quelle est la date de victoire de Marathon ?",
+          "type": "mcq",
+          "options": [
+            "490 av. J.-C.",
+            "480 av. J.-C.",
+            "478 av. J.-C.",
+            "431 av. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Victoire de Marathon = 490 av. J.-C. (guerres mediques)"
+        },
+        {
+          "text": "Quelle est la date de creation de la Ligue de Délos ?",
+          "type": "mcq",
+          "options": [
+            "478 av. J.-C.",
+            "490 av. J.-C.",
+            "480 av. J.-C.",
+            "431 av. J.-C."
+          ],
+          "correct": 0,
+          "solution": "Ligue de Delos creee en 478 av. J.-C."
+        },
+        {
+          "text": "Quelles sont les trois conditions pour etre citoyen a Athenes ?",
+          "type": "mcq",
+          "options": [
+            "Naitre de deux parents atheniens, avoir 18 ans, participer a la cite",
+            "Etre un homme riche, naitre a Athenes, etre soldat",
+            "Habiter Athenes, etre libre, avoir 20 ans",
+            "Etre ne a Athenes, etre male, etre noble"
+          ],
+          "correct": 0,
+          "solution": "Filiation (2 parents atheniens), age (18 ans + ephébie), participation effective"
+        },
+        {
+          "text": "Qu'est-ce que la loi de 451 av. J.-C. sur l'autochtonie (loi de Pericles) ?",
+          "type": "mcq",
+          "options": [
+            "Nul ne jouit des droits politiques s'il n'est ne de pere ET mere atheniens",
+            "Il faut avoir 20 ans",
+            "Il faut etre riche",
+            "Il faut habiter a Athenes"
+          ],
+          "correct": 0,
+          "solution": "Loi de 451 : il faut etre ne de deux parents atheniens (autochtonie)"
+        },
+        {
+          "text": "Pourquoi Pericles a-t-il fait passer cette loi ?",
+          "type": "mcq",
+          "options": [
+            "Il y avait trop de citoyens",
+            "Pour augmenter les impots",
+            "Pour exclure les femmes",
+            "Pour favoriser les etrangers"
+          ],
+          "correct": 0,
+          "solution": "Trop de citoyens : la loi limite l'acces a la citoyennete"
+        }
+      ]
+    },
+    {
+      "category": "Pericles et la vie politique",
+      "questions": [
+        {
+          "text": "Quels atouts personnels permettent a Pericles de jouer un role politique ?",
+          "type": "mcq",
+          "options": [
+            "Talent d'orateur, aisance financiere, prestige familial et militaire",
+            "Sa force physique",
+            "Sa richesse seule",
+            "Son age"
+          ],
+          "correct": 0,
+          "solution": "Orateur talentueux, aisance financiere, prestige familial et militaire"
+        },
+        {
+          "text": "Combien de fois Pericles a-t-il ete elu stratège ?",
+          "type": "mcq",
+          "options": [
+            "Plus de 50 fois, reelu 15 fois de suite",
+            "Une seule fois",
+            "10 fois",
+            "5 fois"
+          ],
+          "correct": 0,
+          "solution": "Elu stratège plus de 50 fois, reelu 15 fois de suite (462-429)"
+        },
+        {
+          "text": "Quel elogie Pericles fait-il de la democratie ?",
+          "type": "mcq",
+          "options": [
+            "Les citoyens sont egaux devant la loi, les magistrats designes par leur merite",
+            "Le roi est tout-puissant",
+            "Les riches dirigent",
+            "La democratie est faible"
+          ],
+          "correct": 0,
+          "solution": "Egalite devant la loi, magistrats designes par leur merite, interets de la masse"
+        },
+        {
+          "text": "Quelle decision transforme l'aspect d'Athenes ?",
+          "type": "mcq",
+          "options": [
+            "L'embellissement : monuments somptueux sur l'Acropole",
+            "La construction d'un mur",
+            "La deportation des meteques",
+            "La fermeture de l'Agora"
+          ],
+          "correct": 0,
+          "solution": "Pericles embellit Athenes avec de somptueux monuments sur l'Acropole"
+        },
+        {
+          "text": "Pourquoi Pericles suscite-t-il de la mefiance ?",
+          "type": "mcq",
+          "options": [
+            "Origines aristocratiques, talent d'orateur craint, choix contestes, vote d'ostracisme",
+            "Parce qu'il est pauvre",
+            "Parce qu'il est etranger",
+            "Parce qu'il est jeune"
+          ],
+          "correct": 0,
+          "solution": "Origines aristocratiques, crainte de manipulation, ostracisme vote (mais pas applique)"
+        },
+        {
+          "text": "En quoi la guerre remet-elle en cause la democratie ?",
+          "type": "mcq",
+          "options": [
+            "Pericles peut prendre des decisions seul",
+            "Les citoyens votent plus",
+            "L'assemblée s'agrandit",
+            "La guerre renforce la democratie"
+          ],
+          "correct": 0,
+          "solution": "En temps de guerre, Pericles peut prendre des decisions seul"
+        },
+        {
+          "text": "Comment Pericles meurt-il ?",
+          "type": "mcq",
+          "options": [
+            "De la peste en 429 av. J.-C., pendant la guerre du Peloponnese",
+            "Battle de Marathon",
+            "Assassine par des oligarques",
+            "De vieillesse"
+          ],
+          "correct": 0,
+          "solution": "Pericles meurt de la peste en 429 av. J.-C."
+        }
+      ]
+    },
+    {
+      "category": "L'empire maritime et ses limites",
+      "questions": [
+        {
+          "text": "Quels sont les objectifs de Themistocle ?",
+          "type": "mcq",
+          "options": [
+            "Convertir le Pirée en port militaire, agrandir le prestige d'Athenes",
+            "Construire des temples",
+            "Inventer la democratie",
+            "Envahir la Perse"
+          ],
+          "correct": 0,
+          "solution": "Themistocle : port militaire du Pirée + flotte de guerre (victoire de Salamine)"
+        },
+        {
+          "text": "Qu'est-ce que les Longs Murs ?",
+          "type": "mcq",
+          "options": [
+            "Fortifications reliant Athenes au Pirée",
+            "Un mur d'enceinte d'Athenes",
+            "Une route commerciale",
+            "Des fortifications spartiates"
+          ],
+          "correct": 0,
+          "solution": "Les Longs Murs relient Athenes au Pirée : acces permanent a la mer"
+        },
+        {
+          "text": "Combien de trières compose la flotte athénienne ?",
+          "type": "mcq",
+          "options": [
+            "170 trières",
+            "50 trières",
+            "500 trières",
+            "10 trières"
+          ],
+          "correct": 0,
+          "solution": "170 trières (navires de guerre) = outil de puissance maritime"
+        },
+        {
+          "text": "Pourquoi les cites de la Ligue de Délos rejettent-elles la tutelle d'Athenes ?",
+          "type": "mcq",
+          "options": [
+            "Elles ne veulent pas se soustraire a leurs obligations et payer le tribut",
+            "Elles aiment Athenes",
+            "Elles ont peur de Sparte",
+            "Elles veulent plus de guerre"
+          ],
+          "correct": 0,
+          "solution": "Refus des obligations militaires et du tribut ; installation de colons (clerouquies)"
+        },
+        {
+          "text": "Comment Sparte met-elle fin a la puissance navale d'Athenes ?",
+          "type": "mcq",
+          "options": [
+            "Capture de la flotte, destruction des Longs Murs, flotte reduite a 12 navires",
+            "Par un traité commercial",
+            "En achetant les navires",
+            "En construisant un mur"
+          ],
+          "correct": 0,
+          "solution": "Lysandre capture la flotte : Longs Murs detruits, flotte reduite a 12 navires"
+        },
+        {
+          "text": "Quelles sont les limites de la democratie athénienne ?",
+          "type": "mcq",
+          "options": [
+            "Citoyens minoritaires, femmes/exclus, participation limitee, regles strictes, oligarques",
+            "Pas de limites",
+            "Trop de citoyens",
+            "Trop de magistrats"
+          ],
+          "correct": 0,
+          "solution": "40 000/300 000 ; femmes, meteques, esclaves exclus ; 4 000-6 000 presents a l'assemblee"
+        },
+        {
+          "text": "Quelles sont les limites de la puissance d'Athenes ?",
+          "type": "mcq",
+          "options": [
+            "Tensions imperiales, revoltes, rivalite Sparte, mort de Pericles, defaite 404",
+            "Athenes est toute-puissante",
+            "Pas de limites",
+            "Seulement la faim"
+          ],
+          "correct": 0,
+          "solution": "Politique imperiale contestee, Ligue rivale de Sparte, mort de Pericles, defaite 404"
+        },
+        {
+          "text": "Que devient la Ligue de Délos ?",
+          "type": "mcq",
+          "options": [
+            "Athenes la transforme progressivement en empire (tribut, repression)",
+            "Elle disparait",
+            "Elle devient democratique",
+            "Elle rejoint Sparte"
+          ],
+          "correct": 0,
+          "solution": "La Ligue de Delos est transformee en empire athénien : tribut et repression"
+        },
+        {
+          "text": "Quelle revolte illustre l'hostilite des cites a la Ligue ?",
+          "type": "mcq",
+          "options": [
+            "Revolte de Naxos (475-469 av. J.-C.)",
+            "Revolte de Rome",
+            "Revolte de Carthage",
+            "Revolte d'Egypte"
+          ],
+          "correct": 0,
+          "solution": "Revolte de Naxos, 475-469 av. J.-C."
+        },
+        {
+          "text": "Qui dirige la ligue rivale d'Athenes ?",
+          "type": "mcq",
+          "options": [
+            "Sparte (Ligue du Peloponnese)",
+            "Rome",
+            "Corinthe seule",
+            "Perse"
+          ],
+          "correct": 0,
+          "solution": "Sparte dirige la Ligue du Peloponnese, coalition rivale"
+        }
+      ]
+    }
+  ]
+}

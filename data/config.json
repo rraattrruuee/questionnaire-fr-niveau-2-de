@@ -98,6 +98,36 @@
       "added": "2026-09-12"
     },
     {
+      "id": "histoire-geo-vocabulaire-essentiel",
+      "title": "Vocabulaire essentiel d'histoire (Partie 1)",
+      "subject": "histoire-geo",
+      "file": "data/histoire-geo/vocabulaire-essentiel.json",
+      "questionsCount": 38,
+      "description": "Vocabulaire fondamental : cite, citoyen, deme, meteque, isonomie, democratie directe, Ecclésia, Boule, Heliée, ostracisme, Ligue de Delos, thalassocratie (38 questions).",
+      "tags": ["histoire", "vocabulaire", "athenes", "democratie"],
+      "added": "2026-09-26"
+    },
+    {
+      "id": "histoire-geo-periodes-athenes",
+      "title": "Periodisation historique et democratie athenienne (Partie 2)",
+      "subject": "histoire-geo",
+      "file": "data/histoire-geo/periodes-athenes.json",
+      "questionsCount": 46,
+      "description": "Les periodes historiques, Jack Goody et le vol de l'histoire, le monde grec, Pericles, l'empire maritime et les limites de la democratie (46 questions).",
+      "tags": ["histoire", "periodisation", "goody", "athenes", "pericles"],
+      "added": "2026-09-26"
+    },
+    {
+      "id": "italien-stile-presente",
+      "title": "Stile vestimentaire e presente dell'indicativo",
+      "subject": "italien",
+      "file": "data/italien/stile-presente.json",
+      "questionsCount": 92,
+      "description": "Style vestimentaire et justification (La persona fa parte dello stile... perché...), present de l'indicatif : verbes reguliers et irreguliers (92 questions autonomes).",
+      "tags": ["italien", "stile", "presente", "grammatica", "giustificazione"],
+      "added": "2026-09-26"
+    },
+    {
       "id": "italien-carattere-hobby-segni",
       "title": "Carattere, hobby e segni zodiacali",
       "subject": "italien",
@@ -136,6 +166,16 @@
       "description": "Cours de SES de Karine CHAKIR : les trois disciplines, ressources rares, enquêtes et données, corrélation et causalité (60 questions).",
       "tags": ["ses", "economie", "sociologie", "science-politique", "eco1"],
       "added": "2026-09-16"
+    },
+    {
+      "id": "anglais-warriors-pacific",
+      "title": "Warriors of the Pacific — vocabulaire et phonetique",
+      "subject": "anglais",
+      "file": "data/anglais/warriors-pacific.json",
+      "questionsCount": 235,
+      "description": "Traductions EN/FR, vocabulaire, antonymes, synonymes, climat, article de presse, typographie, phonetique RP, comprehension et grammaire (235 questions).",
+      "tags": ["anglais", "vocabulaire", "climat", "presse", "phonetique"],
+      "added": "2026-09-26"
     },
     {
       "id": "anglais-verbes-irreguliers",

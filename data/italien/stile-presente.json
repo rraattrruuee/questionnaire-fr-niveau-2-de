@@ -1,0 +1,1136 @@
+{
+  "subject": "italien",
+  "title": "Stile vestimentaire e presente dell'indicativo",
+  "description": "Style vestimentaire et justification, present de l'indicatif — 100 questions autonomes.",
+  "categories": [
+    {
+      "category": "Lo stile vestimentaire — vocabolario",
+      "questions": [
+        {
+          "text": "Quel style décrit quelqu'un qui porte des vêtements de sport, baskets, survêtement ?",
+          "type": "mcq",
+          "options": [
+            "sportivo",
+            "elegante",
+            "casual",
+            "chic"
+          ],
+          "correct": 0,
+          "solution": "Sportivo = style sportif"
+        },
+        {
+          "text": "Quel style décrit quelqu'un qui porte une robe, des talons, un costume ?",
+          "type": "mcq",
+          "options": [
+            "elegante",
+            "sportivo",
+            "casual",
+            "rock"
+          ],
+          "correct": 0,
+          "solution": "Elegante = élégant"
+        },
+        {
+          "text": "Quel style décrit quelqu'un qui porte un jean et un t-shirt simple ?",
+          "type": "mcq",
+          "options": [
+            "casual",
+            "elegante",
+            "chic",
+            "rock"
+          ],
+          "correct": 0,
+          "solution": "Casual = décontracté"
+        },
+        {
+          "text": "Quel style décrit quelqu'un avec des vêtements raffinés, de luxe ?",
+          "type": "mcq",
+          "options": [
+            "chic",
+            "sportivo",
+            "casual",
+            "hippie"
+          ],
+          "correct": 0,
+          "solution": "Chic = chic, raffiné"
+        },
+        {
+          "text": "Quel style décrit quelqu'un avec du cuir, des bottes, des épingles ?",
+          "type": "mcq",
+          "options": [
+            "rock",
+            "chic",
+            "elegante",
+            "casual"
+          ],
+          "correct": 0,
+          "solution": "Rock = style rock"
+        },
+        {
+          "text": "Que signifie « vestito » en français ?",
+          "type": "mcq",
+          "options": [
+            "vêtu / habillé",
+            "chaussé",
+            "coiffé",
+            "équipé"
+          ],
+          "correct": 0,
+          "solution": "Vestito = vêtu, habillé"
+        },
+        {
+          "text": "Comment dit-on « habillé avec » en italien ?",
+          "type": "mcq",
+          "options": [
+            "vestito con",
+            "portato con",
+            "indossato con",
+            "messo con"
+          ],
+          "correct": 0,
+          "solution": "È vestita con = habillée avec"
+        },
+        {
+          "text": "Que signifie « abbigliamento » ?",
+          "type": "mcq",
+          "options": [
+            "vêtements / tenue",
+            "chaussures",
+            "accessoires",
+            "coiffure"
+          ],
+          "correct": 0,
+          "solution": "Abbigliamento = vêtements, tenue"
+        },
+        {
+          "text": "Quel mot signifie « chaussures » ?",
+          "type": "mcq",
+          "options": [
+            "scarpe",
+            "camicia",
+            "pantaloni",
+            "giacca"
+          ],
+          "correct": 0,
+          "solution": "Scarpe = chaussures"
+        },
+        {
+          "text": "Quel mot signifie « veste / blazer » ?",
+          "type": "mcq",
+          "options": [
+            "giacca",
+            "maglia",
+            "camicia",
+            "scarpe"
+          ],
+          "correct": 0,
+          "solution": "Giacca = veste, blazer"
+        },
+        {
+          "text": "Quel mot signifie « jupe » ?",
+          "type": "mcq",
+          "options": [
+            "gonna",
+            "pantaloni",
+            "camicia",
+            "maglia"
+          ],
+          "correct": 0,
+          "solution": "Gonna = jupe"
+        },
+        {
+          "text": "Quel mot signifie « robe » ?",
+          "type": "mcq",
+          "options": [
+            "abito",
+            "gonna",
+            "camicia",
+            "maglia"
+          ],
+          "correct": 0,
+          "solution": "Abito = robe"
+        },
+        {
+          "text": "Comment dit-on « pull / t-shirt » ?",
+          "type": "mcq",
+          "options": [
+            "maglia",
+            "camicia",
+            "giacca",
+            "scarpe"
+          ],
+          "correct": 0,
+          "solution": "Maglia = pull, t-shirt"
+        },
+        {
+          "text": "Que signifie « calzini » ?",
+          "type": "mcq",
+          "options": [
+            "chaussettes",
+            "chaussures",
+            "gants",
+            "écharpe"
+          ],
+          "correct": 0,
+          "solution": "Calzini = chaussettes"
+        },
+        {
+          "text": "Que signifie « cintura » ?",
+          "type": "mcq",
+          "options": [
+            "ceinture",
+            "cravate",
+            "chapeau",
+            "gants"
+          ],
+          "correct": 0,
+          "solution": "Cintura = ceinture"
+        },
+        {
+          "text": "Que signifie « berretto / cappello » ?",
+          "type": "mcq",
+          "options": [
+            "chapeau / bonnet",
+            "écharpe",
+            "gants",
+            "lunettes"
+          ],
+          "correct": 0,
+          "solution": "Cappello = chapeau"
+        }
+      ]
+    },
+    {
+      "category": "Lo stile — la frase di giustificazione",
+      "questions": [
+        {
+          "text": "Complétez : « La persona fa parte dello stile ____ perché porta una maglia e dei jeans. »",
+          "type": "mcq",
+          "options": [
+            "casual",
+            "elegante",
+            "chic",
+            "rock"
+          ],
+          "correct": 0,
+          "solution": "Style casual car il porte un t-shirt et un jean"
+        },
+        {
+          "text": "Complétez : « Fa parte dello stile ____ perché indossa un abito e delle scarpe eleganti. »",
+          "type": "mcq",
+          "options": [
+            "elegante",
+            "sportivo",
+            "casual",
+            "rock"
+          ],
+          "correct": 0,
+          "solution": "Style élégant car il porte une robe et des chaussures élégantes"
+        },
+        {
+          "text": "Complétez : « Fa parte dello stile ____ perché è vestita con delle Nike e un complet sportivo. »",
+          "type": "mcq",
+          "options": [
+            "sportivo",
+            "chic",
+            "elegante",
+            "casual"
+          ],
+          "correct": 0,
+          "solution": "Style sportif car elle est habillée avec des Nike"
+        },
+        {
+          "text": "Complétez : « Fa parte dello stile ____ perché porta dei pantaloni neri e una giacca di pelle. »",
+          "type": "mcq",
+          "options": [
+            "rock",
+            "chic",
+            "sportivo",
+            "casual"
+          ],
+          "correct": 0,
+          "solution": "Style rock car il porte un blouson en cuir"
+        },
+        {
+          "text": "Complétez : « Fa parte dello stile ____ perché indossa accessori di lusso e un abito costoso. »",
+          "type": "mcq",
+          "options": [
+            "chic",
+            "sportivo",
+            "casual",
+            "rock"
+          ],
+          "correct": 0,
+          "solution": "Style chic car elle porte des accessoires de luxe"
+        },
+        {
+          "text": "Quelle est la structure correcte pour justifier un style ?",
+          "type": "mcq",
+          "options": [
+            "La persona fa parte dello stile « X » perché porta / indossa / è vestita con…",
+            "La persona è dello stile perché fa",
+            "Lo stile della persona perché indossa",
+            "Perché la persona fa parte dello stile"
+          ],
+          "correct": 0,
+          "solution": "Structure : La persona fa parte dello stile « X » perché ... porta/indossa/è vestita con..."
+        },
+        {
+          "text": "Comment dit-on « parce qu'elle porte » ?",
+          "type": "mcq",
+          "options": [
+            "perché porta",
+            "perché fa",
+            "perché è",
+            "perché ha"
+          ],
+          "correct": 0,
+          "solution": "Perché porta = parce qu'elle porte"
+        },
+        {
+          "text": "Comment dit-on « parce qu'elle porte (vêtement) » avec indossare ?",
+          "type": "mcq",
+          "options": [
+            "perché indossa",
+            "perché porta",
+            "perché veste",
+            "perché mette"
+          ],
+          "correct": 0,
+          "solution": "Perché indossa = parce qu'elle porte (un vêtement)"
+        },
+        {
+          "text": "Comment dit-on « parce qu'elle est habillée avec » ?",
+          "type": "mcq",
+          "options": [
+            "perché è vestita con",
+            "perché porta con",
+            "perché indossa con",
+            "perché fa con"
+          ],
+          "correct": 0,
+          "solution": "Perché è vestita con = parce qu'elle est habillée avec"
+        },
+        {
+          "text": "Complétez : « La persona fa parte dello stile sportivo ____ corre ogni mattina. »",
+          "type": "mcq",
+          "options": [
+            "perché",
+            "perché è",
+            "perché ha",
+            "perché fa"
+          ],
+          "correct": 0,
+          "solution": "Perché = parce que"
+        },
+        {
+          "text": "Quelle phrase est grammaticalement correcte ?",
+          "type": "mcq",
+          "options": [
+            "Fa parte dello stile casual perché porta jeans e maglia.",
+            "Fa parte dello stile casual perché indossa jeans e maglia.",
+            "Fa parte dello stile casual perché è vestita con jeans e maglia.",
+            "Toutes les réponses sont correctes"
+          ],
+          "correct": 3,
+          "solution": "Les trois structures (porta / indossa / è vestita con) sont correctes"
+        },
+        {
+          "text": "Complétez : « Fa parte dello stile elegante ____ indossa un vestito lungo. »",
+          "type": "mcq",
+          "options": [
+            "perché",
+            "perché è",
+            "perché ha",
+            "perché fa"
+          ],
+          "correct": 0,
+          "solution": "Perché indossa = parce qu'elle porte"
+        },
+        {
+          "text": "Complétez : « Fa parte dello stile sportivo ____ è vestita con delle scarpe da corsa. »",
+          "type": "mcq",
+          "options": [
+            "perché",
+            "perché è",
+            "perché ha",
+            "perché fa"
+          ],
+          "correct": 0,
+          "solution": "Perché è vestita con = parce qu'elle est habillée avec"
+        },
+        {
+          "text": "Quel verbe utilise-t-on pour dire « la personne appartient au style X » ?",
+          "type": "mcq",
+          "options": [
+            "fa parte dello stile",
+            "è dello stile",
+            "ha lo stile",
+            "fa lo stile"
+          ],
+          "correct": 0,
+          "solution": "Fa parte dello stile = fait partie du style"
+        }
+      ]
+    },
+    {
+      "category": "Il presente — verbi regolari (-are, -ere, -ire)",
+      "questions": [
+        {
+          "text": "Conjugaison de « parlare » (je parle) à la 1re personne du singulier ?",
+          "type": "mcq",
+          "options": [
+            "parlo",
+            "parli",
+            "parla",
+            "parlano"
+          ],
+          "correct": 0,
+          "solution": "Io parlo"
+        },
+        {
+          "text": "Conjugaison de « parlare » (tu parles) ?",
+          "type": "mcq",
+          "options": [
+            "parli",
+            "parlo",
+            "parla",
+            "parliamo"
+          ],
+          "correct": 0,
+          "solution": "Tu parli"
+        },
+        {
+          "text": "Conjugaison de « parlare » (il/elle parle) ?",
+          "type": "mcq",
+          "options": [
+            "parla",
+            "parlo",
+            "parli",
+            "parlano"
+          ],
+          "correct": 0,
+          "solution": "Lui/Lei parla"
+        },
+        {
+          "text": "Conjugaison de « parlare » (nous parlons) ?",
+          "type": "mcq",
+          "options": [
+            "parliamo",
+            "parlate",
+            "parlano",
+            "parla"
+          ],
+          "correct": 0,
+          "solution": "Noi parliamo"
+        },
+        {
+          "text": "Conjugaison de « parlare » (vous parlez) ?",
+          "type": "mcq",
+          "options": [
+            "parlate",
+            "parliamo",
+            "parlano",
+            "parli"
+          ],
+          "correct": 0,
+          "solution": "Voi parlate"
+        },
+        {
+          "text": "Conjugaison de « parlare » (ils/elles parlent) ?",
+          "type": "mcq",
+          "options": [
+            "parlano",
+            "parlate",
+            "parliamo",
+            "parla"
+          ],
+          "correct": 0,
+          "solution": "Loro parlano"
+        },
+        {
+          "text": "Conjugaison de « scrivere » (j'écris) ?",
+          "type": "mcq",
+          "options": [
+            "scrivo",
+            "scrivi",
+            "scrive",
+            "scriviamo"
+          ],
+          "correct": 0,
+          "solution": "Io scrivo"
+        },
+        {
+          "text": "Conjugaison de « scrivere » (tu écris) ?",
+          "type": "mcq",
+          "options": [
+            "scrivi",
+            "scrivo",
+            "scrive",
+            "scrivete"
+          ],
+          "correct": 0,
+          "solution": "Tu scrivi"
+        },
+        {
+          "text": "Conjugaison de « scrivere » (il écrit) ?",
+          "type": "mcq",
+          "options": [
+            "scrive",
+            "scrivo",
+            "scrivi",
+            "scrivono"
+          ],
+          "correct": 0,
+          "solution": "Lui scrive"
+        },
+        {
+          "text": "Conjugaison de « scrivere » (nous écrivons) ?",
+          "type": "mcq",
+          "options": [
+            "scriviamo",
+            "scrivete",
+            "scrivono",
+            "scrive"
+          ],
+          "correct": 0,
+          "solution": "Noi scriviamo"
+        },
+        {
+          "text": "Conjugaison de « leggere » (ils lisent) ?",
+          "type": "mcq",
+          "options": [
+            "leggono",
+            "leggiamo",
+            "leggete",
+            "legge"
+          ],
+          "correct": 0,
+          "solution": "Loro leggono"
+        },
+        {
+          "text": "Conjugaison de « dormir » (je dors) ?",
+          "type": "mcq",
+          "options": [
+            "dormo",
+            "dormi",
+            "dorme",
+            "dormiamo"
+          ],
+          "correct": 0,
+          "solution": "Io dormo"
+        },
+        {
+          "text": "Conjugaison de « dormir » (tu dors) ?",
+          "type": "mcq",
+          "options": [
+            "dormi",
+            "dormo",
+            "dorme",
+            "dormite"
+          ],
+          "correct": 0,
+          "solution": "Tu dormi"
+        },
+        {
+          "text": "Conjugaison de « dormir » (nous dormons) ?",
+          "type": "mcq",
+          "options": [
+            "dormiamo",
+            "dormite",
+            "dormono",
+            "dorme"
+          ],
+          "correct": 0,
+          "solution": "Noi dormiamo"
+        },
+        {
+          "text": "Conjugaison de « finire » (je finis) — verbe en -ire ?",
+          "type": "mcq",
+          "options": [
+            "finisco",
+            "finisci",
+            "finisce",
+            "finiamo"
+          ],
+          "correct": 0,
+          "solution": "Io finisco"
+        },
+        {
+          "text": "Conjugaison de « finire » (tu finis) ?",
+          "type": "mcq",
+          "options": [
+            "finisci",
+            "finisco",
+            "finisce",
+            "finiscono"
+          ],
+          "correct": 0,
+          "solution": "Tu finisci"
+        },
+        {
+          "text": "Conjugaison de « capire » (il comprend) ?",
+          "type": "mcq",
+          "options": [
+            "capisce",
+            "capisco",
+            "capisci",
+            "capiscono"
+          ],
+          "correct": 0,
+          "solution": "Lui capisce"
+        },
+        {
+          "text": "Comment forme-t-on le présent du verbe en -are ?",
+          "type": "mcq",
+          "options": [
+            "-o, -i, -a, -iamo, -ate, -ano",
+            "-o, -i, -e, -iamo, -ete, -ono",
+            "-o, -i, -a, -iamo, -iti, -ano",
+            "-o, -e, -i, -iamo, -ate, -ano"
+          ],
+          "correct": 0,
+          "solution": "Verbes en -are : -o, -i, -a, -iamo, -ate, -ano"
+        },
+        {
+          "text": "Comment forme-t-on le présent du verbe en -ere ?",
+          "type": "mcq",
+          "options": [
+            "-o, -i, -e, -iamo, -ete, -ono",
+            "-o, -i, -a, -iamo, -ate, -ano",
+            "-o, -i, -e, -iamo, -ate, -ono",
+            "-o, -e, -i, -iamo, -ete, -ano"
+          ],
+          "correct": 0,
+          "solution": "Verbes en -ere : -o, -i, -e, -iamo, -ete, -ono"
+        },
+        {
+          "text": "Comment forme-t-on le présent du verbe en -ire ?",
+          "type": "mcq",
+          "options": [
+            "-o, -i, -e, -iamo, -ite, -ono",
+            "-o, -i, -a, -iamo, -ate, -ano",
+            "-o, -i, -e, -iamo, -ete, -ono",
+            "-o, -e, -i, -iamo, -ite, -ano"
+          ],
+          "correct": 0,
+          "solution": "Verbes en -ire : -o, -i, -e, -iamo, -ite, -ono"
+        }
+      ]
+    },
+    {
+      "category": "Il presente — verbi irregolari",
+      "questions": [
+        {
+          "text": "Conjugaison de « essere » (je suis) ?",
+          "type": "mcq",
+          "options": [
+            "sono",
+            "sei",
+            "è",
+            "siamo"
+          ],
+          "correct": 0,
+          "solution": "Io sono"
+        },
+        {
+          "text": "Conjugaison de « essere » (tu es) ?",
+          "type": "mcq",
+          "options": [
+            "sei",
+            "sono",
+            "è",
+            "siete"
+          ],
+          "correct": 0,
+          "solution": "Tu sei"
+        },
+        {
+          "text": "Conjugaison de « essere » (il/elle est) ?",
+          "type": "mcq",
+          "options": [
+            "è",
+            "sono",
+            "sei",
+            "sono"
+          ],
+          "correct": 0,
+          "solution": "Lui/Lei è"
+        },
+        {
+          "text": "Conjugaison de « essere » (nous sommes) ?",
+          "type": "mcq",
+          "options": [
+            "siamo",
+            "siete",
+            "sono",
+            "è"
+          ],
+          "correct": 0,
+          "solution": "Noi siamo"
+        },
+        {
+          "text": "Conjugaison de « essere » (vous êtes) ?",
+          "type": "mcq",
+          "options": [
+            "siete",
+            "siamo",
+            "sono",
+            "sei"
+          ],
+          "correct": 0,
+          "solution": "Voi siete"
+        },
+        {
+          "text": "Conjugaison de « essere » (ils sont) ?",
+          "type": "mcq",
+          "options": [
+            "sono",
+            "siete",
+            "siamo",
+            "è"
+          ],
+          "correct": 0,
+          "solution": "Loro sono"
+        },
+        {
+          "text": "Conjugaison de « avere » (j'ai) ?",
+          "type": "mcq",
+          "options": [
+            "ho",
+            "hai",
+            "ha",
+            "abbiamo"
+          ],
+          "correct": 0,
+          "solution": "Io ho"
+        },
+        {
+          "text": "Conjugaison de « avere » (tu as) ?",
+          "type": "mcq",
+          "options": [
+            "hai",
+            "ho",
+            "ha",
+            "avete"
+          ],
+          "correct": 0,
+          "solution": "Tu hai"
+        },
+        {
+          "text": "Conjugaison de « avere » (il a) ?",
+          "type": "mcq",
+          "options": [
+            "ha",
+            "ho",
+            "hai",
+            "hanno"
+          ],
+          "correct": 0,
+          "solution": "Lui ha"
+        },
+        {
+          "text": "Conjugaison de « avere » (nous avons) ?",
+          "type": "mcq",
+          "options": [
+            "abbiamo",
+            "avete",
+            "hanno",
+            "ha"
+          ],
+          "correct": 0,
+          "solution": "Noi abbiamo"
+        },
+        {
+          "text": "Conjugaison de « andare » (je vais) ?",
+          "type": "mcq",
+          "options": [
+            "vado",
+            "vai",
+            "va",
+            "andiamo"
+          ],
+          "correct": 0,
+          "solution": "Io vado"
+        },
+        {
+          "text": "Conjugaison de « andare » (tu vas) ?",
+          "type": "mcq",
+          "options": [
+            "vai",
+            "vado",
+            "va",
+            "andate"
+          ],
+          "correct": 0,
+          "solution": "Tu vai"
+        },
+        {
+          "text": "Conjugaison de « andare » (il va) ?",
+          "type": "mcq",
+          "options": [
+            "va",
+            "vado",
+            "vai",
+            "vanno"
+          ],
+          "correct": 0,
+          "solution": "Lui va"
+        },
+        {
+          "text": "Conjugaison de « andare » (nous allons) ?",
+          "type": "mcq",
+          "options": [
+            "andiamo",
+            "andate",
+            "vanno",
+            "va"
+          ],
+          "correct": 0,
+          "solution": "Noi andiamo"
+        },
+        {
+          "text": "Conjugaison de « fare » (je fais) ?",
+          "type": "mcq",
+          "options": [
+            "faccio",
+            "fai",
+            "fa",
+            "facciamo"
+          ],
+          "correct": 0,
+          "solution": "Io faccio"
+        },
+        {
+          "text": "Conjugaison de « fare » (tu fais) ?",
+          "type": "mcq",
+          "options": [
+            "fai",
+            "faccio",
+            "fa",
+            "fate"
+          ],
+          "correct": 0,
+          "solution": "Tu fai"
+        },
+        {
+          "text": "Conjugaison de « fare » (il fait) ?",
+          "type": "mcq",
+          "options": [
+            "fa",
+            "faccio",
+            "fai",
+            "fanno"
+          ],
+          "correct": 0,
+          "solution": "Lui fa"
+        },
+        {
+          "text": "Conjugaison de « venire » (je viens) ?",
+          "type": "mcq",
+          "options": [
+            "vengo",
+            "vieni",
+            "viene",
+            "veniamo"
+          ],
+          "correct": 0,
+          "solution": "Io vengo"
+        },
+        {
+          "text": "Conjugaison de « dire » (je dis) ?",
+          "type": "mcq",
+          "options": [
+            "dico",
+            "dici",
+            "dice",
+            "diciamo"
+          ],
+          "correct": 0,
+          "solution": "Io dico"
+        },
+        {
+          "text": "Conjugaison de « dare » (je donne) ?",
+          "type": "mcq",
+          "options": [
+            "do",
+            "dai",
+            "dà",
+            "diamo"
+          ],
+          "correct": 0,
+          "solution": "Io do"
+        },
+        {
+          "text": "Conjugaison de « stare » (je suis / je reste) ?",
+          "type": "mcq",
+          "options": [
+            "sto",
+            "stai",
+            "sta",
+            "stiamo"
+          ],
+          "correct": 0,
+          "solution": "Io sto"
+        },
+        {
+          "text": "Conjugaison de « volere » (je veux) ?",
+          "type": "mcq",
+          "options": [
+            "voglio",
+            "vuoi",
+            "vuole",
+            "vogliamo"
+          ],
+          "correct": 0,
+          "solution": "Io voglio"
+        },
+        {
+          "text": "Conjugaison de « potere » (je peux) ?",
+          "type": "mcq",
+          "options": [
+            "posso",
+            "puoi",
+            "può",
+            "possiamo"
+          ],
+          "correct": 0,
+          "solution": "Io posso"
+        },
+        {
+          "text": "Conjugaison de « dovere » (je dois) ?",
+          "type": "mcq",
+          "options": [
+            "devo",
+            "devi",
+            "deve",
+            "dobbiamo"
+          ],
+          "correct": 0,
+          "solution": "Io devo"
+        },
+        {
+          "text": "Conjugaison de « sapere » (je sais) ?",
+          "type": "mcq",
+          "options": [
+            "so",
+            "sai",
+            "sa",
+            "sappiamo"
+          ],
+          "correct": 0,
+          "solution": "Io so"
+        },
+        {
+          "text": "Conjugaison de « uscire » (je sors) ?",
+          "type": "mcq",
+          "options": [
+            "esco",
+            "esci",
+            "esce",
+            "usciamo"
+          ],
+          "correct": 0,
+          "solution": "Io esco"
+        }
+      ]
+    },
+    {
+      "category": "Il presente — emploi et phrases",
+      "questions": [
+        {
+          "text": "À quoi sert le présent de l'indicatif ?",
+          "type": "mcq",
+          "options": [
+            "Exprimer une action actuelle, habituelle ou une vérité générale",
+            "Exprimer une action passée",
+            "Exprimer un ordre",
+            "Exprimer une condition"
+          ],
+          "correct": 0,
+          "solution": "Le présent exprime une action actuelle, habituelle ou générale"
+        },
+        {
+          "text": "Complétez : « Io ___ a scuola ogni mattina. » (je vais à l'école)",
+          "type": "mcq",
+          "options": [
+            "vado",
+            "vai",
+            "va",
+            "andiamo"
+          ],
+          "correct": 0,
+          "solution": "Io vado a scuola ogni mattina"
+        },
+        {
+          "text": "Complétez : « Lui ___ la pizza tutti i giorni. » (il mange)",
+          "type": "mcq",
+          "options": [
+            "mangia",
+            "mangi",
+            "mangio",
+            "mangiamo"
+          ],
+          "correct": 0,
+          "solution": "Lui mangia la pizza tutti i giorni"
+        },
+        {
+          "text": "Complétez : « Noi ___ italiano a scuola. » (nous étudions)",
+          "type": "mcq",
+          "options": [
+            "studiare",
+            "studiamo",
+            "studi",
+            "studiano"
+          ],
+          "correct": 0,
+          "solution": "Noi studiamo italiano"
+        },
+        {
+          "text": "Complétez : « Tu ___ molto bene. » (tu chantes bien)",
+          "type": "mcq",
+          "options": [
+            "canti",
+            "canto",
+            "canta",
+            "cantiamo"
+          ],
+          "correct": 0,
+          "solution": "Tu canti molto bene"
+        },
+        {
+          "text": "Complétez : \"Io ___ la colazione alle 7. \" (je prends le petit-déjeuner)",
+          "type": "mcq",
+          "options": [
+            "faccio",
+            "fai",
+            "fa",
+            "facciamo"
+          ],
+          "correct": 0,
+          "solution": "Io faccio la colazione alle 7"
+        },
+        {
+          "text": "Complétez : « Loro ___ nella classe 2B. » (ils sont)",
+          "type": "mcq",
+          "options": [
+            "sono",
+            "è",
+            "sei",
+            "siete"
+          ],
+          "correct": 0,
+          "solution": "Loro sono nella classe 2B"
+        },
+        {
+          "text": "Complétez : « Io ___ una sorella. » (j'ai une sœur)",
+          "type": "mcq",
+          "options": [
+            "ho",
+            "hai",
+            "ha",
+            "abbiamo"
+          ],
+          "correct": 0,
+          "solution": "Io ho una sorella"
+        },
+        {
+          "text": "Complétez : « Voi ___ amici di Mario. » (vous êtes)",
+          "type": "mcq",
+          "options": [
+            "siete",
+            "siamo",
+            "sono",
+            "è"
+          ],
+          "correct": 0,
+          "solution": "Voi siete amici di Mario"
+        },
+        {
+          "text": "Complétez : « Lui ___ il compito la sera. » (il fait ses devoirs)",
+          "type": "mcq",
+          "options": [
+            "fa",
+            "faccio",
+            "fai",
+            "facciamo"
+          ],
+          "correct": 0,
+          "solution": "Lui fa il compito la sera"
+        },
+        {
+          "text": "Complétez : « Io ___ spesso con i miei amici. » (je sors souvent)",
+          "type": "mcq",
+          "options": [
+            "esco",
+            "esci",
+            "esce",
+            "usciamo"
+          ],
+          "correct": 0,
+          "solution": "Io esco spesso con i miei amici"
+        },
+        {
+          "text": "Complétez : « Noi ___ presto la mattina. » (nous nous levons tôt)",
+          "type": "mcq",
+          "options": [
+            "ci alziamo",
+            "ti alzi",
+            "si alza",
+            "vi alzate"
+          ],
+          "correct": 0,
+          "solution": "Noi ci alziamo presto la mattina"
+        },
+        {
+          "text": "Complétez : « Tu ___ molto bene l'italiano. » (tu sais)",
+          "type": "mcq",
+          "options": [
+            "sai",
+            "so",
+            "sa",
+            "sappiamo"
+          ],
+          "correct": 0,
+          "solution": "Tu sai molto bene l'italiano"
+        },
+        {
+          "text": "Complétez : « Io ___ andare a Roma domani. » (je veux)",
+          "type": "mcq",
+          "options": [
+            "voglio",
+            "vuoi",
+            "vuole",
+            "vogliamo"
+          ],
+          "correct": 0,
+          "solution": "Io voglio andare a Roma domani"
+        },
+        {
+          "text": "Complétez : « Lui ___ parlare italiano. » (il peut)",
+          "type": "mcq",
+          "options": [
+            "può",
+            "posso",
+            "puoi",
+            "possiamo"
+          ],
+          "correct": 0,
+          "solution": "Lui può parlare italiano"
+        },
+        {
+          "text": "Quel temps utilise-t-on pour dire « chaque jour je ... » ?",
+          "type": "mcq",
+          "options": [
+            "le présent de l'indicatif",
+            "le passé composé",
+            "l'imparfait",
+            "le futur"
+          ],
+          "correct": 0,
+          "solution": "Le présent exprime les actions habituelles"
+        }
+      ]
+    }
+  ]
+}

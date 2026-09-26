@@ -4,11 +4,15 @@ const STATIC_ASSETS = [
   "./css/quiz.css",
   "./css/theme.css",
   "./data/anglais/verbes-irreguliers.json",
+  "./data/anglais/warriors-pacific.json",
   "./data/config.json",
   "./data/francais/outils-analyse-litteraire.json",
+  "./data/histoire-geo/periodes-athenes.json",
+  "./data/histoire-geo/vocabulaire-essentiel.json",
   "./data/italien/carattere-hobby-segni.json",
   "./data/italien/esprimere-gusti-frequenza.json",
   "./data/italien/presentare-una-persona.json",
+  "./data/italien/stile-presente.json",
   "./data/mathematiques/calcul-litteral-numerique.json",
   "./data/ses/introduction-chapitre1-eco1.json",
   "./index.html",
@@ -28,7 +32,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1790182311";
+const CACHE_NAME = "quiz-cache-1790456802";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
