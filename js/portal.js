@@ -430,6 +430,114 @@
     }
   }
 
+  /* ---------------------------------------------------------
+     Paramètres d'affichage (délais avant disparition)
+     --------------------------------------------------------- */
+  const SETTINGS_KEY = "quiz-display-settings";
+  const SETTINGS_DEFAULTS = { correctDelay: 1100, wrongDelay: 3200 };
+  const DELAY_MIN_MS = 0;
+  const DELAY_MAX_MS = 15000;
+
+  function loadDisplaySettings() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "null");
+      if (!raw || typeof raw !== "object") return { ...SETTINGS_DEFAULTS };
+      const correct = Number(raw.correctDelay);
+      const wrong = Number(raw.wrongDelay);
+      return {
+        correctDelay:
+          Number.isFinite(correct) && correct >= DELAY_MIN_MS && correct <= DELAY_MAX_MS
+            ? correct
+            : SETTINGS_DEFAULTS.correctDelay,
+        wrongDelay:
+          Number.isFinite(wrong) && wrong >= DELAY_MIN_MS && wrong <= DELAY_MAX_MS
+            ? wrong
+            : SETTINGS_DEFAULTS.wrongDelay
+      };
+    } catch (e) {
+      return { ...SETTINGS_DEFAULTS };
+    }
+  }
+
+  function saveDisplaySettings(settings) {
+    try {
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+    } catch (e) {}
+  }
+
+  function initSettingsModal() {
+    const modal = document.getElementById("settings-modal");
+    const openBtn = document.getElementById("settings-toggle");
+    if (!modal || !openBtn) return;
+
+    const correctInput = document.getElementById("delay-correct");
+    const wrongInput = document.getElementById("delay-wrong");
+    const correctValue = document.getElementById("delay-correct-value");
+    const wrongValue = document.getElementById("delay-wrong-value");
+    const saveBtn = document.getElementById("settings-save");
+    const resetBtn = document.getElementById("settings-reset");
+
+    const formatDelay = (ms) =>
+      ms <= 0 ? "Manuel" : (ms / 1000).toFixed(1).replace(".", ",") + " s";
+
+    function refreshLabels() {
+      correctValue.textContent = formatDelay(Math.round(parseFloat(correctInput.value) * 1000));
+      wrongValue.textContent = formatDelay(Math.round(parseFloat(wrongInput.value) * 1000));
+    }
+
+    function fillForm() {
+      const s = loadDisplaySettings();
+      correctInput.value = (s.correctDelay / 1000).toFixed(1);
+      wrongInput.value = (s.wrongDelay / 1000).toFixed(1);
+      refreshLabels();
+    }
+
+    function open() {
+      fillForm();
+      modal.classList.remove("hidden");
+      document.documentElement.style.overflow = "hidden";
+    }
+
+    function close() {
+      modal.classList.add("hidden");
+      document.documentElement.style.overflow = "";
+    }
+
+    openBtn.addEventListener("click", open);
+    modal.querySelectorAll("[data-settings-close]").forEach((el) => {
+      el.addEventListener("click", close);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) close();
+    });
+
+    correctInput.addEventListener("input", refreshLabels);
+    wrongInput.addEventListener("input", refreshLabels);
+
+    resetBtn.addEventListener("click", () => {
+      correctInput.value = (SETTINGS_DEFAULTS.correctDelay / 1000).toFixed(1);
+      wrongInput.value = (SETTINGS_DEFAULTS.wrongDelay / 1000).toFixed(1);
+      refreshLabels();
+    });
+
+    saveBtn.addEventListener("click", () => {
+      const settings = {
+        correctDelay: Math.max(DELAY_MIN_MS, Math.min(DELAY_MAX_MS, Math.round(parseFloat(correctInput.value) * 1000) || 0)),
+        wrongDelay: Math.max(DELAY_MIN_MS, Math.min(DELAY_MAX_MS, Math.round(parseFloat(wrongInput.value) * 1000) || 0))
+      };
+      saveDisplaySettings(settings);
+      if (window.__analytics) {
+        window.__analytics.track("portal_settings_save", {
+          correct_delay_ms: settings.correctDelay,
+          wrong_delay_ms: settings.wrongDelay
+        });
+      }
+      close();
+    });
+  }
+
+  initSettingsModal();
+
   fetch("data/config.json")
     .then((res) => res.json())
     .then((config) => {

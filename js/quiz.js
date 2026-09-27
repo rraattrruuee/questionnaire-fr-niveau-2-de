@@ -15,6 +15,39 @@
   var quizInProgress = false;
   var subjectName = "";
   var notepadEnabled = false;
+  var pendingAdvance = null;
+  var advancing = false;
+
+  var DISPLAY_SETTINGS_KEY = "quiz-display-settings";
+  var DEFAULT_DISPLAY_SETTINGS = { correctDelay: 1100, wrongDelay: 3200 };
+
+  function loadDisplaySettings() {
+    try {
+      var raw = JSON.parse(localStorage.getItem(DISPLAY_SETTINGS_KEY) || "null");
+      if (!raw || typeof raw !== "object") return { ...DEFAULT_DISPLAY_SETTINGS };
+      var correct = Number(raw.correctDelay);
+      var wrong = Number(raw.wrongDelay);
+      return {
+        correctDelay:
+          Number.isFinite(correct) && correct >= 0 && correct <= 15000
+            ? correct
+            : DEFAULT_DISPLAY_SETTINGS.correctDelay,
+        wrongDelay:
+          Number.isFinite(wrong) && wrong >= 0 && wrong <= 15000
+            ? wrong
+            : DEFAULT_DISPLAY_SETTINGS.wrongDelay
+      };
+    } catch (e) {
+      return { ...DEFAULT_DISPLAY_SETTINGS };
+    }
+  }
+
+  function cancelPendingAdvance() {
+    if (pendingAdvance) {
+      clearTimeout(pendingAdvance);
+      pendingAdvance = null;
+    }
+  }
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -170,6 +203,7 @@
   }
 
   function showOnly(id) {
+    if (id !== "quiz-area") cancelPendingAdvance();
     ["category-area", "quiz-area", "results"].forEach(function (x) {
       $(x).classList.toggle("hidden", x !== id);
     });
@@ -287,6 +321,7 @@
   }
 
   function startCategory(idx) {
+    cancelPendingAdvance();
     currentCategoryIndex = idx;
     questionsShuffled = shuffle(categories[idx].questions.slice());
     currentQuestionIndex = 0;
@@ -452,6 +487,7 @@
     var btn = $("main-btn");
     btn.textContent = "Valider la Réponse";
     btn.disabled = true;
+    btn.onclick = checkAnswerAndProceed;
 
     // Question text (HTML allowed, e.g. <sup>, math fractions)
     var html = '<p class="question-text">' + q.text + "</p>";
@@ -660,21 +696,38 @@
       block.classList.add("is-wrong");
     }
 
-    $("main-btn").textContent = "Question Suivante";
+    var settings = loadDisplaySettings();
+    var readingDelay = isCorrect ? settings.correctDelay : settings.wrongDelay;
+    var nextBtn = $("main-btn");
+    nextBtn.textContent = "Question Suivante";
+    nextBtn.disabled = false;
+    nextBtn.onclick = function () {
+      cancelPendingAdvance();
+      exitAndAdvance();
+    };
 
-    // On laisse le temps de lire, puis on fait sortir le bloc ENTIER
-    // (question + feedback) avant d'afficher la question suivante.
-    var readingDelay = isCorrect ? 1100 : 3200;
-    setTimeout(exitAndAdvance, readingDelay);
+    // On laisse le temps de lire (reglable dans les parametres du portail),
+    // puis on fait sortir le bloc ENTIER (question + feedback) avant
+    // d'afficher la question suivante. 0 = passage manuel uniquement.
+    if (readingDelay > 0) {
+      pendingAdvance = setTimeout(function () {
+        pendingAdvance = null;
+        exitAndAdvance();
+      }, readingDelay);
+    }
   }
 
   function exitAndAdvance() {
+    if (advancing) return;
+    advancing = true;
+    cancelPendingAdvance();
     var block = $("question-block");
     var advanced = false;
 
     function go() {
       if (advanced) return;
       advanced = true;
+      advancing = false;
       block.removeEventListener("transitionend", go);
       currentQuestionIndex++;
       if (currentQuestionIndex >= questionsShuffled.length) {
