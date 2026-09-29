@@ -178,6 +178,16 @@
       "added": "2026-09-26"
     },
     {
+      "id": "physique-chimie-noyau-atome-config",
+      "title": "Le noyau de l'atome et configuration électronique",
+      "subject": "physique-chimie",
+      "file": "data/physique-chimie/noyau-atome-config-electronique.json",
+      "questionsCount": 253,
+      "description": "Particules fondamentales, representation A/Z/N, isotopes, tailles et masses, histoire de l'atome, couches et configuration electronique, familles et ions + 30 exercices pratiques (253 questions).",
+      "tags": ["physique-chimie", "atome", "noyau", "isotopes", "configuration-electronique"],
+      "added": "2026-09-26"
+    },
+    {
       "id": "anglais-verbes-irreguliers",
       "title": "Verbes irréguliers — Les 3 formes",
       "subject": "anglais",

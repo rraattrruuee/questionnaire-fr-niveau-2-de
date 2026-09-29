@@ -1,0 +1,3044 @@
+{
+  "subject": "physique-chimie",
+  "title": "Le noyau de l'atome et la configuration électronique",
+  "description": "Particules fondamentales, representation symbolique A/Z/N, isotopes, tailles et masses, histoire de l'atome, couches et configuration electronique, familles et ions + 30 exercices pratiques.",
+  "categories": [
+    {
+      "category": "Particules fondamentales et charges",
+      "questions": [
+        {
+          "text": "Quelles sont les trois particules fondamentales qui constituent l'atome ?",
+          "type": "mcq",
+          "options": [
+            "Proton, neutron et électron",
+            "Proton, photon et ion",
+            "Nucléon, noyau et neutron",
+            "Électron, neutron et molécule"
+          ],
+          "correct": 0,
+          "solution": "L'atome est constitué de particules fondamentales : le proton, le neutron et l'électron."
+        },
+        {
+          "text": "Où se situent les nucléons dans l'atome ?",
+          "type": "mcq",
+          "options": [
+            "Dans le noyau",
+            "Dans le nuage électronique",
+            "Autour du noyau",
+            "Dans les couches périphériques"
+          ],
+          "correct": 0,
+          "solution": "Le noyau contient les nucléons : les protons et les neutrons."
+        },
+        {
+          "text": "Qu'est-ce qu'un nucléon ?",
+          "type": "mcq",
+          "options": [
+            "Un proton ou un neutron",
+            "Un électron",
+            "Un noyau complet",
+            "Une charge électrique"
+          ],
+          "correct": 0,
+          "solution": "Proton (+) + neutron = nucléon => noyau."
+        },
+        {
+          "text": "Les protons sont électriquement neutres.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Les protons ont une charge positive ; ce sont les neutrons qui sont électriquement neutres."
+        },
+        {
+          "text": "Les neutrons sont électriquement neutres.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Le noyau contient les nucléons : les protons (charge positive) et les neutrons (électriquement neutres)."
+        },
+        {
+          "text": "Les électrons ont une charge négative et se trouvent en mouvement autour du noyau.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "En mouvement autour du noyau se trouvent les électrons de charge négative."
+        },
+        {
+          "text": "Quelle est la charge électrique d'un proton ?",
+          "type": "mcq",
+          "options": [
+            "+e",
+            "-e",
+            "0",
+            "+2e"
+          ],
+          "correct": 0,
+          "solution": "La charge d'un proton = e."
+        },
+        {
+          "text": "Quelle est la charge électrique d'un neutron ?",
+          "type": "mcq",
+          "options": [
+            "0 (neutre)",
+            "+e",
+            "-e",
+            "+2e"
+          ],
+          "correct": 0,
+          "solution": "Les neutrons sont électriquement neutres : leur charge vaut 0."
+        },
+        {
+          "text": "Quelle est la charge électrique d'un électron ?",
+          "type": "mcq",
+          "options": [
+            "-e",
+            "+e",
+            "0",
+            "-2e"
+          ],
+          "correct": 0,
+          "solution": "La charge d'un électron = -e."
+        },
+        {
+          "text": "Que signifie la lettre e (charge électrique élémentaire) et quelle est sa valeur ?",
+          "type": "mcq",
+          "options": [
+            "Charge électrique élémentaire, 1,6·10⁻¹⁹ C",
+            "Énergie, 1,6·10⁻¹⁹ J",
+            "Électron, 1,6·10⁻¹⁹ kg",
+            "Entier, 1,6·10⁻¹⁹ C"
+          ],
+          "correct": 0,
+          "solution": "e = charge électrique élémentaire = 1,6·10⁻¹⁹ C (C = Coulomb)."
+        },
+        {
+          "text": "Dans quelle unité s'exprime la charge électrique ?",
+          "type": "mcq",
+          "options": [
+            "Le Coulomb (C)",
+            "Le Watt (W)",
+            "Le Joule (J)",
+            "Le Newton (N)"
+          ],
+          "correct": 0,
+          "solution": "C = Coulomb, unité de la charge électrique."
+        },
+        {
+          "text": "Quelle est la valeur en Coulomb de la charge d'un proton ?",
+          "type": "mcq",
+          "options": [
+            "1,6·10⁻¹⁹ C",
+            "1,6·10⁻¹⁹ N",
+            "1,6·10⁻²⁷ C",
+            "9,109·10⁻³¹ C"
+          ],
+          "correct": 0,
+          "solution": "Charge du proton = e = 1,6·10⁻¹⁹ C."
+        },
+        {
+          "text": "Comment sont les charges électrique d'un proton et d'un électron ?",
+          "type": "mcq",
+          "options": [
+            "Opposées",
+            "Identiques",
+            "Nulles",
+            "Égales et de même signe"
+          ],
+          "correct": 0,
+          "solution": "Les charges électriques d'un proton et d'un électron sont opposées (+e et -e)."
+        },
+        {
+          "text": "L'atome étant électriquement neutre, dans un atome le nombre de protons est...",
+          "type": "mcq",
+          "options": [
+            "Égal au nombre d'électrons",
+            "Supérieur au nombre d'électrons",
+            "Inferieur au nombre de neutrons",
+            "Égal au nombre de nucléons"
+          ],
+          "correct": 0,
+          "solution": "Il y a autant de protons dans le noyau que d'électrons dans le nuage électronique."
+        },
+        {
+          "text": "Où se trouvent les électrons d'un atome ?",
+          "type": "mcq",
+          "options": [
+            "En mouvement autour du noyau (nuage électronique)",
+            "Au centre du noyau",
+            "Dans le noyau avec les protons",
+            "Ils sont fixes au centre"
+          ],
+          "correct": 0,
+          "solution": "En mouvement autour du noyau se trouvent les électrons de charge négative."
+        },
+        {
+          "text": "Le noyau de l'atome est chargé positivement.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Le noyau contient les protons (charge positive) et les neutrons : il est donc chargé positivement."
+        },
+        {
+          "text": "Un atome possède 6 protons. Combien d'électrons contient-il ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "12",
+            "0",
+            "3"
+          ],
+          "correct": 0,
+          "solution": "Atome neutre : autant de protons que d'électrons, soit 6."
+        },
+        {
+          "text": "Un noyau contient 10 protons et 10 neutrons. Combien de nucléons contient ce noyau ?",
+          "type": "mcq",
+          "options": [
+            "20",
+            "10",
+            "0",
+            "40"
+          ],
+          "correct": 0,
+          "solution": "Nucléons = protons + neutrons = 10 + 10 = 20."
+        },
+        {
+          "text": "Que représente le symbole e en physique-chimie ?",
+          "type": "mcq",
+          "options": [
+            "La charge électrique élémentaire",
+            "L'énergie de liaison",
+            "L'électron libre",
+            "L'unité d'étendue"
+          ],
+          "correct": 0,
+          "solution": "e = charge électrique élémentaire = 1,6·10⁻¹⁹ C."
+        }
+      ]
+    },
+    {
+      "category": "Représentation symbolique du noyau (A, Z, N)",
+      "questions": [
+        {
+          "text": "Dans la représentation symbolique d'un noyau, que représente A ?",
+          "type": "mcq",
+          "options": [
+            "Le nombre de masse (nombre de nucléons)",
+            "Le numéro atomique",
+            "Le nombre d'électrons",
+            "La charge du noyau"
+          ],
+          "correct": 0,
+          "solution": "A = nucléon (nombre de masse) = protons + neutrons."
+        },
+        {
+          "text": "Dans la représentation symbolique d'un noyau, que représente Z ?",
+          "type": "mcq",
+          "options": [
+            "Le numéro atomique (nombre de protons)",
+            "Le nombre de masse",
+            "Le nombre de neutrons",
+            "Le nombre d'électrons"
+          ],
+          "correct": 0,
+          "solution": "Z = proton = numéro atomique du noyau."
+        },
+        {
+          "text": "Dans la représentation symbolique d'un noyau, que représente X ?",
+          "type": "mcq",
+          "options": [
+            "Le symbole de l'élément chimique",
+            "Le nombre de nucléons",
+            "Le nombre de neutrons",
+            "La masse du noyau"
+          ],
+          "correct": 0,
+          "solution": "X = symbole de l'élément chimique."
+        },
+        {
+          "text": "Comment détermine-t-on le nombre de neutrons N d'un noyau ?",
+          "type": "mcq",
+          "options": [
+            "N = A - Z",
+            "N = A + Z",
+            "N = Z - A",
+            "N = A × Z"
+          ],
+          "correct": 0,
+          "solution": "Neutron = A - Z."
+        },
+        {
+          "text": "Dans un atome neutre, comment trouve-t-on le nombre d'électrons ?",
+          "type": "mcq",
+          "options": [
+            "Il est égal à Z",
+            "Il est égal à A",
+            "Il est égal à A - Z",
+            "Il est égal à 2Z"
+          ],
+          "correct": 0,
+          "solution": "Électron = Z (autant d'électrons que de protons dans un atome neutre)."
+        },
+        {
+          "text": "Pour l'atome de sodium ²³₁₁Na, quelle est la valeur de Z ?",
+          "type": "mcq",
+          "options": [
+            "11",
+            "23",
+            "12",
+            "34"
+          ],
+          "correct": 0,
+          "solution": "Z = 11 (le nombre en bas à gauche est le numéro atomique)."
+        },
+        {
+          "text": "Pour l'atome de sodium ²³₁₁Na, quelle est la valeur de A ?",
+          "type": "mcq",
+          "options": [
+            "23",
+            "11",
+            "12",
+            "34"
+          ],
+          "correct": 0,
+          "solution": "A = 23 (le nombre en haut à gauche est le nombre de masse)."
+        },
+        {
+          "text": "Pour l'atome de sodium ²³₁₁Na, combien de neutrons contient son noyau ?",
+          "type": "mcq",
+          "options": [
+            "12",
+            "11",
+            "23",
+            "34"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 23 - 11 = 12."
+        },
+        {
+          "text": "Pour l'atome de sodium ²³₁₁Na, combien d'électrons contient son nuage électronique ?",
+          "type": "mcq",
+          "options": [
+            "11",
+            "23",
+            "12",
+            "1"
+          ],
+          "correct": 0,
+          "solution": "Nombre d'électrons = Z = 11."
+        },
+        {
+          "text": "Pour l'atome de sodium ²³₁₁Na, combien de nucléons contient son noyau ?",
+          "type": "mcq",
+          "options": [
+            "23",
+            "11",
+            "12",
+            "34"
+          ],
+          "correct": 0,
+          "solution": "Il y a 23 nucléons (A = protons + neutrons = 11 + 12)."
+        },
+        {
+          "text": "Combien de protons contient le noyau de l'atome de sodium ?",
+          "type": "mcq",
+          "options": [
+            "11",
+            "23",
+            "12",
+            "1"
+          ],
+          "correct": 0,
+          "solution": "Z = 11 protons, 12 neutrons, 11 électrons, 23 nucléons."
+        },
+        {
+          "text": "Quel est le symbole du noyau de l'oxygène qui possède 8 protons et 10 neutrons ?",
+          "type": "mcq",
+          "options": [
+            "¹⁸₈O",
+            "¹⁰₈O",
+            "¹⁸₁₀O",
+            "⁸₈O"
+          ],
+          "correct": 0,
+          "solution": "A = 8 + 10 = 18 et Z = 8 : ¹⁸₈O."
+        },
+        {
+          "text": "Un noyau est symbolisé ¹⁴₇N. Combien de neutrons contient-il ?",
+          "type": "mcq",
+          "options": [
+            "7",
+            "14",
+            "21",
+            "4"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 14 - 7 = 7."
+        },
+        {
+          "text": "Un noyau est symbolisé ³⁵₁₇Cl. Combien de neutrons contient-il ?",
+          "type": "mcq",
+          "options": [
+            "18",
+            "35",
+            "17",
+            "52"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 35 - 17 = 18."
+        },
+        {
+          "text": "Un atome possède 26 électrons et 30 neutrons. Quel est son nombre de masse A ?",
+          "type": "mcq",
+          "options": [
+            "56",
+            "26",
+            "30",
+            "86"
+          ],
+          "correct": 0,
+          "solution": "Z = 26 (électrons), A = Z + N = 26 + 30 = 56."
+        },
+        {
+          "text": "Que signifie « le numéro atomique caractérise l'élément chimique » ?",
+          "type": "mcq",
+          "options": [
+            "Chaque élément est défini par son nombre de protons Z unique",
+            "Chaque élément est défini par son nombre de neutrons",
+            "Chaque élément est défini par son nombre de masse",
+            "Chaque élément est défini par sa masse en kg"
+          ],
+          "correct": 0,
+          "solution": "Tous les atomes ayant le même nombre de protons appartiennent au même élément chimique."
+        },
+        {
+          "text": "Un noyau possède A = 40 et Z = 19. De quel élément s'agit-il ?",
+          "type": "mcq",
+          "options": [
+            "Le potassium (K)",
+            "Le calcium (Ca)",
+            "L'argon (Ar)",
+            "Le sodium (Na)"
+          ],
+          "correct": 0,
+          "solution": "Z = 19 correspond au potassium (K)."
+        },
+        {
+          "text": "Combien de nucléons compte le noyau ⁵⁶₂₆Fe ?",
+          "type": "mcq",
+          "options": [
+            "56",
+            "26",
+            "30",
+            "82"
+          ],
+          "correct": 0,
+          "solution": "A = 56 nucléons (26 protons + 30 neutrons)."
+        },
+        {
+          "text": "Deux atomes possédant le même nombre de protons sont du même élément chimique.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Le numéro atomique Z (nombre de protons) caractérise l'élément chimique."
+        },
+        {
+          "text": "Si un atome possède Z = 6, de quel élément chimique s'agit-il ?",
+          "type": "mcq",
+          "options": [
+            "Carbone (C)",
+            "Oxygène (O)",
+            "Azote (N)",
+            "Bore (B)"
+          ],
+          "correct": 0,
+          "solution": "Z = 6 correspond au carbone."
+        },
+        {
+          "text": "Un noyau contient 6 protons et 8 neutrons. Quelle est sa représentation symbolique ?",
+          "type": "mcq",
+          "options": [
+            "¹⁴₆C",
+            "¹⁴₈C",
+            "⁸₆C",
+            "¹²₆C"
+          ],
+          "correct": 0,
+          "solution": "A = 6 + 8 = 14, Z = 6 : ¹⁴₆C."
+        },
+        {
+          "text": "Un atome possède Z = 17 protons. Combien d'électrons a-t-il s'il est neutre ?",
+          "type": "mcq",
+          "options": [
+            "17",
+            "35",
+            "18",
+            "8"
+          ],
+          "correct": 0,
+          "solution": "Dans un atome neutre, nombre d'électrons = Z = 17."
+        }
+      ]
+    },
+    {
+      "category": "Isotopes",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'un isotope ?",
+          "type": "mcq",
+          "options": [
+            "Un atome d'un même élément chimique dont le nombre de neutrons diffère",
+            "Un atome de deux éléments chimiques différents",
+            "Un atome dont le nombre de protons diffère",
+            "Une molécule chargée électriquement"
+          ],
+          "correct": 0,
+          "solution": "Un isotope est un atome d'un même élément chimique mais dont le nombre de neutrons diffère."
+        },
+        {
+          "text": "Les isotopes du carbone (carbone 12, 13 et 14) possèdent tous combien de protons ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "12",
+            "13",
+            "14"
+          ],
+          "correct": 0,
+          "solution": "Ils ont tous 6 protons, et 6, 7 ou 8 neutrons."
+        },
+        {
+          "text": "Combien de neutrons possède le carbone 12 (¹²₆C) ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "12",
+            "7",
+            "8"
+          ],
+          "correct": 0,
+          "solution": "Carbone 12 : A = 12, Z = 6, N = A - Z = 6."
+        },
+        {
+          "text": "Combien de neutrons possède le carbone 13 (¹³₆C) ?",
+          "type": "mcq",
+          "options": [
+            "7",
+            "6",
+            "13",
+            "8"
+          ],
+          "correct": 0,
+          "solution": "Carbone 13 : A = 13, Z = 6, N = 7."
+        },
+        {
+          "text": "Combien de neutrons possède le carbone 14 (¹⁴₆C) ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "6",
+            "7",
+            "14"
+          ],
+          "correct": 0,
+          "solution": "Carbone 14 : A = 14, Z = 6, N = 8."
+        },
+        {
+          "text": "Combien d'électrons possède l'atome de carbone 13 ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "7",
+            "13",
+            "1"
+          ],
+          "correct": 0,
+          "solution": "Électron = Z = 6 pour tous les isotopes du carbone."
+        },
+        {
+          "text": "Que possèdent en commun deux isotopes d'un même élément ?",
+          "type": "mcq",
+          "options": [
+            "Le même nombre de protons",
+            "Le même nombre de neutrons",
+            "Le même nombre de masse",
+            "La même masse en kg"
+          ],
+          "correct": 0,
+          "solution": "Isotopes = même élément (même Z), nombre de neutrons différent."
+        },
+        {
+          "text": "Les isotopes d'un même élément ont le même...",
+          "type": "mcq",
+          "options": [
+            "Numéro atomique Z",
+            "Nombre de masse A",
+            "Nombre de neutrons",
+            "Nombre de nucléons"
+          ],
+          "correct": 0,
+          "solution": "Même élément chimique = même nombre de protons Z."
+        },
+        {
+          "text": "Le chlore possède les isotopes ³⁵₁₇Cl et ³⁷₁₇Cl. Combien de neutrons chacun ?",
+          "type": "mcq",
+          "options": [
+            "18 et 20",
+            "17 et 17",
+            "35 et 37",
+            "18 et 19"
+          ],
+          "correct": 0,
+          "solution": "N = 35 - 17 = 18 et N = 37 - 17 = 20."
+        },
+        {
+          "text": "Que possèdent en commun les noyaux ¹⁴₆C et ¹⁴₇N ?",
+          "type": "mcq",
+          "options": [
+            "Le même nombre de masse A = 14",
+            "Le même nombre de protons",
+            "Le même élément chimique",
+            "Le même nombre de neutrons"
+          ],
+          "correct": 0,
+          "solution": "Les deux noyaux ont A = 14, mais Z diffère (6 et 7) : ils n'ont ni le même élément ni le même nombre de neutrons."
+        },
+        {
+          "text": "Les trois isotopes de l'hydrogène (¹₁H, ²₁H, ³₁H) possèdent respectivement combien de neutrons ?",
+          "type": "mcq",
+          "options": [
+            "0, 1 et 2",
+            "1, 2 et 3",
+            "0, 2 et 4",
+            "2, 3 et 4"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z : 1-1=0, 2-1=1, 3-1=2."
+        },
+        {
+          "text": "Les isotopes du même élément se placent dans le tableau périodique...",
+          "type": "mcq",
+          "options": [
+            "À la même case (même Z)",
+            "Dans des cases différentes",
+            "Dans des groupes différents",
+            "Dans des périodes différentes"
+          ],
+          "correct": 0,
+          "solution": "Même Z = même position dans le tableau périodique."
+        },
+        {
+          "text": "Un atome de carbone 14 et un atome de carbone 12 diffèrent par leur nombre de...",
+          "type": "mcq",
+          "options": [
+            "Neutrons",
+            "Protons",
+            "Électrons",
+            "Charges"
+          ],
+          "correct": 0,
+          "solution": "Ils ont tous 6 protons, mais 8 et 6 neutrons."
+        }
+      ]
+    },
+    {
+      "category": "Taille et masse de l'atome et du noyau",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "L'atome étant essentiellement constitué de vide, on dit que sa structure est...",
+          "type": "mcq",
+          "options": [
+            "Lacunaire",
+            "Complète",
+            "Sphérique pleine",
+            "Massive"
+          ],
+          "correct": 0,
+          "solution": "Un atome est essentiellement constitué de vide, sa structure est donc lacunaire."
+        },
+        {
+          "text": "La taille d'un atome est due à...",
+          "type": "mcq",
+          "options": [
+            "La répulsion électrique du noyau et de ses électrons",
+            "La gravité",
+            "Le magnétisme",
+            "La chaleur du noyau"
+          ],
+          "correct": 0,
+          "solution": "La taille d'un atome est due à la répulsion électrique du noyau et de ses électrons."
+        },
+        {
+          "text": "Un atome est environ combien de fois plus grand que son noyau ?",
+          "type": "mcq",
+          "options": [
+            "100 000 fois",
+            "10 fois",
+            "100 fois",
+            "1 000 000 fois"
+          ],
+          "correct": 0,
+          "solution": "Un atome est environ 100 mille fois plus grand que son noyau."
+        },
+        {
+          "text": "Que vaut 1 nanomètre (nm) en mètres ?",
+          "type": "mcq",
+          "options": [
+            "10⁻⁹ m",
+            "10⁻¹² m",
+            "10⁻¹⁵ m",
+            "10⁻⁶ m"
+          ],
+          "correct": 0,
+          "solution": "1 nm = 10⁻⁹ m."
+        },
+        {
+          "text": "Que vaut 1 picomètre (pm) en mètres ?",
+          "type": "mcq",
+          "options": [
+            "10⁻¹² m",
+            "10⁻⁹ m",
+            "10⁻¹⁵ m",
+            "10⁻³ m"
+          ],
+          "correct": 0,
+          "solution": "1 pm = 10⁻¹² m."
+        },
+        {
+          "text": "Que vaut 1 femtomètre (fm) en mètres ?",
+          "type": "mcq",
+          "options": [
+            "10⁻¹⁵ m",
+            "10⁻¹² m",
+            "10⁻⁹ m",
+            "10⁻⁶ m"
+          ],
+          "correct": 0,
+          "solution": "1 fm = 10⁻¹⁵ m."
+        },
+        {
+          "text": "Que vaut 0,1 nm en mètres ?",
+          "type": "mcq",
+          "options": [
+            "1·10⁻¹⁰ m",
+            "1·10⁻⁹ m",
+            "1·10⁻¹² m",
+            "1·10⁻¹¹ m"
+          ],
+          "correct": 0,
+          "solution": "0,1 nm = 1·10⁻¹⁰ m."
+        },
+        {
+          "text": "Quelle est l'ordre de grandeur de la taille d'un atome ?",
+          "type": "mcq",
+          "options": [
+            "0,1 nm",
+            "1 fm",
+            "1 pm",
+            "1 m"
+          ],
+          "correct": 0,
+          "solution": "La taille d'un atome est de l'ordre de 0,1 nm."
+        },
+        {
+          "text": "Quelle est l'ordre de grandeur de la taille du noyau ?",
+          "type": "mcq",
+          "options": [
+            "1 fm (10⁻¹⁵ m)",
+            "0,1 nm",
+            "1 nm",
+            "1 pm"
+          ],
+          "correct": 0,
+          "solution": "Celle du noyau est de l'ordre de 1 fm, soit 10⁻¹⁵ m."
+        },
+        {
+          "text": "Que vaut la masse d'un nucléon (proton ou neutron) ?",
+          "type": "mcq",
+          "options": [
+            "1,67·10⁻²⁷ kg",
+            "1,6·10⁻¹⁹ kg",
+            "9,109·10⁻³¹ kg",
+            "1,67·10⁻²⁷ g"
+          ],
+          "correct": 0,
+          "solution": "M nucléon = M proton = M neutron = 1,67·10⁻²⁷ kg."
+        },
+        {
+          "text": "Que vaut la masse d'un électron ?",
+          "type": "mcq",
+          "options": [
+            "9,109·10⁻³¹ kg",
+            "1,67·10⁻²⁷ kg",
+            "1,6·10⁻¹⁹ kg",
+            "9,109·10⁻²⁷ kg"
+          ],
+          "correct": 0,
+          "solution": "Me = 9,109·10⁻³¹ kg."
+        },
+        {
+          "text": "Comment calcule-t-on approximativement la masse d'un atome ?",
+          "type": "mcq",
+          "options": [
+            "M atome = A × M nucléon",
+            "M atome = Z × M électron",
+            "M atome = A × M électron",
+            "M atome = N × M proton"
+          ],
+          "correct": 0,
+          "solution": "M atome = A × M nucléon (car la masse est surtout dans le noyau)."
+        },
+        {
+          "text": "Quelle expression donne la masse complète d'un atome ?",
+          "type": "mcq",
+          "options": [
+            "M proton × Z + M neutron × (A - Z) + Me × nombre d'électrons",
+            "M proton × A + M neutron × Z",
+            "M proton × Z + M neutron × A",
+            "M électron × A + M neutron × Z"
+          ],
+          "correct": 0,
+          "solution": "M atome = M proton × Z + M neutron × (A - Z) + Me × nombre d'électrons."
+        },
+        {
+          "text": "La masse d'un atome est répartie entre son noyau et son cortège électronique.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "La masse d'un atome est répartie entre son noyau et son cortège électronique (ses électrons)."
+        },
+        {
+          "text": "La masse d'un proton est-elle sensiblement différente de celle d'un neutron ?",
+          "type": "mcq",
+          "options": [
+            "Non, elles sont sensiblement égales",
+            "Oui, le proton est 1000 fois plus lourd",
+            "Oui, le neutron est 100 fois plus lourd",
+            "Oui, le neutron n'a pas de masse"
+          ],
+          "correct": 0,
+          "solution": "M proton = M neutron = 1,67·10⁻²⁷ kg."
+        },
+        {
+          "text": "Quelle est la masse approximative d'un atome de sodium (A = 23) ?",
+          "type": "mcq",
+          "options": [
+            "23 × 1,67·10⁻²⁷ ≈ 3,8·10⁻²⁶ kg",
+            "23 × 9,109·10⁻³¹ kg",
+            "1,67·10⁻²⁷ kg",
+            "23 kg"
+          ],
+          "correct": 0,
+          "solution": "M atome = A × M nucléon = 23 × 1,67·10⁻²⁷ ≈ 3,8·10⁻²⁶ kg."
+        },
+        {
+          "text": "L'électron est comparé au nucléon...",
+          "type": "mcq",
+          "options": [
+            "Beaucoup plus léger",
+            "Beaucoup plus lourd",
+            "De masse égale",
+            "De masse nulle"
+          ],
+          "correct": 0,
+          "solution": "Me = 9,109·10⁻³¹ kg est environ 1840 fois plus petit que 1,67·10⁻²⁷ kg."
+        },
+        {
+          "text": "Que vaut 1 pm en nanomètres ?",
+          "type": "mcq",
+          "options": [
+            "0,001 nm",
+            "10 nm",
+            "1 nm",
+            "0,1 nm"
+          ],
+          "correct": 0,
+          "solution": "1 pm = 10⁻¹² m = 0,001 nm."
+        }
+      ]
+    },
+    {
+      "category": "Exercice 1 — QCM (noyau de silicium et particules)",
+      "questions": [
+        {
+          "text": "QCM — Le noyau de silicium ³¹₁₅Si : « est composé de 15 protons et 31 neutrons »",
+          "type": "mcq",
+          "options": [
+            "Faux : il contient 16 neutrons",
+            "Vrai",
+            "Vrai : 31 protons et 15 neutrons",
+            "Faux : il contient 15 neutrons"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 31 - 15 = 16 neutrons (et 15 protons)."
+        },
+        {
+          "text": "QCM — Le noyau de silicium ³¹₁₅Si : « est entouré de 15 électrons »",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Atome neutre : 15 protons => 15 électrons."
+        },
+        {
+          "text": "QCM — Le noyau de silicium ³¹₁₅Si : « contient 16 neutrons »",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 31 - 15 = 16 neutrons."
+        },
+        {
+          "text": "QCM — Le noyau de silicium ³¹₁₅Si : « est de charge positive »",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Le noyau contient les protons : il est chargé positivement."
+        },
+        {
+          "text": "QCM — Un proton porte une charge électrique égale à celle du neutron.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Le proton = +e, le neutron = 0 : leurs charges sont différentes."
+        },
+        {
+          "text": "QCM — Un proton porte une charge électrique égale à e.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "La charge d'un proton = e."
+        },
+        {
+          "text": "QCM — Un proton porte une charge électrique opposée à celle de l'électron.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Proton = +e et électron = -e : charges opposées."
+        },
+        {
+          "text": "QCM — Deux types de particules de l'atome ont sensiblement la même masse : neutron et proton.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "M proton = M neutron = 1,67·10⁻²⁷ kg."
+        },
+        {
+          "text": "QCM — Deux types de particules de l'atome ont sensiblement la même masse : proton et électron.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "L'électron est environ 1840 fois moins massif que le proton."
+        },
+        {
+          "text": "QCM — Deux types de particules de l'atome ont sensiblement la même masse : électron et neutron.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Le neutron est beaucoup plus massique que l'électron."
+        },
+        {
+          "text": "QCM — Les noyaux inconnus sont ¹²₆X ; ¹³₆Y ; ¹³₇T ; ¹⁴₇V ; ¹⁴₆W. « Y et T ont le même nombre de neutrons »",
+          "type": "mcq",
+          "options": [
+            "Faux : Y en a 7 et T en a 6",
+            "Vrai",
+            "Faux : Y en a 6 et T en a 7",
+            "Vrai : tous en ont 7"
+          ],
+          "correct": 0,
+          "solution": "Y : 13 - 6 = 7 neutrons ; T : 13 - 7 = 6 neutrons."
+        },
+        {
+          "text": "QCM — Les noyaux : « X et Y correspondent au même symbole chimique »",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "X et Y ont tous les deux Z = 6 : ce sont des atomes de carbone."
+        },
+        {
+          "text": "QCM — Les noyaux : « X, Y et W sont des isotopes »",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "X (¹²₆), Y (¹³₆) et W (¹⁴₆) ont le même Z = 6 : ce sont des isotopes du carbone."
+        },
+        {
+          "text": "QCM — Les noyaux : « V et W ont le même nombre de protons »",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "V a Z = 7 et W a Z = 6 : ils n'ont pas le même nombre de protons."
+        },
+        {
+          "text": "QCM — Parmi les noyaux ¹²₆X ; ¹³₆Y ; ¹³₇T ; ¹⁴₇V ; ¹⁴₆W, lesquels sont des isotopes du même élément ?",
+          "type": "mcq",
+          "options": [
+            "X, Y et W",
+            "X et V",
+            "T et V",
+            "Y et T"
+          ],
+          "correct": 0,
+          "solution": "X, Y et W ont tous Z = 6 (carbone)."
+        }
+      ]
+    },
+    {
+      "category": "Exercices 2 & 3 — Symbole et constitution du noyau",
+      "questions": [
+        {
+          "text": "Ex.2 — Comment se nomme le nombre Z et que représente-t-il ?",
+          "type": "mcq",
+          "options": [
+            "Numéro atomique : nombre de protons",
+            "Nombre de masse : nombre de nucléons",
+            "Nombre de neutrons",
+            "Nombre d'électrons"
+          ],
+          "correct": 0,
+          "solution": "Z est le numéro atomique : il représente le nombre de protons."
+        },
+        {
+          "text": "Ex.2 — Comment se nomme le nombre A et que représente-t-il ?",
+          "type": "mcq",
+          "options": [
+            "Nombre de masse : nombre de nucléons",
+            "Numéro atomique : nombre de protons",
+            "Nombre de neutrons",
+            "Charge du noyau"
+          ],
+          "correct": 0,
+          "solution": "A est le nombre de masse : il représente le nombre de nucléons."
+        },
+        {
+          "text": "Ex.2 — Comment détermine-t-on le nombre de neutrons dans le noyau ?",
+          "type": "mcq",
+          "options": [
+            "On fait A - Z",
+            "On fait A + Z",
+            "On fait Z - A",
+            "On fait A × Z"
+          ],
+          "correct": 0,
+          "solution": "Le nombre de neutrons = A - Z."
+        },
+        {
+          "text": "Ex.2 — Constitution du noyau d'uranium ²³⁸₉₂U : combien de nucléons ?",
+          "type": "mcq",
+          "options": [
+            "238",
+            "92",
+            "146",
+            "330"
+          ],
+          "correct": 0,
+          "solution": "A = 238 nucléons."
+        },
+        {
+          "text": "Ex.2 — Constitution du noyau d'uranium ²³⁸₉₂U : combien de protons ?",
+          "type": "mcq",
+          "options": [
+            "92",
+            "238",
+            "146",
+            "1"
+          ],
+          "correct": 0,
+          "solution": "Z = 92 protons."
+        },
+        {
+          "text": "Ex.2 — Constitution du noyau d'uranium ²³⁸₉₂U : combien de neutrons ?",
+          "type": "mcq",
+          "options": [
+            "146",
+            "92",
+            "238",
+            "330"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 238 - 92 = 146."
+        },
+        {
+          "text": "Ex.3 — Que signifie « le numéro atomique caractérise l'élément chimique » ?",
+          "type": "mcq",
+          "options": [
+            "Chaque élément est défini par son nombre de protons Z unique",
+            "Chaque élément est défini par son nombre de masse",
+            "Chaque élément est défini par sa masse volumique",
+            "Chaque élément est défini par son nombre de neutrons"
+          ],
+          "correct": 0,
+          "solution": "Tous les atomes ou ions ayant le même nombre de protons appartiennent au même élément chimique."
+        },
+        {
+          "text": "Ex.3 — Hydrogène (H) : Z = 1, A = 1. Combien de protons, de neutrons et d'électrons ?",
+          "type": "mcq",
+          "options": [
+            "1 proton, 0 neutron, 1 électron",
+            "1 proton, 1 neutron, 1 électron",
+            "1 neutron, 0 proton, 1 électron",
+            "1 proton, 0 neutron, 2 électrons"
+          ],
+          "correct": 0,
+          "solution": "N = 1 - 1 = 0 ; atome neutre : 1 électron."
+        },
+        {
+          "text": "Ex.3 — Oxygène (O) : Z = 8, A = 16. Combien de neutrons ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "16",
+            "24",
+            "4"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 16 - 8 = 8."
+        },
+        {
+          "text": "Ex.3 — Oxygène (O) : Z = 8, A = 16. Combien d'électrons ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "16",
+            "24",
+            "0"
+          ],
+          "correct": 0,
+          "solution": "Électrons = Z = 8."
+        },
+        {
+          "text": "Ex.3 — Chlore (Cl) : Z = 17, A = 37. Combien de neutrons ?",
+          "type": "mcq",
+          "options": [
+            "20",
+            "17",
+            "37",
+            "54"
+          ],
+          "correct": 0,
+          "solution": "N = 37 - 17 = 20."
+        },
+        {
+          "text": "Ex.3 — Chlore (Cl) : Z = 17, A = 37. Combien de protons et d'électrons ?",
+          "type": "mcq",
+          "options": [
+            "17 protons et 17 électrons",
+            "17 protons et 20 électrons",
+            "20 protons et 17 électrons",
+            "37 protons et 37 électrons"
+          ],
+          "correct": 0,
+          "solution": "Protons = électrons = Z = 17."
+        },
+        {
+          "text": "Ex.3 — Carbone (C) : Z = 6, A = 12. Combien de protons, neutrons et électrons ?",
+          "type": "mcq",
+          "options": [
+            "6 protons, 6 neutrons, 6 électrons",
+            "6 protons, 12 neutrons, 6 électrons",
+            "12 protons, 6 neutrons, 12 électrons",
+            "6 protons, 6 neutrons, 12 électrons"
+          ],
+          "correct": 0,
+          "solution": "N = 12 - 6 = 6 ; électrons = 6."
+        },
+        {
+          "text": "Ex.3 — Dans le tableau, si un élément a A = 37 et N = 20, quel est Z ?",
+          "type": "mcq",
+          "options": [
+            "17",
+            "57",
+            "20",
+            "37"
+          ],
+          "correct": 0,
+          "solution": "Z = A - N = 37 - 20 = 17."
+        },
+        {
+          "text": "Ex.3 — Tous les atomes ayant le même nombre de neutrons appartiennent au même élément.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Ce sont les atomes ayant le même nombre de protons (Z) qui appartiennent au même élément."
+        }
+      ]
+    },
+    {
+      "category": "Exercice 4 — Opportunity (météorite de Mars)",
+      "questions": [
+        {
+          "text": "Les atomes de nickel de la météorite contiennent 59 nucléons et 28 protons. Combien de neutrons ?",
+          "type": "mcq",
+          "options": [
+            "31",
+            "28",
+            "59",
+            "87"
+          ],
+          "correct": 0,
+          "solution": "N = A - Z = 59 - 28 = 31 neutrons."
+        },
+        {
+          "text": "Les atomes de nickel contiennent 28 protons. Combien d'électrons dans leur nuage électronique ?",
+          "type": "mcq",
+          "options": [
+            "28",
+            "59",
+            "31",
+            "0"
+          ],
+          "correct": 0,
+          "solution": "28 électrons (atome neutre, électrons = protons = Z)."
+        },
+        {
+          "text": "Quelle est la représentation symbolique du noyau de nickel ?",
+          "type": "mcq",
+          "options": [
+            "⁵⁹₂₈Ni",
+            "²⁸₅⁹Ni",
+            "³¹₂₈Ni",
+            "⁵⁹₃¹Ni"
+          ],
+          "correct": 0,
+          "solution": "A = 59 et Z = 28 : ⁵⁹₂₈Ni."
+        },
+        {
+          "text": "Les atomes de fer ont 26 électrons et 30 neutrons. Combien de protons contient le noyau de fer ?",
+          "type": "mcq",
+          "options": [
+            "26",
+            "30",
+            "56",
+            "2"
+          ],
+          "correct": 0,
+          "solution": "Atome neutre : le nombre de protons est égal au nombre d'électrons, donc 26 protons."
+        },
+        {
+          "text": "Quelle est la représentation symbolique du noyau de fer (26 protons, 30 neutrons) ?",
+          "type": "mcq",
+          "options": [
+            "⁵⁶₂₆Fe",
+            "³⁰₂₆Fe",
+            "⁵⁶₃₀Fe",
+            "²⁶₅⁶Fe"
+          ],
+          "correct": 0,
+          "solution": "A = 26 + 30 = 56, Z = 26 : ⁵⁶₂₆Fe."
+        },
+        {
+          "text": "Quel est le nombre de masse A des atomes de fer de la météorite ?",
+          "type": "mcq",
+          "options": [
+            "56",
+            "26",
+            "30",
+            "86"
+          ],
+          "correct": 0,
+          "solution": "A = Z + N = 26 + 30 = 56."
+        },
+        {
+          "text": "Quelle est la taille approximative de la météorite découverte par Opportunity ?",
+          "type": "mcq",
+          "options": [
+            "Environ 30 cm",
+            "Environ 30 m",
+            "Environ 3 mm",
+            "Environ 3 km"
+          ],
+          "correct": 0,
+          "solution": "Cette météorite a un diamètre d'environ 30 cm."
+        },
+        {
+          "text": "De quels métaux la météorite contient-elle une grande quantité ?",
+          "type": "mcq",
+          "options": [
+            "Nickel et fer",
+            "Or et argent",
+            "Cuivre et aluminium",
+            "Plomb et zinc"
+          ],
+          "correct": 0,
+          "solution": "Elle contient une grande quantité de nickel et de fer."
+        },
+        {
+          "text": "Sur quelle planète Opportunity a-t-il découvert cette météorite en 2005 ?",
+          "type": "mcq",
+          "options": [
+            "Mars",
+            "Vénus",
+            "La Lune",
+            "Jupiter"
+          ],
+          "correct": 0,
+          "solution": "Opportunity, en parcourant la surface de Mars en 2005, a découvert cette météorite."
+        },
+        {
+          "text": "Le nickel et le fer de la météorite ont le même numéro atomique.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Le nickel a Z = 28 et le fer a Z = 26 : leurs numéros atomiques diffèrent."
+        },
+        {
+          "text": "Combien de nucléons contiennent les atomes de nickel de la météorite ?",
+          "type": "mcq",
+          "options": [
+            "59",
+            "28",
+            "31",
+            "87"
+          ],
+          "correct": 0,
+          "solution": "Ses atomes de nickel contiennent 59 nucléons et 28 protons."
+        }
+      ]
+    },
+    {
+      "category": "Notation scientifique, unités et grandeurs",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "Que vaut 0,00001 en notation scientifique ?",
+          "type": "mcq",
+          "options": [
+            "10⁻⁵",
+            "10⁵",
+            "10⁻⁶",
+            "1·10⁵"
+          ],
+          "correct": 0,
+          "solution": "0,00001 = 10⁻⁵."
+        },
+        {
+          "text": "Que vaut 0,01 en notation scientifique ?",
+          "type": "mcq",
+          "options": [
+            "10⁻²",
+            "10²",
+            "10⁻¹",
+            "1·10²"
+          ],
+          "correct": 0,
+          "solution": "0,01 = 10⁻²."
+        },
+        {
+          "text": "Que vaut 0,000001 en notation scientifique ?",
+          "type": "mcq",
+          "options": [
+            "10⁻⁶",
+            "10⁻⁵",
+            "10⁶",
+            "10⁻⁴"
+          ],
+          "correct": 0,
+          "solution": "0,000001 = 10⁻⁶."
+        },
+        {
+          "text": "Calculez : 0,01 × 0,000001",
+          "type": "mcq",
+          "options": [
+            "10⁻⁸",
+            "10⁻⁵",
+            "10⁻⁷",
+            "10⁻³"
+          ],
+          "correct": 0,
+          "solution": "10⁻² × 10⁻⁶ = 10⁻⁸."
+        },
+        {
+          "text": "0,01 × 0,000001 = 10⁻⁸. Quelle en est la valeur en notation décimale (en cm) ?",
+          "type": "mcq",
+          "options": [
+            "0,000 000 01 cm",
+            "0,000 001 cm",
+            "0,000 01 cm",
+            "0,000 000 1 cm"
+          ],
+          "correct": 0,
+          "solution": "10⁻⁸ = 0,000 000 01."
+        },
+        {
+          "text": "Calculez : 10⁻⁸ × 10⁻⁵",
+          "type": "mcq",
+          "options": [
+            "10⁻¹³",
+            "10⁻³",
+            "10⁻⁴⁰",
+            "10¹³"
+          ],
+          "correct": 0,
+          "solution": "On additionne les exposants : -8 + (-5) = -13."
+        },
+        {
+          "text": "Convertissez 10⁻¹³ cm en mètres.",
+          "type": "mcq",
+          "options": [
+            "10⁻¹⁵ m",
+            "10⁻¹¹ m",
+            "10⁻¹³ m",
+            "10⁻¹⁵ km"
+          ],
+          "correct": 0,
+          "solution": "1 cm = 10⁻² m, donc 10⁻¹³ × 10⁻² = 10⁻¹⁵ m."
+        },
+        {
+          "text": "Convertissez 10⁻⁸ cm en mètres.",
+          "type": "mcq",
+          "options": [
+            "10⁻¹⁰ m",
+            "10⁻⁶ m",
+            "10⁻¹⁶ m",
+            "10⁻⁸ m"
+          ],
+          "correct": 0,
+          "solution": "10⁻⁸ × 10⁻² = 10⁻¹⁰ m."
+        },
+        {
+          "text": "Combien de kilogrammes fait 7 tonnes ?",
+          "type": "mcq",
+          "options": [
+            "7·10³ kg",
+            "7·10⁶ kg",
+            "7·10⁻³ kg",
+            "70 kg"
+          ],
+          "correct": 0,
+          "solution": "7 t = 7 000 kg = 7·10³ kg."
+        },
+        {
+          "text": "Calculez : 7·10³ kg × 10⁻⁵",
+          "type": "mcq",
+          "options": [
+            "7·10⁻² kg",
+            "7·10⁻⁸ kg",
+            "7·10⁸ kg",
+            "7·10² kg"
+          ],
+          "correct": 0,
+          "solution": "7 × 10³⁻⁵ = 7·10⁻² kg."
+        },
+        {
+          "text": "Convertissez 7·10⁻² kg en grammes.",
+          "type": "mcq",
+          "options": [
+            "70 g (7·10¹ g)",
+            "7 g",
+            "0,7 g",
+            "700 g"
+          ],
+          "correct": 0,
+          "solution": "7·10⁻² kg × 10³ = 7·10¹ g = 70 g."
+        },
+        {
+          "text": "Combien de grammes pèse un éléphant de 7 tonnes ?",
+          "type": "mcq",
+          "options": [
+            "7·10⁶ g",
+            "7·10³ g",
+            "7·10⁹ g",
+            "70 g"
+          ],
+          "correct": 0,
+          "solution": "7 t = 7·10³ kg = 7·10⁶ g."
+        },
+        {
+          "text": "La balance 440-21A a une précision de 5 kg. Quelle est cette précision en grammes ?",
+          "type": "mcq",
+          "options": [
+            "5·10³ g",
+            "5·10¹ g",
+            "5·10⁻³ g",
+            "50 g"
+          ],
+          "correct": 0,
+          "solution": "5 kg = 5·10³ g."
+        },
+        {
+          "text": "Une souris pèse 7·10¹ g. Quelle est cette masse en grammes et en notation simple ?",
+          "type": "mcq",
+          "options": [
+            "70 g",
+            "7 g",
+            "0,7 g",
+            "700 g"
+          ],
+          "correct": 0,
+          "solution": "7·10¹ = 70 g."
+        },
+        {
+          "text": "Pourquoi la balance 440-21A (max 6·10¹ g) est-elle inutilisable pour peser l'éléphant (7·10⁶ g) ?",
+          "type": "mcq",
+          "options": [
+            "Parce que 7·10⁶ g > 6·10¹ g",
+            "Parce que 7·10⁶ g < 6·10¹ g",
+            "Parce que la balance est cassée",
+            "Parce que l'éléphant est trop petit"
+          ],
+          "correct": 0,
+          "solution": "La masse de l'éléphant dépasse largement la capacité de la balance : 7·10⁶ > 6·10¹."
+        },
+        {
+          "text": "Pourquoi la précision de la balance (5·10³ g) ne permet-elle pas de peser une souris (7·10¹ g) ?",
+          "type": "mcq",
+          "options": [
+            "Parce que 5·10³ g > 7·10¹ g : la souris est sous la précision",
+            "Parce que 5·10³ g < 7·10¹ g",
+            "Parce que la souris est trop lourde",
+            "Parce que la balance est en kilotonnes"
+          ],
+          "correct": 0,
+          "solution": "5·10³ > 7·10¹ : la masse de la souris est inférieure à la précision de la balance."
+        },
+        {
+          "text": "Convertissez 3,8·10⁻²⁶ kg en grammes.",
+          "type": "mcq",
+          "options": [
+            "3,8·10⁻²³ g",
+            "3,8·10⁻²⁹ g",
+            "38 g",
+            "3,8·10⁻²⁶ g"
+          ],
+          "correct": 0,
+          "solution": "1 kg = 10³ g, donc 3,8·10⁻²⁶ × 10³ = 3,8·10⁻²³ g."
+        },
+        {
+          "text": "Combien d'atomes (de masse 3,8·10⁻²⁶ kg) contient une masse de 10⁻³ kg ? (≈)",
+          "type": "mcq",
+          "options": [
+            "2,6·10²² atomes",
+            "2,6·10²³ atomes",
+            "3,8·10²² atomes",
+            "10²³ atomes"
+          ],
+          "correct": 0,
+          "solution": "x = 10⁻³ / (3,8·10⁻²⁶) ≈ 0,26·10²³ = 2,6·10²² atomes."
+        },
+        {
+          "text": "Que vaut 10⁻² en notation décimale ?",
+          "type": "mcq",
+          "options": [
+            "0,01",
+            "0,1",
+            "100",
+            "0,001"
+          ],
+          "correct": 0,
+          "solution": "10⁻² = 0,01."
+        },
+        {
+          "text": "Que vaut 10⁻¹⁵ en notation décimale ?",
+          "type": "mcq",
+          "options": [
+            "0,000 000 000 000 001",
+            "0,000 001",
+            "0,000 01",
+            "0,001"
+          ],
+          "correct": 0,
+          "solution": "10⁻¹⁵ = 0,(000)1 avec 15 décimales."
+        }
+      ]
+    },
+    {
+      "category": "Un modèle millénaire — histoire de l'atome",
+      "questions": [
+        {
+          "text": "Qui a proposé la théorie de la plus petite particule, l'« atomos », vers 460-370 av. J.-C. ?",
+          "type": "mcq",
+          "options": [
+            "Démocrite",
+            "John Dalton",
+            "Ernest Rutherford",
+            "Niels Bohr"
+          ],
+          "correct": 0,
+          "solution": "Démocrite (460-370 av J.C.) : théorie de la plus petite particule (atomos)."
+        },
+        {
+          "text": "Quel scientifique (1766-1844) a affirmé que la matière est composée d'atomes ?",
+          "type": "mcq",
+          "options": [
+            "John Dalton",
+            "Démocrite",
+            "Joseph J. Thomson",
+            "Erwin Schrödinger"
+          ],
+          "correct": 0,
+          "solution": "John Dalton (1766-1844) : la matière est composée d'atomes."
+        },
+        {
+          "text": "Quel scientifique (1856-1940) a découvert l'électron ?",
+          "type": "mcq",
+          "options": [
+            "Joseph J. Thomson",
+            "Ernest Rutherford",
+            "Niels Bohr",
+            "John Dalton"
+          ],
+          "correct": 0,
+          "solution": "Joseph J. Thomson (1856-1940) : découverte de l'électron."
+        },
+        {
+          "text": "Quel scientifique (1871-1937) a découvert le noyau et proposé le modèle planétaire ?",
+          "type": "mcq",
+          "options": [
+            "Ernest Rutherford",
+            "Joseph J. Thomson",
+            "Niels Bohr",
+            "Erwin Schrödinger"
+          ],
+          "correct": 0,
+          "solution": "Ernest Rutherford (1871-1937) : découverte du noyau => modèle planétaire."
+        },
+        {
+          "text": "Quel scientifique (1885-1962) a attribué des orbites précises aux électrons ?",
+          "type": "mcq",
+          "options": [
+            "Niels Bohr",
+            "Ernest Rutherford",
+            "Erwin Schrödinger",
+            "John Dalton"
+          ],
+          "correct": 0,
+          "solution": "Niels Bohr (1885-1962) : orbites précises pour les électrons."
+        },
+        {
+          "text": "Quel scientifique (1887-1961) a proposé le modèle probabiliste de l'atome ?",
+          "type": "mcq",
+          "options": [
+            "Erwin Schrödinger",
+            "Niels Bohr",
+            "Ernest Rutherford",
+            "Joseph J. Thomson"
+          ],
+          "correct": 0,
+          "solution": "Erwin Schrödinger (1887-1961) : modèle probabiliste, position de l'électron probable."
+        },
+        {
+          "text": "Dans le modèle probabiliste, la position de l'électron est...",
+          "type": "mcq",
+          "options": [
+            "Probable",
+            "Exacte et fixe",
+            "Inexistante",
+            "Toujours au centre"
+          ],
+          "correct": 0,
+          "solution": "Schrödinger : modèle probabiliste. Position de l'électron probable."
+        },
+        {
+          "text": "En quelle année environ commence l'histoire de l'atome ?",
+          "type": "mcq",
+          "options": [
+            "En 400 av J.C.",
+            "En 1800",
+            "En 1900",
+            "En 460 ap J.C."
+          ],
+          "correct": 0,
+          "solution": "L'histoire de l'atome commence en 400 av J.C."
+        },
+        {
+          "text": "À partir de quelle époque de nombreux scientifiques participent-ils à l'élaboration du modèle actuel de l'atome ?",
+          "type": "mcq",
+          "options": [
+            "À partir des années 1800",
+            "À partir des années 1400",
+            "À partir des années 2000",
+            "À partir de l'Antiquité"
+          ],
+          "correct": 0,
+          "solution": "A partir des années 1800, de nombreux scientifiques participent à l'élaboration du modèle que l'on connaît aujourd'hui."
+        },
+        {
+          "text": "Quel modèle associe-t-on à Rutherford ?",
+          "type": "mcq",
+          "options": [
+            "Le modèle planétaire",
+            "Le modèle probabiliste",
+            "Le modèle des orbites précises",
+            "Le modèle de l'atome indivisible"
+          ],
+          "correct": 0,
+          "solution": "Rutherford : découverte du noyau => modèle planétaire."
+        },
+        {
+          "text": "Selon Démocrite, la matière est composée de particules indivisibles (atomos).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Démocrite : théorie de la (+) petite particule (atomos)."
+        },
+        {
+          "text": "Qui a découvert l'électron ?",
+          "type": "mcq",
+          "options": [
+            "Thomson",
+            "Rutherford",
+            "Bohr",
+            "Dalton"
+          ],
+          "correct": 0,
+          "solution": "Joseph J. Thomson (1856-1940) : découverte de l'électron."
+        },
+        {
+          "text": "Qui a découvert le noyau de l'atome ?",
+          "type": "mcq",
+          "options": [
+            "Rutherford",
+            "Thomson",
+            "Bohr",
+            "Schrödinger"
+          ],
+          "correct": 0,
+          "solution": "Ernest Rutherford : découverte du noyau."
+        },
+        {
+          "text": "Quel modèle considère que la position de l'électron n'est que probable ?",
+          "type": "mcq",
+          "options": [
+            "Le modèle probabiliste de Schrödinger",
+            "Le modèle planétaire de Rutherford",
+            "Le modèle de Bohr",
+            "Le modèle de Dalton"
+          ],
+          "correct": 0,
+          "solution": "Erwin Schrödinger : modèle probabiliste, position de l'électron probable."
+        }
+      ]
+    },
+    {
+      "category": "Répartition par couches et sous-couches",
+      "questions": [
+        {
+          "text": "Comment sont répartis les électrons dans l'atome ?",
+          "type": "mcq",
+          "options": [
+            "Dans des couches électroniques (n) subdivisées en sous-couches (l)",
+            "Au hasard dans le noyau",
+            "Dans des molécules",
+            "Sur une seule couche unique"
+          ],
+          "correct": 0,
+          "solution": "Les électrons sont répartis dans des couches électroniques (n) qui peuvent se découper en sous-couches (l)."
+        },
+        {
+          "text": "Comment est notée la couche électronique ?",
+          "type": "mcq",
+          "options": [
+            "Par un nombre entier n > 0",
+            "Par un nombre entier l > 0",
+            "Par la lettre x",
+            "Par un décimal"
+          ],
+          "correct": 0,
+          "solution": "Chaque couche est caractérisée par un nombre entier n > 0."
+        },
+        {
+          "text": "Quelle est la condition sur l pour la sous-couche de numéro l de la couche n ?",
+          "type": "mcq",
+          "options": [
+            "0 ≤ l ≤ n",
+            "0 ≤ l < n",
+            "l ≥ n",
+            "l > n"
+          ],
+          "correct": 0,
+          "solution": "0 ≤ l ≤ n (d'après le cours : 0 =< l =< n)."
+        },
+        {
+          "text": "Quelle lettre note-t-on pour l = 0 ?",
+          "type": "mcq",
+          "options": [
+            "s",
+            "p",
+            "d",
+            "f"
+          ],
+          "correct": 0,
+          "solution": "Pour l = 0 la sous-couche est notée « s »."
+        },
+        {
+          "text": "Quelle lettre note-t-on pour l = 1 ?",
+          "type": "mcq",
+          "options": [
+            "p",
+            "s",
+            "d",
+            "f"
+          ],
+          "correct": 0,
+          "solution": "Pour l = 1 la sous-couche est notée « p »."
+        },
+        {
+          "text": "Quel est le nombre maximal d'électrons de la couche n = 1 ?",
+          "type": "mcq",
+          "options": [
+            "2",
+            "8",
+            "18",
+            "32"
+          ],
+          "correct": 0,
+          "solution": "Couche 1 => 2 électrons max."
+        },
+        {
+          "text": "Quel est le nombre maximal d'électrons de la couche n = 2 ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "2",
+            "18",
+            "10"
+          ],
+          "correct": 0,
+          "solution": "Couche 2 => 8 électrons max."
+        },
+        {
+          "text": "Quel est le nombre maximal d'électrons de la couche n = 3 ?",
+          "type": "mcq",
+          "options": [
+            "18",
+            "8",
+            "2",
+            "32"
+          ],
+          "correct": 0,
+          "solution": "Couche 3 => 18 électrons max."
+        },
+        {
+          "text": "Quel est le nombre maximal d'électrons d'une sous-couche « s » ?",
+          "type": "mcq",
+          "options": [
+            "2",
+            "8",
+            "10",
+            "18"
+          ],
+          "correct": 0,
+          "solution": "Sous-couche « s » => 2 électrons max."
+        },
+        {
+          "text": "Quel est le nombre maximal d'électrons d'une sous-couche « p » ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "2",
+            "10",
+            "18"
+          ],
+          "correct": 0,
+          "solution": "Sous-couche « p » => 8 électrons max."
+        },
+        {
+          "text": "Quel est le nombre maximal d'électrons d'une sous-couche « d » ?",
+          "type": "mcq",
+          "options": [
+            "10",
+            "8",
+            "2",
+            "18"
+          ],
+          "correct": 0,
+          "solution": "Sous-couche « d » => 10 électrons max."
+        },
+        {
+          "text": "Que signifie l'exposant dans la configuration électronique 1s² ?",
+          "type": "mcq",
+          "options": [
+            "Le nombre d'électrons de cette sous-couche",
+            "Le numéro de la couche",
+            "La charge de l'électron",
+            "Le nombre de protons"
+          ],
+          "correct": 0,
+          "solution": "Les nombres correspondents (exposants) indiquent le nombre d'électrons."
+        },
+        {
+          "text": "Que signifie le nombre devant la lettre dans 2p ?",
+          "type": "mcq",
+          "options": [
+            "Le numéro de la couche",
+            "Le nombre d'électrons",
+            "Le nombre de neutrons",
+            "La charge"
+          ],
+          "correct": 0,
+          "solution": "Les chiffres correspondent aux couches et sous-couches (2 = couche n = 2)."
+        },
+        {
+          "text": "Quel est le nombre maximal d'électrons que peut recevoir la couche n = 2 (s + p) ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "10",
+            "18",
+            "2"
+          ],
+          "correct": 0,
+          "solution": "2 (sous-couche s) + 8 (sous-couche p) = 8 électrons max."
+        },
+        {
+          "text": "Pour n = 2, quelles sous-couches sont possibles ?",
+          "type": "mcq",
+          "options": [
+            "s et p (l = 0 et l = 1)",
+            "s et d",
+            "p et d",
+            "s, p, d et f"
+          ],
+          "correct": 0,
+          "solution": "0 ≤ l ≤ n donc l = 0 (s) et l = 1 (p)."
+        },
+        {
+          "text": "La sous-couche 3d peut accueillir 10 électrons.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Sous-couche « d » => 10 électrons max."
+        },
+        {
+          "text": "Un atome possède sa dernière couche complète (couche 2 pleine). Combien d'électrons contient-il ?",
+          "type": "mcq",
+          "options": [
+            "10",
+            "8",
+            "18",
+            "2"
+          ],
+          "correct": 0,
+          "solution": "Couche 1 = 2 e⁻ + couche 2 = 8 e⁻ : 10 électrons au total."
+        }
+      ]
+    },
+    {
+      "category": "Configuration électronique et règle de Klechkowski",
+      "questions": [
+        {
+          "text": "Comment s'appelle la répartition des électrons en sous-couches d'un atome ?",
+          "type": "mcq",
+          "options": [
+            "La configuration électronique",
+            "La configuration nucléaire",
+            "Le numéro atomique",
+            "La liaison chimique"
+          ],
+          "correct": 0,
+          "solution": "La répartition des électrons en sous-couches se nomme la configuration électronique de l'atome."
+        },
+        {
+          "text": "Dans quel ordre les couches se remplissent-elles selon le cours ?",
+          "type": "mcq",
+          "options": [
+            "1s, 2s, 2p, 3s, 3p...",
+            "1p, 2s, 2d, 3f...",
+            "1s, 1p, 1d, 2s...",
+            "2s, 2p, 1s, 3s..."
+          ],
+          "correct": 0,
+          "solution": "Les couches se remplissent selon l'ordre suivant : 1s 2s 2p 3s 3p..."
+        },
+        {
+          "text": "Que donne la règle de Klechkowski ?",
+          "type": "mcq",
+          "options": [
+            "L'ordre dans lequel les sous-couches sont remplies de la plus basse à la plus haute énergie",
+            "Le nombre d'électrons de valence",
+            "La masse des nucléons",
+            "L'ordre alphabétique des éléments"
+          ],
+          "correct": 0,
+          "solution": "La règle de Klechkowski donne l'ordre dans lequel les sous-couches sont remplies de la plus basse à la plus haute énergie."
+        },
+        {
+          "text": "Méthode de Klechkowski — quelle est la 1ʳᵉ étape ?",
+          "type": "mcq",
+          "options": [
+            "Repérer le nombre d'électrons de l'atome",
+            "Remplir les couches au hasard",
+            "Compter les neutrons",
+            "Placer le noyau"
+          ],
+          "correct": 0,
+          "solution": "Étape 1 : je repère le nombre d'électrons de l'atome."
+        },
+        {
+          "text": "Méthode de Klechkowski — quelle est la 2ᵉ étape ?",
+          "type": "mcq",
+          "options": [
+            "Remplir les couches dans l'ordre de la règle de Klechkowski",
+            "Compter les protons",
+            "Retirer les électrons",
+            "Vérifier la masse"
+          ],
+          "correct": 0,
+          "solution": "Étape 2 : je remplis les couches dans l'ordre de la règle de Klechkowski."
+        },
+        {
+          "text": "Méthode de Klechkowski — quelle est la 3ᵉ étape ?",
+          "type": "mcq",
+          "options": [
+            "Je commence le remplissage d'une couche seulement lorsque la précédente est complète",
+            "Je remplis toutes les couches en même temps",
+            "Je commence par la couche 3",
+            "Je saute la couche 2"
+          ],
+          "correct": 0,
+          "solution": "Étape 3 : je commence le remplissage d'une couche seulement lorsque la précédente est complète."
+        },
+        {
+          "text": "Combien d'électrons compte l'atome de carbone dont la configuration est 1s² 2s² 2p² ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "2",
+            "4",
+            "12"
+          ],
+          "correct": 0,
+          "solution": "2 + 2 + 2 = 6 électrons, ce qui correspond à l'atome de carbone."
+        },
+        {
+          "text": "Quelle est la configuration électronique du carbone (Z = 6) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p²",
+            "1s² 2s² 2p⁴",
+            "1s² 2s² 2p⁶",
+            "1s² 2p⁴"
+          ],
+          "correct": 0,
+          "solution": "6C : 1s² 2s² 2p² (2 + 2 + 2 = 6 électrons)."
+        },
+        {
+          "text": "Quelle est la configuration électronique du fluor (²⁰F / Z = 9) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁵",
+            "1s² 2s² 2p⁶",
+            "1s² 2s² 2p⁴",
+            "1s² 2s² 2p³"
+          ],
+          "correct": 0,
+          "solution": "⁹F : 1s² 2s² 2p⁵ (d'après le cours : 199F = 1s² 2s² 2p⁵)."
+        },
+        {
+          "text": "Quelle est la configuration électronique de l'aluminium (₁₃Al) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁶ 3s² 3p¹",
+            "1s² 2s² 2p⁶ 3s¹",
+            "1s² 2s² 2p⁶ 3s²",
+            "1s² 2s² 2p⁶ 3p²"
+          ],
+          "correct": 0,
+          "solution": "₁₃Al = 1s² 2s² 2p⁶ 3s² 3p¹ (13 électrons)."
+        },
+        {
+          "text": "Quelle est la configuration électronique du magnésium (₁₂Mg) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁶ 3s²",
+            "1s² 2s² 2p⁶ 3s¹",
+            "1s² 2s² 2p⁶ 3s² 3p²",
+            "1s² 2s² 2p⁶"
+          ],
+          "correct": 0,
+          "solution": "₂₄₁₂Mg = 1s² 2s² 2p⁶ 3s² (12 électrons)."
+        },
+        {
+          "text": "Quelle est la configuration électronique de l'oxygène (Z = 8) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁴",
+            "1s² 2s² 2p⁶",
+            "1s² 2s² 2p²",
+            "1s² 2s² 2p⁵"
+          ],
+          "correct": 0,
+          "solution": "¹⁶O = 1s² 2s² 2p⁴ (8 électrons)."
+        },
+        {
+          "text": "Quelle est la configuration électronique du fer (₂₆Fe) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶",
+            "1s² 2s² 2p⁶ 3s² 3p⁸ 4s² 3d⁴",
+            "1s² 2s² 2p⁶ 3s² 3p⁶ 4s²",
+            "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s²"
+          ],
+          "correct": 0,
+          "solution": "Fe (Z = 26) : 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ (2 + 2 + 6 + 2 + 6 + 2 + 6 = 26)."
+        },
+        {
+          "text": "Combien d'électrons la configuration 1s² 2s² 2p⁶ représente-t-elle ?",
+          "type": "mcq",
+          "options": [
+            "10",
+            "8",
+            "6",
+            "18"
+          ],
+          "correct": 0,
+          "solution": "2 + 2 + 6 = 10 électrons (configuration du néon)."
+        },
+        {
+          "text": "Quelle est la configuration électronique du néon (Z = 10) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁶",
+            "1s² 2s² 2p⁴",
+            "1s² 2s² 2p⁵",
+            "1s² 2p⁶"
+          ],
+          "correct": 0,
+          "solution": "10 = 2 + 2 + 6."
+        },
+        {
+          "text": "Quelle est la configuration électronique du sodium (Z = 11) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁶ 3s¹",
+            "1s² 2s² 2p⁶ 3s²",
+            "1s² 2s² 2p⁵ 3s²",
+            "1s² 2s² 2p⁶"
+          ],
+          "correct": 0,
+          "solution": "11 = 2 + 2 + 6 + 1 : 1s² 2s² 2p⁶ 3s¹."
+        },
+        {
+          "text": "Quelle sous-couche est remplie juste après 2p ?",
+          "type": "mcq",
+          "options": [
+            "3s",
+            "3p",
+            "2s",
+            "4s"
+          ],
+          "correct": 0,
+          "solution": "Ordre de remplissage : 1s 2s 2p 3s 3p..."
+        },
+        {
+          "text": "La configuration électronique du chlore (Z = 17) se termine par...",
+          "type": "mcq",
+          "options": [
+            "3s² 3p⁵",
+            "3s² 3p⁶",
+            "4s²",
+            "3s¹"
+          ],
+          "correct": 0,
+          "solution": "17 = 2 + 2 + 6 + 2 + 5 : 1s² 2s² 2p⁶ 3s² 3p⁵."
+        },
+        {
+          "text": "La configuration électronique 1s² 2s² se termine par la sous-couche...",
+          "type": "mcq",
+          "options": [
+            "2s",
+            "1s",
+            "2p",
+            "3s"
+          ],
+          "correct": 0,
+          "solution": "Le remplissage suit l'ordre 1s puis 2s."
+        },
+        {
+          "text": "Dans 1s², l'exposant 2 indique que la sous-couche 1s contient 2 électrons.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "L'exposant indique le nombre d'électrons de la sous-couche."
+        },
+        {
+          "text": "Combien d'électrons au total dans 1s² 2s² 2p⁶ 3s² ?",
+          "type": "mcq",
+          "options": [
+            "12",
+            "10",
+            "8",
+            "18"
+          ],
+          "correct": 0,
+          "solution": "2 + 2 + 6 + 2 = 12 électrons (magnésium)."
+        },
+        {
+          "text": "Quelle est la configuration électronique du bore (Z = 5) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p¹",
+            "1s² 2s² 2p²",
+            "1s² 2s¹ 2p²",
+            "1s² 2s²"
+          ],
+          "correct": 0,
+          "solution": "5 = 2 + 2 + 1."
+        },
+        {
+          "text": "Après avoir rempli 3s, quelle sous-couche remplit-on selon la règle ?",
+          "type": "mcq",
+          "options": [
+            "3p",
+            "4s",
+            "2p",
+            "3d"
+          ],
+          "correct": 0,
+          "solution": "Ordre : 1s 2s 2p 3s 3p 4s 3d..."
+        }
+      ]
+    },
+    {
+      "category": "Électrons de balance et tableau périodique",
+      "questions": [
+        {
+          "text": "Où se situent les électrons de balance ?",
+          "type": "mcq",
+          "options": [
+            "Dans la couche externe de configuration électronique",
+            "Dans le noyau",
+            "Dans la première couche",
+            "Partout dans l'atome"
+          ],
+          "correct": 0,
+          "solution": "La couche externe de configuration électronique d'un atome contient des électrons de balance."
+        },
+        {
+          "text": "Pourquoi les électrons de balance jouent-ils un rôle capital ?",
+          "type": "mcq",
+          "options": [
+            "Ils déterminent la réactivité de l'atome",
+            "Ils déterminent la masse du noyau",
+            "Ils déterminent le nombre de neutrons",
+            "Ils ne jouent aucun rôle"
+          ],
+          "correct": 0,
+          "solution": "Ils jouent un rôle capital dans la réactivité d'un atome."
+        },
+        {
+          "text": "Pour devenir plus stable, un atome peut...",
+          "type": "mcq",
+          "options": [
+            "Perdre ou gagner un électron afin de former un ion",
+            "Gagner des neutrons",
+            "Changer de noyau",
+            "Doubler sa masse"
+          ],
+          "correct": 0,
+          "solution": "Pour devenir plus stable, un atome a la capacité de perdre ou gagner un électron afin de former un ion."
+        },
+        {
+          "text": "Lorsque la dernière couche est pleine, l'atome ne possède que des...",
+          "type": "mcq",
+          "options": [
+            "Électrons de cœur",
+            "Électrons de balance",
+            "Protons libres",
+            "Neutrons libres"
+          ],
+          "correct": 0,
+          "solution": "Lorsque la dernière couche est pleine, l'atome ne possède que des électrons de cœur."
+        },
+        {
+          "text": "Dans le tableau périodique, que détermine la ligne (période) sur laquelle se trouve un élément ?",
+          "type": "mcq",
+          "options": [
+            "Sa couche électronique de valence (son numéro de couche)",
+            "Sa sous-couche",
+            "Son nombre de neutrons",
+            "Sa masse atomique"
+          ],
+          "correct": 0,
+          "solution": "Dans le tableau, la ligne détermine sa couche électronique de valence."
+        },
+        {
+          "text": "Dans le tableau périodique, que détermine la colonne (groupe) d'un élément ?",
+          "type": "mcq",
+          "options": [
+            "Sa sous-couche",
+            "Sa couche électronique",
+            "Son nombre de masse",
+            "Son état physique"
+          ],
+          "correct": 0,
+          "solution": "La colonne détermine la sous-couche."
+        },
+        {
+          "text": "Le fluor ⁹F (1s², 2s², 2p⁵) se trouve sur la 2ᵉ ligne. Que cela indique-t-il ?",
+          "type": "mcq",
+          "options": [
+            "Sa dernière couche électronique occupée est la 2ᵉ",
+            "Il a 2 protons",
+            "Il a 2 neutrons",
+            "Sa couche 2 est vide"
+          ],
+          "correct": 0,
+          "solution": "L'atome de fluor est sur la 2ᵉ ligne donc sa dernière couche électronique occupée est la 2ᵉ."
+        },
+        {
+          "text": "Le fluor est dans la colonne représentant la sous-couche p⁵. Sa configuration se termine donc par...",
+          "type": "mcq",
+          "options": [
+            "2p⁵",
+            "2s²",
+            "3p⁵",
+            "1s²"
+          ],
+          "correct": 0,
+          "solution": "Il est sur la colonne représentant la sous-couche p⁵ : sa configuration se termine par 2p⁵."
+        },
+        {
+          "text": "Quels éléments forment la famille des alcalins ?",
+          "type": "mcq",
+          "options": [
+            "Ceux de configuration s¹",
+            "Ceux de configuration s²",
+            "Ceux de configuration p⁵",
+            "Ceux de configuration p⁶"
+          ],
+          "correct": 0,
+          "solution": "S¹ = Alcalins."
+        },
+        {
+          "text": "Quels éléments forment la famille des alcalino-terreux ?",
+          "type": "mcq",
+          "options": [
+            "Ceux de configuration s²",
+            "Ceux de configuration s¹",
+            "Ceux de configuration p⁵",
+            "Ceux de configuration p⁶"
+          ],
+          "correct": 0,
+          "solution": "S² = Alcalino-terreux."
+        },
+        {
+          "text": "Quels éléments forment la famille des halogènes ?",
+          "type": "mcq",
+          "options": [
+            "Ceux de configuration p⁵",
+            "Ceux de configuration p⁶",
+            "Ceux de configuration s¹",
+            "Ceux de configuration s²"
+          ],
+          "correct": 0,
+          "solution": "P⁵ = Halogène."
+        },
+        {
+          "text": "Quels éléments forment la famille des gaz nobles ?",
+          "type": "mcq",
+          "options": [
+            "Ceux de configuration p⁶",
+            "Ceux de configuration p⁵",
+            "Ceux de configuration s¹",
+            "Ceux de configuration s²"
+          ],
+          "correct": 0,
+          "solution": "P⁶ = Gaz nobles."
+        },
+        {
+          "text": "Qu'est-ce qu'une famille chimique ?",
+          "type": "mcq",
+          "options": [
+            "Un groupe d'éléments aux propriétés chimiques similaires ayant le même nombre d'électrons de valence",
+            "Un groupe d'éléments ayant la même masse",
+            "Un groupe d'éléments ayant le même nombre de neutrons",
+            "Les éléments d'une même ligne"
+          ],
+          "correct": 0,
+          "solution": "Les familles regroupent les éléments aux propriétés similaires : ils ont en commun leur nombre d'électrons de valence et sont sur une même colonne."
+        },
+        {
+          "text": "Deux éléments situés dans la même colonne du tableau périodique ont le même nombre d'électrons de valence.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Les atomes d'une même famille ont en commun leur nombre d'électrons de valence."
+        },
+        {
+          "text": "Un atome possède sa configuration se terminant par 3s¹. À quelle famille appartient-il ?",
+          "type": "mcq",
+          "options": [
+            "Alcalins",
+            "Alcalino-terreux",
+            "Halogènes",
+            "Gaz nobles"
+          ],
+          "correct": 0,
+          "solution": "S¹ = Alcalins (sodium par exemple)."
+        },
+        {
+          "text": "Un atome possède sa configuration se terminant par 4s². À quelle famille appartient-il ?",
+          "type": "mcq",
+          "options": [
+            "Alcalino-terreux",
+            "Alcalins",
+            "Halogènes",
+            "Gaz nobles"
+          ],
+          "correct": 0,
+          "solution": "S² = Alcalino-terreux (calcium par exemple)."
+        },
+        {
+          "text": "Un atome possède sa configuration se terminant par 2p⁵. À quelle famille appartient-il ?",
+          "type": "mcq",
+          "options": [
+            "Halogènes",
+            "Alcalins",
+            "Alcalino-terreux",
+            "Gaz nobles"
+          ],
+          "correct": 0,
+          "solution": "P⁵ = Halogène (fluor)."
+        },
+        {
+          "text": "Un atome possède sa configuration se terminant par 3p⁶. De quel type d'élément s'agit-il ?",
+          "type": "mcq",
+          "options": [
+            "Un gaz noble",
+            "Un halogène",
+            "Un alcalin",
+            "Un alcalino-terreux"
+          ],
+          "correct": 0,
+          "solution": "P⁶ = Gaz nobles."
+        },
+        {
+          "text": "Comment appelle-t-on la dernière couche d'un atome qui contient les électrons de balance ?",
+          "type": "mcq",
+          "options": [
+            "La couche de valence",
+            "La couche de cœur",
+            "La couche nucléaire",
+            "La couche 0"
+          ],
+          "correct": 0,
+          "solution": "Cette couche est appelée couche de balance (couche de valence)."
+        },
+        {
+          "text": "La configuration électronique permet aussi de...",
+          "type": "mcq",
+          "options": [
+            "Constituer des familles aux propriétés similaires et de comprendre la stabilité d'un élément",
+            "Calculer la masse du noyau",
+            "Mesurer la température",
+            "Déterminer la couleur des ions"
+          ],
+          "correct": 0,
+          "solution": "Elle permet de classer les éléments, de constituer des familles et de commenter la stabilité d'un élément."
+        }
+      ]
+    },
+    {
+      "category": "Réactivité, stabilité chimique et ions",
+      "questions": [
+        {
+          "text": "Pourquoi les gaz nobles sont-ils chimiquement inertes ?",
+          "type": "mcq",
+          "options": [
+            "Leur couche externe est saturée en électrons : ils sont stables",
+            "Ils n'ont pas d'électrons",
+            "Ils ont trop de protons",
+            "Ils sont liquides"
+          ],
+          "correct": 0,
+          "solution": "La couche externe des gaz nobles est saturée en électrons, ils sont donc chimiquement inertes."
+        },
+        {
+          "text": "Les gaz nobles présentent une réactivité chimique importante.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Ils sont stables et ne présentent pas de réactivité chimique."
+        },
+        {
+          "text": "Quelle est la « quête » des autres éléments chimiques que les gaz nobles ?",
+          "type": "mcq",
+          "options": [
+            "Acquérir une configuration électronique semblable à celle d'un gaz noble (couche de valence complète)",
+            "Perdre tous leurs électrons",
+            "Gagner des neutrons",
+            "Devenir radioactifs"
+          ],
+          "correct": 0,
+          "solution": "Les autres éléments réagissent pour acquérir une configuration électronique d'un gaz noble, donc une couche de valence complète."
+        },
+        {
+          "text": "Configuration du fluor F : 1s², 2s², 2p⁵. Comment le fluor devient-il stable ?",
+          "type": "mcq",
+          "options": [
+            "En gagnant 1 électron : F⁻ (1s², 2s², 2p⁶)",
+            "En perdant 5 électrons",
+            "En gagnant 5 neutrons",
+            "En perdant 1 proton"
+          ],
+          "correct": 0,
+          "solution": "F : 1s², 2s², 2p⁵ -> F⁻ : 1s², 2s², 2p⁶ (couche 2 complète)."
+        },
+        {
+          "text": "Quelle est la configuration électronique de l'ion fluorure F⁻ ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁶",
+            "1s² 2s² 2p⁵",
+            "1s² 2s²",
+            "1s² 2s² 2p⁴"
+          ],
+          "correct": 0,
+          "solution": "F⁻ possède 10 électrons : 1s² 2s² 2p⁶."
+        },
+        {
+          "text": "Qu'est-ce qu'un ion monoatomique ?",
+          "type": "mcq",
+          "options": [
+            "Une entité chimique formée à partir d'un atome qui lui permet d'atteindre la stabilité chimique",
+            "Un atome neutre",
+            "Une molécule à deux atomes",
+            "Un noyau chargé"
+          ],
+          "correct": 0,
+          "solution": "Les ions monoatomiques sont des entités chimiques formées à partir des atomes et qui leur permettent d'atteindre la stabilité chimique."
+        },
+        {
+          "text": "À partir de quoi s'explique la formation d'un ion ?",
+          "type": "mcq",
+          "options": [
+            "De la configuration électronique de l'atome et de son nombre d'électrons de valence",
+            "De son nombre de neutrons",
+            "De sa masse atomique",
+            "De sa température"
+          ],
+          "correct": 0,
+          "solution": "C'est à partir de la configuration électronique d'un atome et de son nombre d'électrons de valence que s'explique la formation de l'ion associé."
+        },
+        {
+          "text": "Un atome de sodium a la configuration 1s² 2s² 2p⁶ 3s¹. Que doit-il faire pour devenir stable ?",
+          "type": "mcq",
+          "options": [
+            "Perdre son électron de valence (Na⁺)",
+            "Gagner 7 électrons",
+            "Gagner 1 neutron",
+            "Ne rien faire"
+          ],
+          "correct": 0,
+          "solution": "Un alcalin s¹ perd son électron de balance pour obtenir la configuration d'un gaz noble."
+        },
+        {
+          "text": "Quel est le nombre d'électrons de valence d'un atome de configuration 1s² 2s² 2p⁵ ?",
+          "type": "mcq",
+          "options": [
+            "7",
+            "5",
+            "2",
+            "10"
+          ],
+          "correct": 0,
+          "solution": "La couche externe (n = 2) contient 2 (2s²) + 5 (2p⁵) = 7 électrons."
+        },
+        {
+          "text": "Pourquoi un atome dont la dernière couche est pleine est-il peu réactif ?",
+          "type": "mcq",
+          "options": [
+            "Parce qu'il est stable (configuration de gaz noble)",
+            "Parce qu'il est très lourd",
+            "Parce qu'il a beaucoup de neutrons",
+            "Parce qu'il est radioactif"
+          ],
+          "correct": 0,
+          "solution": "Lorsque la dernière couche est pleine, l'atome est stable."
+        },
+        {
+          "text": "Un atome qui gagne des électrons forme un ion chargé négativement.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "En gagnant des électrons (charges négatives), l'atome devient négatif : ex. F -> F⁻."
+        },
+        {
+          "text": "Les atomes d'une même famille chimique ont le même nombre d'électrons de valence.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Les familles regroupent les éléments ayant le même nombre d'électrons de valence (même colonne)."
+        },
+        {
+          "text": "Quel gaz noble possède la configuration 1s² (couche 1 complète) ?",
+          "type": "mcq",
+          "options": [
+            "L'hélium (He)",
+            "Le néon (Ne)",
+            "L'argon (Ar)",
+            "Le fluor (F)"
+          ],
+          "correct": 0,
+          "solution": "1s² : couche 1 saturée avec 2 électrons => hélium, gaz noble."
+        },
+        {
+          "text": "Le néon a la configuration 1s² 2s² 2p⁶. De quel type d'élément s'agit-il ?",
+          "type": "mcq",
+          "options": [
+            "Un gaz noble",
+            "Un halogène",
+            "Un alcalin",
+            "Un métal de transition"
+          ],
+          "correct": 0,
+          "solution": "Couche 2 complète (8 électrons) : configuration de gaz noble."
+        },
+        {
+          "text": "Combien d'électrons un atome doit-il gagner ou perdre pour avoir la même configuration qu'un gaz noble ?",
+          "type": "mcq",
+          "options": [
+            "Assez pour que sa couche de valence soit complète",
+            "Toujours 8",
+            "Toujours 2",
+            "Aucun : c'est automatique"
+          ],
+          "correct": 0,
+          "solution": "Les éléments réagissent pour obtenir une couche de valence complète."
+        },
+        {
+          "text": "La réactivité d'un atome dépend principalement de...",
+          "type": "mcq",
+          "options": [
+            "Ses électrons de valence (couche de balance)",
+            "Son nombre de neutrons",
+            "La masse de son noyau",
+            "Son numéro de masse"
+          ],
+          "correct": 0,
+          "solution": "Les électrons de balance jouent un rôle capital dans la réactivité."
+        }
+      ]
+    },
+    {
+      "category": "Exercices pratiques (30)",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "Ex. Pratique 1 — Combien de neutrons compte le noyau ²⁷₁₃Al ?",
+          "type": "text",
+          "accepted": [
+            "14",
+            "14n"
+          ],
+          "solution": "N = A - Z = 27 - 13 = 14.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 2 — Combien d'électrons contient un atome de calcium neutre (Z = 20) ?",
+          "type": "text",
+          "accepted": [
+            "20"
+          ],
+          "solution": "Électrons = Z = 20.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 3 — Déterminez A d'un noyau de Z = 17 et N = 20.",
+          "type": "text",
+          "accepted": [
+            "37"
+          ],
+          "solution": "A = Z + N = 17 + 20 = 37.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 4 — Quelle est la représentation symbolique du noyau d'azote (Z = 7, N = 7) ?",
+          "type": "mcq",
+          "options": [
+            "¹⁴₇N",
+            "¹⁴₇Na",
+            "⁷₁₄N",
+            "¹⁴₇O"
+          ],
+          "correct": 0,
+          "solution": "A = 7 + 7 = 14 et Z = 7 : ¹⁴₇N."
+        },
+        {
+          "text": "Ex. Pratique 5 — Un atome possède 19 protons et 20 neutrons : de quel élément s'agit-il et quel est A ?",
+          "type": "mcq",
+          "options": [
+            "Potassium, A = 39",
+            "Calcium, A = 39",
+            "Argon, A = 39",
+            "Sodium, A = 39"
+          ],
+          "correct": 0,
+          "solution": "Z = 19 = potassium, A = 19 + 20 = 39."
+        },
+        {
+          "text": "Ex. Pratique 6 — Combien de neutrons compte le noyau ²⁰⁸₈₂Pb ?",
+          "type": "text",
+          "accepted": [
+            "126"
+          ],
+          "solution": "N = 208 - 82 = 126.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 7 — Masse approximative d'un atome de carbone 12 (A = 12) ?",
+          "type": "mcq",
+          "options": [
+            "12 × 1,67·10⁻²⁷ ≈ 2,0·10⁻²⁶ kg",
+            "12 × 9,109·10⁻³¹ kg",
+            "1,67·10⁻²⁷ kg",
+            "12 kg"
+          ],
+          "correct": 0,
+          "solution": "M = A × M nucléon = 12 × 1,67·10⁻²⁷ ≈ 2,0·10⁻²⁶ kg."
+        },
+        {
+          "text": "Ex. Pratique 8 — Convertissez 0,000000001 m (10⁻⁹ m) en nanomètres.",
+          "type": "mcq",
+          "options": [
+            "1 nm",
+            "10 nm",
+            "0,1 nm",
+            "1000 nm"
+          ],
+          "correct": 0,
+          "solution": "1 nm = 10⁻⁹ m."
+        },
+        {
+          "text": "Ex. Pratique 9 — Convertissez 5·10⁻¹⁵ m en femtomètres.",
+          "type": "mcq",
+          "options": [
+            "5 fm",
+            "50 fm",
+            "0,5 fm",
+            "5000 fm"
+          ],
+          "correct": 0,
+          "solution": "1 fm = 10⁻¹⁵ m donc 5·10⁻¹⁵ m = 5 fm."
+        },
+        {
+          "text": "Ex. Pratique 10 — Convertissez 2,5·10⁻¹⁰ m en nanomètres.",
+          "type": "mcq",
+          "options": [
+            "0,25 nm",
+            "2,5 nm",
+            "25 nm",
+            "0,025 nm"
+          ],
+          "correct": 0,
+          "solution": "2,5·10⁻¹⁰ m = 0,25 × 10⁻⁹ m = 0,25 nm."
+        },
+        {
+          "text": "Ex. Pratique 11 — Combien d'électrons de valence pour 1s² 2s² 2p⁶ 3s² 3p¹ ?",
+          "type": "text",
+          "accepted": [
+            "3"
+          ],
+          "solution": "Couche 3 : 2 + 1 = 3 électrons de valence.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 12 — Écrivez la configuration électronique de l'oxygène (Z = 8).",
+          "type": "mcq",
+          "options": [
+            "1s² 2s² 2p⁴",
+            "1s² 2s² 2p⁶",
+            "1s² 2s² 2p⁵",
+            "1s² 2p⁶"
+          ],
+          "correct": 0,
+          "solution": "8 = 2 + 2 + 4 : 1s² 2s² 2p⁴."
+        },
+        {
+          "text": "Ex. Pratique 13 — Combien d'électrons au total dans 1s² 2s² 2p⁶ 3s² ?",
+          "type": "text",
+          "accepted": [
+            "12"
+          ],
+          "solution": "2 + 2 + 6 + 2 = 12 électrons (magnésium).",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 14 — Quel est le nombre maximal d'électrons de la sous-couche 3d ?",
+          "type": "mcq",
+          "options": [
+            "10",
+            "8",
+            "2",
+            "18"
+          ],
+          "correct": 0,
+          "solution": "Sous-couche « d » => 10 électrons max."
+        },
+        {
+          "text": "Ex. Pratique 15 — Quelle est la capacité maximale de la couche n = 3 (en électrons) ?",
+          "type": "text",
+          "accepted": [
+            "18"
+          ],
+          "solution": "Couche 3 => 18 électrons max.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 16 — Quelle sous-couche remplit-on juste après 2p selon la règle de Klechkowski ?",
+          "type": "mcq",
+          "options": [
+            "3s",
+            "2s",
+            "3d",
+            "4p"
+          ],
+          "correct": 0,
+          "solution": "Ordre : 1s 2s 2p 3s 3p..."
+        },
+        {
+          "text": "Ex. Pratique 17 — Une configuration se termine par 4s² : à quelle famille appartient l'élément ?",
+          "type": "mcq",
+          "options": [
+            "Alcalino-terreux",
+            "Alcalin",
+            "Halogène",
+            "Gaz noble"
+          ],
+          "correct": 0,
+          "solution": "S² = Alcalino-terreux (calcium, Z = 20)."
+        },
+        {
+          "text": "Ex. Pratique 18 — Quelle est la configuration électronique du lithium (Z = 3) ?",
+          "type": "mcq",
+          "options": [
+            "1s² 2s¹",
+            "1s² 2s²",
+            "1s¹ 2s²",
+            "1s² 2p¹"
+          ],
+          "correct": 0,
+          "solution": "3 = 2 + 1 : 1s² 2s¹."
+        },
+        {
+          "text": "Ex. Pratique 19 — Combien de nucléons dans un noyau de ⁶³₂₉Cu ?",
+          "type": "text",
+          "accepted": [
+            "63"
+          ],
+          "solution": "A = 63 (nombre de masse).",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 20 — Combien de protons dans un atome de cuivre ⁶³₂₉Cu ?",
+          "type": "text",
+          "accepted": [
+            "29"
+          ],
+          "solution": "Z = 29 protons.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 21 — Un atome perd 2 électrons pour devenir stable. De quelle famille vient-il probablement ?",
+          "type": "mcq",
+          "options": [
+            "Alcalino-terreux (s²)",
+            "Alcalin (s¹)",
+            "Halogène (p⁵)",
+            "Gaz noble (p⁶)"
+          ],
+          "correct": 0,
+          "solution": "Un alcalino-terreux perd ses 2 électrons de valence (ex. Mg -> Mg²⁺)."
+        },
+        {
+          "text": "Ex. Pratique 22 — L'ion chlorure Cl⁻ est obtenu à partir du chlore (3s² 3p⁵) par...",
+          "type": "mcq",
+          "options": [
+            "L'ajout d'un électron",
+            "La perte d'un électron",
+            "L'ajout d'un neutron",
+            "La perte d'un proton"
+          ],
+          "correct": 0,
+          "solution": "3p⁵ + 1 e⁻ -> 3p⁶ : configuration de gaz noble."
+        },
+        {
+          "text": "Ex. Pratique 23 — Quelle est la masse en grammes de 2 kg ?",
+          "type": "mcq",
+          "options": [
+            "2·10³ g",
+            "2·10⁻³ g",
+            "2·10⁶ g",
+            "20 g"
+          ],
+          "correct": 0,
+          "solution": "1 kg = 10³ g."
+        },
+        {
+          "text": "Ex. Pratique 24 — Convertissez 0,000 007 kg en grammes.",
+          "type": "text",
+          "accepted": [
+            "0.007",
+            "0,007",
+            "0.007g",
+            "0,007g"
+          ],
+          "solution": "0,000 007 kg = 7·10⁻⁶ kg = 7·10⁻³ g = 0,007 g.",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 25 — Combien de fois l'atome est-il plus grand que son noyau (ordre de grandeur) ?",
+          "type": "mcq",
+          "options": [
+            "100 000 fois",
+            "100 fois",
+            "10 fois",
+            "10⁹ fois"
+          ],
+          "correct": 0,
+          "solution": "Un atome est environ 100 mille fois plus grand que son noyau."
+        },
+        {
+          "text": "Ex. Pratique 26 — Quelle est la charge électrique d'un neutron ?",
+          "type": "mcq",
+          "options": [
+            "0",
+            "+e",
+            "-e",
+            "+2e"
+          ],
+          "correct": 0,
+          "solution": "Le neutron est électriquement neutre."
+        },
+        {
+          "text": "Ex. Pratique 27 — Quelle masse a un nucléon ?",
+          "type": "mcq",
+          "options": [
+            "1,67·10⁻²⁷ kg",
+            "1,67·10⁻²⁷ g",
+            "9,109·10⁻³¹ kg",
+            "1,6·10⁻¹⁹ kg"
+          ],
+          "correct": 0,
+          "solution": "M nucléon = 1,67·10⁻²⁷ kg."
+        },
+        {
+          "text": "Ex. Pratique 28 — Combien d'électrons dans 1s² 2s² 2p⁵ ?",
+          "type": "text",
+          "accepted": [
+            "9"
+          ],
+          "solution": "2 + 2 + 5 = 9 électrons (fluor).",
+          "options": [],
+          "correct": 0
+        },
+        {
+          "text": "Ex. Pratique 29 — Un noyau a A = 40 et N = 22. Quel est Z ?",
+          "type": "mcq",
+          "options": [
+            "18",
+            "62",
+            "22",
+            "40"
+          ],
+          "correct": 0,
+          "solution": "Z = A - N = 40 - 22 = 18 (argon)."
+        },
+        {
+          "text": "Ex. Pratique 30 — Combien d'électrons de valence possède un atome de configuration 3s² 3p⁴ ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "4",
+            "2",
+            "8"
+          ],
+          "correct": 0,
+          "solution": "Couche 3 : 2 + 4 = 6 électrons de valence (soufre)."
+        }
+      ]
+    }
+  ]
+}
