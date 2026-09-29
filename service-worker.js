@@ -33,7 +33,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1790695597";
+const CACHE_NAME = "quiz-cache-1790701601";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
