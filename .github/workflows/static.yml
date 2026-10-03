@@ -35,6 +35,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate questionnaires (format JSON + config.json)
+        run: node scripts/validate-quizzes.js
+
       - name: Update Service Worker
         run: |
           chmod +x scripts/generate-sw.sh

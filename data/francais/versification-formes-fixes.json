@@ -1,0 +1,1795 @@
+{
+  "subject": "francais",
+  "title": "Versification et formes fixes",
+  "description": "Le vers et sa mesure, césure et enjambement, strophes, rimes, sonnet, ballade, rondeau, villanelle et versification moderne (148 questions).",
+  "categories": [
+    {
+      "category": "Le vers et sa mesure",
+      "questions": [
+        {
+          "text": "Que désigne la « versification » ?",
+          "type": "mcq",
+          "options": [
+            "L'art de composer des vers selon des règles précises",
+            "L'art du roman policier",
+            "La correction de l'orthographe",
+            "L'analyse de la phrase complexe"
+          ],
+          "correct": 0,
+          "solution": "La versification est l'ensemble des règles qui régissent la composition des vers (mesure, rimes, rythme)."
+        },
+        {
+          "text": "Qu'est-ce que la « mesure » d'un vers ?",
+          "type": "mcq",
+          "options": [
+            "Son nombre de syllabes",
+            "Son nombre de rimes",
+            "Son nombre de strophes",
+            "Sa longueur en centimètres"
+          ],
+          "correct": 0,
+          "solution": "La mesure d'un vers est son nombre de syllabes : un vers de 12 syllabes est un alexandrin."
+        },
+        {
+          "text": "Combien de syllabes compte un alexandrin ?",
+          "type": "mcq",
+          "options": [
+            "12",
+            "10",
+            "8",
+            "6"
+          ],
+          "correct": 0,
+          "solution": "L'alexandrin est le vers de 12 syllabes, coupé en deux hémistiches de 6 syllabes."
+        },
+        {
+          "text": "Comment s'appelle un vers de 10 syllabes ?",
+          "type": "mcq",
+          "options": [
+            "Un décasyllabe",
+            "Un octosyllabe",
+            "Un hexasyllabe",
+            "Un alexandrin"
+          ],
+          "correct": 0,
+          "solution": "Décasyllabe = 10 syllabes ; octosyllabe = 8 ; hexasyllabe = 6 ; alexandrin = 12."
+        },
+        {
+          "text": "Comment s'appelle un vers de 8 syllabes ?",
+          "type": "mcq",
+          "options": [
+            "Un octosyllabe",
+            "Un décasyllabe",
+            "Un pentasyllabe",
+            "Un tétrasyllabe"
+          ],
+          "correct": 0,
+          "solution": "L'octosyllabe (8 syllabes) est très utilisé dans la poésie médiévale et les formes légères comme le rondeau."
+        },
+        {
+          "text": "Comment s'appelle un vers de 6 syllabes ?",
+          "type": "mcq",
+          "options": [
+            "Un hexasyllabe",
+            "Un octosyllabe",
+            "Un heptasyllabe",
+            "Un vers libre"
+          ],
+          "correct": 0,
+          "solution": "Hexasyllabe = vers de 6 syllabes."
+        },
+        {
+          "text": "Comment s'appelle un vers de 5 syllabes ?",
+          "type": "mcq",
+          "options": [
+            "Un pentasyllabe",
+            "Un hexasyllabe",
+            "Un sextain",
+            "Un distique"
+          ],
+          "correct": 0,
+          "solution": "Pentasyllabe = vers de 5 syllabes ; un sextain, lui, est une strophe de 6 vers."
+        },
+        {
+          "text": "Combien de syllabes compte ce vers de Victor Hugo (« Demain, dès l'aube… ») : « Demain, dès l'aube, à l'heure où blanchit la campagne » ?",
+          "type": "mcq",
+          "options": [
+            "12 syllabes : c'est un alexandrin",
+            "10 syllabes : c'est un décasyllabe",
+            "8 syllabes : c'est un octosyllabe",
+            "6 syllabes : c'est un hexasyllabe"
+          ],
+          "correct": 0,
+          "solution": "Décompte : De-main-dès-l'aube-à-l'heure-où-blan-chit-la-cam-pagne = 12 syllabes."
+        },
+        {
+          "text": "Combien de syllabes compte le vers suivant : « Le ciel bleu de ce beau matin d'été » ?",
+          "type": "mcq",
+          "options": [
+            "10 : c'est un décasyllabe",
+            "8 : c'est un octosyllabe",
+            "12 : c'est un alexandrin",
+            "6 : c'est un hexasyllabe"
+          ],
+          "correct": 0,
+          "solution": "Décompte : Le-ciel-bleu-de-ce-beau-ma-tin-d'é-té = 10 syllabes (l'e de « de » se prononce devant la consonne « c »)."
+        },
+        {
+          "text": "Combien de syllabes compte le vers suivant : « Le grand arbre du bois » ?",
+          "type": "mcq",
+          "options": [
+            "6 : c'est un hexasyllabe",
+            "8 : c'est un octosyllabe",
+            "5 : c'est un pentasyllabe",
+            "4 : c'est un tétrasyllabe"
+          ],
+          "correct": 0,
+          "solution": "Décompte : Le-grand-ar-bre-du-bois = 6 syllabes (l'e d'« arbre » se prononce devant « du »)."
+        },
+        {
+          "text": "Combien de syllabes compte le vers suivant : « Le vent fait tourner les moulins » ?",
+          "type": "mcq",
+          "options": [
+            "8 : c'est un octosyllabe",
+            "10 : c'est un décasyllabe",
+            "6 : c'est un hexasyllabe",
+            "12 : c'est un alexandrin"
+          ],
+          "correct": 0,
+          "solution": "Décompte : Le-vent-fait-tour-ner-les-mou-lins = 8 syllabes (l'e de « tourner » se prononce devant « les »)."
+        },
+        {
+          "text": "Combien de syllabes compte le vers suivant : « Il pleut, il pleut, bergère » ?",
+          "type": "mcq",
+          "options": [
+            "6 : c'est un hexasyllabe",
+            "8 : c'est un octosyllabe",
+            "5 : c'est un pentasyllabe",
+            "7 : c'est un heptasyllabe"
+          ],
+          "correct": 0,
+          "solution": "Décompte : Il-pleut-il-pleut-ber-gère = 6 syllabes (le e final de « bergère » n'est pas compté en fin de vers)."
+        },
+        {
+          "text": "Combien de syllabes compte le vers suivant : « Le ciel est, par-dessus le toit » ?",
+          "type": "mcq",
+          "options": [
+            "8 : c'est un octosyllabe",
+            "10 : c'est un décasyllabe",
+            "6 : c'est un hexasyllabe",
+            "4 : c'est un tétrasyllabe"
+          ],
+          "correct": 0,
+          "solution": "Décompte : Le-ciel-est-par-des-sus-le-toit = 8 syllabes (le e de « le » se prononce devant « toit »)."
+        },
+        {
+          "text": "Que devient l'e muet final d'un mot suivi d'une consonne ?",
+          "type": "mcq",
+          "options": [
+            "Il se prononce et compte pour une syllabe",
+            "Il ne se prononce jamais",
+            "Il s'élide obligatoirement",
+            "Il interdit la césure"
+          ],
+          "correct": 0,
+          "solution": "Devant une consonne, l'e muet est prononcé : « Le grand arbre » compte 4 syllabes (Le-grand-ar-bre)."
+        },
+        {
+          "text": "Que devient l'e muet final d'un mot suivi d'une voyelle ?",
+          "type": "mcq",
+          "options": [
+            "Il s'élide : il ne compte pas",
+            "Il compte toujours pour une syllabe",
+            "Il devient un accent tonique",
+            "Il rime avec la voyelle suivante"
+          ],
+          "correct": 0,
+          "solution": "Devant une voyelle (ou un h muet), l'e muet s'élide : « la porte est » = la-port-est (3 syllabes)."
+        },
+        {
+          "text": "Que devient l'e muet final placé en fin de vers ?",
+          "type": "mcq",
+          "options": [
+            "Il n'est pas compté",
+            "Il compte comme une syllabe supplémentaire",
+            "Il double la dernière syllabe",
+            "Il oblige à une rime riche"
+          ],
+          "correct": 0,
+          "solution": "En fin de vers, l'e muet n'est jamais prononcé : « Il pleut, il pleut, bergère » = 6 syllabes."
+        },
+        {
+          "text": "Vrai ou Faux : en français, l'accent tonique tombe sur la dernière syllabe prononcée du vers.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : en français l'accent tonique porte sur la dernière syllabe sonore du groupe rythmique (ici, du vers)."
+        },
+        {
+          "text": "Combien d'accents toniques un alexandrin comporte-t-il en principe ?",
+          "type": "mcq",
+          "options": [
+            "Deux : à la césure et à la fin du vers",
+            "Un seul, en fin de vers",
+            "Trois : après chaque groupe de mots",
+            "Aucun : le vers est sans accent"
+          ],
+          "correct": 0,
+          "solution": "L'alexandrin, coupé en deux hémistiches égaux, comporte deux accents toniques : après la 6e syllabe et à la fin."
+        },
+        {
+          "text": "Qu'est-ce qu'une cruzie (ou synérèse) ?",
+          "type": "mcq",
+          "options": [
+            "Deux voyelles voisines d'un mot comptées comme une seule syllabe (ex. : « ciel » = 1 syllabe)",
+            "La séparation de deux voyelles en deux syllabes",
+            "Une pause au milieu du vers",
+            "Une rime de deux syllabes"
+          ],
+          "correct": 0,
+          "solution": "Cruzie = deux voyelles forment une syllabe : « ciel », « vieux », « vieil » comptent une seule syllabe."
+        },
+        {
+          "text": "Qu'est-ce qu'une diérèse ?",
+          "type": "mcq",
+          "options": [
+            "La séparation de deux voyelles voisines en deux syllabes distinctes",
+            "La réunion de deux syllabes en une seule",
+            "La coupe du vers en deux hémistiches",
+            "L'élision de l'e muet"
+          ],
+          "correct": 0,
+          "solution": "Diérèse = on compte deux syllabes là où l'usage n'en formerait qu'une (le contraire de la cruzie)."
+        }
+      ]
+    },
+    {
+      "category": "Césure, hémistiches et rythme",
+      "questions": [
+        {
+          "text": "Qu'est-ce que la césure ?",
+          "type": "mcq",
+          "options": [
+            "Une pause placée au milieu d'un vers",
+            "La fin d'une strophe",
+            "La répétition d'un son",
+            "Le début du poème"
+          ],
+          "correct": 0,
+          "solution": "La césure est le repos de la voix ménagé au milieu du vers ; elle coupe le vers en deux."
+        },
+        {
+          "text": "Comment appelle-t-on les deux moitiés d'un vers coupé par la césure ?",
+          "type": "mcq",
+          "options": [
+            "Les hémistiches",
+            "Les strophes",
+            "Les rimes",
+            "Les refrains"
+          ],
+          "correct": 0,
+          "solution": "Hémistiches = les deux demi-vers (du grec hēmi = moitié)."
+        },
+        {
+          "text": "Après quelle syllabe la césure tombe-t-elle dans un alexandrin ?",
+          "type": "mcq",
+          "options": [
+            "Après la 6e syllabe",
+            "Après la 5e syllabe",
+            "Après la 8e syllabe",
+            "Après la 4e syllabe"
+          ],
+          "correct": 0,
+          "solution": "L'alexandrin est coupé 6 + 6 : la césure sépare la 6e et la 7e syllabe."
+        },
+        {
+          "text": "L'alexandrin est traditionnellement divisé en :",
+          "type": "mcq",
+          "options": [
+            "Deux hémistiches de 6 syllabes",
+            "Trois hémistiches de 4 syllabes",
+            "Quatre groupes de 3 syllabes",
+            "Une seule suite de 12 syllabes sans pause"
+          ],
+          "correct": 0,
+          "solution": "Coupure type de l'alexandrin : 6 syllabes + 6 syllabes, séparées par la césure."
+        },
+        {
+          "text": "À quoi sert la césure dans un vers long ?",
+          "type": "mcq",
+          "options": [
+            "À ménager un repos de la voix et à équilibrer le vers",
+            "À ajouter des syllabes",
+            "À supprimer la rime",
+            "À créer une nouvelle strophe"
+          ],
+          "correct": 0,
+          "solution": "La césure rythme la lecture : elle donne un point d'appui à la respiration et équilibre le vers."
+        },
+        {
+          "text": "Vrai ou Faux : une pause placée au début d'un vers s'appelle une césure.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : la césure est au milieu du vers ; la fin du vers forme la coupe, et un début de vers qui complète le précédent est un rejet."
+        },
+        {
+          "text": "Sur quoi repose principalement le rythme du vers français ?",
+          "type": "mcq",
+          "options": [
+            "Sur l'accent tonique et la césure",
+            "Sur le nombre de consonnes",
+            "Sur la ponctuation du poème",
+            "Sur la longueur des voyelles"
+          ],
+          "correct": 0,
+          "solution": "Le vers français est syllabique : son rythme vient de l'accent tonique (un par vers) et de la césure."
+        },
+        {
+          "text": "Vrai ou Faux : un alexandrin compte toujours 12 syllabes.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : c'est la définition même de l'alexandrin, quel que soit le poète."
+        },
+        {
+          "text": "Un alexandrin dans lequel on n'a placé aucune pause au milieu est dit :",
+          "type": "mcq",
+          "options": [
+            "Non césuré (césure manquante)",
+            "Enjambé",
+            "Rejeté",
+            "En rimes plates"
+          ],
+          "correct": 0,
+          "solution": "Un vers de 12 syllabes sans césure est un vers non césuré : le lecteur n'a aucun repère au milieu du vers."
+        },
+        {
+          "text": "Dans le vers « Souvent, pour s'amuser, les hommes d'équipage » (Baudelaire), la césure tombe après :",
+          "type": "mcq",
+          "options": [
+            "le mot « s'amuser », après la 6e syllabe",
+            "le mot « souvent »",
+            "le mot « les »",
+            "le mot « équipage »"
+          ],
+          "correct": 0,
+          "solution": "Décompte : Sou-vent-pour-s'a-mu-ser (6) | les-hom-mes-d'é-qui-pa-ge (6) : la césure est après « s'amuser »."
+        }
+      ]
+    },
+    {
+      "category": "Enjambement, rejet et coupe du poème",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'un enjambement ?",
+          "type": "mcq",
+          "options": [
+            "Un groupe de mots qui commence à la fin d'un vers et se termine au vers suivant",
+            "Une pause au milieu du vers",
+            "La répétition d'un refrain",
+            "L'alternance des rimes masculines et féminines"
+          ],
+          "correct": 0,
+          "solution": "Avec un enjambement, la syntaxe déborde : le vers suivant commence au milieu d'un groupe de mots."
+        },
+        {
+          "text": "Vrai ou Faux : dans un enjambement, le sens d'un vers se poursuit au vers suivant.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : le lecteur est obligé d'aller au vers suivant pour achever le sens."
+        },
+        {
+          "text": "Quand un vers commence par un ou deux mots qui complètent le vers précédent, on parle de :",
+          "type": "mcq",
+          "options": [
+            "Rejet",
+            "Césure",
+            "Distique",
+            "Couplet"
+          ],
+          "correct": 0,
+          "solution": "Le rejet place en tête de vers des mots qui font suite au vers précédent : c'est un enjambement très court."
+        },
+        {
+          "text": "Le rejet est donc un enjambement :",
+          "type": "mcq",
+          "options": [
+            "Court, de quelques mots seulement",
+            "Toujours long de plusieurs vers",
+            "Inexistant en poésie",
+            "Réservé aux sonnets"
+          ],
+          "correct": 0,
+          "solution": "Le rejet est un enjambement bref : un seul mot (ou deux) « saute » au vers suivant."
+        },
+        {
+          "text": "Vrai ou Faux : le rejet place en début de vers des mots qui font logiquement suite au vers précédent.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : c'est la définition du rejet, contrairement à la césure (milieu du vers)."
+        },
+        {
+          "text": "Le « coulage » se produit quand :",
+          "type": "mcq",
+          "options": [
+            "La césure coupe un groupe de mots de façon peu naturelle",
+            "Le poète respecte les rimes croisées",
+            "Le vers compte 12 syllabes",
+            "Le refrain revient en fin de strophe"
+          ],
+          "correct": 0,
+          "solution": "Coulage = césure mal placée : elle tranche au milieu d'un groupe de mots que l'on aurait dit d'un seul trait."
+        },
+        {
+          "text": "Vrai ou Faux : le coulage est un effet recherché et correct dans un vers bien construit.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : le coulage coupe unnaturellement un groupe de mots ; on l'évite au profit d'une coupe nette."
+        },
+        {
+          "text": "L'enjambement peut produire quel effet sur le lecteur ?",
+          "type": "mcq",
+          "options": [
+            "De la surprise, en retardant le mot attendu",
+            "Une perte totale du rythme",
+            "La disparition des rimes",
+            "Un ajout de syllabes au vers"
+          ],
+          "correct": 0,
+          "solution": "En reportant le mot-clé au vers suivant, l'enjambement crée suspense, emphase ou ironie."
+        },
+        {
+          "text": "Qu'est-ce qu'une turlutaine ?",
+          "type": "mcq",
+          "options": [
+            "Un jeu de mots fondé sur la répétition de sons très proches",
+            "Une strophe de quatre vers",
+            "Une forme fixe du XVIe siècle",
+            "Une figure qui remplace le sujet du verbe"
+          ],
+          "correct": 0,
+          "solution": "La turlutaine repose sur la répétition d'un son ou d'un mot presque identique (jeu sonore)."
+        },
+        {
+          "text": "Si la fin du vers correspond exactement à la fin d'un groupe de mots, la coupe est dite :",
+          "type": "mcq",
+          "options": [
+            "Nette (naturelle)",
+            "Enjambée",
+            "Coulée",
+            "Rejetée"
+          ],
+          "correct": 0,
+          "solution": "Coupe nette : le vers se referme sur un groupe de mots complet, sans enjambement ni coulage."
+        },
+        {
+          "text": "Vrai ou Faux : la césure et la coupe désignent la même chose.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : la césure est au milieu du vers, la coupe est la limite entre deux vers."
+        },
+        {
+          "text": "La coupe de fin de vers se situe :",
+          "type": "mcq",
+          "options": [
+            "Après la dernière syllabe prononcée de chaque vers",
+            "Après la 6e syllabe seulement",
+            "Au début de chaque strophe",
+            "Entre deux rimes masculines"
+          ],
+          "correct": 0,
+          "solution": "La coupe sépare deux vers : elle tombe après la dernière syllabe sonore du vers (l'e muet final n'est pas prononcé)."
+        }
+      ]
+    },
+    {
+      "category": "Strophes et structure du poème",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'une strophe ?",
+          "type": "mcq",
+          "options": [
+            "Un ensemble de vers groupés par les rimes et le sens",
+            "Un vers unique",
+            "Un groupe de syllabes accentuées",
+            "Le titre d'un poème"
+          ],
+          "correct": 0,
+          "solution": "La strophe unit plusieurs vers ; le poème est la succession de ses strophes."
+        },
+        {
+          "text": "Un distique est une strophe de combien de vers ?",
+          "type": "mcq",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "6"
+          ],
+          "correct": 0,
+          "solution": "Distique = 2 vers (souvent qui riment ensemble)."
+        },
+        {
+          "text": "Un tercet est une strophe de combien de vers ?",
+          "type": "mcq",
+          "options": [
+            "3",
+            "2",
+            "4",
+            "5"
+          ],
+          "correct": 0,
+          "solution": "Tercet = 3 vers ; c'est la strophe des deux parties finales du sonnet."
+        },
+        {
+          "text": "Un quatrain est une strophe de combien de vers ?",
+          "type": "mcq",
+          "options": [
+            "4",
+            "3",
+            "5",
+            "8"
+          ],
+          "correct": 0,
+          "solution": "Quatrain = 4 vers ; les sonnets s'ouvrent par deux quatrains."
+        },
+        {
+          "text": "Une strophe de 5 vers s'appelle :",
+          "type": "mcq",
+          "options": [
+            "Un quintil",
+            "Un sizain",
+            "Un distique",
+            "Un dizain"
+          ],
+          "correct": 0,
+          "solution": "Quintil = 5 vers ; sizain = 6 vers ; distique = 2 vers."
+        },
+        {
+          "text": "Une strophe de 6 vers s'appelle :",
+          "type": "mcq",
+          "options": [
+            "Un sizain",
+            "Un quintil",
+            "Un octet",
+            "Un tercet"
+          ],
+          "correct": 0,
+          "solution": "Sizain = 6 vers ; il accepte rimes plates, croisées ou embrassées."
+        },
+        {
+          "text": "Une strophe de 8 vers s'appelle :",
+          "type": "mcq",
+          "options": [
+            "Un octave (ou huitain)",
+            "Un dizain",
+            "Un quatrain",
+            "Un quintil"
+          ],
+          "correct": 0,
+          "solution": "Octave (ou huitain) = 8 vers : c'est la strophe de la ballade."
+        },
+        {
+          "text": "Une strophe de 10 vers s'appelle :",
+          "type": "mcq",
+          "options": [
+            "Un dizain",
+            "Une octave",
+            "Un sizain",
+            "Un septain"
+          ],
+          "correct": 0,
+          "solution": "Dizain = 10 vers."
+        },
+        {
+          "text": "Une strophe composée d'un seul vers s'appelle :",
+          "type": "mcq",
+          "options": [
+            "Un monostique",
+            "Un distique",
+            "Un tercet",
+            "Un refrain"
+          ],
+          "correct": 0,
+          "solution": "Monostique = strophe d'un seul vers."
+        },
+        {
+          "text": "Que désigne la « coupe » d'un poème ?",
+          "type": "mcq",
+          "options": [
+            "La disposition de ses strophes et de ses vers",
+            "Le nombre de ses rimes",
+            "Le registre employé",
+            "Le narrateur du récit"
+          ],
+          "correct": 0,
+          "solution": "La coupe décrit l'organisation extérieure du poème : longueur des vers, groupement en strophes."
+        },
+        {
+          "text": "Quel est le rôle des strophes dans un poème ?",
+          "type": "mcq",
+          "options": [
+            "Grouper des vers de sens proche et rythmer la lecture",
+            "Remplacer la ponctuation de la prose",
+            "Compter les syllabes du vers",
+            "Indiquer le registre du texte"
+          ],
+          "correct": 0,
+          "solution": "La strophe est l'unité de sens du poème : elle s'apparente au paragraphe du texte en prose."
+        },
+        {
+          "text": "Vrai ou Faux : dans un sonnet classique, tous les vers ont le même nombre de syllabes.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : le sonnet respecte une mesure unique pour tous ses vers (le plus souvent l'alexandrin)."
+        }
+      ]
+    },
+    {
+      "category": "Les rimes : nature et qualité",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'une rime ?",
+          "type": "mcq",
+          "options": [
+            "La répétition de sons identiques à la fin de deux vers ou plus",
+            "La répétition d'un même mot en début de vers",
+            "La coupe du vers au milieu",
+            "Le nombre de syllabes d'un vers"
+          ],
+          "correct": 0,
+          "solution": "La rime est l'identité de sons entre la fin de plusieurs vers : elle crée un écho musical."
+        },
+        {
+          "text": "Pour comparer deux rimes, à partir de quel endroit compte-t-on les sons ?",
+          "type": "mcq",
+          "options": [
+            "À partir de la dernière voyelle accentuée du vers",
+            "À partir de la première syllabe",
+            "À partir de la césure",
+            "À partir de la première consonne"
+          ],
+          "correct": 0,
+          "solution": "La rime se juge à partir de la dernière voyelle accentuée jusqu'à la fin du vers."
+        },
+        {
+          "text": "Deux mots n'ont qu'un seul son en commun (ex. : « dépourvue » / « venue ») : la rime est :",
+          "type": "mcq",
+          "options": [
+            "Pauvre",
+            "Suffisante",
+            "Riche",
+            "Équivoque"
+          ],
+          "correct": 0,
+          "solution": "Rime pauvre : un seul son identique (ici le son [y])."
+        },
+        {
+          "text": "Deux mots ont deux sons en commun (ex. : « chanté » / « été ») : la rime est :",
+          "type": "mcq",
+          "options": [
+            "Suffisante",
+            "Pauvre",
+            "Riche",
+            "Féminine uniquement"
+          ],
+          "correct": 0,
+          "solution": "Rime suffisante : deux sons identiques (ici [t] et [e])."
+        },
+        {
+          "text": "Deux mots ont trois sons ou plus en commun (ex. : « masque » / « fantasque ») : la rime est :",
+          "type": "mcq",
+          "options": [
+            "Riche (ou complète)",
+            "Pauvre",
+            "Plat",
+            "Alternée"
+          ],
+          "correct": 0,
+          "solution": "Rime riche : trois sons identiques ou plus ; elle est recherchée pour sa valeur expressive."
+        },
+        {
+          "text": "Parmi ces couples, lequel est une rime pauvre ?",
+          "type": "mcq",
+          "options": [
+            "« joie » / « flamboie »",
+            "« chanté » / « été »",
+            "« masque » / « fantasque »",
+            "« douleur » / « malheur »"
+          ],
+          "correct": 0,
+          "solution": "« joie » et « flamboie » n'ont qu'un seul son commun : rime pauvre."
+        },
+        {
+          "text": "Parmi ces couples, lequel est une rime suffisante ?",
+          "type": "mcq",
+          "options": [
+            "« échelle » / « belle »",
+            "« joie » / « flamboie »",
+            "« masque » / « fantasque »",
+            "« vent » / « entend »"
+          ],
+          "correct": 0,
+          "solution": "« échelle » / « belle » ont deux sons en commun : rime suffisante."
+        },
+        {
+          "text": "Parmi ces couples, lequel est une rime riche ?",
+          "type": "mcq",
+          "options": [
+            "« douleur » / « malheur »",
+            "« joie » / « flamboie »",
+            "« chanté » / « été »",
+            "« cœur » / « pleur »"
+          ],
+          "correct": 0,
+          "solution": "« douleur » / « malheur » partagent les sons [l], [œ] et [r] : rime riche."
+        },
+        {
+          "text": "Une rime féminine est une rime qui se termine sur :",
+          "type": "mcq",
+          "options": [
+            "Une syllabe muette (e muet), ex. : « pensée » / « idée »",
+            "Une voyelle accentuée",
+            "Un vers de 12 syllabes",
+            "Une strophe de 4 vers"
+          ],
+          "correct": 0,
+          "solution": "Rime féminine : les deux mots finissent par un e muet (son doux, sans accent final)."
+        },
+        {
+          "text": "Une rime masculine est une rime qui se termine sur :",
+          "type": "mcq",
+          "options": [
+            "Une syllabe accentuée, non muette, ex. : « chantait » / « vivait »",
+            "Une syllabe muette (e muet)",
+            "Une césure",
+            "Un refrain"
+          ],
+          "correct": 0,
+          "solution": "Rime masculine : le vers s'arrête sur une syllabe accentuée (pas de e muet final)."
+        },
+        {
+          "text": "Les vers « pensée » et « idée » forment une rime :",
+          "type": "mcq",
+          "options": [
+            "Féminine",
+            "Masculine",
+            "Pauvre uniquement",
+            "Riche uniquement"
+          ],
+          "correct": 0,
+          "solution": "Ces deux mots sont terminés par un e muet : la rime est féminine."
+        },
+        {
+          "text": "Les vers « chantait » et « vivait » forment une rime :",
+          "type": "mcq",
+          "options": [
+            "Masculine",
+            "Féminine",
+            "Équivoque",
+            "En clichet"
+          ],
+          "correct": 0,
+          "solution": "Aucun de ces mots ne se termine par un e muet : la rime est masculine."
+        },
+        {
+          "text": "Qu'est-ce qu'une assonance ?",
+          "type": "mcq",
+          "options": [
+            "La répétition d'un même son de voyelle, souvent à l'intérieur des vers",
+            "La répétition de la fin de deux vers",
+            "Une strophe à refrain",
+            "Une rime de trois syllabes"
+          ],
+          "correct": 0,
+          "solution": "L'assonance répète un son de voyelle n'importe où dans le vers ; la rime, elle, est en fin de vers."
+        },
+        {
+          "text": "Qu'est-ce qu'une allitération ?",
+          "type": "mcq",
+          "options": [
+            "La répétition d'un même son consonne",
+            "La répétition de la fin de vers",
+            "L'absence de rime",
+            "Une strophe irrégulière"
+          ],
+          "correct": 0,
+          "solution": "L'allitération joue sur la répétition de consonnes (ex. : le [s] d'un vers de Mallarmé)."
+        },
+        {
+          "text": "Vrai ou Faux : la rime se trouve à la fin des vers, tandis que l'assonance peut se trouver n'importe où.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : c'est la différence fondamentale entre rime et assonance."
+        },
+        {
+          "text": "Vrai ou Faux : « cœur » et « fleur » forment une rime masculine.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : les deux mots finissent sur une syllabe accentuée (pas de e muet) : rime masculine."
+        }
+      ]
+    },
+    {
+      "category": "Disposition des rimes",
+      "questions": [
+        {
+          "text": "Des rimes placées selon le schéma AABB sont appelées :",
+          "type": "mcq",
+          "options": [
+            "Rimes plates (ou suivies)",
+            "Rimes croisées",
+            "Rimes embrassées",
+            "Rimes continues en miroir"
+          ],
+          "correct": 0,
+          "solution": "Rimes plates (ou suivies) : deux vers consécutifs riment par paires (AABB)."
+        },
+        {
+          "text": "Des rimes placées selon le schéma ABAB sont appelées :",
+          "type": "mcq",
+          "options": [
+            "Rimes croisées",
+            "Rimes plates",
+            "Rimes embrassées",
+            "Rimes continues"
+          ],
+          "correct": 0,
+          "solution": "Rimes croisées : les vers 1 et 3 riment, les vers 2 et 4 riment (ABAB)."
+        },
+        {
+          "text": "Des rimes placées selon le schéma ABBA sont appelées :",
+          "type": "mcq",
+          "options": [
+            "Rimes embrassées",
+            "Rimes plates",
+            "Rimes croisées",
+            "Rimes suivies"
+          ],
+          "correct": 0,
+          "solution": "Rimes embrassées : la rime du premier vers encadre celles du milieu (ABBA)."
+        },
+        {
+          "text": "Quel schéma correspond à des rimes croisées ?",
+          "type": "mcq",
+          "options": [
+            "ABAB",
+            "AABB",
+            "ABBA",
+            "AAAA"
+          ],
+          "correct": 0,
+          "solution": "Croisées = ABAB ; plates = AABB ; embrassées = ABBA."
+        },
+        {
+          "text": "Quel schéma correspond à des rimes embrassées ?",
+          "type": "mcq",
+          "options": [
+            "ABBA",
+            "AABB",
+            "ABAB",
+            "ABABAB"
+          ],
+          "correct": 0,
+          "solution": "Embrassées = ABBA : le vers 1 rime avec le 4, le 2 avec le 3."
+        },
+        {
+          "text": "Quel schéma correspond à des rimes plates ?",
+          "type": "mcq",
+          "options": [
+            "AABB",
+            "ABAB",
+            "ABBA",
+            "ABCABC"
+          ],
+          "correct": 0,
+          "solution": "Plates (ou suivies) = AABB : deux vers riment toujours avec leur voisin immédiat."
+        },
+        {
+          "text": "Dans un quatrain à rimes croisées, quels vers riment ensemble ?",
+          "type": "mcq",
+          "options": [
+            "Les vers 1 et 3, puis les vers 2 et 4",
+            "Les vers 1 et 2, puis les 3 et 4",
+            "Les vers 1 et 4, puis les 2 et 3",
+            "Aucun vers ne rime"
+          ],
+          "correct": 0,
+          "solution": "Croisées : ABAB, c'est-à-dire 1-3 et 2-4."
+        },
+        {
+          "text": "Dans un quatrain à rimes embrassées, quels vers riment ensemble ?",
+          "type": "mcq",
+          "options": [
+            "Les vers 1 et 4, puis les vers 2 et 3",
+            "Les vers 1 et 3, puis les 2 et 4",
+            "Les vers 1 et 2, puis les 3 et 4",
+            "Les vers 3 et 4 uniquement"
+          ],
+          "correct": 0,
+          "solution": "Embrassées : ABBA, c'est-à-dire 1-4 et 2-3."
+        },
+        {
+          "text": "Vrai ou Faux : dans des rimes plates, ce sont les vers 1 et 3 qui riment.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : dans les rimes plates (AABB), ce sont les vers 1 et 2, puis 3 et 4."
+        },
+        {
+          "text": "Comment note-t-on les rimes d'un poème ?",
+          "type": "mcq",
+          "options": [
+            "Avec des lettres : une lettre par son de rime (A, B, C…)",
+            "Avec des chiffres de 1 à 10",
+            "Avec des couleurs",
+            "Avec des points d'exclamation"
+          ],
+          "correct": 0,
+          "solution": "Chaque son de rime reçoit une lettre : AA BB signifie deux rimes différentes, reprises par paires."
+        },
+        {
+          "text": "Sur six vers, le schéma ABABAB correspond à quel groupement ?",
+          "type": "mcq",
+          "options": [
+            "Vers 1-3-5 riment ensemble, vers 2-4-6 riment ensemble",
+            "Vers 1-2 riment, 3-4 riment, 5-6 riment",
+            "Aucun vers ne rime",
+            "Le vers 1 rime avec le 6 uniquement"
+          ],
+          "correct": 0,
+          "solution": "ABABAB = rimes croisées étendues sur six vers."
+        },
+        {
+          "text": "Le schéma ABBA ABBA (deux strophes) caractérise :",
+          "type": "mcq",
+          "options": [
+            "Deux quatrains à rimes embrassées",
+            "Deux quatrains à rimes plates",
+            "Deux tercets à rimes croisées",
+            "Un poème sans rimes"
+          ],
+          "correct": 0,
+          "solution": "Chaque quatrain en ABBA est à rimes embrassées : deux quatrains = ABBA ABBA."
+        }
+      ]
+    },
+    {
+      "category": "Le sonnet",
+      "questions": [
+        {
+          "text": "Combien de vers compte un sonnet ?",
+          "type": "mcq",
+          "options": [
+            "14",
+            "12",
+            "16",
+            "10"
+          ],
+          "correct": 0,
+          "solution": "Le sonnet est le poème à forme fixe de 14 vers."
+        },
+        {
+          "text": "De quelles strophes le sonnet est-il composé ?",
+          "type": "mcq",
+          "options": [
+            "Deux quatrains et deux tercets",
+            "Trois quatrains et un tercet",
+            "Trois strophes de 6 vers",
+            "Cinq tercets et un quatrain"
+          ],
+          "correct": 0,
+          "solution": "Plan fixe du sonnet : 8 vers de strophes suivis de 6 vers (2 quatrains + 2 tercets)."
+        },
+        {
+          "text": "Combien de strophes compte un sonnet ?",
+          "type": "mcq",
+          "options": [
+            "4",
+            "2",
+            "3",
+            "6"
+          ],
+          "correct": 0,
+          "solution": "Le sonnet compte 4 strophes : 2 quatrains puis 2 tercets."
+        },
+        {
+          "text": "Le sonnet est une forme :",
+          "type": "mcq",
+          "options": [
+            "Fixe",
+            "Libre",
+            "Irrégulière",
+            "En prose"
+          ],
+          "correct": 0,
+          "solution": "Forme fixe : nombre de vers, structure et souvent mesure sont imposés."
+        },
+        {
+          "text": "D'où vient la forme du sonnet ?",
+          "type": "mcq",
+          "options": [
+            "D'Italie (forme importée en France à la Renaissance)",
+            "De la Grèce antique",
+            "D'Angleterre au XXe siècle",
+            "Du Moyen Âge musical"
+          ],
+          "correct": 0,
+          "solution": "Le sonnet vient d'Italie (Pétrarque, XIVe s.) et se diffuse en France au XVIe siècle (Marot, puis la Pléiade)."
+        },
+        {
+          "text": "Dans un sonnet à rimes croisées, quel est le schéma des deux quatrains ?",
+          "type": "mcq",
+          "options": [
+            "ABAB ABAB",
+            "AABB AABB",
+            "ABBA ABBA",
+            "AAAA AAAA"
+          ],
+          "correct": 0,
+          "solution": "Rimes croisées des quatrains : ABAB pour le premier, ABAB pour le second."
+        },
+        {
+          "text": "Parmi ces schémas, lequel peut former les deux tercets d'un sonnet ?",
+          "type": "mcq",
+          "options": [
+            "CDC DCD",
+            "ABAB ABAB",
+            "AABB AABB",
+            "AAA BBB"
+          ],
+          "correct": 0,
+          "solution": "Les tercets s'ouvrent souvent sur de nouvelles rimes (C, D) : CDC DCD, ou encore CCD DCC."
+        },
+        {
+          "text": "Pourquoi les rimes des tercets sont-elles notées avec de nouvelles lettres (C, D) ?",
+          "type": "mcq",
+          "options": [
+            "Parce qu'elles ne riment généralement pas avec celles des quatrains",
+            "Parce que le sonnet n'a pas de rimes",
+            "Parce que les tercets sont en prose",
+            "Parce qu'il y a plus de strophes"
+          ],
+          "correct": 0,
+          "solution": "Les lettres indiquent les sons : C et D sont nouveaux après A et B des quatrains."
+        },
+        {
+          "text": "Combien de vers forment les deux quatrains réunis du sonnet ?",
+          "type": "mcq",
+          "options": [
+            "8",
+            "6",
+            "14",
+            "4"
+          ],
+          "correct": 0,
+          "solution": "2 quatrains = 8 vers ; les 2 tercets = 6 vers ; total = 14."
+        },
+        {
+          "text": "Combien de vers forment les deux tercets réunis du sonnet ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "8",
+            "4",
+            "12"
+          ],
+          "correct": 0,
+          "solution": "2 tercets = 2 × 3 = 6 vers, qui complètent les 8 vers des quatrains."
+        },
+        {
+          "text": "Qu'appelle-t-on « couplet » à la fin d'un sonnet ?",
+          "type": "mcq",
+          "options": [
+            "Deux derniers vers qui riment ensemble (rimes plates finales)",
+            "Les deux premiers vers du poème",
+            "Une strophe de 8 vers",
+            "Le refrain du sonnet"
+          ],
+          "correct": 0,
+          "solution": "Dans le sonnet à couplet, les deux derniers vers riment entre eux et concluent le poème."
+        },
+        {
+          "text": "De quels vers le sonnet à la française est-il généralement composé ?",
+          "type": "mcq",
+          "options": [
+            "D'alexandrins (12 syllabes)",
+            "D'octosyllabes (8 syllabes)",
+            "De vers libres",
+            "De décasyllabes"
+          ],
+          "correct": 0,
+          "solution": "Le sonnet français privilégie l'alexandrin, mesure noble et équilibrée."
+        },
+        {
+          "text": "« Mignonne, allons voir si la rose » de Ronsard est :",
+          "type": "mcq",
+          "options": [
+            "Un sonnet de 14 vers",
+            "Une ballade de 28 vers",
+            "Un rondeau de 13 vers",
+            "Un poème en prose"
+          ],
+          "correct": 0,
+          "solution": "Ce célèbre poème de Ronsard (1578) respecte la structure du sonnet : 2 quatrains et 2 tercets."
+        },
+        {
+          "text": "Vrai ou Faux : un sonnet est toujours constitué de deux quatrains suivis de deux tercets.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : cette structure 8 + 6 définit le sonnet, quelle que soit la disposition des rimes."
+        }
+      ]
+    },
+    {
+      "category": "Formes fixes : ballade, rondeau, villanelle, triolet",
+      "questions": [
+        {
+          "text": "Dans sa forme la plus courante, la ballade est composée de :",
+          "type": "mcq",
+          "options": [
+            "Trois strophes de 8 vers suivies d'un envoi de 4 vers",
+            "Deux quatrains et deux tercets",
+            "Cinq tercets et un quatrain",
+            "Trois strophes de 6 vers sans conclusion"
+          ],
+          "correct": 0,
+          "solution": "Ballade : 3 strophes isométriques (souvent de 8 vers) + une demi-strophe finale appelée envoi (strophes parfois de 7 à 10 vers)."
+        },
+        {
+          "text": "Comment s'appelle la strophe finale, plus courte, qui clôt la ballade ?",
+          "type": "mcq",
+          "options": [
+            "L'envoi",
+            "Le refrain",
+            "L'hémistiche",
+            "Le couplet"
+          ],
+          "correct": 0,
+          "solution": "L'envoi est une demi-strophe (4 ou 5 vers) qui achève la ballade."
+        },
+        {
+          "text": "Où se trouve le refrain d'une ballade ?",
+          "type": "mcq",
+          "options": [
+            "À la fin de chaque strophe et de l'envoi",
+            "Uniquement au début du poème",
+            "Après chaque vers",
+            "Il n'y a pas de refrain"
+          ],
+          "correct": 0,
+          "solution": "Le refrain (d'un vers) ferme chaque strophe ainsi que l'envoi : c'est la signature de la ballade."
+        },
+        {
+          "text": "Combien de vers comporte une ballade classique (3 strophes de 8 vers + envoi de 4) ?",
+          "type": "mcq",
+          "options": [
+            "28",
+            "24",
+            "32",
+            "14"
+          ],
+          "correct": 0,
+          "solution": "3 × 8 = 24 vers, plus l'envoi de 4 vers : 28 vers au total."
+        },
+        {
+          "text": "Par quoi l'envoi d'une ballade commence-t-il souvent ?",
+          "type": "mcq",
+          "options": [
+            "Une apostrophe (« Prince… », « Dame… »)",
+            "Une césure",
+            "Un trait d'union",
+            "Une question de narrateur"
+          ],
+          "correct": 0,
+          "solution": "L'envoi s'adresse traditionnellement au dédicataire : « Prince », « Dame », « Belle »…"
+        },
+        {
+          "text": "Le refrain « Où sont les neiges d'antan ? » appartient à :",
+          "type": "mcq",
+          "options": [
+            "La « Ballade des dames du temps jadis » de Villon",
+            "Un sonnet de Ronsard",
+            "Une ode de Victor Hugo",
+            "Un rondeau de La Fontaine"
+          ],
+          "correct": 0,
+          "solution": "Villon (XVe s.) : ce célèbre refrain revient à la fin de chaque strophe de sa ballade."
+        },
+        {
+          "text": "Vrai ou Faux : la ballade est une forme fixe médiévale qui repose sur un refrain.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : née au Moyen Âge, elle impose strophes égales, refrain et envoi."
+        },
+        {
+          "text": "Le rondeau est un poème construit sur :",
+          "type": "mcq",
+          "options": [
+            "Trois strophes et deux rimes seulement",
+            "Quatre quatrains",
+            "Deux tercets et un distique",
+            "Cinq tercets"
+          ],
+          "correct": 0,
+          "solution": "Le rondeau classique : trois strophes sur deux rimes (rimes redoublées), avec reprise obligée."
+        },
+        {
+          "text": "Dans sa forme classique (« rondeau nouveau » de Marot), le rondeau compte :",
+          "type": "mcq",
+          "options": [
+            "13 vers : un quintil, un tercet puis un quintil",
+            "14 vers : deux quatrains et deux tercets",
+            "19 vers : cinq tercets et un quatrain",
+            "28 vers : trois huitains et un envoi"
+          ],
+          "correct": 0,
+          "solution": "Le rondeau classique : 5 + 3 + 5 = 13 vers sur deux rimes (variantes de 10 à 15 selon les époques)."
+        },
+        {
+          "text": "Qu'est-ce que le « rentrement » d'un rondeau ?",
+          "type": "mcq",
+          "options": [
+            "La reprise du premier mot ou du premier hémistiche du poème, qui ne compte pas comme un vers",
+            "La dernière rime du poème",
+            "La césure du premier vers",
+            "Une strophe supplémentaire"
+          ],
+          "correct": 0,
+          "solution": "Le rentrement (refrain tronqué) revient après le 8e vers et à la fin du poème, sans être compté parmi les vers."
+        },
+        {
+          "text": "Vrai ou Faux : le rondeau ne comporte que deux rimes.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : sur deux rimes seulement (ex. : AABBA aabR aabbaR)."
+        },
+        {
+          "text": "« Le temps a laissé son manteau » est :",
+          "type": "mcq",
+          "options": [
+            "Un rondeau de Charles d'Orléans (XVe siècle)",
+            "Un sonnet de Du Bellay",
+            "Une élégie de Lamartine",
+            "Un poème en prose de Baudelaire"
+          ],
+          "correct": 0,
+          "solution": "Ce rondeau célèbre, avec son refrain « Le temps a laissé son manteau », est de Charles d'Orléans."
+        },
+        {
+          "text": "Combien de vers compte une villanelle ?",
+          "type": "mcq",
+          "options": [
+            "19",
+            "14",
+            "15",
+            "8"
+          ],
+          "correct": 0,
+          "solution": "La villanelle = 19 vers : 5 tercets (15) + 1 quatrain (4)."
+        },
+        {
+          "text": "De quelles strophes la villanelle est-elle formée ?",
+          "type": "mcq",
+          "options": [
+            "Cinq tercets puis un quatrain",
+            "Deux quatrains et deux tercets",
+            "Trois strophes de 8 vers",
+            "Quatre quatrains"
+          ],
+          "correct": 0,
+          "solution": "Structure de la villanelle : 5 × 3 vers + 1 × 4 vers = 19 vers."
+        },
+        {
+          "text": "Combien de refrains la villanelle comporte-t-elle ?",
+          "type": "mcq",
+          "options": [
+            "2",
+            "1",
+            "3",
+            "4"
+          ],
+          "correct": 0,
+          "solution": "Deux refrains, empruntés au premier tercet, reviennent alternément jusqu'au quatrain final."
+        },
+        {
+          "text": "Quels vers servent de refrains à la villanelle ?",
+          "type": "mcq",
+          "options": [
+            "Le 1er et le 3e vers du premier tercet",
+            "Le 1er et le 2e vers du poème",
+            "Le dernier vers de chaque tercet",
+            "Le vers central du quatrain final"
+          ],
+          "correct": 0,
+          "solution": "Refrain 1 = vers 1, refrain 2 = vers 3 : ils reviennent en fin de tercet, puis les deux ensemble closent la villanelle."
+        },
+        {
+          "text": "Vrai ou Faux : dans la villanelle, les deux refrains reviennent alternés puis se retrouvent tous les deux dans le quatrain final.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : A1 puis A2 alternent au fil des tercets, et se rejoignent dans les deux derniers vers."
+        },
+        {
+          "text": "Combien de vers compte un triolet et sur combien de rimes ?",
+          "type": "mcq",
+          "options": [
+            "8 vers sur deux rimes",
+            "13 vers sur deux rimes",
+            "14 vers sur trois rimes",
+            "19 vers sur deux rimes"
+          ],
+          "correct": 0,
+          "solution": "Le triolet : 8 vers, deux rimes, avec reprises obligatoires."
+        },
+        {
+          "text": "Dans un triolet, quels vers sont repris ?",
+          "type": "mcq",
+          "options": [
+            "Le 1er vers revient aux 4e et 7e places, le 2e vers au 8e",
+            "Le 1er vers revient au 8e seulement",
+            "Le dernier vers revient au 1er",
+            "Aucun vers n'est repris"
+          ],
+          "correct": 0,
+          "solution": "Triolet : A B a A a b A B — trois répétitions (dont deux du premier vers) lui donnent un effet circulaire."
+        }
+      ]
+    },
+    {
+      "category": "Autres genres poétiques",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'une ode ?",
+          "type": "mcq",
+          "options": [
+            "Un poème lyrique destiné à célébrer un sujet",
+            "Un récit animalier",
+            "Un poème triste sur la mort",
+            "Un dialogue entre bergers"
+          ],
+          "correct": 0,
+          "solution": "L'ode célèbre un sujet (gloire, amour, nature) ; elle a été illustrée en français par Ronsard (Les Odes, 1550)."
+        },
+        {
+          "text": "De quelles trois parties l'ode pindarique est-elle composée ?",
+          "type": "mcq",
+          "options": [
+            "Strophe, antistrophe, épode",
+            "Quatrain, tercet, distique",
+            "Refrain, envoi, couplet",
+            "Développement, conclusion, bilan"
+          ],
+          "correct": 0,
+          "solution": "L'ode pindarique alterne strophes et anti-strophes de même structure, suivies d'une épode différente."
+        },
+        {
+          "text": "Qu'est-ce qu'une élégie ?",
+          "type": "mcq",
+          "options": [
+            "Un poème de ton triste ou méditatif",
+            "Un poème de louange joyeux",
+            "Un récit avec des animaux",
+            "Un poème en prose"
+          ],
+          "correct": 0,
+          "solution": "L'élégie exprime la mélancolie, le deuil ou la réflexion ; elle se plaît dans les formes régulières (alexandrins)."
+        },
+        {
+          "text": "Qu'est-ce qu'une fable ?",
+          "type": "mcq",
+          "options": [
+            "Un récit en vers qui se termine par une morale",
+            "Un poème lyrique sans rimes",
+            "Un dialogue entre bergers",
+            "Une strophe de quatre vers"
+          ],
+          "correct": 0,
+          "solution": "La fable (apologue) raconte une histoire brève, souvent animalière, pour transmettre une leçon."
+        },
+        {
+          "text": "Quel autre nom donne-t-on à la fable lorsqu'elle vise à faire passer une morale ?",
+          "type": "mcq",
+          "options": [
+            "Apologue",
+            "Élégie",
+            "Ode",
+            "Épître"
+          ],
+          "correct": 0,
+          "solution": "Apologue = récit à visée morale : fable, conte philosophique…"
+        },
+        {
+          "text": "Qu'est-ce qu'une églogue (ou pastorale) ?",
+          "type": "mcq",
+          "options": [
+            "Un poème dialogué entre bergers",
+            "Un poème de célébration officielle",
+            "Un poème sur la guerre",
+            "Un sonnet d'amour"
+          ],
+          "correct": 0,
+          "solution": "L'églogue met en scène des bergers et la vie champêtre : c'est un genre bucolique."
+        },
+        {
+          "text": "Qu'est-ce qu'une épître ?",
+          "type": "mcq",
+          "options": [
+            "Un poème écrit sous forme de lettre",
+            "Un poème sans strophes",
+            "Un chant de louange",
+            "Un récit fabuleux"
+          ],
+          "correct": 0,
+          "solution": "L'épître est un poème-lettre adressé à un correspondant (ex. : les Épîtres de La Fontaine)."
+        },
+        {
+          "text": "Vrai ou Faux : la fable se termine traditionnellement par une morale.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : la morale achève l'apologue et fait apparaître la leçon du récit."
+        },
+        {
+          "text": "« La Cigale ayant chanté tout l'été » est l'incipit d'une œuvre de :",
+          "type": "mcq",
+          "options": [
+            "Jean de La Fontaine (une fable)",
+            "Victor Hugo (une ode)",
+            "Ronsard (un sonnet)",
+            "Baudelaire (un poème en prose)"
+          ],
+          "correct": 0,
+          "solution": "« La Cigale et la Fourmi », fable de La Fontaine inspirée d'Ésope."
+        },
+        {
+          "text": "Vrai ou Faux : l'élégie et l'ode expriment exactement le même ton.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : l'élégie est triste et méditative, l'ode est un chant de célébration."
+        }
+      ]
+    },
+    {
+      "category": "Versification moderne : vers libre et poème en prose",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'un vers libre ?",
+          "type": "mcq",
+          "options": [
+            "Un vers dont le nombre de syllabes varie librement",
+            "Un vers de 12 syllabes",
+            "Un vers sans fin",
+            "Un vers qui ne rime jamais en fin de poème uniquement"
+          ],
+          "correct": 0,
+          "solution": "Le vers libre supprime la mesure régulière : chaque vers a la longueur que veut le poète."
+        },
+        {
+          "text": "Quand le vers libre apparaît-il en France ?",
+          "type": "mcq",
+          "options": [
+            "Au XIXe siècle, avec le Romantisme (Victor Hugo)",
+            "Au Moyen Âge",
+            "Au XXe siècle uniquement",
+            "Dans l'Antiquité grecque"
+          ],
+          "correct": 0,
+          "solution": "Le XIXe siècle libère le vers : Hugo et le Romantisme ouvrent la voie au vers libre."
+        },
+        {
+          "text": "Qu'est-ce qu'un poème en prose ?",
+          "type": "mcq",
+          "options": [
+            "Un poème sans vers ni rimes, écrit en prose",
+            "Un poème de 14 vers",
+            "Un poème en strophes de 4 vers",
+            "Un vers unique"
+          ],
+          "correct": 0,
+          "solution": "Le poème en prose n'a ni mesure ni rime : il garde le rythme et l'image de la poésie."
+        },
+        {
+          "text": "Quel poète doit sa célébrité au poème en prose en France ?",
+          "type": "mcq",
+          "options": [
+            "Baudelaire (Le Spleen de Paris)",
+            "Malherbe",
+            "Clément Marot",
+            "Du Bellay"
+          ],
+          "correct": 0,
+          "solution": "Baudelaire a perfectionné le poème en prose dans Le Spleen de Paris (Paris Spleen)."
+        },
+        {
+          "text": "Dans quel texte Victor Hugo défend-il la liberté du poète face aux règles classiques ?",
+          "type": "mcq",
+          "options": [
+            "La préface de Cromwell (1827)",
+            "Les Fleurs du Mal",
+            "Les Regrets de Du Bellay",
+            "L'Art poétique de Boileau"
+          ],
+          "correct": 0,
+          "solution": "La préface de Cromwell, manifeste du Romantisme, revendique la liberté des formes."
+        },
+        {
+          "text": "« De la musique avant toute chose… » est le premier vers de :",
+          "type": "mcq",
+          "options": [
+            "« Art poétique » de Verlaine",
+            "« Correspondances » de Baudelaire",
+            "« Mignonne, allons voir » de Ronsard",
+            "« Le Dormeur du val » de Rimbaud"
+          ],
+          "correct": 0,
+          "solution": "Verlaine ouvre son Art poétique par la primauté de la musique et de la suggestion."
+        },
+        {
+          "text": "Vrai ou Faux : un poème en prose respecte un nombre fixe de syllabes pour chaque phrase.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : le poème en prose se libère de la mesure : aucune contrainte de syllabes."
+        },
+        {
+          "text": "Un poème dont les vers n'ont pas tous la même mesure est :",
+          "type": "mcq",
+          "options": [
+            "Un poème en vers libres",
+            "Un sonnet",
+            "Une ballade",
+            "Un rondeau"
+          ],
+          "correct": 0,
+          "solution": "Sans mesure régulière, on parle de vers libres (ou de poésie libre)."
+        },
+        {
+          "text": "Les formes fixes (sonnet, ballade, rondeau…) ont été inventées :",
+          "type": "mcq",
+          "options": [
+            "Au Moyen Âge et développées à la Renaissance",
+            "Au XXe siècle",
+            "Dans la Grèce antique uniquement",
+            "Après la Seconde Guerre mondiale"
+          ],
+          "correct": 0,
+          "solution": "Ballade, rondeau, triolet naissent au Moyen Âge ; le sonnet vient d'Italie et se diffuse à la Renaissance."
+        },
+        {
+          "text": "Vrai ou Faux : le sonnet a disparu au XIXe siècle.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : Baudelaire, Verlaine, Rimbaud ou Mallarmé ont au contraire renouvelé le sonnet."
+        }
+      ]
+    },
+    {
+      "category": "Bilan — textes à trous",
+      "questions": [
+        {
+          "text": "Complétez : le nombre de syllabes d'un vers constitue sa ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "mesure",
+            "mesure du vers",
+            "metrique",
+            "métrique"
+          ],
+          "solution": "La mesure du vers = son nombre de syllabes (12 pour l'alexandrin)."
+        },
+        {
+          "text": "Complétez : la coupure de la voix placée au milieu d'un vers s'appelle la ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "cesure",
+            "césure"
+          ],
+          "solution": "La césure coupe le vers en deux hémistiches."
+        },
+        {
+          "text": "Complétez : les deux moitiés d'un vers coupé par la césure sont appelées ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "hemistiches",
+            "hémistiches",
+            "les hemistiches"
+          ],
+          "solution": "Hémistiches : les deux demi-vers d'un alexandrin (6 + 6 syllabes)."
+        },
+        {
+          "text": "Complétez : l'alexandrin compte ______ syllabes.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "12",
+            "douze",
+            "12 syllabes",
+            "douze syllabes"
+          ],
+          "solution": "L'alexandrin est le vers de 12 syllabes par excellence."
+        },
+        {
+          "text": "Complétez : un poème de 14 vers en deux quatrains et deux tercets s'appelle un ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "sonnet",
+            "le sonnet"
+          ],
+          "solution": "Le sonnet : forme fixe italienne devenue classique en français."
+        },
+        {
+          "text": "Complétez : quand un groupe de mots se poursuit d'un vers au suivant, on a un ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "enjambement",
+            "enjambements"
+          ],
+          "solution": "L'enjambement fait déborder le sens sur le vers suivant (rejet s'il est très court)."
+        },
+        {
+          "text": "Complétez : la répétition de sons identiques à la fin de deux vers s'appelle la ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "rime",
+            "rimes"
+          ],
+          "solution": "La rime unit la fin des vers par le son, à partir de la dernière voyelle accentuée."
+        },
+        {
+          "text": "Complétez : un quatrain est une strophe de ______ vers.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "4",
+            "quatre",
+            "4 vers",
+            "quatre vers"
+          ],
+          "solution": "Quatrain = 4 vers ; tercet = 3 vers ; distique = 2 vers."
+        },
+        {
+          "text": "Complétez : la ballade se termine par un ______ de 4 vers.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "envoi",
+            "l envoi",
+            "l'envoi"
+          ],
+          "solution": "L'envoi (demi-strophe) clôt la ballade et reprend le refrain."
+        },
+        {
+          "text": "Complétez : un poème de 19 vers, formé de cinq tercets puis d'un quatrain, s'appelle une ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "villanelle",
+            "la villanelle"
+          ],
+          "solution": "La villanelle : 19 vers et deux refrains alternés."
+        },
+        {
+          "text": "Complétez : le poème en prose a été notamment illustré par ______ en France.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "baudelaire",
+            "charles baudelaire"
+          ],
+          "solution": "Baudelaire, avec Le Spleen de Paris, a donné ses lettres de noblesse au poème en prose."
+        },
+        {
+          "text": "Complétez : des vers dont la longueur varie librement sont appelés vers ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "libres",
+            "libre"
+          ],
+          "solution": "Le vers libre naît au XIXe siècle : plus de mesure régulière imposée."
+        },
+        {
+          "text": "Complétez : un groupe de deux vers qui riment ensemble forme un ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "distique",
+            "le distique"
+          ],
+          "solution": "Distique = strophe de deux vers."
+        }
+      ]
+    }
+  ]
+}

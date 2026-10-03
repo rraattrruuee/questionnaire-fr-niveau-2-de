@@ -1,0 +1,39 @@
+name: Validate questionnaires
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "data/**"
+      - "scripts/validate-quizzes.js"
+      - ".github/workflows/validate-quizzes.yml"
+  pull_request:
+    paths:
+      - "data/**"
+      - "scripts/validate-quizzes.js"
+      - ".github/workflows/validate-quizzes.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Format JSON + config.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Valider les questionnaires
+        run: node scripts/validate-quizzes.js
+
+      - name: Vérifier la syntaxe du JS
+        run: |
+          for f in js/*.js scripts/*.js; do
+            [ -f "$f" ] || continue
+            echo "node --check $f"
+            node --check "$f"
+          done

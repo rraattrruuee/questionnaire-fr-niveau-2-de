@@ -1,5 +1,5 @@
 {
-  "subject": "SES - Introduction & Chapitre 1",
+  "subject": "ses",
   "title": "Introduction & Chapitre 1 — Travailler et raisonner en SES (ECO1)",
   "description": "Cours de SES de Karine CHAKIR : introduction au fonctionnement des SES, les trois disciplines, enquêtes et données, corrélation et causalité.",
   "categories": [
@@ -45,7 +45,9 @@
         {
           "text": "Quel est le premier des six chapitres du programme de SES en seconde ?",
           "type": "text",
-          "accepted": ["Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ?"],
+          "accepted": [
+            "Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ?"
+          ],
           "solution": "Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ? (ECO1)"
         },
         {
@@ -80,7 +82,9 @@
         {
           "text": "Quelle est la question de base de l'économie selon le cours ?",
           "type": "text",
-          "accepted": ["Qu'est-ce qu'une allocation efficace des ressources rares ?"],
+          "accepted": [
+            "Qu'est-ce qu'une allocation efficace des ressources rares ?"
+          ],
           "solution": "Qu'est-ce qu'une allocation efficace des ressources rares ?"
         },
         {
@@ -98,13 +102,17 @@
         {
           "text": "Quelle est la question de base de la science politique ?",
           "type": "text",
-          "accepted": ["Comment se conquiert et s'exerce le pouvoir politique ?"],
+          "accepted": [
+            "Comment se conquiert et s'exerce le pouvoir politique ?"
+          ],
           "solution": "Comment se conquiert et s'exerce le pouvoir politique ?"
         },
         {
           "text": "Selon Pierre Bourdieu, les goûts et les dégoûts reflètent la _________ d'un individu.",
           "type": "text",
-          "accepted": ["position sociale"],
+          "accepted": [
+            "position sociale"
+          ],
           "solution": "Les goûts et les dégoûts reflètent la position sociale d'un individu (aliments, sports, vêtements, musique…)."
         },
         {
@@ -134,13 +142,17 @@
         {
           "text": "La sociologie est la science qui étudie les relations sociales et les _____________.",
           "type": "text",
-          "accepted": ["comportements sociaux"],
+          "accepted": [
+            "comportements sociaux"
+          ],
           "solution": "La sociologie étudie les relations sociales et les comportements sociaux."
         },
         {
           "text": "La science politique est la science qui étudie la façon dont le pouvoir politique _____________.",
           "type": "text",
-          "accepted": ["se conquiert et s'exerce"],
+          "accepted": [
+            "se conquiert et s'exerce"
+          ],
           "solution": "La science politique étudie la façon dont le pouvoir politique se conquiert et s'exerce."
         }
       ]
@@ -235,13 +247,17 @@
         {
           "text": "Qu'est-ce que l'allocation des ressources ?",
           "type": "text",
-          "accepted": ["L'affectation des ressources à divers secteurs et agents de l'économie"],
+          "accepted": [
+            "L'affectation des ressources à divers secteurs et agents de l'économie"
+          ],
           "solution": "L'affectation des ressources à divers secteurs et agents de l'économie."
         },
         {
           "text": "Selon le cours, une autre ressource rare souvent oubliée est ___________.",
           "type": "text",
-          "accepted": ["le temps"],
+          "accepted": [
+            "le temps"
+          ],
           "solution": "Le temps est une ressource rare oubliée : même avec toutes les richesses, nous n'aurions pas le temps de les dépenser."
         }
       ]
@@ -264,25 +280,35 @@
         {
           "text": "Quand le prix des lecteurs MP3 Sony baisse par rapport à celui des iPods, nous sommes plus incités à acheter un Sony. Il s'agit du concept d'__________.",
           "type": "text",
-          "accepted": ["incitation", "incitations"],
+          "accepted": [
+            "incitation",
+            "incitations"
+          ],
           "solution": "Les incitations : quand un prix baisse, les individus sont plus incités à acheter ce bien."
         },
         {
           "text": "Quand nous faisons un échange avec une autre personne, l'éventail des choix possibles pour chacun ___________.",
           "type": "text",
-          "accepted": ["s'élargit", "s'elargit"],
+          "accepted": [
+            "s'élargit",
+            "s'elargit"
+          ],
           "solution": "L'échange élargit l'éventail des choix possibles pour chacun."
         },
         {
           "text": "Les choix que nous faisons concernant la durée des études, la profession ou les biens à acheter déterminent la ___________ de la richesse dans la société.",
           "type": "text",
-          "accepted": ["distribution"],
+          "accepted": [
+            "distribution"
+          ],
           "solution": "Ces choix déterminent la distribution de la richesse et du revenu dans la société."
         },
         {
           "text": "Pour effectuer des choix judicieux en économie, il est nécessaire de disposer d'___________ et de l'exploiter au mieux.",
           "type": "text",
-          "accepted": ["information"],
+          "accepted": [
+            "information"
+          ],
           "solution": "Il est nécessaire de disposer d'information et de l'exploiter au mieux."
         }
       ]
@@ -317,7 +343,10 @@
         {
           "text": "Au niveau européen, quel est le fournisseur officiel de données statistiques ?",
           "type": "text",
-          "accepted": ["Eurostat", "EUROSTAT"],
+          "accepted": [
+            "Eurostat",
+            "EUROSTAT"
+          ],
           "solution": "EUROSTAT est le fournisseur officiel de données au niveau européen."
         },
         {
@@ -335,7 +364,9 @@
         {
           "text": "Quand les populations sont trop importantes, le chercheur construit des ___________ qui doivent être représentatifs.",
           "type": "text",
-          "accepted": ["échantillons"],
+          "accepted": [
+            "échantillons"
+          ],
           "solution": "On construit des échantillons représentatifs de la population étudiée."
         },
         {
@@ -353,7 +384,11 @@
         {
           "text": "Quel site regroupe les diverses sources de données statistiques en France ?",
           "type": "text",
-          "accepted": ["DATAGOUV", "datagouv", "data.gouv.fr"],
+          "accepted": [
+            "DATAGOUV",
+            "datagouv",
+            "data.gouv.fr"
+          ],
           "solution": "DATAGOUV regroupe les diverses sources de données."
         }
       ]
@@ -364,7 +399,9 @@
         {
           "text": "Qu'est-ce qu'un modèle selon le cours ?",
           "type": "text",
-          "accepted": ["Une représentation simplifiée de la réalité"],
+          "accepted": [
+            "Une représentation simplifiée de la réalité"
+          ],
           "solution": "Un modèle est une représentation simplifiée de la réalité."
         },
         {
@@ -423,13 +460,17 @@
         {
           "text": "Quand deux variables évoluent dans le même sens, on parle de corrélation ___________.",
           "type": "text",
-          "accepted": ["positive"],
+          "accepted": [
+            "positive"
+          ],
           "solution": "Une corrélation positive : les deux variables évoluent dans le même sens."
         },
         {
           "text": "Quand deux variables évoluent dans le sens opposé, on parle de corrélation ___________.",
           "type": "text",
-          "accepted": ["négative"],
+          "accepted": [
+            "négative"
+          ],
           "solution": "Une corrélation négative : les deux variables évoluent en sens opposé."
         },
         {
@@ -495,7 +536,9 @@
         {
           "text": "Un lien de causalité nécessite que deux conditions soient réunies : une ___________ et un lien de cause à effet.",
           "type": "text",
-          "accepted": ["corrélation"],
+          "accepted": [
+            "corrélation"
+          ],
           "solution": "Un lien de causalité nécessite une corrélation entre les variables ET un lien de cause à effet."
         },
         {
@@ -513,7 +556,9 @@
         {
           "text": "La causalité est une condition nécessaire mais pas ___________ à la corrélation.",
           "type": "text",
-          "accepted": ["suffisante"],
+          "accepted": [
+            "suffisante"
+          ],
           "solution": "La causalité est une condition nécessaire mais pas suffisante à la corrélation."
         }
       ]
@@ -524,7 +569,9 @@
         {
           "text": "Donnez la définition de la science économique selon le cours.",
           "type": "text",
-          "accepted": ["La science économique étudie comment les individus, les entreprises, les pouvoirs publics et d'autres organisations sociales font des choix et comment ces choix déterminent la façon dont sont utilisées les ressources de la société"],
+          "accepted": [
+            "La science économique étudie comment les individus, les entreprises, les pouvoirs publics et d'autres organisations sociales font des choix et comment ces choix déterminent la façon dont sont utilisées les ressources de la société"
+          ],
           "solution": "La science économique étudie comment les individus, les entreprises, les pouvoirs publics et d'autres organisations sociales font des choix et comment ces choix déterminent la façon dont sont utilisées les ressources de la société."
         },
         {
@@ -542,13 +589,17 @@
         {
           "text": "Qu'est-ce qu'une société selon le cours ?",
           "type": "text",
-          "accepted": ["Un ensemble d'êtres humains vivant en groupe organisé, étant en relation et ayant certains comportements communs"],
+          "accepted": [
+            "Un ensemble d'êtres humains vivant en groupe organisé, étant en relation et ayant certains comportements communs"
+          ],
           "solution": "La société est un ensemble d'êtres humains vivant en groupe organisé, étant en relation et ayant certains comportements communs."
         },
         {
           "text": "Le pouvoir politique est le pouvoir d'organiser les ___________ de la vie collective dans une société.",
           "type": "text",
-          "accepted": ["modalités"],
+          "accepted": [
+            "modalités"
+          ],
           "solution": "Le pouvoir politique est le pouvoir d'organiser les modalités de la vie collective dans une société."
         },
         {
@@ -566,13 +617,17 @@
         {
           "text": "Citez au moins trois organismes privés français d'enquêtes cités dans le cours.",
           "type": "text",
-          "accepted": ["IPSOS, KANTAR, ELABE, ODOXA, BLACKBONE, OPINIONWAY"],
+          "accepted": [
+            "IPSOS, KANTAR, ELABE, ODOXA, BLACKBONE, OPINIONWAY"
+          ],
           "solution": "IPSOS, KANTAR (TNS-SOFRES), ELABE, ODOXA, BLACKBONE, OPINIONWAY."
         },
         {
           "text": "Selon le comte de Montalembert, même si on ne s'occupe pas de politique, la politique ___________.",
           "type": "text",
-          "accepted": ["s'occupe de vous"],
+          "accepted": [
+            "s'occupe de vous"
+          ],
           "solution": "« Vous avez beau ne pas vous occuper de la politique, la politique s'occupe de vous tout de même »."
         },
         {

@@ -196,6 +196,26 @@
       "description": "Tous les verbes irréguliers courants classés par groupe : formes identiques, formes en D, T, GHT, et les trois formes différentes (110 questions).",
       "tags": ["anglais", "verbes", "irreguliers", "grammaire"],
       "added": "2026-09-17"
+    },
+    {
+      "id": "svt-organes-microscope-matrice-extracellulaire",
+      "title": "Organes au microscope et matrice extracellulaire",
+      "subject": "svt",
+      "file": "data/svt/organes-microscope-matrice-extracellulaire.json",
+      "questionsCount": 109,
+      "description": "Observations au microscope optique (epiderme de poireau, peau de mammifere), TP4 matrice extracellulaire et cellulase, echelles de l'organisme pluricellulaire et bilan (109 questions).",
+      "tags": ["svt", "biologie", "microscope", "tissus", "matrice-extracellulaire"],
+      "added": "2026-10-03"
+    },
+    {
+      "id": "francais-versification-formes-fixes",
+      "title": "Versification et formes fixes",
+      "subject": "francais",
+      "file": "data/francais/versification-formes-fixes.json",
+      "questionsCount": 148,
+      "description": "Le vers et sa mesure, césure et enjambement, strophes, rimes, sonnet, ballade, rondeau, villanelle et versification moderne (148 questions).",
+      "tags": ["francais", "poesie", "versification", "sonnet", "formes-fixes"],
+      "added": "2026-10-03"
     }
   ],
   "tools": [

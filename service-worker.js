@@ -7,6 +7,7 @@ const STATIC_ASSETS = [
   "./data/anglais/warriors-pacific.json",
   "./data/config.json",
   "./data/francais/outils-analyse-litteraire.json",
+  "./data/francais/versification-formes-fixes.json",
   "./data/histoire-geo/periodes-athenes.json",
   "./data/histoire-geo/vocabulaire-essentiel.json",
   "./data/italien/carattere-hobby-segni.json",
@@ -16,6 +17,7 @@ const STATIC_ASSETS = [
   "./data/mathematiques/calcul-litteral-numerique.json",
   "./data/physique-chimie/noyau-atome-config-electronique.json",
   "./data/ses/introduction-chapitre1-eco1.json",
+  "./data/svt/organes-microscope-matrice-extracellulaire.json",
   "./index.html",
   "./js/analytics.js",
   "./js/portal.js",
@@ -33,7 +35,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1790695597";
+const CACHE_NAME = "quiz-cache-1791047929";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {

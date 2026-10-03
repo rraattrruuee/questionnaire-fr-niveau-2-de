@@ -1,0 +1,1343 @@
+{
+  "subject": "svt",
+  "title": "Organes au microscope et matrice extracellulaire",
+  "description": "Observations au microscope optique (epiderme de poireau, peau de mammifere), TP4 matrice extracellulaire et cellulase, echelles de l'organisme pluricellulaire et bilan (108 questions).",
+  "categories": [
+    {
+      "category": "Microscope optique : réglages et grossissements",
+      "questions": [
+        {
+          "text": "Que signifie l'abréviation « M.O. » utilisée dans les comptes rendus d'observation ?",
+          "type": "mcq",
+          "options": [
+            "Microscope optique",
+            "Microscope électronique",
+            "Microscope à balayage",
+            "Loupe binoculaire"
+          ],
+          "correct": 0,
+          "solution": "« M.O. » veut dire microscope optique : l'instrument observe des prêtes vivantes ou fixées à la lumière."
+        },
+        {
+          "text": "Quel instrument N'A PAS été utilisé pour les observations de ce travail ?",
+          "type": "mcq",
+          "options": [
+            "Microscope électronique",
+            "Microscope optique",
+            "Diaphragme",
+            "Condenseur"
+          ],
+          "correct": 0,
+          "solution": "Toutes les observations sont notées « M.O. », c'est-à-dire microscope optique : le microscope électronique n'a pas été utilisé."
+        },
+        {
+          "text": "Quelle partie du microscope optique, décrite sous forme de languette, sert à régler l'éclairement de la préparation ?",
+          "type": "mcq",
+          "options": [
+            "Le diaphragme (languette)",
+            "La vis micrométrique",
+            "L'objectif",
+            "Le porte-objet"
+          ],
+          "correct": 0,
+          "solution": "Le diaphragme (souvent une languette) règle la quantité de lumière qui traverse la préparation."
+        },
+        {
+          "text": "Quelle vis du microscope permet une mise au point fine et précise ?",
+          "type": "mcq",
+          "options": [
+            "La vis micrométrique",
+            "La molette d'éclairage",
+            "La manivelle",
+            "La vis de fixation"
+          ],
+          "correct": 0,
+          "solution": "La vis micrométrique sert à la mise au point fine ; elle permet d'affiner l'image obtenue."
+        },
+        {
+          "text": "Qu'est-ce que le condenseur d'un microscope optique ?",
+          "type": "mcq",
+          "options": [
+            "Un système de lentilles qui concentre la lumière sur la préparation",
+            "La lampe du microscope",
+            "L'objectif de plus faible grossissement",
+            "La vis de mise au point"
+          ],
+          "correct": 0,
+          "solution": "Le condenseur rassemble (concentre) la lumière sous la préparation pour mieux l'éclairer."
+        },
+        {
+          "text": "Que règle-t-on avec le diaphragme avant d'observer une lame ?",
+          "type": "mcq",
+          "options": [
+            "L'intensité de la lumière envoyée sur la préparation",
+            "Le grossissement de l'objectif",
+            "La couleur de la lame",
+            "La distance de l'œil"
+          ],
+          "correct": 0,
+          "solution": "Le diaphragme contrôle la quantité (l'intensité) de lumière ; on l'ajuste pour bien voir les détails."
+        },
+        {
+          "text": "Quel grossissement a été utilisé pour observer l'épiderme de feuille de poireau ?",
+          "type": "mcq",
+          "options": [
+            "×400",
+            "×600",
+            "×100",
+            "×1000"
+          ],
+          "correct": 0,
+          "solution": "Le compte rendu indique « M.O., ×400 » : l'épiderme du poireau est observé au grossissement 400 fois."
+        },
+        {
+          "text": "Quel grossissement a été utilisé pour observer la peau de mammifère en régénération ?",
+          "type": "mcq",
+          "options": [
+            "×600",
+            "×400",
+            "×200",
+            "×1500"
+          ],
+          "correct": 0,
+          "solution": "Le compte rendu indique « M.O., ×600 » : la peau est observée au grossissement 600 fois."
+        },
+        {
+          "text": "Les deux observations (épiderme de poireau et peau de mammifère) ont-elles été faites au même grossissement ?",
+          "type": "mcq",
+          "options": [
+            "Non : ×400 pour le poireau et ×600 pour la peau",
+            "Oui : toutes deux à ×400",
+            "Oui : toutes deux à ×600",
+            "Non : ×100 pour le poireau et ×400 pour la peau"
+          ],
+          "correct": 0,
+          "solution": "L'épiderme du poireau est observé à ×400 et la peau à ×600 : les grossissements diffèrent."
+        },
+        {
+          "text": "Que signifie la mention « M.O., ×400 » dans un compte rendu d'observation ?",
+          "type": "mcq",
+          "options": [
+            "Microscope optique, grossissement 400 fois",
+            "Mur optique, éclairage 400 lux",
+            "Modèle optique, 400 cellules",
+            "Mesure optique, 400 micromètres"
+          ],
+          "correct": 0,
+          "solution": "« M.O. » = microscope optique et « ×400 » = grossissement 400 fois l'objet réel."
+        },
+        {
+          "text": "À quoi sert le microscope optique en biologie ?",
+          "type": "mcq",
+          "options": [
+            "À observer des structures trop petites pour l'œil nu, comme les cellules",
+            "À mesurer la masse des organes",
+            "À séparer les cellules entre elles",
+            "À chauffer la préparation"
+          ],
+          "correct": 0,
+          "solution": "Le microscope optique permet de visualiser des détails (cellules, organites) invisibles à l'œil nu."
+        }
+      ]
+    },
+    {
+      "category": "Épiderme de feuille de poireau (×400)",
+      "questions": [
+        {
+          "text": "De quoi est constitué l'épiderme d'une feuille de poireau d'après l'observation ?",
+          "type": "mcq",
+          "options": [
+            "De cellules épidermiques jointives et de stomates",
+            "De vaisseaux sanguins et de muscles",
+            "De cellules osseuses et de cartilage",
+            "D'un stratum corneum kératinisé"
+          ],
+          "correct": 0,
+          "solution": "L'épiderme du poireau est un lambeau composé de cellules épidermiques jointives et de stomates."
+        },
+        {
+          "text": "Dans quelles cellules se situent spécifiquement les chloroplastes de l'épiderme du poireau ?",
+          "type": "mcq",
+          "options": [
+            "Dans les cellules stomatiques (cellules de garde)",
+            "Dans les cellules mortes",
+            "Dans les vaisseaux de la feuille",
+            "Dans les cellules du derme"
+          ],
+          "correct": 0,
+          "solution": "Les chloroplastes sont localisés dans les cellules stomatiques, appelées aussi cellules de garde."
+        },
+        {
+          "text": "Que sont les « cellules de garde » ?",
+          "type": "mcq",
+          "options": [
+            "Les deux cellules stomatiques qui entourent l'ouverture stomatique",
+            "Les cellules mortes de la surface",
+            "Les cellules des racines",
+            "Les cellules qui forment la moelle"
+          ],
+          "correct": 0,
+          "solution": "Cellules de garde = cellules stomatiques : elles entourent le stomate et contiennent des chloroplastes."
+        },
+        {
+          "text": "Quel organe végétal a été observé pour obtenir le lambeau d'épiderme à ×400 ?",
+          "type": "mcq",
+          "options": [
+            "La feuille de poireau",
+            "La racine de poireau",
+            "Le bulbe d'oignon",
+            "La tige de haricot"
+          ],
+          "correct": 0,
+          "solution": "L'observation porte sur un lambeau d'épiderme détaché d'une feuille de poireau."
+        },
+        {
+          "text": "Que contiennent les stomates de l'épiderme du poireau selon l'observation ?",
+          "type": "mcq",
+          "options": [
+            "Du cytoplasme et des chloroplastes",
+            "Du sang et des globules",
+            "Du stratum corneum et de la kératine",
+            "Des os et du cartilage"
+          ],
+          "correct": 0,
+          "solution": "Les stomates possèdent un cytoplasme et des chloroplastes, contrairement aux cellules animales."
+        },
+        {
+          "text": "Parmi ces structures, laquelle se trouve dans l'épiderme du poireau mais PAS dans la peau de mammifère ?",
+          "type": "mcq",
+          "options": [
+            "Les chloroplastes",
+            "Le cytoplasme",
+            "Le noyau",
+            "La membrane cellulaire"
+          ],
+          "correct": 0,
+          "solution": "Le poireau possède des chloroplastes (végétal) ; l'observation de la peau ne cite que noyau, membrane et cytoplasme."
+        },
+        {
+          "text": "Parmi ces éléments, lequel N'A PAS été mentionné dans l'observation de l'épiderme de poireau ?",
+          "type": "mcq",
+          "options": [
+            "Le stratum corneum",
+            "Le cytoplasme",
+            "Les stomates",
+            "Les chloroplastes"
+          ],
+          "correct": 0,
+          "solution": "Le stratum corneum appartient à la peau de mammifère ; il n'existe pas chez le poireau."
+        },
+        {
+          "text": "Quel tissu constitue la surface de la feuille de poireau observée ?",
+          "type": "mcq",
+          "options": [
+            "L'épiderme",
+            "Le derme",
+            "Le tissu vasculaire",
+            "Le tissu osseux"
+          ],
+          "correct": 0,
+          "solution": "L'observation porte sur un lambeau d'épiderme : le tissu de surface de la feuille."
+        },
+        {
+          "text": "Qu'est-ce qu'un stomate ?",
+          "type": "mcq",
+          "options": [
+            "Une ouverture entourée de cellules de garde qui assure les échanges de la feuille",
+            "Un vaisseau qui transporte la sève",
+            "Un organite qui fabrique l'énergie",
+            "Une cellule morte de surface"
+          ],
+          "correct": 0,
+          "solution": "Le stomate est une ouverture contrôlée par deux cellules de garde ; il assure les échanges gazeux de la feuille."
+        },
+        {
+          "text": "Quel organite confère la couleur verte observée dans les cellules stomatiques du poireau ?",
+          "type": "mcq",
+          "options": [
+            "Le chloroplaste",
+            "La mitochondrie",
+            "Le noyau",
+            "Le ribosome"
+          ],
+          "correct": 0,
+          "solution": "Les chloroplastes contiennent la chlorophylle, qui donne la couleur verte et permet la photosynthèse."
+        },
+        {
+          "text": "Quelle est la fonction principale des chloroplastes présents dans les cellules du poireau ?",
+          "type": "mcq",
+          "options": [
+            "Produire de l'énergie à partir de la lumière (photosynthèse)",
+            "Transporter le sang",
+            "Digérer les aliments",
+            "Protéger l'os"
+          ],
+          "correct": 0,
+          "solution": "Le chloroplaste réalise la photosynthèse : il fabrique de la matière et de l'énergie à partir de la lumière."
+        },
+        {
+          "text": "Où se trouvent les chloroplastes à l'intérieur de la cellule végétale ?",
+          "type": "mcq",
+          "options": [
+            "Dans le cytoplasme",
+            "Dans le noyau",
+            "Dans la membrane",
+            "Dans la paroi"
+          ],
+          "correct": 0,
+          "solution": "Les organites, dont les chloroplastes, sont suspendus dans le cytoplasme de la cellule."
+        },
+        {
+          "text": "Quel est le rôle des stomates chez la feuille ?",
+          "type": "mcq",
+          "options": [
+            "Permettre les échanges gazeux (air) entre la feuille et l'extérieur",
+            "Transporter le sang vers les racines",
+            "Fabriquer de l'os",
+            "Protéger contre les chocs"
+          ],
+          "correct": 0,
+          "solution": "Par les stomates, la feuille échange des gaz avec l'atmosphère et évapore de l'eau."
+        },
+        {
+          "text": "Vrai ou Faux : les chloroplastes sont présents dans toutes les cellules épidermiques du poireau.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Faux : l'observation précise qu'ils se situent spécifiquement dans les cellules stomatiques."
+        }
+      ]
+    },
+    {
+      "category": "Peau de mammifère en régénération (×600)",
+      "questions": [
+        {
+          "text": "Quelles structures chaque cellule de la peau présente-t-elle selon l'observation ?",
+          "type": "mcq",
+          "options": [
+            "Un noyau, une membrane et un cytoplasme",
+            "Une paroi et des chloroplastes",
+            "Un squelette et des muscles",
+            "Des racines et des feuilles"
+          ],
+          "correct": 0,
+          "solution": "Les cellules de la peau montrent un noyau, une membrane et un cytoplasme : c'est la structure type des cellules animales."
+        },
+        {
+          "text": "Comment les cellules de l'épiderme de la peau sont-elles organisées ?",
+          "type": "mcq",
+          "options": [
+            "Agglomérées dans une matrice tissulaire",
+            "Dispersées librement dans l'air",
+            "Soudées dans une paroi pecto-cellulosique",
+            "Arrondies et isolées"
+          ],
+          "correct": 0,
+          "solution": "Les cellules sont agglomérées (groupées) dans une matrice tissulaire, formant un tissu cohérent."
+        },
+        {
+          "text": "Quel tissu ces cellules agglomérées forment-elles dans la peau ?",
+          "type": "mcq",
+          "options": [
+            "L'épiderme",
+            "Le derme",
+            "Le tissu osseux",
+            "Le tissu nerveux"
+          ],
+          "correct": 0,
+          "solution": "L'observation indique que ces cellules agglomérées forment l'épiderme, couche superficielle de la peau."
+        },
+        {
+          "text": "Que trouve-t-on à la surface de l'épiderme de la peau ?",
+          "type": "mcq",
+          "options": [
+            "Un stratum corneum",
+            "Une paroi pecto-cellulosique",
+            "Des stomates",
+            "Des chloroplastes"
+          ],
+          "correct": 0,
+          "solution": "La surface de l'épiderme est surmontée d'un stratum corneum (couche de cellules mortes kératinisées)."
+        },
+        {
+          "text": "Qu'est-ce que le derme ?",
+          "type": "mcq",
+          "options": [
+            "Le tissu situé sous l'épiderme, riche en vaisseaux sanguins",
+            "La couche morte de surface",
+            "Une paroi végétale",
+            "Une ouverture de la peau"
+          ],
+          "correct": 0,
+          "solution": "Le derme est le tissu sous-jacent à l'épiderme ; il abrite les vaisseaux sanguins et un réseau cellulaire dense."
+        },
+        {
+          "text": "Que contiennent le derme et le réseau cellulaire dense de la peau ?",
+          "type": "mcq",
+          "options": [
+            "Des vaisseaux sanguins",
+            "Des chloroplastes",
+            "Des stomates",
+            "Une paroi végétale"
+          ],
+          "correct": 0,
+          "solution": "Le tissu sous-jacent (derme) abrite des vaisseaux sanguins et un réseau cellulaire dense."
+        },
+        {
+          "text": "Qu'est-ce qu'un vaisseau sanguin ?",
+          "type": "mcq",
+          "options": [
+            "Un tube dans lequel circule le sang",
+            "Une cellule verte de la feuille",
+            "Une ouverture de respiration",
+            "Une paroi de la cellule végétale"
+          ],
+          "correct": 0,
+          "solution": "Un vaisseau sanguin est un conduit où circule le sang ; on en voit des regroupements dans la peau."
+        },
+        {
+          "text": "Avec quel grossissement la peau de mammifère en régénération a-t-elle été observée ?",
+          "type": "mcq",
+          "options": [
+            "×600",
+            "×400",
+            "×100",
+            "×50"
+          ],
+          "correct": 0,
+          "solution": "Le compte rendu indique « M.O., ×600 » pour l'observation de la peau."
+        },
+        {
+          "text": "De quel type d'organisme provient le tissu de peau observé en régénération ?",
+          "type": "mcq",
+          "options": [
+            "D'un mammifère",
+            "D'un poireau",
+            "D'une mâche",
+            "D'une plante aquatique"
+          ],
+          "correct": 0,
+          "solution": "L'observation concerne la peau d'un mammifère, en cours de régénération."
+        },
+        {
+          "text": "Vrai ou Faux : l'observation de la peau de mammifère a été réalisée à ×400.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : la peau est observée à ×600 ; c'est l'épiderme de poireau qui est observé à ×400."
+        },
+        {
+          "text": "Les cellules de la peau de mammifère contiennent-elles des chloroplastes ?",
+          "type": "mcq",
+          "options": [
+            "Non : on y observe noyau, membrane et cytoplasme, sans chloroplastes",
+            "Oui : les chloroplastes sont mentionnés partout",
+            "Oui : ils sont dans le stratum corneum",
+            "Non : la peau ne contient aucune cellule"
+          ],
+          "correct": 0,
+          "solution": "La peau (tissu animal) ne possède pas de chloroplastes : seules les cellules végétales en contiennent."
+        },
+        {
+          "text": "Où se situe le stratum corneum par rapport à l'épiderme ?",
+          "type": "mcq",
+          "options": [
+            "À sa surface, il le surmonte",
+            "Au-dessous, dans le derme",
+            "Au centre du noyau",
+            "Entre les chloroplastes"
+          ],
+          "correct": 0,
+          "solution": "Le stratum corneum est la couche de surface qui recouvre l'épiderme."
+        },
+        {
+          "text": "Qu'est-ce que la matrice tissulaire dans laquelle les cellules de la peau sont agglomérées ?",
+          "type": "mcq",
+          "options": [
+            "La substance extracellulaire qui entoure et relie les cellules du tissu",
+            "Un type de chloroplaste",
+            "L'ouverture d'un stomate",
+            "Le liquide des vaisseaux"
+          ],
+          "correct": 0,
+          "solution": "La matrice tissulaire est le réseau extracellulaire qui maintient ensemble les cellules d'un même tissu."
+        },
+        {
+          "text": "Qu'est-ce que l'épiderme ?",
+          "type": "mcq",
+          "options": [
+            "La couche superficielle de la peau",
+            "Le tissu profond riche en sang",
+            "Une cellule de garde",
+            "Une paroi végétale"
+          ],
+          "correct": 0,
+          "solution": "L'épiderme est la couche la plus externe de la peau ; il est surmonté du stratum corneum."
+        }
+      ]
+    },
+    {
+      "category": "Comparaison tissu végétal / tissu animal",
+      "questions": [
+        {
+          "text": "Selon la conclusion du travail, en quoi l'épiderme de poireau et la peau de mammifère diffèrent-ils ?",
+          "type": "mcq",
+          "options": [
+            "Ils n'ont ni la même organisation ni la même composition cellulaire",
+            "Ils sont strictement identiques",
+            "Le poireau possède un derme et des vaisseaux",
+            "La peau possède des chloroplastes"
+          ],
+          "correct": 0,
+          "solution": "Ces tissus sont différents : organisation et composition cellulaires distinctes entre végétal et animal."
+        },
+        {
+          "text": "Que possède l'épiderme du poireau mais pas celui de la peau de mammifère ?",
+          "type": "mcq",
+          "options": [
+            "Des stomates avec des chloroplastes",
+            "Un stratum corneum",
+            "Un derme",
+            "Des vaisseaux sanguins"
+          ],
+          "correct": 0,
+          "solution": "Les stomates (et leurs chloroplastes) sont propres au végétal ; le stratum corneum et le derme sont propres à la peau."
+        },
+        {
+          "text": "Que recouvre l'épiderme de la peau mais qu'on ne trouve pas chez le poireau ?",
+          "type": "mcq",
+          "options": [
+            "Le stratum corneum",
+            "Les stomates",
+            "Les chloroplastes",
+            "La paroi végétale"
+          ],
+          "correct": 0,
+          "solution": "Le stratum corneum surmonte l'épiderme cutané ; le poireau, lui, possède des stomates."
+        },
+        {
+          "text": "Quel tissu de la peau contient les vaisseaux sanguins, contrairement à l'épiderme du poireau ?",
+          "type": "mcq",
+          "options": [
+            "Le derme",
+            "L'épiderme",
+            "Le stomate",
+            "La paroi pecto-cellulosique"
+          ],
+          "correct": 0,
+          "solution": "Les vaisseaux sanguins se trouvent dans le derme (tissu sous-jacent de la peau)."
+        },
+        {
+          "text": "Comment sont les cellules épidermiques d'une feuille de poireau ?",
+          "type": "mcq",
+          "options": [
+            "Jointives (soudées les unes aux autres)",
+            "Séparées par du sang",
+            "Entourées de stratum corneum",
+            "Arrondies et dissociées"
+          ],
+          "correct": 0,
+          "solution": "L'épiderme du poireau est formé de cellules épidermiques jointives, sans espace entre elles."
+        },
+        {
+          "text": "Comment appelle-t-on les cellules végétales qui, avec les stomates, composent l'épiderme du poireau ?",
+          "type": "mcq",
+          "options": [
+            "Les cellules épidermiques",
+            "Les globules rouges",
+            "Les cellules de la moelle",
+            "Les cellules du derme"
+          ],
+          "correct": 0,
+          "solution": "L'épiderme du poireau associe des cellules épidermiques jointives et des stomates."
+        },
+        {
+          "text": "Vrai ou Faux : les cellules végétales et les cellules animales sont des structures distinctes.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : elles ont des organisations différentes (paroi et chloroplastes pour le végétal)."
+        },
+        {
+          "text": "Vrai ou Faux : les cellules observées au microscope sont des organismes.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : ce sont des structures distinctes, et non des organismes (l'organisme est à une échelle supérieure)."
+        },
+        {
+          "text": "Quel organe de mammifère a été observé lors de cette étude ?",
+          "type": "mcq",
+          "options": [
+            "La peau",
+            "Le foie",
+            "Le cœur",
+            "L'os"
+          ],
+          "correct": 0,
+          "solution": "C'est la peau d'un mammifère, en cours de régénération, qui a été observée."
+        },
+        {
+          "text": "Pourquoi dit-on que l'épiderme de poireau et la peau de mammifère ne sont pas le même tissu ?",
+          "type": "mcq",
+          "options": [
+            "Parce que leur organisation et leur composition cellulaire sont différentes",
+            "Parce qu'ils ont le même grossissement",
+            "Parce qu'ils contiennent tous deux des stomates",
+            "Parce qu'ils sont observés avec le même microscope"
+          ],
+          "correct": 0,
+          "solution": "Deux tissus se distinguent par leurs cellules (nature, arrangement) : végétal et animal diffèrent."
+        }
+      ]
+    },
+    {
+      "category": "TP4 — Matrice extracellulaire et cohésion des cellules",
+      "questions": [
+        {
+          "text": "Quelle enzyme a été utilisée pour traiter la feuille de mâche pendant 10 minutes ?",
+          "type": "mcq",
+          "options": [
+            "La cellulase",
+            "La pepsine",
+            "La catalase",
+            "L'amylase"
+          ],
+          "correct": 0,
+          "solution": "La cellulase dégrade la cellulose de la paroi végétale : elle attaque la matrice extracellulaire."
+        },
+        {
+          "text": "Combien de temps la feuille de mâche est-elle restée dans la solution de cellulase ?",
+          "type": "mcq",
+          "options": [
+            "10 minutes",
+            "10 secondes",
+            "1 heure",
+            "10 heures"
+          ],
+          "correct": 0,
+          "solution": "Le protocole prévoit un traitement de 10 minutes à la cellulase avant l'observation à ×400."
+        },
+        {
+          "text": "Quel végétal a servi d'objet d'étude dans le TP sur la matrice extracellulaire ?",
+          "type": "mcq",
+          "options": [
+            "La mâche",
+            "Le poireau",
+            "Le bleuet",
+            "Le haricot"
+          ],
+          "correct": 0,
+          "solution": "On observe des feuilles de mâche : témoin dans l'eau distillée, puis traitement à la cellulase."
+        },
+        {
+          "text": "Quel était le rôle de l'échantillon témoin placé dans l'eau distillée ?",
+          "type": "mcq",
+          "options": [
+            "Servir de référence : montrer l'état normal des cellules non traitées",
+            "Dégrader la paroi des cellules",
+            "Accélérer l'action de la cellulase",
+            "Colorer les chloroplastes"
+          ],
+          "correct": 0,
+          "solution": "Le témoin montre des cellules intactes (paroi, forme, cohésion) avec lesquelles on compare le traitement."
+        },
+        {
+          "text": "Que devient la matrice extracellulaire après 10 minutes de traitement à la cellulase ?",
+          "type": "mcq",
+          "options": [
+            "Elle est quasi-disparue",
+            "Elle devient plus épaisse",
+            "Elle se transforme en chloroplaste",
+            "Elle est absorbée par les vaisseaux"
+          ],
+          "correct": 0,
+          "solution": "La cellulase dégrade la paroi : la matrice extracellulaire devient quasi-invisible à l'observation."
+        },
+        {
+          "text": "Quelle forme prennent les cellules de la feuille de mâche après le traitement à la cellulase ?",
+          "type": "mcq",
+          "options": [
+            "Elles sont arrondies (protoplastes)",
+            "Elles deviennent carrées",
+            "Elles s'allongent en tubes",
+            "Elles gardent une forme géométrique parfaite"
+          ],
+          "correct": 0,
+          "solution": "Privées de leur paroi, les cellules se rétractent et deviennent arrondies : ce sont des protoplastes."
+        },
+        {
+          "text": "Les cellules traitées à la cellulase restent-elles collées les unes aux autres ?",
+          "type": "mcq",
+          "options": [
+            "Non : elles sont isolées et dissociées",
+            "Oui : elles restent parfaitement soudées",
+            "Oui : elles forment un stratum corneum",
+            "Oui : elles reforment une paroi"
+          ],
+          "correct": 0,
+          "solution": "Sans matrice extracellulaire, plus de cohésion : les cellules se séparent les unes des autres."
+        },
+        {
+          "text": "Que reste-t-il des parois des cellules après le traitement à la cellulase ?",
+          "type": "mcq",
+          "options": [
+            "Des reliquats de paroi",
+            "Une paroi neuve et épaisse",
+            "Des chloroplastes",
+            "Des vaisseaux sanguins"
+          ],
+          "correct": 0,
+          "solution": "La dégradation n'est pas totale : on observe des reliquats (morceaux) de paroi."
+        },
+        {
+          "text": "Quelles structures les cellules traitées contiennent-elles encore à l'intérieur ?",
+          "type": "mcq",
+          "options": [
+            "Des chloroplastes",
+            "Du sang",
+            "Un stratum corneum",
+            "Des vaisseaux"
+          ],
+          "correct": 0,
+          "solution": "Même débarrassées de leur paroi, les cellules gardent leur contenu, dont les chloroplastes."
+        },
+        {
+          "text": "Quel aspect présentent les cellules du témoin (eau distillée) ?",
+          "type": "mcq",
+          "options": [
+            "Une forme géométrique bien définie et des cellules parfaitement soudées",
+            "Des cellules arrondies et dissociées",
+            "Une matrice extracellulaire disparue",
+            "Des reliquats de paroi uniquement"
+          ],
+          "correct": 0,
+          "solution": "Dans le témoin, la paroi est intacte : les cellules gardent leur forme et restent collées."
+        },
+        {
+          "text": "Que contiennent les cellules du témoin observées à ×400 ?",
+          "type": "mcq",
+          "options": [
+            "Du cytoplasme, des vacuoles et des chloroplastes",
+            "Du sang et des globules",
+            "Uniquement des reliquats de paroi",
+            "Du stratum corneum"
+          ],
+          "correct": 0,
+          "solution": "Le témoin montre le contenu typique d'une cellule végétale : cytoplasme, vacuoles et chloroplastes."
+        },
+        {
+          "text": "De quoi est constituée la matrice extracellulaire des cellules végétales ?",
+          "type": "mcq",
+          "options": [
+            "D'une paroi pecto-cellulosique",
+            "De kératine",
+            "De globules rouges",
+            "D'une membrane nucléaire"
+          ],
+          "correct": 0,
+          "solution": "Chez les végétaux, la matrice extracellulaire est la paroi pecto-cellulosique (pectine + cellulose)."
+        },
+        {
+          "text": "Quel rôle joue la matrice extracellulaire dans un tissu végétal ?",
+          "type": "mcq",
+          "options": [
+            "Elle assure la cohésion des cellules et la rigidité du tissu",
+            "Elle transporte le sang",
+            "Elle réalise la photosynthèse",
+            "Elle contient le noyau"
+          ],
+          "correct": 0,
+          "solution": "La matrice extracellulaire relie les cellules : cohésion du tissu et rigidité structurale."
+        },
+        {
+          "text": "Que se passe-t-il quand la paroi végétale est dégradée par la cellulase ?",
+          "type": "mcq",
+          "options": [
+            "La cohésion du tissu est rompue et les cellules se séparent",
+            "Les cellules deviennent plus fortes",
+            "Le tissu se transforme en derme",
+            "Les chloroplastes disparaissent"
+          ],
+          "correct": 0,
+          "solution": "La paroi assure la cohésion : une fois dégradée, le tissu perd sa cohérence et les cellules se dispersent."
+        },
+        {
+          "text": "Qu'est-ce que la cellulase ?",
+          "type": "mcq",
+          "options": [
+            "Une enzyme qui dégrade la cellulose de la paroi végétale",
+            "Un pigment vert",
+            "Un vaisseau de transport",
+            "Un organite du noyau"
+          ],
+          "correct": 0,
+          "solution": "La cellulase est une enzyme qui coupe la cellulose, principale composante de la paroi végétale."
+        },
+        {
+          "text": "Vrai ou Faux : dans l'eau distillée, la paroi des cellules de la mâche est intacte.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : le témoin conserve sa paroi, donc la forme géométrique et la cohésion des cellules."
+        },
+        {
+          "text": "Vrai ou Faux : après 10 minutes de cellulase, les cellules de la mâche restent parfaitement soudées.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : sans matrice extracellulaire, les cellules sont isolées et dissociées."
+        },
+        {
+          "text": "Pourquoi les cellules végétales deviennent-elles arrondies après le traitement à la cellulase ?",
+          "type": "mcq",
+          "options": [
+            "Parce que leur paroi, qui leur donnait leur forme, a été dégradée",
+            "Parce qu'elles ont absorbé des chloroplastes",
+            "Parce qu'elles ont fabriqué un stratum corneum",
+            "Parce qu'elles ont été chauffées"
+          ],
+          "correct": 0,
+          "solution": "La paroi rigide donne la forme géométrique : dégradée, la cellule se rétracte et devient ronde."
+        }
+      ]
+    },
+    {
+      "category": "L'organisme pluricellulaire aux différentes échelles",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'un organisme pluricellulaire ?",
+          "type": "mcq",
+          "options": [
+            "Un organisme composé de nombreuses cellules",
+            "Un organisme formé d'une seule cellule",
+            "Un organisme invisible à l'œil nu",
+            "Un organe unique"
+          ],
+          "correct": 0,
+          "solution": "Un organisme pluricellulaire réunit de nombreuses cellules, regroupées en tissus puis en organes."
+        },
+        {
+          "text": "Peut-on observer un organisme pluricellulaire et ses organes à l'œil nu ?",
+          "type": "mcq",
+          "options": [
+            "Oui : ces échelles sont observables à l'œil nu",
+            "Non : il faut toujours un microscope",
+            "Non : seules les molécules sont visibles",
+            "Oui : mais uniquement au ×600"
+          ],
+          "correct": 0,
+          "solution": "L'échelle organisme et organes se voit à l'œil nu ; le microscope est nécessaire à l'échelle cellulaire."
+        },
+        {
+          "text": "De quoi sont regroupés les organes pour former de grandes fonctions ?",
+          "type": "mcq",
+          "options": [
+            "Des appareils",
+            "Des molécules",
+            "Des chloroplastes",
+            "Des stratum corneum"
+          ],
+          "correct": 0,
+          "solution": "Les organes sont regroupés en appareils, et chaque appareil assure de grandes fonctions."
+        },
+        {
+          "text": "À quoi servent les appareils formés d'ensembles d'organes ?",
+          "type": "mcq",
+          "options": [
+            "À assurer différentes grandes fonctions de l'organisme",
+            "À produire des chloroplastes",
+            "À dégrader la paroi végétale",
+            "À mesurer le grossissement"
+          ],
+          "correct": 0,
+          "solution": "Chaque appareil (respiratoire, digestif…) regroupe des organes qui travaillent pour une grande fonction."
+        },
+        {
+          "text": "Quelle est la problématique posée au début de l'étude sur les organes ?",
+          "type": "mcq",
+          "options": [
+            "De quoi sont constitués les organes au niveau microscopique ?",
+            "Quel est le poids du cerveau ?",
+            "Pourquoi la feuille est-elle verte ?",
+            "Comment fabriquer une peau artificielle ?"
+          ],
+          "correct": 0,
+          "solution": "La problématique centrale est : « De quoi sont constitués les organes au niveau microscopique ? »"
+        },
+        {
+          "text": "Quelle question cherche à résoudre le chapitre sur l'organisme pluricellulaire ?",
+          "type": "mcq",
+          "options": [
+            "Comment les cellules sont-elles capables d'assurer des fonctions particulières ?",
+            "Combien pèse un organisme adulte ?",
+            "Quel grossissement utiliser pour observer la peau ?",
+            "Qui a inventé le microscope ?"
+          ],
+          "correct": 0,
+          "solution": "Le problème posé est : comment des cellules peuvent-elles assurer des fonctions particulières ?"
+        },
+        {
+          "text": "Parmi ces échelles, laquelle est la plus petite ?",
+          "type": "mcq",
+          "options": [
+            "La molécule simple",
+            "L'organisme",
+            "L'organe",
+            "Le tissu"
+          ],
+          "correct": 0,
+          "solution": "L'échelle décroît : organisme → organe → tissu → cellule → molécule → molécule simple."
+        },
+        {
+          "text": "De la plus grande à la plus petite, quel est l'ordre correct des échelles d'un organisme pluricellulaire ?",
+          "type": "mcq",
+          "options": [
+            "Organisme, organe, tissu, cellule",
+            "Cellule, tissu, organe, organisme",
+            "Organe, organisme, cellule, tissu",
+            "Tissu, cellule, organe, organisme"
+          ],
+          "correct": 0,
+          "solution": "L'organisme regroupe des organes, eux-mêmes formés de tissus, eux-mêmes formés de cellules."
+        },
+        {
+          "text": "Quelle échelle fait le lien entre l'organe et la cellule ?",
+          "type": "mcq",
+          "options": [
+            "Le tissu",
+            "La molécule simple",
+            "L'appareil",
+            "La chlorophylle"
+          ],
+          "correct": 0,
+          "solution": "Un organe est un regroupement de tissus ; un tissu est un regroupement de cellules spécialisées."
+        },
+        {
+          "text": "Qu'est-ce qu'un organite ?",
+          "type": "mcq",
+          "options": [
+            "Un compartiment du cytoplasme qui assure une fonction précise",
+            "Un organe visible à l'œil nu",
+            "Un tissu de la peau",
+            "Une molécule d'eau"
+          ],
+          "correct": 0,
+          "solution": "Un organite est une sous-structure du cytoplasme dédiée à une fonction (noyau, chloroplaste, mitochondrie)."
+        },
+        {
+          "text": "Quels sont les trois exemples d'organites cités dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "Le noyau, le chloroplaste et les mitochondries",
+            "Le foie, l'estomac et les poumons",
+            "L'épiderme, le derme et le stratum corneum",
+            "La cellulose, l'amidon et la pectine"
+          ],
+          "correct": 0,
+          "solution": "Le noyau, le chloroplaste et les mitochondries sont des exemples d'organites."
+        },
+        {
+          "text": "La mitochondrie est-elle un organe, un tissu ou un organite ?",
+          "type": "mcq",
+          "options": [
+            "Un organite",
+            "Un organe",
+            "Un tissu",
+            "Un appareil"
+          ],
+          "correct": 0,
+          "solution": "La mitochondrie est un organite : un compartiment du cytoplasme assurant une fonction précise."
+        },
+        {
+          "text": "À quoi sert la peau artificielle dont il est question dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "À réaliser des greffes, soigner les maladies de peau et tester des produits sans animaux",
+            "À observer les cellules au microscope",
+            "À dégrader la paroi des végétaux",
+            "À fabriquer des chloroplastes"
+          ],
+          "correct": 0,
+          "solution": "La peau artificielle servirait aux greffes, au traitement des maladies de peau et en alternative aux tests sur animaux."
+        },
+        {
+          "text": "Quel organe l'humain n'a pas encore réussi à copier véritablement ?",
+          "type": "mcq",
+          "options": [
+            "La peau",
+            "Le foie",
+            "L'œil",
+            "Le sang"
+          ],
+          "correct": 0,
+          "solution": "Le cours indique que personne n'a encore réussi à copier véritablement la peau, organe aux multiples fonctions."
+        },
+        {
+          "text": "Vrai ou Faux : les organes d'un organisme pluricellulaire peuvent être observés à l'œil nu.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : l'échelle organisme/organes est visible à l'œil nu ; il faut un microscope pour les cellules."
+        },
+        {
+          "text": "Qu'appelle-t-on macromolécule ?",
+          "type": "mcq",
+          "options": [
+            "Une très grosse molécule (ex. protéine, ADN)",
+            "Un type de cellule",
+            "Un organe miniature",
+            "Une unité de grossissement"
+          ],
+          "correct": 0,
+          "solution": "Les macromolécules (protéines, glucides longs, ADN) sont les plus grandes molécules du vivant."
+        }
+      ]
+    },
+    {
+      "category": "Cellules spécialisées, organites et fonctions",
+      "questions": [
+        {
+          "text": "Quelles sont les trois grandes fonctions attribuées aux végétaux verts dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "Produire de l'énergie et de la matière, faire des réserves pour l'hiver, transférer l'eau du sol aux feuilles",
+            "Transporter le sang, digérer les aliments, protéger les os",
+            "Respirer, nager et voler",
+            "Fabriquer des chloroplastes, du derme et des stomates"
+          ],
+          "correct": 0,
+          "solution": "Le végétal vert produit énergie/matière, stocke des réserves hivernales et transporte l'eau vers les feuilles."
+        },
+        {
+          "text": "À partir de quoi un végétal vert produit-il de l'énergie et de la matière ?",
+          "type": "mcq",
+          "options": [
+            "À partir de l'énergie lumineuse et d'éléments minéraux",
+            "À partir du sang et de l'oxygène",
+            "À partir du stratum corneum",
+            "À partir de la cellulase"
+          ],
+          "correct": 0,
+          "solution": "Grâce à la lumière et aux éléments minéraux, le végétal fabrique sa matière et son énergie (photosynthèse)."
+        },
+        {
+          "text": "Que produit un végétal vert à partir d'énergie lumineuse et d'éléments minéraux ?",
+          "type": "mcq",
+          "options": [
+            "De l'énergie et de la matière",
+            "Du sang et des globules",
+            "Un derme kératinisé",
+            "Des vaisseaux sanguins"
+          ],
+          "correct": 0,
+          "solution": "La photosynthèse fournit au végétal l'énergie et la matière dont il a besoin."
+        },
+        {
+          "text": "Pourquoi les végétaux verts fabriquent-ils des réserves ?",
+          "type": "mcq",
+          "options": [
+            "Pour survivre à l'hiver",
+            "Pour attirer les mammifères",
+            "Pour produire du sang",
+            "Pour changer de couleur"
+          ],
+          "correct": 0,
+          "solution": "Les réserves nutritives stockées permettent au végétal de passer l'hiver."
+        },
+        {
+          "text": "Quel trajet l'eau prend-elle dans un végétal vert ?",
+          "type": "mcq",
+          "options": [
+            "Du sol jusqu'aux feuilles",
+            "Des feuilles jusqu'au sol",
+            "Du sang jusqu'au derme",
+            "De l'air vers les vaisseaux sanguins"
+          ],
+          "correct": 0,
+          "solution": "Le végétal transfère l'eau du sol jusqu'aux feuilles, où elle est notamment utilisée pour la photosynthèse."
+        },
+        {
+          "text": "Comment les cellules spécialisées d'une même fonction s'organisent-elles le plus souvent ?",
+          "type": "mcq",
+          "options": [
+            "Elles s'assemblent en un tissu",
+            "Elles se dispersent dans l'organisme",
+            "Elles deviennent des molécules",
+            "Elles forment un appareil directement"
+          ],
+          "correct": 0,
+          "solution": "Les cellules spécialisées d'une fonction s'assemblent en un tissu, et les tissus forment les organes."
+        },
+        {
+          "text": "Qu'est-ce qu'une cellule spécialisée ?",
+          "type": "mcq",
+          "options": [
+            "Une cellule qui remplit une fonction particulière dans l'organisme",
+            "Une cellule morte de surface",
+            "Une cellule contenant uniquement un noyau",
+            "Une cellule qui ne contient aucune organite"
+          ],
+          "correct": 0,
+          "solution": "Une cellule spécialisée est dédiée à une fonction précise : elle possède alors les organites adaptés."
+        },
+        {
+          "text": "Grâce à quoi une cellule spécialisée accomplit-elle sa fonction ?",
+          "type": "mcq",
+          "options": [
+            "Aux organites qu'elle contient et aux molécules qu'elle produit",
+            "Au grossissement du microscope",
+            "Au stratum corneum",
+            "À la cellulase"
+          ],
+          "correct": 0,
+          "solution": "Le bilan du cours : la cellule remplit sa fonction grâce à ses organites et aux molécules qu'elle sécrète."
+        },
+        {
+          "text": "Dans l'organisme humain, les organes sont regroupés en :",
+          "type": "mcq",
+          "options": [
+            "Des appareils",
+            "Des tissus",
+            "Des chloroplastes",
+            "Des molécules simples"
+          ],
+          "correct": 0,
+          "solution": "Chez l'humain, les organes sont regroupés en appareils assurant de grandes fonctions."
+        },
+        {
+          "text": "Sous quelle forme relie-t-on chaque fonction de la peau aux échelles (organisme, organe, tissu, cellule, organite, molécule) ?",
+          "type": "mcq",
+          "options": [
+            "Un tableau",
+            "Une carte",
+            "Un schéma de microscope",
+            "Une liste de grossissements"
+          ],
+          "correct": 0,
+          "solution": "Le cours utilise un tableau pour relier chaque fonction de la peau à chaque échelle d'organisation."
+        },
+        {
+          "text": "Vrai ou Faux : le végétal vert ne produit pas de matière.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : il produit de la matière et de l'énergie à partir de la lumière et d'éléments minéraux."
+        },
+        {
+          "text": "Quelle fonction est propre aux végétaux verts parmi ces propositions ?",
+          "type": "mcq",
+          "options": [
+            "Produire de l'énergie et de la matière à partir de la lumière",
+            "Transporter le sang dans les vaisseaux",
+            "Posséder un stratum corneum",
+            "Avoir des cellules avec un noyau uniquement"
+          ],
+          "correct": 0,
+          "solution": "Seuls les végétaux verts réalisent la photosynthèse ; les animaux ne produisent pas leur matière."
+        },
+        {
+          "text": "Qu'est-ce qu'un appareil dans un organisme pluricellulaire ?",
+          "type": "mcq",
+          "options": [
+            "Un ensemble d'organes assurant une grande fonction",
+            "Un regroupement de molécules",
+            "Un type de chloroplaste",
+            "Une couche de cellules mortes"
+          ],
+          "correct": 0,
+          "solution": "Un appareil regroupe plusieurs organes qui collaborent pour une même grande fonction."
+        },
+        {
+          "text": "Pourquoi la peau est-elle qualifiée d'« organe aux multiples fonctions » ?",
+          "type": "mcq",
+          "options": [
+            "Parce qu'elle remplit plusieurs fonctions différentes à la fois",
+            "Parce qu'elle contient des chloroplastes",
+            "Parce qu'elle est observée à ×400",
+            "Parce qu'elle est composée d'une seule cellule"
+          ],
+          "correct": 0,
+          "solution": "Le cours souligne que la peau remplit de fonctions variées, ce qui la rend difficile à copier artificiellement."
+        }
+      ]
+    },
+    {
+      "category": "Bilan — textes à trous",
+      "questions": [
+        {
+          "text": "Complétez : chez les organismes pluricellulaires, les ______ assurent une ou plusieurs fonctions.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "organes",
+            "les organes",
+            "organe"
+          ],
+          "solution": "Ce sont les organes qui assurent une ou plusieurs fonctions de l'organisme."
+        },
+        {
+          "text": "Complétez : les organes assurent leurs fonctions grâce aux ______ qui les constituent.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "tissus",
+            "tissu",
+            "les tissus",
+            "les cellules specialisees",
+            "cellules specialisees"
+          ],
+          "solution": "Les organes sont constitués de tissus, eux-mêmes formés de cellules spécialisées."
+        },
+        {
+          "text": "Complétez : la plupart du temps, les cellules spécialisées dans une fonction s'assemblent en un ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "tissu",
+            "un tissu",
+            "tissu specialise"
+          ],
+          "solution": "Les cellules spécialisées d'une même fonction s'assemblent en un tissu."
+        },
+        {
+          "text": "Complétez : une cellule spécialisée accomplit une fonction grâce aux ______ qu'elle contient.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "organites",
+            "organite",
+            "les organites"
+          ],
+          "solution": "Ce sont les organites (noyau, chloroplaste, mitochondrie…) qui réalisent les fonctions de la cellule."
+        },
+        {
+          "text": "Complétez : une cellule spécialisée accomplit une fonction grâce aux molécules qu'elle ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "produit",
+            "fabrique",
+            "secrete",
+            "sécrète"
+          ],
+          "solution": "La cellule produit (sécrète) les molécules nécessaires à sa fonction."
+        },
+        {
+          "text": "Complétez : l'adhérence des cellules assure la ______ du tissu.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "cohesion",
+            "cohésion",
+            "cohesion du tissu",
+            "cohésion du tissu"
+          ],
+          "solution": "La matrice extracellulaire assure l'adhérence des cellules, donc la cohésion du tissu."
+        },
+        {
+          "text": "Complétez : le réseau de grosses molécules sécrétées par les cellules s'appelle la ______ extracellulaire.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "matrice",
+            "matrice extracellulaire"
+          ],
+          "solution": "C'est la matrice extracellulaire : elle relie les cellules entre elles."
+        },
+        {
+          "text": "Complétez : chez les mammifères, la couche morte qui recouvre la surface de l'épiderme est le ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "stratum corneum",
+            "strate corneum",
+            "corne",
+            "stratum"
+          ],
+          "solution": "Le stratum corneum est la couche superficielle morte de l'épiderme."
+        },
+        {
+          "text": "Complétez : le tissu sous-jacent à l'épiderme, riche en vaisseaux sanguins, est le ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "derme",
+            "le derme"
+          ],
+          "solution": "Le derme se trouve sous l'épiderme et contient les vaisseaux sanguins."
+        },
+        {
+          "text": "Complétez : la matrice extracellulaire des cellules végétales est une paroi ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "pecto-cellulosique",
+            "pecto cellulosique",
+            "pectocellulosique",
+            "cellulosique"
+          ],
+          "solution": "La paroi végétale est dite pecto-cellulosique : elle assure cohésion et rigidité."
+        },
+        {
+          "text": "Complétez : l'enzyme capable de dégrader la paroi pecto-cellulosique est la ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "cellulase",
+            "la cellulase"
+          ],
+          "solution": "La cellulase dégrade la cellulose de la paroi, ce qui sépare les cellules du tissu végétal."
+        },
+        {
+          "text": "Complétez : le tissu de surface de la feuille de poireau, formé de cellules jointives et de stomates, est l ______.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "epiderme",
+            "épiderme",
+            "l epiderme",
+            "l'épiderme"
+          ],
+          "solution": "L'épiderme constitue la surface de la feuille (et de la peau)."
+        }
+      ]
+    }
+  ]
+}
