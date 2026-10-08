@@ -5,6 +5,7 @@
   "categories": [
     {
       "category": "Fractions algébriques — additions et domaine",
+      "notepad": true,
       "questions": [
         {
           "text": "Complétez : 2 + (n+1)/(n-5) = ?",
@@ -218,6 +219,7 @@
     },
     {
       "category": "Puissances — exposants négatifs",
+      "notepad": true,
       "questions": [
         {
           "text": "Que vaut (a⁷b⁵)/(a⁻³b²) ?",
@@ -431,6 +433,7 @@
     },
     {
       "category": "Racines carrées — opérations",
+      "notepad": true,
       "questions": [
         {
           "text": "Que vaut 4√12 + √75 ?",
@@ -620,6 +623,7 @@
     },
     {
       "category": "Développement — carrés parfaits et signes",
+      "notepad": true,
       "questions": [
         {
           "text": "Développez (4x - 1)².",
@@ -805,6 +809,7 @@
     },
     {
       "category": "Factorisation — regroupement et trinômes",
+      "notepad": true,
       "questions": [
         {
           "text": "Factorisez 2x(x + 1) + 3(x + 1).",
@@ -1014,6 +1019,7 @@
     },
     {
       "category": "Identités remarquables — applications",
+      "notepad": true,
       "questions": [
         {
           "text": "Factorisez x⁴ - 16.",
@@ -1187,6 +1193,7 @@
     },
     {
       "category": "Pièges classiques — vrai ou faux",
+      "notepad": true,
       "questions": [
         {
           "text": "(a + b)² = a² + b² pour tous réels a et b.",
