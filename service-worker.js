@@ -14,6 +14,7 @@ const STATIC_ASSETS = [
   "./data/italien/esprimere-gusti-frequenza.json",
   "./data/italien/presentare-una-persona.json",
   "./data/italien/stile-presente.json",
+  "./data/mathematiques/calcul-litteral-avance-pieges.json",
   "./data/mathematiques/calcul-litteral-numerique.json",
   "./data/physique-chimie/noyau-atome-config-electronique.json",
   "./data/ses/introduction-chapitre1-eco1.json",
@@ -35,7 +36,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1791054242";
+const CACHE_NAME = "quiz-cache-1791484437";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {

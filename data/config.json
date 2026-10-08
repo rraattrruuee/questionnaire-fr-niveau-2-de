@@ -158,6 +158,16 @@
       "added": "2026-09-23"
     },
     {
+      "id": "mathematiques-calcul-litteral-avance-pieges",
+      "title": "Calcul littéral avancé — égalités et pièges",
+      "subject": "mathematiques",
+      "file": "data/mathematiques/calcul-litteral-avance-pieges.json",
+      "questionsCount": 133,
+      "description": "Fractions algébriques, puissances à exposants négatifs, racines carrées, développement, factorisation et pièges classiques (133 questions).",
+      "tags": ["mathematiques", "calcul-litteral", "fractions-algebriques", "factorisation", "pieges"],
+      "added": "2026-10-08"
+    },
+    {
       "id": "ses-introduction-chapitre1-eco1",
       "title": "Introduction & Chapitre 1 — Travailler et raisonner en SES (ECO1)",
       "subject": "ses",

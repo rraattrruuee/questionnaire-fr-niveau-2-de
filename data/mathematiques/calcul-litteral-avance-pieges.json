@@ -1,0 +1,1584 @@
+{
+  "subject": "mathematiques",
+  "title": "Calcul littéral avancé — égalités et pièges",
+  "description": "Fractions algébriques, puissances à exposants négatifs, racines carrées, développement, factorisation et pièges classiques (133 questions).",
+  "categories": [
+    {
+      "category": "Fractions algébriques — additions et domaine",
+      "questions": [
+        {
+          "text": "Complétez : 2 + (n+1)/(n-5) = ?",
+          "type": "mcq",
+          "options": [
+            "(3n-9)/(n-5)",
+            "(3n+1)/(n-5)",
+            "(3n-4)/(n-5)",
+            "(n+7)/(n-5)"
+          ],
+          "correct": 0,
+          "solution": "On met 2 au même dénominateur : 2(n-5)/(n-5) + (n+1)/(n-5) = (2n-10+n+1)/(n-5) = (3n-9)/(n-5), pour n ≠ 5."
+        },
+        {
+          "text": "Que vaut (5n)/(n+2) - 2 ?",
+          "type": "mcq",
+          "options": [
+            "(3n-4)/(n+2)",
+            "(3n)/(n+2)",
+            "(5n-2)/(n+2)",
+            "(n-4)/(n+2)"
+          ],
+          "correct": 0,
+          "solution": "2 = 2(n+2)/(n+2) = (2n+4)/(n+2). Donc (5n-2n-4)/(n+2) = (3n-4)/(n+2), pour n ≠ -2."
+        },
+        {
+          "text": "Que vaut (3n+1)/(6n+2) - 1/2 ?",
+          "type": "mcq",
+          "options": [
+            "0",
+            "1/2",
+            "1",
+            "(3n)/(6n+2)"
+          ],
+          "correct": 0,
+          "solution": "6n+2 = 2(3n+1), donc (3n+1)/(6n+2) = 1/2 (pour n ≠ -1/3). Or 1/2 - 1/2 = 0 : l'écriture longue est un piège !"
+        },
+        {
+          "text": "Que vaut n/(n-1) - 1/(n-1) ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "(n-2)/(n-1)",
+            "n"
+          ],
+          "correct": 0,
+          "solution": "Les dénominateurs sont déjà égaux : (n-1)/(n-1) = 1, pour n ≠ 1."
+        },
+        {
+          "text": "Que vaut 1/(n-1) - 1/(n+1) ?",
+          "type": "mcq",
+          "options": [
+            "2/(n²-1)",
+            "-2/(n²-1)",
+            "1/(n²-1)",
+            "2/(n²+1)"
+          ],
+          "correct": 0,
+          "solution": "On réduit au dénominateur commun (n-1)(n+1) = n²-1 : (n+1)-(n-1) = 2, donc 2/(n²-1)."
+        },
+        {
+          "text": "Que vaut n/(n+1) + 1/(n+1) ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "(n+2)/(n+1)",
+            "n/(n+1)"
+          ],
+          "correct": 0,
+          "solution": "Même dénominateur : (n+1)/(n+1) = 1, pour n ≠ -1."
+        },
+        {
+          "text": "Que vaut (n+1)/(n-1) - 1 ?",
+          "type": "mcq",
+          "options": [
+            "2/(n-1)",
+            "n/(n-1)",
+            "0",
+            "1/(n-1)"
+          ],
+          "correct": 0,
+          "solution": "1 = (n-1)/(n-1), donc (n+1)-(n-1) = 2, soit 2/(n-1), pour n ≠ 1."
+        },
+        {
+          "text": "Réduisez 3/(2n) + 5/(3n²).",
+          "type": "mcq",
+          "options": [
+            "(9n+10)/(6n²)",
+            "(9n+10)/(6n)",
+            "(15n+10)/(6n²)",
+            "(8n+10)/(6n²)"
+          ],
+          "correct": 0,
+          "solution": "PPCM de 2n et 3n² : 6n². 3/(2n) = 9n/(6n²) et 5/(3n²) = 10/(6n²), donc (9n+10)/(6n²), pour n ≠ 0."
+        },
+        {
+          "text": "Que vaut 1/n + 1/(n+1) ?",
+          "type": "mcq",
+          "options": [
+            "(2n+1)/(n²+n)",
+            "(2n+1)/(n²+1)",
+            "(n+1)/(n²+n)",
+            "(2n)/(n²+n)"
+          ],
+          "correct": 0,
+          "solution": "Dénominateur commun n(n+1) = n²+n : (n+1)+n = 2n+1, donc (2n+1)/(n²+n), pour n ≠ 0 et n ≠ -1."
+        },
+        {
+          "text": "Que vaut 5/n - 5/(n-1) ?",
+          "type": "mcq",
+          "options": [
+            "-5/(n²-n)",
+            "5/(n²-n)",
+            "-5/(n²+n)",
+            "5/(n²+n)"
+          ],
+          "correct": 0,
+          "solution": "5(n-1) - 5n = -5, sur le dénominateur n(n-1) = n²-n : on obtient -5/(n²-n)."
+        },
+        {
+          "text": "Que vaut (3n+6)/(n+2) ?",
+          "type": "mcq",
+          "options": [
+            "3",
+            "3n",
+            "n",
+            "6"
+          ],
+          "correct": 0,
+          "solution": "3n+6 = 3(n+2), donc (3(n+2))/(n+2) = 3, pour n ≠ -2 : un facteur commun peut se simplifier."
+        },
+        {
+          "text": "Simplifiez (n²+5n+6)/(n+2).",
+          "type": "mcq",
+          "options": [
+            "n + 3",
+            "n + 2",
+            "n + 6",
+            "n + 1"
+          ],
+          "correct": 0,
+          "solution": "n²+5n+6 = (n+2)(n+3), donc le quotient vaut n+3, pour n ≠ -2."
+        },
+        {
+          "text": "Quel est le domaine de définition de (4n+5)/(n-7) + 3 ?",
+          "type": "mcq",
+          "options": [
+            "n ≠ 7",
+            "n ≠ -7",
+            "n ≠ -5/4",
+            "tous les réels n"
+          ],
+          "correct": 0,
+          "solution": "Le dénominateur n-7 s'annule pour n = 7 : la seule interdiction est n = 7 (le numérateur n'a aucune influence)."
+        },
+        {
+          "text": "Quel est le domaine de définition de (n+1)/(3n+1) ?",
+          "type": "mcq",
+          "options": [
+            "n ≠ -1/3",
+            "n ≠ 3",
+            "n ≠ 1/3",
+            "n ≠ -3"
+          ],
+          "correct": 0,
+          "solution": "3n+1 = 0 ⇔ n = -1/3 : cette valeur seule est exclue."
+        },
+        {
+          "text": "(2n + 4)/2 = n + 4.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : (2n+4)/2 = 2n/2 + 4/2 = n + 2."
+        },
+        {
+          "text": "(2n)/(n²) = 2/n pour n ≠ 0.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : on simplifie le facteur commun n, il reste 2/n (n ≠ 0)."
+        },
+        {
+          "text": "n/(n-7) est définie pour n = 7.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : pour n = 7 le dénominateur vaut 0, l'écriture est interdite."
+        },
+        {
+          "text": "(4n - 2)/(6n + 2) = (2n - 2)/(3n + 1).",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : 6n+2 = 2(3n+1), donc (4n-2)/2 = 2n-1 (et non 2n-2). Le bon résultat est (2n-1)/(3n+1)."
+        }
+      ]
+    },
+    {
+      "category": "Puissances — exposants négatifs",
+      "questions": [
+        {
+          "text": "Que vaut (a⁷b⁵)/(a⁻³b²) ?",
+          "type": "mcq",
+          "options": [
+            "a¹⁰b³",
+            "a⁴b³",
+            "a¹⁰b⁷",
+            "a⁴b⁷"
+          ],
+          "correct": 0,
+          "solution": "a⁷/a⁻³ = a⁷⁻⁽⁻³⁾ = a¹⁰ et b⁵/b² = b³ : le résultat est a¹⁰b³. Piege : a⁷/a⁻³ n'est pas a⁴ !"
+        },
+        {
+          "text": "Que vaut a⁴ × a⁻⁷ ?",
+          "type": "mcq",
+          "options": [
+            "a⁻³",
+            "a¹¹",
+            "a⁻¹¹",
+            "a⁻²⁸"
+          ],
+          "correct": 0,
+          "solution": "On ADDITIONNE les exposants : a⁴⁺⁽⁻⁷⁾ = a⁻³. On ne fait ni 4-(-7) ni 4×(-7)."
+        },
+        {
+          "text": "Quelle est la forme à exposant positif de a⁻⁵ ?",
+          "type": "mcq",
+          "options": [
+            "1/a⁵",
+            "a⁵",
+            "-1/a⁵",
+            "-a⁵"
+          ],
+          "correct": 0,
+          "solution": "Un exposant négatif se retourne : a⁻⁵ = 1/a⁵ (a ≠ 0). Ce n'est ni a⁵ ni -a⁵."
+        },
+        {
+          "text": "Que vaut (a³)⁴ / (a²)⁵ ?",
+          "type": "mcq",
+          "options": [
+            "a²",
+            "a²²",
+            "a⁵",
+            "a⁻²"
+          ],
+          "correct": 0,
+          "solution": "(a³)⁴ = a¹² et (a²)⁵ = a¹⁰, puis a¹²/a¹⁰ = a¹²⁻¹⁰ = a²."
+        },
+        {
+          "text": "Simplifiez (a⁻²b³)⁻³ à l'aide d'exposants positifs.",
+          "type": "mcq",
+          "options": [
+            "a⁶/b⁹",
+            "b⁹/a⁶",
+            "a⁶b⁹",
+            "1/(a⁶b⁹)"
+          ],
+          "correct": 0,
+          "solution": "(a⁻²)⁻³ = a⁶ et (b³)⁻³ = b⁻⁹ : a⁶b⁻⁹ = a⁶/b⁹. Piège classique : inverser le sens des exposants donne b⁹/a⁶."
+        },
+        {
+          "text": "Que vaut (3a²b⁻¹)⁻² ?",
+          "type": "mcq",
+          "options": [
+            "b²/(9a⁴)",
+            "3b²/a⁴",
+            "b²/(3a⁴)",
+            "9a⁴/b²"
+          ],
+          "correct": 0,
+          "solution": "3⁻² = 1/9, (a²)⁻² = a⁻⁴, (b⁻¹)⁻² = b². Le tout : b²/(9a⁴)."
+        },
+        {
+          "text": "Que vaut (2x³y⁻²)⁻³ ?",
+          "type": "mcq",
+          "options": [
+            "y⁶/(8x⁹)",
+            "y⁶/(2x⁹)",
+            "8x⁹/y⁶",
+            "2y⁶/x⁹"
+          ],
+          "correct": 0,
+          "solution": "2⁻³ = 1/8, (x³)⁻³ = x⁻⁹, (y⁻²)⁻³ = y⁶ : on obtient y⁶/(8x⁹)."
+        },
+        {
+          "text": "Que vaut (x⁻¹y²)⁻² / (x³y⁻⁴) ?",
+          "type": "mcq",
+          "options": [
+            "1/x",
+            "x",
+            "1/x²",
+            "y²/x"
+          ],
+          "correct": 0,
+          "solution": "Numérateur : x²y⁻⁴. Divisé par x³y⁻⁴ : x²⁻³ × y⁻⁴⁺⁴ = x⁻¹ × 1 = 1/x."
+        },
+        {
+          "text": "Que vaut (a²b)³ × a⁻⁵ ?",
+          "type": "mcq",
+          "options": [
+            "ab³",
+            "a⁶b³",
+            "a¹¹b³",
+            "a⁻³b³"
+          ],
+          "correct": 0,
+          "solution": "(a²)³ = a⁶, puis a⁶ × a⁻⁵ = a⁶⁺⁽⁻⁵⁾ = a¹ : il reste ab³."
+        },
+        {
+          "text": "Que vaut a⁰ (avec a ≠ 0) ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "a",
+            "-1"
+          ],
+          "correct": 0,
+          "solution": "Tout nombre non nul à la puissance 0 vaut 1 (jamais 0)."
+        },
+        {
+          "text": "Que vaut (a+b)⁰ (avec a+b ≠ 0) ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "2",
+            "a + b"
+          ],
+          "correct": 0,
+          "solution": "L'exposant 0 s'applique au bloc entier (a+b) : le résultat est 1, pas a⁰+b⁰ = 2."
+        },
+        {
+          "text": "Que vaut (4a⁻²b³)² ?",
+          "type": "mcq",
+          "options": [
+            "16b⁶/a⁴",
+            "4b⁶/a⁴",
+            "16a⁴b⁶",
+            "16b⁶/a⁶"
+          ],
+          "correct": 0,
+          "solution": "4² = 16, (a⁻²)² = a⁻⁴, (b³)² = b⁶ : 16b⁶/a⁴. Piège : a⁻² au carré ne devient pas a⁴ au numérateur."
+        },
+        {
+          "text": "Que vaut (2a)⁻³ ?",
+          "type": "mcq",
+          "options": [
+            "1/(8a³)",
+            "1/(2a³)",
+            "-1/(8a³)",
+            "2/a³"
+          ],
+          "correct": 0,
+          "solution": "2⁻³ = 1/8 et a⁻³ = 1/a³, donc 1/(8a³). Le -3 est un exposant, pas un signe négatif."
+        },
+        {
+          "text": "Que vaut b⁷/b⁷ (avec b ≠ 0) ?",
+          "type": "mcq",
+          "options": [
+            "1",
+            "0",
+            "b⁷",
+            "14"
+          ],
+          "correct": 0,
+          "solution": "Un nombre non nul divisé par lui-même vaut 1 (et b⁷⁻⁷ = b⁰ = 1)."
+        },
+        {
+          "text": "a⁻¹ = 1/a pour tout réel a ≠ 0.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : c'est la définition de l'exposant négatif."
+        },
+        {
+          "text": "a⁵/a⁻³ = a².",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : a⁵/a⁻³ = a⁵⁻⁽⁻³⁾ = a⁸ (on soustrait un exposant négatif, donc on additionne)."
+        },
+        {
+          "text": "(a/b)⁻² = b²/a² pour a ≠ 0 et b ≠ 0.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : l'exposant négatif inverse la fraction, puis au carré : (b/a)² = b²/a²."
+        },
+        {
+          "text": "(x²y³)² = x⁴y⁶.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : on élève chaque facteur au carré : (x²)² = x⁴ et (y³)² = y⁶."
+        }
+      ]
+    },
+    {
+      "category": "Racines carrées — opérations",
+      "questions": [
+        {
+          "text": "Que vaut 4√12 + √75 ?",
+          "type": "mcq",
+          "options": [
+            "13√3",
+            "17√3",
+            "9√3",
+            "8√3"
+          ],
+          "correct": 0,
+          "solution": "√12 = 2√3 et √75 = 5√3, donc 4×2√3 + 5√3 = 8√3+5√3 = 13√3."
+        },
+        {
+          "text": "Que vaut 2√8 - √18 + √50 ?",
+          "type": "mcq",
+          "options": [
+            "6√2",
+            "4√2",
+            "12√2",
+            "2√2"
+          ],
+          "correct": 0,
+          "solution": "2√8 = 4√2, √18 = 3√2, √50 = 5√2 : 4√2 - 3√2 + 5√2 = 6√2."
+        },
+        {
+          "text": "Que vaut √72 + √50 - √18 ?",
+          "type": "mcq",
+          "options": [
+            "8√2",
+            "14√2",
+            "11√2",
+            "5√2"
+          ],
+          "correct": 0,
+          "solution": "√72 = 6√2, √50 = 5√2, √18 = 3√2 : 6+5-3 = 8, soit 8√2."
+        },
+        {
+          "text": "Que vaut √48 - √27 ?",
+          "type": "mcq",
+          "options": [
+            "√3",
+            "√21",
+            "3√3",
+            "√75"
+          ],
+          "correct": 0,
+          "solution": "√48 = 4√3 et √27 = 3√3 : 4√3 - 3√3 = √3. On ne soustrait PAS les radicaux sous le même signe (48-27 = 21 est faux)."
+        },
+        {
+          "text": "Que vaut (2√3)² ?",
+          "type": "mcq",
+          "options": [
+            "12",
+            "6",
+            "36",
+            "12√3"
+          ],
+          "correct": 0,
+          "solution": "(2√3)² = 4 × 3 = 12 (le carré s'applique aussi au 2, et √3 au carré vaut 3)."
+        },
+        {
+          "text": "Que vaut √3 × √12 ?",
+          "type": "mcq",
+          "options": [
+            "6",
+            "√15",
+            "36",
+            "6√2"
+          ],
+          "correct": 0,
+          "solution": "√3 × √12 = √36 = 6. Piège : additionner les radicaux donne √15, qui est faux."
+        },
+        {
+          "text": "Que vaut √50 / √2 ?",
+          "type": "mcq",
+          "options": [
+            "5",
+            "25",
+            "√48",
+            "√10"
+          ],
+          "correct": 0,
+          "solution": "√50/√2 = √(50/2) = √25 = 5. Piège : diviser les radicaux puis oublier la racine donne 25."
+        },
+        {
+          "text": "Que vaut 3√2 × 4√2 ?",
+          "type": "mcq",
+          "options": [
+            "24",
+            "12",
+            "24√2",
+            "16"
+          ],
+          "correct": 0,
+          "solution": "3×4 = 12 et √2×√2 = 2, donc 12×2 = 24."
+        },
+        {
+          "text": "Que vaut √75 / √3 ?",
+          "type": "mcq",
+          "options": [
+            "5",
+            "25",
+            "√72",
+            "3"
+          ],
+          "correct": 0,
+          "solution": "√75/√3 = √(75/3) = √25 = 5."
+        },
+        {
+          "text": "Simplifiez √(18a²) en supposant a ≥ 0.",
+          "type": "mcq",
+          "options": [
+            "3a√2",
+            "3a²√2",
+            "9a√2",
+            "6a√2"
+          ],
+          "correct": 0,
+          "solution": "√18 = 3√2 et √a² = a (car a ≥ 0), donc 3a√2."
+        },
+        {
+          "text": "Que vaut √2 × √8 ?",
+          "type": "mcq",
+          "options": [
+            "4",
+            "16",
+            "√10",
+            "8"
+          ],
+          "correct": 0,
+          "solution": "√2 × √8 = √16 = 4 (équivalent : √8 = 2√2, donc √2 × 2√2 = 4)."
+        },
+        {
+          "text": "Développez (√3 + √2)².",
+          "type": "mcq",
+          "options": [
+            "5 + 2√6",
+            "5 + √6",
+            "3 + 2√6",
+            "5 + 2√5"
+          ],
+          "correct": 0,
+          "solution": "(√3)² + (√2)² + 2√3√2 = 3 + 2 + 2√6 = 5 + 2√6. Piège : oublier le 2 du milieu."
+        },
+        {
+          "text": "√(a²) = |a| pour tout réel a.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : √(a²) vaut a si a ≥ 0 et -a si a < 0, soit |a|."
+        },
+        {
+          "text": "√(a + b) = √a + √b quand a ≥ 0 et b ≥ 0.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : la racine n'est pas additive (contre-exemple : √(9+16) = 5 ≠ 3+4)."
+        },
+        {
+          "text": "√50 = 10√2.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : √50 = √(25×2) = 5√2 (et non 10√2)."
+        },
+        {
+          "text": "√3 × √3 = 3.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : le produit d'un nombre par lui-même vaut son carré, √3² = 3."
+        }
+      ]
+    },
+    {
+      "category": "Développement — carrés parfaits et signes",
+      "questions": [
+        {
+          "text": "Développez (4x - 1)².",
+          "type": "mcq",
+          "options": [
+            "16x² - 8x + 1",
+            "16x² - 1",
+            "4x² - 8x + 1",
+            "16x² - 2x + 1"
+          ],
+          "correct": 0,
+          "solution": "(4x-1)² = (4x)² - 2×4x×1 + 1² = 16x² - 8x + 1. Piège majeur : (a-b)² n'est PAS a²-b²."
+        },
+        {
+          "text": "Développez (2x + 5)(x - 7).",
+          "type": "mcq",
+          "options": [
+            "2x² - 9x - 35",
+            "2x² - 19x - 35",
+            "2x² + 9x - 35",
+            "2x² - 9x + 35"
+          ],
+          "correct": 0,
+          "solution": "2x² - 14x + 5x - 35 = 2x² - 9x - 35 (les termes de milieu se combinent : -14x+5x)."
+        },
+        {
+          "text": "Développez (3x - 4)(2x + 5).",
+          "type": "mcq",
+          "options": [
+            "6x² + 7x - 20",
+            "6x² - 7x - 20",
+            "6x² + 7x + 20",
+            "6x² + 23x - 20"
+          ],
+          "correct": 0,
+          "solution": "6x² + 15x - 8x - 20 = 6x² + 7x - 20. Piège : additionner 15 et 8 au lieu de les soustraire."
+        },
+        {
+          "text": "Développez (4x + 3)(4x - 3).",
+          "type": "mcq",
+          "options": [
+            "16x² - 9",
+            "4x² - 9",
+            "16x² + 9",
+            "16x² - 6x - 9"
+          ],
+          "correct": 0,
+          "solution": "Identité remarquable (a+b)(a-b) = a²-b² : (4x)² - 3² = 16x² - 9."
+        },
+        {
+          "text": "Développez (x + 9)(x - 9).",
+          "type": "mcq",
+          "options": [
+            "x² - 81",
+            "x² + 81",
+            "x² - 18x + 81",
+            "x² + 18x - 81"
+          ],
+          "correct": 0,
+          "solution": "Différence de carrés : x² - 9² = x² - 81 (aucun terme en x)."
+        },
+        {
+          "text": "Développez (x + 7)².",
+          "type": "mcq",
+          "options": [
+            "x² + 14x + 49",
+            "x² + 49",
+            "x² + 7x + 49",
+            "x² + 14x - 49"
+          ],
+          "correct": 0,
+          "solution": "(a+b)² = a² + 2ab + b² : x² + 14x + 49 (le 2ab est souvent oublié)."
+        },
+        {
+          "text": "Développez (5x + 2)².",
+          "type": "mcq",
+          "options": [
+            "25x² + 20x + 4",
+            "25x² + 4",
+            "25x² + 10x + 4",
+            "10x² + 20x + 4"
+          ],
+          "correct": 0,
+          "solution": "(5x)² + 2×5x×2 + 2² = 25x² + 20x + 4."
+        },
+        {
+          "text": "Développez (2x - 9)².",
+          "type": "mcq",
+          "options": [
+            "4x² - 36x + 81",
+            "4x² - 18x + 81",
+            "4x² + 36x + 81",
+            "4x² - 81"
+          ],
+          "correct": 0,
+          "solution": "(2x)² - 2×2x×9 + 9² = 4x² - 36x + 81 (le double du produit vaut 36x, pas 18x)."
+        },
+        {
+          "text": "Que vaut (x - 6)² - (x + 1)² ?",
+          "type": "mcq",
+          "options": [
+            "-14x + 35",
+            "-10x + 35",
+            "-14x + 37",
+            "-10x + 37"
+          ],
+          "correct": 0,
+          "solution": "(x²-12x+36) - (x²+2x+1) = -12x-2x + 36-1 = -14x + 35 : attention au changement de signes."
+        },
+        {
+          "text": "Développez (2x + 1)(x + 4) - 3x(x - 1).",
+          "type": "mcq",
+          "options": [
+            "-x² + 12x + 4",
+            "-x² + 9x + 4",
+            "-x² + 12x - 4",
+            "x² + 12x + 4"
+          ],
+          "correct": 0,
+          "solution": "(2x²+9x+4) - (3x²-3x) = -x² + 12x + 4. Piège : oublier le double signe de -3x(x-1)."
+        },
+        {
+          "text": "Développez (x - 1)(2x + 5).",
+          "type": "mcq",
+          "options": [
+            "2x² + 3x - 5",
+            "2x² - 3x - 5",
+            "2x² + 3x + 5",
+            "2x² + 5x - 5"
+          ],
+          "correct": 0,
+          "solution": "2x² + 5x - 2x - 5 = 2x² + 3x - 5."
+        },
+        {
+          "text": "Développez (3x + 2)(x - 3).",
+          "type": "mcq",
+          "options": [
+            "3x² - 7x - 6",
+            "3x² - 7x + 6",
+            "3x² - x - 6",
+            "3x² + x - 6"
+          ],
+          "correct": 0,
+          "solution": "3x² - 9x + 2x - 6 = 3x² - 7x - 6."
+        },
+        {
+          "text": "Développez (3x - 1)(x + 6).",
+          "type": "mcq",
+          "options": [
+            "3x² + 17x - 6",
+            "3x² + 17x + 6",
+            "3x² - 17x - 6",
+            "3x² + 11x - 6"
+          ],
+          "correct": 0,
+          "solution": "3x² + 18x - x - 6 = 3x² + 17x - 6."
+        },
+        {
+          "text": "Développez (4x - 1)(4x + 1).",
+          "type": "mcq",
+          "options": [
+            "16x² - 1",
+            "16x² + 1",
+            "8x² - 1",
+            "16x² - 4"
+          ],
+          "correct": 0,
+          "solution": "(a-b)(a+b) = a²-b² : (4x)² - 1² = 16x² - 1."
+        },
+        {
+          "text": "Développez (3x - 2)(x + 4).",
+          "type": "mcq",
+          "options": [
+            "3x² + 10x - 8",
+            "3x² + 10x + 8",
+            "3x² - 10x - 8",
+            "3x² + 2x - 8"
+          ],
+          "correct": 0,
+          "solution": "3x² + 12x - 2x - 8 = 3x² + 10x - 8."
+        }
+      ]
+    },
+    {
+      "category": "Factorisation — regroupement et trinômes",
+      "questions": [
+        {
+          "text": "Factorisez 2x(x + 1) + 3(x + 1).",
+          "type": "mcq",
+          "options": [
+            "(x + 1)(2x + 3)",
+            "(x + 1)(2x - 3)",
+            "(x - 1)(2x + 3)",
+            "(x + 1)(2x + 3)²"
+          ],
+          "correct": 0,
+          "solution": "Le facteur commun est (x + 1) : il reste 2x + 3, donc (x + 1)(2x + 3)."
+        },
+        {
+          "text": "Factorisez ax + bx + ay + by.",
+          "type": "mcq",
+          "options": [
+            "(a + b)(x + y)",
+            "(a + b)(x - y)",
+            "(a - b)(x + y)",
+            "x(a + b + y)"
+          ],
+          "correct": 0,
+          "solution": "Regroupement : x(a+b) + y(a+b) = (a+b)(x+y)."
+        },
+        {
+          "text": "Factorisez 3x² + 9x + 2x + 6.",
+          "type": "mcq",
+          "options": [
+            "(x + 3)(3x + 2)",
+            "(x + 3)(3x - 2)",
+            "(x + 9)(3x + 2)",
+            "(x + 6)(3x + 1)"
+          ],
+          "correct": 0,
+          "solution": "3x(x + 3) + 2(x + 3) = (x + 3)(3x + 2)."
+        },
+        {
+          "text": "Factorisez 6x² - 4x - 3x + 2.",
+          "type": "mcq",
+          "options": [
+            "(2x - 1)(3x - 2)",
+            "(2x - 1)(3x + 2)",
+            "(2x + 1)(3x - 2)",
+            "(2x + 1)(3x + 2)"
+          ],
+          "correct": 0,
+          "solution": "2x(3x - 2) - 1(3x - 2) = (2x - 1)(3x - 2)."
+        },
+        {
+          "text": "Factorisez a(a - b) - 4(a - b).",
+          "type": "mcq",
+          "options": [
+            "(a - b)(a - 4)",
+            "(a - b)(a + 4)",
+            "(a + b)(a - 4)",
+            "(a - b)(4 - a)"
+          ],
+          "correct": 0,
+          "solution": "Facteur commun (a - b) : il reste a - 4. Attention : (a-b)(4-a) vaut l'opposé !"
+        },
+        {
+          "text": "Factorisez x² - ax - bx + ab.",
+          "type": "mcq",
+          "options": [
+            "(x - a)(x - b)",
+            "(x - a)(x + b)",
+            "(x + a)(x - b)",
+            "(x + a)(x + b)"
+          ],
+          "correct": 0,
+          "solution": "x(x - a) - b(x - a) = (x - a)(x - b) (on reconnaît x² - (a+b)x + ab)."
+        },
+        {
+          "text": "Factorisez 5x² + 15x.",
+          "type": "mcq",
+          "options": [
+            "5x(x + 3)",
+            "5(x + 3)",
+            "x(5x + 15)",
+            "5x(x - 3)"
+          ],
+          "correct": 0,
+          "solution": "Facteur commun 5x : il reste x + 3. Attention à ne pas laisser 15 dans la parenthèse."
+        },
+        {
+          "text": "Factorisez x² - 5x - 6.",
+          "type": "mcq",
+          "options": [
+            "(x - 6)(x + 1)",
+            "(x + 6)(x - 1)",
+            "(x - 6)(x - 1)",
+            "(x + 3)(x - 2)"
+          ],
+          "correct": 0,
+          "solution": "Deux nombres de somme -5 et produit -6 : -6 et +1, donc (x - 6)(x + 1)."
+        },
+        {
+          "text": "Factorisez x² + 4x + 4.",
+          "type": "mcq",
+          "options": [
+            "(x + 2)²",
+            "(x + 4)²",
+            "(x - 2)²",
+            "(x + 2)(x - 2)"
+          ],
+          "correct": 0,
+          "solution": "Carré parfait : x² + 2×2x + 2² = (x + 2)². Piège : (x+4)² donnerait 8x au milieu."
+        },
+        {
+          "text": "Factorisez 4x² - 20x + 25.",
+          "type": "mcq",
+          "options": [
+            "(2x - 5)²",
+            "(2x + 5)²",
+            "(4x - 5)²",
+            "(2x - 5)(2x + 5)"
+          ],
+          "correct": 0,
+          "solution": "(2x)² - 2×2x×5 + 5² = (2x - 5)²."
+        },
+        {
+          "text": "Factorisez 2x² + 7x + 3.",
+          "type": "mcq",
+          "options": [
+            "(2x + 1)(x + 3)",
+            "(2x + 3)(x + 1)",
+            "(2x - 1)(x - 3)",
+            "(2x + 1)(x - 3)"
+          ],
+          "correct": 0,
+          "solution": "2×3 = 6 et 1+6 = 7 : (2x + 1)(x + 3)."
+        },
+        {
+          "text": "Factorisez 3x² - 8x - 3.",
+          "type": "mcq",
+          "options": [
+            "(3x + 1)(x - 3)",
+            "(3x - 1)(x + 3)",
+            "(3x + 1)(x + 3)",
+            "(3x - 1)(x - 3)"
+          ],
+          "correct": 0,
+          "solution": "-9x + x = -8x et 1×(-3) = -3 : (3x + 1)(x - 3)."
+        },
+        {
+          "text": "Factorisez 6x² + x - 2.",
+          "type": "mcq",
+          "options": [
+            "(2x - 1)(3x + 2)",
+            "(2x + 1)(3x - 2)",
+            "(2x - 1)(3x - 2)",
+            "(2x + 1)(3x + 2)"
+          ],
+          "correct": 0,
+          "solution": "4x - 3x = x : (2x - 1)(3x + 2). Attention, c'est presque le même développement que 6x² - 7x + 2 !"
+        },
+        {
+          "text": "Factorisez 4x² - 1.",
+          "type": "mcq",
+          "options": [
+            "(2x - 1)(2x + 1)",
+            "(4x - 1)(4x + 1)",
+            "(2x - 1)²",
+            "(x - 1)(x + 1)"
+          ],
+          "correct": 0,
+          "solution": "Différence de carrés : (2x)² - 1² = (2x - 1)(2x + 1). Piège : (4x-1)(4x+1) vaut 16x²-1."
+        },
+        {
+          "text": "Factorisez 9x² - 16y².",
+          "type": "mcq",
+          "options": [
+            "(3x - 4y)(3x + 4y)",
+            "(9x - 16y)(9x + 16y)",
+            "(3x - 4y)²",
+            "(3x - 4)(3x + 4)"
+          ],
+          "correct": 0,
+          "solution": "(3x)² - (4y)² = (3x - 4y)(3x + 4y). Piège : oublier le y dans le carré."
+        },
+        {
+          "text": "Factorisez x² - 6x + 9.",
+          "type": "mcq",
+          "options": [
+            "(x - 3)²",
+            "(x + 3)²",
+            "(x - 9)²",
+            "(x - 3)(x + 3)"
+          ],
+          "correct": 0,
+          "solution": "Carré parfait : x² - 2×3x + 3² = (x - 3)²."
+        },
+        {
+          "text": "Factorisez 9x² - 12x + 4.",
+          "type": "mcq",
+          "options": [
+            "(3x - 2)²",
+            "(3x + 2)²",
+            "(3x - 4)²",
+            "(9x - 2)²"
+          ],
+          "correct": 0,
+          "solution": "(3x)² - 2×3x×2 + 2² = (3x - 2)²."
+        }
+      ]
+    },
+    {
+      "category": "Identités remarquables — applications",
+      "questions": [
+        {
+          "text": "Factorisez x⁴ - 16.",
+          "type": "mcq",
+          "options": [
+            "(x² - 4)(x² + 4)",
+            "(x² - 4)²",
+            "(x² + 4)²",
+            "(x - 2)(x + 2)"
+          ],
+          "correct": 0,
+          "solution": "x⁴ - 16 = (x²)² - 4² = (x² - 4)(x² + 4). Attention : (x-2)(x+2) vaut x²-4, pas x⁴-16."
+        },
+        {
+          "text": "Que vaut (2x - 3)² - (x + 5)² ?",
+          "type": "mcq",
+          "options": [
+            "(x - 8)(3x + 2)",
+            "(x - 8)(3x - 2)",
+            "(x + 8)(3x + 2)",
+            "(x - 2)(3x + 8)"
+          ],
+          "correct": 0,
+          "solution": "Différence de carrés A² - B² = (A-B)(A+B) avec A = 2x-3 et B = x+5 : (x-8)(3x+2)."
+        },
+        {
+          "text": "Factorisez (x + y)² + 2(x + y).",
+          "type": "mcq",
+          "options": [
+            "(x + y)(x + y + 2)",
+            "(x + y)(x + y - 2)",
+            "(x + y + 2)²",
+            "(x + y)(x + 2)"
+          ],
+          "correct": 0,
+          "solution": "Facteur commun (x + y) : il reste (x + y) + 2."
+        },
+        {
+          "text": "Factorisez (a² - b²) + (a - b).",
+          "type": "mcq",
+          "options": [
+            "(a - b)(a + b + 1)",
+            "(a - b)(a + b - 1)",
+            "(a + b)(a - b + 1)",
+            "(a - b)(a + b)"
+          ],
+          "correct": 0,
+          "solution": "(a-b)(a+b) + 1×(a-b) = (a - b)(a + b + 1)."
+        },
+        {
+          "text": "Factorisez x² - y² - x + y.",
+          "type": "mcq",
+          "options": [
+            "(x - y)(x + y - 1)",
+            "(x - y)(x + y + 1)",
+            "(x + y)(x - y - 1)",
+            "(x - y)(x - y - 1)"
+          ],
+          "correct": 0,
+          "solution": "x² - y² - (x - y) = (x - y)(x + y) - (x - y) = (x - y)(x + y - 1)."
+        },
+        {
+          "text": "Que vaut (x + 1)² - x² ?",
+          "type": "mcq",
+          "options": [
+            "2x + 1",
+            "1",
+            "2x² + 1",
+            "x + 1"
+          ],
+          "correct": 0,
+          "solution": "x² + 2x + 1 - x² = 2x + 1 (les carrés se simplifient)."
+        },
+        {
+          "text": "Que vaut (2n + 3)² - (2n - 3)² ?",
+          "type": "mcq",
+          "options": [
+            "24n",
+            "0",
+            "12n",
+            "18n"
+          ],
+          "correct": 0,
+          "solution": "(4n²+12n+9) - (4n²-12n+9) = 24n. Ou directement : 4×(2n)×3 = 24n avec la formule A²-B²."
+        },
+        {
+          "text": "Que vaut (a + b)² - a² - b² ?",
+          "type": "mcq",
+          "options": [
+            "2ab",
+            "0",
+            "ab",
+            "4ab"
+          ],
+          "correct": 0,
+          "solution": "(a+b)² = a² + 2ab + b², donc en retranchant a² et b² il reste 2ab."
+        },
+        {
+          "text": "Que vaut (a + b)² - (a - b)² ?",
+          "type": "mcq",
+          "options": [
+            "4ab",
+            "2ab",
+            "0",
+            "a² + b²"
+          ],
+          "correct": 0,
+          "solution": "A² - B² avec A = a+b et B = a-b : (2a)(2b) = 4ab."
+        },
+        {
+          "text": "Factorisez 25 - (x + 1)².",
+          "type": "mcq",
+          "options": [
+            "(4 - x)(6 + x)",
+            "(4 - x)(6 - x)",
+            "(4 + x)(6 + x)",
+            "(5 - x)(5 + x)"
+          ],
+          "correct": 0,
+          "solution": "A² - B² avec A = 5 et B = x+1 : (5 - (x+1))(5 + (x+1)) = (4 - x)(6 + x). Piège : (5-x)(5+x) oublie le +1."
+        },
+        {
+          "text": "Factorisez x² + 2xy + y² - 1.",
+          "type": "mcq",
+          "options": [
+            "(x + y - 1)(x + y + 1)",
+            "(x + y - 1)²",
+            "(x + y + 1)²",
+            "(x - y - 1)(x - y + 1)"
+          ],
+          "correct": 0,
+          "solution": "x²+2xy+y² = (x+y)², donc c'est (x+y)² - 1² = (x+y-1)(x+y+1)."
+        },
+        {
+          "text": "Factorisez a² + 2ab + b² - a - b.",
+          "type": "mcq",
+          "options": [
+            "(a + b)(a + b - 1)",
+            "(a + b)(a + b + 1)",
+            "(a - b)(a - b - 1)",
+            "(a + b - 1)²"
+          ],
+          "correct": 0,
+          "solution": "(a+b)² - (a+b) = (a + b)(a + b - 1) : on regarde le carré parfait ET la fin."
+        },
+        {
+          "text": "Que vaut (a + b)² - a² ?",
+          "type": "mcq",
+          "options": [
+            "2ab + b²",
+            "2ab",
+            "b²",
+            "a² + 2ab + b²"
+          ],
+          "correct": 0,
+          "solution": "(a² + 2ab + b²) - a² = 2ab + b². Piège : garder tout le carré parfait."
+        },
+        {
+          "text": "Factorisez 3x² + 6xy - 9x.",
+          "type": "mcq",
+          "options": [
+            "3x(x + 2y - 3)",
+            "3x(x + 2y + 3)",
+            "3(x + 2y - 3)",
+            "x(x + 2y - 3)"
+          ],
+          "correct": 0,
+          "solution": "Facteur commun 3x : il reste x + 2y - 3 (le 3 doit aussi sortir)."
+        }
+      ]
+    },
+    {
+      "category": "Pièges classiques — vrai ou faux",
+      "questions": [
+        {
+          "text": "(a + b)² = a² + b² pour tous réels a et b.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : (a+b)² = a² + 2ab + b². Sans le double du produit, l'égalité est fausse (ex. a = b = 1 : 4 ≠ 2)."
+        },
+        {
+          "text": "(3x + 1)² = 9x² + 1.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : il manque 2×3x×1 = 6x ; le bon développement est 9x² + 6x + 1."
+        },
+        {
+          "text": "√(a²) = a pour tout réel a.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : √(a²) = |a| ; si a = -3, √(9) = 3 ≠ -3."
+        },
+        {
+          "text": "a⁰ = 1 pour tout réel a.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : 0⁰ n'est pas défini ; c'est vrai seulement pour a ≠ 0."
+        },
+        {
+          "text": "x² - y² = (x - y)².",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : x² - y² = (x-y)(x+y), alors que (x-y)² = x² - 2xy + y²."
+        },
+        {
+          "text": "(a - b)² = a² - 2ab + b².",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : c'est l'identité remarquable du carré d'une différence."
+        },
+        {
+          "text": "(n+1)/(3n+1) = 1/3 dès que n ≠ 0.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : on ne peut pas simplifier terme à terme (n+1 et 3n+1 ne sont pas proportionnels) ; la fraction n'est jamais égale à 1/3."
+        },
+        {
+          "text": "1/n + 1/n = 1/n.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : on ajoute les numérateurs sur le même dénominateur : 1/n + 1/n = 2/n."
+        },
+        {
+          "text": "(4n+5)/(n-7) + 3 = (7n-16)/(n-7) pour n ≠ 7.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : 3 = (3n-21)/(n-7), donc (4n+5+3n-21)/(n-7) = (7n-16)/(n-7)."
+        },
+        {
+          "text": "√(n - 3) est définie pour tout réel n.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : il faut n - 3 ≥ 0, soit n ≥ 3 (les n < 3 sont interdits)."
+        },
+        {
+          "text": "Un nombre négatif n'a pas de racine carrée réelle.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : dans ℝ, √(nombre négatif) n'existe pas (ex. √(-9))."
+        },
+        {
+          "text": "0⁻¹ existe et vaut 1.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : 0⁻¹ = 1/0, ce qui n'est pas défini : la division par zéro est interdite."
+        },
+        {
+          "text": "(x + 3)² - 49 = (x + 10)(x - 4).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : 49 = 7², donc (x+3)² - 7² = (x+3+7)(x+3-7) = (x+10)(x-4)."
+        },
+        {
+          "text": "(2x + 5)(-x + 3) = -2x² + x + 15.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : -2x² + 6x - 5x + 15 = -2x² + x + 15 (attention aux signes du premier facteur)."
+        },
+        {
+          "text": "√(a²b) = a√b pour tout réel a et tout b ≥ 0.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : √(a²) = |a|, donc le bon résultat est |a|√b (si a < 0, « a√b » serait négatif)."
+        },
+        {
+          "text": "a⁻²b³ = b³/a² pour a ≠ 0.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : a⁻² = 1/a², donc a⁻²b³ = b³/a²."
+        },
+        {
+          "text": "Une fraction algébrique n'est pas définie pour les valeurs qui annulent son dénominateur.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : division par zéro interdite : la condition de domaine vient toujours du dénominateur."
+        },
+        {
+          "text": "(a + b + c)² = a² + b² + c².",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : il manque 2ab + 2ac + 2bc ; trois termes s'ajoutent."
+        },
+        {
+          "text": "(x + 1)(x - 1) + 1 = x².",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : (x+1)(x-1) = x² - 1, puis -1 + 1 = 0 : il reste x²."
+        }
+      ]
+    },
+    {
+      "category": "Exercices — égalités à compléter",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "Étape finale : (n+1)/(3n+1) + (4n-2)/(6n+2) = ?",
+          "type": "mcq",
+          "options": [
+            "3n/(3n+1)",
+            "(3n-1)/(3n+1)",
+            "(2n-1)/(3n+1)",
+            "(7n-1)/(6n+2)"
+          ],
+          "correct": 0,
+          "solution": "6n+2 = 2(3n+1), donc (4n-2)/(6n+2) = (2n-1)/(3n+1), puis (n+1+2n-1)/(3n+1) = 3n/(3n+1)."
+        },
+        {
+          "text": "Complétez : (4n+5)/(n-7) + 3 = (___)/(n-7).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "7n-16",
+            "7n−16",
+            "+7n-16",
+            "+7n−16"
+          ],
+          "solution": "3 = 3(n-7)/(n-7) = (3n-21)/(n-7). On ajoute : 4n+5+3n-21 = 7n-16."
+        },
+        {
+          "text": "Que vaut (a⁵b⁷)/(a⁻³b⁴) ?",
+          "type": "mcq",
+          "options": [
+            "a⁸b³",
+            "a²b³",
+            "a⁸b¹¹",
+            "a⁻²b³"
+          ],
+          "correct": 0,
+          "solution": "a⁵/a⁻³ = a⁵⁺³ = a⁸ (soustraire un exposant négatif) et b⁷/b⁴ = b³, donc a⁸b³."
+        },
+        {
+          "text": "Complétez : 3√27 - 5√48 + 4√75 = ___√3.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "9"
+          ],
+          "solution": "√27 = 3√3, √48 = 4√3, √75 = 5√3 : 3×3√3 - 5×4√3 + 4×5√3 = 9√3 - 20√3 + 20√3 = 9√3."
+        },
+        {
+          "text": "Que vaut (4x - 1)² - (2x + 5)(-x + 3) ?",
+          "type": "mcq",
+          "options": [
+            "18x² - 9x - 14",
+            "14x² - 7x + 16",
+            "18x² - x - 16",
+            "6x² - 9x - 14"
+          ],
+          "correct": 0,
+          "solution": "(4x-1)² = 16x²-8x+1 et (2x+5)(-x+3) = -2x²+x+15. En retranchant (attention au signe !) : 16x²-8x+1+2x²-x-15 = 18x²-9x-14."
+        },
+        {
+          "text": "Développez : (2x + 5)(-x + 3) = ___.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "-2x^2+x+15",
+            "-2x²+x+15",
+            "−2x²+x+15",
+            "−2x^2+x+15",
+            "-2x2+x+15"
+          ],
+          "solution": "-2x² + 6x - 5x + 15 = -2x² + x + 15 : chaque terme du premier facteur change le signe du second."
+        },
+        {
+          "text": "Factorisez 7x + 1 + (4x - 5)(7x + 1).",
+          "type": "mcq",
+          "options": [
+            "4(7x+1)(x-1)",
+            "(7x+1)(4x-5)",
+            "4(7x+1)(x+1)",
+            "(7x+1)(4x+5)"
+          ],
+          "correct": 0,
+          "solution": "Facteur commun (7x+1) : 1 + (4x-5) = 4x-4, donc (7x+1)(4x-4) = 4(7x+1)(x-1). Piège : ajouter 1 au mauvais endroit."
+        },
+        {
+          "text": "Factorisez : (3x + 1)² - 49 = ___.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "(3x+8)(3x-6)",
+            "(3x+8)(3x−6)",
+            "3(3x+8)(x-2)",
+            "3(3x+8)(x−2)",
+            "(3x-6)(3x+8)",
+            "(3x−6)(3x+8)"
+          ],
+          "solution": "49 = 7² : (3x+1)² - 7² = (3x+1+7)(3x+1-7) = (3x+8)(3x-6), soit 3(3x+8)(x-2) après avoir sorti le 3."
+        },
+        {
+          "text": "Simplifiez (4n - 2)/(6n + 2).",
+          "type": "mcq",
+          "options": [
+            "(2n-1)/(3n+1)",
+            "(2n-2)/(3n+1)",
+            "(4n-1)/(3n+1)",
+            "(n-1)/(3n+1)"
+          ],
+          "correct": 0,
+          "solution": "6n+2 = 2(3n+1) et (4n-2)/2 = 2n-1. Piège très fréquent : écrire (2n-2) en divisant seulement le 4n par 2."
+        },
+        {
+          "text": "Que vaut (2x + 5)(x - 7) - (2x + 5)(x + 3) ?",
+          "type": "mcq",
+          "options": [
+            "-10(2x+5)",
+            "-4(2x+5)",
+            "10(2x+5)",
+            "-10(2x-5)"
+          ],
+          "correct": 0,
+          "solution": "Facteur commun (2x+5) : (x-7) - (x+3) = -10, donc -10(2x+5). Piège : -7+3 = -4 au lieu de -7-3 = -10."
+        },
+        {
+          "text": "Pour quelle valeur l'expression (2n+1)/(4n-8) n'est-elle pas définie ?",
+          "type": "mcq",
+          "options": [
+            "n = 2",
+            "n = -2",
+            "n = 4",
+            "n = 8"
+          ],
+          "correct": 0,
+          "solution": "4n-8 = 4(n-2) s'annule pour n = 2 : c'est la seule valeur interdite."
+        },
+        {
+          "text": "Réduisez (6n² + 9n)/(3n).",
+          "type": "mcq",
+          "options": [
+            "2n + 3",
+            "2n + 9",
+            "n + 3",
+            "6n + 3"
+          ],
+          "correct": 0,
+          "solution": "Facteur commun 3n : (3n(2n+3))/(3n) = 2n+3, pour n ≠ 0."
+        },
+        {
+          "text": "Complétez : (n² - 4)/(n - 2) = ___ (pour n ≠ 2).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "n+2",
+            "(n+2)",
+            "n + 2"
+          ],
+          "solution": "n²-4 = (n-2)(n+2), on simplifie le facteur commun (n-2) : il reste n+2."
+        },
+        {
+          "text": "Calculez : 5√18 - 3√50 = ___.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "0"
+          ],
+          "solution": "5√18 = 15√2 et 3√50 = 15√2 : 15√2 - 15√2 = 0. Les termes se compensent exactement !"
+        },
+        {
+          "text": "Développez : (4x - 1)² = ___.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "16x^2-8x+1",
+            "16x²-8x+1",
+            "16x^2−8x+1",
+            "16x²−8x+1",
+            "16x2-8x+1"
+          ],
+          "solution": "(4x)² - 2×4x×1 + 1² = 16x² - 8x + 1. Ni 16x²-1, ni 4x²-8x+1 !"
+        },
+        {
+          "text": "Simplifiez : √125 = ___√5.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "5"
+          ],
+          "solution": "125 = 25×5, donc √125 = √25 × √5 = 5√5 : le coefficient est 5."
+        }
+      ]
+    }
+  ]
+}
