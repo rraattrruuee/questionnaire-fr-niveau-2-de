@@ -198,6 +198,16 @@
       "added": "2026-09-26"
     },
     {
+      "id": "physique-chimie-atomes-molecules",
+      "title": "Atomes et molécules",
+      "subject": "physique-chimie",
+      "file": "data/physique-chimie/atomes-molecules.json",
+      "questionsCount": 189,
+      "description": "Toute la partie atomes et molécules : noyau et symbole A/Z/N, isotopes, tailles et masses, histoire de l'atome, configuration electronique et Klechkowski, ions, liaisons covalentes et schema de Lewis (189 questions).",
+      "tags": ["physique-chimie", "atome", "noyau", "configuration-electronique", "molecules", "lewis"],
+      "added": "2026-10-11"
+    },
+    {
       "id": "anglais-verbes-irreguliers",
       "title": "Verbes irréguliers — Les 3 formes",
       "subject": "anglais",
