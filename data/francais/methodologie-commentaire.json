@@ -1,0 +1,1611 @@
+{
+  "subject": "francais",
+  "title": "Méthodologie du commentaire",
+  "description": "Méthodologie du commentaire composé : lectures et repérages, problématique, tableau d'analyse, plan, introduction, conclusion et mise en page (136 questions).",
+  "categories": [
+    {
+      "category": "Le commentaire : objectif et attentes",
+      "questions": [
+        {
+          "text": "Le commentaire composé a pour objectif principal de montrer que…",
+          "type": "mcq",
+          "options": [
+            "le texte produit des effets sur le lecteur et que l'auteur a mis en œuvre des procédés littéraires pour y parvenir",
+            "le texte est grammaticalement correct et bien orthographié",
+            "l'auteur a choisi un genre littéraire célèbre",
+            "le lecteur doit apprécier le texte sans analyse"
+          ],
+          "correct": 0,
+          "solution": "L'objectif est double : le texte produit des effets sur le lecteur ET l'auteur a mis en œuvre un ensemble de procédés littéraires pour parvenir à cette fin."
+        },
+        {
+          "text": "Le commentaire composé est, avec la dissertation, une épreuve de…",
+          "type": "mcq",
+          "options": [
+            "bac de français en série générale",
+            "l'oral de rattrapage de mathématiques",
+            "l'épreuve de géographie du brevet",
+            "l'entrée en classe de seconde"
+          ],
+          "correct": 0,
+          "solution": "Le commentaire est une des épreuves du bac de français (avec la dissertation) en série générale."
+        },
+        {
+          "text": "Dans un commentaire, « fond » et « forme » désignent…",
+          "type": "mcq",
+          "options": [
+            "le fond = le sens du texte (le message), la forme = les procédés d'écriture",
+            "le fond = les procédés d'écriture, la forme = le sens du texte",
+            "le fond = le plan, la forme = l'introduction",
+            "le fond = le genre, la forme = le registre"
+          ],
+          "correct": 0,
+          "solution": "Fond = sens du texte, « message » de l'auteur ; forme = procédés d'écriture utilisés."
+        },
+        {
+          "text": "Montrer que « la forme est au service du fond ou inversement », c'est expliquer…",
+          "type": "mcq",
+          "options": [
+            "le lien entre les procédés d'écriture et le sens du texte",
+            "que la forme est toujours plus importante que le fond",
+            "que les procédés littéraires sont purement décoratifs",
+            "que le fond se résume au sujet du texte"
+          ],
+          "correct": 0,
+          "solution": "Il faut faire comprendre que la forme (procédés) sert le fond (sens/message) : c'est le cœur du « projet de lecture »."
+        },
+        {
+          "text": "L'analyse d'un texte doit faire apparaître un…",
+          "type": "mcq",
+          "options": [
+            "projet de lecture",
+            "projet d'écriture de l'élève",
+            "projet de loi",
+            "projet du correcteur"
+          ],
+          "correct": 0,
+          "solution": "Le projet de lecture résume en quelques lignes les caractéristiques et l'originalité du texte : c'est la synthèse de vos repérages."
+        },
+        {
+          "text": "« En dialoguant avec son cœur, le poète donne une vision originale de l'amour tout en en faisant la critique. » Cette phrase est un exemple de…",
+          "type": "mcq",
+          "options": [
+            "projet de lecture",
+            "problématique",
+            "titre de partie",
+            "conclusion partielle"
+          ],
+          "correct": 0,
+          "solution": "C'est l'exemple donné par le cours : un projet de lecture, résumé en une phrase des enjeux du texte, formulé AVANT la problématique."
+        },
+        {
+          "text": "Sur l'énumération des procédés littéraires, la méthode dit :",
+          "type": "mcq",
+          "options": [
+            "elle n'a aucun intérêt en soi : il faut en dire quelque chose",
+            "elle suffit à elle seule pour avoir la meilleure note",
+            "elle doit être placée dans l'introduction",
+            "elle remplace le développement"
+          ],
+          "correct": 0,
+          "solution": "L'énumération de procédés n'a aucun intérêt en soi : chacun doit être analysé et interprété."
+        },
+        {
+          "text": "Le correcteur évalue en priorité…",
+          "type": "mcq",
+          "options": [
+            "votre vocabulaire spécialisé et vos compétences d'interprétation",
+            "votre calligraphie et votre vitesse d'écriture",
+            "le nombre de citations recopiées",
+            "vos connaissances en biographie de l'auteur"
+          ],
+          "correct": 0,
+          "solution": "Le correcteur évalue l'analyse, l'utilisation d'un vocabulaire spécialisé pour décrire la langue et les compétences d'interprétation."
+        },
+        {
+          "text": "« Analyser » un texte, c'est…",
+          "type": "mcq",
+          "options": [
+            "identifier les procédés employés et décrire leur fonctionnement",
+            "résumer le texte en quelques lignes",
+            "donner son avis personnel sur le texte",
+            "raconter la vie de l'auteur"
+          ],
+          "correct": 0,
+          "solution": "Analyser = repérer et décrire les procédés (faits de langue, figures, lexique…) ; interpréter viendra ensuite."
+        },
+        {
+          "text": "« Interpréter » un texte, c'est…",
+          "type": "mcq",
+          "options": [
+            "dégager les effets produits sur le lecteur et l'intention de l'auteur",
+            "recopier les citations dans un tableau",
+            "traduire le texte dans une autre langue",
+            "corriger les fautes de l'auteur"
+          ],
+          "correct": 0,
+          "solution": "Interpréter = expliquer ce que les procédés produisent comme effets et quelle intention ils révèlent."
+        },
+        {
+          "text": "Complétez : le fond correspond au ______ du texte (au « message » de l'auteur).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "sens",
+            "le sens",
+            "message",
+            "le message"
+          ],
+          "solution": "Fond = sens du texte, c'est-à-dire le « message » que l'auteur veut faire passer."
+        },
+        {
+          "text": "Complétez : le commentaire doit montrer que le texte produit des ______ sur le lecteur.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "effets",
+            "des effets"
+          ],
+          "solution": "L'objectif est de montrer que le texte produit des effets sur le lecteur grâce aux procédés mis en œuvre."
+        },
+        {
+          "text": "L'énumération des procédés littéraires, sans interprétation, suffit à un bon commentaire.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : « l'énumération de procédés littéraires n'a aucun intérêt en soi : il faut en dire quelque chose »."
+        },
+        {
+          "text": "Un commentaire n'est pas un résumé du texte ni un exposé d'avis personnel.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : on analyse et interprète les procédés au service du sens, on ne résume pas et on ne donne pas son avis sans preuve."
+        },
+        {
+          "text": "Parmi ces propositions, laquelle correspond à une attitude interdite en commentaire ?",
+          "type": "mcq",
+          "options": [
+            "Donner son avis personnel sans analyse ni citation",
+            "Identifier les figures de style employées",
+            "Interpréter les effets d'un procédé",
+            "Expliquer le lien entre forme et fond"
+          ],
+          "correct": 0,
+          "solution": "Le commentaire exige analyse + preuve (citation) + interprétation ; l'avis personnel non étayé est proscrit."
+        }
+      ]
+    },
+    {
+      "category": "Lecture et repérages au brouillon",
+      "questions": [
+        {
+          "text": "Le « paratexte » d'un texte comprend notamment…",
+          "type": "mcq",
+          "options": [
+            "le chapeau introductif, le nom de l'auteur, la date et le titre",
+            "l'introduction, le développement et la conclusion",
+            "les notes de bas de page uniquement",
+            "le premier et le dernier paragraphe"
+          ],
+          "correct": 0,
+          "solution": "Au brouillon, on lit le texte entièrement AINSI QUE son paratexte : chapeau introductif, nom d'auteur, date, titre."
+        },
+        {
+          "text": "Que faire lors de la première lecture du texte ?",
+          "type": "mcq",
+          "options": [
+            "Le lire entièrement avec son paratexte et noter le sens général et ses premières impressions",
+            "Compter les vers immédiatement",
+            "Rédiger l'introduction tout de suite",
+            "Chercher toutes les figures de style avant de comprendre"
+          ],
+          "correct": 0,
+          "solution": "Première lecture : texte + paratexte, on note au brouillon le sens général et les premières impressions."
+        },
+        {
+          "text": "Face à un passage qui vous résiste, la méthode conseille de…",
+          "type": "mcq",
+          "options": [
+            "le relire, détailler l'analyse grammaticale et décomposer la phrase pour en tirer le sens",
+            "le sauter et passer à la suite",
+            "le résumer en une phrase sans l'analyser",
+            "inventer un sens plausible"
+          ],
+          "correct": 0,
+          "solution": "On relit les passages difficiles : analyse grammaticale détaillée, décomposition de la phrase pour en tirer le sens."
+        },
+        {
+          "text": "Quels sont les repérages généraux à effectuer au brouillon ?",
+          "type": "mcq",
+          "options": [
+            "genre, énonciateur, sujet, cadre spatio-temporel, tons, types de phrases, registres, figures, champs lexicaux",
+            "orthographe, ponctuation et calligraphie",
+            "introduction, développement et conclusion",
+            "nombre de paragraphes et longueur du texte"
+          ],
+          "correct": 0,
+          "solution": "Les repérages portent sur : genre, énonciateur, sujet, quand et où (temps verbaux dominants), et comment (tonalité, phrases, structure, registres, figures, champs lexicaux)."
+        },
+        {
+          "text": "« Qui parle ? à qui ? dans quel contexte ? » : ces questions relèvent des repérages sur…",
+          "type": "mcq",
+          "options": [
+            "l'énonciateur",
+            "le sujet du texte",
+            "le cadre spatio-temporel",
+            "la tonalité"
+          ],
+          "correct": 0,
+          "solution": "L'énonciateur = qui parle, à qui, dans quel contexte."
+        },
+        {
+          "text": "« Que se passe-t-il ? que décrit-on ? quelle thèse défend-on ? » : ces questions relèvent des repérages sur…",
+          "type": "mcq",
+          "options": [
+            "le sujet du texte",
+            "l'énonciateur",
+            "le genre",
+            "les temps verbaux"
+          ],
+          "correct": 0,
+          "solution": "Le sujet du texte : que se passe-t-il, que décrit-on, quelle thèse défend-on."
+        },
+        {
+          "text": "Les repérages « Quand et où ? » portent sur…",
+          "type": "mcq",
+          "options": [
+            "le cadre spatio-temporel, les lieux et époques évoqués, les temps verbaux dominants",
+            "la tonalité et les registres de langue",
+            "l'auteur et le titre de l'œuvre",
+            "les arguments de l'énonciateur"
+          ],
+          "correct": 0,
+          "solution": "« Quand et où » : cadre spatio-temporel de la narration, lieux/époques évoqués, temps verbaux dominants."
+        },
+        {
+          "text": "« Les temps verbaux dominants » se repèrent dans la question…",
+          "type": "mcq",
+          "options": [
+            "« Quand et où ? »",
+            "« Comment ? »",
+            "« Qui parle ? »",
+            "« Que se passe-t-il ? »"
+          ],
+          "correct": 0,
+          "solution": "Les temps verbaux dominants sont explicitement placés dans la question « Quand et où ? » de la méthode."
+        },
+        {
+          "text": "Quels sont les genres à identifier lors des repérages, selon la méthode ?",
+          "type": "mcq",
+          "options": [
+            "récit, poésie, théâtre, argumentation",
+            "roman, nouvelle, fable, épopée",
+            "épique, lyrique, dramatique, narratif",
+            "prose, vers, strophe, refrain"
+          ],
+          "correct": 0,
+          "solution": "Le genre se repère parmi : récit, poésie, théâtre, argumentation."
+        },
+        {
+          "text": "La question « Comment ? » du brouillon porte sur…",
+          "type": "mcq",
+          "options": [
+            "la tonalité, les types de phrases, la structure, les registres, les figures de style et les champs lexicaux",
+            "l'identité de l'auteur et la date de publication",
+            "le plan du commentaire",
+            "la note obtenue au dernier devoir"
+          ],
+          "correct": 0,
+          "solution": "« Comment ? » : tonalité(s), types de phrases, structure et articulation, registre(s) de langue, figures de style, champs lexicaux dominants."
+        },
+        {
+          "text": "Les champs lexicaux dominants se repèrent dans la question…",
+          "type": "mcq",
+          "options": [
+            "« Comment ? »",
+            "« Qui parle ? »",
+            "« Où ? » seulement",
+            "« Pourquoi ? »"
+          ],
+          "correct": 0,
+          "solution": "Dans la méthode, les champs lexicaux dominants figurent dans les repérages « Comment ? »."
+        },
+        {
+          "text": "Les repérages généraux servent à…",
+          "type": "mcq",
+          "options": [
+            "vérifier les premières impressions et dégager les caractéristiques et l'originalité du texte",
+            "rédiger la conclusion",
+            "noter le stylo utilisé",
+            "choisir le titre du devoir"
+          ],
+          "correct": 0,
+          "solution": "On vérifie ses hypothèses par les repérages, qui font ressortir les enjeux et l'originalité du texte par rapport aux autres textes."
+        },
+        {
+          "text": "Complétez : lors de la première lecture, on lit aussi le ______ (chapeau, auteur, date, titre).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "paratexte",
+            "le paratexte"
+          ],
+          "solution": "Le paratexte (chapeau introductif, nom d'auteur, date, titre) fait partie de la première lecture."
+        },
+        {
+          "text": "Le paratexte est inutile : il ne fait pas partie du texte à commenter.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : la méthode impose de lire le texte entièrement AINSI QUE son paratexte, qui donne le contexte."
+        },
+        {
+          "text": "On vérifie ses premières hypothèses en procédant à des repérages généraux.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : les repérages (genre, énonciateur, sujet, quand et où, comment) servent à vérifier les hypothèses de lecture."
+        },
+        {
+          "text": "La première lecture doit être immédiatement suivie de la rédaction de l'introduction.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : d'abord la relecture et les repérages, puis le projet de lecture, la problématique, le plan, et seulement ensuite la rédaction."
+        }
+      ]
+    },
+    {
+      "category": "Projet de lecture et problématique",
+      "questions": [
+        {
+          "text": "La problématique est…",
+          "type": "mcq",
+          "options": [
+            "la question à laquelle le développement du commentaire doit répondre",
+            "la réponse finale apportée au texte",
+            "le titre du texte commenté",
+            "la liste des citations à recopier"
+          ],
+          "correct": 0,
+          "solution": "La problématique correspond à la question à laquelle notre développement doit répondre."
+        },
+        {
+          "text": "Une bonne problématique doit être…",
+          "type": "mcq",
+          "options": [
+            "assez large pour englober chaque axe, mais assez précise pour être spécifique au texte commenté",
+            "assez vague pour convenir à tous les textes",
+            "limitée à une seule phrase du texte",
+            "toujours formulée en affirmatif"
+          ],
+          "correct": 0,
+          "solution": "Elle doit être assez large pour englober chaque axe de l'analyse, mais assez précise pour être spécifique au texte commenté."
+        },
+        {
+          "text": "« Elle ne doit pas être applicable à n'importe quel texte » signifie qu'elle doit être…",
+          "type": "mcq",
+          "options": [
+            "spécifique au texte commenté",
+            "générale et universelle",
+            "identique pour toute la classe",
+            "tirée d'un manuel"
+          ],
+          "correct": 0,
+          "solution": "La problématique doit être spécifique au texte que VOUS commentez, pas une question valable partout."
+        },
+        {
+          "text": "La problématique est généralement introduite par…",
+          "type": "mcq",
+          "options": [
+            "« comment », « en quoi » ou « dans quelle mesure »",
+            "« pourquoi », « où » et « quand »",
+            "« qui », « quoi », « comment »",
+            "« est-ce que »"
+          ],
+          "correct": 0,
+          "solution": "Elle est généralement introduite par « comment », « en quoi » ou « dans quelle mesure »."
+        },
+        {
+          "text": "Complétez : la problématique est généralement introduite par « comment », « __________ » ou « dans quelle mesure ».",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "en quoi"
+          ],
+          "solution": "Les trois introductions de problématique : « comment », « en quoi », « dans quelle mesure »."
+        },
+        {
+          "text": "« Comment le poète, à travers un dialogue original avec son cœur, fait-il la critique de l'amour ? » est un exemple de…",
+          "type": "mcq",
+          "options": [
+            "problématique",
+            "projet de lecture",
+            "titre de partie",
+            "ouverture de conclusion"
+          ],
+          "correct": 0,
+          "solution": "C'est l'exemple de problématique du cours : spécifique au texte, introduite par « comment »."
+        },
+        {
+          "text": "Le projet de lecture, élaboré à partir des repérages, est…",
+          "type": "mcq",
+          "options": [
+            "un résumé en quelques lignes des caractéristiques et de l'originalité du texte",
+            "le plan détaillé de la copie",
+            "l'introduction rédigée",
+            "la liste des citations du texte"
+          ],
+          "correct": 0,
+          "solution": "Les repérages sont résumés dans une phrase de quelques lignes : c'est le projet de lecture, qui précède la problématique."
+        },
+        {
+          "text": "Les grandes idées (hypothèses de lecture) contenues dans la problématique serviront ensuite de…",
+          "type": "mcq",
+          "options": [
+            "parties (ou axes) du plan",
+            "citations de conclusion",
+            "notes de bas de page",
+            "titres d'auteur"
+          ],
+          "correct": 0,
+          "solution": "La problématique contient les grandes idées qui serviront plus tard de parties (ou axes) dans le plan."
+        },
+        {
+          "text": "Dans la méthode, quel est l'ordre correct des étapes du brouillon ?",
+          "type": "mcq",
+          "options": [
+            "repérages → projet de lecture → problématique → plan",
+            "plan → problématique → repérages → projet de lecture",
+            "projet de lecture → repérages → plan → problématique",
+            "problématique → repérages → projet de lecture → plan"
+          ],
+          "correct": 0,
+          "solution": "On repère, on résume dans un projet de lecture, on formule la problématique, puis on en dégage les axes = le plan."
+        },
+        {
+          "text": "Une problématique comme « Quel est le sens de ce texte ? » est à écarter car elle…",
+          "type": "mcq",
+          "options": [
+            "pourrait s'appliquer à n'importe quel texte : elle manque de précision",
+            "est trop courte",
+            "contient trop d'axes de lecture",
+            "n'est pas en forme de question"
+          ],
+          "correct": 0,
+          "solution": "Elle n'est pas spécifique au texte : une problématique doit être précise et particulière au texte commenté."
+        },
+        {
+          "text": "La problématique d'un commentaire peut être reprise telle quelle pour un autre texte.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : elle doit être spécifique au texte commenté et ne pas être applicable à n'importe quel texte."
+        },
+        {
+          "text": "Le projet de lecture est rédigé en une phrase de quelques lignes, avant la problématique.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : on résume les points clés dans une phrase de quelques lignes, qui devient le projet de lecture, à l'origine de la problématique."
+        },
+        {
+          "text": "La problématique se formule au brouillon…",
+          "type": "mcq",
+          "options": [
+            "après les repérages et le projet de lecture, avant le plan",
+            "après la rédaction du commentaire",
+            "après la conclusion",
+            "en même temps que les citations"
+          ],
+          "correct": 0,
+          "solution": "Elle découle du projet de lecture et donne les axes du plan : elle se pense au brouillon, avant toute rédaction."
+        },
+        {
+          "text": "Pourquoi une problématique doit-elle rester « assez large » ?",
+          "type": "mcq",
+          "options": [
+            "pour englober chaque axe de l'analyse et toutes les parties du plan",
+            "pour pouvoir être posée sur n'importe quel texte",
+            "pour ne contenir aucun mot difficile",
+            "pour être écrite en une seule ligne"
+          ],
+          "correct": 0,
+          "solution": "Assez large pour englober chaque axe de votre analyse — mais assez précise rester spécifique au texte."
+        }
+      ]
+    },
+    {
+      "category": "Le tableau d'analyse : citer, analyser, interpréter",
+      "questions": [
+        {
+          "text": "Une analyse précise combine…",
+          "type": "mcq",
+          "options": [
+            "une citation ou un relevé du texte, l'identification du procédé et l'interprétation des effets",
+            "un résumé, une opinion et une note",
+            "un titre, un auteur et une date",
+            "le procédé seul, sans preuve"
+          ],
+          "correct": 0,
+          "solution": "Chaque analyse combine : citation/relevé + identification du procédé + interprétation des effets produits."
+        },
+        {
+          "text": "Complétez : une analyse combine une citation, l'identification du ______ employé et l'interprétation des effets.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "procede",
+            "procédé",
+            "procedes",
+            "procédés"
+          ],
+          "solution": "Les trois volets de l'analyse : citation, procédé identifié, interprétation des effets."
+        },
+        {
+          "text": "Les trois colonnes du tableau d'analyse sont :",
+          "type": "mcq",
+          "options": [
+            "citations et relevés / procédés / interprétations",
+            "introduction / développement / conclusion",
+            "thèse / antithèse / synthèse",
+            "sujet / verbe / complément"
+          ],
+          "correct": 0,
+          "solution": "Le tableau d'analyse comporte : « Citations et relevés », « Procédés », « Interprétations »."
+        },
+        {
+          "text": "À quoi sert la colonne « Interprétations » ?",
+          "type": "mcq",
+          "options": [
+            "indiquer les effets que les procédés produisent et l'intention qu'ils révèlent",
+            "recopier le texte intégralement",
+            "donner le sens de chaque mot isolé",
+            "noter les fautes de l'auteur"
+          ],
+          "correct": 0,
+          "solution": "Les interprétations explicitent les effets produits par les procédés et l'intention de l'auteur."
+        },
+        {
+          "text": "Les relevés de la première colonne sont…",
+          "type": "mcq",
+          "options": [
+            "des mots, expressions et courts passages du texte",
+            "des titres d'œuvres célèbres",
+            "des définitions du dictionnaire",
+            "des remarques personnelles"
+          ],
+          "correct": 0,
+          "solution": "« Citations et relevés (mots, expressions et courts passages) » : la première colonne du tableau."
+        },
+        {
+          "text": "« papiers », « cahiers », « livre », « comptes », « affaires » : quel procédé identifie le tableau d'analyse ?",
+          "type": "mcq",
+          "options": [
+            "champ lexical de l'administration et de la gestion",
+            "métaphore filée de la comptabilité",
+            "hypérbole romantique",
+            "énumération de personnes"
+          ],
+          "correct": 0,
+          "solution": "Ces termes forment un champ lexical de l'administration et de la gestion."
+        },
+        {
+          "text": "Quelle interprétation correspond au champ lexical « papiers, cahiers, comptes, affaires » ?",
+          "type": "mcq",
+          "options": [
+            "Insistance sur la dimension bureaucratique : l'amour est traité comme une affaire administrative",
+            "Le vocabulaire de l'argent transforme l'amour en investissement",
+            "Le poète décrit une école de commerce",
+            "L'amour y est présenté comme impossible"
+          ],
+          "correct": 0,
+          "solution": "Le champ lexical administratif insiste sur la dimension bureaucratique : l'amour traité comme une affaire administrative."
+        },
+        {
+          "text": "La citation « Si point d'épargne il n'avait fait / De quelques biens quand Amour il servait » (v. 4-5) relève, selon le tableau, de…",
+          "type": "mcq",
+          "options": [
+            "la métaphore filée de la comptabilité",
+            "champ lexical de l'administration",
+            "une question rhétorique",
+            "un dialogue entre deux personnages"
+          ],
+          "correct": 0,
+          "solution": "Le tableau associe ce relevé à la métaphore filée de la comptabilité : le vocabulaire financier transforme l'expérience amoureuse en investissement."
+        },
+        {
+          "text": "Le tableau d'analyse est un outil du…",
+          "type": "mcq",
+          "options": [
+            "brouillon, pour étayer chaque axe",
+            "commentaire final recopié sur la copie",
+            "titre de l'œuvre",
+            "paratexte obligatoire"
+          ],
+          "correct": 0,
+          "solution": "Le tableau sert au brouillon à balayer le texte et étayer les pistes : sur la copie, le commentaire est entièrement rédigé."
+        },
+        {
+          "text": "Pour étayer une hypothèse (un axe), il faut…",
+          "type": "mcq",
+          "options": [
+            "balayer le texte à la recherche d'éléments qui l'étayent",
+            "choisir les citations au hasard",
+            "se limiter au premier paragraphe",
+            "recopier le paratexte"
+          ],
+          "correct": 0,
+          "solution": "Chaque hypothèse est étudiée en balayant le texte à la recherche d'éléments permettant d'étayer la piste de réflexion."
+        },
+        {
+          "text": "Chaque sous-partie doit être illustrée par…",
+          "type": "mcq",
+          "options": [
+            "trois ou quatre analyses",
+            "une seule citation",
+            "dix analyses minimum",
+            "aucun exemple"
+          ],
+          "correct": 0,
+          "solution": "Chaque sous-partie est illustrée par trois ou quatre analyses qui la justifient."
+        },
+        {
+          "text": "L'ordre logique d'un argument dans l'analyse est :",
+          "type": "mcq",
+          "options": [
+            "citation → identification du procédé → interprétation des effets",
+            "interprétation → citation → procédé",
+            "procédé → avis personnel → résumé",
+            "citation → citation → citation"
+          ],
+          "correct": 0,
+          "solution": "On cite, on identifie le procédé, puis on interprète les effets produits : la preuve sert l'interprétation."
+        },
+        {
+          "text": "Un « axe » (ou hypothèse) de lecture est…",
+          "type": "mcq",
+          "options": [
+            "une piste de réflexion à étayer par des analyses",
+            "un résumé du début du texte",
+            "une opinion personnelle sans preuve",
+            "le nom de l'auteur"
+          ],
+          "correct": 0,
+          "solution": "Chaque hypothèse (ou axe) est une piste de réflexion que les analyses vont étayer."
+        },
+        {
+          "text": "On peut insérer le tableau d'analyse tel quel dans la copie finale.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : le commentaire doit être entièrement rédigé sur la copie ; le tableau est un outil de brouillon."
+        },
+        {
+          "text": "Une citation, même bien choisie, ne suffit pas sans interprétation.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : la citation doit être combinée à l'identification du procédé ET à l'interprétation des effets."
+        },
+        {
+          "text": "L'interprétation doit expliquer ce que le procédé produit et ce qu'il révèle de l'intention de l'auteur.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : c'est le rôle de la troisième colonne : effets produits + intention révélée."
+        }
+      ]
+    },
+    {
+      "category": "Construire le plan du commentaire",
+      "questions": [
+        {
+          "text": "Un plan de commentaire comporte idéalement…",
+          "type": "mcq",
+          "options": [
+            "deux ou trois parties",
+            "une seule partie",
+            "cinq parties obligatoires",
+            "quatre parties"
+          ],
+          "correct": 0,
+          "solution": "Le plan comporte deux ou trois parties — et s'adapte au texte (« tout est une affaire d'équilibre »)."
+        },
+        {
+          "text": "Chaque partie se décompose en…",
+          "type": "mcq",
+          "options": [
+            "deux ou trois sous-parties",
+            "un seul argument",
+            "quatre sous-parties obligatoires",
+            "aucune sous-partie"
+          ],
+          "correct": 0,
+          "solution": "Les analyses sont regroupées en sous-parties (2 ou 3) au sein de chaque partie."
+        },
+        {
+          "text": "Si votre texte ne se prête pas à une analyse en trois parties (il n'y en a que deux), alors…",
+          "type": "mcq",
+          "options": [
+            "faites 3 sous-parties avec au moins deux arguments dans chaque sous-partie",
+            "faites une seule sous-partie par partie",
+            "inventez une troisième partie",
+            "n'écrivez aucun argument"
+          ],
+          "correct": 0,
+          "solution": "Avec deux parties obligatoires : 3 sous-parties et au moins deux arguments dans chaque sous-partie."
+        },
+        {
+          "text": "Si votre texte se prête à une analyse en trois parties, alors…",
+          "type": "mcq",
+          "options": [
+            "vous pouvez ne faire que deux sous-parties dans une ou deux de ces parties",
+            "il faut obligatoirement trois sous-parties dans chaque partie",
+            "il ne faut aucune sous-partie",
+            "vous devez supprimer une partie"
+          ],
+          "correct": 0,
+          "solution": "Trois parties possibles : deux sous-parties suffisent dans une ou deux d'entre elles — l'équilibre prime sur la symétrie."
+        },
+        {
+          "text": "Le principe d'or pour la construction du plan est :",
+          "type": "mcq",
+          "options": [
+            "adapter votre plan à votre texte",
+            "suivre un plan rigide à trois parties",
+            "copier le plan du résumé de l'éditeur",
+            "tout placer dans la première partie"
+          ],
+          "correct": 0,
+          "solution": "« Retenez simplement qu'il faut adapter votre plan à votre texte. Tout est une affaire d'équilibre ! »"
+        },
+        {
+          "text": "Dans le plan détaillé, chaque sous-partie contient…",
+          "type": "mcq",
+          "options": [
+            "un titre + des arguments (argument + citation + analyse/interprétation)",
+            "un titre + un résumé",
+            "une citation seule",
+            "une introduction et une conclusion"
+          ],
+          "correct": 0,
+          "solution": "Le plan type : titre de la sous-partie, puis Argument 1 + citation + analyse/interprétation, et ainsi de suite."
+        },
+        {
+          "text": "Dans le plan type du cours, chaque sous-partie présente combien d'arguments ?",
+          "type": "mcq",
+          "options": [
+            "trois",
+            "un seul",
+            "deux",
+            "cinq"
+          ],
+          "correct": 0,
+          "solution": "Le plan type affiche trois arguments (argument + citation + analyse/interprétation) par sous-partie."
+        },
+        {
+          "text": "Au minimum, combien d'arguments chaque sous-partie doit-elle contenir (cas du plan en deux parties) ?",
+          "type": "mcq",
+          "options": [
+            "au moins deux",
+            "un seul",
+            "trois obligatoirement",
+            "aucun"
+          ],
+          "correct": 0,
+          "solution": "Avec deux parties, veillez à faire 3 sous-parties avec au moins deux arguments dans chaque sous-partie."
+        },
+        {
+          "text": "Lors de la rédaction, le titre d'une partie ou d'une sous-partie…",
+          "type": "mcq",
+          "options": [
+            "doit être intégré dans une phrase ou formulé lui-même en phrase",
+            "reste sous forme de liste sur la copie",
+            "est écrit en gras et centré",
+            "n'apparaît jamais dans la copie"
+          ],
+          "correct": 0,
+          "solution": "« Les titres de vos parties doivent être intégrés dans des phrases » : présentés dans une phrase ou formulés en phrase."
+        },
+        {
+          "text": "Quel exemple correspond à un titre de sous-partie PRÉSENTÉ dans une phrase ?",
+          "type": "mcq",
+          "options": [
+            "Nous allons étudier ici la représentation comique et ironique de l'amour dans le poème.",
+            "Le poète représente l'amour de façon comique et ironique.",
+            "II. Une représentation comique et ironique de l'amour.",
+            "L'amour est beau."
+          ],
+          "correct": 0,
+          "solution": "« Nous allons étudier ici… » présente le titre dans une phrase ; « Le poète représente… » est un titre formulé lui-même en phrase."
+        },
+        {
+          "text": "Le plan détaillé se réalise…",
+          "type": "mcq",
+          "options": [
+            "à l'issue de l'analyse au brouillon, avant la rédaction",
+            "après la rédaction du commentaire",
+            "pendant l'écriture de l'introduction",
+            "au moment de rendre la copie"
+          ],
+          "correct": 0,
+          "solution": "Le plan détaillé suit l'analyse au brouillon et précède le début de la rédaction."
+        },
+        {
+          "text": "Le titre d'une partie exprime…",
+          "type": "mcq",
+          "options": [
+            "l'axe / l'idée directrice de cette partie",
+            "une citation du texte",
+            "le nom de l'auteur",
+            "la conclusion du commentaire"
+          ],
+          "correct": 0,
+          "solution": "Les titres de parties reprennent les axes (issus de la problématique) et détaillent le plan."
+        },
+        {
+          "text": "Les sous-parties d'une même partie doivent…",
+          "type": "mcq",
+          "options": [
+            "chacune montrer un aspect différent et préciser l'analyse",
+            "répéter la même idée",
+            "se contenter d'une citation",
+            "porter sur un autre texte"
+          ],
+          "correct": 0,
+          "solution": "Les sous-parties répondent au même axe mais montrent chacune un aspect différent pour préciser l'analyse."
+        },
+        {
+          "text": "Le plan du commentaire doit obligatoirement comporter trois parties.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : « votre plan ne doit pas forcément contenir trois parties » — il faut rester pertinent et adapter le plan au texte."
+        },
+        {
+          "text": "Il faut toujours adapter son plan au texte commenté.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : « Retenez simplement qu'il faut adapter votre plan à votre texte. Tout est une affaire d'équilibre ! »"
+        }
+      ]
+    },
+    {
+      "category": "L'introduction en quatre étapes",
+      "questions": [
+        {
+          "text": "L'introduction du commentaire doit répondre à combien d'objectifs ?",
+          "type": "mcq",
+          "options": [
+            "quatre",
+            "deux",
+            "trois",
+            "cinq"
+          ],
+          "correct": 0,
+          "solution": "Quatre objectifs : attirer l'attention du correcteur, présenter le texte, annoncer la problématique, annoncer les axes de lecture."
+        },
+        {
+          "text": "Quel est l'ordre des quatre étapes de l'introduction ?",
+          "type": "mcq",
+          "options": [
+            "amorce → présentation du texte → annonce de la problématique → annonce du plan",
+            "annonce du plan → problématique → présentation du texte → amorce",
+            "problématique → amorce → annonce du plan → présentation du texte",
+            "présentation du texte → annonce du plan → amorce → problématique"
+          ],
+          "correct": 0,
+          "solution": "Les 4 étapes s'enchaînent : amorce (contexte), présentation du texte, annonce de la problématique, annonce du plan."
+        },
+        {
+          "text": "Complétez : l'introduction se compose de ______ étapes.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "4",
+            "quatre"
+          ],
+          "solution": "Quatre étapes viennent éclairer le texte étudié : amorce, présentation, problématique, annonce du plan."
+        },
+        {
+          "text": "L'amorce de l'introduction présente…",
+          "type": "mcq",
+          "options": [
+            "le contexte : auteur, titre du livre ou du recueil, année de rédaction ou de parution, courant littéraire",
+            "la problématique du commentaire",
+            "le plan détaillé avec les citations",
+            "l'analyse de la première figure de style"
+          ],
+          "correct": 0,
+          "solution": "L'amorce = contexte (auteur, titre, année, courant littéraire), plus ou moins étoffée selon vos connaissances."
+        },
+        {
+          "text": "L'amorce est « plus ou moins étoffée » selon…",
+          "type": "mcq",
+          "options": [
+            "vos connaissances",
+            "le temps imparti",
+            "le nombre de parties",
+            "la longueur du texte"
+          ],
+          "correct": 0,
+          "solution": "La partie contextuelle sera plus ou moins étoffée selon vos connaissances."
+        },
+        {
+          "text": "La « présentation du texte » consiste à…",
+          "type": "mcq",
+          "options": [
+            "rappeler le sujet de l'œuvre, situer l'extrait dans l'ensemble du livre et résumer ses enjeux",
+            "annoncer le plan du commentaire",
+            "citer toutes les figures de style",
+            "donner votre avis sur le texte"
+          ],
+          "correct": 0,
+          "solution": "Étape 2 : on rappelle le sujet de l'œuvre, on situe l'extrait dans l'ensemble du livre, on résume brièvement l'essentiel et ses enjeux."
+        },
+        {
+          "text": "L'annonce de la problématique s'introduit souvent par la formule…",
+          "type": "mcq",
+          "options": [
+            "« Nous pouvons alors nous demander… »",
+            "« Nous avons terminé… »",
+            "« En conclusion… »",
+            "« Tout d'abord… »"
+          ],
+          "correct": 0,
+          "solution": "Étape 3 : « Nous pouvons alors nous demander… » + problématique."
+        },
+        {
+          "text": "L'annonce du plan suit le schéma…",
+          "type": "mcq",
+          "options": [
+            "« Nous étudierons tout d'abord…, puis…, et enfin… »",
+            "« Nous terminons par…, puis… et enfin… »",
+            "« D'abord la conclusion, ensuite l'amorce… »",
+            "« Enfin, tout d'abord, puis… »"
+          ],
+          "correct": 0,
+          "solution": "Étape 4 : « Nous étudierons tout d'abord (idée du I.), puis (idée du II.), et enfin (idée du III.) »."
+        },
+        {
+          "text": "L'introduction conditionne…",
+          "type": "mcq",
+          "options": [
+            "la première impression du correcteur",
+            "la longueur automatique du commentaire",
+            "le choix du texte",
+            "la note de la dictée"
+          ],
+          "correct": 0,
+          "solution": "« Elle conditionne la première impression du correcteur » : elle doit être rédigée avec soin."
+        },
+        {
+          "text": "Les axes annoncés en fin d'introduction correspondent aux…",
+          "type": "mcq",
+          "options": [
+            "parties du plan (I, II, III)",
+            "citations du texte",
+            "notes de bas de page",
+            "sous-parties seulement"
+          ],
+          "correct": 0,
+          "solution": "L'annonce du plan énonce les idées des parties qui vont suivre dans le développement."
+        },
+        {
+          "text": "Les connecteurs logiques utilisés dans l'introduction servent à…",
+          "type": "mcq",
+          "options": [
+            "mettre en évidence la progression logique de la réflexion",
+            "remplacer les citations",
+            "allonger l'introduction",
+            "annoncer la note du correcteur"
+          ],
+          "correct": 0,
+          "solution": "« Utilisez des connecteurs logiques pour mettre en évidence la progression logique de votre introduction. »"
+        },
+        {
+          "text": "Si la problématique est formulée sous forme de question indirecte, il n'y a pas d'inversion sujet-verbe.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : remarque de la méthode — question indirecte = pas d'inversion sujet-verbe."
+        },
+        {
+          "text": "L'introduction peut se passer d'annonce de problématique si le texte est simple.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : les quatre objectifs (dont l'annonce de la problématique) sont indispensables."
+        },
+        {
+          "text": "Parmi ces amorces, laquelle est valide ?",
+          "type": "mcq",
+          "options": [
+            "Molière, auteur du Tartuffe publié en 1669, s'inscrit dans le théâtre comique du XVIIe siècle.",
+            "Nous allons voir dans ce commentaire les procédés employés.",
+            "Tout d'abord, je citerai le vers 1.",
+            "L'auteur utilise ici une métaphore."
+          ],
+          "correct": 0,
+          "solution": "L'amorce présente le contexte : auteur, titre, année, courant littéraire — pas le plan ni l'analyse."
+        },
+        {
+          "text": "L'objectif « attirer l'attention du correcteur » relève avant tout de…",
+          "type": "mcq",
+          "options": [
+            "l'amorce",
+            "la conclusion",
+            "le développement",
+            "l'annonce du plan"
+          ],
+          "correct": 0,
+          "solution": "Le premier des quatre objectifs est principalement le rôle de l'amorce, qui capte l'attention par le contexte."
+        }
+      ]
+    },
+    {
+      "category": "Conclusion et ouverture",
+      "questions": [
+        {
+          "text": "La conclusion du commentaire se construit autour de…",
+          "type": "mcq",
+          "options": [
+            "deux objectifs : répondre à la problématique et élargir la réflexion",
+            "quatre objectifs comme l'introduction",
+            "un seul objectif : résumer le plan",
+            "la présentation du texte"
+          ],
+          "correct": 0,
+          "solution": "Deux objectifs : répondre à la problématique avec concision, puis élargir la réflexion par une question littéraire."
+        },
+        {
+          "text": "Complétez : la conclusion se construit autour de ______ objectifs.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "2",
+            "deux"
+          ],
+          "solution": "La conclusion a deux objectifs : répondre à la problématique et élargir la réflexion."
+        },
+        {
+          "text": "Pour répondre à la problématique dans la conclusion, il faut…",
+          "type": "mcq",
+          "options": [
+            "la rappeler au correcteur puis y répondre en reprenant les idées principales du développement",
+            "la modifier pour surprendre",
+            "poser une nouvelle question",
+            "citer un autre texte sans lien"
+          ],
+          "correct": 0,
+          "solution": "① On rappelle la problématique et on y répond en reprenant les idées principales du développement."
+        },
+        {
+          "text": "L'ouverture n'est pertinente que si…",
+          "type": "mcq",
+          "options": [
+            "le rapprochement est justifié explicitement",
+            "on cite un texte au hasard",
+            "elle est très longue",
+            "elle liste plusieurs auteurs sans lien"
+          ],
+          "correct": 0,
+          "solution": "« L'ouverture n'est pertinente que si le rapprochement est justifié explicitement. »"
+        },
+        {
+          "text": "Parmi ces ouvertures, laquelle est acceptable ?",
+          "type": "mcq",
+          "options": [
+            "Mentionner un autre texte d'une autre époque, clairement relié au premier, et expliquer l'intérêt du rapprochement",
+            "Citer un poème au hasard sans expliquer le lien",
+            "Changer complètement de sujet",
+            "Répéter l'introduction mot pour mot"
+          ],
+          "correct": 0,
+          "solution": "Il faut justifier le rapprochement et expliquer brièvement l'intérêt de la mise en perspective."
+        },
+        {
+          "text": "Pour élargir la réflexion, on peut mobiliser…",
+          "type": "mcq",
+          "options": [
+            "une autre époque, un autre sujet relié au premier, un autre genre, un autre art, un autre écrivain",
+            "une généralisation sans rapport avec le texte",
+            "un résumé détaillé du plan",
+            "une liste de citations sans commentaire"
+          ],
+          "correct": 0,
+          "solution": "Autre époque, autre sujet clairement relié au premier, autre genre, autre art, autre écrivain/texte — avec justification."
+        },
+        {
+          "text": "La conclusion est la… impression que vous laissez au correcteur.",
+          "type": "mcq",
+          "options": [
+            "dernière",
+            "première",
+            "nulle",
+            "seconde"
+          ],
+          "correct": 0,
+          "solution": "« La conclusion est la dernière impression que vous laisserez à votre correcteur » : portez-lui une attention particulière."
+        },
+        {
+          "text": "Introduction et conclusion doivent…",
+          "type": "mcq",
+          "options": [
+            "se faire écho : relisez l'introduction avant de rédiger la conclusion",
+            "être identiques mot pour mot",
+            "ne jamais se rappeler l'une à l'autre",
+            "porter sur deux textes différents"
+          ],
+          "correct": 0,
+          "solution": "Elles doivent se répondre : l'intérêt de l'extrait souligné dans l'introduction sous-tend l'analyse et est rappelé en conclusion."
+        },
+        {
+          "text": "La conclusion évite avant tout…",
+          "type": "mcq",
+          "options": [
+            "la généralisation excessive",
+            "la concision",
+            "le rappel de la problématique",
+            "l'ouverture justifiée"
+          ],
+          "correct": 0,
+          "solution": "On élargit « par une question d'ordre littéraire sans généralisation excessive »."
+        },
+        {
+          "text": "L'ouverture finale est généralement…",
+          "type": "mcq",
+          "options": [
+            "une question d'ordre littéraire",
+            "un plan détaillé",
+            "une liste de citations",
+            "le titre du commentaire"
+          ],
+          "correct": 0,
+          "solution": "② On élargit la réflexion par une question d'ordre littéraire, sans généralisation excessive."
+        },
+        {
+          "text": "Une simple mention d'un texte, sans justification du lien, suffit pour une bonne ouverture.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : « ne vous limitez pas à la simple mention d'un texte : expliquez brièvement l'intérêt de la mise en perspective »."
+        },
+        {
+          "text": "La conclusion rappelle les idées principales du développement pour répondre à la problématique.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : c'est son premier objectif — rappel de la problématique et réponse en reprenant les idées du développement."
+        }
+      ]
+    },
+    {
+      "category": "Rédaction, paragraphes et mise en page",
+      "questions": [
+        {
+          "text": "Dans la copie, chaque sous-partie correspond à…",
+          "type": "mcq",
+          "options": [
+            "un paragraphe : alinéa au début et retour à la ligne à la fin, sans saut de ligne",
+            "deux paragraphes séparés par une ligne blanche",
+            "une seule phrase",
+            "un tableau à trois colonnes"
+          ],
+          "correct": 0,
+          "solution": "« Chaque sous-partie correspond à un paragraphe : on les identifie par un alinéa au début et un retour à la ligne à la fin (on ne saute pas de ligne). »"
+        },
+        {
+          "text": "Chaque partie correspond à…",
+          "type": "mcq",
+          "options": [
+            "un bloc de deux ou trois paragraphes, avec une ligne sautée avant et après",
+            "un paragraphe unique",
+            "chaque argument isolé",
+            "la totalité de la copie"
+          ],
+          "correct": 0,
+          "solution": "Une partie = un bloc de deux ou trois paragraphes, identifiable car on a sauté une ligne avant et on saute une ligne après."
+        },
+        {
+          "text": "Entre les paragraphes de deux sous-parties d'une MÊME partie, on…",
+          "type": "mcq",
+          "options": [
+            "ne saute pas de ligne (simple retour à la ligne après l'alinéa)",
+            "saut une ligne",
+            "saut deux lignes",
+            "met une tabulation"
+          ],
+          "correct": 0,
+          "solution": "Attention : on ne saute PAS de ligne entre les sous-parties d'une même partie — seul l'alinéa les sépare."
+        },
+        {
+          "text": "Pour l'introduction, la règle de mise en page est…",
+          "type": "mcq",
+          "options": [
+            "aucun saut de ligne dedans, puis on saute deux lignes après",
+            "deux sauts de ligne avant et après",
+            "un saut de ligne après",
+            "aucun saut de ligne après"
+          ],
+          "correct": 0,
+          "solution": "« Vous ne sautez pas de lignes dans l'introduction mais vous en sautez deux après. »"
+        },
+        {
+          "text": "Pour la conclusion, la règle de mise en page est…",
+          "type": "mcq",
+          "options": [
+            "aucun saut de ligne dedans, mais on saute deux lignes avant",
+            "deux sauts de ligne après",
+            "un saut de ligne avant et après",
+            "aucun saut de ligne avant"
+          ],
+          "correct": 0,
+          "solution": "« Vous ne sautez pas de lignes dans la conclusion mais vous en sautez deux avant. »"
+        },
+        {
+          "text": "Les arguments d'un paragraphe sont liés entre eux grâce à…",
+          "type": "mcq",
+          "options": [
+            "des connecteurs logiques qui marquent la progression de la réflexion",
+            "des ponctuations uniquement",
+            "des citations de cloture",
+            "des titres en gras"
+          ],
+          "correct": 0,
+          "solution": "Les connecteurs logiques mettent en valeur la progression de votre réflexion."
+        },
+        {
+          "text": "Quels sont des connecteurs de CAUSE ?",
+          "type": "mcq",
+          "options": [
+            "car, en effet, puisque",
+            "donc, ainsi, par conséquent",
+            "mais, or, cependant",
+            "ensuite, enfin, puis"
+          ],
+          "correct": 0,
+          "solution": "Connecteurs de cause : car, en effet, puisque…"
+        },
+        {
+          "text": "Quels sont des connecteurs de CONSÉQUENCE ?",
+          "type": "mcq",
+          "options": [
+            "donc, par conséquent, aussi, ainsi",
+            "car, puisque, en effet",
+            "mais, or, cependant",
+            "d'abord, ensuite, enfin"
+          ],
+          "correct": 0,
+          "solution": "Connecteurs de conséquence : donc, par conséquent, aussi, ainsi…"
+        },
+        {
+          "text": "Le paragraphe de sous-partie commence par…",
+          "type": "mcq",
+          "options": [
+            "une phrase présentant le contenu de la sous-partie, avant les arguments",
+            "une citation sans introduction",
+            "le titre entre guillemets seul",
+            "un résumé de la partie entière"
+          ],
+          "correct": 0,
+          "solution": "On commence par présenter le contenu de la sous-partie au sein d'une phrase avant de passer aux arguments."
+        },
+        {
+          "text": "La fin de chaque partie est marquée par…",
+          "type": "mcq",
+          "options": [
+            "une phrase de conclusion partielle, précédée d'un alinéa",
+            "une ligne blanche sans phrase",
+            "la conclusion finale du commentaire",
+            "une citation de clôture obligatoire"
+          ],
+          "correct": 0,
+          "solution": "La conclusion partielle suit le dernier paragraphe de sous-partie et est marquée par un alinéa : elle rappelle ce que vous avez voulu montrer."
+        },
+        {
+          "text": "Les citations dans la rédaction doivent être…",
+          "type": "mcq",
+          "options": [
+            "correctement insérées : guillemets, barre oblique pour les vers (pas de retour à la ligne)",
+            "recopiées à part, hors paragraphe",
+            "jamais entre guillemets",
+            "traduites en français moderne"
+          ],
+          "correct": 0,
+          "solution": "Les citations s'insèrent correctement : guillemets, et barre oblique pour ne pas retourner à la ligne dans un texte poétique."
+        },
+        {
+          "text": "Sur la copie, le commentaire doit être…",
+          "type": "mcq",
+          "options": [
+            "entièrement rédigé : titres intégrés en phrases, arguments articulés dans les paragraphes",
+            "sous forme de tableau d'analyse",
+            "en liste de points avec des flèches",
+            "sous forme de notes de brouillon"
+          ],
+          "correct": 0,
+          "solution": "Le plan peut être un tableau au brouillon, mais la copie est entièrement rédigée."
+        },
+        {
+          "text": "Chaque partie ou axe du développement contient…",
+          "type": "mcq",
+          "options": [
+            "2 à 3 paragraphes (sous-parties)",
+            "1 seul paragraphe",
+            "4 à 5 paragraphes",
+            "6 paragraphes minimum"
+          ],
+          "correct": 0,
+          "solution": "« Chaque partie ou axe contient 2 à 3 paragraphes (ou sous-parties) » — l'ensemble forme le développement."
+        },
+        {
+          "text": "Complétez : chaque partie correspond à un bloc de ______ paragraphes.",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "2 ou 3",
+            "deux ou trois",
+            "2 ou 3 paragraphes",
+            "deux ou trois paragraphes"
+          ],
+          "solution": "Une partie = un bloc de deux ou trois paragraphes, entouré d'une ligne sautée avant et après."
+        },
+        {
+          "text": "On saute une ligne entre les sous-parties d'une même partie.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : « attention : on ne saute pas de ligne » — seuls l'alinéa et le retour à la ligne séparent les paragraphes d'une partie."
+        },
+        {
+          "text": "La conclusion partielle se place juste après le dernier paragraphe de sous-partie et commence par un alinéa.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : elle clôt chaque partie et est marquée par un alinéa."
+        },
+        {
+          "text": "Le tableau d'analyse se recopie sur la copie finale à la place du développement rédigé.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : le commentaire est entièrement rédigé ; le tableau est un outil de travail du brouillon."
+        }
+      ]
+    },
+    {
+      "category": "Pièges classiques — vrai ou faux",
+      "questions": [
+        {
+          "text": "Un commentaire consiste à lister les procédés littéraires du texte.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : l'énumération n'a aucun intérêt en soi — il faut analyser et interpréter chaque procédé."
+        },
+        {
+          "text": "La forme est au service du fond : il faut montrer le lien entre procédés et sens.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : c'est le projet de lecture — faire comprendre que la forme sert le fond ou inversement."
+        },
+        {
+          "text": "Un bon plan de commentaire comporte toujours trois parties, jamais moins.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : deux parties suffisent si le texte s'y prête ; l'important est l'équilibre."
+        },
+        {
+          "text": "Sur la copie, les titres de parties restent sous forme de liste.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : les titres doivent être intégrés dans des phrases ou formulés en phrases."
+        },
+        {
+          "text": "Le tableau d'analyse est un outil de brouillon qui n'est pas recopié.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : sur la copie, tout est rédigé ; le tableau sert à étayer les axes au brouillon."
+        },
+        {
+          "text": "Une analyse, c'est citation + identification du procédé + interprétation des effets.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : les trois volets sont combinés dans chaque analyse précise."
+        },
+        {
+          "text": "L'introduction compte quatre étapes : amorce, présentation, problématique, annonce du plan.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : les quatre étapes éclairent le texte et répondent aux quatre objectifs."
+        },
+        {
+          "text": "Dans l'introduction, on saute deux lignes au début.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : pas de saut de ligne DANS l'introduction, mais deux sauts APRÈS celle-ci."
+        },
+        {
+          "text": "La conclusion peut se terminer par une généralisation sans rapport avec le texte.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : élargissement par une question littéraire SANS généralisation excessive, avec rapprochement justifié."
+        },
+        {
+          "text": "Si le texte se prête mal à une analyse en trois parties, on peut n'en faire que deux.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : mais alors, avec deux parties, il faut 3 sous-parties d'au moins deux arguments chacune."
+        },
+        {
+          "text": "Les connecteurs logiques servent à lier les arguments et à montrer la progression de la réflexion.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : cause (car, en effet, puisque) et conséquence (donc, ainsi…) structurent le paragraphe."
+        },
+        {
+          "text": "Le plan détaillé se recopie en tête de copie avant l'introduction.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : le plan détaillé reste au brouillon ; la copie commence par l'introduction rédigée."
+        },
+        {
+          "text": "Chaque sous-partie doit être illustrée par trois ou quatre analyses.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : « Chaque sous-partie sera illustrée par trois ou quatre analyses »."
+        },
+        {
+          "text": "Le projet de lecture se rédige dans l'introduction.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : le projet de lecture est formulé au brouillon, après les repérages et avant la problématique."
+        },
+        {
+          "text": "Le commentaire composé est une épreuve du bac de français, avec la dissertation, en série générale.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "VRAI : c'est la présentation générale de la méthode."
+        },
+        {
+          "text": "On peut construire la problématique avant d'av lu le texte en entier.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "FAUX : d'abord les lectures (texte + paratexte) et les repérages, puis le projet de lecture, enfin la problématique."
+        }
+      ]
+    }
+  ]
+}

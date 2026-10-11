@@ -226,6 +226,16 @@
       "description": "Le vers et sa mesure, césure et enjambement, strophes, rimes, sonnet, ballade, rondeau, villanelle et versification moderne (148 questions).",
       "tags": ["francais", "poesie", "versification", "sonnet", "formes-fixes"],
       "added": "2026-10-03"
+    },
+    {
+      "id": "francais-methodologie-commentaire",
+      "title": "Méthodologie du commentaire",
+      "subject": "francais",
+      "file": "data/francais/methodologie-commentaire.json",
+      "questionsCount": 136,
+      "description": "Méthodologie du commentaire composé : lectures et repérages, problématique, tableau d'analyse, plan, introduction, conclusion et mise en page (136 questions).",
+      "tags": ["francais", "commentaire-compose", "methode", "bac", "plan"],
+      "added": "2026-10-11"
     }
   ],
   "tools": [
