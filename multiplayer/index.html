@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#0b1020" />
+        <link rel="icon" href="../quiz_icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="../quiz_icon.png" />
+        <link rel="manifest" href="../manifest.json" />
+        <title>Multijoueur — Questionnaires 2nde</title>
+        <script>
+            (function () {
+                try {
+                    var t = localStorage.getItem("theme-preference");
+                    if (t !== "light" && t !== "dark") {
+                        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                    }
+                    document.documentElement.setAttribute("data-theme", t);
+                    document.documentElement.style.colorScheme = t;
+                } catch (e) {}
+            })();
+        </script>
+        <link rel="stylesheet" href="../css/theme.css" />
+        <link rel="stylesheet" href="../css/quiz.css" />
+        <link rel="stylesheet" href="./multiplayer.css" />
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand" href="../index.html">
+                    <img src="../quiz_icon.svg" alt="" width="30" height="30" />
+                    <span>Questionnaires <span class="brand-sub">2nde</span></span>
+                </a>
+                <div class="topbar-actions">
+                    <span id="net-status" class="mp-net" title="État de la connexion">🌐 En ligne</span>
+                    <button class="theme-toggle" type="button" data-theme-toggle>
+                        <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                        <span class="theme-toggle-label">Thème clair</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="mp-wrap">
+            <!-- ================= ACCUEIL ================= -->
+            <section id="screen-home" class="mp-screen">
+                <div class="mp-hero">
+                    <h1>🎮 Multijoueur en direct</h1>
+                    <p>
+                        Un joueur <strong>héberge</strong> la partie, les autres <strong>rejoignent</strong>
+                        par QR code. Deux modes : <em>tous sur la même question</em>, ou
+                        <em>chacun sa question</em>. Tout fonctionne dans ton navigateur, sans installation.
+                    </p>
+                </div>
+
+                <div class="mp-cards">
+                    <div class="mp-card">
+                        <div class="mp-card-icon">🎛️</div>
+                        <h2>Créer une partie</h2>
+                        <p>Tu héberges la partie : QR code, questions, classement et scores finaux.</p>
+                        <button id="btn-create" class="btn" type="button">🎮 Créer une partie</button>
+                    </div>
+                    <div class="mp-card">
+                        <div class="mp-card-icon">🔗</div>
+                        <h2>Rejoindre une partie</h2>
+                        <p>Entre le code affiché par l'hôte (ou scanne son QR code).</p>
+                        <label class="mp-field">
+                            <span>Code de la partie</span>
+                            <input id="join-code" maxlength="5" autocomplete="off" spellcheck="false"
+                                   placeholder="EX : K7XM2" />
+                        </label>
+                        <label class="mp-field">
+                            <span>Ton pseudo</span>
+                            <input id="join-name" maxlength="15" autocomplete="off" spellcheck="false"
+                                   placeholder="Alex" />
+                        </label>
+                        <button id="btn-join" class="btn" type="button">🔗 Rejoindre</button>
+                        <button id="btn-scan" class="btn btn-ghost mp-scan-btn" type="button">📷 Scanner le QR code</button>
+                    </div>
+                </div>
+
+                <p id="home-status" class="mp-status" role="status"></p>
+            </section>
+
+            <!-- ================= LOBBY ================= -->
+            <section id="screen-lobby" class="mp-screen hidden">
+                <div class="mp-lobby-grid">
+                    <div class="mp-card mp-qr-card">
+                        <h2 id="lobby-title">Partie créée !</h2>
+                        <div id="qr-holder" class="mp-qr"><span class="mp-dim">Génération du QR code…</span></div>
+                        <div id="room-code" class="mp-code">•••••</div>
+                        <button id="btn-copy" class="btn btn-ghost" type="button">📋 Copier le lien</button>
+                        <p class="mp-hint">
+                            Scanne ce QR code (ou saisis le code ci-dessus) pour rejoindre la partie.
+                        </p>
+                    </div>
+
+                    <div class="mp-card">
+                        <h2>
+                            Joueurs
+                            <span id="player-count" class="mp-count">0</span>
+                        </h2>
+                        <div id="player-list" class="mp-players"></div>
+
+                        <div id="host-setup" class="mp-setup">
+                            <h3>⚙️ Réglages de la partie</h3>
+
+                            <div class="mp-modes">
+                                <button type="button" class="mp-mode active" data-mode="1">
+                                    <span class="mp-mode-title">🙋 Même question</span>
+                                    <span class="mp-mode-desc">Tout le monde répond à la même question, on voit qui a calqué quoi, l'hôte fait avancer.</span>
+                                </button>
+                                <button type="button" class="mp-mode" data-mode="2">
+                                    <span class="mp-mode-title">🔀 Questions différentes</span>
+                                    <span class="mp-mode-desc">Chacun reçoit sa propre question (sans doublon tant que possible) et joue à son rythme.</span>
+                                </button>
+                            </div>
+
+                            <label class="mp-field">
+                                <span>Questionnaire</span>
+                                <select id="setup-quiz"></select>
+                            </label>
+                            <label class="mp-field">
+                                <span>Catégorie</span>
+                                <select id="setup-cat"></select>
+                            </label>
+                            <label class="mp-field">
+                                <span>Nombre de questions</span>
+                                <select id="setup-limit">
+                                    <option value="10">10</option>
+                                    <option value="20" selected>20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="0">Toutes</option>
+                                </select>
+                            </label>
+
+                            <button id="btn-start" class="btn" type="button" disabled>🚀 Lancer la partie</button>
+                            <p id="setup-status" class="mp-status"></p>
+                        </div>
+
+                        <div id="client-wait" class="mp-wait hidden">
+                            ⏳ En attente de l'hôte… il choisit le mode et le questionnaire.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mp-foot">
+                    <p id="lobby-status" class="mp-status" role="status"></p>
+                    <button id="btn-lobby-back" class="btn btn-ghost" type="button">← Quitter la partie</button>
+                </div>
+            </section>
+
+            <!-- ================= PARTIE ================= -->
+            <section id="screen-game" class="mp-screen hidden">
+                <div class="mp-game-grid">
+                    <div class="mp-main">
+                        <div class="mp-game-head">
+                            <span id="g-quiz" class="cat-label"></span>
+                            <span id="g-mode" class="mp-chip"></span>
+                            <span id="g-round" class="mp-round"></span>
+                        </div>
+
+                        <div class="progress-bar-container">
+                            <div id="g-progress" class="progress-bar-fill"></div>
+                        </div>
+                        <p id="g-subinfo" class="mp-subinfo"></p>
+
+                        <div id="question-block" class="question-block">
+                            <div id="g-question" class="question-card hidden"></div>
+                            <div id="g-feedback" class="hidden"></div>
+                        </div>
+
+                        <div id="g-wait" class="mp-wait hidden"></div>
+
+                        <div id="g-reveal" class="mp-reveal hidden"></div>
+
+                        <div id="g-host-note" class="mp-host-note hidden">
+                            🎛️ Tu es l'hôte : tu ne réponds pas, tu pilotes la partie.
+                        </div>
+
+                        <div class="main-btn-container">
+                            <button id="g-submit" class="mp-btn mp-btn-main hidden" type="button">Valider la Réponse</button>
+                            <button id="g-next" class="mp-btn mp-btn-main hidden" type="button">Question suivante ▶</button>
+                        </div>
+                    </div>
+
+                    <aside class="mp-side">
+                        <div class="mp-card mp-lb-card">
+                            <h3>🏆 Classement <span id="lb-live" class="mp-chip mp-chip-live">en direct</span></h3>
+                            <div id="g-lb" class="mp-lb">
+                                <p class="mp-dim">Le classement s'affichera ici.</p>
+                            </div>
+                        </div>
+                        <div id="g-side-note" class="mp-card mp-side-note hidden"></div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- ================= FINALE ================= -->
+            <section id="screen-final" class="mp-screen hidden">
+                <div class="mp-hero">
+                    <h1>🏆 Scores finaux</h1>
+                    <p id="final-sub"></p>
+                </div>
+                <div id="podium" class="mp-podium"></div>
+                <div id="final-table" class="mp-card mp-final-table"></div>
+                <div class="mp-foot">
+                    <button id="btn-again" class="btn" type="button">🔁 Nouvelle partie</button>
+                    <a class="btn btn-ghost" href="../index.html">Retour au portail</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- ================= SCANNER QR ================= -->
+        <div id="scan-overlay" class="mp-scan-overlay hidden" role="dialog" aria-modal="true" aria-label="Scanner un QR code">
+            <div class="mp-scan-panel">
+                <div class="mp-scan-head">
+                    <h3>📷 Scanne le QR code de l'hôte</h3>
+                    <button id="scan-close" class="mp-scan-close" type="button" aria-label="Fermer le scanner">✕</button>
+                </div>
+                <div class="mp-scan-view">
+                    <video id="scan-video" playsinline muted></video>
+                    <div class="mp-scan-frame" aria-hidden="true">
+                        <span class="mp-corner tl"></span>
+                        <span class="mp-corner tr"></span>
+                        <span class="mp-corner bl"></span>
+                        <span class="mp-corner br"></span>
+                        <div class="mp-scan-laser"></div>
+                    </div>
+                </div>
+                <p id="scan-status" class="mp-status" role="status">Ouverture de la caméra…</p>
+                <p class="mp-dim">Pointe la caméra vers le QR code affiché sur l'écran de l'hôte.</p>
+            </div>
+        </div>
+
+        <script>
+            // Le code multijoueur charge quiz.js UNIQUEMENT pour QUIZ_CORE
+            // (normalisation/melange des questions) : on empeche son auto-init.
+            window.__QUIZ_NO_AUTOINIT__ = true;
+        </script>
+        <script src="../js/theme.js"></script>
+        <script src="../js/analytics.js"></script>
+        <script src="../js/quiz.js"></script>
+        <script src="./multiplayer.js"></script>
+    </body>
+</html>

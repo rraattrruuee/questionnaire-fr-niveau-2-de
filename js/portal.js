@@ -416,6 +416,24 @@
       }
     });
 
+    const multiLink = document.getElementById("multi-link");
+    if (multiLink) {
+      multiLink.addEventListener("click", (e) => {
+        if (!navigator.onLine) e.preventDefault();
+      });
+      const syncMultiAvailability = () => {
+        const offline = !navigator.onLine;
+        multiLink.classList.toggle("is-offline", offline);
+        multiLink.setAttribute("aria-disabled", offline ? "true" : "false");
+        multiLink.title = offline
+          ? "Multijoueur nécessite une connexion Internet"
+          : "Multijoueur en direct — un hôte, des joueurs, un QR code";
+      };
+      syncMultiAvailability();
+      window.addEventListener("online", syncMultiAvailability);
+      window.addEventListener("offline", syncMultiAvailability);
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     const initialFilter = urlParams.get("filtre") || "all";
     const initialButton = document.querySelector(

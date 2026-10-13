@@ -96,6 +96,19 @@ body {
   box-shadow: var(--glow);
 }
 
+/* ---------- Multijoueur CTA ---------- */
+.multi-cta {
+  display: table;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.multi-cta.is-offline {
+  opacity: 0.55;
+  pointer-events: none;
+  filter: grayscale(0.4);
+}
+
 /* ---------- Filter labels ---------- */
 .labels-selection {
   display: flex;

@@ -823,6 +823,20 @@
   /* ---------------------------------------------------------
      Init
      --------------------------------------------------------- */
+
+  // Expose les mecaniques partagees (normalisation, texte, melange)
+  // pour le mode multijoueur — evite de recoder deux fois la meme logique.
+  window.QUIZ_CORE = {
+    normalizeQuiz: normalizeQuiz,
+    normalizeQuestions: normalizeQuestions,
+    normalizeText: normalizeText,
+    shuffle: shuffle
+  };
+
+  // La page multijoueur charge ce fichier pour QUIZ_CORE uniquement :
+  // dans ce cas on ne demarre pas le flux de quiz (pas de ?id= sur sa page).
+  if (window.__QUIZ_NO_AUTOINIT__) return;
+
   function init() {
     // Mode integre (apercu QuizMaster / export autonome) : les donnees sont
     // fournies dans window.__EMBED_QUIZ__, sans config.json ni parametre ?id.
