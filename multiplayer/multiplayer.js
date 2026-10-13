@@ -35,6 +35,10 @@
 
   var ROOM_PREFIX = "mp2-";
   var CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // sans 0/O/1/I
+  var HOST_PID = "_host"; // pid réservé à l'hôte quand il joue aussi
+
+  // Config chargée pour les sélecteurs Matière → Questionnaire
+  var CFG = { subjects: [], quizzes: [] };
 
   /* ============================================================
      Utilitaires
@@ -145,6 +149,66 @@
   }
 
   /* ============================================================
+     IMPORT QUIZMASTER — un HTML exporté par quizmaster.html
+     embarque window.__EMBED_QUIZ__ = {title, categories:[...]}.
+     ============================================================ */
+  var IMPORTED_ID = "__imported__";
+  var importedQuiz = null; // {title, cats}
+
+  function countQuizQuestions(cats) {
+    return (cats || []).reduce(function (n, c) { return n + (c.questions ? c.questions.length : 0); }, 0);
+  }
+
+  function importQuizHtml(file) {
+    return new Promise(function (resolve, reject) {
+      if (!window.QUIZ_CORE || !window.QUIZ_CORE.normalizeQuiz) {
+        reject(new Error("Moteur de quiz indisponible."));
+        return;
+      }
+      var reader = new FileReader();
+      reader.onerror = function () { reject(new Error("Lecture du fichier impossible.")); };
+      reader.onload = function (e) {
+        try {
+          var html = String(e.target.result || "");
+          var m = html.match(/window\.__EMBED_QUIZ__\s*=\s*([\s\S]*?);?\s*<\/script>/);
+          if (!m) {
+            reject(new Error("Aucun quiz embarqué trouvé — utilise un fichier HTML exporté par QuizMaster."));
+            return;
+          }
+          var data = JSON.parse(m[1]);
+          if (!data || typeof data !== "object") throw new Error("Quiz embarqué illisible.");
+          var title = data.title || file.name.replace(/\.html?$/i, "");
+          var cats = window.QUIZ_CORE.normalizeQuiz(data, title);
+          if (!cats.length) throw new Error("Aucune question valide dans ce fichier.");
+          importedQuiz = { title: title, cats: cats };
+          quizCache[IMPORTED_ID] = {
+            meta: { id: IMPORTED_ID, title: title, subject: data.subject || "", file: "" },
+            cats: cats
+          };
+          resolve(importedQuiz);
+        } catch (err) {
+          reject(err);
+        }
+      };
+      reader.readAsText(file);
+    });
+  }
+
+  function addImportedQuizOption(selectIt) {
+    if (!importedQuiz) return;
+    var quizSel = $("setup-quiz");
+    if (!quizSel) return;
+    var existing = quizSel.querySelector('option[value="' + IMPORTED_ID + '"]');
+    if (existing) existing.remove();
+    var count = countQuizQuestions(importedQuiz.cats);
+    var opt = document.createElement("option");
+    opt.value = IMPORTED_ID;
+    opt.textContent = "📄 " + importedQuiz.title + " (" + count + " q)";
+    quizSel.insertBefore(opt, quizSel.firstChild);
+    if (selectIt) quizSel.value = IMPORTED_ID;
+  }
+
+  /* ============================================================
      Helpers purs (mélange, attribution, jugement)
      ============================================================ */
   function shuffle(arr) {
@@ -221,6 +285,8 @@
     code: null,
     joinUrl: null,
     started: false,
+    hostAsPlayer: false, // l'hôte participe aussi au quiz
+    hostName: "Hôte",    // pseudo affiché pour l'hôte (lobby + classement)
     // hôte
     players: [],         // [{pid, n, conn, gone}]
     nextPid: 1,
@@ -410,8 +476,13 @@
   function renderPlayers() {
     var list = $("player-list");
     if (!list) return;
-    var html = '<span class="mp-player-chip is-host">🎛️ Hôte</span>';
+    var hostLabel = esc(S.hostName || "Hôte");
+    var hostChip = S.hostAsPlayer
+      ? '<span class="mp-player-chip is-host is-playing">🎛️ ' + hostLabel + ' <span class="mp-chip">joueur</span></span>'
+      : '<span class="mp-player-chip is-host">🎛️ ' + hostLabel + '</span>';
+    var html = hostChip;
     S.players.forEach(function (p) {
+      if (p.isHost) return; // déjà affiché par le chip hôte
       var cls = "mp-player-chip";
       if (S.role === "client" && p.pid === S.myPid) cls += " is-me";
       if (p.gone) cls += " is-out";
@@ -452,7 +523,8 @@
     var html = "";
     entries.forEach(function (e, i) {
       var cls = "mp-lb-row" + (i < 3 ? " top" + (i + 1) : "");
-      if (S.role === "client" && e.pid === S.myPid) cls += " is-me";
+      if ((S.role === "client" && e.pid === S.myPid) ||
+          (S.role === "host" && e.pid === HOST_PID)) cls += " is-me";
       if (e.out) cls += " is-out";
       var rank = i < 3 ? medals[i] : String(i + 1);
       html +=
@@ -501,12 +573,21 @@
   }
 
   function setMainBtn(opts) {
-    // opts: {which:"submit"|"next"|"none", label, cls, disabled, onclick}
+    // opts: {which:"submit"|"next"|"none", label, cls, disabled, onclick, coexist}
     var submit = $("g-submit");
     var next = $("g-next");
-    submit.classList.add("hidden");
-    next.classList.add("hidden");
-    next.classList.remove("is-force", "is-final");
+    // Hôte-joueur : « Valider » et « Forcer le passage » doivent coexister,
+    // on ne masque donc pas l'autre bouton.
+    var coexist = opts && opts.coexist && S.hostAsPlayer;
+    if (opts && opts.which === "submit") {
+      if (!coexist) next.classList.add("hidden");
+    } else if (opts && opts.which === "next") {
+      if (!coexist) submit.classList.add("hidden");
+    } else {
+      submit.classList.add("hidden");
+      next.classList.add("hidden");
+    }
+    if (opts && opts.which !== "submit") next.classList.remove("is-force", "is-final");
     if (!opts || opts.which === "none") return;
     var btn = opts.which === "submit" ? submit : next;
     btn.classList.remove("hidden");
@@ -546,7 +627,7 @@
     if (q.type !== "text") {
       var wrap = card.querySelector("#mp-options");
       if (interactive) {
-        setMainBtn({ which: "submit", label: "Valider la Réponse", disabled: true, onclick: submitAnswer });
+        setMainBtn({ which: "submit", label: "Valider la Réponse", disabled: true, onclick: playerSubmit, coexist: true });
       }
       (q.options || []).forEach(function (opt, i) {
         var b = document.createElement("button");
@@ -561,7 +642,7 @@
               x.classList.remove("selected");
             });
             b.classList.add("selected");
-            setMainBtn({ which: "submit", label: "Valider la Réponse", onclick: submitAnswer });
+            setMainBtn({ which: "submit", label: "Valider la Réponse", onclick: playerSubmit, coexist: true });
           };
         } else {
           b.disabled = true;
@@ -575,10 +656,11 @@
           which: "submit",
           label: "Valider la Réponse",
           disabled: input.value.trim() === "",
-          onclick: submitAnswer
+          onclick: playerSubmit,
+          coexist: true
         });
       });
-      setMainBtn({ which: "submit", label: "Valider la Réponse", disabled: true, onclick: submitAnswer });
+      setMainBtn({ which: "submit", label: "Valider la Réponse", disabled: true, onclick: playerSubmit, coexist: true });
       setTimeout(function () { input.focus(); }, 150);
     }
   }
@@ -826,7 +908,14 @@
   }
 
   function broadcastLobby() {
-    broadcast({ t: "L", players: S.players.map(function (p) { return { pid: p.pid, n: p.n, gone: p.gone }; }) });
+    broadcast({
+      t: "L",
+      hostPlays: S.hostAsPlayer,
+      hostName: S.hostName || "Hôte",
+      players: S.players
+        .filter(function (p) { return !p.isHost; })
+        .map(function (p) { return { pid: p.pid, n: p.n, gone: p.gone }; })
+    });
     renderPlayers();
   }
 
@@ -834,18 +923,46 @@
      HOST — réglages & démarrage
      ============================================================ */
   function populateQuizSelect(cfg) {
-    var sel = $("setup-quiz");
-    var subjects = {};
-    (cfg.subjects || []).forEach(function (s) { subjects[s.id] = s; });
-    var html = "";
-    (cfg.quizzes || []).forEach(function (q) {
-      var s = subjects[q.subject];
-      var label = (s ? s.icon + " " : "") + q.title + " (" + (q.questionsCount || "?") + " q)";
-      html += '<option value="' + esc(q.id) + '">' + esc(label) + "</option>";
+    CFG.subjects = cfg.subjects || [];
+    CFG.quizzes = cfg.quizzes || [];
+    var subjectsById = {};
+    CFG.subjects.forEach(function (s) { subjectsById[s.id] = s; });
+
+    // 1. Matière → liste des matières qui ont au moins un questionnaire
+    var bySubject = {};
+    CFG.quizzes.forEach(function (q) {
+      if (!bySubject[q.subject]) bySubject[q.subject] = [];
+      bySubject[q.subject].push(q);
     });
-    sel.innerHTML = html || '<option value="">Aucun questionnaire</option>';
-    sel.onchange = populateCatSelect;
-    populateCatSelect();
+    var matSel = $("setup-matiere");
+    var matHtml = '<option value="__all__">🌍 Toutes les matières</option>';
+    CFG.subjects.forEach(function (s) {
+      if (!bySubject[s.id]) return;
+      matHtml += '<option value="' + esc(s.id) + '">' +
+        esc((s.icon || "📁") + " " + s.name) + " (" + bySubject[s.id].length + ")</option>";
+    });
+    matSel.innerHTML = matHtml;
+
+    // 2. Questionnaire → filtré par la matière sélectionnée
+    var quizSel = $("setup-quiz");
+    function fillQuizOptions() {
+      var mat = matSel.value;
+      var list = CFG.quizzes.filter(function (q) {
+        return mat === "__all__" || q.subject === mat;
+      });
+      var html = "";
+      list.forEach(function (q) {
+        var s = subjectsById[q.subject];
+        var label = (s ? s.icon + " " : "") + q.title + " (" + (q.questionsCount || "?") + " q)";
+        html += '<option value="' + esc(q.id) + '">' + esc(label) + "</option>";
+      });
+      quizSel.innerHTML = html || '<option value="">Aucun questionnaire</option>';
+      addImportedQuizOption(true); // le quiz importé reste toujours accessible
+      quizSel.onchange = populateCatSelect;
+      populateCatSelect();
+    }
+    matSel.onchange = fillQuizOptions;
+    fillQuizOptions();
   }
 
   function populateCatSelect() {
@@ -890,6 +1007,19 @@
         catLabel: scope === "all" ? "Toutes les catégories" : entry.cats[Number(scope)].name
       };
     });
+  }
+
+  function setHostAsPlayer(on) {
+    if (S.started) return;
+    S.hostAsPlayer = on;
+    var exists = S.players.some(function (p) { return p.pid === HOST_PID; });
+    if (on && !exists) {
+      S.players.push({ pid: HOST_PID, n: S.hostName || "Hôte", conn: null, gone: false, isHost: true });
+    } else if (!on && exists) {
+      S.players = S.players.filter(function (p) { return p.pid !== HOST_PID; });
+    }
+    renderPlayers();
+    broadcastLobby();
   }
 
   function hostStart() {
@@ -944,22 +1074,24 @@
         showScreen("screen-game");
         $("g-quiz").textContent = S.quizTitle + " · " + S.catLabel;
         $("g-mode").textContent = S.mode === 1 ? "🙋 Même question" : "🔀 Questions différentes";
-        $("g-host-note").classList.remove("hidden");
+        $("g-host-note").classList.toggle("hidden", S.hostAsPlayer);
         $("g-side-note").classList.toggle("hidden", S.mode !== 2);
         resetQuestionUI();
 
         if (S.mode === 1) {
           hostSendSharedQuestion();
         } else {
+          if (!S.hostAsPlayer) {
+            setMainBtn({
+              which: "next",
+              label: "🏆 Afficher les scores finaux",
+              cls: "is-final",
+              onclick: hostFinish
+            });
+            updateRoundLabel("");
+          }
           act.forEach(function (p) { hostSendNextQuestion(p.pid); });
-          updateRoundLabel("");
           updateHostAggregates();
-          setMainBtn({
-            which: "next",
-            label: "🏆 Afficher les scores finaux",
-            cls: "is-final",
-            onclick: hostFinish
-          });
           renderLb(buildLeaderboard());
           broadcast({ t: "B", lb: buildLeaderboard() });
         }
@@ -982,7 +1114,7 @@
     resetQuestionUI();
     updateRoundLabel("Question " + (S.round + 1) + " / " + S.pool.length);
     updateProgress(0);
-    renderQuestionInto(publicQ(q), false);
+    renderQuestionInto(publicQ(q), S.hostAsPlayer);
     updateSubInfo("Réponses reçues : 0 / " + activePlayers().length);
     broadcast({ t: "Q", r: S.round, n: S.pool.length, q: publicQ(q) });
     setMainBtn({
@@ -991,7 +1123,9 @@
       cls: "is-force",
       onclick: function () { hostReveal(); }
     });
-    renderLb(buildLeaderboard());
+    var lb0 = buildLeaderboard();
+    renderLb(lb0);
+    broadcast({ t: "B", lb: lb0 });
   }
 
   function hostOnAnswer(pid, a) {
@@ -1001,7 +1135,7 @@
       S.answers[pid] = { a: a, ok: judge(q, a) };
       var act = activePlayers();
       var done = act.filter(function (p) { return S.answers[p.pid]; }).length;
-      broadcast({ t: "P", d: done, t: act.length });
+      broadcast({ t: "P", d: done, total: act.length });
       updateSubInfo("Réponses reçues : " + done + " / " + act.length);
       updateProgress(act.length ? (done / act.length) * 100 : 0);
       setMainBtn({
@@ -1020,14 +1154,33 @@
       if (ok) sc.score++;
       sc.done = cq.r + 1;
       var more = cq.r + 1 < (S.assignLen[pid] || 0);
-      sendTo(pid, {
-        t: "J",
-        ok: ok,
-        correct: correctLabel(cq.q),
-        solution: cq.q.solution || "",
-        score: sc.score,
-        more: more
-      });
+      if (pid === HOST_PID) {
+        // Hôte-joueur : feedback + bouton suivant en local.
+        renderFeedback(ok, correctLabel(cq.q), cq.q.solution || "");
+        if (more) {
+          setMainBtn({
+            which: "next",
+            label: "Question suivante ▶",
+            onclick: function () { hostNextFor(HOST_PID); }
+          });
+        } else {
+          setMainBtn({
+            which: "next",
+            label: "🏆 Afficher les scores finaux",
+            cls: "is-final",
+            onclick: hostFinish
+          });
+        }
+      } else {
+        sendTo(pid, {
+          t: "J",
+          ok: ok,
+          correct: correctLabel(cq.q),
+          solution: cq.q.solution || "",
+          score: sc.score,
+          more: more
+        });
+      }
       var lb = buildLeaderboard();
       broadcast({ t: "B", lb: lb });
       renderLb(lb);
@@ -1081,6 +1234,7 @@
     renderReveal(payload);
     renderLb(lb);
     lockQuestionUI();
+    $("g-submit").classList.add("hidden");
     $("g-wait").classList.add("hidden");
     broadcast({ t: "V", rows: rows, correct: payload.correct, solution: payload.solution, lb: lb });
     updateSubInfo("Résultats de la question " + (S.round + 1) + " / " + S.pool.length);
@@ -1114,6 +1268,14 @@
     var q = list[idx];
     S.cursor[pid] = idx + 1;
     S.curQ[pid] = { q: q, r: idx, answered: false };
+    if (pid === HOST_PID) {
+      // Question de l'hôte-joueur : rendu local, interactive.
+      resetQuestionUI();
+      updateRoundLabel("Ta question " + (idx + 1) + " / " + list.length);
+      renderQuestionInto(publicQ(q), true);
+      updateSubInfo("");
+      return;
+    }
     sendTo(pid, { t: "Q", r: idx, n: list.length, q: publicQ(q) });
   }
 
@@ -1360,7 +1522,11 @@
         break;
 
       case "L": {
-        var html = '<span class="mp-player-chip is-host">🎛️ Hôte</span>';
+        var hostLabel = esc(msg.hostName || "Hôte");
+        var hostChip = msg.hostPlays
+          ? '<span class="mp-player-chip is-host is-playing">🎛️ ' + hostLabel + ' <span class="mp-chip">joueur</span></span>'
+          : '<span class="mp-player-chip is-host">🎛️ ' + hostLabel + '</span>';
+        var html = hostChip;
         (msg.players || []).forEach(function (p) {
           var cls = "mp-player-chip";
           if (p.pid === S.myPid) cls += " is-me";
@@ -1368,7 +1534,8 @@
           html += '<span class="' + cls + '">🎮 ' + esc(p.n) + "</span>";
         });
         $("player-list").innerHTML = html;
-        var alive = (msg.players || []).filter(function (p) { return !p.gone; }).length;
+        var alive = (msg.players || []).filter(function (p) { return !p.gone; }).length +
+          (msg.hostPlays ? 1 : 0);
         $("player-count").textContent = String(alive);
         break;
       }
@@ -1409,7 +1576,7 @@
       }
 
       case "P":
-        S.lastProg = msg.d + "/" + msg.t;
+        S.lastProg = msg.d + "/" + (msg.total != null ? msg.total : msg.t);
         if (S.clientQ && S.clientQ.submitted) {
           $("g-wait").textContent =
             "✅ Réponse envoyée ! En attente des autres joueurs… (" + S.lastProg + ")";
@@ -1473,19 +1640,40 @@
   /* ============================================================
      Actions joueur
      ============================================================ */
+  function readAnswerFromUI() {
+    var sel = document.querySelector("#mp-options .answer-btn.selected");
+    if (sel) return Number(sel.dataset.i);
+    var input = $("mp-text-answer");
+    if (input && input.value.trim()) return input.value.trim();
+    return null;
+  }
+
+  // L'hôte qui joue soumet sa réponse localement (pas de S.conn).
+  function hostSubmitAnswer() {
+    var a = readAnswerFromUI();
+    if (a === null) return;
+    lockQuestionUI();
+    setMainBtn({ which: "none" });
+    hostOnAnswer(HOST_PID, a);
+    if (S.mode === 1) {
+      // si tout le monde a répondu, hostOnAnswer a déjà révélé ; sinon on attend
+      if (S.phase === "answering") {
+        $("g-wait").textContent = "✅ Ta réponse est enregistrée ! En attente des autres…";
+        $("g-wait").classList.remove("hidden");
+      }
+    }
+  }
+
+  function playerSubmit() {
+    if (S.role === "host") hostSubmitAnswer();
+    else submitAnswer();
+  }
+
   function submitAnswer() {
     var cq = S.clientQ;
     if (!cq || cq.submitted || !S.conn || !S.conn.open) return;
-    var a = null;
-    if (cq.q.type === "text") {
-      var input = $("mp-text-answer");
-      if (!input || !input.value.trim()) return;
-      a = input.value.trim();
-    } else {
-      var sel = document.querySelector("#mp-options .answer-btn.selected");
-      if (!sel) return;
-      a = Number(sel.dataset.i);
-    }
+    var a = readAnswerFromUI();
+    if (a === null) return;
     cq.submitted = true;
     lockQuestionUI();
     setMainBtn({ which: "none" });
@@ -1693,6 +1881,51 @@
     });
 
     $("btn-start").onclick = hostStart;
+
+    var hostPlaysCb = $("host-plays");
+    if (hostPlaysCb) {
+      hostPlaysCb.onchange = function () { setHostAsPlayer(hostPlaysCb.checked); };
+    }
+
+    var hostNameInput = $("host-name");
+    if (hostNameInput) {
+      hostNameInput.addEventListener("input", function () {
+        if (S.started) return;
+        S.hostName = sanitizeName(hostNameInput.value) || "Hôte";
+        var hp = S.players.find(function (p) { return p.pid === HOST_PID; });
+        if (hp) hp.n = S.hostName;
+        renderPlayers();
+        broadcastLobby();
+      });
+    }
+
+    var importInput = $("import-quiz");
+    if (importInput) {
+      importInput.addEventListener("change", function () {
+        var file = importInput.files && importInput.files[0];
+        if (!file) return;
+        var st = $("import-status");
+        if (st) { st.textContent = "Import en cours…"; st.className = "mp-hint"; }
+        importQuizHtml(file)
+          .then(function (imp) {
+            addImportedQuizOption(true);
+            populateCatSelect();
+            var n = countQuizQuestions(imp.cats);
+            if (st) {
+              st.textContent = "✅ « " + imp.title + " » importé (" + n + " questions). Sélectionne une catégorie puis lance la partie !";
+              st.className = "mp-hint is-ok";
+            }
+            track("multiplayer_import_quiz", { questions: n });
+          })
+          .catch(function (err) {
+            if (st) {
+              st.textContent = "❌ " + err.message;
+              st.className = "mp-hint is-error";
+            }
+          })
+          .then(function () { importInput.value = ""; });
+      });
+    }
 
     $("btn-copy").onclick = function () {
       if (!S.joinUrl) return;

@@ -276,6 +276,101 @@
   font-weight: 600;
 }
 
+/* ---------- Hôte joueur ---------- */
+.mp-host-play {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.9rem 0;
+  padding: 0.7rem 0.85rem;
+  background: var(--surface-2);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  user-select: none;
+}
+
+.mp-host-play:hover { border-color: var(--border-strong); }
+
+.mp-host-play input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.mp-host-play:has(input:checked) {
+  border-color: var(--primary);
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.mp-player-chip.is-playing { animation: mpBump 0.5s ease; }
+
+/* ---------- Import QuizMaster (HTML) ---------- */
+.mp-import {
+  margin: 0.9rem 0;
+  padding: 0.85rem;
+  background: var(--surface-2);
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius);
+}
+
+.mp-import .mp-field { margin: 0 0 0.5rem; }
+
+.mp-file-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  background: var(--surface);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius);
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.mp-file-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.mp-file-btn input[type="file"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mp-import .mp-hint { margin: 0; font-size: 0.82rem; }
+.mp-import .mp-hint.is-ok { color: var(--success, #22c55e); font-weight: 700; }
+.mp-import .mp-hint.is-error { color: var(--danger, #ef4444); font-weight: 700; }
+
+.mp-host-name-field input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+}
+
+.mp-host-name-field input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
 .mp-foot {
   display: flex;
   flex-wrap: wrap;

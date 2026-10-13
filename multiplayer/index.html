@@ -117,6 +117,10 @@
                             </div>
 
                             <label class="mp-field">
+                                <span>Matière</span>
+                                <select id="setup-matiere"></select>
+                            </label>
+                            <label class="mp-field">
                                 <span>Questionnaire</span>
                                 <select id="setup-quiz"></select>
                             </label>
@@ -134,6 +138,28 @@
                                     <option value="0">Toutes</option>
                                 </select>
                             </label>
+
+                            <label class="mp-host-play" title="L'hôte participe aussi au quiz, avec les autres joueurs">
+                                <input type="checkbox" id="host-plays" />
+                                <span>🎮 Je veux jouer aussi (l'hôte participe)</span>
+                            </label>
+
+                            <label class="mp-field mp-host-name-field">
+                                <span>Ton pseudo (hôte)</span>
+                                <input id="host-name" maxlength="15" autocomplete="off" spellcheck="false"
+                                       placeholder="Hôte" value="Hôte" />
+                            </label>
+
+                            <div class="mp-import">
+                                <label class="mp-field">
+                                    <span>📄 QuizMaster (fichier HTML exporté)</span>
+                                    <span class="mp-file-btn">
+                                        Importer un questionnaire…
+                                        <input type="file" id="import-quiz" accept=".html,.htm,text/html" />
+                                    </span>
+                                </label>
+                                <p class="mp-hint" id="import-status">Colle ou génère un quiz sur la page QuizMaster, exporte-le en HTML, puis importe-le ici pour le jouer en ligne.</p>
+                            </div>
 
                             <button id="btn-start" class="btn" type="button" disabled>🚀 Lancer la partie</button>
                             <p id="setup-status" class="mp-status"></p>
