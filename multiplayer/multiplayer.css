@@ -276,6 +276,39 @@
   font-weight: 600;
 }
 
+/* ---------- Renommer le pseudo (écran d'attente du joueur) ---------- */
+.mp-rename {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.mp-rename-form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.mp-rename-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+}
+
+.mp-rename-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
 /* ---------- Hôte joueur ---------- */
 .mp-host-play {
   display: flex;

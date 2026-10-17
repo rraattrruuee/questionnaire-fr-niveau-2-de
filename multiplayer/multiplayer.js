@@ -896,6 +896,13 @@
         hostOnAnswer(joined.pid, msg.a);
       } else if (msg.t === "N" && joined) {
         hostNextFor(joined.pid);
+      } else if (msg.t === "U" && joined) {
+        // Mise à jour du pseudo tant que la partie n'a pas commencé.
+        if (!S.started) {
+          joined.n = sanitizeName(msg.n);
+          broadcastLobby();
+          setStatus($("lobby-status"), joined.n + " a changé de pseudo.", "is-ok");
+        }
       }
     });
     function drop() {
@@ -1542,6 +1549,7 @@
     S.role = null;
     S.started = false;
     S.myPid = null;
+    closeRename();
     showScreen("screen-home");
     setStatus($("home-status"), msg || "", msg ? "is-error" : "");
   }
@@ -1549,9 +1557,40 @@
   function backToLobbyWait() {
     S.started = false;
     S.clientQ = null;
+    closeRename();
     showScreen("screen-lobby");
     $("client-wait").classList.remove("hidden");
     setStatus($("lobby-status"), "L'hôte prépare une nouvelle partie…");
+  }
+
+  /* Modification du pseudo depuis l'écran d'attente du joueur. */
+  function openRename() {
+    var form = $("rename-form");
+    var input = $("rename-input");
+    if (!form || !input) return;
+    input.value = S.myName || "";
+    form.classList.remove("hidden");
+    $("btn-rename").classList.add("hidden");
+    input.focus();
+    input.select();
+  }
+
+  function closeRename() {
+    var form = $("rename-form");
+    var btn = $("btn-rename");
+    if (form) form.classList.add("hidden");
+    if (btn) btn.classList.remove("hidden");
+  }
+
+  function applyRename() {
+    var input = $("rename-input");
+    if (!input) return;
+    var name = sanitizeName(input.value);
+    S.myName = name;
+    if (S.conn && S.conn.open) S.conn.send({ t: "U", n: name });
+    closeRename();
+    setStatus($("lobby-status"), "Pseudo changé en « " + name + " ».", "is-ok");
+    track("multiplayer_rename");
   }
 
   function onServerMsg(msg) {
@@ -1974,6 +2013,18 @@
             }
           })
           .then(function () { importInput.value = ""; });
+      });
+    }
+
+    var renameBtn = $("btn-rename");
+    if (renameBtn) renameBtn.onclick = openRename;
+    var renameOk = $("btn-rename-ok");
+    if (renameOk) renameOk.onclick = applyRename;
+    var renameInput = $("rename-input");
+    if (renameInput) {
+      renameInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") { e.preventDefault(); applyRename(); }
+        else if (e.key === "Escape") closeRename();
       });
     }
 
