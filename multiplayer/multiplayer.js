@@ -598,9 +598,10 @@
     // opts: {which:"submit"|"next"|"none", label, cls, disabled, onclick, coexist}
     var submit = $("g-submit");
     var next = $("g-next");
-    // Hôte-joueur : « Valider » et « Forcer le passage » doivent coexister,
-    // on ne masque donc pas l'autre bouton.
-    var coexist = opts && opts.coexist && S.hostAsPlayer;
+    // Hôte-joueur : « Valider la réponse » et « Forcer le passage » (ou
+    // « Question suivante ») doivent coexister, on ne masque donc jamais
+    // l'autre bouton tant que l'hôte participe.
+    var coexist = opts && S.hostAsPlayer && opts.which !== "none";
     if (opts && opts.which === "submit") {
       if (!coexist) next.classList.add("hidden");
     } else if (opts && opts.which === "next") {
