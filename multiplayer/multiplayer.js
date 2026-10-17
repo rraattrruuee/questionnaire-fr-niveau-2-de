@@ -298,7 +298,9 @@
     pool: [],
     round: 0,
     phase: "idle",       // answering | reveal  (mode 1)
-    answers: {},         // pid -> {a, ok}        (mode 1)
+    fastScoring: true,   // 1 pt + 1/rang (bonne réponse) ; 0 si mauvaise
+    correctByR: {},      // r -> nb de bonnes réponses (mode 2, rang par étape)
+    answers: {},         // pid -> {a, ok, t, pts} (mode 1)
     scores: {},          // pid -> {score, done}
     assigns: {},         // pid -> [q...]         (mode 2)
     assignLen: {},       // pid -> n              (mode 2)
@@ -327,11 +329,31 @@
     el.classList.add("mp-bump");
   }
 
+  // Formate un score (entier ou décimal à 2 chiffres) pour l'affichage.
+  function fmtScore(n) {
+    n = Math.round((Number(n) || 0) * 100) / 100;
+    return String(n);
+  }
+
+  // Points pour une réponse : 1 pt si bonne + 1/rang de rapidité (rang parmi
+  // les bonnes réponses à la même question) ; 0 si mauvaise réponse.
+  // Bonus désactivé → 1 point par bonne réponse.
+  function answerPoints(ok, rank) {
+    if (!ok) return 0;
+    if (!S.fastScoring) return 1;
+    return 1 + 1 / (rank || 1);
+  }
+
   function countUp(el, to, suffix) {
     if (!el) return;
     suffix = suffix || "";
+    var isInt = Number.isInteger(to);
+    function fmt(v) {
+      var r = isInt ? Math.round(v) : Math.round(v * 100) / 100;
+      return r + suffix;
+    }
     if (prefersReducedMotion()) {
-      el.textContent = to + suffix;
+      el.textContent = fmt(to);
       return;
     }
     var dur = 900;
@@ -340,7 +362,7 @@
       if (t0 === null) t0 = ts;
       var p = Math.min(1, (ts - t0) / dur);
       var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(to * eased) + suffix;
+      el.textContent = fmt(to * eased);
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
@@ -533,7 +555,7 @@
           '<span class="rank">' + rank + "</span>" +
           '<span class="name">' + esc(e.n) + (e.out ? " 🔌" : "") + "</span>" +
           '<span class="prog">' + e.done + "/" + e.total + "</span>" +
-          '<span class="pts">' + e.score + " pts</span>" +
+          '<span class="pts">' + fmtScore(e.score) + " pts</span>" +
         "</div>";
     });
     box.innerHTML = html;
@@ -673,16 +695,18 @@
   }
 
   function renderReveal(data) {
-    // data: {rows:[{n, ans, ok}], correct, solution}
+    // data: {rows:[{n, ans, ok, pts}], correct, solution}
     var box = $("g-reveal");
     var html = "<h4>📋 Qui a calqué quoi ?</h4>";
-    html += '<table class="mp-table"><tr><th>Joueur</th><th>Réponse</th><th></th></tr>';
+    html += '<table class="mp-table"><tr><th>Joueur</th><th>Réponse</th><th></th><th>Points</th></tr>';
     (data.rows || []).forEach(function (r) {
       html +=
         "<tr><td>" + esc(r.n) + "</td>" +
         "<td>" + (r.ans == null ? '<span class="muted">Pas de réponse</span>' : esc(r.ans)) + "</td>" +
         '<td class="' + (r.ans == null ? "muted" : r.ok ? "ok" : "ko") + '">' +
-        (r.ans == null ? "—" : '<span class="mp-ico">' + (r.ok ? "✅" : "❌") + "</span>") + "</td></tr>";
+        (r.ans == null ? "—" : '<span class="mp-ico">' + (r.ok ? "✅" : "❌") + "</span>") + "</td>" +
+        '<td class="' + (r.pts > 0 ? "ok" : "muted") + '">' +
+        (r.ans == null ? "—" : "+" + fmtScore(r.pts)) + "</td></tr>";
     });
     html += "</table>";
     if (data.correct) {
@@ -1042,6 +1066,7 @@
         S.round = 0;
         S.phase = "answering";
         S.answers = {};
+        S.correctByR = {};
         S.scores = {};
         S.assigns = {};
         S.assignLen = {};
@@ -1132,7 +1157,7 @@
     if (S.mode === 1) {
       if (S.phase !== "answering" || S.answers[pid]) return;
       var q = S.pool[S.round];
-      S.answers[pid] = { a: a, ok: judge(q, a) };
+      S.answers[pid] = { a: a, ok: judge(q, a), t: Date.now() };
       var act = activePlayers();
       var done = act.filter(function (p) { return S.answers[p.pid]; }).length;
       broadcast({ t: "P", d: done, total: act.length });
@@ -1151,7 +1176,14 @@
       cq.answered = true;
       var ok = judge(cq.q, a);
       var sc = scoreOf(pid);
-      if (ok) sc.score++;
+      // Rang de rapidité par étape (r) : les bonnes réponses à la même
+      // question partagent le même groupe de classement.
+      var rank = 1;
+      if (ok) {
+        rank = (S.correctByR[cq.r] || 0) + 1;
+        S.correctByR[cq.r] = rank;
+      }
+      sc.score += answerPoints(ok, rank);
       sc.done = cq.r + 1;
       var more = cq.r + 1 < (S.assignLen[pid] || 0);
       if (pid === HOST_PID) {
@@ -1218,15 +1250,25 @@
     S.phase = "reveal";
     var q = S.pool[S.round];
     var act = activePlayers();
+    // Rang de rapidité : 1er arrivé parmi les bonnes réponses.
+    var correctOrder = act
+      .filter(function (p) { return S.answers[p.pid] && S.answers[p.pid].ok; })
+      .sort(function (a, b) { return S.answers[a.pid].t - S.answers[b.pid].t; });
+    var rankOf = {};
+    correctOrder.forEach(function (p, i) { rankOf[p.pid] = i + 1; });
     var rows = [];
     act.forEach(function (p) {
       var ans = S.answers[p.pid];
-      if (ans && ans.ok) scoreOf(p.pid).score++;
-      if (ans) scoreOf(p.pid).done++;
+      if (ans) {
+        ans.pts = answerPoints(ans.ok, rankOf[p.pid]);
+        scoreOf(p.pid).score += ans.pts;
+        scoreOf(p.pid).done++;
+      }
       rows.push({
         n: p.n,
         ans: ans ? answerLabel(q, ans.a) : null,
-        ok: ans ? ans.ok : false
+        ok: ans ? ans.ok : false,
+        pts: ans ? ans.pts : 0
       });
     });
     var lb = buildLeaderboard();
@@ -1299,7 +1341,7 @@
       lines +=
         '<div class="mp-lb-row"><span class="name">' + esc(p.n) + "</span>" +
         '<span class="prog">' + sc.done + "/" + t + "</span>" +
-        '<span class="pts">' + sc.score + " pts</span></div>";
+        '<span class="pts">' + fmtScore(sc.score) + " pts</span></div>";
     });
     updateSubInfo(
       act.length + " joueur" + (act.length > 1 ? "s" : "") +
@@ -1368,6 +1410,7 @@
     S.round = 0;
     S.phase = "idle";
     S.answers = {};
+    S.correctByR = {};
     S.scores = {};
     S.assigns = {};
     S.assignLen = {};
@@ -1612,7 +1655,7 @@
           S.clientDone = true;
           setMainBtn({ which: "none" });
           $("g-wait").textContent =
-            "🏁 Terminé ! Score : " + msg.score + " pts — en attente des autres joueurs…";
+            "🏁 Terminé ! Score : " + fmtScore(msg.score) + " pts — en attente des autres joueurs…";
           $("g-wait").classList.remove("hidden");
         }
         break;
@@ -1885,6 +1928,12 @@
     var hostPlaysCb = $("host-plays");
     if (hostPlaysCb) {
       hostPlaysCb.onchange = function () { setHostAsPlayer(hostPlaysCb.checked); };
+    }
+
+    var fastScoringCb = $("fast-scoring");
+    if (fastScoringCb) {
+      fastScoringCb.checked = S.fastScoring;
+      fastScoringCb.onchange = function () { S.fastScoring = fastScoringCb.checked; };
     }
 
     var hostNameInput = $("host-name");
