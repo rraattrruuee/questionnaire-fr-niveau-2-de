@@ -364,7 +364,6 @@
         categoryName: categories[idx].name,
         categoryIndex: idx,
         questionIndex: 0,
-        questionText: "",
         questionType: "",
         score: 0,
         answeredCount: 0,
@@ -419,7 +418,7 @@
           from: "results"
         });
       }
-      window.__analytics.setQuizState(null);
+      if (window.__analytics) window.__analytics.setQuizState(null);
       goToPortal();
     };
 
@@ -549,7 +548,6 @@
         category_name: categories[currentCategoryIndex].name,
         category_index: currentCategoryIndex,
         question_index: currentQuestionIndex,
-        question_text: q.text,
         question_type: q.type,
         question_location: qloc,
         total_questions: questionsShuffled.length
@@ -562,7 +560,6 @@
         categoryName: categories[currentCategoryIndex].name,
         categoryIndex: currentCategoryIndex,
         questionIndex: currentQuestionIndex,
-        questionText: q.text,
         questionType: q.type,
         questionLocation: qloc,
         score: score,
@@ -627,14 +624,6 @@
     updateProgress();
 
     if (window.__analytics) {
-      var answerGiven = "";
-      if (q.type === "text") {
-        answerGiven = $("text-answer") ? $("text-answer").value : "";
-      } else if (userSelection) {
-        var selectedBtn = document.querySelector(".answer-btn.selected");
-        answerGiven = selectedBtn ? selectedBtn.textContent : "";
-      }
-
       var qloc2 = buildQuestionLocation(q);
       window.__analytics.track("quiz_question_answer", {
         quiz_id: getQuizIdFromURL(),
@@ -644,11 +633,9 @@
         category_name: categories[currentCategoryIndex].name,
         category_index: currentCategoryIndex,
         question_index: currentQuestionIndex,
-        question_text: q.text,
         question_type: q.type,
         question_location: qloc2,
         is_correct: isCorrect,
-        answer_given: answerGiven,
         score: score,
         answered_count: answeredCount,
         total_questions: questionsShuffled.length
@@ -661,7 +648,6 @@
         categoryName: categories[currentCategoryIndex].name,
         categoryIndex: currentCategoryIndex,
         questionIndex: currentQuestionIndex,
-        questionText: q.text,
         questionType: q.type,
         questionLocation: qloc2,
         score: score,

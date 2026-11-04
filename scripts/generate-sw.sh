@@ -15,7 +15,7 @@ if [ "${SKIP_VALIDATE:-0}" != "1" ]; then
 fi
 
 # 1. Find all relevant files, exclude scripts/capture/.git, URL-encode filenames
-FILES=$(find . -maxdepth 4 -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.svg" -o -name "*.png" -o -name "*.json" \) \
+FILES=$(find . -maxdepth 4 -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.svg" -o -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" -o -name "*.gif" -o -name "*.ico" -o -name "*.woff" -o -name "*.woff2" -o -name "*.json" \) \
     ! -path "./.*" \
     ! -path "./scripts/*" \
     ! -path "./capture/*" \

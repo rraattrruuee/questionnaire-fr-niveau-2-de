@@ -10,6 +10,13 @@ on:
       - "**/*.json"
       - "**/*.svg"
       - "**/*.png"
+      - "**/*.jpg"
+      - "**/*.jpeg"
+      - "**/*.webp"
+      - "**/*.gif"
+      - "**/*.ico"
+      - "**/*.woff"
+      - "**/*.woff2"
       - "scripts/generate-sw.sh"
       - ".github/workflows/**"
   workflow_dispatch:

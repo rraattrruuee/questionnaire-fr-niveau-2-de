@@ -7,29 +7,66 @@
   const NEW_BADGE_DAYS = 30;
   const RECENT_COUNT = 4;
 
-  function updateURLParameter(key, value) {
+  function updateURLParameter(key, value, replace) {
     const url = new URL(window.location);
     if (value === "all") {
       url.searchParams.delete(key);
     } else {
       url.searchParams.set(key, value);
     }
-    window.history.pushState({ path: url.href }, "", url.href);
+    const state = { path: url.href };
+    if (replace) {
+      window.history.replaceState(state, "", url.href);
+    } else {
+      window.history.pushState(state, "", url.href);
+    }
+  }
+
+  // Comparaison insensible a la casse ET aux accents.
+  function normalizeSearch(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+  }
+
+  let noResultsEl = null;
+  function ensureNoResults() {
+    if (noResultsEl) return noResultsEl;
+    noResultsEl = document.createElement("p");
+    noResultsEl.id = "no-results";
+    noResultsEl.className = "hidden";
+    noResultsEl.style.cssText =
+      "text-align:center;color:var(--couleur-gris);font-style:italic;margin:2rem 1rem;";
+    noResultsEl.textContent = "Aucun questionnaire ne correspond à cette recherche.";
+    sectionsContainer.appendChild(noResultsEl);
+    return noResultsEl;
   }
 
   function filterElements(searchTerm, filterTarget) {
-    const term = (searchTerm || "").toLowerCase().trim();
+    const term = normalizeSearch(searchTerm);
     const sections = document.querySelectorAll(".menu-section");
+    let anyVisible = false;
 
     sections.forEach((section) => {
       const sectionId = section.id;
       let sectionHasVisible = false;
       section.classList.remove("is-animated");
       const isTargeted = filterTarget === "all" || sectionId === filterTarget;
+      const titleEl = section.querySelector(".menu-title");
+      const sectionMatches =
+        term !== "" &&
+        !!titleEl &&
+        normalizeSearch(titleEl.textContent).includes(term);
+      const links = section.querySelectorAll(".bouton-lien");
 
-      section.querySelectorAll(".bouton-lien").forEach((link) => {
-        const text = link.textContent.toLowerCase();
-        const matches = term === "" || text.includes(term);
+      links.forEach((link) => {
+        // On cible le libelle, pas tout le lien : sinon le badge "Nouveau"
+        // rend tous les quiz trouvables en tapant "nouveau".
+        const labelEl = link.querySelector(".bouton-lien-label");
+        const text = normalizeSearch(labelEl ? labelEl.textContent : link.textContent);
+        const matches = term === "" || sectionMatches || text.includes(term);
         const wrapper = link.closest(".quiz-wrapper") || link;
         if (isTargeted && matches) {
           wrapper.classList.remove("hidden");
@@ -39,13 +76,20 @@
         }
       });
 
-      if (!isTargeted || !sectionHasVisible) {
-        section.classList.add("hidden");
-      } else {
+      // Un sujet sans quiz reste visible quand on le selectionne
+      // explicitement (sinon l'ecran devient entierement vide).
+      const emptySelection = isTargeted && term === "" && links.length === 0;
+      if (isTargeted && (sectionHasVisible || emptySelection)) {
         section.classList.remove("hidden");
+        anyVisible = true;
         setTimeout(() => section.classList.add("is-animated"), 0);
+      } else {
+        section.classList.add("hidden");
       }
     });
+
+    const noResults = ensureNoResults();
+    noResults.classList.toggle("hidden", !(term !== "" && !anyVisible));
   }
 
   function isRunningAsPWA() {
@@ -143,7 +187,7 @@
             subject_id: quiz.subject
           });
         }
-        downloadStandalone(quiz);
+        downloadStandalone(quiz, dlBtn);
       };
       wrapper.appendChild(dlBtn);
     }
@@ -250,8 +294,7 @@
       "</body>\n</html>";
   }
 
-  function downloadStandalone(quiz) {
-    var btn = document.querySelector('.btn-dl[title*="complet"]');
+  function downloadStandalone(quiz, btn) {
     if (btn) { btn.innerHTML = "⏳"; btn.style.pointerEvents = "none"; }
 
     Promise.all([
@@ -381,14 +424,32 @@
     });
 
     const labelButtons = document.querySelectorAll(".label-button");
+
+    function setActiveButton(target) {
+      labelButtons.forEach((b) => {
+        b.classList.toggle("active", b.getAttribute("data-target") === target);
+      });
+    }
+
+    function applyFilter(target, push) {
+      const known =
+        target === "all" ||
+        Array.prototype.some.call(
+          labelButtons,
+          (b) => b.getAttribute("data-target") === target
+        );
+      const next = known ? target : "all";
+      setActiveButton(next);
+      searchInput.value = "";
+      const current = new URL(window.location).searchParams.get("filtre") || "all";
+      if (push && current !== next) updateURLParameter("filtre", next);
+      filterElements("", next);
+    }
+
     labelButtons.forEach((button) => {
       button.addEventListener("click", function () {
         const target = this.getAttribute("data-target");
-        labelButtons.forEach((b) => b.classList.remove("active"));
-        this.classList.add("active");
-        searchInput.value = "";
-        updateURLParameter("filtre", target);
-        filterElements("", target);
+        applyFilter(target, true);
 
         if (window.__analytics) {
           window.__analytics.track("portal_filter", {
@@ -400,9 +461,10 @@
     });
 
     let searchTimeout = null;
-    searchInput.addEventListener("keyup", function () {
+    searchInput.addEventListener("input", function () {
       labelButtons.forEach((b) => b.classList.remove("active"));
-      updateURLParameter("filtre", "all");
+      // replaceState : chaque frappe ne doit pas creer une entree d'historique.
+      updateURLParameter("filtre", "all", true);
       filterElements(this.value, "all");
 
       clearTimeout(searchTimeout);
@@ -414,6 +476,12 @@
           }
         }, 800);
       }
+    });
+
+    // Le bouton Retour doit remettre l'interface en phase avec l'URL.
+    window.addEventListener("popstate", function () {
+      const params = new URLSearchParams(window.location.search);
+      applyFilter(params.get("filtre") || "all", false);
     });
 
     const multiLink = document.getElementById("multi-link");
@@ -435,17 +503,7 @@
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const initialFilter = urlParams.get("filtre") || "all";
-    const initialButton = document.querySelector(
-      `.label-button[data-target="${initialFilter}"]`
-    );
-
-    if (initialButton) {
-      initialButton.click();
-    } else {
-      const allBtnDefault = document.querySelector('.label-button[data-target="all"]');
-      if (allBtnDefault) allBtnDefault.click();
-    }
+    applyFilter(urlParams.get("filtre") || "all", false);
   }
 
   /* ---------------------------------------------------------
@@ -580,7 +638,7 @@
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.addEventListener("message", (event) => {
       if (!cachingIndicator) return;
-      const { type, completed, total, downloaded, unchanged } = event.data || {};
+      const { type, completed, total, downloaded, unchanged, failed } = event.data || {};
       if (type === "caching-start") {
         cachingIndicator.style.display = "block";
         cachingIndicator.textContent = "Vérification... 0%";
@@ -590,7 +648,9 @@
           cachingIndicator.textContent = "Vérification... " + pct + "%";
         }
       } else if (type === "caching-complete") {
-        if (typeof downloaded === "number" && downloaded > 0) {
+        if (typeof failed === "number" && failed > 0) {
+          cachingIndicator.textContent = failed + " fichier(s) non mis en cache";
+        } else if (typeof downloaded === "number" && downloaded > 0) {
           cachingIndicator.textContent = downloaded + " mis à jour";
         } else {
           cachingIndicator.textContent = "Tout est à jour";
@@ -600,12 +660,14 @@
     });
 
     window.addEventListener("load", () => {
+      const hadController = !!navigator.serviceWorker.controller;
       let refreshing = false;
       navigator.serviceWorker.addEventListener("controllerchange", () => {
-        if (!refreshing) {
-          window.location.reload();
-          refreshing = true;
-        }
+        // Premiere visite : le SW prend le controle, inutile de recharger.
+        // On ne recharge que si une mise a jour remplace un controleur existant.
+        if (!hadController || refreshing) return;
+        refreshing = true;
+        window.location.reload();
       });
       navigator.serviceWorker
         .register("service-worker.js", { scope: "./" })

@@ -48,7 +48,9 @@
     fetch(PH_HOST + "/batch", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
+      // Garde la requete en vie pendant la fermeture de l'onglet.
+      keepalive: true
     }).catch(function () {
       // Remet en queue en cas d'echec
       batch.forEach(function (item) { queue.push(item); });
@@ -88,7 +90,7 @@
 
   function identify(distinctId) {
     if (!distinctId) return;
-    localStorage.setItem("ph_distinct_id", distinctId);
+    try { localStorage.setItem("ph_distinct_id", distinctId); } catch (e) {}
   }
 
   window.addEventListener("beforeunload", function () {
@@ -101,7 +103,6 @@
       category_name: _lastQuizState ? _lastQuizState.categoryName : "",
       category_index: _lastQuizState ? _lastQuizState.categoryIndex : 0,
       question_index: _lastQuizState ? _lastQuizState.questionIndex : 0,
-      question_text: _lastQuizState ? _lastQuizState.questionText : "",
       question_type: _lastQuizState ? _lastQuizState.questionType : "",
       question_location: _lastQuizState ? _lastQuizState.questionLocation : "",
       score: _lastQuizState ? _lastQuizState.score : 0,
@@ -125,7 +126,6 @@
         category_name: _lastQuizState ? _lastQuizState.categoryName : "",
         category_index: _lastQuizState ? _lastQuizState.categoryIndex : 0,
         question_index: _lastQuizState ? _lastQuizState.questionIndex : 0,
-        question_text: _lastQuizState ? _lastQuizState.questionText : "",
         question_type: _lastQuizState ? _lastQuizState.questionType : "",
         question_location: _lastQuizState ? _lastQuizState.questionLocation : "",
         score: _lastQuizState ? _lastQuizState.score : 0,
@@ -135,6 +135,9 @@
       flushQueue();
     }
   });
+
+  // Reessaie d'envoyer les evenements en attente au retour du reseau.
+  window.addEventListener("online", flushQueue);
 
   /* ---------------------------------------------------------
      Expose API globale

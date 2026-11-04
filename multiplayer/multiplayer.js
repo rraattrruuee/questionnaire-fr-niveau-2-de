@@ -1772,7 +1772,7 @@
      SCANNER QR — rejoindre une partie en scannant le QR de l'hôte.
      BarcodeDetector (natif, Chrome/Android) si dispo, sinon jsQR (CDN).
      ============================================================ */
-  var scan = { stream: null, raf: 0, timer: 0, detector: null, canvas: null, ctx: null };
+  var scan = { stream: null, raf: 0, timer: 0, detector: null, canvas: null, ctx: null, active: false };
 
   function scanStatus(msg, cls) {
     var el = $("scan-status");
@@ -1807,6 +1807,7 @@
   }
 
   function stopScanner() {
+    scan.active = false;
     if (scan.raf) cancelAnimationFrame(scan.raf);
     if (scan.timer) clearTimeout(scan.timer);
     scan.raf = 0;
@@ -1902,16 +1903,24 @@
       return;
     }
     $("scan-overlay").classList.remove("hidden");
+    scan.active = true;
     scanStatus("Ouverture de la caméra…");
     track("multiplayer_scan_open");
     navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
       .then(function (stream) {
+        // L'utilisateur a ferme l'overlay avant l'autorisation : on libere
+        // immediatement la camera au lieu de la laisser allumee en arriere-plan.
+        if (!scan.active) {
+          stream.getTracks().forEach(function (t) { t.stop(); });
+          return;
+        }
         scan.stream = stream;
         var video = $("scan-video");
         video.srcObject = stream;
         return video.play();
       })
       .then(function () {
+        if (!scan.active) return;
         if ("BarcodeDetector" in window) {
           try {
             scan.detector = new window.BarcodeDetector({ formats: ["qr_code"] });

@@ -39,7 +39,8 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1793818197";
+const CACHE_PREFIX = "quiz-cache-";
+const CACHE_NAME = "quiz-cache-1793820365";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
@@ -84,6 +85,7 @@ function cacheAllAssets(force) {
       var completed = 0;
       var downloaded = 0;
       var unchanged = 0;
+      var failed = 0;
 
       notifyClients({ type: "caching-start", total: total });
 
@@ -106,7 +108,9 @@ function cacheAllAssets(force) {
                 return cache.put(item.url, res);
               }
             })
-            .catch(function () {})
+            .catch(function () {
+              failed++;
+            })
             .finally(function () {
               completed++;
               notifyClients({ type: "caching-progress", completed: completed, total: total });
@@ -115,7 +119,12 @@ function cacheAllAssets(force) {
       ).then(function () {
         return saveCacheMeta(cache, meta);
       }).then(function () {
-        notifyClients({ type: "caching-complete", downloaded: downloaded, unchanged: unchanged });
+        notifyClients({
+          type: "caching-complete",
+          downloaded: downloaded,
+          unchanged: unchanged,
+          failed: failed
+        });
       });
     });
   });
@@ -131,7 +140,13 @@ self.addEventListener("activate", (event) => {
     caches
       .keys()
       .then((keys) =>
-        Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+        // Ne supprimer que les anciennes versions de CE cache : les autres
+        // projets heberges sur la meme origine (GitHub Pages) ont les leurs.
+        Promise.all(
+          keys
+            .filter((k) => k.indexOf(CACHE_PREFIX) === 0 && k !== CACHE_NAME)
+            .map((k) => caches.delete(k))
+        )
       )
       .then(() => self.clients.claim())
   );
@@ -139,12 +154,8 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "cache-assets") {
-    cacheAllAssets(false);
+    event.waitUntil(cacheAllAssets(false));
   }
-});
-
-self.addEventListener("online", () => {
-  cacheAllAssets(false);
 });
 
 self.addEventListener("fetch", (event) => {
@@ -176,7 +187,13 @@ self.addEventListener("fetch", (event) => {
       .then((response) => {
         if (response && response.ok) {
           const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          // On attend l'ecriture du cache : sinon le SW peut etre arrete
+          // avant la fin et l'entree est perdue.
+          return caches
+            .open(CACHE_NAME)
+            .then((cache) => cache.put(request, clone))
+            .catch(() => {})
+            .then(() => response);
         }
         return response;
       })
@@ -184,9 +201,20 @@ self.addEventListener("fetch", (event) => {
         return caches.match(request).then((cached) => {
           if (cached) return cached;
           if (request.mode === "navigate") {
-            return caches.match("./index.html").then((index) => {
-              return index || caches.match("./offline.html");
-            });
+            // Une navigation vers un quiz avec ?id=... ne correspond pas a
+            // l'entree precachee "./quiz.html" (la query string compte).
+            // On renvoie donc la coquille du quiz, qui lit elle-meme l'id.
+            if (/\/quiz\.html$/.test(url.pathname)) {
+              return caches.match("./quiz.html").then((quiz) => {
+                return quiz || caches.match("./offline.html");
+              });
+            }
+            if (/\/$/.test(url.pathname) || /\/index\.html$/.test(url.pathname)) {
+              return caches.match("./index.html").then((index) => {
+                return index || caches.match("./offline.html");
+              });
+            }
+            return caches.match("./offline.html");
           }
           return caches.match("./offline.html");
         });

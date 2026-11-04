@@ -86,7 +86,7 @@ Dans `data/<matiere>/mon-quiz.json` :
     {
       "q": "Question ?",
       "answers": ["Choix A", "Choix B", "Choix C", "Choix D"],
-      "correct": "Choix A"
+      "correct": 0
     }
   ]
 }
@@ -202,7 +202,7 @@ Puissances : `x<sup>2</sup>` — Multiplication : `×` (pas `*`).
   "title": "Mon quiz",
   "css": ".important { color:#f59e0b; font-weight:900; }",
   "questions": [
-    { "q": "Question <span class='important'>cle</span> ?", "answers": ["A", "B"], "correct": "A" }
+    { "q": "Question <span class='important'>cle</span> ?", "answers": ["A", "B"], "correct": 0 }
   ]
 }
 ```
