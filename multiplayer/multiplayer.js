@@ -830,53 +830,23 @@
       });
   }
 
-  // Endpoint Cloudflare Calls (TURN WebRTC) via le worker du projet
-  var CLOUDFLARE_TURN_ENDPOINT = "https://posthog-proxy.rrraattrruuee.workers.dev/turn-credentials";
-  var _cachedIceConfig = null;
-
-  function getPeerIceConfig() {
-    if (_cachedIceConfig) {
-      return Promise.resolve(_cachedIceConfig);
+  // Configuration WebRTC 100% gratuite et illimitée via les serveurs STUN publics de Google
+  // Résout la majorité des connexions sans aucune inscription ni configuration.
+  var PEER_ICE_CONFIG = {
+    config: {
+      iceServers: [
+        { urls: "stun:stun.l.google.com:19302" },
+        { urls: "stun:stun1.l.google.com:19302" },
+        { urls: "stun:stun2.l.google.com:19302" },
+        { urls: "stun:stun.cloudflare.com:3478" }
+      ]
     }
-    var fallbackConfig = {
-      config: {
-        iceServers: [
-          { urls: "stun:stun.cloudflare.com:3478" },
-          { urls: "stun:stun.l.google.com:19302" },
-          { urls: "stun:stun1.l.google.com:19302" }
-        ]
-      }
-    };
-
-    var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
-    var signal = controller ? controller.signal : undefined;
-    var timer = controller ? setTimeout(function () { controller.abort(); }, 3000) : null;
-
-    return fetch(CLOUDFLARE_TURN_ENDPOINT, { signal: signal })
-      .then(function (res) {
-        if (timer) clearTimeout(timer);
-        return res.json();
-      })
-      .then(function (data) {
-        if (data && Array.isArray(data.iceServers) && data.iceServers.length > 0) {
-          _cachedIceConfig = { config: { iceServers: data.iceServers } };
-          return _cachedIceConfig;
-        }
-        _cachedIceConfig = fallbackConfig;
-        return _cachedIceConfig;
-      })
-      .catch(function () {
-        if (timer) clearTimeout(timer);
-        _cachedIceConfig = fallbackConfig;
-        return _cachedIceConfig;
-      });
-  }
+  };
 
   function createPeerWithCode(attempt) {
-    return getPeerIceConfig().then(function (iceConfig) {
-      return new Promise(function (resolve, reject) {
-        var code = makeCode();
-        var peer = new Peer(ROOM_PREFIX + code, iceConfig);
+    return new Promise(function (resolve, reject) {
+      var code = makeCode();
+      var peer = new Peer(ROOM_PREFIX + code, PEER_ICE_CONFIG);
       var opened = false;
       var timer = setTimeout(function () {
         if (!opened) {
@@ -1543,9 +1513,8 @@
     track("multiplayer_join_attempt");
 
     ensurePeer()
-      .then(getPeerIceConfig)
-      .then(function (iceConfig) {
-        var peer = new Peer(iceConfig);
+      .then(function () {
+        var peer = new Peer(PEER_ICE_CONFIG);
         S.peer = peer;
         var settled = false;
         var timer = setTimeout(function () {
