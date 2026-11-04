@@ -64,7 +64,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update service-worker.js assets and cache version"
+            git commit -m "chore: update service-worker.js assets and cache version [skip ci]"
             git push
           fi
 
