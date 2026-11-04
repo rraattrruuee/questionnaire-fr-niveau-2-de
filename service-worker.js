@@ -9,6 +9,7 @@ const STATIC_ASSETS = [
   "./data/francais/methodologie-commentaire.json",
   "./data/francais/outils-analyse-litteraire.json",
   "./data/francais/versification-formes-fixes.json",
+  "./data/histoire-geo/mediterranee-medievale.json",
   "./data/histoire-geo/periodes-athenes.json",
   "./data/histoire-geo/vocabulaire-essentiel.json",
   "./data/italien/carattere-hobby-segni.json",
@@ -38,7 +39,7 @@ const STATIC_ASSETS = [
 ];
 // END_ASSETS
 
-const CACHE_NAME = "quiz-cache-1792258869";
+const CACHE_NAME = "quiz-cache-1793817828";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {

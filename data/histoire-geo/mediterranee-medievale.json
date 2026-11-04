@@ -1,0 +1,1547 @@
+{
+  "subject": "histoire-geo",
+  "title": "La Méditerranée médiévale — espace d'échanges et de conflits",
+  "description": "Sous-thème 3 : les trois grandes civilisations méditerranéennes au Moyen Âge (Byzance, monde musulman, Occident chrétien), croisades, Reconquista, Jérusalem, Venise et échanges — 125 questions autonomes.",
+  "categories": [
+    {
+      "category": "Trois civilisations — repères et dates",
+      "questions": [
+        {
+          "text": "Quel événement de 476 marque le début du Moyen Âge en Occident ?",
+          "type": "mcq",
+          "options": [
+            "La chute de l'Empire romain d'Occident",
+            "La prise de Constantinople",
+            "Le schisme entre chrétiens",
+            "La mort de Mahomet"
+          ],
+          "correct": "La chute de l'Empire romain d'Occident",
+          "solution": "476 : chute de l'Empire romain d'Occident, remplacé par des royaumes germaniques."
+        },
+        {
+          "text": "En quelle année l'Empire byzantin disparaît-il, quand les Turcs prennent Constantinople ?",
+          "type": "mcq",
+          "options": [
+            "1453",
+            "1204",
+            "1099",
+            "1187"
+          ],
+          "correct": "1453",
+          "solution": "1453 : les Turcs prennent Constantinople, fin de l'Empire byzantin."
+        },
+        {
+          "text": "En quelle année meurt Mahomet, fondateur de l'islam ?",
+          "type": "mcq",
+          "options": [
+            "632",
+            "610",
+            "476",
+            "1453"
+          ],
+          "correct": "632",
+          "solution": "Après la mort de Mahomet en 632, ses successeurs multiplient les conquêtes."
+        },
+        {
+          "text": "Comment appelle-t-on l'empereur byzantin, considéré comme le représentant de Dieu sur terre ?",
+          "type": "mcq",
+          "options": [
+            "Le basileus",
+            "Le calife",
+            "Le pape",
+            "Le sultan"
+          ],
+          "correct": "Le basileus",
+          "solution": "Le basileus est l'empereur byzantin, pouvoir absolu et divin."
+        },
+        {
+          "text": "Quelle est la capitale de l'Empire byzantin ?",
+          "type": "mcq",
+          "options": [
+            "Constantinople",
+            "Rome",
+            "Bagdad",
+            "Damas"
+          ],
+          "correct": "Constantinople",
+          "solution": "Constantinople est la capitale de l'Empire byzantin."
+        },
+        {
+          "text": "Jusqu'au Xe siècle, qui dirige le monde musulman ?",
+          "type": "mcq",
+          "options": [
+            "Le calife",
+            "Le basileus",
+            "Le pape",
+            "Le roi de France"
+          ],
+          "correct": "Le calife",
+          "solution": "Le calife est le chef politique et religieux du monde musulman."
+        },
+        {
+          "text": "Pourquoi parle-t-on d'« Occident chrétien » à partir de 476 ?",
+          "type": "mcq",
+          "options": [
+            "Parce que des royaumes germaniques succèdent à l'Empire romain d'Occident",
+            "Parce que l'Empire byzantin domine l'Occident",
+            "Parce que les musulmans conquièrent l'Europe",
+            "Parce que le pape gouverne toute l'Europe"
+          ],
+          "correct": "Parce que des royaumes germaniques succèdent à l'Empire romain d'Occident",
+          "solution": "476 : des royaumes fondés par les peuples germaniques succèdent à l'Empire romain d'Occident."
+        },
+        {
+          "text": "Quel empire réunit les royaumes germaniques au début du IXe siècle ?",
+          "type": "mcq",
+          "options": [
+            "L'Empire carolingien",
+            "L'Empire byzantin",
+            "L'Empire ottoman",
+            "L'Empire romain d'Orient"
+          ],
+          "correct": "L'Empire carolingien",
+          "solution": "Début IXe siècle : les royaumes germaniques sont réunis au sein de l'Empire carolingien."
+        },
+        {
+          "text": "Après l'éclatement de l'Empire carolingien, quels royaumes apparaissent ?",
+          "type": "mcq",
+          "options": [
+            "France, Saint-Empire, Angleterre, etc.",
+            "Italie, Espagne, Portugal",
+            "Byzance, Bagdad, Damas",
+            "Égypte, Syrie, Palestine"
+          ],
+          "correct": "France, Saint-Empire, Angleterre, etc.",
+          "solution": "L'Empire carolingien éclate en royaumes multiples : France, Saint-Empire, Angleterre, etc."
+        },
+        {
+          "text": "Quelle ville est la capitale religieuse de l'Occident chrétien ?",
+          "type": "mcq",
+          "options": [
+            "Rome",
+            "Constantinople",
+            "Jérusalem",
+            "Paris"
+          ],
+          "correct": "Rome",
+          "solution": "Rome est la capitale religieuse de l'Occident chrétien, siège du pape."
+        },
+        {
+          "text": "Quel est le moteur de l'expansion rapide de l'empire musulman ?",
+          "type": "mcq",
+          "options": [
+            "Le djihad, conquête menée au nom de l'islam",
+            "Le commerce maritime",
+            "Les alliances avec Byzance",
+            "La féodalité"
+          ],
+          "correct": "Le djihad, conquête menée au nom de l'islam",
+          "solution": "Le djihad est la conquête menée au nom de l'islam, moteur de l'expansion."
+        },
+        {
+          "text": "Sous quel empereur byzantin l'Empire s'agrandit-il au VIe siècle ?",
+          "type": "mcq",
+          "options": [
+            "Justinien",
+            "Basile II",
+            "Manuel Ier Comnène",
+            "Constantin"
+          ],
+          "correct": "Justinien",
+          "solution": "Au VIe siècle, sous Justinien, l'Empire byzantin s'agrandit."
+        },
+        {
+          "text": "Jusqu'où s'étend l'empire arabo-musulman aux VIIe-VIIIe siècles ?",
+          "type": "mcq",
+          "options": [
+            "Du Moyen-Orient à l'Espagne",
+            "De l'Angleterre à la Russie",
+            "De la Scandinavie à l'Égypte",
+            "De l'Inde à la Chine"
+          ],
+          "correct": "Du Moyen-Orient à l'Espagne",
+          "solution": "L'empire arabo-musulman s'étend du Moyen-Orient à l'Espagne."
+        },
+        {
+          "text": "Quelle année marque le schisme entre les chrétiens d'Orient et d'Occident ?",
+          "type": "mcq",
+          "options": [
+            "1054",
+            "1095",
+            "1204",
+            "1453"
+          ],
+          "correct": "1054",
+          "solution": "1054 : schisme entre chrétiens (Orient orthodoxe / Occident catholique)."
+        }
+      ]
+    },
+    {
+      "category": "Organisation politique des trois mondes",
+      "questions": [
+        {
+          "text": "Comment est organisé politiquement l'Empire byzantin ?",
+          "type": "mcq",
+          "options": [
+            "Un empire unifié autour du basileus",
+            "Trois califats rivaux",
+            "Une féodalité fragmentée",
+            "Une république maritime"
+          ],
+          "correct": "Un empire unifié autour du basileus",
+          "solution": "L'Empire byzantin est unifié, dirigé par le basileus, pouvoir absolu et divin."
+        },
+        {
+          "text": "Comment évolue le monde musulman après le Xe siècle ?",
+          "type": "mcq",
+          "options": [
+            "Il éclate en trois califats rivaux avec trois capitales",
+            "Il devient une féodalité",
+            "Il est conquis par Byzance",
+            "Il se convertit au christianisme"
+          ],
+          "correct": "Il éclate en trois califats rivaux avec trois capitales",
+          "solution": "Après le Xe siècle, l'empire éclate en trois califats rivaux avec trois capitales."
+        },
+        {
+          "text": "Comment est organisé l'Occident chrétien après l'éclatement carolingien ?",
+          "type": "mcq",
+          "options": [
+            "En royaumes multiples et fragmentés",
+            "En un empire unifié",
+            "En trois califats",
+            "En une seule république"
+          ],
+          "correct": "En royaumes multiples et fragmentés",
+          "solution": "L'Occident chrétien est divisé en royaumes multiples (France, Saint-Empire, Angleterre...)."
+        },
+        {
+          "text": "Qui détient le pouvoir local dans l'Occident féodal ?",
+          "type": "mcq",
+          "options": [
+            "Les seigneurs",
+            "Les califes",
+            "Les basileus",
+            "Les marchands vénitiens"
+          ],
+          "correct": "Les seigneurs",
+          "solution": "Les seigneurs, grands propriétaires et chefs de guerre, détiennent le pouvoir local."
+        },
+        {
+          "text": "Quelle est la nature du pouvoir du calife ?",
+          "type": "mcq",
+          "options": [
+            "Politique et religieux",
+            "Uniquement militaire",
+            "Uniquement économique",
+            "Purement symbolique"
+          ],
+          "correct": "Politique et religieux",
+          "solution": "Le calife est un chef politique et religieux, successeur de Mahomet."
+        },
+        {
+          "text": "Quelle est la nature du pouvoir du basileus ?",
+          "type": "mcq",
+          "options": [
+            "Absolu et divin",
+            "Électif et temporaire",
+            "Purement militaire",
+            "Soumis au pape"
+          ],
+          "correct": "Absolu et divin",
+          "solution": "Le basileus est considéré comme le représentant de Dieu sur terre : pouvoir absolu et divin."
+        },
+        {
+          "text": "Quelle est la nature du pouvoir du pape en Occident ?",
+          "type": "mcq",
+          "options": [
+            "Religieux, il impose son autorité aux souverains (XIe s.)",
+            "Militaire uniquement",
+            "Économique uniquement",
+            "Il n'a aucun pouvoir"
+          ],
+          "correct": "Religieux, il impose son autorité aux souverains (XIe s.)",
+          "solution": "Le pape, chef de l'Église, impose son autorité aux souverains à partir du XIe siècle."
+        },
+        {
+          "text": "Quelles sont les trois capitales des califats rivaux ?",
+          "type": "mcq",
+          "options": [
+            "Bagdad, Cordoue, Le Caire",
+            "Rome, Paris, Londres",
+            "Constantinople, Venise, Gênes",
+            "Damas, Jérusalem, Édesse"
+          ],
+          "correct": "Bagdad, Cordoue, Le Caire",
+          "solution": "Les trois califats rivaux ont trois capitales, dont Bagdad et Cordoue."
+        },
+        {
+          "text": "Comment appelle-t-on le système politique et social de l'Occident médiéval ?",
+          "type": "mcq",
+          "options": [
+            "La féodalité",
+            "Le califat",
+            "Le basileat",
+            "La république maritime"
+          ],
+          "correct": "La féodalité",
+          "solution": "La féodalité est le système pyramidal de l'Occident médiéval."
+        },
+        {
+          "text": "Dans la féodalité, à qui est soumis chaque homme en dehors du roi ?",
+          "type": "mcq",
+          "options": [
+            "À un autre homme, dans un système pyramidal",
+            "Au calife",
+            "Au basileus",
+            "À aucun pouvoir"
+          ],
+          "correct": "À un autre homme, dans un système pyramidal",
+          "solution": "En dehors du roi, chaque homme est soumis à un autre, dans un système pyramidal : la féodalité."
+        },
+        {
+          "text": "Quelle capitale byzantine devient un enjeu majeur des croisades ?",
+          "type": "mcq",
+          "options": [
+            "Constantinople",
+            "Rome",
+            "Jérusalem",
+            "Venise"
+          ],
+          "correct": "Constantinople",
+          "solution": "Constantinople, capitale byzantine, est pillée lors de la 4e croisade en 1204."
+        },
+        {
+          "text": "Quel empire est qualifié d'« unifié » autour d'un empereur divin ?",
+          "type": "mcq",
+          "options": [
+            "L'Empire byzantin",
+            "Le monde musulman",
+            "L'Occident chrétien",
+            "L'Empire carolingien"
+          ],
+          "correct": "L'Empire byzantin",
+          "solution": "L'Empire byzantin est unifié autour du basileus."
+        },
+        {
+          "text": "Quel ensemble de civilisation est qualifié de « fragmenté, local » ?",
+          "type": "mcq",
+          "options": [
+            "L'Occident chrétien",
+            "L'Empire byzantin",
+            "Le monde musulman",
+            "L'Empire ottoman"
+          ],
+          "correct": "L'Occident chrétien",
+          "solution": "L'Occident chrétien est fragmenté et local, avec des seigneurs locaux."
+        },
+        {
+          "text": "Quel ensemble de civilisation est qualifié de « politico-religieux » ?",
+          "type": "mcq",
+          "options": [
+            "Le monde musulman",
+            "L'Empire byzantin",
+            "L'Occident chrétien",
+            "Venise"
+          ],
+          "correct": "Le monde musulman",
+          "solution": "Le monde musulman est dirigé par le calife, chef politico-religieux."
+        }
+      ]
+    },
+    {
+      "category": "Religions et cultures",
+      "questions": [
+        {
+          "text": "Quelle est la religion de l'Empire byzantin ?",
+          "type": "mcq",
+          "options": [
+            "Le christianisme orthodoxe",
+            "L'islam",
+            "Le christianisme catholique",
+            "Le judaïsme"
+          ],
+          "correct": "Le christianisme orthodoxe",
+          "solution": "Les Byzantins sont chrétiens orthodoxes."
+        },
+        {
+          "text": "Quelle langue est officielle dans l'Empire byzantin ?",
+          "type": "mcq",
+          "options": [
+            "Le grec",
+            "Le latin",
+            "L'arabe",
+            "Le français"
+          ],
+          "correct": "Le grec",
+          "solution": "Le grec est la langue officielle de l'Empire byzantin."
+        },
+        {
+          "text": "Quelle est la religion du monde musulman ?",
+          "type": "mcq",
+          "options": [
+            "L'islam",
+            "Le christianisme",
+            "Le judaïsme",
+            "Le polythéisme"
+          ],
+          "correct": "L'islam",
+          "solution": "Les habitants du monde musulman sont musulmans (monothéistes)."
+        },
+        {
+          "text": "Quelle est la langue principale du monde musulman ?",
+          "type": "mcq",
+          "options": [
+            "L'arabe",
+            "Le grec",
+            "Le latin",
+            "Le turc"
+          ],
+          "correct": "L'arabe",
+          "solution": "L'arabe est la langue principale du monde musulman."
+        },
+        {
+          "text": "Quel livre sacré contient la parole de Mahomet pour les musulmans ?",
+          "type": "mcq",
+          "options": [
+            "Le Coran",
+            "La Bible",
+            "La Torah",
+            "Les Évangiles"
+          ],
+          "correct": "Le Coran",
+          "solution": "Le Coran contient la parole de Mahomet."
+        },
+        {
+          "text": "Quelle est la religion de l'Occident chrétien ?",
+          "type": "mcq",
+          "options": [
+            "Le christianisme catholique",
+            "Le christianisme orthodoxe",
+            "L'islam",
+            "Le judaïsme"
+          ],
+          "correct": "Le christianisme catholique",
+          "solution": "Les habitants de l'Occident sont chrétiens catholiques."
+        },
+        {
+          "text": "Quelle langue est celle des élites de l'Occident chrétien ?",
+          "type": "mcq",
+          "options": [
+            "Le latin",
+            "Le grec",
+            "L'arabe",
+            "Le francique"
+          ],
+          "correct": "Le latin",
+          "solution": "Le latin est la langue des élites et de l'Église en Occident."
+        },
+        {
+          "text": "Quel événement de 1054 sépare les chrétiens d'Orient et d'Occident ?",
+          "type": "mcq",
+          "options": [
+            "Le schisme",
+            "La Reconquista",
+            "La croisade",
+            "Le djihad"
+          ],
+          "correct": "Le schisme",
+          "solution": "1054 : le schisme sépare l'Église orthodoxe de l'Église catholique."
+        },
+        {
+          "text": "Quelles sont les deux branches principales de l'islam mentionnées ?",
+          "type": "mcq",
+          "options": [
+            "Sunnites et chiites",
+            "Catholiques et orthodoxes",
+            "Juifs et chrétiens",
+            "Latins et Grecs"
+          ],
+          "correct": "Sunnites et chiites",
+          "solution": "Les musulmans sont divisés entre sunnites et chiites."
+        },
+        {
+          "text": "Que signifie le mot « schisme » ?",
+          "type": "mcq",
+          "options": [
+            "Séparation entre deux Églises",
+            "Guerre sainte",
+            "Conquête territoriale",
+            "Traduction d'un texte"
+          ],
+          "correct": "Séparation entre deux Églises",
+          "solution": "Le schisme est la séparation entre deux Églises."
+        },
+        {
+          "text": "Quelle expression désigne les chrétiens d'Orient qui vénèrent les icônes ?",
+          "type": "mcq",
+          "options": [
+            "Chrétiens orthodoxes",
+            "Chrétiens catholiques",
+            "Musulmans sunnites",
+            "Juifs sépharades"
+          ],
+          "correct": "Chrétiens orthodoxes",
+          "solution": "Les chrétiens orthodoxes partagent les croyances des chrétiens d'Occident mais pas les rites (vénèrent les icônes, prêtres mariés...)."
+        },
+        {
+          "text": "Quelle croyance explique l'influence de l'Église en Occident ?",
+          "type": "mcq",
+          "options": [
+            "L'espoir du paradis éternel (salut)",
+            "La peur du calife",
+            "Le commerce maritime",
+            "La puissance militaire byzantine"
+          ],
+          "correct": "L'espoir du paradis éternel (salut)",
+          "solution": "L'espoir du paradis éternel (salut) explique l'influence de l'Église."
+        },
+        {
+          "text": "Quelle est la caractéristique commune aux trois religions méditerranéennes ?",
+          "type": "mcq",
+          "options": [
+            "Le monothéisme",
+            "Le polythéisme",
+            "L'athéisme",
+            "Le culte des icônes"
+          ],
+          "correct": "Le monothéisme",
+          "solution": "Juifs, chrétiens et musulmans sont monothéistes."
+        },
+        {
+          "text": "Quel est le rôle de l'Église dans la société occidentale ?",
+          "type": "mcq",
+          "options": [
+            "Elle encadre les fidèles et impose son autorité",
+            "Elle dirige l'armée byzantine",
+            "Elle gère les souks",
+            "Elle nomme les califes"
+          ],
+          "correct": "Elle encadre les fidèles et impose son autorité",
+          "solution": "L'Église encadre les chrétiens et impose son autorité aux souverains."
+        }
+      ]
+    },
+    {
+      "category": "Sociétés et fonctionnement",
+      "questions": [
+        {
+          "text": "Où vit la majorité des habitants du monde musulman ?",
+          "type": "mcq",
+          "options": [
+            "Dans de grandes villes",
+            "À la campagne",
+            "Dans des monastères",
+            "Dans des châteaux forts"
+          ],
+          "correct": "Dans de grandes villes",
+          "solution": "La civilisation musulmane est urbaine : la majorité vit dans de grandes villes."
+        },
+        {
+          "text": "Autour de quels bâtiments s'organisent les villes musulmanes ?",
+          "type": "mcq",
+          "options": [
+            "Une grande mosquée et des marchés couverts (souks)",
+            "Une cathédrale et un château",
+            "Un forum et des thermes",
+            "Une synagogue et une école"
+          ],
+          "correct": "Une grande mosquée et des marchés couverts (souks)",
+          "solution": "Les villes musulmanes s'organisent autour d'une grande mosquée et de marchés couverts (souks)."
+        },
+        {
+          "text": "Où vit la majorité des habitants de l'Occident chrétien ?",
+          "type": "mcq",
+          "options": [
+            "À la campagne, dans des seigneuries",
+            "Dans de grandes villes",
+            "Dans des ports",
+            "Dans des monastères uniquement"
+          ],
+          "correct": "À la campagne, dans des seigneuries",
+          "solution": "La majorité des habitants de l'Occident sont ruraux, des paysans vivant dans une seigneurie."
+        },
+        {
+          "text": "Quel système social caractérise l'Occident médiéval ?",
+          "type": "mcq",
+          "options": [
+            "La féodalité",
+            "Le califat",
+            "L'esclavage de masse",
+            "La démocratie"
+          ],
+          "correct": "La féodalité",
+          "solution": "La féodalité est le système pyramidal de l'Occident médiéval."
+        },
+        {
+          "text": "Qu'est-ce qu'une seigneurie ?",
+          "type": "mcq",
+          "options": [
+            "Un domaine rural dirigé par un seigneur",
+            "Une ville marchande",
+            "Un califat",
+            "Un port méditerranéen"
+          ],
+          "correct": "Un domaine rural dirigé par un seigneur",
+          "solution": "La seigneurie est un domaine rural où vivent des paysans sous l'autorité d'un seigneur."
+        },
+        {
+          "text": "Quelle activité domine l'économie de l'Occident chrétien ?",
+          "type": "mcq",
+          "options": [
+            "L'agriculture",
+            "Le commerce maritime",
+            "L'artisanat de luxe",
+            "L'exploitation minière"
+          ],
+          "correct": "L'agriculture",
+          "solution": "La société occidentale est rurale et agricole."
+        },
+        {
+          "text": "Quelle activité domine l'économie du monde musulman ?",
+          "type": "mcq",
+          "options": [
+            "Le commerce dans les grandes villes",
+            "L'agriculture de subsistance",
+            "La pêche",
+            "La féodalité"
+          ],
+          "correct": "Le commerce dans les grandes villes",
+          "solution": "Le monde musulman est une civilisation urbaine et commerçante."
+        },
+        {
+          "text": "Quel type de produits est échangé dans les souks ?",
+          "type": "mcq",
+          "options": [
+            "Des marchandises variées (épices, tissus, etc.)",
+            "Uniquement du poisson",
+            "Uniquement des armes",
+            "Uniquement du blé"
+          ],
+          "correct": "Des marchandises variées (épices, tissus, etc.)",
+          "solution": "Les souks sont des marchés couverts où circulent de nombreuses marchandises."
+        },
+        {
+          "text": "Qui sont les « ruraux » dans l'Occident médiéval ?",
+          "type": "mcq",
+          "options": [
+            "Les paysans vivant dans une seigneurie",
+            "Les marchands des villes",
+            "Les moines",
+            "Les chevaliers"
+          ],
+          "correct": "Les paysans vivant dans une seigneurie",
+          "solution": "Les ruraux sont les paysans qui vivent dans une seigneurie."
+        },
+        {
+          "text": "Quel rôle jouent les grands propriétaires et chefs de guerre au IXe-Xe siècle ?",
+          "type": "mcq",
+          "options": [
+            "Ils affirment leur pouvoir face aux rois affaiblis",
+            "Ils fondent des califats",
+            "Ils deviennent basileus",
+            "Ils conquièrent Jérusalem"
+          ],
+          "correct": "Ils affirment leur pouvoir face aux rois affaiblis",
+          "solution": "Les invasions affaiblissent les rois ; les seigneurs affirment leur pouvoir."
+        },
+        {
+          "text": "Quelles invasions affaiblissent les royaumes occidentaux aux IXe-Xe siècles ?",
+          "type": "mcq",
+          "options": [
+            "Normands, Musulmans (Espagne), etc.",
+            "Mongols et Chinois",
+            "Byzantins et Perses",
+            "Vikings et Russes uniquement"
+          ],
+          "correct": "Normands, Musulmans (Espagne), etc.",
+          "solution": "Les royaumes subissent des invasions (Normands, Musulmans d'Espagne...) qui affaiblissent les rois."
+        },
+        {
+          "text": "Comment se traduit la richesse des villes musulmanes ?",
+          "type": "mcq",
+          "options": [
+            "Par de grands marchés et une intense activité commerciale",
+            "Par des châteaux forts",
+            "Par des monastères",
+            "Par des seigneuries"
+          ],
+          "correct": "Par de grands marchés et une intense activité commerciale",
+          "solution": "Les villes musulmanes sont des centres commerciaux majeurs."
+        },
+        {
+          "text": "Quelle civilisation est qualifiée d'« urbaine » dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "La civilisation musulmane",
+            "L'Occident chrétien",
+            "L'Empire byzantin",
+            "Venise uniquement"
+          ],
+          "correct": "La civilisation musulmane",
+          "solution": "Le monde musulman est une civilisation urbaine."
+        },
+        {
+          "text": "Quelle activité caractérise la vie des campagnes occidentales ?",
+          "type": "mcq",
+          "options": [
+            "L'agriculture dans le cadre de la seigneurie",
+            "Le commerce maritime",
+            "La traduction de textes",
+            "L'artisanat de luxe"
+          ],
+          "correct": "L'agriculture dans le cadre de la seigneurie",
+          "solution": "La vie à la campagne est agricole et organisée autour de la seigneurie."
+        }
+      ]
+    },
+    {
+      "category": "Croisades, Reconquista et Jérusalem",
+      "questions": [
+        {
+          "text": "Où se déroule la Reconquista ?",
+          "type": "mcq",
+          "options": [
+            "Dans la péninsule Ibérique",
+            "En Asie Mineure",
+            "En Égypte",
+            "À Constantinople"
+          ],
+          "correct": "Dans la péninsule Ibérique",
+          "solution": "La Reconquista se déroule dans la péninsule Ibérique."
+        },
+        {
+          "text": "Vers quelles régions se déroulent principalement les croisades ?",
+          "type": "mcq",
+          "options": [
+            "La Méditerranée orientale et les lieux saints",
+            "La péninsule Ibérique",
+            "L'Afrique du Nord",
+            "L'Europe du Nord"
+          ],
+          "correct": "La Méditerranée orientale et les lieux saints",
+          "solution": "Les croisades visent la Méditerranée orientale et les lieux saints, notamment Jérusalem."
+        },
+        {
+          "text": "Quelle ville est un enjeu majeur des croisades ?",
+          "type": "mcq",
+          "options": [
+            "Jérusalem",
+            "Paris",
+            "Rome",
+            "Bagdad"
+          ],
+          "correct": "Jérusalem",
+          "solution": "Jérusalem est un enjeu religieux, symbolique et politique majeur."
+        },
+        {
+          "text": "Pourquoi Jérusalem est-elle « trois fois sainte » ?",
+          "type": "mcq",
+          "options": [
+            "Elle est sainte pour les juifs, les chrétiens et les musulmans",
+            "Elle est sainte pour trois empereurs",
+            "Elle abrite trois palais",
+            "Elle est divisée en trois quartiers"
+          ],
+          "correct": "Elle est sainte pour les juifs, les chrétiens et les musulmans",
+          "solution": "Jérusalem est une ville sainte majeure pour les trois religions monothéistes."
+        },
+        {
+          "text": "Pour les juifs, quel roi aurait fait de Jérusalem sa capitale vers 1000 av. J.-C. ?",
+          "type": "mcq",
+          "options": [
+            "Le roi David",
+            "Le roi Salomon",
+            "Moïse",
+            "Abraham"
+          ],
+          "correct": "Le roi David",
+          "solution": "Le roi David, père de Salomon, aurait fait de Jérusalem sa capitale vers 1000 av. J.-C."
+        },
+        {
+          "text": "Quel vestige du second Temple est un lieu saint juif à Jérusalem ?",
+          "type": "mcq",
+          "options": [
+            "Le mur des Lamentations",
+            "Le Saint-Sépulcre",
+            "La mosquée Al-Aqsa",
+            "Le Saint Empire"
+          ],
+          "correct": "Le mur des Lamentations",
+          "solution": "Le mur des Lamentations est un vestige du mur de soutènement de l'esplanade du second Temple."
+        },
+        {
+          "text": "Pour les chrétiens, quel lieu est traditionnellement lié à la crucifixion et à la résurrection de Jésus ?",
+          "type": "mcq",
+          "options": [
+            "Le Saint-Sépulcre",
+            "Le mur des Lamentations",
+            "La mosquée Al-Aqsa",
+            "Le Calvaire"
+          ],
+          "correct": "Le Saint-Sépulcre",
+          "solution": "Le Saint-Sépulcre est considéré comme le lieu de la crucifixion, de la mise au tombeau et de la résurrection de Jésus."
+        },
+        {
+          "text": "En quelle année a lieu l'appel à la croisade ?",
+          "type": "mcq",
+          "options": [
+            "1095",
+            "1054",
+            "1099",
+            "1147"
+          ],
+          "correct": "1095",
+          "solution": "1095 : appel à la croisade."
+        },
+        {
+          "text": "En quelle année les croisés prennent-ils Jérusalem ?",
+          "type": "mcq",
+          "options": [
+            "1099",
+            "1095",
+            "1147",
+            "1187"
+          ],
+          "correct": "1099",
+          "solution": "1099 : prise de Jérusalem par les croisés."
+        },
+        {
+          "text": "En quelle année Saladin reprend-il Jérusalem ?",
+          "type": "mcq",
+          "options": [
+            "1187",
+            "1099",
+            "1204",
+            "1147"
+          ],
+          "correct": "1187",
+          "solution": "1187 : Saladin reprend Jérusalem."
+        },
+        {
+          "text": "Quel événement de 1204 marque la quatrième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Le sac de Constantinople",
+            "La prise de Jérusalem",
+            "La perte d'Édesse",
+            "L'échec du siège de Damas"
+          ],
+          "correct": "Le sac de Constantinople",
+          "solution": "1204 : sac de Constantinople lors de la quatrième croisade."
+        },
+        {
+          "text": "Que signifie « croisade » ?",
+          "type": "mcq",
+          "options": [
+            "Une expédition militaire chrétienne vers l'Orient",
+            "Une conquête chrétienne en péninsule Ibérique",
+            "Une séparation entre deux Églises",
+            "Un établissement commercial"
+          ],
+          "correct": "Une expédition militaire chrétienne vers l'Orient",
+          "solution": "La croisade est une expédition militaire chrétienne vers l'Orient."
+        },
+        {
+          "text": "Que signifie « Reconquista » ?",
+          "type": "mcq",
+          "options": [
+            "Conquêtes chrétiennes dans la péninsule Ibérique",
+            "Expédition militaire chrétienne vers l'Orient",
+            "Séparation entre deux Églises",
+            "Traduction d'un texte en latin"
+          ],
+          "correct": "Conquêtes chrétiennes dans la péninsule Ibérique",
+          "solution": "La Reconquista désigne les conquêtes chrétiennes dans la péninsule Ibérique."
+        },
+        {
+          "text": "Quelles motivations expliquent les croisades et la Reconquista ?",
+          "type": "mcq",
+          "options": [
+            "Religion, maîtrise de territoires, pouvoir et intérêts politiques",
+            "Uniquement la religion",
+            "Uniquement le commerce",
+            "Uniquement la curiosité scientifique"
+          ],
+          "correct": "Religion, maîtrise de territoires, pouvoir et intérêts politiques",
+          "solution": "Les motivations mêlent religion, maîtrise des territoires, pouvoir et intérêts politiques."
+        },
+        {
+          "text": "Qui combat lors de la Reconquista ?",
+          "type": "mcq",
+          "options": [
+            "Des pouvoirs chrétiens contre des pouvoirs musulmans",
+            "Des Byzantins contre des Mongols",
+            "Des Vénitiens contre des Génois",
+            "Des juifs contre des chrétiens"
+          ],
+          "correct": "Des pouvoirs chrétiens contre des pouvoirs musulmans",
+          "solution": "En péninsule Ibérique, des pouvoirs chrétiens affrontent des pouvoirs musulmans."
+        },
+        {
+          "text": "Qui combat lors des croisades en Orient ?",
+          "type": "mcq",
+          "options": [
+            "Les armées croisées venues d'Occident contre des armées musulmanes",
+            "Des Byzantins contre des Perses",
+            "Des Vénitiens contre des Génois",
+            "Des juifs contre des chrétiens"
+          ],
+          "correct": "Les armées croisées venues d'Occident contre des armées musulmanes",
+          "solution": "En Orient, les armées croisées venues d'Occident combattent des armées musulmanes."
+        },
+        {
+          "text": "Quelle croisade aboutit à la prise de Jérusalem en 1099 ?",
+          "type": "mcq",
+          "options": [
+            "La première croisade",
+            "La deuxième croisade",
+            "La troisième croisade",
+            "La quatrième croisade"
+          ],
+          "correct": "La première croisade",
+          "solution": "La première croisade aboutit à la prise de Jérusalem en 1099."
+        },
+        {
+          "text": "Quelle croisade aboutit au sac de Constantinople en 1204 ?",
+          "type": "mcq",
+          "options": [
+            "La quatrième croisade",
+            "La première croisade",
+            "La deuxième croisade",
+            "La troisième croisade"
+          ],
+          "correct": "La quatrième croisade",
+          "solution": "La quatrième croisade aboutit au sac de Constantinople en 1204."
+        }
+      ]
+    },
+    {
+      "category": "Deuxième croisade et Bernard de Clairvaux",
+      "questions": [
+        {
+          "text": "Qui est Bernard de Clairvaux ?",
+          "type": "mcq",
+          "options": [
+            "Un abbé cistercien et prédicateur influent",
+            "Un empereur byzantin",
+            "Un calife de Bagdad",
+            "Un roi de France"
+          ],
+          "correct": "Un abbé cistercien et prédicateur influent",
+          "solution": "Bernard de Clairvaux est un abbé cistercien et prédicateur influent."
+        },
+        {
+          "text": "Quelle croisade Bernard de Clairvaux prêche-t-il ?",
+          "type": "mcq",
+          "options": [
+            "La deuxième croisade",
+            "La première croisade",
+            "La troisième croisade",
+            "La quatrième croisade"
+          ],
+          "correct": "La deuxième croisade",
+          "solution": "Bernard de Clairvaux prêche la deuxième croisade en 1146-1147."
+        },
+        {
+          "text": "En quelles années Bernard de Clairvaux prêche-t-il la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "1146-1147",
+            "1096-1099",
+            "1189-1192",
+            "1202-1204"
+          ],
+          "correct": "1146-1147",
+          "solution": "Il prêche la deuxième croisade en 1146-1147."
+        },
+        {
+          "text": "Quel événement de 1144 déclenche la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "La perte d'Édesse",
+            "La prise de Jérusalem",
+            "Le sac de Constantinople",
+            "La mort de Mahomet"
+          ],
+          "correct": "La perte d'Édesse",
+          "solution": "La croisade est lancée après la perte d'Édesse en 1144."
+        },
+        {
+          "text": "Quel est l'objectif de la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Reprendre Édesse et soutenir les États latins d'Orient",
+            "Prendre Constantinople",
+            "Conquérir l'Espagne",
+            "Convertir les Byzantins"
+          ],
+          "correct": "Reprendre Édesse et soutenir les États latins d'Orient",
+          "solution": "La croisade vise à reprendre Édesse et soutenir les États latins d'Orient."
+        },
+        {
+          "text": "Quel roi de France participe à la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Louis VII",
+            "Philippe Auguste",
+            "Saint Louis",
+            "Charlemagne"
+          ],
+          "correct": "Louis VII",
+          "solution": "Louis VII de France participe à la deuxième croisade."
+        },
+        {
+          "text": "Quel empereur du Saint-Empire participe à la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Conrad III",
+            "Frédéric Barberousse",
+            "Otton Ier",
+            "Charles Quint"
+          ],
+          "correct": "Conrad III",
+          "solution": "Conrad III du Saint-Empire participe à la deuxième croisade."
+        },
+        {
+          "text": "Quel empereur byzantin joue un rôle dans la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Manuel Ier Comnène",
+            "Justinien",
+            "Basile II",
+            "Constantin XI"
+          ],
+          "correct": "Manuel Ier Comnène",
+          "solution": "L'empereur byzantin Manuel Ier Comnène joue un rôle dans son déroulement."
+        },
+        {
+          "text": "Contre quel peuple les croisés connaissent-ils des défaites en Asie Mineure ?",
+          "type": "mcq",
+          "options": [
+            "Les Seldjoukides",
+            "Les Mongols",
+            "Les Vikings",
+            "Les Perses"
+          ],
+          "correct": "Les Seldjoukides",
+          "solution": "Les croisés connaissent des défaites face aux Seldjoukides."
+        },
+        {
+          "text": "Quelle route empruntent notamment les croisés de la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "La route de l'Asie Mineure vers la Syrie et la Palestine",
+            "La route de l'Atlantique",
+            "La route de la soie",
+            "La route du Danube"
+          ],
+          "correct": "La route de l'Asie Mineure vers la Syrie et la Palestine",
+          "solution": "Ils empruntent la route de l'Asie Mineure vers la Syrie et la Palestine."
+        },
+        {
+          "text": "Quelles difficultés rencontrent les croisés de la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Défaites, divisions, difficultés d'approvisionnement et de coordination",
+            "Un manque de soldats uniquement",
+            "Une absence totale de chefs",
+            "Un excès de nourriture"
+          ],
+          "correct": "Défaites, divisions, difficultés d'approvisionnement et de coordination",
+          "solution": "Ils connaissent des défaites, des divisions et des difficultés d'approvisionnement et de coordination."
+        },
+        {
+          "text": "Quel siège échoue en 1148 ?",
+          "type": "mcq",
+          "options": [
+            "Le siège de Damas",
+            "Le siège de Jérusalem",
+            "Le siège de Constantinople",
+            "Le siège d'Édesse"
+          ],
+          "correct": "Le siège de Damas",
+          "solution": "La deuxième croisade échoue au siège de Damas en 1148."
+        },
+        {
+          "text": "Édesse est-elle reprise lors de la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Non, elle n'est pas reprise",
+            "Oui, dès 1144",
+            "Oui, en 1148",
+            "Oui, en 1149"
+          ],
+          "correct": "Non, elle n'est pas reprise",
+          "solution": "Édesse n'est pas reprise : la deuxième croisade est un échec."
+        },
+        {
+          "text": "Pourquoi la deuxième croisade est-elle considérée comme un échec ?",
+          "type": "mcq",
+          "options": [
+            "Lourdes pertes, armées divisées, échec du siège de Damas, Édesse non reprise",
+            "Les croisés rentrent victorieux",
+            "Jérusalem est prise",
+            "Constantinople est sauvée"
+          ],
+          "correct": "Lourdes pertes, armées divisées, échec du siège de Damas, Édesse non reprise",
+          "solution": "La deuxième croisade échoue : lourdes pertes, divisions, échec du siège de Damas, Édesse non reprise."
+        },
+        {
+          "text": "Quel rôle joue Bernard de Clairvaux dans la deuxième croisade ?",
+          "type": "mcq",
+          "options": [
+            "Il mobilise les fidèles et les souverains par sa prédication",
+            "Il commande les armées byzantines",
+            "Il négocie avec Saladin",
+            "Il finance les croisés"
+          ],
+          "correct": "Il mobilise les fidèles et les souverains par sa prédication",
+          "solution": "Bernard de Clairvaux contribue à mobiliser les fidèles et les souverains."
+        },
+        {
+          "text": "Le soutien byzantin lors de la deuxième croisade est jugé...",
+          "type": "mcq",
+          "options": [
+            "Insuffisant",
+            "Excellent",
+            "Trop important",
+            "Inutile mais suffisant"
+          ],
+          "correct": "Insuffisant",
+          "solution": "Le soutien byzantin est jugé insuffisant dans le diaporama."
+        }
+      ]
+    },
+    {
+      "category": "Venise et échanges méditerranéens",
+      "questions": [
+        {
+          "text": "Qu'est-ce qu'une république maritime ?",
+          "type": "mcq",
+          "options": [
+            "Une cité-État dont la puissance repose sur la mer et le commerce",
+            "Un empire dirigé par un basileus",
+            "Un califat",
+            "Un royaume féodal"
+          ],
+          "correct": "Une cité-État dont la puissance repose sur la mer et le commerce",
+          "solution": "La république maritime est une cité-État dont la puissance repose sur la mer et le commerce."
+        },
+        {
+          "text": "Quelle cité italienne est l'exemple de république maritime dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "Venise",
+            "Rome",
+            "Florence",
+            "Milan"
+          ],
+          "correct": "Venise",
+          "solution": "Venise est l'exemple de république maritime."
+        },
+        {
+          "text": "Qu'est-ce qu'un comptoir ?",
+          "type": "mcq",
+          "options": [
+            "Un établissement commercial dans une ville étrangère",
+            "Un château fort",
+            "Une mosquée",
+            "Un port militaire"
+          ],
+          "correct": "Un établissement commercial dans une ville étrangère",
+          "solution": "Le comptoir est un établissement commercial dans une ville étrangère."
+        },
+        {
+          "text": "Quels atouts favorisent la puissance de Venise ?",
+          "type": "mcq",
+          "options": [
+            "Ses atouts géographiques et maritimes",
+            "Ses mines d'or",
+            "Son armée de terre",
+            "Son agriculture"
+          ],
+          "correct": "Ses atouts géographiques et maritimes",
+          "solution": "Les atouts géographiques et maritimes favorisent la puissance de Venise."
+        },
+        {
+          "text": "En quelle année Venise obtient-elle des privilèges dans l'Empire byzantin ?",
+          "type": "mcq",
+          "options": [
+            "1082",
+            "1099",
+            "1204",
+            "1142"
+          ],
+          "correct": "1082",
+          "solution": "1082 : privilèges vénitiens dans l'Empire byzantin."
+        },
+        {
+          "text": "En quelle année le Coran est-il traduit en latin pour la première fois ?",
+          "type": "mcq",
+          "options": [
+            "1142",
+            "1082",
+            "1099",
+            "1204"
+          ],
+          "correct": "1142",
+          "solution": "1142 : première traduction du Coran en latin."
+        },
+        {
+          "text": "En quelle année une boussole est-elle mentionnée ?",
+          "type": "mcq",
+          "options": [
+            "1190",
+            "1142",
+            "1082",
+            "1204"
+          ],
+          "correct": "1190",
+          "solution": "1190 : mention d'une boussole."
+        },
+        {
+          "text": "Quels produits et routes relient Venise aux autres espaces méditerranéens ?",
+          "type": "mcq",
+          "options": [
+            "Les épices, soieries et produits de luxe via les routes maritimes",
+            "Uniquement du blé",
+            "Uniquement des armes",
+            "Uniquement du sel"
+          ],
+          "correct": "Les épices, soieries et produits de luxe via les routes maritimes",
+          "solution": "Venise commerce des épices, soieries et produits de luxe par les routes maritimes."
+        },
+        {
+          "text": "Quel exemple d'échange artistique ou culturel est mentionné ?",
+          "type": "mcq",
+          "options": [
+            "L'intense activité de traduction en Italie et en Espagne",
+            "La construction de la tour Eiffel",
+            "La fondation de Bagdad",
+            "La découverte de l'Amérique"
+          ],
+          "correct": "L'intense activité de traduction en Italie et en Espagne",
+          "solution": "L'intense activité de traduction (Italie, Espagne) est un exemple d'échange culturel."
+        },
+        {
+          "text": "Que signifie « traduction » dans ce contexte ?",
+          "type": "mcq",
+          "options": [
+            "La transposition d'un texte dans une autre langue",
+            "La conquête d'un territoire",
+            "La séparation de deux Églises",
+            "L'établissement d'un comptoir"
+          ],
+          "correct": "La transposition d'un texte dans une autre langue",
+          "solution": "La traduction est la transposition d'un texte dans une autre langue."
+        },
+        {
+          "text": "Pourquoi la Méditerranée est-elle à la fois un espace de conflits et d'échanges ?",
+          "type": "mcq",
+          "options": [
+            "Les civilisations s'y affrontent mais commercent et échangent des savoirs",
+            "Il n'y a que des conflits",
+            "Il n'y a que des échanges",
+            "Elle est vide"
+          ],
+          "correct": "Les civilisations s'y affrontent mais commercent et échangent des savoirs",
+          "solution": "La Méditerranée est un espace de conflits (croisades, Reconquista) et d'échanges (commerce, traductions)."
+        },
+        {
+          "text": "Quelles villes marchandes sont citées dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "Venise et Gênes",
+            "Paris et Londres",
+            "Bagdad et Damas",
+            "Rome et Constantinople"
+          ],
+          "correct": "Venise et Gênes",
+          "solution": "Venise et Gênes sont des villes marchandes méditerranéennes."
+        },
+        {
+          "text": "Quel commerce est particulièrement lucratif pour Venise ?",
+          "type": "mcq",
+          "options": [
+            "Le commerce des épices et des produits de luxe",
+            "Le commerce du charbon",
+            "Le commerce des armes",
+            "Le commerce des esclaves uniquement"
+          ],
+          "correct": "Le commerce des épices et des produits de luxe",
+          "solution": "Venise s'enrichit grâce au commerce des épices et produits de luxe."
+        },
+        {
+          "text": "Comment les privilèges et les comptoirs facilitent-ils le commerce de Venise ?",
+          "type": "mcq",
+          "options": [
+            "Ils lui donnent des avantages commerciaux dans les villes étrangères",
+            "Ils lui permettent de conquérir des territoires",
+            "Ils lui donnent le pouvoir religieux",
+            "Ils lui permettent d'éviter les taxes uniquement"
+          ],
+          "correct": "Ils lui donnent des avantages commerciaux dans les villes étrangères",
+          "solution": "Les privilèges et comptoirs assurent à Venise des avantages commerciaux."
+        },
+        {
+          "text": "Quelle est la principale conséquence culturelle des échanges en Méditerranée ?",
+          "type": "mcq",
+          "options": [
+            "La transmission des savoirs (traductions, sciences, techniques)",
+            "La fin des religions",
+            "L'unification politique",
+            "La disparition du commerce"
+          ],
+          "correct": "La transmission des savoirs (traductions, sciences, techniques)",
+          "solution": "Commerce, traductions et transmission des savoirs relient les sociétés méditerranéennes."
+        }
+      ]
+    },
+    {
+      "category": "Vocabulaire essentiel",
+      "questions": [
+        {
+          "text": "Définissez « croisade ».",
+          "type": "mcq",
+          "options": [
+            "Expédition militaire chrétienne vers l'Orient",
+            "Conquête chrétienne dans la péninsule Ibérique",
+            "Séparation entre deux Églises",
+            "Établissement commercial dans une ville étrangère"
+          ],
+          "correct": "Expédition militaire chrétienne vers l'Orient",
+          "solution": "Croisade : expédition militaire chrétienne vers l'Orient."
+        },
+        {
+          "text": "Définissez « Reconquista ».",
+          "type": "mcq",
+          "options": [
+            "Conquêtes chrétiennes dans la péninsule Ibérique",
+            "Expédition militaire chrétienne vers l'Orient",
+            "Séparation entre deux Églises",
+            "Transposition d'un texte dans une autre langue"
+          ],
+          "correct": "Conquêtes chrétiennes dans la péninsule Ibérique",
+          "solution": "Reconquista : conquêtes chrétiennes dans la péninsule Ibérique."
+        },
+        {
+          "text": "Définissez « schisme ».",
+          "type": "mcq",
+          "options": [
+            "Séparation entre deux Églises",
+            "Expédition militaire chrétienne vers l'Orient",
+            "Conquête chrétienne en Espagne",
+            "Établissement commercial"
+          ],
+          "correct": "Séparation entre deux Églises",
+          "solution": "Schisme : séparation entre deux Églises."
+        },
+        {
+          "text": "Définissez « comptoir ».",
+          "type": "mcq",
+          "options": [
+            "Établissement commercial dans une ville étrangère",
+            "Séparation entre deux Églises",
+            "Expédition militaire chrétienne",
+            "Cité-État maritime"
+          ],
+          "correct": "Établissement commercial dans une ville étrangère",
+          "solution": "Comptoir : établissement commercial dans une ville étrangère."
+        },
+        {
+          "text": "Définissez « traduction ».",
+          "type": "mcq",
+          "options": [
+            "Transposition d'un texte dans une autre langue",
+            "Conquête militaire",
+            "Séparation religieuse",
+            "Établissement commercial"
+          ],
+          "correct": "Transposition d'un texte dans une autre langue",
+          "solution": "Traduction : transposition d'un texte dans une autre langue."
+        },
+        {
+          "text": "Définissez « république maritime ».",
+          "type": "mcq",
+          "options": [
+            "Cité-État dont la puissance repose sur la mer et le commerce",
+            "Empire dirigé par un basileus",
+            "Califat politico-religieux",
+            "Royaume féodal"
+          ],
+          "correct": "Cité-État dont la puissance repose sur la mer et le commerce",
+          "solution": "République maritime : cité-État dont la puissance repose sur la mer et le commerce."
+        },
+        {
+          "text": "Quel mot désigne un domaine rural dirigé par un seigneur ?",
+          "type": "mcq",
+          "options": [
+            "Une seigneurie",
+            "Un comptoir",
+            "Un califat",
+            "Une république maritime"
+          ],
+          "correct": "Une seigneurie",
+          "solution": "La seigneurie est un domaine rural dirigé par un seigneur."
+        },
+        {
+          "text": "Quel mot désigne le marché couvert des villes musulmanes ?",
+          "type": "mcq",
+          "options": [
+            "Le souk",
+            "Le forum",
+            "Le comptoir",
+            "Le bastion"
+          ],
+          "correct": "Le souk",
+          "solution": "Le souk est un marché couvert dans les villes musulmanes."
+        },
+        {
+          "text": "Quel mot désigne le chef politique et religieux du monde musulman ?",
+          "type": "mcq",
+          "options": [
+            "Le calife",
+            "Le basileus",
+            "Le pape",
+            "Le seigneur"
+          ],
+          "correct": "Le calife",
+          "solution": "Le calife est le chef politique et religieux du monde musulman."
+        },
+        {
+          "text": "Quel mot désigne l'empereur byzantin ?",
+          "type": "mcq",
+          "options": [
+            "Le basileus",
+            "Le calife",
+            "Le pape",
+            "Le sultan"
+          ],
+          "correct": "Le basileus",
+          "solution": "Le basileus est l'empereur byzantin."
+        },
+        {
+          "text": "Quel mot désigne la séparation de 1054 entre chrétiens ?",
+          "type": "mcq",
+          "options": [
+            "Le schisme",
+            "La croisade",
+            "La Reconquista",
+            "Le djihad"
+          ],
+          "correct": "Le schisme",
+          "solution": "1054 : le schisme sépare les chrétiens d'Orient et d'Occident."
+        },
+        {
+          "text": "Quel mot désigne la conquête menée au nom de l'islam ?",
+          "type": "mcq",
+          "options": [
+            "Le djihad",
+            "La croisade",
+            "La Reconquista",
+            "Le schisme"
+          ],
+          "correct": "Le djihad",
+          "solution": "Le djihad est la conquête menée au nom de l'islam."
+        },
+        {
+          "text": "Quel mot désigne le système politique et social de l'Occident médiéval ?",
+          "type": "mcq",
+          "options": [
+            "La féodalité",
+            "Le califat",
+            "Le basileat",
+            "La république maritime"
+          ],
+          "correct": "La féodalité",
+          "solution": "La féodalité est le système pyramidal de l'Occident médiéval."
+        },
+        {
+          "text": "Quel mot désigne le livre sacré des musulmans ?",
+          "type": "mcq",
+          "options": [
+            "Le Coran",
+            "La Bible",
+            "La Torah",
+            "Les Évangiles"
+          ],
+          "correct": "Le Coran",
+          "solution": "Le Coran contient la parole de Mahomet pour les musulmans."
+        },
+        {
+          "text": "Quel mot désigne un empire dirigé par un empereur divin à Constantinople ?",
+          "type": "mcq",
+          "options": [
+            "L'Empire byzantin",
+            "Le monde musulman",
+            "L'Occident chrétien",
+            "L'Empire carolingien"
+          ],
+          "correct": "L'Empire byzantin",
+          "solution": "L'Empire byzantin est dirigé par le basileus à Constantinople."
+        },
+        {
+          "text": "Quel mot désigne la ville sainte pour les trois religions monothéistes ?",
+          "type": "mcq",
+          "options": [
+            "Jérusalem",
+            "Rome",
+            "Constantinople",
+            "Bagdad"
+          ],
+          "correct": "Jérusalem",
+          "solution": "Jérusalem est sainte pour les juifs, les chrétiens et les musulmans."
+        },
+        {
+          "text": "Quel mot désigne une cité-État marchande comme Venise ?",
+          "type": "mcq",
+          "options": [
+            "Une république maritime",
+            "Un califat",
+            "Une seigneurie",
+            "Un empire"
+          ],
+          "correct": "Une république maritime",
+          "solution": "Venise est une république maritime."
+        },
+        {
+          "text": "Quel mot désigne l'ensemble des royaumes chrétiens d'Occident ?",
+          "type": "mcq",
+          "options": [
+            "L'Occident chrétien",
+            "L'Empire byzantin",
+            "Le monde musulman",
+            "L'Empire ottoman"
+          ],
+          "correct": "L'Occident chrétien",
+          "solution": "L'Occident chrétien regroupe les royaumes chrétiens d'Occident."
+        },
+        {
+          "text": "Quel mot désigne la ville capitale de l'Empire byzantin ?",
+          "type": "mcq",
+          "options": [
+            "Constantinople",
+            "Rome",
+            "Bagdad",
+            "Jérusalem"
+          ],
+          "correct": "Constantinople",
+          "solution": "Constantinople est la capitale de l'Empire byzantin."
+        },
+        {
+          "text": "Quel mot désigne le chef de l'Église catholique ?",
+          "type": "mcq",
+          "options": [
+            "Le pape",
+            "Le basileus",
+            "Le calife",
+            "Le seigneur"
+          ],
+          "correct": "Le pape",
+          "solution": "Le pape est le chef de l'Église catholique."
+        }
+      ]
+    }
+  ]
+}

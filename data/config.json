@@ -168,6 +168,16 @@
       "added": "2026-10-08"
     },
     {
+      "id": "histoire-geo-mediterranee-medievale",
+      "title": "La Méditerranée médiévale — échanges et conflits",
+      "subject": "histoire-geo",
+      "file": "data/histoire-geo/mediterranee-medievale.json",
+      "questionsCount": 125,
+      "description": "Sous-thème 3 : les trois civilisations méditerranéennes (Byzance, monde musulman, Occident chrétien), croisades, Reconquista, Jérusalem, deuxième croisade, Venise et échanges (125 questions).",
+      "tags": ["histoire-geo", "moyen-age", "mediterranee", "croisades", "byzance", "islam"],
+      "added": "2026-11-04"
+    },
+    {
       "id": "ses-introduction-chapitre1-eco1",
       "title": "Introduction & Chapitre 1 — Travailler et raisonner en SES (ECO1)",
       "subject": "ses",
