@@ -73,15 +73,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Cancelling any stuck Pages deployments..."
-          gh api repos/${{ github.repository }}/pages/deployments -q '.[] | .id' 2>/dev/null | while read -r id; do
-            echo "Cancelling pages deployment $id"
-            gh api -X POST repos/${{ github.repository }}/pages/deployments/$id/cancel 2>/dev/null || true
+          echo "Cancelling any stuck Pages deployments by SHA..."
+          git log -n 10 --format="%H" | while read -r sha; do
+            echo "Cancelling pages deployment for $sha..."
+            gh api -X POST "repos/${{ github.repository }}/pages/deployments/$sha/cancel" 2>/dev/null || true
           done
-          gh api "repos/${{ github.repository }}/actions/runs?status=in_progress" -q '.workflow_runs[] | select(.id != '${{ github.run_id }}') | .id' 2>/dev/null | while read -r rid; do
-            echo "Cancelling conflicting run $rid"
-            gh api -X POST repos/${{ github.repository }}/actions/runs/$rid/force-cancel 2>/dev/null || true
-          done
+          echo "Explicitly cancelling e03967f808e044a001a8cf0ce5220e6f3b17252c..."
+          gh api -X POST "repos/${{ github.repository }}/pages/deployments/e03967f808e044a001a8cf0ce5220e6f3b17252c/cancel" 2>/dev/null || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
