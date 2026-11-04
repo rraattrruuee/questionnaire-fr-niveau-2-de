@@ -25,12 +25,12 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var PEER_SOURCES = [
-    "./vendor/peerjs.min.js",
+    "./vendor/peerjs.min.js?v=20261104-ice",
     "https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js",
     "https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"
   ];
   var QR_SOURCES = [
-    "./vendor/qrcode.min.js",
+    "./vendor/qrcode.min.js?v=20261104-ice",
     "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js",
     "https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"
   ];
@@ -39,18 +39,13 @@
   var CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // sans 0/O/1/I
   var HOST_PID = "_host"; // pid réservé à l'hôte quand il joue aussi
 
-  // Serveurs STUN validés et ultra-rapides (Google, Cloudflare, Nextcloud)
-  // sans hôtes morts ni requêtes fantômes qui bloquent ou font échouer la négociation ICE.
+  // Serveurs STUN mondiaux ultra-rapides (< 5 pour éviter l'avertissement Firefox)
+  // sans hôtes TURN morts ni requêtes fantômes qui bloquent ou font échouer la négociation ICE.
   var ICE_SERVERS = (typeof window !== "undefined" && Array.isArray(window.CUSTOM_ICE_SERVERS))
     ? window.CUSTOM_ICE_SERVERS
     : [
-        { urls: "stun:stun.l.google.com:19302" },
-        { urls: "stun:stun1.l.google.com:19302" },
-        { urls: "stun:stun2.l.google.com:19302" },
-        { urls: "stun:stun3.l.google.com:19302" },
-        { urls: "stun:stun4.l.google.com:19302" },
-        { urls: "stun:stun.cloudflare.com:3478" },
-        { urls: "stun:stun.nextcloud.com:443" }
+        { urls: ["stun:stun.l.google.com:19302", "stun:stun1.l.google.com:19302"] },
+        { urls: "stun:stun.cloudflare.com:3478" }
       ];
 
   // Config chargée pour les sélecteurs Matière → Questionnaire
