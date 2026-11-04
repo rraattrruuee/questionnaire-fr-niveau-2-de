@@ -830,22 +830,53 @@
       });
   }
 
-  // Configuration ICE propre : uniquement des STUN publics ultra-fiables (Google, Cloudflare).
-  // Cela empêche PeerJS d'injecter par défaut "turn.peerjs.com" qui a été définitivement fermé par le projet PeerJS.
-  var PEER_ICE_CONFIG = {
-    config: {
-      iceServers: [
-        { urls: "stun:stun.l.google.com:19302" },
-        { urls: "stun:stun1.l.google.com:19302" },
-        { urls: "stun:stun.cloudflare.com:3478" }
-      ]
+  // Endpoint Cloudflare Calls (TURN WebRTC) via le worker du projet
+  var CLOUDFLARE_TURN_ENDPOINT = "https://posthog-proxy.rrraattrruuee.workers.dev/turn-credentials";
+  var _cachedIceConfig = null;
+
+  function getPeerIceConfig() {
+    if (_cachedIceConfig) {
+      return Promise.resolve(_cachedIceConfig);
     }
-  };
+    var fallbackConfig = {
+      config: {
+        iceServers: [
+          { urls: "stun:stun.cloudflare.com:3478" },
+          { urls: "stun:stun.l.google.com:19302" },
+          { urls: "stun:stun1.l.google.com:19302" }
+        ]
+      }
+    };
+
+    var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+    var signal = controller ? controller.signal : undefined;
+    var timer = controller ? setTimeout(function () { controller.abort(); }, 3000) : null;
+
+    return fetch(CLOUDFLARE_TURN_ENDPOINT, { signal: signal })
+      .then(function (res) {
+        if (timer) clearTimeout(timer);
+        return res.json();
+      })
+      .then(function (data) {
+        if (data && Array.isArray(data.iceServers) && data.iceServers.length > 0) {
+          _cachedIceConfig = { config: { iceServers: data.iceServers } };
+          return _cachedIceConfig;
+        }
+        _cachedIceConfig = fallbackConfig;
+        return _cachedIceConfig;
+      })
+      .catch(function () {
+        if (timer) clearTimeout(timer);
+        _cachedIceConfig = fallbackConfig;
+        return _cachedIceConfig;
+      });
+  }
 
   function createPeerWithCode(attempt) {
-    return new Promise(function (resolve, reject) {
-      var code = makeCode();
-      var peer = new Peer(ROOM_PREFIX + code, PEER_ICE_CONFIG);
+    return getPeerIceConfig().then(function (iceConfig) {
+      return new Promise(function (resolve, reject) {
+        var code = makeCode();
+        var peer = new Peer(ROOM_PREFIX + code, iceConfig);
       var opened = false;
       var timer = setTimeout(function () {
         if (!opened) {
@@ -1512,8 +1543,9 @@
     track("multiplayer_join_attempt");
 
     ensurePeer()
-      .then(function () {
-        var peer = new Peer(PEER_ICE_CONFIG);
+      .then(getPeerIceConfig)
+      .then(function (iceConfig) {
+        var peer = new Peer(iceConfig);
         S.peer = peer;
         var settled = false;
         var timer = setTimeout(function () {
