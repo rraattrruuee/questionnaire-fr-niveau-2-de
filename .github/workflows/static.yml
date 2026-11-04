@@ -73,12 +73,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Checking for stale deployments..."
-          DEPLOY_IDS=$(gh api repos/${{ github.repository }}/deployments -q '.[] | select(.environment=="github-pages") | .id' 2>/dev/null || true)
-          for did in $DEPLOY_IDS; do
-            echo "Inactivating and deleting deployment $did"
-            gh api --method POST repos/${{ github.repository }}/deployments/$did/statuses -f state=inactive 2>/dev/null || true
-            gh api --method DELETE repos/${{ github.repository }}/deployments/$did 2>/dev/null || true
+          echo "Cancelling any stuck Pages deployments..."
+          gh api repos/${{ github.repository }}/pages/deployments -q '.[] | .id' 2>/dev/null | while read -r id; do
+            echo "Cancelling pages deployment $id"
+            gh api -X POST repos/${{ github.repository }}/pages/deployments/$id/cancel 2>/dev/null || true
+          done
+          gh api "repos/${{ github.repository }}/actions/runs?status=in_progress" -q '.workflow_runs[] | select(.id != '${{ github.run_id }}') | .id' 2>/dev/null | while read -r rid; do
+            echo "Cancelling conflicting run $rid"
+            gh api -X POST repos/${{ github.repository }}/actions/runs/$rid/force-cancel 2>/dev/null || true
           done
 
       - name: Setup Pages
