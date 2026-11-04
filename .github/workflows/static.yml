@@ -25,11 +25,10 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  deployments: write
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -68,18 +67,6 @@ jobs:
             git commit -m "chore: update service-worker.js assets and cache version [skip ci]"
             git push
           fi
-
-      - name: Clear stale Pages deployments
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Cancelling any stuck Pages deployments by SHA..."
-          git log -n 10 --format="%H" | while read -r sha; do
-            echo "Cancelling pages deployment for $sha..."
-            gh api -X POST "repos/${{ github.repository }}/pages/deployments/$sha/cancel" 2>/dev/null || true
-          done
-          echo "Explicitly cancelling e03967f808e044a001a8cf0ce5220e6f3b17252c..."
-          gh api -X POST "repos/${{ github.repository }}/pages/deployments/e03967f808e044a001a8cf0ce5220e6f3b17252c/cancel" 2>/dev/null || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
