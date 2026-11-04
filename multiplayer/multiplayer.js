@@ -39,6 +39,39 @@
   var CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // sans 0/O/1/I
   var HOST_PID = "_host"; // pid réservé à l'hôte quand il joue aussi
 
+  // Serveurs ICE (STUN + TURN relais) pour garantir la connexion P2P
+  // même derrière des NAT symétriques ou des pare-feux mobiles (4G/5G).
+  var ICE_SERVERS = [
+    { urls: "stun:stun.l.google.com:19302" },
+    { urls: "stun:stun1.l.google.com:19302" },
+    { urls: "stun:stun2.l.google.com:19302" },
+    { urls: "stun:global.stun.twilio.com:3478" },
+    {
+      urls: [
+        "turn:eu-0.turn.peerjs.com:3478",
+        "turn:us-0.turn.peerjs.com:3478"
+      ],
+      username: "peerjs",
+      credential: "peerjsp"
+    },
+    { urls: "stun:openrelay.metered.ca:80" },
+    {
+      urls: "turn:openrelay.metered.ca:80",
+      username: "openrelayproject",
+      credential: "openrelayproject"
+    },
+    {
+      urls: "turn:openrelay.metered.ca:443",
+      username: "openrelayproject",
+      credential: "openrelayproject"
+    },
+    {
+      urls: "turn:openrelay.metered.ca:443?transport=tcp",
+      username: "openrelayproject",
+      credential: "openrelayproject"
+    }
+  ];
+
   // Config chargée pour les sélecteurs Matière → Questionnaire
   var CFG = { subjects: [], quizzes: [] };
 
@@ -820,10 +853,8 @@
       var peer = new Peer(ROOM_PREFIX + code, {
         debug: 1,
         config: {
-          iceServers: [
-            { urls: "stun:stun.l.google.com:19302" },
-            { urls: "stun:global.stun.twilio.com:3478" }
-          ]
+          iceServers: ICE_SERVERS,
+          sdpSemantics: "unified-plan"
         }
       });
       var opened = false;
@@ -1490,10 +1521,8 @@
         var peer = new Peer({
           debug: 1,
           config: {
-            iceServers: [
-              { urls: "stun:stun.l.google.com:19302" },
-              { urls: "stun:global.stun.twilio.com:3478" }
-            ]
+            iceServers: ICE_SERVERS,
+            sdpSemantics: "unified-plan"
           }
         });
         S.peer = peer;
