@@ -192,35 +192,30 @@ body {
   border: 2px solid var(--quiz-border);
   position: relative;
   overflow: hidden;
-  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  transform-origin: center center;
 }
-
-.question-card.entering { animation: slideIn 0.5s ease-out forwards; }
-.question-card.fast-exit { animation: slideOut 0.25s ease-in forwards; }
-.question-card.slow-exit { animation: slideOut 0.8s ease-in forwards; }
 
 /* ------------------------------------------------------------
-   Bloc question + feedback : entree/sortie synchronisees.
-   Animation "Pro" spectaculaire avec scale dynamique, 3D (rotateX),
-   stagger en cascade des reponses, halo lumineux et reflet diagonal.
-   Duree d'entree : ~0.50 s | Duree de sortie : ~0.26 s
-   Duree totale < 0.8 s (bien sous la limite de 1.5 s demandee).
+   Animation "Pro" avec Scale dynamique (< 1.5s)
+   Apparition : scale-in avec rebond spring (0.38s)
+   Disparition : scale-out fluide et dynamique (0.20s)
+   Duree totale < 0.6s
    ------------------------------------------------------------ */
 .question-block {
-  transform-origin: 50% 25%;
+  transform-origin: center center;
 }
 
-.question-block.enter,
-.question-block.exit {
-  will-change: transform, opacity, filter;
+.question-block.anim-scale-in {
+  animation: questionScaleIn 0.38s cubic-bezier(0.34, 1.4, 0.64, 1) both;
 }
 
-.question-block.enter {
-  animation: questionIn 0.50s cubic-bezier(0.16, 1, 0.3, 1) both;
+.question-block.anim-scale-out {
+  animation: questionScaleOut 0.20s cubic-bezier(0.4, 0, 0.2, 1) both;
+  pointer-events: none;
 }
 
-/* Halo lumineux qui s'epand avec scale a l'apparition de la carte */
-.question-block.enter .question-card::before {
+/* Halo lumineux expansif */
+.question-block.anim-scale-in .question-card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -228,127 +223,94 @@ body {
   border: 2px solid var(--quiz-main-btn);
   opacity: 0;
   pointer-events: none;
-  animation: cardRing 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: cardRingScale 0.45s ease-out both;
 }
 
-/* Reflet diagonal de brillance qui traverse la carte */
-.question-block.enter .question-card::after {
+/* Reflet diagonal traversant */
+.question-block.anim-scale-in .question-card::after {
   content: "";
   position: absolute;
-  inset: -40% -60%;
+  inset: -50% -50%;
   pointer-events: none;
   background: linear-gradient(
     115deg,
-    transparent 38%,
-    rgba(255, 255, 255, 0.22) 48%,
-    rgba(255, 255, 255, 0.08) 54%,
-    transparent 62%
+    transparent 35%,
+    rgba(255, 255, 255, 0.28) 48%,
+    rgba(255, 255, 255, 0.08) 55%,
+    transparent 65%
   );
-  transform: translateX(-70%) rotate(2deg);
-  animation: cardShine 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+  transform: translateX(-80%) rotate(3deg);
+  animation: cardShineSweep 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
 }
 
-.question-block.enter .question-text {
-  animation: questionTextIn 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both;
-}
-
-.question-block.enter .image-area,
-.question-block.enter .input-area {
-  animation: answerItemIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both;
-}
-
-/* Cascade des choix avec effet pop/scale progressif (--i defini par JS) */
-.question-block.enter .options-container .answer-btn:not(.selected):not(.correct):not(.incorrect) {
-  animation: answerItemIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(0.08s + var(--i, 0) * 0.045s);
-}
-
-.question-block.exit {
-  animation: questionOut 0.26s cubic-bezier(0.4, 0, 0.2, 1) both;
-  pointer-events: none;
+/* Cascade de boutons avec effet Pop & Scale */
+.question-block.anim-scale-in .options-container .answer-btn:not(.selected):not(.correct):not(.incorrect) {
+  animation: buttonScaleIn 0.32s cubic-bezier(0.34, 1.35, 0.64, 1) both;
+  animation-delay: calc(0.05s + var(--i, 0) * 0.045s);
 }
 
 .question-block.is-correct .question-card {
   border-color: var(--quiz-correct-border);
   box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
-  animation: blockCorrect 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+  animation: blockCorrect 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.25);
 }
 
 .question-block.is-wrong .question-card {
   border-color: var(--quiz-incorrect-border);
   box-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
-  animation: blockShake 0.45s ease;
+  animation: blockShake 0.42s ease;
 }
 
-@keyframes questionIn {
+@keyframes questionScaleIn {
   0% {
     opacity: 0;
-    transform: translate3d(0, 32px, 0) scale(0.85) rotateX(9deg);
-    filter: blur(8px);
+    transform: scale(0.85) translateY(26px);
   }
-  62% {
+  65% {
     opacity: 1;
-    transform: translate3d(0, -4px, 0) scale(1.025) rotateX(-1deg);
-    filter: blur(0);
-  }
-  84% {
-    transform: translate3d(0, 1px, 0) scale(0.995) rotateX(0.4deg);
+    transform: scale(1.028) translateY(-3px);
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotateX(0);
-    filter: blur(0);
+    transform: scale(1) translateY(0);
   }
 }
 
-@keyframes questionOut {
+@keyframes questionScaleOut {
   0% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotateX(0);
-    filter: blur(0);
+    transform: scale(1) translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translate3d(0, -24px, 0) scale(0.88) rotateX(-8deg);
-    filter: blur(6px);
+    transform: scale(0.85) translateY(-22px);
   }
 }
 
-@keyframes questionTextIn {
+@keyframes buttonScaleIn {
   0% {
     opacity: 0;
-    transform: translate3d(0, 12px, 0) scale(0.94);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-}
-
-@keyframes answerItemIn {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 16px, 0) scale(0.90);
+    transform: scale(0.88) translateY(14px);
   }
   70% {
     opacity: 1;
-    transform: translate3d(0, -2px, 0) scale(1.02);
+    transform: scale(1.025) translateY(-2px);
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: scale(1) translateY(0);
   }
 }
 
-@keyframes cardRing {
-  0%   { opacity: 0.85; transform: scale(0.96); }
+@keyframes cardRingScale {
+  0%   { opacity: 0.9; transform: scale(0.95); }
   100% { opacity: 0; transform: scale(1.04); }
 }
 
-@keyframes cardShine {
-  0%   { opacity: 0; transform: translateX(-70%) rotate(2deg); }
-  25%  { opacity: 1; }
-  100% { opacity: 0; transform: translateX(70%) rotate(2deg); }
+@keyframes cardShineSweep {
+  0%   { opacity: 0; transform: translateX(-80%) rotate(3deg); }
+  30%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(80%) rotate(3deg); }
 }
 
 @keyframes blockCorrect {
@@ -397,7 +359,7 @@ body {
   padding: 0.95rem 1.1rem;
   text-align: left;
   border-radius: 10px;
-  transition: all 0.2s ease-out;
+  transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
   font: inherit;
   font-weight: 600;
   border: 1px solid var(--quiz-btn-border);
@@ -1057,33 +1019,4 @@ body {
 .performed-user-answer strong,
 .performed-expected-answer strong {
   color: var(--quiz-text-muted);
-}
-
-/* ------------------------------------------------------------
-   Accessibilite : pas d'animation pour qui prefere les mouvements
-   reduits (le contenu reste immediatement visible).
-   ------------------------------------------------------------ */
-@media (prefers-reduced-motion: reduce) {
-  .question-block.enter,
-  .question-block.exit,
-  .question-block.enter .question-card::before,
-  .question-block.enter .question-card::after,
-  .question-block.enter .question-text,
-  .question-block.enter .image-area,
-  .question-block.enter .input-area,
-  .question-block.enter .options-container .answer-btn,
-  #counter-label.pop,
-  .resume-icon,
-  .resume-area {
-    animation: none !important;
-  }
-
-  .question-block,
-  .question-block.enter,
-  .question-block.exit {
-    filter: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-    transition: none !important;
-  }
 }

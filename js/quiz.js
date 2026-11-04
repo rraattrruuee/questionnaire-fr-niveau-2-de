@@ -22,36 +22,34 @@
   var DEFAULT_DISPLAY_SETTINGS = { correctDelay: 1100, wrongDelay: 3200 };
 
   /* ---------------------------------------------------------
-     Stockage local persistant & Reprise de Session
+     Gestion du Stockage & Reprise :
+     • Progression non terminee : persiste dans localStorage
+     • Detail des reponses de la partie : cache non-persistant sessionStorage
+     • Nettoyage proactif de tout stockage excessif dans localStorage
      --------------------------------------------------------- */
   var ACTIVE_SESSION_PREFIX = "quiz-active-session-";
-  var PERFORMED_QUESTIONS_PREFIX = "quiz-performed-questions-";
-  var PERSISTENT_CONFIG_KEY = "quiz-persistent-config";
-  var PERSISTENT_DATA_PREFIX = "quiz-persistent-data-";
+  var SESSION_PERFORMED_PREFIX = "quiz-session-performed-";
 
-  function getSessionKey(qId, catIdx) {
+  // Nettoyage immediat des anciennes cles volumineuses dans localStorage
+  (function cleanupExcessiveStorage() {
+    try {
+      var toRemove = [];
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && (k.startsWith("quiz-persistent-data-") || k.startsWith("quiz-performed-questions-"))) {
+          toRemove.push(k);
+        }
+      }
+      toRemove.forEach(function (k) { localStorage.removeItem(k); });
+    } catch (e) {}
+  })();
+
+  function getActiveSessionKey(qId, catIdx) {
     return ACTIVE_SESSION_PREFIX + (qId || "embed") + "_" + (catIdx != null ? catIdx : 0);
   }
 
-  function getPerformedKey(qId, catIdx) {
-    return PERFORMED_QUESTIONS_PREFIX + (qId || "embed") + "_" + (catIdx != null ? catIdx : 0);
-  }
-
-  function savePersistentCache(key, data) {
-    try {
-      localStorage.setItem(key, JSON.stringify(data));
-    } catch (e) {
-      console.warn("Erreur écriture cache persistant local:", e);
-    }
-  }
-
-  function getPersistentCache(key) {
-    try {
-      var raw = localStorage.getItem(key);
-      return raw ? JSON.parse(raw) : null;
-    } catch (e) {
-      return null;
-    }
+  function getSessionPerformedKey(qId, catIdx) {
+    return SESSION_PERFORMED_PREFIX + (qId || "embed") + "_" + (catIdx != null ? catIdx : 0);
   }
 
   function showOfflineBadge() {
@@ -59,6 +57,7 @@
     if (b) b.classList.remove("hidden");
   }
 
+  /* Sauvegarde de la progression non terminée dans localStorage */
   function saveActiveSession() {
     var qId = getQuizId();
     if (!qId || window.__EMBED_QUIZ__) return;
@@ -79,7 +78,7 @@
       updatedAt: Date.now()
     };
     try {
-      localStorage.setItem(getSessionKey(qId, currentCategoryIndex), JSON.stringify(session));
+      localStorage.setItem(getActiveSessionKey(qId, currentCategoryIndex), JSON.stringify(session));
     } catch (e) {
       console.warn("Erreur sauvegarde session active:", e);
     }
@@ -88,7 +87,7 @@
   function loadActiveSession(qId, catIdx) {
     if (!qId) return null;
     try {
-      var raw = localStorage.getItem(getSessionKey(qId, catIdx));
+      var raw = localStorage.getItem(getActiveSessionKey(qId, catIdx));
       if (!raw) return null;
       var data = JSON.parse(raw);
       if (
@@ -109,10 +108,11 @@
     var qId = getQuizId();
     if (!qId) return;
     try {
-      localStorage.removeItem(getSessionKey(qId, currentCategoryIndex));
+      localStorage.removeItem(getActiveSessionKey(qId, currentCategoryIndex));
     } catch (e) {}
   }
 
+  /* Enregistrement du détail des réponses dans un cache NON-PERSISTANT (sessionStorage) */
   function recordPerformedQuestion(q, userAnswerText, correctAnswerText, isCorrect) {
     var qId = getQuizId();
     if (!qId || window.__EMBED_QUIZ__) return;
@@ -128,9 +128,9 @@
       category: categories[currentCategoryIndex] ? categories[currentCategoryIndex].name : "",
       answeredAt: new Date().toISOString()
     };
-    var key = getPerformedKey(qId, currentCategoryIndex);
+    var key = getSessionPerformedKey(qId, currentCategoryIndex);
     try {
-      var list = JSON.parse(localStorage.getItem(key) || "[]");
+      var list = JSON.parse(sessionStorage.getItem(key) || "[]");
       var existing = list.findIndex(function (it) {
         return it.questionNumber === item.questionNumber;
       });
@@ -139,9 +139,9 @@
       } else {
         list.push(item);
       }
-      localStorage.setItem(key, JSON.stringify(list));
+      sessionStorage.setItem(key, JSON.stringify(list));
     } catch (e) {
-      console.warn("Erreur enregistrement question effectuée:", e);
+      console.warn("Erreur enregistrement sessionStorage:", e);
     }
   }
 
@@ -149,7 +149,7 @@
     var qId = getQuizId();
     if (!qId) return;
     try {
-      localStorage.removeItem(getPerformedKey(qId, currentCategoryIndex));
+      sessionStorage.removeItem(getSessionPerformedKey(qId, currentCategoryIndex));
     } catch (e) {}
   }
 
@@ -196,7 +196,6 @@
     return list.map(function (raw) {
       raw = raw || {};
 
-      // --- Simple format ---
       if (typeof raw.q === "string" && !raw.type) {
         var answers = Array.isArray(raw.answers) ? raw.answers.slice() : [];
         var idx = answers.indexOf(raw.correct);
@@ -212,7 +211,6 @@
         };
       }
 
-      // --- Rich format ---
       var type = raw.type === "text" ? "text" : "mcq";
       var options = Array.isArray(raw.options)
         ? raw.options.slice()
@@ -295,7 +293,7 @@
   }
 
   /* ---------------------------------------------------------
-     Progression (localStorage)
+     Progression globale (localStorage)
      --------------------------------------------------------- */
   var PROGRESS_KEY = "quiz-progress";
 
@@ -343,8 +341,6 @@
   }
 
   function goToPortal() {
-    // En mode integre (apercu QuizMaster / export autonome), on relance le quiz
-    // au lieu de renvoyer vers le portail.
     if (window.__EMBED_QUIZ__) {
       startQuiz({
         title: window.__EMBED_QUIZ__.title || "Quiz",
@@ -356,7 +352,7 @@
   }
 
   /* ---------------------------------------------------------
-     Ecran de choix de categorie (uniquement si plusieurs)
+     Ecran de choix de categorie
      --------------------------------------------------------- */
   function renderCategoryMenu() {
     showOnly("category-area");
@@ -552,6 +548,7 @@
     cancelPendingAdvance();
     currentCategoryIndex = idx;
 
+    // Detection d'une session non terminee pour reprendre
     var saved = loadActiveSession(getQuizId(), idx);
     if (saved) {
       showResumePrompt(saved);
@@ -673,7 +670,6 @@
     userSelection = null;
     quizInProgress = true;
 
-    // Reset notepad at each question
     if (notepadEnabled) {
       var npTa = $("notepad-textarea");
       if (npTa) npTa.value = "";
@@ -684,15 +680,12 @@
     btn.disabled = true;
     btn.onclick = checkAnswerAndProceed;
 
-    // Question text (HTML allowed, e.g. <sup>, math fractions)
     var html = '<p class="question-text">' + q.text + "</p>";
 
-    // Optional image
     if (q.image) {
       html += '<div class="image-area"><img src="' + q.image + '" alt="Illustration" loading="lazy"></div>';
     }
 
-    // Answer area
     if (q.type === "text") {
       html +=
         '<div class="input-area"><input type="text" id="text-answer" class="text-answer" ' +
@@ -714,7 +707,7 @@
           checkAnswerAndProceed();
         }
       });
-      setTimeout(function () { input.focus(); }, 150);
+      setTimeout(function () { input.focus(); }, 120);
     } else {
       var optionsContainer = card.querySelector("#options-container");
       var opts = q.options.map(function (text, i) {
@@ -733,10 +726,10 @@
       });
     }
 
-    // Animation d'entree spectaculaire avec scale et pop
-    block.classList.remove("exit", "is-correct", "is-wrong", "enter");
-    void block.offsetWidth;
-    block.classList.add("enter");
+    // Declenchement fiable de l'animation d'entree scale
+    block.classList.remove("anim-scale-out", "anim-scale-in", "is-correct", "is-wrong");
+    void block.offsetWidth; // Forcer reflow
+    block.classList.add("anim-scale-in");
 
     updateProgress();
     saveActiveSession();
@@ -770,13 +763,13 @@
         totalQuestions: questionsShuffled.length
       });
     }
-
-    setTimeout(function () { block.classList.remove("enter"); }, 600);
   }
 
   function selectAnswer(clickedButton) {
     if (!quizInProgress) return;
-    var optionsContainer = $("options-container");
+    var card = $("current-question-card");
+    var optionsContainer = card ? card.querySelector("#options-container") : $("options-container");
+    if (!optionsContainer) return;
     optionsContainer.querySelectorAll(".answer-btn").forEach(function (b) {
       b.classList.remove("selected");
     });
@@ -809,21 +802,24 @@
     } else {
       if (!userSelection) return;
       isCorrect = userSelection.isCorrect;
-      var optionsContainer = $("options-container");
-      optionsContainer.querySelectorAll(".answer-btn").forEach(function (b) {
-        var correct = b.dataset.correct === "1";
-        var wasSelected = b.classList.contains("selected");
-        if (wasSelected) {
-          userAnswerText = b.innerHTML;
-        }
-        b.classList.remove("selected");
-        if (correct) {
-          b.classList.add("correct");
-          if (!correctAnswerHTML) correctAnswerHTML = b.innerHTML;
-        } else if (wasSelected) {
-          b.classList.add("incorrect");
-        }
-      });
+      var card = $("current-question-card");
+      var optionsContainer = card ? card.querySelector("#options-container") : $("options-container");
+      if (optionsContainer) {
+        optionsContainer.querySelectorAll(".answer-btn").forEach(function (b) {
+          var correct = b.dataset.correct === "1";
+          var wasSelected = b.classList.contains("selected");
+          if (wasSelected) {
+            userAnswerText = b.innerHTML;
+          }
+          b.classList.remove("selected");
+          if (correct) {
+            b.classList.add("correct");
+            if (!correctAnswerHTML) correctAnswerHTML = b.innerHTML;
+          } else if (wasSelected) {
+            b.classList.add("incorrect");
+          }
+        });
+      }
     }
 
     quizInProgress = false;
@@ -832,9 +828,9 @@
     if (isCorrect) score++;
     updateProgress();
 
-    // Enregistrer la question effectuee dans le stockage local
+    // Enregistrer le detail dans le cache NON PERSISTANT (sessionStorage)
     recordPerformedQuestion(q, userAnswerText, correctAnswerHTML, isCorrect);
-    // Sauvegarder la session active
+    // Sauvegarder la session active dans localStorage
     saveActiveSession();
 
     if (window.__analytics) {
@@ -906,8 +902,6 @@
       exitAndAdvance();
     };
 
-    // On laisse le temps de lire, puis on fait sortir le bloc ENTIER avant
-    // d'afficher la question suivante. 0 = passage manuel uniquement.
     if (readingDelay > 0) {
       pendingAdvance = setTimeout(function () {
         pendingAdvance = null;
@@ -916,38 +910,36 @@
     }
   }
 
+  /* Animation fluide et fiable de passage a la question suivante (< 1.5s) */
   function exitAndAdvance() {
     if (advancing) return;
     advancing = true;
     cancelPendingAdvance();
+
+    var nextBtn = $("main-btn");
+    if (nextBtn) nextBtn.disabled = true;
+
     var block = $("question-block");
-    var advanced = false;
+    block.classList.remove("anim-scale-in", "is-correct", "is-wrong");
+    void block.offsetWidth;
+    block.classList.add("anim-scale-out");
 
-    function onExitEnd(event) {
-      // Les animations des enfants bubbent : on ne reagit qu'a la sortie du bloc lui-meme.
-      if (event && event.target !== block) return;
-      go();
-    }
-
-    function go() {
-      if (advanced) return;
-      advanced = true;
-      advancing = false;
-      block.removeEventListener("animationend", onExitEnd);
-      block.removeEventListener("transitionend", onExitEnd);
+    setTimeout(function () {
+      block.classList.remove("anim-scale-out");
       currentQuestionIndex++;
       saveActiveSession();
+      advancing = false;
+
       if (currentQuestionIndex >= questionsShuffled.length) {
         showResults();
       } else {
         renderQuestion();
+        var qArea = $("quiz-area");
+        if (qArea && typeof qArea.scrollIntoView === "function") {
+          qArea.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
       }
-    }
-
-    block.addEventListener("animationend", onExitEnd);
-    block.addEventListener("transitionend", onExitEnd);
-    block.classList.add("exit");
-    setTimeout(go, 360); // securite : la sortie dure 0.26 s
+    }, 200);
   }
 
   function renderPerformedQuestionsSummary() {
@@ -960,7 +952,7 @@
     var performedList = [];
     try {
       performedList = JSON.parse(
-        localStorage.getItem(getPerformedKey(qId, currentCategoryIndex)) || "[]"
+        sessionStorage.getItem(getSessionPerformedKey(qId, currentCategoryIndex)) || "[]"
       );
     } catch (e) {}
 
@@ -1014,7 +1006,7 @@
     var total = questionsShuffled.length;
     var percentage = total ? Math.round((score / total) * 100) : 0;
 
-    // La session active est terminee, on nettoie
+    // La session active est terminee, on la supprime de localStorage
     clearActiveSession();
 
     if (window.__analytics) {
@@ -1032,13 +1024,11 @@
       window.__analytics.setQuizState(null);
     }
 
-    // Sauvegarder la progression globale
     var quizId = getQuizId();
     if (quizId && categories.length > 1) {
       saveProgress(quizId, currentCategoryIndex, score, total);
     }
 
-    // Bouton "Retour au menu"
     var menuBtn = $("menu-btn");
     if (menuBtn) {
       menuBtn.classList.toggle("hidden", categories.length <= 1);
@@ -1079,7 +1069,7 @@
     }
     $("feedback-message").textContent = msg;
 
-    // Afficher le detail des questions effectuees
+    // Detail des questions effectuees issu de sessionStorage
     renderPerformedQuestionsSummary();
 
     resultsDiv.classList.remove("entering");
@@ -1091,11 +1081,8 @@
   }
 
   /* ---------------------------------------------------------
-     Init & Cache Persistant Hors-Ligne
+     Init & Offline Fallback (via Service Worker / Network)
      --------------------------------------------------------- */
-
-  // Expose les mecaniques partagees (normalisation, texte, melange)
-  // pour le mode multijoueur — evite de recoder deux fois la meme logique.
   window.QUIZ_CORE = {
     normalizeQuiz: normalizeQuiz,
     normalizeQuestions: normalizeQuestions,
@@ -1103,8 +1090,6 @@
     shuffle: shuffle
   };
 
-  // La page multijoueur charge ce fichier pour QUIZ_CORE uniquement :
-  // dans ce cas on ne demarre pas le flux de quiz (pas de ?id= sur sa page).
   if (window.__QUIZ_NO_AUTOINIT__) return;
 
   function showOfflineError() {
@@ -1115,11 +1100,9 @@
   }
 
   function init() {
-    // Ecouteurs pour sauvegarder avant fermeture d'onglet / rechargement
     window.addEventListener("beforeunload", saveActiveSession);
     window.addEventListener("pagehide", saveActiveSession);
 
-    // Mode integre (apercu QuizMaster / export autonome)
     if (window.__EMBED_QUIZ__) {
       startQuiz({
         title: window.__EMBED_QUIZ__.title || "Quiz",
@@ -1148,29 +1131,18 @@
         return s.id === quiz.subject;
       });
 
-      var dataCacheKey = PERSISTENT_DATA_PREFIX + quiz.id;
-
       fetch(quiz.file)
         .then(function (res) {
           if (!res.ok) throw new Error("HTTP " + res.status);
           return res.json();
         })
         .then(function (data) {
-          savePersistentCache(dataCacheKey, data);
           quiz._data = data;
           startQuiz(quiz, subjectObj ? subjectObj.name : "");
         })
         .catch(function (err) {
-          console.warn("Échec réseau questionnaire, tentative depuis le cache persistant local...", err);
-          var cachedData = getPersistentCache(dataCacheKey);
-          if (cachedData) {
-            showOfflineBadge();
-            quiz._data = cachedData;
-            startQuiz(quiz, subjectObj ? subjectObj.name : "");
-          } else {
-            console.error("Questionnaire non disponible hors ligne:", err);
-            showOfflineError();
-          }
+          console.warn("Échec chargement quiz:", err);
+          showOfflineError();
         });
     }
 
@@ -1180,19 +1152,11 @@
         return res.json();
       })
       .then(function (config) {
-        savePersistentCache(PERSISTENT_CONFIG_KEY, config);
         processConfig(config);
       })
       .catch(function (err) {
-        console.warn("Échec réseau config, tentative depuis le cache persistant local...", err);
-        var cachedConfig = getPersistentCache(PERSISTENT_CONFIG_KEY);
-        if (cachedConfig) {
-          showOfflineBadge();
-          processConfig(cachedConfig);
-        } else {
-          console.error("Configuration non disponible hors ligne:", err);
-          showOfflineError();
-        }
+        console.warn("Échec chargement config:", err);
+        showOfflineError();
       });
   }
 
