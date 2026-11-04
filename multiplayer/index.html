@@ -37,6 +37,7 @@
                 </a>
                 <div class="topbar-actions">
                     <span id="net-status" class="mp-net" title="État de la connexion">🌐 En ligne</span>
+                    <button id="btn-net-config" class="btn btn-ghost" type="button" title="Réglages réseau & TURN" style="padding: 0.35rem 0.65rem; font-size: 0.85rem;">⚙️ Réseau</button>
                     <button class="theme-toggle" type="button" data-theme-toggle>
                         <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
                         <span class="theme-toggle-label">Thème clair</span>
@@ -255,6 +256,35 @@
             </section>
         </main>
 
+        <!-- ================= MODALE RÉGLAGES RÉSEAU / TURN ================= -->
+        <div id="net-config-overlay" class="mp-scan-overlay hidden" role="dialog" aria-modal="true" aria-label="Réglages réseau multijoueur">
+            <div class="mp-scan-panel" style="max-width: 480px;">
+                <div class="mp-scan-head">
+                    <h3>⚙️ Connexion à distance (TURN / NAT)</h3>
+                    <button id="net-config-close" class="mp-scan-close" type="button" aria-label="Fermer">✕</button>
+                </div>
+                <div style="font-size: 0.88rem; line-height: 1.5; color: var(--text-muted, #94a3b8); margin-bottom: 1rem;">
+                    <p style="margin-bottom: 0.6rem;">
+                        🏠 <strong>Même réseau Wi-Fi ou partage 4G :</strong> La connexion fonctionne directement sans aucun réglage.
+                    </p>
+                    <p>
+                        🌍 <strong>Deux réseaux distants (ex. Wi-Fi vs 4G/5G) :</strong> Les routeurs et opérateurs mobiles bloquent les connexions directes (NAT symétrique). Un relais <strong>TURN</strong> est requis pour traverser les pare-feux.
+                    </p>
+                </div>
+
+                <label class="mp-field">
+                    <span>URL API Metered TURN (50 Go gratuits/mois sur <a href="https://www.metered.ca" target="_blank" rel="noopener" style="color: var(--primary, #38bdf8); text-decoration: underline;">metered.ca</a>) :</span>
+                    <input id="cfg-turn-url" placeholder="https://<app>.metered.live/api/v1/turn/credentials?apiKey=<clé>" autocomplete="off" spellcheck="false" />
+                </label>
+
+                <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+                    <button id="btn-save-net-config" class="btn" type="button" style="flex: 1;">💾 Enregistrer & Tester</button>
+                    <button id="btn-reset-net-config" class="btn btn-ghost" type="button">Réinitialiser (STUN standard)</button>
+                </div>
+                <p id="net-config-status" class="mp-status" style="margin-top: 0.75rem;" role="status"></p>
+            </div>
+        </div>
+
         <!-- ================= SCANNER QR ================= -->
         <div id="scan-overlay" class="mp-scan-overlay hidden" role="dialog" aria-modal="true" aria-label="Scanner un QR code">
             <div class="mp-scan-panel">
@@ -285,6 +315,6 @@
         <script src="../js/theme.js"></script>
         <script src="../js/analytics.js"></script>
         <script src="../js/quiz.js"></script>
-        <script src="./multiplayer.js?v=20261104-ice4"></script>
+        <script src="./multiplayer.js?v=20261104-ice5"></script>
     </body>
 </html>

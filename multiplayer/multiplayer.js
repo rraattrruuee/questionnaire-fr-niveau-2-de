@@ -25,12 +25,12 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var PEER_SOURCES = [
-    "./vendor/peerjs.min.js?v=20261104-ice4",
+    "./vendor/peerjs.min.js?v=20261104-ice5",
     "https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js",
     "https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"
   ];
   var QR_SOURCES = [
-    "./vendor/qrcode.min.js?v=20261104-ice4",
+    "./vendor/qrcode.min.js?v=20261104-ice5",
     "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js",
     "https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"
   ];
@@ -39,14 +39,46 @@
   var CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // sans 0/O/1/I
   var HOST_PID = "_host"; // pid réservé à l'hôte quand il joue aussi
 
-  // Serveurs STUN mondiaux ultra-rapides (< 5 pour éviter l'avertissement Firefox)
-  // sans hôtes TURN morts ni requêtes fantômes qui bloquent ou font échouer la négociation ICE.
-  var ICE_SERVERS = (typeof window !== "undefined" && Array.isArray(window.CUSTOM_ICE_SERVERS))
-    ? window.CUSTOM_ICE_SERVERS
-    : [
-        { urls: ["stun:stun.l.google.com:19302", "stun:stun1.l.google.com:19302"] },
-        { urls: "stun:stun.cloudflare.com:3478" }
-      ];
+  // Serveurs STUN mondiaux par défaut
+  var DEFAULT_STUN_SERVERS = [
+    { urls: ["stun:stun.l.google.com:19302", "stun:stun1.l.google.com:19302"] },
+    { urls: "stun:stun.cloudflare.com:3478" }
+  ];
+
+  function getEffectiveIceServers() {
+    if (typeof window !== "undefined" && Array.isArray(window.CUSTOM_ICE_SERVERS)) {
+      return Promise.resolve(window.CUSTOM_ICE_SERVERS);
+    }
+    try {
+      var cached = localStorage.getItem("mp_custom_ice_servers");
+      if (cached) {
+        var parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length > 0) return Promise.resolve(parsed);
+      }
+    } catch (e) {}
+
+    var turnUrl = "";
+    try { turnUrl = localStorage.getItem("mp_turn_api_url") || ""; } catch (e) {}
+    if (turnUrl && turnUrl.startsWith("http")) {
+      return fetch(turnUrl)
+        .then(function (r) { return r.json(); })
+        .then(function (servers) {
+          if (Array.isArray(servers) && servers.length > 0) {
+            try { localStorage.setItem("mp_custom_ice_servers", JSON.stringify(servers)); } catch (e) {}
+            return servers;
+          }
+          return DEFAULT_STUN_SERVERS;
+        })
+        .catch(function (err) {
+          console.warn("Échec de chargement des serveurs TURN depuis l'API:", err);
+          return DEFAULT_STUN_SERVERS;
+        });
+    }
+
+    return Promise.resolve(DEFAULT_STUN_SERVERS);
+  }
+
+  var ICE_SERVERS = DEFAULT_STUN_SERVERS;
 
   // Config chargée pour les sélecteurs Matière → Questionnaire
   var CFG = { subjects: [], quizzes: [] };
@@ -842,16 +874,17 @@
   }
 
   function createPeerWithCode(attempt) {
-    return new Promise(function (resolve, reject) {
-      var code = makeCode();
-      var peer = new Peer(ROOM_PREFIX + code, {
-        debug: 1,
-        pingInterval: 3000,
-        config: {
-          iceServers: ICE_SERVERS,
-          sdpSemantics: "unified-plan"
-        }
-      });
+    return getEffectiveIceServers().then(function (iceServers) {
+      return new Promise(function (resolve, reject) {
+        var code = makeCode();
+        var peer = new Peer(ROOM_PREFIX + code, {
+          debug: 1,
+          pingInterval: 3000,
+          config: {
+            iceServers: iceServers,
+            sdpSemantics: "unified-plan"
+          }
+        });
       var opened = false;
       var reconnecting = false;
       var timer = setTimeout(function () {
@@ -929,7 +962,8 @@
       });
       peer.on("error", fail);
     });
-  }
+  });
+}
 
   function joinUrlFor(code) {
     var base = location.href.split("?")[0].split("#")[0].replace(/index\.html$/, "");
@@ -1551,12 +1585,13 @@
     track("multiplayer_join_attempt");
 
     ensurePeer()
-      .then(function () {
+      .then(getEffectiveIceServers)
+      .then(function (iceServers) {
         var peer = new Peer({
           debug: 1,
           pingInterval: 3000,
           config: {
-            iceServers: ICE_SERVERS,
+            iceServers: iceServers,
             sdpSemantics: "unified-plan"
           }
         });
@@ -1632,7 +1667,7 @@
               $("btn-join").disabled = false;
               setStatus(
                 $("home-status"),
-                "Impossible de joindre l'hôte (négociation WebRTC échouée). L'hôte a peut-être changé d'onglet ou la salle n'existe plus. Réessayez.",
+                "Impossible de relier les 2 appareils à distance (pare-feu / NAT 4G). Pour jouer à distance, activez un relais TURN dans ⚙️ Réseau (ou connectez les deux appareils au même Wi-Fi / partage 4G).",
                 "is-error"
               );
             } else {
@@ -2247,6 +2282,80 @@
       if (document.visibilityState === "visible") handleWake();
     });
     window.addEventListener("focus", handleWake);
+
+    // Modal Réglages Réseau & TURN
+    var netOverlay = $("net-config-overlay");
+    var turnInput = $("cfg-turn-url");
+    var netStatusText = $("net-config-status");
+
+    function openNetConfig() {
+      if (!netOverlay) return;
+      var currentUrl = "";
+      try { currentUrl = localStorage.getItem("mp_turn_api_url") || ""; } catch (e) {}
+      if (turnInput) turnInput.value = currentUrl;
+      var hasTurn = false;
+      try { hasTurn = !!localStorage.getItem("mp_custom_ice_servers") || !!currentUrl; } catch (e) {}
+      if (netStatusText) {
+        if (hasTurn) {
+          setStatus(netStatusText, "🛡️ Relais TURN activé (connexion à distance 4G / Wi-Fi active)", "is-ok");
+        } else {
+          setStatus(netStatusText, "📡 Mode STUN standard (P2P direct / même Wi-Fi ou partage 4G)");
+        }
+      }
+      netOverlay.classList.remove("hidden");
+    }
+
+    function closeNetConfig() {
+      if (netOverlay) netOverlay.classList.add("hidden");
+    }
+
+    if ($("btn-net-config")) $("btn-net-config").onclick = openNetConfig;
+    if ($("net-config-close")) $("net-config-close").onclick = closeNetConfig;
+    if (netOverlay) {
+      netOverlay.addEventListener("click", function (e) {
+        if (e.target === netOverlay) closeNetConfig();
+      });
+    }
+
+    if ($("btn-save-net-config")) {
+      $("btn-save-net-config").onclick = function () {
+        var url = (turnInput ? turnInput.value.trim() : "");
+        if (!url) {
+          setStatus(netStatusText, "Veuillez entrer une URL valide ou cliquez sur Réinitialiser.", "is-error");
+          return;
+        }
+        setStatus(netStatusText, "Vérification des identifiants TURN…");
+        fetch(url)
+          .then(function (r) {
+            if (!r.ok) throw new Error("HTTP " + r.status);
+            return r.json();
+          })
+          .then(function (servers) {
+            if (!Array.isArray(servers) || servers.length === 0) {
+              throw new Error("Format de réponse inattendu");
+            }
+            localStorage.setItem("mp_turn_api_url", url);
+            localStorage.setItem("mp_custom_ice_servers", JSON.stringify(servers));
+            setStatus(netStatusText, "✅ " + servers.length + " serveurs TURN validés et enregistrés !", "is-ok");
+            setTimeout(closeNetConfig, 1400);
+          })
+          .catch(function (err) {
+            setStatus(netStatusText, "❌ Échec : " + err.message + " (vérifiez l'URL de votre clé API).", "is-error");
+          });
+      };
+    }
+
+    if ($("btn-reset-net-config")) {
+      $("btn-reset-net-config").onclick = function () {
+        try {
+          localStorage.removeItem("mp_turn_api_url");
+          localStorage.removeItem("mp_custom_ice_servers");
+        } catch (e) {}
+        if (turnInput) turnInput.value = "";
+        setStatus(netStatusText, "Paramètres réinitialisés sur STUN standard.", "is-ok");
+        setTimeout(closeNetConfig, 1000);
+      };
+    }
 
     // Lien de rejoignage direct ?room=CODE (depuis le QR code)
     var room = new URLSearchParams(window.location.search).get("room");
