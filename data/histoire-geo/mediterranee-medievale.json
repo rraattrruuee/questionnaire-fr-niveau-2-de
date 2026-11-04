@@ -15,7 +15,7 @@
             "Le schisme entre chrétiens",
             "La mort de Mahomet"
           ],
-          "correct": "La chute de l'Empire romain d'Occident",
+          "correct": 0,
           "solution": "476 : chute de l'Empire romain d'Occident, remplacé par des royaumes germaniques."
         },
         {
@@ -27,7 +27,7 @@
             "1099",
             "1187"
           ],
-          "correct": "1453",
+          "correct": 0,
           "solution": "1453 : les Turcs prennent Constantinople, fin de l'Empire byzantin."
         },
         {
@@ -39,7 +39,7 @@
             "476",
             "1453"
           ],
-          "correct": "632",
+          "correct": 0,
           "solution": "Après la mort de Mahomet en 632, ses successeurs multiplient les conquêtes."
         },
         {
@@ -51,7 +51,7 @@
             "Le pape",
             "Le sultan"
           ],
-          "correct": "Le basileus",
+          "correct": 0,
           "solution": "Le basileus est l'empereur byzantin, pouvoir absolu et divin."
         },
         {
@@ -63,7 +63,7 @@
             "Bagdad",
             "Damas"
           ],
-          "correct": "Constantinople",
+          "correct": 0,
           "solution": "Constantinople est la capitale de l'Empire byzantin."
         },
         {
@@ -75,7 +75,7 @@
             "Le pape",
             "Le roi de France"
           ],
-          "correct": "Le calife",
+          "correct": 0,
           "solution": "Le calife est le chef politique et religieux du monde musulman."
         },
         {
@@ -87,7 +87,7 @@
             "Parce que les musulmans conquièrent l'Europe",
             "Parce que le pape gouverne toute l'Europe"
           ],
-          "correct": "Parce que des royaumes germaniques succèdent à l'Empire romain d'Occident",
+          "correct": 0,
           "solution": "476 : des royaumes fondés par les peuples germaniques succèdent à l'Empire romain d'Occident."
         },
         {
@@ -99,7 +99,7 @@
             "L'Empire ottoman",
             "L'Empire romain d'Orient"
           ],
-          "correct": "L'Empire carolingien",
+          "correct": 0,
           "solution": "Début IXe siècle : les royaumes germaniques sont réunis au sein de l'Empire carolingien."
         },
         {
@@ -111,7 +111,7 @@
             "Byzance, Bagdad, Damas",
             "Égypte, Syrie, Palestine"
           ],
-          "correct": "France, Saint-Empire, Angleterre, etc.",
+          "correct": 0,
           "solution": "L'Empire carolingien éclate en royaumes multiples : France, Saint-Empire, Angleterre, etc."
         },
         {
@@ -123,7 +123,7 @@
             "Jérusalem",
             "Paris"
           ],
-          "correct": "Rome",
+          "correct": 0,
           "solution": "Rome est la capitale religieuse de l'Occident chrétien, siège du pape."
         },
         {
@@ -135,7 +135,7 @@
             "Les alliances avec Byzance",
             "La féodalité"
           ],
-          "correct": "Le djihad, conquête menée au nom de l'islam",
+          "correct": 0,
           "solution": "Le djihad est la conquête menée au nom de l'islam, moteur de l'expansion."
         },
         {
@@ -147,7 +147,7 @@
             "Manuel Ier Comnène",
             "Constantin"
           ],
-          "correct": "Justinien",
+          "correct": 0,
           "solution": "Au VIe siècle, sous Justinien, l'Empire byzantin s'agrandit."
         },
         {
@@ -159,7 +159,7 @@
             "De la Scandinavie à l'Égypte",
             "De l'Inde à la Chine"
           ],
-          "correct": "Du Moyen-Orient à l'Espagne",
+          "correct": 0,
           "solution": "L'empire arabo-musulman s'étend du Moyen-Orient à l'Espagne."
         },
         {
@@ -171,7 +171,7 @@
             "1204",
             "1453"
           ],
-          "correct": "1054",
+          "correct": 0,
           "solution": "1054 : schisme entre chrétiens (Orient orthodoxe / Occident catholique)."
         }
       ]
@@ -188,7 +188,7 @@
             "Une féodalité fragmentée",
             "Une république maritime"
           ],
-          "correct": "Un empire unifié autour du basileus",
+          "correct": 0,
           "solution": "L'Empire byzantin est unifié, dirigé par le basileus, pouvoir absolu et divin."
         },
         {
@@ -200,7 +200,7 @@
             "Il est conquis par Byzance",
             "Il se convertit au christianisme"
           ],
-          "correct": "Il éclate en trois califats rivaux avec trois capitales",
+          "correct": 0,
           "solution": "Après le Xe siècle, l'empire éclate en trois califats rivaux avec trois capitales."
         },
         {
@@ -212,7 +212,7 @@
             "En trois califats",
             "En une seule république"
           ],
-          "correct": "En royaumes multiples et fragmentés",
+          "correct": 0,
           "solution": "L'Occident chrétien est divisé en royaumes multiples (France, Saint-Empire, Angleterre...)."
         },
         {
@@ -224,7 +224,7 @@
             "Les basileus",
             "Les marchands vénitiens"
           ],
-          "correct": "Les seigneurs",
+          "correct": 0,
           "solution": "Les seigneurs, grands propriétaires et chefs de guerre, détiennent le pouvoir local."
         },
         {
@@ -236,7 +236,7 @@
             "Uniquement économique",
             "Purement symbolique"
           ],
-          "correct": "Politique et religieux",
+          "correct": 0,
           "solution": "Le calife est un chef politique et religieux, successeur de Mahomet."
         },
         {
@@ -248,7 +248,7 @@
             "Purement militaire",
             "Soumis au pape"
           ],
-          "correct": "Absolu et divin",
+          "correct": 0,
           "solution": "Le basileus est considéré comme le représentant de Dieu sur terre : pouvoir absolu et divin."
         },
         {
@@ -260,7 +260,7 @@
             "Économique uniquement",
             "Il n'a aucun pouvoir"
           ],
-          "correct": "Religieux, il impose son autorité aux souverains (XIe s.)",
+          "correct": 0,
           "solution": "Le pape, chef de l'Église, impose son autorité aux souverains à partir du XIe siècle."
         },
         {
@@ -272,7 +272,7 @@
             "Constantinople, Venise, Gênes",
             "Damas, Jérusalem, Édesse"
           ],
-          "correct": "Bagdad, Cordoue, Le Caire",
+          "correct": 0,
           "solution": "Les trois califats rivaux ont trois capitales, dont Bagdad et Cordoue."
         },
         {
@@ -284,7 +284,7 @@
             "Le basileat",
             "La république maritime"
           ],
-          "correct": "La féodalité",
+          "correct": 0,
           "solution": "La féodalité est le système pyramidal de l'Occident médiéval."
         },
         {
@@ -296,7 +296,7 @@
             "Au basileus",
             "À aucun pouvoir"
           ],
-          "correct": "À un autre homme, dans un système pyramidal",
+          "correct": 0,
           "solution": "En dehors du roi, chaque homme est soumis à un autre, dans un système pyramidal : la féodalité."
         },
         {
@@ -308,7 +308,7 @@
             "Jérusalem",
             "Venise"
           ],
-          "correct": "Constantinople",
+          "correct": 0,
           "solution": "Constantinople, capitale byzantine, est pillée lors de la 4e croisade en 1204."
         },
         {
@@ -320,7 +320,7 @@
             "L'Occident chrétien",
             "L'Empire carolingien"
           ],
-          "correct": "L'Empire byzantin",
+          "correct": 0,
           "solution": "L'Empire byzantin est unifié autour du basileus."
         },
         {
@@ -332,7 +332,7 @@
             "Le monde musulman",
             "L'Empire ottoman"
           ],
-          "correct": "L'Occident chrétien",
+          "correct": 0,
           "solution": "L'Occident chrétien est fragmenté et local, avec des seigneurs locaux."
         },
         {
@@ -344,7 +344,7 @@
             "L'Occident chrétien",
             "Venise"
           ],
-          "correct": "Le monde musulman",
+          "correct": 0,
           "solution": "Le monde musulman est dirigé par le calife, chef politico-religieux."
         }
       ]
@@ -361,7 +361,7 @@
             "Le christianisme catholique",
             "Le judaïsme"
           ],
-          "correct": "Le christianisme orthodoxe",
+          "correct": 0,
           "solution": "Les Byzantins sont chrétiens orthodoxes."
         },
         {
@@ -373,7 +373,7 @@
             "L'arabe",
             "Le français"
           ],
-          "correct": "Le grec",
+          "correct": 0,
           "solution": "Le grec est la langue officielle de l'Empire byzantin."
         },
         {
@@ -385,7 +385,7 @@
             "Le judaïsme",
             "Le polythéisme"
           ],
-          "correct": "L'islam",
+          "correct": 0,
           "solution": "Les habitants du monde musulman sont musulmans (monothéistes)."
         },
         {
@@ -397,7 +397,7 @@
             "Le latin",
             "Le turc"
           ],
-          "correct": "L'arabe",
+          "correct": 0,
           "solution": "L'arabe est la langue principale du monde musulman."
         },
         {
@@ -409,7 +409,7 @@
             "La Torah",
             "Les Évangiles"
           ],
-          "correct": "Le Coran",
+          "correct": 0,
           "solution": "Le Coran contient la parole de Mahomet."
         },
         {
@@ -421,7 +421,7 @@
             "L'islam",
             "Le judaïsme"
           ],
-          "correct": "Le christianisme catholique",
+          "correct": 0,
           "solution": "Les habitants de l'Occident sont chrétiens catholiques."
         },
         {
@@ -433,7 +433,7 @@
             "L'arabe",
             "Le francique"
           ],
-          "correct": "Le latin",
+          "correct": 0,
           "solution": "Le latin est la langue des élites et de l'Église en Occident."
         },
         {
@@ -445,7 +445,7 @@
             "La croisade",
             "Le djihad"
           ],
-          "correct": "Le schisme",
+          "correct": 0,
           "solution": "1054 : le schisme sépare l'Église orthodoxe de l'Église catholique."
         },
         {
@@ -457,7 +457,7 @@
             "Juifs et chrétiens",
             "Latins et Grecs"
           ],
-          "correct": "Sunnites et chiites",
+          "correct": 0,
           "solution": "Les musulmans sont divisés entre sunnites et chiites."
         },
         {
@@ -469,7 +469,7 @@
             "Conquête territoriale",
             "Traduction d'un texte"
           ],
-          "correct": "Séparation entre deux Églises",
+          "correct": 0,
           "solution": "Le schisme est la séparation entre deux Églises."
         },
         {
@@ -481,7 +481,7 @@
             "Musulmans sunnites",
             "Juifs sépharades"
           ],
-          "correct": "Chrétiens orthodoxes",
+          "correct": 0,
           "solution": "Les chrétiens orthodoxes partagent les croyances des chrétiens d'Occident mais pas les rites (vénèrent les icônes, prêtres mariés...)."
         },
         {
@@ -493,7 +493,7 @@
             "Le commerce maritime",
             "La puissance militaire byzantine"
           ],
-          "correct": "L'espoir du paradis éternel (salut)",
+          "correct": 0,
           "solution": "L'espoir du paradis éternel (salut) explique l'influence de l'Église."
         },
         {
@@ -505,7 +505,7 @@
             "L'athéisme",
             "Le culte des icônes"
           ],
-          "correct": "Le monothéisme",
+          "correct": 0,
           "solution": "Juifs, chrétiens et musulmans sont monothéistes."
         },
         {
@@ -517,7 +517,7 @@
             "Elle gère les souks",
             "Elle nomme les califes"
           ],
-          "correct": "Elle encadre les fidèles et impose son autorité",
+          "correct": 0,
           "solution": "L'Église encadre les chrétiens et impose son autorité aux souverains."
         }
       ]
@@ -534,7 +534,7 @@
             "Dans des monastères",
             "Dans des châteaux forts"
           ],
-          "correct": "Dans de grandes villes",
+          "correct": 0,
           "solution": "La civilisation musulmane est urbaine : la majorité vit dans de grandes villes."
         },
         {
@@ -546,7 +546,7 @@
             "Un forum et des thermes",
             "Une synagogue et une école"
           ],
-          "correct": "Une grande mosquée et des marchés couverts (souks)",
+          "correct": 0,
           "solution": "Les villes musulmanes s'organisent autour d'une grande mosquée et de marchés couverts (souks)."
         },
         {
@@ -558,7 +558,7 @@
             "Dans des ports",
             "Dans des monastères uniquement"
           ],
-          "correct": "À la campagne, dans des seigneuries",
+          "correct": 0,
           "solution": "La majorité des habitants de l'Occident sont ruraux, des paysans vivant dans une seigneurie."
         },
         {
@@ -570,7 +570,7 @@
             "L'esclavage de masse",
             "La démocratie"
           ],
-          "correct": "La féodalité",
+          "correct": 0,
           "solution": "La féodalité est le système pyramidal de l'Occident médiéval."
         },
         {
@@ -582,7 +582,7 @@
             "Un califat",
             "Un port méditerranéen"
           ],
-          "correct": "Un domaine rural dirigé par un seigneur",
+          "correct": 0,
           "solution": "La seigneurie est un domaine rural où vivent des paysans sous l'autorité d'un seigneur."
         },
         {
@@ -594,7 +594,7 @@
             "L'artisanat de luxe",
             "L'exploitation minière"
           ],
-          "correct": "L'agriculture",
+          "correct": 0,
           "solution": "La société occidentale est rurale et agricole."
         },
         {
@@ -606,7 +606,7 @@
             "La pêche",
             "La féodalité"
           ],
-          "correct": "Le commerce dans les grandes villes",
+          "correct": 0,
           "solution": "Le monde musulman est une civilisation urbaine et commerçante."
         },
         {
@@ -618,7 +618,7 @@
             "Uniquement des armes",
             "Uniquement du blé"
           ],
-          "correct": "Des marchandises variées (épices, tissus, etc.)",
+          "correct": 0,
           "solution": "Les souks sont des marchés couverts où circulent de nombreuses marchandises."
         },
         {
@@ -630,7 +630,7 @@
             "Les moines",
             "Les chevaliers"
           ],
-          "correct": "Les paysans vivant dans une seigneurie",
+          "correct": 0,
           "solution": "Les ruraux sont les paysans qui vivent dans une seigneurie."
         },
         {
@@ -642,7 +642,7 @@
             "Ils deviennent basileus",
             "Ils conquièrent Jérusalem"
           ],
-          "correct": "Ils affirment leur pouvoir face aux rois affaiblis",
+          "correct": 0,
           "solution": "Les invasions affaiblissent les rois ; les seigneurs affirment leur pouvoir."
         },
         {
@@ -654,7 +654,7 @@
             "Byzantins et Perses",
             "Vikings et Russes uniquement"
           ],
-          "correct": "Normands, Musulmans (Espagne), etc.",
+          "correct": 0,
           "solution": "Les royaumes subissent des invasions (Normands, Musulmans d'Espagne...) qui affaiblissent les rois."
         },
         {
@@ -666,7 +666,7 @@
             "Par des monastères",
             "Par des seigneuries"
           ],
-          "correct": "Par de grands marchés et une intense activité commerciale",
+          "correct": 0,
           "solution": "Les villes musulmanes sont des centres commerciaux majeurs."
         },
         {
@@ -678,7 +678,7 @@
             "L'Empire byzantin",
             "Venise uniquement"
           ],
-          "correct": "La civilisation musulmane",
+          "correct": 0,
           "solution": "Le monde musulman est une civilisation urbaine."
         },
         {
@@ -690,7 +690,7 @@
             "La traduction de textes",
             "L'artisanat de luxe"
           ],
-          "correct": "L'agriculture dans le cadre de la seigneurie",
+          "correct": 0,
           "solution": "La vie à la campagne est agricole et organisée autour de la seigneurie."
         }
       ]
@@ -707,7 +707,7 @@
             "En Égypte",
             "À Constantinople"
           ],
-          "correct": "Dans la péninsule Ibérique",
+          "correct": 0,
           "solution": "La Reconquista se déroule dans la péninsule Ibérique."
         },
         {
@@ -719,7 +719,7 @@
             "L'Afrique du Nord",
             "L'Europe du Nord"
           ],
-          "correct": "La Méditerranée orientale et les lieux saints",
+          "correct": 0,
           "solution": "Les croisades visent la Méditerranée orientale et les lieux saints, notamment Jérusalem."
         },
         {
@@ -731,7 +731,7 @@
             "Rome",
             "Bagdad"
           ],
-          "correct": "Jérusalem",
+          "correct": 0,
           "solution": "Jérusalem est un enjeu religieux, symbolique et politique majeur."
         },
         {
@@ -743,7 +743,7 @@
             "Elle abrite trois palais",
             "Elle est divisée en trois quartiers"
           ],
-          "correct": "Elle est sainte pour les juifs, les chrétiens et les musulmans",
+          "correct": 0,
           "solution": "Jérusalem est une ville sainte majeure pour les trois religions monothéistes."
         },
         {
@@ -755,7 +755,7 @@
             "Moïse",
             "Abraham"
           ],
-          "correct": "Le roi David",
+          "correct": 0,
           "solution": "Le roi David, père de Salomon, aurait fait de Jérusalem sa capitale vers 1000 av. J.-C."
         },
         {
@@ -767,7 +767,7 @@
             "La mosquée Al-Aqsa",
             "Le Saint Empire"
           ],
-          "correct": "Le mur des Lamentations",
+          "correct": 0,
           "solution": "Le mur des Lamentations est un vestige du mur de soutènement de l'esplanade du second Temple."
         },
         {
@@ -779,7 +779,7 @@
             "La mosquée Al-Aqsa",
             "Le Calvaire"
           ],
-          "correct": "Le Saint-Sépulcre",
+          "correct": 0,
           "solution": "Le Saint-Sépulcre est considéré comme le lieu de la crucifixion, de la mise au tombeau et de la résurrection de Jésus."
         },
         {
@@ -791,7 +791,7 @@
             "1099",
             "1147"
           ],
-          "correct": "1095",
+          "correct": 0,
           "solution": "1095 : appel à la croisade."
         },
         {
@@ -803,7 +803,7 @@
             "1147",
             "1187"
           ],
-          "correct": "1099",
+          "correct": 0,
           "solution": "1099 : prise de Jérusalem par les croisés."
         },
         {
@@ -815,7 +815,7 @@
             "1204",
             "1147"
           ],
-          "correct": "1187",
+          "correct": 0,
           "solution": "1187 : Saladin reprend Jérusalem."
         },
         {
@@ -827,7 +827,7 @@
             "La perte d'Édesse",
             "L'échec du siège de Damas"
           ],
-          "correct": "Le sac de Constantinople",
+          "correct": 0,
           "solution": "1204 : sac de Constantinople lors de la quatrième croisade."
         },
         {
@@ -839,7 +839,7 @@
             "Une séparation entre deux Églises",
             "Un établissement commercial"
           ],
-          "correct": "Une expédition militaire chrétienne vers l'Orient",
+          "correct": 0,
           "solution": "La croisade est une expédition militaire chrétienne vers l'Orient."
         },
         {
@@ -851,7 +851,7 @@
             "Séparation entre deux Églises",
             "Traduction d'un texte en latin"
           ],
-          "correct": "Conquêtes chrétiennes dans la péninsule Ibérique",
+          "correct": 0,
           "solution": "La Reconquista désigne les conquêtes chrétiennes dans la péninsule Ibérique."
         },
         {
@@ -863,7 +863,7 @@
             "Uniquement le commerce",
             "Uniquement la curiosité scientifique"
           ],
-          "correct": "Religion, maîtrise de territoires, pouvoir et intérêts politiques",
+          "correct": 0,
           "solution": "Les motivations mêlent religion, maîtrise des territoires, pouvoir et intérêts politiques."
         },
         {
@@ -875,7 +875,7 @@
             "Des Vénitiens contre des Génois",
             "Des juifs contre des chrétiens"
           ],
-          "correct": "Des pouvoirs chrétiens contre des pouvoirs musulmans",
+          "correct": 0,
           "solution": "En péninsule Ibérique, des pouvoirs chrétiens affrontent des pouvoirs musulmans."
         },
         {
@@ -887,7 +887,7 @@
             "Des Vénitiens contre des Génois",
             "Des juifs contre des chrétiens"
           ],
-          "correct": "Les armées croisées venues d'Occident contre des armées musulmanes",
+          "correct": 0,
           "solution": "En Orient, les armées croisées venues d'Occident combattent des armées musulmanes."
         },
         {
@@ -899,7 +899,7 @@
             "La troisième croisade",
             "La quatrième croisade"
           ],
-          "correct": "La première croisade",
+          "correct": 0,
           "solution": "La première croisade aboutit à la prise de Jérusalem en 1099."
         },
         {
@@ -911,7 +911,7 @@
             "La deuxième croisade",
             "La troisième croisade"
           ],
-          "correct": "La quatrième croisade",
+          "correct": 0,
           "solution": "La quatrième croisade aboutit au sac de Constantinople en 1204."
         }
       ]
@@ -928,7 +928,7 @@
             "Un calife de Bagdad",
             "Un roi de France"
           ],
-          "correct": "Un abbé cistercien et prédicateur influent",
+          "correct": 0,
           "solution": "Bernard de Clairvaux est un abbé cistercien et prédicateur influent."
         },
         {
@@ -940,7 +940,7 @@
             "La troisième croisade",
             "La quatrième croisade"
           ],
-          "correct": "La deuxième croisade",
+          "correct": 0,
           "solution": "Bernard de Clairvaux prêche la deuxième croisade en 1146-1147."
         },
         {
@@ -952,7 +952,7 @@
             "1189-1192",
             "1202-1204"
           ],
-          "correct": "1146-1147",
+          "correct": 0,
           "solution": "Il prêche la deuxième croisade en 1146-1147."
         },
         {
@@ -964,7 +964,7 @@
             "Le sac de Constantinople",
             "La mort de Mahomet"
           ],
-          "correct": "La perte d'Édesse",
+          "correct": 0,
           "solution": "La croisade est lancée après la perte d'Édesse en 1144."
         },
         {
@@ -976,7 +976,7 @@
             "Conquérir l'Espagne",
             "Convertir les Byzantins"
           ],
-          "correct": "Reprendre Édesse et soutenir les États latins d'Orient",
+          "correct": 0,
           "solution": "La croisade vise à reprendre Édesse et soutenir les États latins d'Orient."
         },
         {
@@ -988,7 +988,7 @@
             "Saint Louis",
             "Charlemagne"
           ],
-          "correct": "Louis VII",
+          "correct": 0,
           "solution": "Louis VII de France participe à la deuxième croisade."
         },
         {
@@ -1000,7 +1000,7 @@
             "Otton Ier",
             "Charles Quint"
           ],
-          "correct": "Conrad III",
+          "correct": 0,
           "solution": "Conrad III du Saint-Empire participe à la deuxième croisade."
         },
         {
@@ -1012,7 +1012,7 @@
             "Basile II",
             "Constantin XI"
           ],
-          "correct": "Manuel Ier Comnène",
+          "correct": 0,
           "solution": "L'empereur byzantin Manuel Ier Comnène joue un rôle dans son déroulement."
         },
         {
@@ -1024,7 +1024,7 @@
             "Les Vikings",
             "Les Perses"
           ],
-          "correct": "Les Seldjoukides",
+          "correct": 0,
           "solution": "Les croisés connaissent des défaites face aux Seldjoukides."
         },
         {
@@ -1036,7 +1036,7 @@
             "La route de la soie",
             "La route du Danube"
           ],
-          "correct": "La route de l'Asie Mineure vers la Syrie et la Palestine",
+          "correct": 0,
           "solution": "Ils empruntent la route de l'Asie Mineure vers la Syrie et la Palestine."
         },
         {
@@ -1048,7 +1048,7 @@
             "Une absence totale de chefs",
             "Un excès de nourriture"
           ],
-          "correct": "Défaites, divisions, difficultés d'approvisionnement et de coordination",
+          "correct": 0,
           "solution": "Ils connaissent des défaites, des divisions et des difficultés d'approvisionnement et de coordination."
         },
         {
@@ -1060,7 +1060,7 @@
             "Le siège de Constantinople",
             "Le siège d'Édesse"
           ],
-          "correct": "Le siège de Damas",
+          "correct": 0,
           "solution": "La deuxième croisade échoue au siège de Damas en 1148."
         },
         {
@@ -1072,7 +1072,7 @@
             "Oui, en 1148",
             "Oui, en 1149"
           ],
-          "correct": "Non, elle n'est pas reprise",
+          "correct": 0,
           "solution": "Édesse n'est pas reprise : la deuxième croisade est un échec."
         },
         {
@@ -1084,7 +1084,7 @@
             "Jérusalem est prise",
             "Constantinople est sauvée"
           ],
-          "correct": "Lourdes pertes, armées divisées, échec du siège de Damas, Édesse non reprise",
+          "correct": 0,
           "solution": "La deuxième croisade échoue : lourdes pertes, divisions, échec du siège de Damas, Édesse non reprise."
         },
         {
@@ -1096,7 +1096,7 @@
             "Il négocie avec Saladin",
             "Il finance les croisés"
           ],
-          "correct": "Il mobilise les fidèles et les souverains par sa prédication",
+          "correct": 0,
           "solution": "Bernard de Clairvaux contribue à mobiliser les fidèles et les souverains."
         },
         {
@@ -1108,7 +1108,7 @@
             "Trop important",
             "Inutile mais suffisant"
           ],
-          "correct": "Insuffisant",
+          "correct": 0,
           "solution": "Le soutien byzantin est jugé insuffisant dans le diaporama."
         }
       ]
@@ -1125,7 +1125,7 @@
             "Un califat",
             "Un royaume féodal"
           ],
-          "correct": "Une cité-État dont la puissance repose sur la mer et le commerce",
+          "correct": 0,
           "solution": "La république maritime est une cité-État dont la puissance repose sur la mer et le commerce."
         },
         {
@@ -1137,7 +1137,7 @@
             "Florence",
             "Milan"
           ],
-          "correct": "Venise",
+          "correct": 0,
           "solution": "Venise est l'exemple de république maritime."
         },
         {
@@ -1149,7 +1149,7 @@
             "Une mosquée",
             "Un port militaire"
           ],
-          "correct": "Un établissement commercial dans une ville étrangère",
+          "correct": 0,
           "solution": "Le comptoir est un établissement commercial dans une ville étrangère."
         },
         {
@@ -1161,7 +1161,7 @@
             "Son armée de terre",
             "Son agriculture"
           ],
-          "correct": "Ses atouts géographiques et maritimes",
+          "correct": 0,
           "solution": "Les atouts géographiques et maritimes favorisent la puissance de Venise."
         },
         {
@@ -1173,7 +1173,7 @@
             "1204",
             "1142"
           ],
-          "correct": "1082",
+          "correct": 0,
           "solution": "1082 : privilèges vénitiens dans l'Empire byzantin."
         },
         {
@@ -1185,7 +1185,7 @@
             "1099",
             "1204"
           ],
-          "correct": "1142",
+          "correct": 0,
           "solution": "1142 : première traduction du Coran en latin."
         },
         {
@@ -1197,7 +1197,7 @@
             "1082",
             "1204"
           ],
-          "correct": "1190",
+          "correct": 0,
           "solution": "1190 : mention d'une boussole."
         },
         {
@@ -1209,7 +1209,7 @@
             "Uniquement des armes",
             "Uniquement du sel"
           ],
-          "correct": "Les épices, soieries et produits de luxe via les routes maritimes",
+          "correct": 0,
           "solution": "Venise commerce des épices, soieries et produits de luxe par les routes maritimes."
         },
         {
@@ -1221,7 +1221,7 @@
             "La fondation de Bagdad",
             "La découverte de l'Amérique"
           ],
-          "correct": "L'intense activité de traduction en Italie et en Espagne",
+          "correct": 0,
           "solution": "L'intense activité de traduction (Italie, Espagne) est un exemple d'échange culturel."
         },
         {
@@ -1233,7 +1233,7 @@
             "La séparation de deux Églises",
             "L'établissement d'un comptoir"
           ],
-          "correct": "La transposition d'un texte dans une autre langue",
+          "correct": 0,
           "solution": "La traduction est la transposition d'un texte dans une autre langue."
         },
         {
@@ -1245,7 +1245,7 @@
             "Il n'y a que des échanges",
             "Elle est vide"
           ],
-          "correct": "Les civilisations s'y affrontent mais commercent et échangent des savoirs",
+          "correct": 0,
           "solution": "La Méditerranée est un espace de conflits (croisades, Reconquista) et d'échanges (commerce, traductions)."
         },
         {
@@ -1257,7 +1257,7 @@
             "Bagdad et Damas",
             "Rome et Constantinople"
           ],
-          "correct": "Venise et Gênes",
+          "correct": 0,
           "solution": "Venise et Gênes sont des villes marchandes méditerranéennes."
         },
         {
@@ -1269,7 +1269,7 @@
             "Le commerce des armes",
             "Le commerce des esclaves uniquement"
           ],
-          "correct": "Le commerce des épices et des produits de luxe",
+          "correct": 0,
           "solution": "Venise s'enrichit grâce au commerce des épices et produits de luxe."
         },
         {
@@ -1281,7 +1281,7 @@
             "Ils lui donnent le pouvoir religieux",
             "Ils lui permettent d'éviter les taxes uniquement"
           ],
-          "correct": "Ils lui donnent des avantages commerciaux dans les villes étrangères",
+          "correct": 0,
           "solution": "Les privilèges et comptoirs assurent à Venise des avantages commerciaux."
         },
         {
@@ -1293,7 +1293,7 @@
             "L'unification politique",
             "La disparition du commerce"
           ],
-          "correct": "La transmission des savoirs (traductions, sciences, techniques)",
+          "correct": 0,
           "solution": "Commerce, traductions et transmission des savoirs relient les sociétés méditerranéennes."
         }
       ]
@@ -1310,7 +1310,7 @@
             "Séparation entre deux Églises",
             "Établissement commercial dans une ville étrangère"
           ],
-          "correct": "Expédition militaire chrétienne vers l'Orient",
+          "correct": 0,
           "solution": "Croisade : expédition militaire chrétienne vers l'Orient."
         },
         {
@@ -1322,7 +1322,7 @@
             "Séparation entre deux Églises",
             "Transposition d'un texte dans une autre langue"
           ],
-          "correct": "Conquêtes chrétiennes dans la péninsule Ibérique",
+          "correct": 0,
           "solution": "Reconquista : conquêtes chrétiennes dans la péninsule Ibérique."
         },
         {
@@ -1334,7 +1334,7 @@
             "Conquête chrétienne en Espagne",
             "Établissement commercial"
           ],
-          "correct": "Séparation entre deux Églises",
+          "correct": 0,
           "solution": "Schisme : séparation entre deux Églises."
         },
         {
@@ -1346,7 +1346,7 @@
             "Expédition militaire chrétienne",
             "Cité-État maritime"
           ],
-          "correct": "Établissement commercial dans une ville étrangère",
+          "correct": 0,
           "solution": "Comptoir : établissement commercial dans une ville étrangère."
         },
         {
@@ -1358,7 +1358,7 @@
             "Séparation religieuse",
             "Établissement commercial"
           ],
-          "correct": "Transposition d'un texte dans une autre langue",
+          "correct": 0,
           "solution": "Traduction : transposition d'un texte dans une autre langue."
         },
         {
@@ -1370,7 +1370,7 @@
             "Califat politico-religieux",
             "Royaume féodal"
           ],
-          "correct": "Cité-État dont la puissance repose sur la mer et le commerce",
+          "correct": 0,
           "solution": "République maritime : cité-État dont la puissance repose sur la mer et le commerce."
         },
         {
@@ -1382,7 +1382,7 @@
             "Un califat",
             "Une république maritime"
           ],
-          "correct": "Une seigneurie",
+          "correct": 0,
           "solution": "La seigneurie est un domaine rural dirigé par un seigneur."
         },
         {
@@ -1394,7 +1394,7 @@
             "Le comptoir",
             "Le bastion"
           ],
-          "correct": "Le souk",
+          "correct": 0,
           "solution": "Le souk est un marché couvert dans les villes musulmanes."
         },
         {
@@ -1406,7 +1406,7 @@
             "Le pape",
             "Le seigneur"
           ],
-          "correct": "Le calife",
+          "correct": 0,
           "solution": "Le calife est le chef politique et religieux du monde musulman."
         },
         {
@@ -1418,7 +1418,7 @@
             "Le pape",
             "Le sultan"
           ],
-          "correct": "Le basileus",
+          "correct": 0,
           "solution": "Le basileus est l'empereur byzantin."
         },
         {
@@ -1430,7 +1430,7 @@
             "La Reconquista",
             "Le djihad"
           ],
-          "correct": "Le schisme",
+          "correct": 0,
           "solution": "1054 : le schisme sépare les chrétiens d'Orient et d'Occident."
         },
         {
@@ -1442,7 +1442,7 @@
             "La Reconquista",
             "Le schisme"
           ],
-          "correct": "Le djihad",
+          "correct": 0,
           "solution": "Le djihad est la conquête menée au nom de l'islam."
         },
         {
@@ -1454,7 +1454,7 @@
             "Le basileat",
             "La république maritime"
           ],
-          "correct": "La féodalité",
+          "correct": 0,
           "solution": "La féodalité est le système pyramidal de l'Occident médiéval."
         },
         {
@@ -1466,7 +1466,7 @@
             "La Torah",
             "Les Évangiles"
           ],
-          "correct": "Le Coran",
+          "correct": 0,
           "solution": "Le Coran contient la parole de Mahomet pour les musulmans."
         },
         {
@@ -1478,7 +1478,7 @@
             "L'Occident chrétien",
             "L'Empire carolingien"
           ],
-          "correct": "L'Empire byzantin",
+          "correct": 0,
           "solution": "L'Empire byzantin est dirigé par le basileus à Constantinople."
         },
         {
@@ -1490,7 +1490,7 @@
             "Constantinople",
             "Bagdad"
           ],
-          "correct": "Jérusalem",
+          "correct": 0,
           "solution": "Jérusalem est sainte pour les juifs, les chrétiens et les musulmans."
         },
         {
@@ -1502,7 +1502,7 @@
             "Une seigneurie",
             "Un empire"
           ],
-          "correct": "Une république maritime",
+          "correct": 0,
           "solution": "Venise est une république maritime."
         },
         {
@@ -1514,7 +1514,7 @@
             "Le monde musulman",
             "L'Empire ottoman"
           ],
-          "correct": "L'Occident chrétien",
+          "correct": 0,
           "solution": "L'Occident chrétien regroupe les royaumes chrétiens d'Occident."
         },
         {
@@ -1526,7 +1526,7 @@
             "Bagdad",
             "Jérusalem"
           ],
-          "correct": "Constantinople",
+          "correct": 0,
           "solution": "Constantinople est la capitale de l'Empire byzantin."
         },
         {
@@ -1538,7 +1538,7 @@
             "Le calife",
             "Le seigneur"
           ],
-          "correct": "Le pape",
+          "correct": 0,
           "solution": "Le pape est le chef de l'Église catholique."
         }
       ]
