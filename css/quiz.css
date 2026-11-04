@@ -155,6 +155,7 @@ body {
   border: 1px solid var(--quiz-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
+  perspective: 1100px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -189,6 +190,8 @@ body {
   border-radius: var(--radius);
   background-color: var(--quiz-card-inner);
   border: 2px solid var(--quiz-border);
+  position: relative;
+  overflow: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -197,55 +200,182 @@ body {
 .question-card.slow-exit { animation: slideOut 0.8s ease-in forwards; }
 
 /* ------------------------------------------------------------
-   Bloc question + feedback : entrees/sorties synchronisees.
-   Le carton et le feedback sont dans le meme bloc, donc ils
-   apparaissent et disparaissent EN MEME TEMPS.
+   Bloc question + feedback : entree/sortie synchronisees.
+   Animation "Pro" spectaculaire avec scale dynamique, 3D (rotateX),
+   stagger en cascade des reponses, halo lumineux et reflet diagonal.
+   Duree d'entree : ~0.50 s | Duree de sortie : ~0.26 s
+   Duree totale < 0.8 s (bien sous la limite de 1.5 s demandee).
    ------------------------------------------------------------ */
 .question-block {
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform-origin: 50% 25%;
+}
+
+.question-block.enter,
+.question-block.exit {
+  will-change: transform, opacity, filter;
 }
 
 .question-block.enter {
-  animation: blockEnter 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  animation: questionIn 0.50s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Halo lumineux qui s'epand avec scale a l'apparition de la carte */
+.question-block.enter .question-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid var(--quiz-main-btn);
+  opacity: 0;
+  pointer-events: none;
+  animation: cardRing 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Reflet diagonal de brillance qui traverse la carte */
+.question-block.enter .question-card::after {
+  content: "";
+  position: absolute;
+  inset: -40% -60%;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.22) 48%,
+    rgba(255, 255, 255, 0.08) 54%,
+    transparent 62%
+  );
+  transform: translateX(-70%) rotate(2deg);
+  animation: cardShine 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.question-block.enter .question-text {
+  animation: questionTextIn 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both;
+}
+
+.question-block.enter .image-area,
+.question-block.enter .input-area {
+  animation: answerItemIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both;
+}
+
+/* Cascade des choix avec effet pop/scale progressif (--i defini par JS) */
+.question-block.enter .options-container .answer-btn:not(.selected):not(.correct):not(.incorrect) {
+  animation: answerItemIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(0.08s + var(--i, 0) * 0.045s);
 }
 
 .question-block.exit {
-  opacity: 0;
-  transform: translateY(-16px) scale(0.985);
+  animation: questionOut 0.26s cubic-bezier(0.4, 0, 0.2, 1) both;
   pointer-events: none;
 }
 
 .question-block.is-correct .question-card {
   border-color: var(--quiz-correct-border);
-  box-shadow: var(--glow);
-  animation: blockCorrect 0.6s ease;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+  animation: blockCorrect 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.25);
 }
 
 .question-block.is-wrong .question-card {
   border-color: var(--quiz-incorrect-border);
-  animation: blockShake 0.5s ease;
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
+  animation: blockShake 0.45s ease;
 }
 
-@keyframes blockEnter {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes questionIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0) scale(0.85) rotateX(9deg);
+    filter: blur(8px);
+  }
+  62% {
+    opacity: 1;
+    transform: translate3d(0, -4px, 0) scale(1.025) rotateX(-1deg);
+    filter: blur(0);
+  }
+  84% {
+    transform: translate3d(0, 1px, 0) scale(0.995) rotateX(0.4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes questionOut {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotateX(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -24px, 0) scale(0.88) rotateX(-8deg);
+    filter: blur(6px);
+  }
+}
+
+@keyframes questionTextIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes answerItemIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(0.90);
+  }
+  70% {
+    opacity: 1;
+    transform: translate3d(0, -2px, 0) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes cardRing {
+  0%   { opacity: 0.85; transform: scale(0.96); }
+  100% { opacity: 0; transform: scale(1.04); }
+}
+
+@keyframes cardShine {
+  0%   { opacity: 0; transform: translateX(-70%) rotate(2deg); }
+  25%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(70%) rotate(2deg); }
 }
 
 @keyframes blockCorrect {
   0%   { transform: scale(1); }
-  35%  { transform: scale(1.015); }
+  40%  { transform: scale(1.03); }
+  75%  { transform: scale(0.995); }
   100% { transform: scale(1); }
 }
 
 @keyframes blockShake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-6px); }
-  40%, 80% { transform: translateX(6px); }
+  0%, 100% { transform: translateX(0) scale(1); }
+  20%, 60% { transform: translateX(-7px) scale(0.985); }
+  40%, 80% { transform: translateX(7px) scale(1.01); }
 }
 
 @keyframes feedbackIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.92);
+  }
+  70% {
+    transform: translate3d(0, -2px, 0) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 .question-text {
@@ -279,34 +409,34 @@ body {
 
 .answer-btn:hover:not(.selected):not(.correct):not(.incorrect) {
   border-color: var(--quiz-main-btn);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px) scale(1.018);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
 .selected {
   background-color: var(--quiz-main-btn) !important;
   border-color: var(--quiz-main-hover) !important;
   color: #ffffff !important;
-  transform: scale(1.01);
-  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+  transform: scale(1.025) !important;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.45);
 }
 
 .correct {
   background-color: var(--quiz-correct) !important;
   border-color: var(--quiz-correct-border) !important;
   color: #ffffff !important;
-  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45);
   pointer-events: none;
-  animation: bounce 0.6s ease-out;
+  animation: bounce 0.5s ease-out;
 }
 
 .incorrect {
   background-color: var(--quiz-incorrect) !important;
   border-color: var(--quiz-incorrect-border) !important;
   color: #ffffff !important;
-  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.45);
   pointer-events: none;
-  animation: shake 0.5s ease-in-out;
+  animation: shake 0.45s ease-in-out;
 }
 
 #feedback-area {
@@ -721,4 +851,239 @@ body {
 .notepad-textarea::placeholder {
   color: var(--quiz-text-muted, #777);
   opacity: 0.6;
+}
+
+/* ---------- Pop scale dynamique du compteur ---------- */
+#counter-label {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  transition: color 0.2s ease;
+}
+
+#counter-label.pop {
+  animation: counterScalePop 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes counterScalePop {
+  0%   { transform: scale(1); }
+  45%  { transform: scale(1.22); color: var(--quiz-main-btn, #3b82f6); }
+  100% { transform: scale(1); }
+}
+
+/* ---------- Badge Mode Hors-Ligne ---------- */
+.offline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  animation: answerItemIn 0.35s ease both;
+}
+
+/* ---------- Boîte de reprise de session active ---------- */
+.resume-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  animation: questionIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.resume-card {
+  width: 100%;
+  max-width: 540px;
+  background: var(--quiz-card-inner);
+  border: 2px solid var(--quiz-main-btn, #3b82f6);
+  border-radius: var(--radius);
+  padding: 2.2rem 1.6rem;
+  text-align: center;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35), 0 0 25px rgba(59, 130, 246, 0.2);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.resume-icon {
+  font-size: 2.6rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+  animation: resumeIconPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes resumeIconPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.18) rotate(4deg); }
+}
+
+.resume-card h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin: 0 0 0.8rem;
+  color: var(--quiz-text);
+}
+
+.resume-card p {
+  color: var(--quiz-text-muted);
+  font-size: 1.02rem;
+  margin: 0 0 1.6rem;
+  line-height: 1.55;
+}
+
+.resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.resume-actions button {
+  width: 100%;
+  padding: 0.95rem 1.3rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.resume-actions .btn-primary {
+  background: var(--quiz-main-btn, #3b82f6);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.resume-actions .btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(59, 130, 246, 0.55);
+}
+
+.resume-actions .btn-ghost {
+  border: 1px solid var(--quiz-border);
+  background: transparent;
+  color: var(--quiz-text);
+}
+
+.resume-actions .btn-ghost:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- Récapitulatif des questions de la partie ---------- */
+.performed-summary {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--quiz-border);
+  width: 100%;
+  text-align: left;
+}
+
+.performed-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--quiz-border);
+  color: var(--quiz-text);
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 1.25rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.performed-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.performed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.performed-card {
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--quiz-border);
+  background: var(--quiz-card-inner);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.performed-card.correct {
+  border-left-color: var(--quiz-correct-border, #10b981);
+}
+
+.performed-card.incorrect {
+  border-left-color: var(--quiz-incorrect-border, #ef4444);
+}
+
+.performed-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.performed-card-header .badge-status {
+  font-size: 0.85rem;
+}
+
+.performed-q-text {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--quiz-text);
+}
+
+.performed-user-answer,
+.performed-expected-answer {
+  font-size: 0.88rem;
+  margin: 0.2rem 0;
+}
+
+.performed-user-answer strong,
+.performed-expected-answer strong {
+  color: var(--quiz-text-muted);
+}
+
+/* ------------------------------------------------------------
+   Accessibilite : pas d'animation pour qui prefere les mouvements
+   reduits (le contenu reste immediatement visible).
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .question-block.enter,
+  .question-block.exit,
+  .question-block.enter .question-card::before,
+  .question-block.enter .question-card::after,
+  .question-block.enter .question-text,
+  .question-block.enter .image-area,
+  .question-block.enter .input-area,
+  .question-block.enter .options-container .answer-btn,
+  #counter-label.pop,
+  .resume-icon,
+  .resume-area {
+    animation: none !important;
+  }
+
+  .question-block,
+  .question-block.enter,
+  .question-block.exit {
+    filter: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
 }

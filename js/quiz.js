@@ -21,6 +21,138 @@
   var DISPLAY_SETTINGS_KEY = "quiz-display-settings";
   var DEFAULT_DISPLAY_SETTINGS = { correctDelay: 1100, wrongDelay: 3200 };
 
+  /* ---------------------------------------------------------
+     Stockage local persistant & Reprise de Session
+     --------------------------------------------------------- */
+  var ACTIVE_SESSION_PREFIX = "quiz-active-session-";
+  var PERFORMED_QUESTIONS_PREFIX = "quiz-performed-questions-";
+  var PERSISTENT_CONFIG_KEY = "quiz-persistent-config";
+  var PERSISTENT_DATA_PREFIX = "quiz-persistent-data-";
+
+  function getSessionKey(qId, catIdx) {
+    return ACTIVE_SESSION_PREFIX + (qId || "embed") + "_" + (catIdx != null ? catIdx : 0);
+  }
+
+  function getPerformedKey(qId, catIdx) {
+    return PERFORMED_QUESTIONS_PREFIX + (qId || "embed") + "_" + (catIdx != null ? catIdx : 0);
+  }
+
+  function savePersistentCache(key, data) {
+    try {
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch (e) {
+      console.warn("Erreur écriture cache persistant local:", e);
+    }
+  }
+
+  function getPersistentCache(key) {
+    try {
+      var raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function showOfflineBadge() {
+    var b = $("offline-badge");
+    if (b) b.classList.remove("hidden");
+  }
+
+  function saveActiveSession() {
+    var qId = getQuizId();
+    if (!qId || window.__EMBED_QUIZ__) return;
+    if (!questionsShuffled || questionsShuffled.length === 0) return;
+    if (currentQuestionIndex >= questionsShuffled.length) {
+      clearActiveSession();
+      return;
+    }
+    var session = {
+      quizId: qId,
+      subjectName: subjectName,
+      categoryIndex: currentCategoryIndex,
+      categoryName: categories[currentCategoryIndex] ? categories[currentCategoryIndex].name : "",
+      currentQuestionIndex: currentQuestionIndex,
+      score: score,
+      answeredCount: answeredCount,
+      questionsShuffled: questionsShuffled,
+      updatedAt: Date.now()
+    };
+    try {
+      localStorage.setItem(getSessionKey(qId, currentCategoryIndex), JSON.stringify(session));
+    } catch (e) {
+      console.warn("Erreur sauvegarde session active:", e);
+    }
+  }
+
+  function loadActiveSession(qId, catIdx) {
+    if (!qId) return null;
+    try {
+      var raw = localStorage.getItem(getSessionKey(qId, catIdx));
+      if (!raw) return null;
+      var data = JSON.parse(raw);
+      if (
+        data &&
+        Array.isArray(data.questionsShuffled) &&
+        data.questionsShuffled.length > 0 &&
+        typeof data.currentQuestionIndex === "number" &&
+        data.currentQuestionIndex > 0 &&
+        data.currentQuestionIndex < data.questionsShuffled.length
+      ) {
+        return data;
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  function clearActiveSession() {
+    var qId = getQuizId();
+    if (!qId) return;
+    try {
+      localStorage.removeItem(getSessionKey(qId, currentCategoryIndex));
+    } catch (e) {}
+  }
+
+  function recordPerformedQuestion(q, userAnswerText, correctAnswerText, isCorrect) {
+    var qId = getQuizId();
+    if (!qId || window.__EMBED_QUIZ__) return;
+    var item = {
+      questionNumber: currentQuestionIndex + 1,
+      totalQuestions: questionsShuffled.length,
+      questionText: q.text,
+      questionType: q.type,
+      userAnswer: userAnswerText,
+      correctAnswer: correctAnswerText,
+      isCorrect: isCorrect,
+      solution: q.solution || "",
+      category: categories[currentCategoryIndex] ? categories[currentCategoryIndex].name : "",
+      answeredAt: new Date().toISOString()
+    };
+    var key = getPerformedKey(qId, currentCategoryIndex);
+    try {
+      var list = JSON.parse(localStorage.getItem(key) || "[]");
+      var existing = list.findIndex(function (it) {
+        return it.questionNumber === item.questionNumber;
+      });
+      if (existing >= 0) {
+        list[existing] = item;
+      } else {
+        list.push(item);
+      }
+      localStorage.setItem(key, JSON.stringify(list));
+    } catch (e) {
+      console.warn("Erreur enregistrement question effectuée:", e);
+    }
+  }
+
+  function resetPerformedQuestions() {
+    var qId = getQuizId();
+    if (!qId) return;
+    try {
+      localStorage.removeItem(getPerformedKey(qId, currentCategoryIndex));
+    } catch (e) {}
+  }
+
   function loadDisplaySettings() {
     try {
       var raw = JSON.parse(localStorage.getItem(DISPLAY_SETTINGS_KEY) || "null");
@@ -204,8 +336,9 @@
 
   function showOnly(id) {
     if (id !== "quiz-area") cancelPendingAdvance();
-    ["category-area", "quiz-area", "results"].forEach(function (x) {
-      $(x).classList.toggle("hidden", x !== id);
+    ["category-area", "quiz-area", "results", "resume-area", "offline-error-area"].forEach(function (x) {
+      var el = $(x);
+      if (el) el.classList.toggle("hidden", x !== id);
     });
   }
 
@@ -267,7 +400,7 @@
           window.__analytics.track("quiz_category_click", {
             quiz_id: getQuizIdFromURL(),
             quiz_title: currentQuiz ? currentQuiz.title : "",
-        quiz_name: currentQuiz ? currentQuiz.title : "",
+            quiz_name: currentQuiz ? currentQuiz.title : "",
             category_index: idx,
             category_name: cat.name,
             questions_count: cat.questions.length
@@ -320,15 +453,7 @@
     }
   }
 
-  function startCategory(idx) {
-    cancelPendingAdvance();
-    currentCategoryIndex = idx;
-    questionsShuffled = shuffle(categories[idx].questions.slice());
-    currentQuestionIndex = 0;
-    score = 0;
-    answeredCount = 0;
-
-    // Per-category notepad: read raw flag from JSON (internal, not displayed)
+  function setupNotepad(idx) {
     var rawCats = (currentQuiz && currentQuiz._data && currentQuiz._data.categories) || [];
     var rawCat = rawCats[idx] || {};
     notepadEnabled = rawCat.notepad === true;
@@ -347,6 +472,144 @@
         }
       }
     }
+  }
+
+  function setupQuizUI() {
+    $("quiz-title").innerHTML =
+      'Quiz <span class="couleur-qui-change">' + currentQuiz.title + "</span>";
+    $("cat-label").textContent = categories[currentCategoryIndex].name;
+
+    setBack(function () {
+      saveActiveSession();
+      if (window.__analytics) {
+        window.__analytics.track("quiz_menu_back", {
+          quiz_id: getQuizIdFromURL(),
+          quiz_title: currentQuiz ? currentQuiz.title : "",
+          quiz_name: currentQuiz ? currentQuiz.title : "",
+          category_name: categories[currentCategoryIndex].name,
+          category_index: currentCategoryIndex,
+          from: "quiz"
+        });
+        window.__analytics.setQuizState(null);
+      }
+      if (categories.length > 1) renderCategoryMenu();
+      else goToPortal();
+    });
+
+    $("main-btn").onclick = checkAnswerAndProceed;
+    $("restart-btn").onclick = function () {
+      clearActiveSession();
+      resetPerformedQuestions();
+      if (window.__analytics) {
+        window.__analytics.track("quiz_restart", {
+          quiz_id: getQuizIdFromURL(),
+          quiz_title: currentQuiz ? currentQuiz.title : "",
+          quiz_name: currentQuiz ? currentQuiz.title : "",
+          category_name: categories[currentCategoryIndex].name,
+          category_index: currentCategoryIndex,
+          previous_score: score,
+          previous_answered: answeredCount,
+          total_questions: questionsShuffled.length
+        });
+      }
+      launchCategory(currentCategoryIndex);
+    };
+    $("back-btn-results").onclick = function () {
+      if (window.__analytics) {
+        window.__analytics.track("quiz_portal_back", {
+          quiz_id: getQuizIdFromURL(),
+          quiz_title: currentQuiz ? currentQuiz.title : "",
+          quiz_name: currentQuiz ? currentQuiz.title : "",
+          from: "results"
+        });
+        window.__analytics.setQuizState(null);
+      }
+      goToPortal();
+    };
+
+    var menuBtn = $("menu-btn");
+    if (menuBtn) {
+      menuBtn.classList.toggle("hidden", categories.length <= 1);
+      menuBtn.onclick = function () {
+        if (window.__analytics) {
+          window.__analytics.track("quiz_menu_back", {
+            quiz_id: getQuizIdFromURL(),
+            quiz_title: currentQuiz ? currentQuiz.title : "",
+            quiz_name: currentQuiz ? currentQuiz.title : "",
+            category_name: categories[currentCategoryIndex].name,
+            category_index: currentCategoryIndex,
+            from: "quiz_menu_btn"
+          });
+          window.__analytics.setQuizState(null);
+        }
+        if (categories.length > 1) renderCategoryMenu();
+        else goToPortal();
+      };
+    }
+  }
+
+  function startCategory(idx) {
+    cancelPendingAdvance();
+    currentCategoryIndex = idx;
+
+    var saved = loadActiveSession(getQuizId(), idx);
+    if (saved) {
+      showResumePrompt(saved);
+      return;
+    }
+
+    launchCategory(idx);
+  }
+
+  function showResumePrompt(saved) {
+    showOnly("resume-area");
+    setBack(function () {
+      if (categories.length > 1) renderCategoryMenu();
+      else goToPortal();
+    });
+
+    var desc = $("resume-description");
+    if (desc) {
+      desc.innerHTML =
+        "Partie interrompue à la <strong>Question " +
+        (saved.currentQuestionIndex + 1) +
+        " sur " +
+        saved.questionsShuffled.length +
+        "</strong>.<br>" +
+        "Score actuel : <strong>" +
+        saved.score +
+        " / " +
+        saved.answeredCount +
+        "</strong>.";
+    }
+
+    $("resume-continue-btn").onclick = function () {
+      questionsShuffled = saved.questionsShuffled;
+      currentQuestionIndex = saved.currentQuestionIndex;
+      score = saved.score;
+      answeredCount = saved.answeredCount;
+      setupNotepad(currentCategoryIndex);
+      setupQuizUI();
+      showOnly("quiz-area");
+      updateProgress();
+      renderQuestion();
+    };
+
+    $("resume-restart-btn").onclick = function () {
+      clearActiveSession();
+      resetPerformedQuestions();
+      launchCategory(currentCategoryIndex);
+    };
+  }
+
+  function launchCategory(idx) {
+    questionsShuffled = shuffle(categories[idx].questions.slice());
+    currentQuestionIndex = 0;
+    score = 0;
+    answeredCount = 0;
+    resetPerformedQuestions();
+    setupNotepad(idx);
+    setupQuizUI();
 
     if (window.__analytics) {
       window.__analytics.track("quiz_category_start", {
@@ -372,76 +635,6 @@
     }
 
     showOnly("quiz-area");
-
-    $("quiz-title").innerHTML =
-      'Quiz <span class="couleur-qui-change">' + currentQuiz.title + "</span>";
-    $("cat-label").textContent = categories[idx].name;
-
-    setBack(function () {
-      if (window.__analytics) {
-        window.__analytics.track("quiz_menu_back", {
-          quiz_id: getQuizIdFromURL(),
-          quiz_title: currentQuiz ? currentQuiz.title : "",
-        quiz_name: currentQuiz ? currentQuiz.title : "",
-          category_name: categories[currentCategoryIndex].name,
-          category_index: currentCategoryIndex,
-          from: "quiz"
-        });
-        window.__analytics.setQuizState(null);
-      }
-      if (categories.length > 1) renderCategoryMenu();
-      else goToPortal();
-    });
-
-    $("main-btn").onclick = checkAnswerAndProceed;
-    $("restart-btn").onclick = function () {
-      if (window.__analytics) {
-        window.__analytics.track("quiz_restart", {
-          quiz_id: getQuizIdFromURL(),
-          quiz_title: currentQuiz ? currentQuiz.title : "",
-        quiz_name: currentQuiz ? currentQuiz.title : "",
-          category_name: categories[currentCategoryIndex].name,
-          category_index: currentCategoryIndex,
-          previous_score: score,
-          previous_answered: answeredCount,
-          total_questions: questionsShuffled.length
-        });
-      }
-      startCategory(currentCategoryIndex);
-    };
-    $("back-btn-results").onclick = function () {
-      if (window.__analytics) {
-        window.__analytics.track("quiz_portal_back", {
-          quiz_id: getQuizIdFromURL(),
-          quiz_title: currentQuiz ? currentQuiz.title : "",
-        quiz_name: currentQuiz ? currentQuiz.title : "",
-          from: "results"
-        });
-      }
-      if (window.__analytics) window.__analytics.setQuizState(null);
-      goToPortal();
-    };
-
-    var menuBtn = $("menu-btn");
-    if (menuBtn) {
-      menuBtn.classList.toggle("hidden", categories.length <= 1);
-      menuBtn.onclick = function () {
-        if (window.__analytics) {
-          window.__analytics.track("quiz_menu_back", {
-            quiz_id: getQuizIdFromURL(),
-            quiz_title: currentQuiz ? currentQuiz.title : "",
-        quiz_name: currentQuiz ? currentQuiz.title : "",
-            category_name: categories[currentCategoryIndex].name,
-            category_index: currentCategoryIndex,
-            from: "quiz_menu_btn"
-          });
-          window.__analytics.setQuizState(null);
-        }
-        if (categories.length > 1) renderCategoryMenu();
-        else goToPortal();
-      };
-    }
-
     updateProgress();
     renderQuestion();
   }
@@ -450,8 +643,15 @@
     var total = questionsShuffled.length;
     var pct = total ? Math.round((answeredCount / total) * 100) : 0;
     $("progress-fill").style.width = pct + "%";
-    $("counter-label").textContent =
-      "Question " + Math.min(currentQuestionIndex + 1, total) + " / " + total;
+
+    var counterEl = $("counter-label");
+    if (counterEl) {
+      counterEl.textContent =
+        "Question " + Math.min(currentQuestionIndex + 1, total) + " / " + total;
+      counterEl.classList.remove("pop");
+      void counterEl.offsetWidth;
+      counterEl.classList.add("pop");
+    }
   }
 
   function renderQuestion() {
@@ -464,10 +664,6 @@
     var q = questionsShuffled[currentQuestionIndex];
     var block = $("question-block");
     var card = $("current-question-card");
-
-    block.classList.remove("exit", "is-correct", "is-wrong", "enter");
-    void block.offsetWidth;
-    block.classList.add("enter");
 
     var feedback = $("feedback-area");
     feedback.classList.add("hidden");
@@ -525,10 +721,11 @@
         return { text: text, isCorrect: i === q.correctIndex };
       });
       opts = shuffle(opts);
-      opts.forEach(function (opt) {
+      opts.forEach(function (opt, i) {
         var button = document.createElement("button");
         button.type = "button";
         button.className = "answer-btn";
+        button.style.setProperty("--i", i);
         button.innerHTML = opt.text;
         button.dataset.correct = opt.isCorrect ? "1" : "0";
         button.onclick = function () { selectAnswer(button); };
@@ -536,7 +733,13 @@
       });
     }
 
+    // Animation d'entree spectaculaire avec scale et pop
+    block.classList.remove("exit", "is-correct", "is-wrong", "enter");
+    void block.offsetWidth;
+    block.classList.add("enter");
+
     updateProgress();
+    saveActiveSession();
 
     if (window.__analytics) {
       var qloc = buildQuestionLocation(q);
@@ -568,7 +771,7 @@
       });
     }
 
-    setTimeout(function () { block.classList.remove("enter"); }, 500);
+    setTimeout(function () { block.classList.remove("enter"); }, 600);
   }
 
   function selectAnswer(clickedButton) {
@@ -587,15 +790,18 @@
     var q = questionsShuffled[currentQuestionIndex];
     var isCorrect = false;
     var correctAnswerHTML = "";
+    var userAnswerText = "";
 
     if (q.type === "text") {
       var input = $("text-answer");
       if (!input || !input.value.trim()) return;
-      var value = normalizeText(input.value);
+      userAnswerText = input.value.trim();
+      var value = normalizeText(userAnswerText);
       isCorrect = q.accepted.some(function (a) {
         return normalizeText(a) === value;
       });
       if (!isCorrect && q.accepted.length) correctAnswerHTML = q.accepted[0];
+      else if (isCorrect) correctAnswerHTML = userAnswerText;
       if (input) {
         input.classList.add(isCorrect ? "correct" : "incorrect");
         input.disabled = true;
@@ -607,6 +813,9 @@
       optionsContainer.querySelectorAll(".answer-btn").forEach(function (b) {
         var correct = b.dataset.correct === "1";
         var wasSelected = b.classList.contains("selected");
+        if (wasSelected) {
+          userAnswerText = b.innerHTML;
+        }
         b.classList.remove("selected");
         if (correct) {
           b.classList.add("correct");
@@ -622,6 +831,11 @@
     answeredCount++;
     if (isCorrect) score++;
     updateProgress();
+
+    // Enregistrer la question effectuee dans le stockage local
+    recordPerformedQuestion(q, userAnswerText, correctAnswerHTML, isCorrect);
+    // Sauvegarder la session active
+    saveActiveSession();
 
     if (window.__analytics) {
       var qloc2 = buildQuestionLocation(q);
@@ -692,8 +906,7 @@
       exitAndAdvance();
     };
 
-    // On laisse le temps de lire (reglable dans les parametres du portail),
-    // puis on fait sortir le bloc ENTIER (question + feedback) avant
+    // On laisse le temps de lire, puis on fait sortir le bloc ENTIER avant
     // d'afficher la question suivante. 0 = passage manuel uniquement.
     if (readingDelay > 0) {
       pendingAdvance = setTimeout(function () {
@@ -710,12 +923,20 @@
     var block = $("question-block");
     var advanced = false;
 
+    function onExitEnd(event) {
+      // Les animations des enfants bubbent : on ne reagit qu'a la sortie du bloc lui-meme.
+      if (event && event.target !== block) return;
+      go();
+    }
+
     function go() {
       if (advanced) return;
       advanced = true;
       advancing = false;
-      block.removeEventListener("transitionend", go);
+      block.removeEventListener("animationend", onExitEnd);
+      block.removeEventListener("transitionend", onExitEnd);
       currentQuestionIndex++;
+      saveActiveSession();
       if (currentQuestionIndex >= questionsShuffled.length) {
         showResults();
       } else {
@@ -723,9 +944,66 @@
       }
     }
 
-    block.addEventListener("transitionend", go);
+    block.addEventListener("animationend", onExitEnd);
+    block.addEventListener("transitionend", onExitEnd);
     block.classList.add("exit");
-    setTimeout(go, 700); // securite si transitionend ne se declenche pas
+    setTimeout(go, 360); // securite : la sortie dure 0.26 s
+  }
+
+  function renderPerformedQuestionsSummary() {
+    var summaryBox = $("performed-summary-box");
+    var listEl = $("performed-list");
+    var toggleBtn = $("toggle-performed-btn");
+    if (!summaryBox || !listEl || !toggleBtn) return;
+
+    var qId = getQuizId();
+    var performedList = [];
+    try {
+      performedList = JSON.parse(
+        localStorage.getItem(getPerformedKey(qId, currentCategoryIndex)) || "[]"
+      );
+    } catch (e) {}
+
+    if (!Array.isArray(performedList) || performedList.length === 0) {
+      summaryBox.classList.add("hidden");
+      return;
+    }
+
+    summaryBox.classList.remove("hidden");
+    listEl.innerHTML = "";
+
+    performedList.forEach(function (item) {
+      var card = document.createElement("div");
+      card.className = "performed-card " + (item.isCorrect ? "correct" : "incorrect");
+      var statusBadge = item.isCorrect ? "✅ Correct" : "❌ Faux";
+      var userAns = item.userAnswer ? item.userAnswer : "(Aucune réponse)";
+      var expectedAns = item.correctAnswer ? item.correctAnswer : "";
+
+      var html =
+        '<div class="performed-card-header">' +
+          '<span>Question ' + item.questionNumber + '</span>' +
+          '<span class="badge-status">' + statusBadge + '</span>' +
+        '</div>' +
+        '<div class="performed-q-text">' + item.questionText + '</div>' +
+        '<div class="performed-user-answer"><strong>Votre réponse :</strong> ' + userAns + '</div>';
+
+      if (!item.isCorrect && expectedAns) {
+        html += '<div class="performed-expected-answer"><strong>Bonne réponse :</strong> ' + expectedAns + '</div>';
+      }
+      if (item.solution) {
+        html += '<div class="solution">' + item.solution + '</div>';
+      }
+
+      card.innerHTML = html;
+      listEl.appendChild(card);
+    });
+
+    toggleBtn.onclick = function () {
+      var isHidden = listEl.classList.toggle("hidden");
+      toggleBtn.textContent = isHidden
+        ? "📋 Voir les questions de cette partie"
+        : "▲ Masquer les questions de cette partie";
+    };
   }
 
   function showResults() {
@@ -735,6 +1013,9 @@
 
     var total = questionsShuffled.length;
     var percentage = total ? Math.round((score / total) * 100) : 0;
+
+    // La session active est terminee, on nettoie
+    clearActiveSession();
 
     if (window.__analytics) {
       window.__analytics.track("quiz_complete", {
@@ -751,7 +1032,7 @@
       window.__analytics.setQuizState(null);
     }
 
-    // Sauvegarder la progression
+    // Sauvegarder la progression globale
     var quizId = getQuizId();
     if (quizId && categories.length > 1) {
       saveProgress(quizId, currentCategoryIndex, score, total);
@@ -766,7 +1047,7 @@
           window.__analytics.track("quiz_menu_back", {
             quiz_id: getQuizIdFromURL(),
             quiz_title: currentQuiz ? currentQuiz.title : "",
-        quiz_name: currentQuiz ? currentQuiz.title : "",
+            quiz_name: currentQuiz ? currentQuiz.title : "",
             category_name: categories[currentCategoryIndex].name,
             category_index: currentCategoryIndex,
             from: "results_menu_btn"
@@ -798,6 +1079,9 @@
     }
     $("feedback-message").textContent = msg;
 
+    // Afficher le detail des questions effectuees
+    renderPerformedQuestionsSummary();
+
     resultsDiv.classList.remove("entering");
     void resultsDiv.offsetWidth;
     resultsDiv.classList.add("entering");
@@ -807,7 +1091,7 @@
   }
 
   /* ---------------------------------------------------------
-     Init
+     Init & Cache Persistant Hors-Ligne
      --------------------------------------------------------- */
 
   // Expose les mecaniques partagees (normalisation, texte, melange)
@@ -823,9 +1107,19 @@
   // dans ce cas on ne demarre pas le flux de quiz (pas de ?id= sur sa page).
   if (window.__QUIZ_NO_AUTOINIT__) return;
 
+  function showOfflineError() {
+    showOnly("offline-error-area");
+    setBack(goToPortal);
+    var backBtn = $("offline-back-btn");
+    if (backBtn) backBtn.onclick = goToPortal;
+  }
+
   function init() {
-    // Mode integre (apercu QuizMaster / export autonome) : les donnees sont
-    // fournies dans window.__EMBED_QUIZ__, sans config.json ni parametre ?id.
+    // Ecouteurs pour sauvegarder avant fermeture d'onglet / rechargement
+    window.addEventListener("beforeunload", saveActiveSession);
+    window.addEventListener("pagehide", saveActiveSession);
+
+    // Mode integre (apercu QuizMaster / export autonome)
     if (window.__EMBED_QUIZ__) {
       startQuiz({
         title: window.__EMBED_QUIZ__.title || "Quiz",
@@ -835,39 +1129,70 @@
     }
 
     var quizId = getQuizIdFromURL();
-
-    // Acces direct : sans identifiant de quiz, on renvoie au portail
     if (!quizId) {
       window.location.replace("index.html");
       return;
     }
 
-    fetch("data/config.json")
-      .then(function (res) { return res.json(); })
-      .then(function (config) {
-        var quiz = (config.quizzes || []).find(function (q) {
-          return q.id === quizId;
-        });
+    function processConfig(config) {
+      var quiz = (config.quizzes || []).find(function (q) {
+        return q.id === quizId;
+      });
 
-        if (!quiz) {
-          window.location.replace("index.html");
-          return;
-        }
+      if (!quiz) {
+        window.location.replace("index.html");
+        return;
+      }
 
-        var subjectObj = (config.subjects || []).find(function (s) {
-          return s.id === quiz.subject;
-        });
+      var subjectObj = (config.subjects || []).find(function (s) {
+        return s.id === quiz.subject;
+      });
 
-        return fetch(quiz.file)
-          .then(function (res) { return res.json(); })
-          .then(function (data) {
-            quiz._data = data;
+      var dataCacheKey = PERSISTENT_DATA_PREFIX + quiz.id;
+
+      fetch(quiz.file)
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          savePersistentCache(dataCacheKey, data);
+          quiz._data = data;
+          startQuiz(quiz, subjectObj ? subjectObj.name : "");
+        })
+        .catch(function (err) {
+          console.warn("Échec réseau questionnaire, tentative depuis le cache persistant local...", err);
+          var cachedData = getPersistentCache(dataCacheKey);
+          if (cachedData) {
+            showOfflineBadge();
+            quiz._data = cachedData;
             startQuiz(quiz, subjectObj ? subjectObj.name : "");
-          });
+          } else {
+            console.error("Questionnaire non disponible hors ligne:", err);
+            showOfflineError();
+          }
+        });
+    }
+
+    fetch("data/config.json")
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (config) {
+        savePersistentCache(PERSISTENT_CONFIG_KEY, config);
+        processConfig(config);
       })
       .catch(function (err) {
-        console.error("Erreur chargement du questionnaire:", err);
-        window.location.replace("index.html");
+        console.warn("Échec réseau config, tentative depuis le cache persistant local...", err);
+        var cachedConfig = getPersistentCache(PERSISTENT_CONFIG_KEY);
+        if (cachedConfig) {
+          showOfflineBadge();
+          processConfig(cachedConfig);
+        } else {
+          console.error("Configuration non disponible hors ligne:", err);
+          showOfflineError();
+        }
       });
   }
 

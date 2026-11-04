@@ -40,6 +40,34 @@
         <div class="quiz-container anim-border-fade">
             <div class="quiz-nav-bar">
                 <button id="back-btn" class="btn btn-ghost" type="button">← Retour</button>
+                <div id="offline-badge" class="offline-badge hidden">
+                    <span>⚡ Mode hors-ligne (cache local)</span>
+                </div>
+            </div>
+
+            <!-- Boite de reprise de session active -->
+            <div id="resume-area" class="resume-area hidden">
+                <div class="resume-card">
+                    <div class="resume-icon">⚡</div>
+                    <h2>Partie en cours retrouvée !</h2>
+                    <p id="resume-description">Vous aviez une partie en cours. Souhaitez-vous reprendre là où vous vous étiez arrêté ?</p>
+                    <div class="resume-actions">
+                        <button id="resume-continue-btn" class="btn-primary" type="button">▶ Reprendre ma partie</button>
+                        <button id="resume-restart-btn" class="btn btn-ghost" type="button">🔄 Recommencer depuis le début</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message d'information hors ligne si indisponible -->
+            <div id="offline-error-area" class="resume-area hidden">
+                <div class="resume-card">
+                    <div class="resume-icon">📡</div>
+                    <h2>Questionnaire non disponible</h2>
+                    <p>Ce questionnaire n'a pas encore été mis en cache localement et vous êtes actuellement hors-ligne. Connectez-vous à Internet une première fois pour le mettre en cache automatique.</p>
+                    <div class="resume-actions">
+                        <button id="offline-back-btn" class="btn btn-ghost" type="button">← Retour au portail</button>
+                    </div>
+                </div>
             </div>
 
             <!-- 1) Category selector (uniquement si le quiz a plusieurs categories) -->
@@ -93,9 +121,25 @@
                     <button id="menu-btn" class="btn btn-ghost" type="button">Retour au menu</button>
                     <button id="back-btn-results" class="btn btn-ghost" type="button">Retour au portail</button>
                 </div>
+
+                <!-- Récapitulatif des questions effectuées dans cette partie -->
+                <div id="performed-summary-box" class="performed-summary hidden">
+                    <button id="toggle-performed-btn" class="performed-toggle-btn" type="button">
+                        📋 Voir les questions de cette partie
+                    </button>
+                    <div id="performed-list" class="performed-list hidden"></div>
+                </div>
             </div>
         </div>
 
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker.register("service-worker.js", { scope: "./" })
+                        .catch(function (err) { console.warn("Erreur SW quiz:", err); });
+                });
+            }
+        </script>
         <script src="js/theme.js"></script>
         <script src="js/analytics.js"></script>
         <script src="js/quiz.js"></script>

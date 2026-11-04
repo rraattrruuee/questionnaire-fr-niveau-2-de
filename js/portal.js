@@ -614,10 +614,52 @@
 
   initSettingsModal();
 
+  const PERSISTENT_CONFIG_KEY = "quiz-persistent-config";
+  const PERSISTENT_DATA_PREFIX = "quiz-persistent-data-";
+
+  function preloadQuizzesToPersistentCache(quizzes) {
+    if (!Array.isArray(quizzes) || !navigator.onLine) return;
+    let idx = 0;
+    function fetchNext() {
+      if (idx >= quizzes.length) return;
+      const q = quizzes[idx++];
+      if (!q || !q.id || !q.file) {
+        setTimeout(fetchNext, 50);
+        return;
+      }
+      const key = PERSISTENT_DATA_PREFIX + q.id;
+      if (localStorage.getItem(key)) {
+        setTimeout(fetchNext, 80);
+        return;
+      }
+      fetch(q.file)
+        .then((r) => (r.ok ? r.json() : null))
+        .then((data) => {
+          if (data) {
+            try {
+              localStorage.setItem(key, JSON.stringify(data));
+            } catch (e) {}
+          }
+        })
+        .catch(() => {})
+        .finally(() => {
+          setTimeout(fetchNext, 150);
+        });
+    }
+    setTimeout(fetchNext, 1000);
+  }
+
   fetch("data/config.json")
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
     .then((config) => {
+      try {
+        localStorage.setItem(PERSISTENT_CONFIG_KEY, JSON.stringify(config));
+      } catch (e) {}
       buildPortal(config);
+      preloadQuizzesToPersistentCache(config.quizzes || []);
       if (window.__analytics) {
         window.__analytics.track("portal_page_view", {
           total_quizzes: (config.quizzes || []).length,
@@ -630,6 +672,15 @@
       }
     })
     .catch((err) => {
+      console.warn("Réseau indisponible, tentative chargement config cache persistant local...", err);
+      try {
+        const raw = localStorage.getItem(PERSISTENT_CONFIG_KEY);
+        if (raw) {
+          const config = JSON.parse(raw);
+          buildPortal(config);
+          return;
+        }
+      } catch (e) {}
       console.error("Erreur chargement config:", err);
       sectionsContainer.innerHTML =
         '<p style="color:red;text-align:center;">Erreur lors du chargement de la configuration.</p>';
