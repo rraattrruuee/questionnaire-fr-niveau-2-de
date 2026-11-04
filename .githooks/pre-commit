@@ -1,0 +1,29 @@
+#!/bin/bash
+# Hook pre-commit — empêche de committer un questionnaire mal formé.
+# Installé par : bash scripts/install-hooks.sh
+set -e
+
+cd "$(git rev-parse --show-toplevel)"
+
+staged=$(git diff --cached --name-only --diff-filter=ACM)
+if ! echo "$staged" | grep -qE '^data/.*\.json$'; then
+  exit 0
+fi
+
+echo "🔎 Vérification du format des questionnaires…"
+
+if ! node scripts/fix-quiz-format.js --check; then
+  echo ""
+  echo "❌ Commit bloqué : \"correct\" doit être un ENTIER (index 0-based)."
+  echo "   Corrige automatiquement avec : node scripts/fix-quiz-format.js"
+  echo "   puis relance ton commit."
+  exit 1
+fi
+
+if ! node scripts/validate-quizzes.js; then
+  echo ""
+  echo "❌ Commit bloqué : validation des questionnaires échouée."
+  exit 1
+fi
+
+echo "✅ Questionnaires valides."

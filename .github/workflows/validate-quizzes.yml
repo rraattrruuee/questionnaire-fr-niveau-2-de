@@ -6,11 +6,13 @@ on:
     paths:
       - "data/**"
       - "scripts/validate-quizzes.js"
+      - "scripts/fix-quiz-format.js"
       - ".github/workflows/validate-quizzes.yml"
   pull_request:
     paths:
       - "data/**"
       - "scripts/validate-quizzes.js"
+      - "scripts/fix-quiz-format.js"
       - ".github/workflows/validate-quizzes.yml"
   workflow_dispatch:
 
@@ -26,6 +28,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      - name: Vérifier le format "correct" (index entier)
+        run: node scripts/fix-quiz-format.js --check
 
       - name: Valider les questionnaires
         run: node scripts/validate-quizzes.js

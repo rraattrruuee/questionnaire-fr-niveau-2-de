@@ -14,6 +14,9 @@ description: Créer ou étendre un questionnaire dans ce projet PWA (questionnai
 - **Stockage** : chaque quiz = 1 fichier JSON dans `data/<matiere>/<slug>.json`
 - **Cache** : `service-worker.js` régénéré par `bash scripts/generate-sw.sh`
 - **Validation CI** : `node scripts/validate-quizzes.js` (workflow `.github/workflows/validate-quizzes.yml` + étape bloquante du déploiement `static.yml`)
+- **Helper de génération** : `scripts/quiz_lib.py` (`Q`, `VF`, `TXT`, `write_quiz`) — convertit automatiquement `correct` (texte → index) et refuse les formats invalides
+- **Réparateur** : `node scripts/fix-quiz-format.js` (ajouter `--check` pour la CI / le hook)
+- **Hook pre-commit** : `.githooks/pre-commit` (installé via `bash scripts/install-hooks.sh`) — bloque tout commit de questionnaire mal formé
 
 **Règle d'or** : l'utilisateur commit/push lui-même. Ne jamais `git commit`/`git push` sans demande explicite. En fin de tâche, lister les fichiers à committer.
 
@@ -22,10 +25,10 @@ description: Créer ou étendre un questionnaire dans ce projet PWA (questionnai
 1. **Date exacte** : **avant toute chose**, exécuter `date +%F` dans le terminal pour obtenir la date réelle du jour (format `AAAA-MM-JJ`). Ne **jamais** supposer la date (la date de la session/contexte peut être fausse). Conserver la valeur pour le champ `added` de l'étape 3.
 2. **Collecte du cours** : l'utilisateur fournit le matériau. Questions **autonomes** (jamais besoin du texte/contexte du cours — voir §9 « Autonomie stricte »).
 3. **Choix des métadonnées** : `id` (slug ASCII), `title`, `subject` (doit exister dans `config.subjects`), `file` = `data/<matiere>/<slug>.json`, `questionsCount`, `description`, `tags`, `added` = **sortie de `date +%F`**.
-4. **Génération** : écrire un script Python dans `/tmp/opencode/make_*.py` qui construit le dict et écrit le JSON (`ensure_ascii=False, indent=2`). Ne jamais écrire le JSON à la main.
+4. **Génération** : écrire un script Python dans `/tmp/opencode/make_*.py` qui **importe `scripts/quiz_lib.py`** et utilise `Q()/VF()/TXT()`, puis `write_quiz()`. `Q()` accepte `correct` en entier **ou** en texte d'option et le convertit en index : c'est la protection anti-erreur. Ne jamais écrire le JSON à la main.
 5. **Enregistrement** : ajouter l'entrée dans `data/config.json` (dans `quizzes`). Si la matière n'existe pas, l'ajouter d'abord dans `subjects` (id ASCII, name, icon emoji, color hex, description).
-6. **Validation** : `node scripts/validate-quizzes.js` → doit afficher `✔ ... Validation OK.` (0 erreur).
-7. **Service worker** : `bash scripts/generate-sw.sh` (met à jour la liste des assets + horodatage `CACHE_NAME`).
+6. **Validation** : `node scripts/fix-quiz-format.js --check && node scripts/validate-quizzes.js` → doit afficher `✔ ... Validation OK.` (0 erreur). En cas d'erreur `correct`, lancer `node scripts/fix-quiz-format.js` pour réparer automatiquement.
+7. **Service worker** : `bash scripts/generate-sw.sh` (met à jour la liste des assets + horodatage `CACHE_NAME`). Le script **revalide les questionnaires** et refuse de continuer si l'un est invalide.
 8. **Tests** : `node --check js/quiz.js && node --check js/portal.js`, puis test navigateur headless (voir §7).
 9. **Rapport** : tableau des catégories + nb de questions + liste des fichiers à committer.
 
@@ -69,7 +72,7 @@ description: Créer ou étendre un questionnaire dans ce projet PWA (questionnai
 
 | Règle | Détail |
 |---|---|
-| **`correct` = entier index 0-based** | JAMAIS un string. `correct: 0` = premier élément de `options`. Erreur historique réelle du projet. |
+| **`correct` = entier index 0-based** | JAMAIS un string dans le JSON final. `correct: 0` = premier élément de `options`. Erreur historique réelle du projet. Avec `quiz_lib.Q()`, on peut passer le **texte** de la bonne réponse : il est converti automatiquement en index. Réparation : `node scripts/fix-quiz-format.js`. |
 | **`options` sans doublon** | `new Set(options).size === options.length`. Une option dupliquée = ambiguïté. |
 | **≥ 2 options** pour mcq | 4 recommandé (2 accepté par le validateur). |
 | **`solution` obligatoire** | String non vide, sur TOUTES les questions. |
@@ -83,73 +86,87 @@ description: Créer ou étendre un questionnaire dans ce projet PWA (questionnai
 | **UTF-8 sans escape** | `json.dump(..., ensure_ascii=False, indent=2)`. |
 | **ASCII pour les IDs** | `id` et `file` sans accents/espaces. |
 
-## 4. Structure du script générateur type
+## 4. Structure du script générateur type (OBLIGATOIRE)
+
+Utiliser le helper du projet. Il garantit un `correct` entier et valide tout
+avant écriture : impossible de produire un JSON mal formé.
 
 ```python
 # /tmp/opencode/make_<slug>.py
-import json, os
+import sys
+sys.path.insert(0, "scripts")
+from quiz_lib import Q, VF, TXT, write_quiz
 
-def Q(text, options, correct, solution, typ="mcq"):
-    return {"text": text, "type": typ, "options": options,
-            "correct": correct, "solution": solution}
+categories = [
+    {
+        "category": "Nom de la catégorie",
+        "questions": [
+            # correct = index entier (0 = 1re option) OU texte de la bonne réponse.
+            # Les deux sont acceptés ; le texte est converti en index automatiquement.
+            Q("Capitale de l'Italie ?",
+              ["Rome", "Paris", "Madrid", "Berlin"],
+              "Rome",                      # <- converti en 0
+              "Rome est la capitale de l'Italie."),
+            Q("2 + 2 = ?", ["3", "4", "5", "6"], 1, "4"),
+            VF("476 = chute de l'Empire romain d'Occident.", True, "Oui, en 476."),
+            TXT("Quel fleuve traverse Paris ?", ["Seine", "la Seine"], "La Seine."),
+        ],
+    },
+]
 
-def VF(text, is_true, solution):
-    opts = ["Vrai", "Faux"] if is_true else ["Faux", "Vrai"]
-    return {"text": text, "type": "mcq", "options": opts,
-            "correct": 0, "solution": solution}
+quiz = {
+    "subject": "<id>",              # ID exact de config.subjects
+    "title": "...",                 # identique au title de config.json
+    "description": "...",
+    "categories": categories,
+}
 
-def TXT(text, accepted, solution):
-    return {"text": text, "type": "text", "options": [], "correct": 0,
-            "accepted": accepted, "solution": solution}
-
-categories = [{"category": "...", "questions": [ ... ]}]
-
-quiz = {"subject": "<id>", "title": "...", "description": "...",
-        "categories": categories}
-
-# Validation AVANT écriture
-for c in quiz["categories"]:
-    for q in c["questions"]:
-        if q["type"] == "mcq":
-            assert isinstance(q["correct"], int) and 0 <= q["correct"] < len(q["options"])
-            assert len(set(q["options"])) == len(q["options"]), "DUP: " + q["text"]
-            assert q["solution"]
-        else:
-            assert q.get("accepted")
-
-out = "data/<matiere>/<slug>.json"
-os.makedirs(os.path.dirname(out), exist_ok=True)
-with open(out, "w", encoding="utf-8") as f:
-    json.dump(quiz, f, ensure_ascii=False, indent=2)
-
-total = sum(len(c["questions"]) for c in quiz["categories"])
-print(f"Total: {total} questions, {len(quiz['categories'])} categories")
-for c in quiz["categories"]:
-    print(f"  {c['category']}: {len(c['questions'])}q")
+write_quiz(quiz, "data/<matiere>/<slug>.json")   # valide + écrit (UTF-8, indent=2)
 ```
+
+> **Ne pas** réimplémenter `Q()`/`VF()`/`TXT()` à la main : c'est précisément
+> comme ça que l'erreur `correct` en chaîne est apparue. Le helper lève une
+> erreur explicite si la réponse n'existe pas dans `options` ou si les options
+> sont dupliquées.
 
 ## 5. Ajouter des questions à un quiz existant
 
 ```python
-import json
+import json, sys
+sys.path.insert(0, "scripts")
+from quiz_lib import Q, write_quiz
+
 fp = "data/<matiere>/<slug>.json"
-with open(fp) as f:
+with open(fp, encoding="utf-8") as f:
     quiz = json.load(f)
-quiz["categories"].append({"category": "Nouvelle catégorie", "questions": [...]})
-# OU modifier une catégorie existante
-total = sum(len(c["questions"]) for c in quiz["categories"])
-# revalididentique (assert ci-dessus), réécrire le fichier,
-# puis METTRE À JOUR questionsCount dans data/config.json (= total exact)
+
+quiz["categories"].append({
+    "category": "Nouvelle catégorie",
+    "questions": [
+        Q("Question ?", ["A", "B", "C", "D"], "B", "Explication."),  # "B" -> index 1
+    ],
+})
+
+write_quiz(quiz, fp)   # revalide tout et réécrit proprement
 ```
+
+Ensuite **mettre à jour `questionsCount`** dans `data/config.json` (= total exact
+renvoyé par `write_quiz`).
 
 **Oublier `questionsCount`** = échec de la validation CI (le déploiement échoue aussi).
 
 ## 6. Validation locale (obligatoire avant de rendre la main)
 
 ```bash
-node scripts/validate-quizzes.js   # doit dire "✔ ... Validation OK."
+node scripts/fix-quiz-format.js --check   # "correct" = entier partout
+node scripts/validate-quizzes.js          # doit dire "✔ ... Validation OK."
 bash scripts/generate-sw.sh
 node --check js/quiz.js && node --check js/portal.js
+```
+
+Si `fix-quiz-format.js --check` signale des erreurs :
+```bash
+node scripts/fix-quiz-format.js           # répare automatiquement (texte -> index)
 ```
 
 Le validateur vérifie :
@@ -204,8 +221,9 @@ nohup chromium --headless=new --no-sandbox --disable-gpu \
 - [ ] Fichier JSON créé dans `data/<matiere>/`, UTF-8, `indent=2`
 - [ ] Entrée ajoutée à `data/config.json` (`quizzes`) avec `questionsCount` exact
 - [ ] Matière présente dans `config.subjects` (sinon ajoutée)
+- [ ] `node scripts/fix-quiz-format.js --check` → `✔ Format OK`
 - [ ] `node scripts/validate-quizzes.js` → `✔ Validation OK.`
-- [ ] `bash scripts/generate-sw.sh` exécuté
+- [ ] `bash scripts/generate-sw.sh` exécuté (revalide et refuse si invalide)
 - [ ] `node --check` sur `js/*.js` OK
 - [ ] Test headless : 0 erreur, catégories affichées
 - [ ] **Liste des fichiers à committer remise à l'utilisateur** (jamais de push non demandé)
@@ -225,3 +243,32 @@ nohup chromium --headless=new --no-sandbox --disable-gpu \
   ```bash
   date +%F   # ex. 2026-10-03  →  "added": "2026-10-03"
   ```
+
+## 10. Anti-régression : le format `correct`
+
+**Symptôme** : la CI échoue avec
+`"correct" doit être un ENTIER = index 0-based dans "options" (reçu: "...")`.
+
+**Cause** : une question QCM a été écrite avec la chaîne de la bonne réponse
+au lieu de son index.
+
+**Chaîne de protections mise en place** (dans l'ordre où elles s'appliquent) :
+
+1. **Génération** — `scripts/quiz_lib.py` : `Q(..., "Rome", ...)` convertit en
+   index et lève une erreur si la réponse n'est pas dans `options`. Impossible
+   d'écrire un `correct` chaîne via le helper.
+2. **Avant commit** — hook `.githooks/pre-commit` : exécute
+   `node scripts/fix-quiz-format.js --check` puis
+   `node scripts/validate-quizzes.js`. Un commit invalide est bloqué.
+   Installation locale : `bash scripts/install-hooks.sh` (fait une fois par clone).
+3. **Avant déploiement** — `bash scripts/generate-sw.sh` revalide et refuse de
+   régénérer le service worker si un questionnaire est invalide
+   (contournement exceptionnel : `SKIP_VALIDATE=1`).
+4. **CI** — `.github/workflows/validate-quizzes.yml` exécute
+   `fix-quiz-format.js --check` **puis** `validate-quizzes.js`. L'étape de
+   `static.yml` bloque aussi le déploiement Pages.
+5. **Réparation auto** — `node scripts/fix-quiz-format.js` corrige les fichiers
+   existants (texte → index), sans toucher au contenu.
+
+**Règle absolue** : ne jamais réimplémenter `Q()`/`VF()`/`TXT()` à la main dans
+un script `/tmp/opencode/make_*.py`. Toujours importer `scripts/quiz_lib.py`.

@@ -6,6 +6,14 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+# 0. Garde-fou anti-régression : refuser de régénérer le SW si un questionnaire
+#    est mal formé (ex. "correct" écrit en chaîne au lieu d'un index entier).
+#    Contournement exceptionnel : SKIP_VALIDATE=1 bash scripts/generate-sw.sh
+if [ "${SKIP_VALIDATE:-0}" != "1" ]; then
+    node scripts/fix-quiz-format.js --check
+    node scripts/validate-quizzes.js
+fi
+
 # 1. Find all relevant files, exclude scripts/capture/.git, URL-encode filenames
 FILES=$(find . -maxdepth 4 -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.svg" -o -name "*.png" -o -name "*.json" \) \
     ! -path "./.*" \

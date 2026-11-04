@@ -140,7 +140,8 @@ function validateQuizSchema(file, data) {
         if (typeof q.correct !== "number" || !Number.isInteger(q.correct)) {
           err(
             f,
-            `${at}: "correct" doit être un ENTIER = index 0-based dans "options" (reçu: ${JSON.stringify(q.correct)})`
+            `${at}: "correct" doit être un ENTIER = index 0-based dans "options" (reçu: ${JSON.stringify(q.correct)})` +
+              ` → correction auto : node scripts/fix-quiz-format.js`
           );
         } else if (q.correct < 0 || q.correct >= q.options.length) {
           err(
