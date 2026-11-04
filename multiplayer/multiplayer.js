@@ -300,6 +300,7 @@
     role: null,          // "host" | "client"
     mode: 1,             // 1 = même question, 2 = questions différentes
     peer: null,
+    relay: null,         // relais réseau universel
     code: null,
     joinUrl: null,
     started: false,
@@ -797,28 +798,34 @@
       setStatus($("home-status"), "Chargement du moteur de quiz impossible (js/quiz.js).", "is-error");
       return;
     }
-    setStatus($("home-status"), "Chargement de PeerJS…");
+    setStatus($("home-status"), "Création de la partie…");
     $("btn-create").disabled = true;
 
-    ensurePeer()
-      .then(function () { return createPeerWithCode(0); })
-      .then(function () {
-        $("btn-create").disabled = false;
-        S.role = "host";
-        showScreen("screen-lobby");
-        $("host-setup").classList.remove("hidden");
-        $("client-wait").classList.add("hidden");
-        $("qr-holder").classList.remove("hidden");
-        $("btn-copy").classList.remove("hidden");
-        $("lobby-title").textContent = "Partie créée !";
-        $("room-code").textContent = S.code;
-        setStatus($("home-status"), "");
-        setStatus($("lobby-status"), "En attente des joueurs… scanne le QR code !");
-        setStatus($("setup-status"), "Chargement des questionnaires…");
-        renderQR();
-        track("multiplayer_host_create");
-        return loadConfig();
-      })
+    var code = makeCode();
+    S.code = code;
+    S.role = "host";
+    S.players = [];
+    S.started = false;
+    S.joinUrl = joinUrlFor(code);
+
+    if (S.relay) { try { S.relay.destroy(); } catch (e) {} }
+    S.relay = createHostRelay(code);
+
+    $("btn-create").disabled = false;
+    showScreen("screen-lobby");
+    $("host-setup").classList.remove("hidden");
+    $("client-wait").classList.add("hidden");
+    $("qr-holder").classList.remove("hidden");
+    $("btn-copy").classList.remove("hidden");
+    $("lobby-title").textContent = "Partie créée !";
+    $("room-code").textContent = S.code;
+    setStatus($("home-status"), "");
+    setStatus($("lobby-status"), "En attente des joueurs… scanne le QR code !");
+    setStatus($("setup-status"), "Chargement des questionnaires…");
+    renderQR();
+    track("multiplayer_host_create");
+
+    loadConfig()
       .then(function (cfg) {
         populateQuizSelect(cfg);
         setStatus($("setup-status"), "");
@@ -831,135 +838,180 @@
   }
 
   /* ============================================================
-     Configuration WebRTC (STUN / TURN)
-     - STUN : Gratuit, illimité (Google & Cloudflare). Suffit sur un même réseau ou réseaux ouverts.
-     - TURN : Obligatoire pour relayer le trafic à distance partout (4G/5G, box différentes, pare-feux stricts).
-       Supporte Metered.ca (50 Go gratuits/mois) ou Cloudflare Calls (1000 Go gratuits/mois).
+     Relais réseau universel (WebSocket + SSE)
+     - 100% gratuit, 0 compte, 0 carte bancaire
+     - Fonctionne de partout (4G/5G, Wi-Fi, école, bureau, CGNAT)
      ============================================================ */
-  var METERED_DOMAIN = ""; // ex: "votre-app.metered.ca"
-  var METERED_API_KEY = ""; // ex: "votre_cle_api"
-  var CLOUDFLARE_TURN_ENDPOINT = "https://posthog-proxy.rrraattrruuee.workers.dev/turn-credentials";
+  var RELAY_BASE = "https://ntfy.sh";
+  var RELAY_WS_BASE = "wss://ntfy.sh";
 
-  var DEFAULT_STUN_CONFIG = {
-    config: {
-      iceServers: [
-        { urls: "stun:stun.l.google.com:19302" },
-        { urls: "stun:stun1.l.google.com:19302" },
-        { urls: "stun:stun2.l.google.com:19302" },
-        { urls: "stun:stun.cloudflare.com:3478" }
-      ]
-    }
-  };
-
-  var _cachedIceConfig = null;
-
-  function getPeerIceConfig() {
-    if (_cachedIceConfig) {
-      return Promise.resolve(_cachedIceConfig);
-    }
-
-    var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
-    var signal = controller ? controller.signal : undefined;
-    var timer = controller ? setTimeout(function () { controller.abort(); }, 3000) : null;
-
-    // 1. Essai Metered si configuré
-    if (METERED_DOMAIN && METERED_API_KEY) {
-      var meteredUrl = "https://" + METERED_DOMAIN.replace(/^https?:\/\//, "").replace(/\/+$/, "") +
-        "/api/v1/turn/credentials?apiKey=" + encodeURIComponent(METERED_API_KEY);
-      return fetch(meteredUrl, { signal: signal })
-        .then(function (r) {
-          if (timer) clearTimeout(timer);
-          return r.json();
-        })
-        .then(function (data) {
-          if (Array.isArray(data) && data.length > 0) {
-            _cachedIceConfig = { config: { iceServers: data } };
-            return _cachedIceConfig;
-          }
-          throw new Error("Invalid Metered response");
-        })
-        .catch(function () {
-          if (timer) clearTimeout(timer);
-          _cachedIceConfig = DEFAULT_STUN_CONFIG;
-          return _cachedIceConfig;
-        });
-    }
-
-    // 2. Essai Cloudflare Calls (via worker) si disponible
-    if (CLOUDFLARE_TURN_ENDPOINT) {
-      return fetch(CLOUDFLARE_TURN_ENDPOINT, { signal: signal })
-        .then(function (r) {
-          if (timer) clearTimeout(timer);
-          return r.json();
-        })
-        .then(function (data) {
-          if (data && Array.isArray(data.iceServers) && data.iceServers.length > 0) {
-            _cachedIceConfig = { config: { iceServers: data.iceServers } };
-            return _cachedIceConfig;
-          }
-          throw new Error("No Cloudflare iceServers");
-        })
-        .catch(function () {
-          if (timer) clearTimeout(timer);
-          _cachedIceConfig = DEFAULT_STUN_CONFIG;
-          return _cachedIceConfig;
-        });
-    }
-
-    // 3. Repli STUN Google + Cloudflare
-    _cachedIceConfig = DEFAULT_STUN_CONFIG;
-    return Promise.resolve(_cachedIceConfig);
+  function getRelayTopic(code) {
+    return "qfr2_" + String(code || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   }
 
-  function createPeerWithCode(attempt) {
-    return getPeerIceConfig().then(function (iceConfig) {
-      return new Promise(function (resolve, reject) {
-        var code = makeCode();
-        var peer = new Peer(ROOM_PREFIX + code, iceConfig);
-      var opened = false;
-      var timer = setTimeout(function () {
-        if (!opened) {
-          try { peer.destroy(); } catch (e) {}
-          reject(new Error("Délai d'attente dépassé (vérifiez votre connexion au service PeerJS)."));
-        }
-      }, 15000);
+  function relayPublish(topic, msgObj) {
+    return fetch(RELAY_BASE + "/" + topic, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+      body: JSON.stringify(msgObj)
+    }).catch(function (err) {
+      console.warn("Relay publish error:", err);
+    });
+  }
 
-      function fail(err) {
-        clearTimeout(timer);
-        if (opened) return;
-        try { peer.destroy(); } catch (e) {}
-        if (err && err.type === "unavailable-id" && attempt < 4) {
-          createPeerWithCode(attempt + 1).then(resolve, reject);
-        } else {
-          reject(new Error(
-            (err && err.message) || "connexion au service PeerJS impossible"
-          ));
+  function relaySubscribe(topic, onMessage, onError) {
+    var ws = null;
+    var sse = null;
+    var closed = false;
+
+    function handleRaw(rawStr) {
+      try {
+        var raw = JSON.parse(rawStr);
+        if (raw.event === "message" && raw.message) {
+          var payload = JSON.parse(raw.message);
+          onMessage(payload);
         }
+      } catch (e) {}
+    }
+
+    function startWs() {
+      if (closed) return;
+      try {
+        ws = new WebSocket(RELAY_WS_BASE + "/" + topic + "/ws");
+        ws.onmessage = function (e) {
+          handleRaw(e.data);
+        };
+        ws.onerror = function () {
+          if (!closed && !sse) startSse();
+        };
+        ws.onclose = function () {
+          if (!closed && !sse) {
+            setTimeout(startWs, 1500);
+          }
+        };
+      } catch (e) {
+        startSse();
+      }
+    }
+
+    function startSse() {
+      if (closed || sse) return;
+      try {
+        sse = new EventSource(RELAY_BASE + "/" + topic + "/sse");
+        sse.onmessage = function (e) {
+          handleRaw(e.data);
+        };
+        sse.onerror = function () {
+          if (onError) onError();
+        };
+      } catch (e) {}
+    }
+
+    startWs();
+
+    return {
+      close: function () {
+        closed = true;
+        if (ws) { try { ws.close(); } catch (e) {} ws = null; }
+        if (sse) { try { sse.close(); } catch (e) {} sse = null; }
+      }
+    };
+  }
+
+  function createHostRelay(code) {
+    var topic = getRelayTopic(code);
+    var virtualConns = new Map();
+
+    var sub = relaySubscribe(topic, function (env) {
+      if (!env || env.from === "host") return;
+      if (env.to !== "host" && env.to !== "*") return;
+
+      var fromId = env.from;
+      var vConn = virtualConns.get(fromId);
+
+      if (!vConn) {
+        var handlers = { data: [], close: [], error: [], open: [] };
+        vConn = {
+          open: true,
+          peer: fromId,
+          send: function (payload) {
+            relayPublish(topic, { from: "host", to: fromId, p: payload });
+          },
+          on: function (evt, fn) {
+            if (!handlers[evt]) handlers[evt] = [];
+            handlers[evt].push(fn);
+            if (evt === "open") setTimeout(fn, 10);
+          },
+          close: function () {
+            vConn.open = false;
+            virtualConns.delete(fromId);
+            if (handlers.close) handlers.close.forEach(function (f) { f(); });
+          },
+          _trigger: function (evt, arg) {
+            if (handlers[evt]) handlers[evt].forEach(function (f) { f(arg); });
+          }
+        };
+        virtualConns.set(fromId, vConn);
+        hostOnConnection(vConn);
       }
 
-      peer.on("open", function () {
-        clearTimeout(timer);
-        opened = true;
-        S.peer = peer;
-        S.code = code;
-        S.joinUrl = joinUrlFor(code);
-        peer.on("connection", hostOnConnection);
-        peer.on("disconnected", function () {
-          console.warn("[Host] Signalement PeerJS déconnecté, reconnexion...");
-          if (S.peer && !S.peer.destroyed) {
-            try { S.peer.reconnect(); } catch (e) {}
-          }
-        });
-        peer.on("error", function (e) {
-          if (e && e.type === "unavailable-id" && !S.started) return;
-          if (S.role === "host") {
-            setStatus($("lobby-status"), "Erreur réseau : " + ((e && e.type) || "inconnue"), "is-error");
-          }
-        });
-        resolve();
-      });
-      peer.on("error", fail);
+      if (env.p) {
+        vConn._trigger("data", env.p);
+      }
     });
+
+    return {
+      topic: topic,
+      broadcast: function (payload) {
+        relayPublish(topic, { from: "host", to: "*", p: payload });
+      },
+      destroy: function () {
+        sub.close();
+        virtualConns.forEach(function (c) { c.close(); });
+        virtualConns.clear();
+      }
+    };
+  }
+
+  function createPlayerRelay(code, myName) {
+    var topic = getRelayTopic(code);
+    var myId = "p_" + Math.random().toString(36).slice(2, 9);
+    var handlers = { data: [], close: [], error: [], open: [] };
+
+    var sub = relaySubscribe(topic, function (env) {
+      if (!env || env.from === myId) return;
+      if (env.to === myId || env.to === "*") {
+        if (env.p) {
+          if (env.p.t === "host_left") {
+            if (handlers.close) handlers.close.forEach(function (f) { f(); });
+            return;
+          }
+          if (handlers.data) {
+            handlers.data.forEach(function (f) { f(env.p); });
+          }
+        }
+      }
+    });
+
+    var conn = {
+      open: true,
+      peer: "host",
+      send: function (payload) {
+        relayPublish(topic, { from: myId, to: "host", p: payload });
+      },
+      on: function (evt, fn) {
+        if (!handlers[evt]) handlers[evt] = [];
+        handlers[evt].push(fn);
+        if (evt === "open") setTimeout(fn, 50);
+      },
+      close: function () {
+        conn.open = false;
+        sub.close();
+        if (handlers.close) handlers.close.forEach(function (f) { f(); });
+      }
+    };
+
+    return conn;
   }
 
   function joinUrlFor(code) {
@@ -1042,6 +1094,10 @@
   }
 
   function broadcast(msg) {
+    if (S.relay) {
+      S.relay.broadcast(msg);
+      return;
+    }
     S.players.forEach(function (p) {
       if (p.gone || !p.conn || !p.conn.open) return;
       try { p.conn.send(msg); } catch (e) {}
@@ -1581,112 +1637,83 @@
     setStatus($("home-status"), "Connexion à la partie " + code + "…");
     track("multiplayer_join_attempt");
 
-    ensurePeer()
-      .then(getPeerIceConfig)
-      .then(function (iceConfig) {
-        var peer = new Peer(iceConfig);
-        S.peer = peer;
-        var settled = false;
-        var timer = setTimeout(function () {
-          if (!settled) {
-            settled = true;
-            try { peer.destroy(); } catch (e) {}
-            S.peer = null;
-            $("btn-join").disabled = false;
-            setStatus($("home-status"), "Timeout : la partie est peut-être fermée.", "is-error");
-          }
-        }, 15000);
+    if (S.conn) { try { S.conn.close(); } catch (e) {} }
+    var conn = createPlayerRelay(code, name);
+    S.conn = conn;
 
-        peer.on("open", function () {
-          var conn = peer.connect(ROOM_PREFIX + code);
-          S.conn = conn;
+    var settled = false;
+    var timer = setTimeout(function () {
+      if (!settled) {
+        settled = true;
+        try { conn.close(); } catch (e) {}
+        S.conn = null;
+        $("btn-join").disabled = false;
+        setStatus($("home-status"), "Timeout : la partie est introuvable ou fermée.", "is-error");
+      }
+    }, 12000);
 
-          conn.on("open", function () {
-            if (settled) return;
-            settled = true;
-            clearTimeout(timer);
-            S.role = "client";
-            S.myName = name;
-            conn.send({ t: "j", n: name });
-            $("btn-join").disabled = false;
-            setStatus($("home-status"), "");
-            showScreen("screen-lobby");
-            $("host-setup").classList.add("hidden");
-            $("client-wait").classList.remove("hidden");
-            $("qr-holder").classList.add("hidden");
-            $("btn-copy").classList.add("hidden");
-            $("lobby-title").textContent = "Connecté à la partie !";
-            $("room-code").textContent = code;
-            $("player-list").innerHTML = '<span class="mp-player-chip is-host">🎛️ Hôte</span>';
-            $("player-count").textContent = "…";
-            setStatus($("lobby-status"), "En attente de l'hôte pour le début de la partie…");
-            track("multiplayer_join_ok");
-          });
+    conn.on("open", function () {
+      conn.send({ t: "j", n: name });
+    });
 
-          conn.on("data", onServerMsg);
-
-          conn.on("close", function () {
-            if (S.role === "client") {
-              resetToHome("L'hôte a quitté la partie.");
-            }
-          });
-
-          conn.on("error", function () {
-            if (!settled) {
-              settled = true;
-              clearTimeout(timer);
-              try { peer.destroy(); } catch (e) {}
-              S.peer = null;
-              $("btn-join").disabled = false;
-              setStatus(
-                $("home-status"),
-                "Impossible de joindre l'hôte. Vérifiez le code ou réessayez.",
-                "is-error"
-              );
-            } else {
-              resetToHome("Connexion perdue.");
-            }
-          });
-        });
-
-        peer.on("disconnected", function () {
-          if (S.peer && !S.peer.destroyed) {
-            try { S.peer.reconnect(); } catch (e) {}
-          }
-        });
-
-        peer.on("error", function (e) {
-          if (settled) {
-            if (S.role === "client") resetToHome("Connexion perdue (" + ((e && e.type) || "erreur réseau") + ").");
-            return;
-          }
+    conn.on("data", function (msg) {
+      if (msg && msg.t === "W") {
+        if (!settled) {
           settled = true;
           clearTimeout(timer);
-          try { peer.destroy(); } catch (err) {}
-          S.peer = null;
+          S.role = "client";
+          S.myName = name;
           $("btn-join").disabled = false;
-          var msg = "Connexion impossible.";
-          if (e && e.type === "peer-unavailable") {
-            msg = "Partie introuvable : vérifie le code.";
-          } else if (e && e.type === "webrtc") {
-            msg = "Échec de négociation WebRTC : impossible de relier les deux appareils.";
-          } else if (e && e.type) {
-            msg = "Connexion impossible (" + e.type + ").";
-          }
-          setStatus($("home-status"), msg, "is-error");
-        });
-      })
-      .catch(function (err) {
+          setStatus($("home-status"), "");
+          showScreen("screen-lobby");
+          $("host-setup").classList.add("hidden");
+          $("client-wait").classList.remove("hidden");
+          $("qr-holder").classList.add("hidden");
+          $("btn-copy").classList.add("hidden");
+          $("lobby-title").textContent = "Connecté à la partie !";
+          $("room-code").textContent = code;
+          $("player-list").innerHTML = '<span class="mp-player-chip is-host">🎛️ Hôte</span>';
+          $("player-count").textContent = "…";
+          setStatus($("lobby-status"), "En attente de l'hôte pour le début de la partie…");
+          track("multiplayer_join_ok");
+        }
+      }
+      onServerMsg(msg);
+    });
+
+    conn.on("close", function () {
+      if (S.role === "client") {
+        resetToHome("L'hôte a quitté la partie.");
+      }
+    });
+
+    conn.on("error", function () {
+      if (!settled) {
+        settled = true;
+        clearTimeout(timer);
+        try { conn.close(); } catch (e) {}
+        S.conn = null;
         $("btn-join").disabled = false;
-        setStatus($("home-status"), err.message, "is-error");
-      });
+        setStatus($("home-status"), "Impossible de joindre la partie.", "is-error");
+      } else {
+        resetToHome("Connexion perdue.");
+      }
+    });
   }
 
   function resetToHome(msg) {
     stopScanner();
+    if (S.relay && S.role === "host") {
+      try { S.relay.broadcast({ t: "host_left" }); } catch (e) {}
+      try { S.relay.destroy(); } catch (e) {}
+      S.relay = null;
+    }
+    if (S.conn) {
+      try { S.conn.close(); } catch (e) {}
+      S.conn = null;
+    }
     try { if (S.peer) S.peer.destroy(); } catch (e) {}
     S.peer = null;
-    S.conn = null;
     S.role = null;
     S.started = false;
     S.myPid = null;
