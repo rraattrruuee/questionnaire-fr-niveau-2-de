@@ -863,11 +863,20 @@
     var ws = null;
     var sse = null;
     var closed = false;
+    var seenIds = new Set();
 
     function handleRaw(rawStr) {
       try {
         var raw = JSON.parse(rawStr);
         if (raw.event === "message" && raw.message) {
+          if (raw.id) {
+            if (seenIds.has(raw.id)) return;
+            seenIds.add(raw.id);
+            if (seenIds.size > 200) {
+              var first = seenIds.values().next().value;
+              seenIds.delete(first);
+            }
+          }
           var payload = JSON.parse(raw.message);
           onMessage(payload);
         }
@@ -877,7 +886,7 @@
     function startWs() {
       if (closed) return;
       try {
-        ws = new WebSocket(RELAY_WS_BASE + "/" + topic + "/ws");
+        ws = new WebSocket(RELAY_WS_BASE + "/" + topic + "/ws?since=2m");
         ws.onmessage = function (e) {
           handleRaw(e.data);
         };
@@ -897,7 +906,7 @@
     function startSse() {
       if (closed || sse) return;
       try {
-        sse = new EventSource(RELAY_BASE + "/" + topic + "/sse");
+        sse = new EventSource(RELAY_BASE + "/" + topic + "/sse?since=2m");
         sse.onmessage = function (e) {
           handleRaw(e.data);
         };
@@ -1264,16 +1273,25 @@
         }
 
         // Message de démarrage (total propre à chaque joueur en mode 2)
-        act.forEach(function (p) {
-          var total = S.mode === 1 ? S.pool.length : S.assignLen[p.pid];
-          sendTo(p.pid, {
+        if (S.mode === 1) {
+          broadcast({
             t: "S",
             mode: S.mode,
             title: S.quizTitle,
             catLabel: S.catLabel,
-            total: total
+            total: S.pool.length
           });
-        });
+        } else {
+          act.forEach(function (p) {
+            sendTo(p.pid, {
+              t: "S",
+              mode: S.mode,
+              title: S.quizTitle,
+              catLabel: S.catLabel,
+              total: S.assignLen[p.pid]
+            });
+          });
+        }
 
         showScreen("screen-game");
         $("g-quiz").textContent = S.quizTitle + " · " + S.catLabel;
@@ -1282,23 +1300,25 @@
         $("g-side-note").classList.toggle("hidden", S.mode !== 2);
         resetQuestionUI();
 
-        if (S.mode === 1) {
-          hostSendSharedQuestion();
-        } else {
-          if (!S.hostAsPlayer) {
-            setMainBtn({
-              which: "next",
-              label: "🏆 Afficher les scores finaux",
-              cls: "is-final",
-              onclick: hostFinish
-            });
-            updateRoundLabel("");
+        setTimeout(function () {
+          if (S.mode === 1) {
+            hostSendSharedQuestion();
+          } else {
+            if (!S.hostAsPlayer) {
+              setMainBtn({
+                which: "next",
+                label: "🏆 Afficher les scores finaux",
+                cls: "is-final",
+                onclick: hostFinish
+              });
+              updateRoundLabel("");
+            }
+            act.forEach(function (p) { hostSendNextQuestion(p.pid); });
+            updateHostAggregates();
+            renderLb(buildLeaderboard());
+            broadcast({ t: "B", lb: buildLeaderboard() });
           }
-          act.forEach(function (p) { hostSendNextQuestion(p.pid); });
-          updateHostAggregates();
-          renderLb(buildLeaderboard());
-          broadcast({ t: "B", lb: buildLeaderboard() });
-        }
+        }, 150);
         setStatus($("setup-status"), "");
         track("multiplayer_start", { mode: S.mode, questions: S.pool.length, players: act.length });
       })
@@ -1320,7 +1340,15 @@
     updateProgress(0);
     renderQuestionInto(publicQ(q), S.hostAsPlayer);
     updateSubInfo("Réponses reçues : 0 / " + activePlayers().length);
-    broadcast({ t: "Q", r: S.round, n: S.pool.length, q: publicQ(q) });
+    broadcast({
+      t: "Q",
+      r: S.round,
+      n: S.pool.length,
+      q: publicQ(q),
+      title: S.quizTitle,
+      catLabel: S.catLabel,
+      mode: S.mode
+    });
     setMainBtn({
       which: "next",
       label: "Forcer le passage ▶ (0/" + activePlayers().length + ")",
@@ -1329,7 +1357,6 @@
     });
     var lb0 = buildLeaderboard();
     renderLb(lb0);
-    broadcast({ t: "B", lb: lb0 });
   }
 
   function hostOnAnswer(pid, a) {
@@ -1497,7 +1524,15 @@
       updateSubInfo("");
       return;
     }
-    sendTo(pid, { t: "Q", r: idx, n: list.length, q: publicQ(q) });
+    sendTo(pid, {
+      t: "Q",
+      r: idx,
+      n: list.length,
+      q: publicQ(q),
+      title: S.quizTitle,
+      catLabel: S.catLabel,
+      mode: S.mode
+    });
   }
 
   function hostNextFor(pid) {
@@ -1796,22 +1831,35 @@
         S.mode = msg.mode;
         S.quizTitle = msg.title;
         S.catLabel = msg.catLabel;
-        S.clientQ = null;
-        S.clientDone = false;
-        S.lastProg = "0/0";
-        S.lbPrev = {};
         showScreen("screen-game");
-        $("g-quiz").textContent = msg.title + " · " + msg.catLabel;
-        $("g-mode").textContent = S.mode === 1 ? "🙋 Même question" : "🔀 Questions différentes";
+        if (msg.title) $("g-quiz").textContent = msg.title + (msg.catLabel ? " · " + msg.catLabel : "");
+        if (msg.mode) $("g-mode").textContent = S.mode === 1 ? "🙋 Même question" : "🔀 Questions différentes";
         $("g-host-note").classList.add("hidden");
         $("g-side-note").classList.add("hidden");
-        resetQuestionUI();
-        updateProgress(0);
+        // Si une question est déjà arrivée et affichée, ne pas la détruire !
+        if (!S.clientQ) {
+          S.clientQ = null;
+          S.clientDone = false;
+          S.lastProg = "0/0";
+          S.lbPrev = {};
+          resetQuestionUI();
+          updateProgress(0);
+        }
         $("g-lb").innerHTML = '<p class="mp-dim">Le classement s\'affichera ici.</p>';
         break;
       }
 
       case "Q": {
+        S.started = true;
+        showScreen("screen-game");
+        if (msg.title) S.quizTitle = msg.title;
+        if (msg.catLabel) S.catLabel = msg.catLabel;
+        if (msg.mode) S.mode = msg.mode;
+        if (S.quizTitle) $("g-quiz").textContent = S.quizTitle + (S.catLabel ? " · " + S.catLabel : "");
+        if (S.mode) $("g-mode").textContent = S.mode === 1 ? "🙋 Même question" : "🔀 Questions différentes";
+        $("g-host-note").classList.add("hidden");
+        $("g-side-note").classList.add("hidden");
+
         S.clientQ = { r: msg.r, n: msg.n, q: msg.q, submitted: false };
         S.clientDone = false;
         resetQuestionUI();
