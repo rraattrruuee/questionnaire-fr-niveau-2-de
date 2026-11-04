@@ -830,9 +830,17 @@
       });
   }
 
-  // Configuration WebRTC 100% gratuite et illimitée via les serveurs STUN publics de Google
-  // Résout la majorité des connexions sans aucune inscription ni configuration.
-  var PEER_ICE_CONFIG = {
+  /* ============================================================
+     Configuration WebRTC (STUN / TURN)
+     - STUN : Gratuit, illimité (Google & Cloudflare). Suffit sur un même réseau ou réseaux ouverts.
+     - TURN : Obligatoire pour relayer le trafic à distance partout (4G/5G, box différentes, pare-feux stricts).
+       Supporte Metered.ca (50 Go gratuits/mois) ou Cloudflare Calls (1000 Go gratuits/mois).
+     ============================================================ */
+  var METERED_DOMAIN = ""; // ex: "votre-app.metered.ca"
+  var METERED_API_KEY = ""; // ex: "votre_cle_api"
+  var CLOUDFLARE_TURN_ENDPOINT = "https://posthog-proxy.rrraattrruuee.workers.dev/turn-credentials";
+
+  var DEFAULT_STUN_CONFIG = {
     config: {
       iceServers: [
         { urls: "stun:stun.l.google.com:19302" },
@@ -843,10 +851,71 @@
     }
   };
 
+  var _cachedIceConfig = null;
+
+  function getPeerIceConfig() {
+    if (_cachedIceConfig) {
+      return Promise.resolve(_cachedIceConfig);
+    }
+
+    var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+    var signal = controller ? controller.signal : undefined;
+    var timer = controller ? setTimeout(function () { controller.abort(); }, 3000) : null;
+
+    // 1. Essai Metered si configuré
+    if (METERED_DOMAIN && METERED_API_KEY) {
+      var meteredUrl = "https://" + METERED_DOMAIN.replace(/^https?:\/\//, "").replace(/\/+$/, "") +
+        "/api/v1/turn/credentials?apiKey=" + encodeURIComponent(METERED_API_KEY);
+      return fetch(meteredUrl, { signal: signal })
+        .then(function (r) {
+          if (timer) clearTimeout(timer);
+          return r.json();
+        })
+        .then(function (data) {
+          if (Array.isArray(data) && data.length > 0) {
+            _cachedIceConfig = { config: { iceServers: data } };
+            return _cachedIceConfig;
+          }
+          throw new Error("Invalid Metered response");
+        })
+        .catch(function () {
+          if (timer) clearTimeout(timer);
+          _cachedIceConfig = DEFAULT_STUN_CONFIG;
+          return _cachedIceConfig;
+        });
+    }
+
+    // 2. Essai Cloudflare Calls (via worker) si disponible
+    if (CLOUDFLARE_TURN_ENDPOINT) {
+      return fetch(CLOUDFLARE_TURN_ENDPOINT, { signal: signal })
+        .then(function (r) {
+          if (timer) clearTimeout(timer);
+          return r.json();
+        })
+        .then(function (data) {
+          if (data && Array.isArray(data.iceServers) && data.iceServers.length > 0) {
+            _cachedIceConfig = { config: { iceServers: data.iceServers } };
+            return _cachedIceConfig;
+          }
+          throw new Error("No Cloudflare iceServers");
+        })
+        .catch(function () {
+          if (timer) clearTimeout(timer);
+          _cachedIceConfig = DEFAULT_STUN_CONFIG;
+          return _cachedIceConfig;
+        });
+    }
+
+    // 3. Repli STUN Google + Cloudflare
+    _cachedIceConfig = DEFAULT_STUN_CONFIG;
+    return Promise.resolve(_cachedIceConfig);
+  }
+
   function createPeerWithCode(attempt) {
-    return new Promise(function (resolve, reject) {
-      var code = makeCode();
-      var peer = new Peer(ROOM_PREFIX + code, PEER_ICE_CONFIG);
+    return getPeerIceConfig().then(function (iceConfig) {
+      return new Promise(function (resolve, reject) {
+        var code = makeCode();
+        var peer = new Peer(ROOM_PREFIX + code, iceConfig);
       var opened = false;
       var timer = setTimeout(function () {
         if (!opened) {
@@ -1513,8 +1582,9 @@
     track("multiplayer_join_attempt");
 
     ensurePeer()
-      .then(function () {
-        var peer = new Peer(PEER_ICE_CONFIG);
+      .then(getPeerIceConfig)
+      .then(function (iceConfig) {
+        var peer = new Peer(iceConfig);
         S.peer = peer;
         var settled = false;
         var timer = setTimeout(function () {
