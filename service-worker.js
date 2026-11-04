@@ -28,6 +28,11 @@ const STATIC_ASSETS = [
   "./js/quiz.js",
   "./js/theme.js",
   "./manifest.json",
+  "./multiplayer/index.html",
+  "./multiplayer/multiplayer.css",
+  "./multiplayer/multiplayer.js",
+  "./multiplayer/vendor/peerjs.min.js",
+  "./multiplayer/vendor/qrcode.min.js",
   "./offline.html",
   "./quiz.html",
   "./quiz_icon-192.png",
@@ -40,7 +45,7 @@ const STATIC_ASSETS = [
 // END_ASSETS
 
 const CACHE_PREFIX = "quiz-cache-";
-const CACHE_NAME = "quiz-cache-1793823829";
+const CACHE_NAME = "quiz-cache-1793825543";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
@@ -171,14 +176,6 @@ self.addEventListener("fetch", (event) => {
     return;
   }
   if (url.origin !== self.location.origin) return;
-
-  // Multijoueur : network-only, jamais mis en cache (hors precache offline).
-  if (url.pathname.includes("/multiplayer/")) {
-    event.respondWith(
-      fetch(request).catch(() => caches.match("./offline.html"))
-    );
-    return;
-  }
 
   // Strategie "network-first" : toujours la derniere version en ligne,
   // et repli sur le cache si l'on est hors-ligne.

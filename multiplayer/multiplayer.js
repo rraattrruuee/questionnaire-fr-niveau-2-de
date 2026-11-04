@@ -25,10 +25,12 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var PEER_SOURCES = [
+    "./vendor/peerjs.min.js",
     "https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js",
     "https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"
   ];
   var QR_SOURCES = [
+    "./vendor/qrcode.min.js",
     "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js",
     "https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"
   ];
@@ -815,12 +817,27 @@
   function createPeerWithCode(attempt) {
     return new Promise(function (resolve, reject) {
       var code = makeCode();
-      var peer = new Peer(ROOM_PREFIX + code);
+      var peer = new Peer(ROOM_PREFIX + code, {
+        debug: 1,
+        config: {
+          iceServers: [
+            { urls: "stun:stun.l.google.com:19302" },
+            { urls: "stun:global.stun.twilio.com:3478" }
+          ]
+        }
+      });
       var opened = false;
+      var timer = setTimeout(function () {
+        if (!opened) {
+          try { peer.destroy(); } catch (e) {}
+          reject(new Error("Délai d'attente dépassé (vérifiez votre connexion au service PeerJS)."));
+        }
+      }, 12000);
 
       function fail(err) {
+        clearTimeout(timer);
         if (opened) return; // erreurs post-ouverture gérées ailleurs
-        peer.destroy();
+        try { peer.destroy(); } catch (e) {}
         if (err && err.type === "unavailable-id" && attempt < 4) {
           createPeerWithCode(attempt + 1).then(resolve, reject);
         } else {
@@ -831,6 +848,7 @@
       }
 
       peer.on("open", function () {
+        clearTimeout(timer);
         opened = true;
         S.peer = peer;
         S.code = code;
@@ -850,6 +868,7 @@
 
   function joinUrlFor(code) {
     var base = location.href.split("?")[0].split("#")[0].replace(/index\.html$/, "");
+    if (!base.endsWith("/")) base += "/";
     return base + "?room=" + code;
   }
 
@@ -1468,7 +1487,15 @@
 
     ensurePeer()
       .then(function () {
-        var peer = new Peer();
+        var peer = new Peer({
+          debug: 1,
+          config: {
+            iceServers: [
+              { urls: "stun:stun.l.google.com:19302" },
+              { urls: "stun:global.stun.twilio.com:3478" }
+            ]
+          }
+        });
         S.peer = peer;
         var settled = false;
         var timer = setTimeout(function () {

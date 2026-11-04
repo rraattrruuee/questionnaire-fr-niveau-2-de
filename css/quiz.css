@@ -183,6 +183,92 @@ body {
   margin: 0;
 }
 
+/* ---------- Transitions de Vues / Écrans (< 0.35s) ---------- */
+.view-enter {
+  animation: viewTransitionIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.view-exit {
+  animation: viewTransitionOut 0.14s cubic-bezier(0.4, 0, 0.2, 1) both;
+  pointer-events: none;
+}
+
+@keyframes viewTransitionIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes viewTransitionOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.96) translateY(-10px);
+  }
+}
+
+/* Stagger des categories au chargement du menu */
+.view-enter .selector-list .selector-item {
+  animation: categoryItemIn 0.30s cubic-bezier(0.34, 1.3, 0.64, 1) both;
+  animation-delay: calc(0.03s + var(--i, 0) * 0.04s);
+}
+
+@keyframes categoryItemIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Animation d'entree spectaculaire des resultats */
+#results.view-enter {
+  animation: resultsEntryScale 0.35s cubic-bezier(0.34, 1.35, 0.64, 1) both;
+}
+
+@keyframes resultsEntryScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(20px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Cascade des boutons d'actions aux resultats */
+#results.view-enter .results-actions button {
+  animation: resultBtnIn 0.28s cubic-bezier(0.34, 1.3, 0.64, 1) both;
+  animation-delay: calc(0.08s + var(--i, 0) * 0.045s);
+}
+
+@keyframes resultBtnIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 .question-card {
   min-height: 220px;
   padding: 1.5rem;

@@ -215,8 +215,7 @@ body {
   text-decoration: none;
   color: var(--primary);
   border: 2px solid var(--primary);
-  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-  border-right: none;
+  border-radius: var(--radius-sm);
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -227,6 +226,11 @@ body {
   justify-content: center;
   word-break: break-word;
   transition: all 0.25s ease-in-out;
+}
+
+.quiz-wrapper .bouton-lien:not(:last-child) {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  border-right: none;
 }
 
 .bouton-lien:hover {

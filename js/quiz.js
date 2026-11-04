@@ -332,12 +332,62 @@
     return parts.join(" > ");
   }
 
-  function showOnly(id) {
+  function showOnly(id, onShown) {
     if (id !== "quiz-area") cancelPendingAdvance();
-    ["category-area", "quiz-area", "results", "resume-area", "offline-error-area"].forEach(function (x) {
-      var el = $(x);
-      if (el) el.classList.toggle("hidden", x !== id);
+
+    var views = ["category-area", "quiz-area", "results", "resume-area", "offline-error-area"];
+    var nextView = $(id);
+
+    // Identifier la vue actuellement active
+    var currentView = null;
+    views.forEach(function (vId) {
+      var el = $(vId);
+      if (el && !el.classList.contains("hidden")) {
+        currentView = el;
+      }
     });
+
+    if (currentView && currentView.id === id) {
+      if (typeof onShown === "function") onShown();
+      return;
+    }
+
+    if (currentView) {
+      currentView.classList.remove("view-enter");
+      currentView.classList.add("view-exit");
+
+      setTimeout(function () {
+        views.forEach(function (x) {
+          var el = $(x);
+          if (el) {
+            el.classList.remove("view-exit", "view-enter");
+            el.classList.toggle("hidden", x !== id);
+          }
+        });
+
+        if (nextView) {
+          nextView.classList.remove("hidden");
+          void nextView.offsetWidth;
+          nextView.classList.add("view-enter");
+        }
+        if (typeof onShown === "function") onShown();
+      }, 140);
+    } else {
+      views.forEach(function (x) {
+        var el = $(x);
+        if (el) {
+          el.classList.remove("view-exit", "view-enter");
+          el.classList.toggle("hidden", x !== id);
+        }
+      });
+
+      if (nextView) {
+        nextView.classList.remove("hidden");
+        void nextView.offsetWidth;
+        nextView.classList.add("view-enter");
+      }
+      if (typeof onShown === "function") onShown();
+    }
   }
 
   function goToPortal() {
@@ -373,6 +423,7 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "selector-item category-item";
+      btn.style.setProperty("--i", idx);
 
       var prog = quizProgress[idx];
       var progHtml = "";
@@ -1071,6 +1122,11 @@
 
     // Detail des questions effectuees issu de sessionStorage
     renderPerformedQuestionsSummary();
+
+    var actionBtns = resultsDiv.querySelectorAll(".results-actions button:not(.hidden)");
+    actionBtns.forEach(function (btn, i) {
+      btn.style.setProperty("--i", i);
+    });
 
     resultsDiv.classList.remove("entering");
     void resultsDiv.offsetWidth;

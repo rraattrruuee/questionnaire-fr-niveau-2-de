@@ -10,6 +10,10 @@
         <title>Multijoueur — Questionnaires 2nde</title>
         <script>
             (function () {
+                if (!location.pathname.endsWith("/") && !location.pathname.endsWith(".html")) {
+                    location.replace(location.pathname + "/" + location.search + location.hash);
+                    return;
+                }
                 try {
                     var t = localStorage.getItem("theme-preference");
                     if (t !== "light" && t !== "dark") {

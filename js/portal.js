@@ -140,8 +140,6 @@
 
     const link = document.createElement("a");
     link.href = "quiz.html?id=" + encodeURIComponent(quiz.id);
-    link.target = "_blank";
-    link.rel = "noopener";
     link.className = "bouton-lien";
 
     link.addEventListener("click", function () {
