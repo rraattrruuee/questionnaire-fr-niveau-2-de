@@ -25,12 +25,12 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var PEER_SOURCES = [
-    "./vendor/peerjs.min.js?v=20261104-ice3",
+    "./vendor/peerjs.min.js?v=20261104-ice4",
     "https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js",
     "https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"
   ];
   var QR_SOURCES = [
-    "./vendor/qrcode.min.js?v=20261104-ice3",
+    "./vendor/qrcode.min.js?v=20261104-ice4",
     "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js",
     "https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"
   ];
@@ -73,6 +73,24 @@
     el.textContent = msg || "";
     el.classList.remove("is-error", "is-ok");
     if (cls) el.classList.add(cls);
+  }
+
+  function updateNetStatus(state) {
+    var el = $("net-status");
+    if (!el) return;
+    if (!navigator.onLine) {
+      el.textContent = "📴 Hors ligne";
+      el.classList.add("is-off");
+      return;
+    }
+    if (state === "reconnecting" || (S.peer && S.peer.disconnected)) {
+      el.textContent = "🔄 Reconnexion serveur…";
+      el.classList.remove("is-off");
+    } else {
+      el.textContent = "🌐 En ligne";
+      el.classList.remove("is-off");
+    }
+    bumpClass(el);
   }
 
   function loadScript(src) {
@@ -828,22 +846,45 @@
       var code = makeCode();
       var peer = new Peer(ROOM_PREFIX + code, {
         debug: 1,
+        pingInterval: 3000,
         config: {
           iceServers: ICE_SERVERS,
           sdpSemantics: "unified-plan"
         }
       });
       var opened = false;
+      var reconnecting = false;
       var timer = setTimeout(function () {
         if (!opened) {
           try { peer.destroy(); } catch (e) {}
           reject(new Error("Délai d'attente dépassé (vérifiez votre connexion au service PeerJS)."));
         }
-      }, 12000);
+      }, 15000);
+
+      function tryReconnect(reason) {
+        if (!S.peer || S.peer.destroyed || reconnecting) return;
+        if (!S.peer.disconnected) return;
+        reconnecting = true;
+        console.warn("[Host] Signalement PeerJS déconnecté (" + reason + "), reconnexion automatique...");
+        updateNetStatus("reconnecting");
+        if (S.role === "host" && !S.started) {
+          setStatus($("lobby-status"), "Reconnexion au serveur de signalement…", "is-warning");
+        }
+        setTimeout(function () {
+          if (S.peer && !S.peer.destroyed && S.peer.disconnected) {
+            try {
+              S.peer.reconnect();
+            } catch (err) {
+              console.warn("[Host] Erreur reconnect:", err);
+            }
+          }
+          reconnecting = false;
+        }, 1000);
+      }
 
       function fail(err) {
         clearTimeout(timer);
-        if (opened) return; // erreurs post-ouverture gérées ailleurs
+        if (opened) return; // erreurs post-ouverture gérées par tryReconnect
         try { peer.destroy(); } catch (e) {}
         if (err && err.type === "unavailable-id" && attempt < 4) {
           createPeerWithCode(attempt + 1).then(resolve, reject);
@@ -856,18 +897,35 @@
 
       peer.on("open", function () {
         clearTimeout(timer);
-        opened = true;
-        S.peer = peer;
-        S.code = code;
-        S.joinUrl = joinUrlFor(code);
-        peer.on("connection", hostOnConnection);
-        peer.on("error", function (e) {
-          if (e && e.type === "unavailable-id" && !S.started) return; // géré à la création
-          if (S.role === "host") {
-            setStatus($("lobby-status"), "Erreur réseau : " + ((e && e.type) || "inconnue"), "is-error");
+        reconnecting = false;
+        updateNetStatus("online");
+        if (!opened) {
+          opened = true;
+          S.peer = peer;
+          S.code = code;
+          S.joinUrl = joinUrlFor(code);
+          peer.on("connection", hostOnConnection);
+          peer.on("disconnected", function () {
+            tryReconnect("event:disconnected");
+          });
+          peer.on("error", function (e) {
+            var msg = (e && (e.message || e.type)) || "";
+            if (msg.includes("Lost connection") || (e && (e.type === "network" || e.type === "server-error"))) {
+              tryReconnect("error:" + msg);
+              return;
+            }
+            if (e && e.type === "unavailable-id" && !S.started) return; // géré à la création
+            if (S.role === "host") {
+              setStatus($("lobby-status"), "Erreur réseau : " + ((e && e.type) || "inconnue"), "is-error");
+            }
+          });
+          resolve();
+        } else {
+          console.log("[Host] Reconnexion au serveur de signalement réussie pour la salle", code);
+          if (S.role === "host" && !S.started) {
+            setStatus($("lobby-status"), "Signal rétabli — en attente de joueurs", "is-ok");
           }
-        });
-        resolve();
+        }
       });
       peer.on("error", fail);
     });
@@ -1496,6 +1554,7 @@
       .then(function () {
         var peer = new Peer({
           debug: 1,
+          pingInterval: 3000,
           config: {
             iceServers: ICE_SERVERS,
             sdpSemantics: "unified-plan"
@@ -1503,81 +1562,109 @@
         });
         S.peer = peer;
         var settled = false;
+        var attempts = 0;
+        var maxAttempts = 4;
         var timer = setTimeout(function () {
           if (!settled) {
             settled = true;
             try { peer.destroy(); } catch (e) {}
             S.peer = null;
             $("btn-join").disabled = false;
-            setStatus($("home-status"), "Timeout : la partie est peut-être fermée.", "is-error");
+            setStatus($("home-status"), "Délai dépassé : l'hôte est peut-être inaccessible ou la partie fermée.", "is-error");
           }
-        }, 12000);
+        }, 22000);
 
-        peer.on("open", function () {
-          var attempts = 0;
-          function connectToHost() {
+        function connectToHost() {
+          if (settled) return;
+          attempts++;
+          if (peer.disconnected && !peer.destroyed) {
+            console.log("[Client] Reconnexion au signalement avant tentative " + attempts);
+            try { peer.reconnect(); } catch (e) {}
+          }
+          if (attempts > 1) {
+            setStatus($("home-status"), "Tentative de liaison avec l'hôte (" + attempts + "/" + maxAttempts + ")…");
+          }
+          var conn = peer.connect(ROOM_PREFIX + code, { reliable: true, serialization: "json" });
+          S.conn = conn;
+
+          conn.on("open", function () {
             if (settled) return;
-            attempts++;
-            var conn = peer.connect(ROOM_PREFIX + code, { reliable: true, serialization: "json" });
-            S.conn = conn;
+            settled = true;
+            clearTimeout(timer);
+            S.role = "client";
+            S.myName = name;
+            conn.send({ t: "j", n: name });
+            $("btn-join").disabled = false;
+            setStatus($("home-status"), "");
+            showScreen("screen-lobby");
+            $("host-setup").classList.add("hidden");
+            $("client-wait").classList.remove("hidden");
+            $("qr-holder").classList.add("hidden");
+            $("btn-copy").classList.add("hidden");
+            $("lobby-title").textContent = "Connecté à la partie !";
+            $("room-code").textContent = code;
+            $("player-list").innerHTML = '<span class="mp-player-chip is-host">🎛️ Hôte</span>';
+            $("player-count").textContent = "…";
+            setStatus($("lobby-status"), "En attente de l'hôte pour le début de la partie…");
+            track("multiplayer_join_ok");
+          });
 
-            conn.on("open", function () {
-              if (settled) return;
+          conn.on("data", onServerMsg);
+
+          conn.on("close", function () {
+            if (S.role === "client") {
+              resetToHome("L'hôte a quitté la partie.");
+            }
+          });
+
+          conn.on("error", function (err) {
+            if (!settled) {
+              if (attempts < maxAttempts) {
+                console.warn("[Client] Négociation avec l'hôte non finalisée, tentative " + (attempts + 1) + "...", err);
+                var delay = Math.min(1000 + attempts * 500, 2500);
+                setTimeout(connectToHost, delay);
+                return;
+              }
               settled = true;
               clearTimeout(timer);
-              S.role = "client";
-              S.myName = name;
-              conn.send({ t: "j", n: name });
+              try { peer.destroy(); } catch (e) {}
+              S.peer = null;
               $("btn-join").disabled = false;
-              setStatus($("home-status"), "");
-              showScreen("screen-lobby");
-              $("host-setup").classList.add("hidden");
-              $("client-wait").classList.remove("hidden");
-              $("qr-holder").classList.add("hidden");
-              $("btn-copy").classList.add("hidden");
-              $("lobby-title").textContent = "Connecté à la partie !";
-              $("room-code").textContent = code;
-              $("player-list").innerHTML = '<span class="mp-player-chip is-host">🎛️ Hôte</span>';
-              $("player-count").textContent = "…";
-              setStatus($("lobby-status"), "En attente de l'hôte pour le début de la partie…");
-              track("multiplayer_join_ok");
-            });
+              setStatus(
+                $("home-status"),
+                "Impossible de joindre l'hôte (négociation WebRTC échouée). L'hôte a peut-être changé d'onglet ou la salle n'existe plus. Réessayez.",
+                "is-error"
+              );
+            } else {
+              resetToHome("Connexion perdue.");
+            }
+          });
+        }
 
-            conn.on("data", onServerMsg);
-
-            conn.on("close", function () {
-              if (S.role === "client") {
-                resetToHome("L'hôte a quitté la partie.");
-              }
-            });
-
-            conn.on("error", function (err) {
-              if (!settled) {
-                if (attempts < 2) {
-                  console.warn("Connexion WebRTC échouée, nouvelle tentative...", err);
-                  setTimeout(connectToHost, 800);
-                  return;
-                }
-                settled = true;
-                clearTimeout(timer);
-                try { peer.destroy(); } catch (e) {}
-                S.peer = null;
-                $("btn-join").disabled = false;
-                setStatus(
-                  $("home-status"),
-                  "Impossible de joindre l'hôte (négociation WebRTC échouée). Vérifiez le code ou réessayez.",
-                  "is-error"
-                );
-              } else {
-                resetToHome("Connexion perdue.");
-              }
-            });
+        peer.on("open", function () {
+          updateNetStatus("online");
+          if (attempts === 0) {
+            connectToHost();
           }
+        });
 
-          connectToHost();
+        peer.on("disconnected", function () {
+          console.warn("[Client] Signalement PeerJS déconnecté");
+          updateNetStatus("reconnecting");
+          if (!settled && !peer.destroyed) {
+            try { peer.reconnect(); } catch (e) {}
+          }
         });
 
         peer.on("error", function (e) {
+          var msg = (e && (e.message || e.type)) || "";
+          if (msg.includes("Lost connection") || (e && (e.type === "network" || e.type === "server-error"))) {
+            console.warn("[Client] Déconnexion serveur de signalement, tentative de reconnexion...", e);
+            if (!settled && !peer.destroyed) {
+              try { peer.reconnect(); } catch (err) {}
+            }
+            return;
+          }
           if (settled) {
             if (S.role === "client") resetToHome("Connexion perdue (" + ((e && e.type) || "erreur réseau") + ").");
             return;
@@ -1587,15 +1674,15 @@
           try { peer.destroy(); } catch (err) {}
           S.peer = null;
           $("btn-join").disabled = false;
-          var msg = "Connexion impossible.";
+          var errorMsg = "Connexion impossible.";
           if (e && e.type === "peer-unavailable") {
-            msg = "Partie introuvable : vérifie le code.";
+            errorMsg = "Partie introuvable : vérifie le code de la salle.";
           } else if (e && (e.type === "webrtc" || e.type === "network")) {
-            msg = "Échec de négociation WebRTC : impossible de relier les deux appareils.";
+            errorMsg = "Échec de négociation WebRTC : impossible de relier les deux appareils.";
           } else if (e && e.type) {
-            msg = "Connexion impossible (" + e.type + ").";
+            errorMsg = "Connexion impossible (" + e.type + ").";
           }
-          setStatus($("home-status"), msg, "is-error");
+          setStatus($("home-status"), errorMsg, "is-error");
         });
       })
       .catch(function (err) {
@@ -2138,23 +2225,28 @@
       else backToLobbyWait();
     };
 
-    // Réseau
+    // Réseau & Reconnexion
     function syncNet() {
-      var el = $("net-status");
-      if (!el) return;
-      if (navigator.onLine) {
-        el.textContent = "🌐 En ligne";
-        el.classList.remove("is-off");
-      } else {
-        el.textContent = "📴 Hors ligne";
-        el.classList.add("is-off");
+      updateNetStatus();
+      if (!navigator.onLine) {
         setStatus($("home-status"), "Hors ligne : le multijoueur nécessite Internet.", "is-error");
       }
-      bumpClass(el);
     }
     window.addEventListener("online", syncNet);
     window.addEventListener("offline", syncNet);
     syncNet();
+
+    function handleWake() {
+      if (S.peer && !S.peer.destroyed && S.peer.disconnected) {
+        console.log("[Peer] Réveil de l'onglet/fenêtre détecté, reconnexion au serveur de signalement...");
+        updateNetStatus("reconnecting");
+        try { S.peer.reconnect(); } catch (e) {}
+      }
+    }
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") handleWake();
+    });
+    window.addEventListener("focus", handleWake);
 
     // Lien de rejoignage direct ?room=CODE (depuis le QR code)
     var room = new URLSearchParams(window.location.search).get("room");
