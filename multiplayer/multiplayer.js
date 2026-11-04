@@ -830,10 +830,22 @@
       });
   }
 
+  // Configuration ICE propre : uniquement des STUN publics ultra-fiables (Google, Cloudflare).
+  // Cela empêche PeerJS d'injecter par défaut "turn.peerjs.com" qui a été définitivement fermé par le projet PeerJS.
+  var PEER_ICE_CONFIG = {
+    config: {
+      iceServers: [
+        { urls: "stun:stun.l.google.com:19302" },
+        { urls: "stun:stun1.l.google.com:19302" },
+        { urls: "stun:stun.cloudflare.com:3478" }
+      ]
+    }
+  };
+
   function createPeerWithCode(attempt) {
     return new Promise(function (resolve, reject) {
       var code = makeCode();
-      var peer = new Peer(ROOM_PREFIX + code);
+      var peer = new Peer(ROOM_PREFIX + code, PEER_ICE_CONFIG);
       var opened = false;
       var timer = setTimeout(function () {
         if (!opened) {
@@ -1501,7 +1513,7 @@
 
     ensurePeer()
       .then(function () {
-        var peer = new Peer();
+        var peer = new Peer(PEER_ICE_CONFIG);
         S.peer = peer;
         var settled = false;
         var timer = setTimeout(function () {
