@@ -25,6 +25,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  deployments: write
 
 concurrency:
   group: "pages"
@@ -67,6 +68,18 @@ jobs:
             git commit -m "chore: update service-worker.js assets and cache version [skip ci]"
             git push
           fi
+
+      - name: Clear stale Pages deployments
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Checking for stale deployments..."
+          DEPLOY_IDS=$(gh api repos/${{ github.repository }}/deployments -q '.[] | select(.environment=="github-pages") | .id' 2>/dev/null || true)
+          for did in $DEPLOY_IDS; do
+            echo "Inactivating and deleting deployment $did"
+            gh api --method POST repos/${{ github.repository }}/deployments/$did/statuses -f state=inactive 2>/dev/null || true
+            gh api --method DELETE repos/${{ github.repository }}/deployments/$did 2>/dev/null || true
+          done
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
