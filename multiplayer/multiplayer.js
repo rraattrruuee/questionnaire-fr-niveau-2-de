@@ -25,12 +25,12 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var PEER_SOURCES = [
-    "./vendor/peerjs.min.js?v=20261104-ice",
+    "./vendor/peerjs.min.js?v=20261104-ice2",
     "https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js",
     "https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"
   ];
   var QR_SOURCES = [
-    "./vendor/qrcode.min.js?v=20261104-ice",
+    "./vendor/qrcode.min.js?v=20261104-ice2",
     "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js",
     "https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"
   ];
