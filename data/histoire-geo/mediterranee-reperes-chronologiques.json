@@ -1,0 +1,837 @@
+{
+  "subject": "histoire-geo",
+  "title": "Méditerranée médiévale — repères chronologiques et dates clés",
+  "description": "Entraînement 100% orienté dates et repères chronologiques : naissances d'empires, schisme de 1054, croisades, chutes de Jérusalem et Byzance, transferts culturels.",
+  "notepad": false,
+  "categories": [
+    {
+      "category": "1. Naissance et évolution des civilisations (476 - Xe siècle)",
+      "questions": [
+        {
+          "text": "En quelle année se produit la chute de l'Empire romain d'Occident, marquant traditionnellement le début du Moyen Âge ?",
+          "type": "mcq",
+          "options": [
+            "476",
+            "632",
+            "1054",
+            "1453"
+          ],
+          "correct": 0,
+          "solution": "En 476, le dernier empereur romain d'Occident (Romulus Augustule) est déposé. L'Empire romain subsiste en Orient (Empire byzantin), tandis que des royaumes germaniques se partagent l'Occident."
+        },
+        {
+          "text": "Quel événement fondateur a lieu en Méditerranée en l'an 476 ?",
+          "type": "mcq",
+          "options": [
+            "La chute de l'Empire romain d'Occident et la pérennité de l'Empire byzantin",
+            "La mort du prophète Mahomet et le début des califats",
+            "La prise de Constantinople par les Turcs ottomans",
+            "L'appel du pape Urbain II à la première croisade"
+          ],
+          "correct": 0,
+          "solution": "En 476, la chute de Rome marque la division de l'ancien espace romain : royaumes germaniques à l'ouest, Empire byzantin à l'est."
+        },
+        {
+          "text": "Sous le règne de quel empereur et à quel siècle l'Empire byzantin connaît-il sa plus grande expansion territoriale ?",
+          "type": "mcq",
+          "options": [
+            "Justinien au VIᵉ siècle",
+            "Charlemagne au début du IXᵉ siècle",
+            "Roger II au XIIᵉ siècle",
+            "Constantin XI au XVᵉ siècle"
+          ],
+          "correct": 0,
+          "solution": "Au VIᵉ siècle, l'empereur Justinien (527-565) reconquiert une partie de l'Italie, de l'Afrique du Nord et du sud de l'Espagne pour tenter de reconstituer l'Empire romain."
+        },
+        {
+          "text": "À quel siècle correspond le règne de l'empereur byzantin Justinien et l'agrandissement de son empire ?",
+          "type": "mcq",
+          "options": [
+            "VIᵉ siècle",
+            "IVᵉ siècle",
+            "VIIIᵉ siècle",
+            "XIᵉ siècle"
+          ],
+          "correct": 0,
+          "solution": "L'empereur Justinien règne au VIᵉ siècle (527 à 565), période de prospérité et d'expansion territoriale pour l'Empire byzantin."
+        },
+        {
+          "text": "En quelle année meurt le prophète Mahomet, ouvrant la période des conquêtes des premiers califes ?",
+          "type": "mcq",
+          "options": [
+            "632",
+            "476",
+            "732",
+            "1054"
+          ],
+          "correct": 0,
+          "solution": "La mort de Mahomet en 632 marque le début de la diffusion fulgurante de l'Islam et des conquêtes territoriales menées par les premiers califes."
+        },
+        {
+          "text": "Quel événement majeur marque l'année 632 dans le monde méditerranéen ?",
+          "type": "mcq",
+          "options": [
+            "La mort de Mahomet et le début de l'expansion de l'Islam",
+            "La fin de l'Empire romain d'Occident",
+            "Le Grand Schisme d'Orient",
+            "Le couronnement de Charlemagne à Rome"
+          ],
+          "correct": 0,
+          "solution": "En 632, à la mort de Mahomet à Médine, la communauté musulmane s'organise sous la direction des califes et commence une rapide expansion."
+        },
+        {
+          "text": "Durant quels siècles se déroule la première grande vague de conquêtes arabo-musulmanes (du Proche-Orient à l'Espagne) ?",
+          "type": "mcq",
+          "options": [
+            "VIIᵉ – VIIIᵉ siècles",
+            "Vᵉ – VIᵉ siècles",
+            "IXᵉ – Xᵉ siècles",
+            "XIIᵉ – XIIIᵉ siècles"
+          ],
+          "correct": 0,
+          "solution": "Aux VIIᵉ et VIIIᵉ siècles, les armées musulmanes conquièrent le Proche-Orient, l'Afrique du Nord et la péninsule Ibérique (débarquement en 711)."
+        },
+        {
+          "text": "À quelle période les royaumes germaniques sont-ils unifiés au sein de l'Empire carolingien, avant son éclatement ?",
+          "type": "mcq",
+          "options": [
+            "Au début du IXᵉ siècle (couronnement de Charlemagne en 800)",
+            "À la fin du VIᵉ siècle",
+            "Au milieu du XIᵉ siècle",
+            "Au début du XIIIᵉ siècle"
+          ],
+          "correct": 0,
+          "solution": "Au début du IXᵉ siècle (couronnement impérial en 800), Charlemagne unifie une grande partie de l'Occident chrétien sous l'Empire carolingien."
+        },
+        {
+          "text": "À quels siècles l'Occident subit-il des invasions (Normands, Musulmans) affaiblissant l'autorité royale et hâtant la féodalité ?",
+          "type": "mcq",
+          "options": [
+            "IXᵉ – Xᵉ siècles",
+            "VIᵉ – VIIᵉ siècles",
+            "XIIᵉ – XIIIᵉ siècles",
+            "XIVᵉ – XVᵉ siècles"
+          ],
+          "correct": 0,
+          "solution": "Aux IXᵉ et Xᵉ siècles, les raids vikings (Normands), hongrois et sarrasins obligent les populations à chercher la protection des seigneurs locaux, consolidant la féodalité."
+        },
+        {
+          "text": "Au Xᵉ siècle, le monde musulman perd son unité politique et se fragmente en combien de califats rivaux principaux ?",
+          "type": "mcq",
+          "options": [
+            "3 califats rivaux (Bagdad, Cordoue, Le Caire)",
+            "2 califats rivaux (Damas et Médine)",
+            "5 califats indépendants",
+            "Il reste strictement unifié sous un seul calife"
+          ],
+          "correct": 0,
+          "solution": "Au Xᵉ siècle, trois califats rivaux coexistent : les Abbassides à Bagdad, les Omeyyades à Cordoue (929) et les Fatimides au Caire (969)."
+        },
+        {
+          "text": "En quelle année l'Empire byzantin disparaît-il définitivement suite à la prise de Constantinople par les Turcs ottomans ?",
+          "type": "mcq",
+          "options": [
+            "1453",
+            "1054",
+            "1204",
+            "1492"
+          ],
+          "correct": 0,
+          "solution": "Le 29 mai 1453, les troupes ottomanes du sultan Mehmed II prennent Constantinople. Cette chute met un terme définitif à plus d'un millénaire d'Empire byzantin."
+        },
+        {
+          "text": "Quel événement de 1453 marque la fin définitive de l'Empire byzantin ?",
+          "type": "mcq",
+          "options": [
+            "La prise de Constantinople par les Turcs ottomans",
+            "Le sac de Constantinople par les croisés vénitiens",
+            "La signature de l'accord commercial avec Venise",
+            "La défaite de Manzikert contre les Seldjoukides"
+          ],
+          "correct": 0,
+          "solution": "En 1453, Constantinople est conquise par le sultan Mehmed II, transformant Sainte-Sophie en mosquée et achevant l'Empire byzantin."
+        },
+        {
+          "text": "L'Empire byzantin s'étend historiquement de 476 (partition de l'Empire romain) à 1453 (prise de Constantinople).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : Byzance est l'héritière directe de l'Empire romain d'Orient, qui a survécu près de 1 000 ans après la chute de Rome en 476, jusqu'en 1453."
+        },
+        {
+          "text": "La mort du prophète Mahomet s'est produite en l'an 476.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : 476 est la date de la chute de l'Empire romain d'Occident. Mahomet est mort en 632."
+        },
+        {
+          "text": "En quelle année a eu lieu la chute de l'Empire romain d'Occident ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "476",
+            "en 476"
+          ],
+          "solution": "476 est la date de la chute de Rome et du début de l'éclatement politique en royaumes germaniques."
+        },
+        {
+          "text": "En quelle année est mort le prophète Mahomet ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "632",
+            "en 632"
+          ],
+          "solution": "Mahomet est mort en 632 à Médine."
+        },
+        {
+          "text": "En quelle année Constantinople est-elle tombée aux mains des Turcs ottomans ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1453",
+            "en 1453"
+          ],
+          "solution": "1453 marque la prise de Constantinople par Mehmed II et la fin de l'Empire byzantin."
+        }
+      ]
+    },
+    {
+      "category": "2. Ruptures religieuses, croisades et affrontements (1054 - 1453)",
+      "questions": [
+        {
+          "text": "En quelle année a lieu le Grand Schisme d'Orient séparant les chrétiens catholiques (Rome) des chrétiens orthodoxes (Constantinople) ?",
+          "type": "mcq",
+          "options": [
+            "1054",
+            "1071",
+            "1095",
+            "1204"
+          ],
+          "correct": 0,
+          "solution": "En 1054, les excommunications mutuelles entre le pape de Rome et le patriarche de Constantinople officialisent la séparation entre catholiques et orthodoxes."
+        },
+        {
+          "text": "Que s'est-il passé en l'an 1054 entre Rome et Constantinople ?",
+          "type": "mcq",
+          "options": [
+            "Le Grand Schisme d'Orient séparant catholiques et orthodoxes",
+            "La première croisade menée par les chevaliers francs",
+            "Le massacre des marchands italiens",
+            "La bataille de Manzikert"
+          ],
+          "correct": 0,
+          "solution": "Le schisme de 1054 consacre la rupture religieuse, théologique et liturgique entre l'Occident latin (fidèle au pape) et l'Orient byzantin (orthodoxe)."
+        },
+        {
+          "text": "En quelle année l'Empire byzantin subit-il une défaite majeure face aux Turcs Seldjoukides à la bataille de Manzikert ?",
+          "type": "mcq",
+          "options": [
+            "1071",
+            "1054",
+            "1099",
+            "1187"
+          ],
+          "correct": 0,
+          "solution": "En 1071, à Manzikert, l'empereur byzantin Romain IV Diogène est vaincu et capturé par les Turcs Seldjoukides, ouvrant l'Anatolie à l'avancée turque."
+        },
+        {
+          "text": "Quelle défaite militaire byzantine survenue en 1071 face aux Turcs a incité Byzance à demander l'aide de l'Occident ?",
+          "type": "mcq",
+          "options": [
+            "La bataille de Manzikert",
+            "La bataille de Hattin",
+            "La bataille de Roncevaux",
+            "La bataille de Poitiers"
+          ],
+          "correct": 0,
+          "solution": "La défaite de Manzikert en 1071 affaiblit gravement Byzance et constitue l'un des déclencheurs des appels à l'aide chrétienne qui mèneront aux croisades."
+        },
+        {
+          "text": "En quelle année le pape Urbain II lance-t-il l'appel de Clermont incitant les chrétiens à partir en croisade ?",
+          "type": "mcq",
+          "options": [
+            "1095",
+            "1054",
+            "1099",
+            "1147"
+          ],
+          "correct": 0,
+          "solution": "En novembre 1095, lors du concile de Clermont, Urbain II appelle les chevaliers chrétiens à secourir les chrétiens d'Orient et à délivrer le tombeau du Christ."
+        },
+        {
+          "text": "Quel événement capital a lieu en 1095 sous l'impulsion du pape Urbain II ?",
+          "type": "mcq",
+          "options": [
+            "L'appel de Clermont lançant la première croisade",
+            "La prise de Jérusalem par les croisés",
+            "La reprise de Jérusalem par Saladin",
+            "Le schisme entre Rome et Byzance"
+          ],
+          "correct": 0,
+          "solution": "L'appel d'Urbain II en 1095 donne naissance au mouvement des croisades en direction de la Terre sainte."
+        },
+        {
+          "text": "Quelles sont les dates de déroulement de la Première croisade ?",
+          "type": "mcq",
+          "options": [
+            "1095 – 1099",
+            "1054 – 1071",
+            "1147 – 1149",
+            "1189 – 1192"
+          ],
+          "correct": 0,
+          "solution": "La Première croisade débute après l'appel de 1095 et s'achève par la prise de Jérusalem en juillet 1099."
+        },
+        {
+          "text": "En quelle année les croisés prennent-ils Jérusalem et fondent-ils les États latins d'Orient ?",
+          "type": "mcq",
+          "options": [
+            "1099",
+            "1095",
+            "1147",
+            "1187"
+          ],
+          "correct": 0,
+          "solution": "Le 15 juillet 1099, Jérusalem est prise d'assaut par les croisés au terme d'un siège meurtrier, fondant le royaume de Jérusalem."
+        },
+        {
+          "text": "Quel événement militaire majeur se déroule en Terre sainte en 1099 ?",
+          "type": "mcq",
+          "options": [
+            "La prise de Jérusalem par les croisés et la création des États latins",
+            "La reprise de la ville par Saladin",
+            "Le débarquement de la troisième croisade",
+            "La défaite de Manzikert"
+          ],
+          "correct": 0,
+          "solution": "En 1099, la prise de Jérusalem conclut la première croisade et implante quatre États latins d'Orient."
+        },
+        {
+          "text": "Entre quelles années s'est déroulée la Deuxième croisade, prêchée par Bernard de Clairvaux ?",
+          "type": "mcq",
+          "options": [
+            "1147 – 1149",
+            "1095 – 1099",
+            "1189 – 1192",
+            "1202 – 1204"
+          ],
+          "correct": 0,
+          "solution": "La Deuxième croisade (1147-1149), menée par Louis VII de France et l'empereur Conrad III, échoue notamment devant Damas."
+        },
+        {
+          "text": "En quelle année la population byzantine de Constantinople massacre-t-elle les marchands italiens (notamment vénitiens et génois) ?",
+          "type": "mcq",
+          "options": [
+            "1182",
+            "1082",
+            "1187",
+            "1204"
+          ],
+          "correct": 0,
+          "solution": "En 1182, une violente émeute anti-latine éclate à Constantinople : des milliers de marchands italiens sont massacrés ou expulsés."
+        },
+        {
+          "text": "Quel drame marque les relations entre Byzantins et Occidentaux à Constantinople en l'an 1182 ?",
+          "type": "mcq",
+          "options": [
+            "Le massacre des marchands italiens par la population locale",
+            "Le pillage de Sainte-Sophie par les Vénitiens",
+            "L'expulsion des musulmans de la ville",
+            "Le couronnement d'un empereur latin"
+          ],
+          "correct": 0,
+          "solution": "En 1182, le massacre des marchands italiens attise la haine et le ressentiment des cités italiennes envers Byzance."
+        },
+        {
+          "text": "En quelle année le sultan Saladin reprend-il la ville de Jérusalem aux chrétiens ?",
+          "type": "mcq",
+          "options": [
+            "1187",
+            "1099",
+            "1147",
+            "1204"
+          ],
+          "correct": 0,
+          "solution": "En octobre 1187, après avoir écrasé l'armée croisée à la bataille de Hattin en juillet, Saladin reprend Jérusalem aux chrétiens."
+        },
+        {
+          "text": "Quel événement historique majeur a lieu en 1187 en Terre sainte ?",
+          "type": "mcq",
+          "options": [
+            "La reprise de Jérusalem par Saladin",
+            "La fondation des États latins d'Orient",
+            "Le sac de Constantinople par les croisés",
+            "L'appel du pape Urbain II"
+          ],
+          "correct": 0,
+          "solution": "En 1187, Saladin reconquiert Jérusalem pour le monde musulman, ce qui provoque le départ de la troisième croisade."
+        },
+        {
+          "text": "Entre quelles années s'est déroulée la Troisième croisade, menée par Richard Cœur de Lion et Philippe Auguste ?",
+          "type": "mcq",
+          "options": [
+            "1189 – 1192",
+            "1095 – 1099",
+            "1147 – 1149",
+            "1202 – 1204"
+          ],
+          "correct": 0,
+          "solution": "La Troisième croisade (1189-1192) est lancée en réponse à la reprise de Jérusalem par Saladin en 1187."
+        },
+        {
+          "text": "En quelle année se produit le sac et le pillage de Constantinople par les chevaliers de la quatrième croisade ?",
+          "type": "mcq",
+          "options": [
+            "1204",
+            "1054",
+            "1182",
+            "1453"
+          ],
+          "correct": 0,
+          "solution": "En avril 1204, détournée par les Vénitiens, la quatrième croisade prend d'assaut et pille Constantinople, fondant un éphémère Empire latin de Constantinople."
+        },
+        {
+          "text": "Quel événement tragique de la quatrième croisade a lieu en 1204 ?",
+          "type": "mcq",
+          "options": [
+            "Le sac et pillage de Constantinople par les croisés occidentaux",
+            "La reconquête définitive de Byzance par les Ottomans",
+            "La prise de Jérusalem par les troupes de Saladin",
+            "La première signature du Schisme d'Orient"
+          ],
+          "correct": 0,
+          "solution": "En 1204, les croisés pillent la capitale byzantine chrétienne, consommant la fracture définitive entre chrétiens catholiques et orthodoxes."
+        },
+        {
+          "text": "Le Grand Schisme d'Orient entre chrétiens catholiques et orthodoxes date de 1054.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : 1054 marque la rupture officielle et durable entre l'Église de Rome et le patriarcat de Constantinople."
+        },
+        {
+          "text": "Saladin a conquis Jérusalem avant la Première croisade.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : La Première croisade prend Jérusalem en 1099 ; Saladin la reprend près d'un siècle plus tard, en 1187."
+        },
+        {
+          "text": "Le sac de Constantinople par les croisés lors de la quatrième croisade a eu lieu en 1204.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : En 1204, les croisés occidentaux ont assiégé et mis à sac la capitale byzantine."
+        },
+        {
+          "text": "En quelle année se produit le Grand Schisme d'Orient ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1054",
+            "en 1054"
+          ],
+          "solution": "1054 est l'année du Grand Schisme entre l'Église romaine et l'Église byzantine."
+        },
+        {
+          "text": "En quelle année Saladin reprend-il Jérusalem aux croisés ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1187",
+            "en 1187"
+          ],
+          "solution": "1187 est l'année de la reconquête de Jérusalem par Saladin."
+        },
+        {
+          "text": "En quelle année les croisés ont-ils mis à sac Constantinople lors de la quatrième croisade ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1204",
+            "en 1204"
+          ],
+          "solution": "1204 est l'année du pillage de Constantinople par les croisés."
+        }
+      ]
+    },
+    {
+      "category": "3. Échanges commerciaux, boussole et transferts de savoirs (1082 - XIIe s.)",
+      "questions": [
+        {
+          "text": "En quelle année l'empereur byzantin octroie-t-il d'immenses privilèges commerciaux aux marchands vénitiens (chrysobulle d'Alexis Ier Comnène) ?",
+          "type": "mcq",
+          "options": [
+            "1082",
+            "1054",
+            "1182",
+            "1204"
+          ],
+          "correct": 0,
+          "solution": "En 1082, le chrysobulle d'Alexis Ier accorde à Venise l'exemption de taxes douanières et un quartier à Constantinople en échange de son soutien naval."
+        },
+        {
+          "text": "Que concède l'Empire byzantin à la République de Venise en 1082 ?",
+          "type": "mcq",
+          "options": [
+            "Des privilèges commerciaux considérables (exemptions de taxes et comptoir)",
+            "Le contrôle territorial complet de la capitale",
+            "La conversion des Byzantins au culte latin",
+            "La cession de l'île de Sicile"
+          ],
+          "correct": 0,
+          "solution": "Le traité de 1082 fait de Venise la première puissance commerciale au sein même de l'Empire byzantin."
+        },
+        {
+          "text": "En quelle année Roger II est-il couronné roi de Sicile, érigeant un royaume carrefour des cultures chrétienne, musulmane et byzantine ?",
+          "type": "mcq",
+          "options": [
+            "1130",
+            "1082",
+            "1187",
+            "1204"
+          ],
+          "correct": 0,
+          "solution": "En 1130, le Normand Roger II est couronné à Palerme et crée un État modèle d'intégration où savants arabes, grecs et latins collaborent étroitement."
+        },
+        {
+          "text": "Quel souverain est couronné roi de Sicile en 1130, régnant sur un royaume multiculturel remarquable ?",
+          "type": "mcq",
+          "options": [
+            "Roger II",
+            "Justinien",
+            "Charlemagne",
+            "Saladin"
+          ],
+          "correct": 0,
+          "solution": "Roger II (couronné en 1130) emploie des fonctionnaires et savants musulmans (comme le géographe Al-Idrisi) et byzantins."
+        },
+        {
+          "text": "En quelle année a été achevée la première traduction du Coran en latin, réalisée dans la péninsule Ibérique pour l'abbé de Cluny Pierre le Vénérable ?",
+          "type": "mcq",
+          "options": [
+            "1142",
+            "1099",
+            "1190",
+            "1250"
+          ],
+          "correct": 0,
+          "solution": "En 1142 (achevée en 1143), sous la direction de Robert de Ketton pour Pierre le Vénérable, le Coran est traduit pour la première fois en latin (Lex Mahumet pseudoprophete)."
+        },
+        {
+          "text": "Quel texte majeur du monde musulman est traduit pour la toute première fois en latin en 1142 ?",
+          "type": "mcq",
+          "options": [
+            "Le Coran",
+            "Les Mille et Une Nuits",
+            "Le Canon de la médecine d'Avicenne",
+            "Les traités d'Averroès"
+          ],
+          "correct": 0,
+          "solution": "En 1142, Pierre le Vénérable commande la première traduction latine du Coran afin de mieux connaître et réfuter la théologie musulmane."
+        },
+        {
+          "text": "En quelle année trouve-t-on la première mention écrite de l'usage de la boussole magnétique en Méditerranée ?",
+          "type": "mcq",
+          "options": [
+            "1190",
+            "1082",
+            "1142",
+            "1250"
+          ],
+          "correct": 0,
+          "solution": "En 1190, l'érudit Guyot de Provins mentionne pour la première fois en Occident l'usage d'une aiguille aimantée (la boussole) pour guider les marins."
+        },
+        {
+          "text": "Quel instrument de navigation révolutionnaire d'origine chinoise est mentionné par écrit pour la première fois en Méditerranée en 1190 ?",
+          "type": "mcq",
+          "options": [
+            "La boussole",
+            "Le sextant moderne",
+            "Le gouvernail d'étambot",
+            "Le sablier marin"
+          ],
+          "correct": 0,
+          "solution": "La première mention écrite de la boussole en Méditerranée date de 1190, marquant un tournant pour la navigation hauturière."
+        },
+        {
+          "text": "Durant quel siècle la Méditerranée connaît-elle une intense activité de traduction scientifique et philosophique (notamment à Tolède et en Sicile) ?",
+          "type": "mcq",
+          "options": [
+            "XIIᵉ siècle",
+            "IXᵉ siècle",
+            "XIVᵉ siècle",
+            "VIIᵉ siècle"
+          ],
+          "correct": 0,
+          "solution": "Le XIIᵉ siècle est le grand siècle des traductions de l'arabe et du grec vers le latin, transmettant à l'Europe les œuvres d'Aristote, les mathématiques et la médecine."
+        },
+        {
+          "text": "Dans quelles zones géographiques clés s'épanouit le mouvement de traduction du XIIᵉ siècle ?",
+          "type": "mcq",
+          "options": [
+            "En Espagne (Tolède) et en Sicile (Palerme)",
+            "En Angleterre et en Irlande",
+            "Dans les pays scandinaves",
+            "En Perse et en Mésopotamie"
+          ],
+          "correct": 0,
+          "solution": "L'Espagne (Reconquista) et la Sicile normande sont les deux ponts culturels majeurs où chrétiens, musulmans et juifs traduisent le savoir antique et arabe en latin."
+        },
+        {
+          "text": "L'octroi des privilèges commerciaux vénitiens dans l'Empire byzantin a eu lieu en 1082.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : Le chrysobulle de 1082 confère à Venise une position dominante dans le commerce byzantin."
+        },
+        {
+          "text": "La première mention écrite de la boussole en Méditerranée date du VIᵉ siècle sous Justinien.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : La première mention écrite date de 1190 (à la fin du XIIᵉ siècle)."
+        },
+        {
+          "text": "En quelle année Byzance a-t-elle accordé ses privilèges commerciaux à Venise ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1082",
+            "en 1082"
+          ],
+          "solution": "1082 est la date du chrysobulle accordé aux marchands vénitiens."
+        },
+        {
+          "text": "En quelle année Roger II est-il couronné roi de Sicile ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1130",
+            "en 1130"
+          ],
+          "solution": "Roger II est couronné en 1130 à Palerme."
+        },
+        {
+          "text": "En quelle année est mentionné pour la première fois par écrit l'usage de la boussole en Méditerranée ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1190",
+            "en 1190"
+          ],
+          "solution": "La boussole est mentionnée par écrit pour la première fois en Méditerranée en 1190."
+        }
+      ]
+    },
+    {
+      "category": "4. Ordre chronologique et défis dates express",
+      "questions": [
+        {
+          "text": "Parmi ces quatre événements majeurs, lequel s'est produit chronologiquement en premier ?",
+          "type": "mcq",
+          "options": [
+            "La chute de l'Empire romain d'Occident (476)",
+            "La mort du prophète Mahomet (632)",
+            "Le Grand Schisme d'Orient (1054)",
+            "La prise de Jérusalem par les croisés (1099)"
+          ],
+          "correct": 0,
+          "solution": "476 précède 632, 1054 et 1099."
+        },
+        {
+          "text": "Parmi ces quatre événements majeurs, lequel s'est produit chronologiquement en dernier ?",
+          "type": "mcq",
+          "options": [
+            "La prise de Constantinople par les Ottomans (1453)",
+            "Le sac de Constantinople lors de la 4e croisade (1204)",
+            "La reprise de Jérusalem par Saladin (1187)",
+            "La défaite byzantine de Manzikert (1071)"
+          ],
+          "correct": 0,
+          "solution": "1453 marque la fin de l'Empire byzantin et se situe bien après 1071, 1187 et 1204."
+        },
+        {
+          "text": "Quel événement s'intercale chronologiquement entre la Deuxième croisade (1147-1149) et la Troisième croisade (1189-1192) ?",
+          "type": "mcq",
+          "options": [
+            "La reprise de Jérusalem par Saladin (1187)",
+            "L'appel du pape Urbain II (1095)",
+            "Le couronnement de Roger II en Sicile (1130)",
+            "La prise de Constantinople par les croisés (1204)"
+          ],
+          "correct": 0,
+          "solution": "En 1187, Saladin reprend Jérusalem, ce qui provoque immédiatement le départ de la troisième croisade (1189-1192)."
+        },
+        {
+          "text": "Quel événement survient exactement en 1071, 24 ans avant le lancement de la première croisade (1095) ?",
+          "type": "mcq",
+          "options": [
+            "La défaite de Byzance à Manzikert face aux Turcs Seldjoukides",
+            "La chute de Rome face aux Germains",
+            "La mort de Mahomet à Médine",
+            "La prise de Constantinople par les croisés"
+          ],
+          "correct": 0,
+          "solution": "En 1071, la défaite byzantine à Manzikert fragilise l'empire chrétien d'Orient et motive les demandes d'aide militaire à l'Occident."
+        },
+        {
+          "text": "Quel est l'ordre chronologique exact de ces quatre événements liés aux croisades ?",
+          "type": "mcq",
+          "options": [
+            "Appel d'Urbain II (1095) → Prise de Jérusalem (1099) → Saladin reprend Jérusalem (1187) → Sac de Constantinople (1204)",
+            "Prise de Jérusalem (1099) → Appel d'Urbain II (1095) → Sac de Constantinople (1204) → Saladin reprend Jérusalem (1187)",
+            "Appel d'Urbain II (1095) → Saladin reprend Jérusalem (1187) → Prise de Jérusalem (1099) → Sac de Constantinople (1204)",
+            "Sac de Constantinople (1204) → Appel d'Urbain II (1095) → Prise de Jérusalem (1099) → Saladin reprend Jérusalem (1187)"
+          ],
+          "correct": 0,
+          "solution": "La chronologie est : 1095 (appel), 1099 (prise par croisés), 1187 (reprise par Saladin), 1204 (4e croisade et sac de Byzance)."
+        },
+        {
+          "text": "Combien d'années séparent approximativement la prise de Jérusalem par les croisés (1099) de sa reprise par Saladin (1187) ?",
+          "type": "mcq",
+          "options": [
+            "88 ans",
+            "25 ans",
+            "150 ans",
+            "5 ans"
+          ],
+          "correct": 0,
+          "solution": "1187 − 1099 = 88 ans. Jérusalem est restée sous autorité franque pendant un peu moins d'un siècle."
+        },
+        {
+          "text": "Quelle croisade s'est déroulée entre 1147 et 1149 ?",
+          "type": "mcq",
+          "options": [
+            "La Deuxième croisade",
+            "La Première croisade",
+            "La Troisième croisade",
+            "La Quatrième croisade"
+          ],
+          "correct": 0,
+          "solution": "La Deuxième croisade a eu lieu de 1147 à 1149 (prêchée par Bernard de Clairvaux après la chute d'Édesse)."
+        },
+        {
+          "text": "Quelle croisade s'est déroulée entre 1189 et 1192, menée par Richard Cœur de Lion face à Saladin ?",
+          "type": "mcq",
+          "options": [
+            "La Troisième croisade",
+            "La Première croisade",
+            "La Deuxième croisade",
+            "La Quatrième croisade"
+          ],
+          "correct": 0,
+          "solution": "La Troisième croisade se déroule de 1189 à 1192 pour tenter de reprendre Jérusalem."
+        },
+        {
+          "text": "Quelle croisade s'est déroulée entre 1095 et 1099 ?",
+          "type": "mcq",
+          "options": [
+            "La Première croisade",
+            "La Deuxième croisade",
+            "La Troisième croisade",
+            "La Quatrième croisade"
+          ],
+          "correct": 0,
+          "solution": "La Première croisade part en 1095-1096 et s'achève par la prise de Jérusalem en 1099."
+        },
+        {
+          "text": "Quelle croisade s'est soldée en 1204 par la prise et le sac inattendu de Constantinople au lieu de l'Égypte ?",
+          "type": "mcq",
+          "options": [
+            "La Quatrième croisade",
+            "La Première croisade",
+            "La Deuxième croisade",
+            "La Troisième croisade"
+          ],
+          "correct": 0,
+          "solution": "La Quatrième croisade (1202-1204) a dévié de son but initial sous l'influence vénitienne pour attaquer Byzance en 1204."
+        },
+        {
+          "text": "Le massacre des marchands italiens à Constantinople en 1182 s'est produit AVANT le sac de Constantinople par les croisés en 1204.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : 1182 (massacre) précède 1204 (sac de la ville), cet événement ayant renforcé le désir de vengeance de Venise."
+        },
+        {
+          "text": "La Première croisade a débuté avant le Grand Schisme d'Orient de 1054.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : Le schisme date de 1054, et la Première croisade est lancée plus de 40 ans plus tard, en 1095."
+        },
+        {
+          "text": "Les privilèges accordés à Venise par Byzance (1082) ont été octroyés après le sac de Constantinople (1204).",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : Les privilèges datent de 1082, soit plus d'un siècle avant le sac de 1204."
+        },
+        {
+          "text": "En quelle année le pape Urbain II a-t-il lancé l'appel à la première croisade ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1095",
+            "en 1095"
+          ],
+          "solution": "1095 est la date de l'appel de Clermont lancé par Urbain II."
+        },
+        {
+          "text": "En quelle année les croisés ont-ils pris Jérusalem lors de la Première croisade ? (Écrivez l'année en chiffres)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "1099",
+            "en 1099"
+          ],
+          "solution": "1099 marque la prise de Jérusalem par les croisés."
+        }
+      ]
+    }
+  ]
+}
