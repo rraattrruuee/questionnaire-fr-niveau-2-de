@@ -23,10 +23,10 @@
           "text": "Quel événement fondateur a lieu en Méditerranée en l'an 476 ?",
           "type": "mcq",
           "options": [
-            "La chute de l'Empire romain d'Occident et la pérennité de l'Empire byzantin",
-            "La mort du prophète Mahomet et le début des califats",
-            "La prise de Constantinople par les Turcs ottomans",
-            "L'appel du pape Urbain II à la première croisade"
+            "La chute de l'Empire romain d'Occident",
+            "La mort du prophète Mahomet en Arabie",
+            "La prise de Constantinople par les Turcs",
+            "L'appel du pape Urbain II à la croisade"
           ],
           "correct": 0,
           "solution": "En 476, la chute de Rome marque la division de l'ancien espace romain : royaumes germaniques à l'ouest, Empire byzantin à l'est."
@@ -71,10 +71,10 @@
           "text": "Quel événement majeur marque l'année 632 dans le monde méditerranéen ?",
           "type": "mcq",
           "options": [
-            "La mort de Mahomet et le début de l'expansion de l'Islam",
-            "La fin de l'Empire romain d'Occident",
-            "Le Grand Schisme d'Orient",
-            "Le couronnement de Charlemagne à Rome"
+            "La mort de Mahomet et le début des conquêtes",
+            "La chute finale de l'Empire romain d'Occident",
+            "La rupture religieuse du Grand Schisme d'Orient",
+            "Le couronnement impérial du roi Charlemagne"
           ],
           "correct": 0,
           "solution": "En 632, à la mort de Mahomet à Médine, la communauté musulmane s'organise sous la direction des califes et commence une rapide expansion."
@@ -95,10 +95,10 @@
           "text": "À quelle période les royaumes germaniques sont-ils unifiés au sein de l'Empire carolingien, avant son éclatement ?",
           "type": "mcq",
           "options": [
-            "Au début du IXᵉ siècle (couronnement de Charlemagne en 800)",
-            "À la fin du VIᵉ siècle",
-            "Au milieu du XIᵉ siècle",
-            "Au début du XIIIᵉ siècle"
+            "Au tout début du IXᵉ siècle",
+            "À la toute fin du VIᵉ siècle",
+            "Au milieu exact du XIᵉ siècle",
+            "Au début direct du XIIIᵉ siècle"
           ],
           "correct": 0,
           "solution": "Au début du IXᵉ siècle (couronnement impérial en 800), Charlemagne unifie une grande partie de l'Occident chrétien sous l'Empire carolingien."
@@ -225,10 +225,10 @@
           "text": "Que s'est-il passé en l'an 1054 entre Rome et Constantinople ?",
           "type": "mcq",
           "options": [
-            "Le Grand Schisme d'Orient séparant catholiques et orthodoxes",
+            "Le Grand Schisme séparant catholiques et orthodoxes",
             "La première croisade menée par les chevaliers francs",
-            "Le massacre des marchands italiens",
-            "La bataille de Manzikert"
+            "Le grand massacre des marchands italiens par le peuple",
+            "La défaite byzantine face aux Seldjoukides à Manzikert"
           ],
           "correct": 0,
           "solution": "Le schisme de 1054 consacre la rupture religieuse, théologique et liturgique entre l'Occident latin (fidèle au pape) et l'Orient byzantin (orthodoxe)."
@@ -309,10 +309,10 @@
           "text": "Quel événement militaire majeur se déroule en Terre sainte en 1099 ?",
           "type": "mcq",
           "options": [
-            "La prise de Jérusalem par les croisés et la création des États latins",
-            "La reprise de la ville par Saladin",
-            "Le débarquement de la troisième croisade",
-            "La défaite de Manzikert"
+            "La prise de Jérusalem et la création des États latins",
+            "La reprise décisive de Jérusalem par le sultan Saladin",
+            "Le départ officiel de la troisième croisade de Philippe",
+            "La déroute des troupes byzantines à la cité de Manzikert"
           ],
           "correct": 0,
           "solution": "En 1099, la prise de Jérusalem conclut la première croisade et implante quatre États latins d'Orient."
@@ -345,10 +345,10 @@
           "text": "Quel drame marque les relations entre Byzantins et Occidentaux à Constantinople en l'an 1182 ?",
           "type": "mcq",
           "options": [
-            "Le massacre des marchands italiens par la population locale",
-            "Le pillage de Sainte-Sophie par les Vénitiens",
-            "L'expulsion des musulmans de la ville",
-            "Le couronnement d'un empereur latin"
+            "Le massacre des marchands italiens par les Byzantins",
+            "Le pillage sanglant de Sainte-Sophie par les Vénitiens",
+            "L'expulsion définitive de tous les marchands musulmans",
+            "Le couronnement forcé d'un empereur d'origine normande"
           ],
           "correct": 0,
           "solution": "En 1182, le massacre des marchands italiens attise la haine et le ressentiment des cités italiennes envers Byzance."
@@ -497,10 +497,10 @@
           "text": "Que concède l'Empire byzantin à la République de Venise en 1082 ?",
           "type": "mcq",
           "options": [
-            "Des privilèges commerciaux considérables (exemptions de taxes et comptoir)",
-            "Le contrôle territorial complet de la capitale",
-            "La conversion des Byzantins au culte latin",
-            "La cession de l'île de Sicile"
+            "Des privilèges commerciaux et des exemptions douanières",
+            "Le contrôle territorial exclusif de la ville impériale",
+            "La conversion solennelle de tout le clergé au rite latin",
+            "La cession définitive de l'ensemble de l'île de Sicile"
           ],
           "correct": 0,
           "solution": "Le traité de 1082 fait de Venise la première puissance commerciale au sein même de l'Empire byzantin."
@@ -593,10 +593,10 @@
           "text": "Dans quelles zones géographiques clés s'épanouit le mouvement de traduction du XIIᵉ siècle ?",
           "type": "mcq",
           "options": [
-            "En Espagne (Tolède) et en Sicile (Palerme)",
-            "En Angleterre et en Irlande",
-            "Dans les pays scandinaves",
-            "En Perse et en Mésopotamie"
+            "En Espagne et en Sicile",
+            "En Angleterre et en Écosse",
+            "En Suède et en Norvège",
+            "En Égypte et au Soudan"
           ],
           "correct": 0,
           "solution": "L'Espagne (Reconquista) et la Sicile normande sont les deux ponts culturels majeurs où chrétiens, musulmans et juifs traduisent le savoir antique et arabe en latin."
@@ -699,10 +699,10 @@
           "text": "Quel événement survient exactement en 1071, 24 ans avant le lancement de la première croisade (1095) ?",
           "type": "mcq",
           "options": [
-            "La défaite de Byzance à Manzikert face aux Turcs Seldjoukides",
-            "La chute de Rome face aux Germains",
-            "La mort de Mahomet à Médine",
-            "La prise de Constantinople par les croisés"
+            "La défaite de Byzance face aux Turcs à Manzikert",
+            "La chute de Rome face aux invasions des Germains",
+            "La mort du prophète Mahomet dans la cité de Médine",
+            "La prise de Constantinople par les armées croisées"
           ],
           "correct": 0,
           "solution": "En 1071, la défaite byzantine à Manzikert fragilise l'empire chrétien d'Orient et motive les demandes d'aide militaire à l'Occident."

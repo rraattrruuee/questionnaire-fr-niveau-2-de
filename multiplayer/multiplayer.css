@@ -95,7 +95,7 @@
   margin-bottom: 0.3rem;
 }
 
-.mp-field input,
+.mp-field input:not([type="checkbox"]):not([type="radio"]),
 .mp-field select {
   width: 100%;
   padding: 0.6rem 0.8rem;
@@ -106,7 +106,7 @@
   font: inherit;
 }
 
-.mp-field input:focus,
+.mp-field input:not([type="checkbox"]):not([type="radio"]):focus,
 .mp-field select:focus {
   outline: none;
   border-color: var(--primary);
@@ -1261,12 +1261,19 @@
   background: rgba(99, 102, 241, 0.08);
 }
 
-.mp-quiz-checkbox {
-  width: 1.15rem;
-  height: 1.15rem;
+.mp-quiz-checkbox,
+.mp-field input.mp-quiz-checkbox {
+  width: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+  height: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 4px;
   cursor: pointer;
   accent-color: var(--primary);
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .mp-quiz-item-icon {

@@ -23,10 +23,10 @@
           "text": "Quel régime politique précède la République romaine à Rome ?",
           "type": "mcq",
           "options": [
-            "La monarchie",
-            "Le principat",
+            "La monarchie étrusque",
+            "Le principat augustéen",
             "La démocratie directe",
-            "L'oligarchie militaire pure"
+            "L'oligarchie militaire"
           ],
           "correct": 0,
           "solution": "Rome a d'abord été gouvernée par des rois (période de la royauté de 753 à 509 av. J.-C.) avant que les patriciens ne chassent la royauté pour fonder la République."
@@ -35,10 +35,10 @@
           "text": "Sous la République romaine, quelle institution regroupe les anciens magistrats et contrôle les finances et la politique extérieure ?",
           "type": "mcq",
           "options": [
-            "Le Sénat",
-            "Les comices",
-            "Le tribunat de la plèbe",
-            "Le consulat"
+            "Le Sénat de Rome",
+            "Les comices civils",
+            "Le tribunat plébéien",
+            "Le collège consulaire"
           ],
           "correct": 0,
           "solution": "Le Sénat romain, composé d'anciens magistrats (patriciens et plébéiens enrichis), exerce une autorité morale et politique déterminante sur la diplomatie et les finances."
@@ -59,10 +59,10 @@
           "text": "Comment les immenses conquêtes méditerranéennes entre le IVe et le Ier siècle av. J.-C. ont-elles fragilisé la République romaine ?",
           "type": "mcq",
           "options": [
-            "Elles ont enrichi une élite de généraux et ruiné les petits paysans-soldats au profit des grands domaines esclavagistes",
-            "Elles ont provoqué l'invasion immédiate de Rome par les Parthes",
-            "Elles ont entraîné la disparition complète du Sénat romain",
-            "Elles ont empêché tout commerce maritime en Méditerranée"
+            "Elles ont enrichi les généraux et ruiné les paysans-soldats au profit des grands domaines",
+            "Elles ont provoqué l'effondrement du commerce maritime et l'invasion de l'Italie du Sud",
+            "Elles ont entraîné la disparition immédiate du Sénat au profit d'une royauté héréditaire",
+            "Elles ont ruiné le trésor public en finançant la construction de remparts infranchissables"
           ],
           "correct": 0,
           "solution": "L'expansion militaire a créé d'immenses fortunes sénatoriales et des armées professionnelles fidèles à leur chef de guerre (comme Marius, Sylla, Pompée ou César) plutôt qu'à la République, déclenchant des guerres civiles."
@@ -71,10 +71,10 @@
           "text": "Quelle est la conséquence majeure de la professionnalisation de l'armée romaine à la fin du IIe siècle av. J.-C. ?",
           "type": "mcq",
           "options": [
-            "Les soldats deviennent fidèles à leur général victorieux qui leur promet terres et butin",
-            "L'armée refuse désormais de quitter la péninsule italienne",
-            "Tous les citoyens romains sont exemptés de service militaire sans exception",
-            "Le Sénat prend le commandement direct de toutes les légions au combat"
+            "Les soldats deviennent fidèles à leur général plutôt qu'aux institutions civiques",
+            "L'armée refuse d'obéir aux magistrats et choisit de ne plus quitter l'Italie centrale",
+            "Tous les citoyens romains sont totalement exemptés du service militaire sans exception",
+            "Le Sénat prend le contrôle direct et exclusif du déploiement de toutes les légions"
           ],
           "correct": 0,
           "solution": "La réforme mar организация armée a lié les légionnaires prolétaires à leur général (imperator), capable de marcher sur Rome contre les institutions républicaines."
@@ -96,9 +96,9 @@
           "type": "mcq",
           "options": [
             "Dictateur à vie",
-            "Empereur héréditaire",
-            "Grand Calife",
-            "Basileus"
+            "Empereur suprême",
+            "Grand roi d'Italie",
+            "Basileus perpétuel"
           ],
           "correct": 0,
           "solution": "César a concentré les pouvoirs civils et militaires avec le titre de dictator perpetuo (dictateur perpétuel), ce qui a poussé les républicains conservateurs au complot."
@@ -129,10 +129,10 @@
           "text": "Quel territoire clé de la Méditerranée est annexé par Rome immédiatement après la défaite de Marc Antoine et Cléopâtre en 30 av. J.-C. ?",
           "type": "mcq",
           "options": [
-            "L'Égypte",
+            "L'Égypte lagide",
             "La Gaule chevelue",
-            "La Bretagne (Grande-Bretagne)",
-            "La Dacie"
+            "La Grèce maritime",
+            "La Dacie danubienne"
           ],
           "correct": 0,
           "solution": "Après le suicide d'Antoine et Cléopâtre en 30 av. J.-C., l'Égypte devient la propriété personnelle du souverain romain et le grenier à blé de Rome."
@@ -142,9 +142,9 @@
           "type": "mcq",
           "options": [
             "Mare Nostrum (« Notre mer »)",
-            "Oceanus Magnus",
-            "Pontus Euxinus",
-            "Mare Tenebrosum"
+            "Oceanus Magnus (« Grand Océan »)",
+            "Pontus Euxinus (« Pont-Euxin »)",
+            "Mare Tenebrosum (« Mer Sombre »)"
           ],
           "correct": 0,
           "solution": "En unifiant toutes les côtes bordant la Méditerranée, les Romains l'ont qualifiée de « Mare Nostrum », traduisant une domination géopolitique totale."
@@ -170,10 +170,10 @@
           "text": "Que signifie le terme politique de « Principat » institué par Auguste ?",
           "type": "mcq",
           "options": [
-            "Un régime où le prince est le « premier des citoyens » (princeps) tout en conservant l'apparence des institutions républicaines",
-            "Une monarchie de droit divin sans Sénat ni lois écrites",
-            "Une dictature militaire temporaire renouvelée chaque mois",
-            "Un gouvernement oligarchique partagé entre trois consuls à égalité"
+            "Le prince est le premier des citoyens mais conserve l'apparence des lois républicaines",
+            "Le souverain gouverne en monarque divin absolu après avoir aboli le Sénat et les lois",
+            "Le commandement militaire suprême est confié chaque année à un collège de trois consuls",
+            "La cité adopte une démocratie populaire directe où l'assemblée du peuple décide de tout"
           ],
           "correct": 0,
           "solution": "Auguste ne se proclame pas roi (titre honni à Rome) mais princeps civitatis (premier citoyen). Il maintient le Sénat et les magistratures mais concentre tous les pouvoirs réels."
@@ -182,10 +182,10 @@
           "text": "Quel pouvoir fondamental permettait à Auguste d'opposer son veto à toute décision et rendait sa personne sacrée et inviolable ?",
           "type": "mcq",
           "options": [
-            "La puissance tribunicienne (tribunicia potestas)",
-            "L'imperium proconsulaire",
-            "Le grand pontificat",
-            "La censure"
+            "La puissance tribunicienne sacrée",
+            "L'imperium proconsulaire majeur",
+            "Le grand pontificat sacerdotal",
+            "La préfecture prétorienne armée"
           ],
           "correct": 0,
           "solution": "Héritée des tribuns de la plèbe, la puissance tribunicienne confère l'inviolabilité (sacrosanctitas), le droit de veto et le pouvoir de convoquer le peuple et le Sénat."
@@ -195,9 +195,9 @@
           "type": "mcq",
           "options": [
             "Grand Pontife (Pontifex Maximus)",
-            "Basileus",
-            "Augure impérial",
-            "Pape"
+            "Prince du Sénat (Princeps Senatus)",
+            "Père de la patrie (Pater Patriae)",
+            "Grand Augure (Augur Romanus)"
           ],
           "correct": 0,
           "solution": "En devenant Pontifex Maximus en 12 av. J.-C., Auguste cumule le pouvoir religieux suprême avec ses pouvoirs politiques et militaires."
@@ -206,10 +206,10 @@
           "text": "Qu'est-ce que le culte impérial développé sous l'Empire romain ?",
           "type": "mcq",
           "options": [
-            "Un culte civique voué à Rome et au génie de l'empereur, ciment de la loyauté des provinces envers le pouvoir",
-            "Une nouvelle religion monothéiste imposée par la force à tous les habitants",
-            "Une cérémonie secrète réservée uniquement aux sénateurs de la cité de Rome",
-            "Un rituel exclusivement célébré dans les catacombes chrétiennes"
+            "Un culte civique voué à Rome et à l'empereur pour cimenter l'unité provinciale",
+            "Une foi monothéiste obligatoire interdisant tous les anciens dieux traditionnels",
+            "Une cérémonie secrète et réservée aux seuls sénateurs au sein de la ville de Rome",
+            "Un rite funéraire d'origine orientale célébré uniquement en période d'épidémie"
           ],
           "correct": 0,
           "solution": "Le culte impérial unit la diversité des provinces de l'Empire : honorer l'empereur et Rome est un acte civique de fidélité politique envers l'Empire."
@@ -218,10 +218,10 @@
           "text": "Comment appelle-t-on la longue période de stabilité et de prospérité commerciale établie à l'échelle du bassin méditerranéen grâce à Auguste et ses successeurs ?",
           "type": "mcq",
           "options": [
-            "La Pax Romana (Paix romaine)",
-            "La Reconquista",
-            "La trêve de Dieu",
-            "Le Schisme d'Orient"
+            "La Pax Romana",
+            "La Pax Deorum",
+            "La Concordia",
+            "La Maiestas"
           ],
           "correct": 0,
           "solution": "La Pax Romana désigne deux siècles de calme relatif et de prospérité économique (Ier-IIe siècles ap. J.-C.) garantis par la protection des frontières (limes) et la domination militaire romaine."
@@ -231,9 +231,9 @@
           "type": "mcq",
           "options": [
             "Le limes",
-            "Le mur d'Auguste",
-            "Le rempart prétorien",
-            "La palissade servienne"
+            "Le vallum",
+            "Le cardo",
+            "L'ager"
           ],
           "correct": 0,
           "solution": "Le limes désignait initialement une route de patrouille frontalière, puis l'ensemble du système de fortifications (murs, forts, fossés) délimitant l'Empire (ex. le mur d'Hadrien)."
@@ -252,10 +252,10 @@
           "text": "Quel était le lien familial originel entre Jules César et Octave-Auguste ?",
           "type": "mcq",
           "options": [
-            "Octave était son petit-neveu et fils adoptif par testament",
-            "Octave était son frère cadet",
-            "Octave était son oncle maternel",
-            "Octave était son fils aîné légitime"
+            "Octave était son petit-neveu adopté par testament",
+            "Octave était son frère cadet né d'un second mariage",
+            "Octave était son cousin issu de la noblesse étrusque",
+            "Octave était son fils aîné né d'une union légitime"
           ],
           "correct": 0,
           "solution": "César a fait d'Octave son héritier principal et l'a adopté par testament, transmettant ainsi le prestige de son nom (Caius Julius Caesar Octavianus)."
@@ -264,10 +264,10 @@
           "text": "À la mort d'un empereur romain estimé vertueux et pieux, quelle décision le Sénat pouvait-il prendre pour intégrer son esprit parmi les dieux ?",
           "type": "mcq",
           "options": [
-            "L'apothéose (divinisation)",
+            "L'apothéose civique",
             "La damnatio memoriae",
-            "L'excommunication",
-            "L'ostracisme"
+            "L'ostracisme public",
+            "L'éviction solennelle"
           ],
           "correct": 0,
           "solution": "L'apothéose élevait l'empereur décédé au rang des dieux (divus). À l'inverse, les mauvais empereurs subissaient la damnatio memoriae (effacement de leur mémoire)."
@@ -281,10 +281,10 @@
           "text": "Qu'est-ce que la « romanisation » des provinces sous l'Empire romain ?",
           "type": "mcq",
           "options": [
-            "L'adoption progressive du mode de vie, de la langue latine, du droit et de l'urbanisme romains par les populations provinciales",
-            "L'obligation de déporter toutes les populations conquises vers la ville de Rome",
-            "La destruction systématique des langues locales et des monuments provinciaux",
-            "L'interdiction formelle du commerce entre Rome et les provinces orientales"
+            "L'adoption progressive du mode de vie, de la langue latine et des lois par les provinciaux",
+            "La déportation forcée des peuples soumis vers la péninsule italienne pour cultiver les terres",
+            "La destruction méthodique des cités indigènes et l'expulsion définitive de leurs habitants",
+            "L'interdiction absolue de tout échange commercial entre la métropole et les terres d'Orient"
           ],
           "correct": 0,
           "solution": "La romanisation s'opère largement par adhésion des élites locales, désireuses de s'intégrer aux honneurs romains et adoptant les thermes, le théâtre, le forum et la toge."
@@ -343,8 +343,8 @@
           "options": [
             "Le grec",
             "Le celte",
-            "L'étrusque",
-            "L'araméen pur sans rival"
+            "L'araméen",
+            "L'hébreu"
           ],
           "correct": 0,
           "solution": "L'Empire romain est bilingue : l'Occident parle et écrit majoritairement latin, tandis que l'Orient conserve la langue et la culture grecques (hellénisme), profondément admirées par les élites romaines."
@@ -354,9 +354,9 @@
           "type": "mcq",
           "options": [
             "Le culte d'Isis",
-            "Le culte d'Amon-Rê des pharaons",
-            "Le culte de Mithra venu de Germanie",
-            "Le culte de Shiva"
+            "Le culte d'Osiris",
+            "Le culte d'Anubis",
+            "Le culte d'Horus"
           ],
           "correct": 0,
           "solution": "Le culte de la déesse égyptienne Isis s'est diffusé dans tout l'Empire romain, illustrant le syncrétisme religieux et le brassage culturel méditerranéen."
@@ -365,10 +365,10 @@
           "text": "Comment les élites provinciales (gauloises, hispaniques, africaines) pouvaient-elles obtenir la citoyenneté romaine avant 212 ?",
           "type": "mcq",
           "options": [
-            "En exerçant des magistratures locales, en servant dans les troupes auxiliaires de l'armée ou par faveur impériale",
-            "En achetant obligatoirement un terrain au centre de Rome",
-            "Uniquement en se convertissant au judaïsme",
-            "La citoyenneté était strictement fermée aux provinciaux avant 212"
+            "Par l'exercice de magistratures dans leur cité ou par engagement dans les troupes auxiliaires",
+            "Par l'achat obligatoire d'un domaine agricole situé dans les environs immédiats de Rome",
+            "Par un pèlerinage annuel imposé au temple de Jupiter Capitolin dans la cité de Rome",
+            "Par le renoncement public à toutes leurs possessions matérielles au profit de l'empereur"
           ],
           "correct": 0,
           "solution": "Rome intégrait ses élites : diriger sa cité ou servir 25 ans dans les troupes auxiliaires de l'armée romaine conférait la pleine citoyenneté romaine."
@@ -388,9 +388,9 @@
           "type": "mcq",
           "options": [
             "Trajan",
-            "Jules César",
             "Néron",
-            "Tarquin le Superbe"
+            "Tibère",
+            "César"
           ],
           "correct": 0,
           "solution": "Trajan (règne de 98 à 117 ap. J.-C.), né à Italica en Bétique (Espagne), est le premier empereur issu d'une province romaine, symbole de l'intégration réussie des élites provinciales."
@@ -406,8 +406,8 @@
           "options": [
             "En Judée",
             "En Égypte",
-            "En Gaule narbonnaise",
-            "En Hispanie"
+            "En Syrie",
+            "En Achaïe"
           ],
           "correct": 0,
           "solution": "Le christianisme naît dans la province romaine de Judée au Proche-Orient, dans le milieu du judaïsme de l'époque du principat de Tibère."
@@ -416,10 +416,10 @@
           "text": "Pourquoi les premiers chrétiens ont-ils été persécutés par les autorités romaines ?",
           "type": "mcq",
           "options": [
-            "Parce qu'ils refusaient de sacrifier aux dieux traditionnels et de pratiquer le culte impérial",
-            "Parce qu'ils menaient des révoltes armées incessantes contre les légions",
-            "Parce qu'ils refusaient de parler la langue grecque ou latine",
-            "Parce qu'ils soutenaient les invasions barbares au-delà du Rhin"
+            "Ils refusaient de sacrifier aux dieux civiques et de pratiquer le culte de l'empereur",
+            "Ils organisaient des soulèvements armés permanents contre les légions de la province",
+            "Ils refusaient de payer tout impôt impérial et de parler les langues grecque et latine",
+            "Ils complotaient secrètement avec les tribus germaniques pour franchir le limes du Rhin"
           ],
           "correct": 0,
           "solution": "Monothéistes stricts, les chrétiens refusaient de rendre un culte à l'empereur, ce qui était interprété par Rome comme un acte de déloyauté politique et d'impiété susceptible d'attirer la colère des dieux."
@@ -453,9 +453,9 @@
           "type": "mcq",
           "options": [
             "Constantin",
-            "Néron",
-            "Auguste",
-            "Dioclétien"
+            "Dioclétien",
+            "Marc Aurèle",
+            "Vespasien"
           ],
           "correct": 0,
           "solution": "Constantin Ier est le premier empereur chrétien ; après sa victoire au pont Milvius en 312, il protège et favorise activement l'Église chrétienne."
@@ -540,9 +540,9 @@
           "type": "mcq",
           "options": [
             "Fondation de la République romaine",
-            "Assassinat de Jules César",
-            "Bataille d'Actium",
-            "Édit de Milan"
+            "Assassinat officiel de Jules César",
+            "Victoire navale d'Octave à Actium",
+            "Promulgation de l'Édit de Milan"
           ],
           "correct": 0,
           "solution": "509 av. J.-C. marque la fin de la royauté étrusque et la naissance de la République romaine."
@@ -551,10 +551,10 @@
           "text": "Associez la date de 44 av. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Assassinat de Jules César aux Ides de mars",
-            "Début du principat d'Auguste",
-            "Bataille d'Actium",
-            "Division de l'Empire"
+            "Assassinat de César aux Ides de mars",
+            "Proclamation du principat d'Auguste",
+            "Victoire navale décisive à Actium",
+            "Division de l'Empire en deux parts"
           ],
           "correct": 0,
           "solution": "44 av. J.-C. : assassinat de Jules César par des sénateurs républicains."
@@ -563,10 +563,10 @@
           "text": "Associez la date de 31 av. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Bataille navale d'Actium",
-            "Fondation de Rome",
-            "Édit de Caracalla",
-            "Concile de Nicée"
+            "Victoire navale d'Actium",
+            "Fondation légendaire de Rome",
+            "Promulgation de Caracalla",
+            "Ouverture du Concile de Nicée"
           ],
           "correct": 0,
           "solution": "31 av. J.-C. : victoire d'Octave sur Marc Antoine et Cléopâtre à Actium."
@@ -575,10 +575,10 @@
           "text": "Associez la date de 27 av. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Début du principat d'Auguste (fondation de l'Empire)",
-            "Chute de l'Empire romain d'Occident",
-            "Fondation de Constantinople",
-            "Édit de Thessalonique"
+            "Instauration du principat d'Auguste",
+            "Chute finale de l'Empire d'Occident",
+            "Fondation officielle de Constantinople",
+            "Promulgation de l'Édit de Thessalonique"
           ],
           "correct": 0,
           "solution": "27 av. J.-C. : Octave reçoit le titre d'Auguste par le Sénat et fonde le principat."
@@ -587,10 +587,10 @@
           "text": "Associez la date de 212 ap. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Édit de Caracalla (citoyenneté romaine accordée à tous les hommes libres)",
-            "Édit de Milan (liberté de culte)",
-            "Division de l'Empire en 395",
-            "Assassinat de César"
+            "Promulgation de l'Édit de Caracalla",
+            "Promulgation de l'Édit de Milan",
+            "Division officielle de l'Empire",
+            "Assassinat de César au Sénat"
           ],
           "correct": 0,
           "solution": "212 : L'empereur Caracalla octroie la citoyenneté romaine à tous les pérégrins libres de l'Empire."
@@ -599,10 +599,10 @@
           "text": "Associez la date de 313 ap. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Édit de Milan (liberté de culte pour les chrétiens)",
-            "Édit de Caracalla",
-            "Début du principat d'Auguste",
-            "Chute de Carthage"
+            "Promulgation de l'Édit de Milan",
+            "Promulgation de l'Édit de Caracalla",
+            "Instauration du principat d'Auguste",
+            "Destruction de la cité de Carthage"
           ],
           "correct": 0,
           "solution": "313 : Constantin et Licinius accordent la liberté religieuse aux chrétiens par l'Édit de Milan."
@@ -611,10 +611,10 @@
           "text": "Associez la date de 330 ap. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Fondation et inauguration de Constantinople",
-            "Bataille d'Actium",
-            "Mort de Jules César",
-            "Concile de Trente"
+            "Inauguration de Constantinople",
+            "Victoire navale lors d'Actium",
+            "Assassinat de César au Sénat",
+            "Ouverture du Concile de Nicée"
           ],
           "correct": 0,
           "solution": "330 : Constantin fonde sa nouvelle capitale impériale sur le site de Byzance."
@@ -623,10 +623,10 @@
           "text": "Associez la date de 380 ap. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Le christianisme devient religion officielle de l'Empire (Édit de Thessalonique)",
-            "Édit de Caracalla",
-            "Fondation de la République",
-            "Bataille d'Alésia"
+            "Promulgation de l'Édit de Thessalonique",
+            "Promulgation de l'Édit de Caracalla",
+            "Fondation de la République romaine",
+            "Victoire romaine au siège d'Alésia"
           ],
           "correct": 0,
           "solution": "380 : Théodose proclame le christianisme comme religion officielle d'État par l'Édit de Thessalonique."
@@ -635,10 +635,10 @@
           "text": "Associez la date de 395 ap. J.-C. à l'événement historique correspondant :",
           "type": "mcq",
           "options": [
-            "Division définitive de l'Empire entre Orient et Occident",
-            "Édit de Milan",
-            "Conquête de la Gaule",
-            "Fondation de Rome"
+            "Division définitive de l'Empire",
+            "Promulgation de l'Édit de Milan",
+            "Conquête militaire de la Gaule",
+            "Fondation légendaire de Rome"
           ],
           "correct": 0,
           "solution": "395 : Mort de Théodose Ier et partition de l'Empire romain entre ses deux fils."
@@ -647,10 +647,10 @@
           "text": "Parmi les événements suivants, lequel s'est produit le PREMIER chronologiquement ?",
           "type": "mcq",
           "options": [
-            "La fondation de la République romaine (-509)",
+            "La fondation de la République (-509)",
             "L'assassinat de Jules César (-44)",
-            "La bataille d'Actium (-31)",
-            "L'Édit de Caracalla (212)"
+            "La victoire navale d'Actium (-31)",
+            "L'édit impérial de Caracalla (212)"
           ],
           "correct": 0,
           "solution": "509 av. J.-C. précède de plusieurs siècles César (-44), Actium (-31) et Caracalla (212)."
@@ -659,10 +659,10 @@
           "text": "Parmi les événements suivants, lequel s'est produit en DERNIER chronologiquement ?",
           "type": "mcq",
           "options": [
-            "La division définitive de l'Empire romain (395)",
-            "L'Édit de Thessalonique (380)",
-            "L'Édit de Milan (313)",
-            "L'Édit de Caracalla (212)"
+            "La division de l'Empire romain (395)",
+            "L'édit impérial de Thessalonique (380)",
+            "La proclamation de l'édit de Milan (313)",
+            "L'édit de citoyenneté de Caracalla (212)"
           ],
           "correct": 0,
           "solution": "395 est le repère le plus récent parmi cette sélection (après 212, 313 et 380)."
