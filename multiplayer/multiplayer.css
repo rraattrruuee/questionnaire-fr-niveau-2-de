@@ -1149,6 +1149,24 @@
   flex: 1;
 }
 
+.mp-lan-advanced {
+  margin-top: 0.8rem;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.65rem;
+}
+
+.mp-lan-advanced summary {
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.mp-lan-advanced summary:hover {
+  color: var(--text);
+}
+
 .mp-lobby-badge-wrap {
   margin-bottom: 0.8rem;
 }

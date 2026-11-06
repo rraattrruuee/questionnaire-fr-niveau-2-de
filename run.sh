@@ -27,64 +27,21 @@ done
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# --- Detecter Python 3 ---
+# --- Lancer le serveur JavaScript (Node.js) ---
+if command -v node >/dev/null 2>&1; then
+  exec node "$DIR/server.js" "$PORT"
+fi
+
+# --- Replit de secours Python si Node.js n'est pas installé ---
 if command -v python3 >/dev/null 2>&1; then
   PY="python3"
 elif command -v python >/dev/null 2>&1 && python --version 2>&1 | grep -q "Python 3"; then
   PY="python"
 else
-  echo "Erreur : Python 3 est requis pour lancer le serveur local."
+  echo "Erreur : Node.js (recommandé) ou Python 3 est requis pour lancer le serveur local."
   exit 1
 fi
 
-# --- Adresse reseau local (pour tester sur telephone) ---
-detect_lan_ip() {
-  local ip=""
-  # Linux (iproute2) : adresse source de la route par defaut
-  if command -v ip >/dev/null 2>&1; then
-    ip="$(ip -4 route get 1.1.1.1 2>/dev/null | awk '{for(i=1;i<=NF;i++) if($i=="src"){print $(i+1); exit}}')"
-    [ -n "$ip" ] && { printf '%s' "$ip"; return 0; }
-  fi
-  # Linux (hostname -I, pas toujours supporte)
-  if command -v hostname >/dev/null 2>&1; then
-    ip="$(hostname -I 2>/dev/null | awk '{print $1}')" || true
-    [ -n "$ip" ] && { printf '%s' "$ip"; return 0; }
-  fi
-  # macOS
-  if command -v ipconfig >/dev/null 2>&1; then
-    ip="$(ipconfig getifaddr en0 2>/dev/null)" || true
-    [ -n "$ip" ] && { printf '%s' "$ip"; return 0; }
-  fi
-  printf '%s' ""
-}
-LAN_IP="$(detect_lan_ip)"
-
-echo ""
-echo "============================================================"
-echo "  Questionnaires 2nde - serveur de test local"
-echo "============================================================"
-echo "  Dossier : $DIR"
-echo "  Local   : http://localhost:$PORT/"
-if [ -n "$LAN_IP" ]; then
-echo "  Reseau  : http://$LAN_IP:$PORT/   (meme Wi-Fi, telephone)"
-fi
-echo "  Arret   : Ctrl+C"
-echo "============================================================"
-echo ""
-
-# --- Ouvrir le navigateur (au choix) ---
-if [ "$OPEN_BROWSER" -eq 1 ]; then
-  (
-    sleep 1
-    URL="http://localhost:$PORT/"
-    if command -v xdg-open >/dev/null 2>&1; then xdg-open "$URL" >/dev/null 2>&1 || true
-    elif command -v open >/dev/null 2>&1; then open "$URL" >/dev/null 2>&1 || true
-    elif command -v start >/dev/null 2>&1; then start "$URL" >/dev/null 2>&1 || true
-    fi
-  ) &
-fi
-
-# --- Serveur Python (no-cache + relais multijoueur LAN) ---
 exec "$PY" - "$PORT" "$DIR" <<'PYEOF'
 import http.server
 import socketserver

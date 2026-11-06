@@ -71,18 +71,21 @@
                     <div id="lan-config-panel" class="mp-lan-panel hidden">
                         <div class="mp-lan-badge">🏠 Mode Réseau Local (LAN) activé</div>
                         <p class="mp-lan-desc">
-                            Permet de jouer <strong>100% hors-ligne</strong> sur le même réseau Wi-Fi ou partage de connexion.<br>
-                            Lancez <code>./run.sh</code> sur l'ordinateur hôte. Le relais local intégré s'occupe de tout sans internet !
+                            Fonctionne <strong>directement depuis le site web en JavaScript</strong> (aucun serveur Python requis !).<br>
+                            Tous les joueurs connectés au même Wi-Fi, partage de connexion ou réseau local peuvent se rejoindre instantanément par le code ou le QR code.
                         </p>
-                        <label class="mp-field mp-lan-field">
-                            <span>Adresse du serveur local LAN :</span>
-                            <div class="mp-lan-ip-row">
-                                <input type="text" id="lan-server-input" placeholder="http://192.168.1.XX:8000" autocomplete="off" spellcheck="false" />
-                                <button type="button" id="btn-lan-apply" class="btn btn-ghost btn-sm">Appliquer</button>
-                                <button type="button" id="btn-lan-test" class="btn btn-ghost btn-sm">Tester</button>
-                            </div>
-                        </label>
-                        <p id="lan-test-status" class="mp-status"></p>
+                        <details class="mp-lan-advanced">
+                            <summary>⚙️ Optionnel : utiliser un serveur local Node.js (<code>node server.js</code>)</summary>
+                            <label class="mp-field mp-lan-field">
+                                <span>Adresse personnalisée du serveur Node.js (optionnel) :</span>
+                                <div class="mp-lan-ip-row">
+                                    <input type="text" id="lan-server-input" placeholder="http://192.168.1.XX:8000" autocomplete="off" spellcheck="false" />
+                                    <button type="button" id="btn-lan-apply" class="btn btn-ghost btn-sm">Appliquer</button>
+                                    <button type="button" id="btn-lan-test" class="btn btn-ghost btn-sm">Tester</button>
+                                </div>
+                            </label>
+                            <p id="lan-test-status" class="mp-status"></p>
+                        </details>
                     </div>
                 </div>
 

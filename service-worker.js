@@ -42,12 +42,13 @@ const STATIC_ASSETS = [
   "./quiz_icon.png",
   "./quiz_icon.svg",
   "./quizmaster.html",
+  "./server.js",
   "./service-worker.js",
 ];
 // END_ASSETS
 
 const CACHE_PREFIX = "quiz-cache-";
-const CACHE_NAME = "quiz-cache-1793952049";
+const CACHE_NAME = "quiz-cache-1793952762";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {

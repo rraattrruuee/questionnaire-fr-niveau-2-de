@@ -853,7 +853,7 @@
     var lanNotice = $("lan-ip-notice");
     if (lanNotice) {
       if (S.netMode === "lan" && (location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
-        lanNotice.innerHTML = "💡 <strong>Conseil Wi-Fi :</strong> Vous êtes sur 'localhost'. Pour que les smartphones se connectent en Wi-Fi, ouvrez cette page sur l'adresse IP locale affichée par <code>./run.sh</code>.";
+        lanNotice.innerHTML = "💡 <strong>Conseil Wi-Fi :</strong> Vous êtes sur 'localhost'. Pour que les smartphones se connectent en Wi-Fi, ouvrez cette page sur l'adresse IP locale de votre machine ou utilisez le QR code.";
         lanNotice.classList.remove("hidden");
       } else {
         lanNotice.classList.add("hidden");
@@ -879,9 +879,10 @@
   }
 
   /* ============================================================
-     Relais réseau universel (Internet ntfy.sh + LAN local + Inter-onglets)
-     - Mode Internet : 100% gratuit, 0 compte, 0 carte bancaire
-     - Mode LAN : fonctionne 100% hors-ligne avec ./run.sh sur le réseau local
+     Relais réseau universel (100% JavaScript — aucun serveur Python)
+     - Mode Internet : relais cloud JS haute vitesse, 100% gratuit
+     - Mode LAN : fonctionne directement sur le site web en JavaScript
+       OU avec le serveur Node.js (node server.js) si exécuté en local
      - Inter-onglets : BroadcastChannel instantané (0 ms de latence)
      ============================================================ */
   var RELAY_BASE = "https://ntfy.sh";
@@ -889,19 +890,34 @@
 
   function getActiveRelayConfig() {
     if (S.netMode === "lan") {
-      var base = S.lanHost;
-      if (!base) {
-        if (location.protocol.startsWith("http")) {
-          base = location.origin + "/api/relay";
-        } else {
-          base = "http://localhost:8000/api/relay";
-        }
+      // 1. Si une URL de serveur local a été spécifiée
+      if (S.lanHost && S.lanHost.trim()) {
+        var customBase = S.lanHost.trim().replace(/\/+$/, "");
+        if (!customBase.endsWith("/api/relay")) customBase += "/api/relay";
+        return {
+          mode: "lan_local",
+          base: customBase,
+          wsBase: customBase.replace(/^http/, "ws"),
+          isLan: true
+        };
       }
-      base = base.replace(/\/+$/, "");
+      // 2. Si on tourne sur un serveur Node.js local (localhost / IP LAN)
+      var host = location.hostname || "";
+      var isLocalHost = host === "localhost" || host === "127.0.0.1" || /^192\.168\./.test(host) || /^10\./.test(host);
+      if (isLocalHost && location.protocol.startsWith("http")) {
+        var localBase = location.origin + "/api/relay";
+        return {
+          mode: "lan_local",
+          base: localBase,
+          wsBase: localBase.replace(/^http/, "ws"),
+          isLan: true
+        };
+      }
+      // 3. Directement sur le site web : serveur JS web direct (0 Python nécessaire)
       return {
-        mode: "lan",
-        base: base,
-        wsBase: base.replace(/^http/, "ws"),
+        mode: "lan_web",
+        base: RELAY_BASE,
+        wsBase: RELAY_WS_BASE,
         isLan: true
       };
     }
@@ -914,7 +930,8 @@
   }
 
   function getRelayTopic(code) {
-    return "qfr2_" + String(code || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    var prefix = S.netMode === "lan" ? "qfr2_lan_" : "qfr2_";
+    return prefix + String(code || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   }
 
   var activeBc = null;
@@ -1005,7 +1022,7 @@
     }
 
     // 2. Écoute réseau
-    if (cfg.mode === "lan") {
+    if (cfg.mode === "lan_local") {
       var lastPollId = 0;
       function startLanSse() {
         if (closed) return;
@@ -2724,7 +2741,7 @@
               }
             })
             .catch(function (err) {
-              setStatus($("lan-test-status"), "❌ Serveur LAN injoignable (" + err.message + "). Lancez ./run.sh sur l'hôte.", "is-error");
+              setStatus($("lan-test-status"), "❌ Serveur LAN injoignable (" + err.message + "). Lancez node server.js si vous utilisez un serveur local.", "is-error");
             });
         };
       }
