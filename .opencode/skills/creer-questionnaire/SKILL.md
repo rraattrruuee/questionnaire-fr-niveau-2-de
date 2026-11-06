@@ -83,6 +83,7 @@ description: Créer ou étendre un questionnaire dans ce projet PWA (questionnai
 | **`subject` = ID** | Le `subject` du fichier doit être l'**ID** de `config.subjects` (`francais`, pas `Francais`). |
 | **`title` aligné** | Le `title` du fichier doit être identique à celui de `config.json`. |
 | **Questions autonomes** | Une question doit être répondable seule à l'écran. Jamais de référence à un contenu non joint (image absente, extrait non recopié, question précédente). Voir §9. |
+| **Longueur homogène des options** | Pour chaque question QCM, toutes les options de réponse (`options`) doivent avoir **approximativement la même longueur** (nombre de caractères comparable) et le même degré de précision/détail. Interdit d'avoir une bonne réponse 2 ou 3 fois plus longue, plus complète ou plus développée que les distracteurs (ou inversement), car cela donne un indice visuel immédiat qui fausse l'évaluation. |
 | **UTF-8 sans escape** | `json.dump(..., ensure_ascii=False, indent=2)`. |
 | **ASCII pour les IDs** | `id` et `file` sans accents/espaces. |
 
@@ -237,6 +238,7 @@ nohup chromium --headless=new --no-sandbox --disable-gpu \
   - **Sans document** : poser une question de **connaissance générale du cours** formulée de façon totalement autonome (définition, propriété, valeur, calcul, raisonnement) — jamais de référence à « l'exemple ci-joint », « le schéma », « le texte ».
   - Test final avant livraison : masquer tout sauf une question → doit-elle être répondable seule ? Si non, la réécrire ou joindre le document.
 - **Diversité** : mélanger QCM, Vrai/Faux (`VF`), texte libre (`TXT`), avec chiffres exacts du cours.
+- **Longueur homogène des réponses (anti-indice)** : Pour chaque question QCM, veiller à ce que toutes les options de réponse fassent approximativement la même longueur (nombre de caractères similaire) et partagent un niveau de détail comparable. Les élèves repèrent instantanément la « bonne » réponse si elle est la seule à être rédigée avec une phrase complète, des explications riches ou des nuances alors que les distracteurs ne font que 3 mots. Rédiger les mauvaises réponses avec la même richesse de vocabulaire et la même longueur que la bonne réponse.
 - **Catégories** : thématically regroupées, 10–30 questions par catégorie (30 max conseillé).
 - **Exercices pratiques** : si demandé, les placer en **dernière catégorie** et activer `"notepad": true` sur elle (brouillon de calcul, jamais affiché comme réglage).
 - **`added`** : exécuter `date +%F` dans le terminal **avant** de remplir le champ, et utiliser **la sortie exacte de cette commande** (ne jamais deviner la date). Cette date déclenche le badge « Nouveau » (30 jours) et le tri « ✨ Nouveautés ».

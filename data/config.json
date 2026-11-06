@@ -266,6 +266,16 @@
       "description": "Entraînement 100% orienté dates et repères chronologiques : naissances d'empires, schisme de 1054, croisades, chutes de Jérusalem et Byzance, transferts culturels (70 questions).",
       "tags": ["histoire-geo", "dates", "chronologie", "reperes", "mediterranee", "croisades"],
       "added": "2026-11-05"
+    },
+    {
+      "id": "histoire-geo-empire-romain-brassage-cultures",
+      "title": "L'Empire romain — de la République au brassage des cultures et au christianisme",
+      "subject": "histoire-geo",
+      "file": "data/histoire-geo/empire-romain-brassage-cultures.json",
+      "questionsCount": 58,
+      "description": "Crise de la République, Octave-Auguste et le principat, romanisation, édit de Caracalla (212), essor et officialisation du christianisme (313-395).",
+      "tags": ["histoire", "rome", "empire-romain", "republique", "auguste", "christianisme", "caracalla"],
+      "added": "2026-11-06"
     }
   ],
   "tools": [

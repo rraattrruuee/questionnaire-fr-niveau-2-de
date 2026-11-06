@@ -172,7 +172,7 @@ rendu (puissances, fractions, etc.).
 }
 ```
 
-- `type: "mcq"` : `options` = liste des choix, `correct` = index (0 = 1er choix).
+- `type: "mcq"` : `options` = liste des choix (de longueur et précision homogènes pour ne pas trahir la bonne réponse), `correct` = index (0 = 1er choix).
 - `type: "text"` : `accepted` = reponses acceptees (comparaison insensible aux
   espaces, virgules et majuscules).
 - `solution` : explication affichee apres validation.
@@ -383,7 +383,12 @@ soit un QCM ("mcq"), soit une reponse libre ("text"). Le moteur interprete :
    <img src='...'> dans le "text". Si j'ai fourni le base64, recopie-le tel quel.
 10. Varie les questions (vocabulaire, comprehension, application, production) et
     les distracteurs. Accorde correctement genre et nombre.
-11. Verifie que le JSON est valide (virgules, accolades, crochets) avant de repondre.
+11. LONGUEUR HOMOGÈNE DES OPTIONS (TRÈS IMPORTANT) : Pour chaque question QCM,
+    toutes les options de réponse ("options") doivent avoir approximativement
+    la même longueur (nombre de caractères comparable) et le même niveau de détail.
+    Ne fais JAMAIS une bonne réponse visiblement plus longue, plus complète ou
+    plus nuancée que les distracteurs, afin de ne pas donner d'indice visuel involontaire.
+12. Verifie que le JSON est valide (virgules, accolades, crochets) avant de repondre.
 
 THEME A TRAITER : [SUJET DETAILLE]
 ```
@@ -446,9 +451,12 @@ pret a enregistrer. Reponds UNIQUEMENT avec le JSON : aucun texte, aucune balise
 3. "solution" = correction redigee etape par etape (calculs intermediaires).
 4. Un seul bon choix par QCM ; les distracteurs doivent etre plausibles
    (erreurs de calcul typiques, confusion d'unites, etc.).
-5. Aucun retour a la ligne reel dans une chaine : utilise <br>.
-6. Guillemets simples (') pour le HTML interne.
-7. Verifie que le JSON est valide avant de repondre.
+5. LONGUEUR ET STRUCTURE HOMOGÈNES : Les choix de réponses pour une même question
+   doivent avoir approximativement la même longueur et le même niveau de détail
+   (éviter qu'une réponse soit immédiatement repérable par sa taille ou sa précision).
+6. Aucun retour a la ligne reel dans une chaine : utilise <br>.
+7. Guillemets simples (') pour le HTML interne.
+8. Verifie que le JSON est valide avant de repondre.
 
 === PARAMETRES ===
 - Niveau : [NIVEAU]
