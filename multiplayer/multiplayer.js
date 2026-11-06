@@ -67,6 +67,12 @@
   function updateNetStatus(state) {
     var el = $("net-status");
     if (!el) return;
+    if (S.netMode === "lan") {
+      el.textContent = "🏠 LAN direct";
+      el.classList.remove("is-off");
+      bumpClass(el);
+      return;
+    }
     if (!navigator.onLine) {
       el.textContent = "📴 Hors ligne";
       el.classList.add("is-off");
@@ -214,16 +220,25 @@
 
   function addImportedQuizOption(selectIt) {
     if (!importedQuiz) return;
-    var quizSel = $("setup-quiz");
-    if (!quizSel) return;
-    var existing = quizSel.querySelector('option[value="' + IMPORTED_ID + '"]');
-    if (existing) existing.remove();
     var count = countQuizQuestions(importedQuiz.cats);
-    var opt = document.createElement("option");
-    opt.value = IMPORTED_ID;
-    opt.textContent = "📄 " + importedQuiz.title + " (" + count + " q)";
-    quizSel.insertBefore(opt, quizSel.firstChild);
-    if (selectIt) quizSel.value = IMPORTED_ID;
+    var existingIndex = (CFG.quizzes || []).findIndex(function (q) { return q.id === IMPORTED_ID; });
+    var entry = {
+      id: IMPORTED_ID,
+      title: "📄 " + importedQuiz.title,
+      subject: "__imported__",
+      file: "",
+      questionsCount: count,
+      cats: importedQuiz.cats
+    };
+    if (existingIndex >= 0) {
+      CFG.quizzes[existingIndex] = entry;
+    } else {
+      CFG.quizzes.unshift(entry);
+    }
+    if (selectIt) {
+      selectedQuizIds.add(IMPORTED_ID);
+    }
+    renderQuizList();
   }
 
   /* ============================================================
@@ -299,6 +314,9 @@
   var S = {
     role: null,          // "host" | "client"
     mode: 1,             // 1 = même question, 2 = questions différentes
+    netMode: "cloud",    // "cloud" | "lan"
+    lanHost: "",         // URL / IP personnalisée pour le serveur LAN
+    totalAvailable: 0,   // Nombre total de questions disponibles dans les quiz sélectionnés
     peer: null,
     relay: null,         // relais réseau universel
     code: null,
@@ -790,8 +808,8 @@
      HOST — création de la partie
      ============================================================ */
   function hostCreate() {
-    if (!navigator.onLine) {
-      setStatus($("home-status"), "Connexion Internet requise pour le multijoueur.", "is-error");
+    if (!navigator.onLine && S.netMode !== "lan") {
+      setStatus($("home-status"), "Connexion Internet requise en mode Internet. Pour jouer hors-ligne, sélectionne 'Réseau Local (LAN)'.", "is-error");
       return;
     }
     if (!coreReady()) {
@@ -819,11 +837,34 @@
     $("btn-copy").classList.remove("hidden");
     $("lobby-title").textContent = "Partie créée !";
     $("room-code").textContent = S.code;
+
+    // Badge réseau dans le lobby
+    var netBadge = $("lobby-net-badge");
+    if (netBadge) {
+      if (S.netMode === "lan") {
+        netBadge.textContent = "🏠 Mode Réseau Local (LAN)";
+        netBadge.style.color = "var(--accent, #3b82f6)";
+      } else {
+        netBadge.textContent = "🌐 Mode Internet";
+        netBadge.style.color = "var(--success, #10b981)";
+      }
+    }
+
+    var lanNotice = $("lan-ip-notice");
+    if (lanNotice) {
+      if (S.netMode === "lan" && (location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+        lanNotice.innerHTML = "💡 <strong>Conseil Wi-Fi :</strong> Vous êtes sur 'localhost'. Pour que les smartphones se connectent en Wi-Fi, ouvrez cette page sur l'adresse IP locale affichée par <code>./run.sh</code>.";
+        lanNotice.classList.remove("hidden");
+      } else {
+        lanNotice.classList.add("hidden");
+      }
+    }
+
     setStatus($("home-status"), "");
     setStatus($("lobby-status"), "En attente des joueurs… scanne le QR code !");
     setStatus($("setup-status"), "Chargement des questionnaires…");
     renderQR();
-    track("multiplayer_host_create");
+    track("multiplayer_host_create", { netMode: S.netMode });
 
     loadConfig()
       .then(function (cfg) {
@@ -838,19 +879,73 @@
   }
 
   /* ============================================================
-     Relais réseau universel (WebSocket + SSE)
-     - 100% gratuit, 0 compte, 0 carte bancaire
-     - Fonctionne de partout (4G/5G, Wi-Fi, école, bureau, CGNAT)
+     Relais réseau universel (Internet ntfy.sh + LAN local + Inter-onglets)
+     - Mode Internet : 100% gratuit, 0 compte, 0 carte bancaire
+     - Mode LAN : fonctionne 100% hors-ligne avec ./run.sh sur le réseau local
+     - Inter-onglets : BroadcastChannel instantané (0 ms de latence)
      ============================================================ */
   var RELAY_BASE = "https://ntfy.sh";
   var RELAY_WS_BASE = "wss://ntfy.sh";
+
+  function getActiveRelayConfig() {
+    if (S.netMode === "lan") {
+      var base = S.lanHost;
+      if (!base) {
+        if (location.protocol.startsWith("http")) {
+          base = location.origin + "/api/relay";
+        } else {
+          base = "http://localhost:8000/api/relay";
+        }
+      }
+      base = base.replace(/\/+$/, "");
+      return {
+        mode: "lan",
+        base: base,
+        wsBase: base.replace(/^http/, "ws"),
+        isLan: true
+      };
+    }
+    return {
+      mode: "cloud",
+      base: RELAY_BASE,
+      wsBase: RELAY_WS_BASE,
+      isLan: false
+    };
+  }
 
   function getRelayTopic(code) {
     return "qfr2_" + String(code || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   }
 
+  var activeBc = null;
+  function getBroadcastChannel(topic) {
+    if (typeof BroadcastChannel === "undefined") return null;
+    try {
+      if (!activeBc || activeBc.name !== "qfr2_" + topic) {
+        if (activeBc) { try { activeBc.close(); } catch (e) {} }
+        activeBc = new BroadcastChannel("qfr2_" + topic);
+      }
+      return activeBc;
+    } catch (e) {
+      return null;
+    }
+  }
+
   function relayPublish(topic, msgObj) {
-    return fetch(RELAY_BASE + "/" + topic, {
+    if (!msgObj) return Promise.resolve();
+    if (!msgObj._mid) {
+      msgObj._mid = Math.random().toString(36).slice(2, 9) + Date.now().toString(36);
+    }
+
+    // 1. Relais local instantané sur la même machine
+    var bc = getBroadcastChannel(topic);
+    if (bc) {
+      try { bc.postMessage(msgObj); } catch (e) {}
+    }
+
+    // 2. Relais réseau (LAN ou Cloud)
+    var cfg = getActiveRelayConfig();
+    return fetch(cfg.base + "/" + topic, {
       method: "POST",
       headers: { "Content-Type": "text/plain; charset=utf-8" },
       body: JSON.stringify(msgObj)
@@ -862,8 +957,34 @@
   function relaySubscribe(topic, onMessage, onError) {
     var ws = null;
     var sse = null;
+    var pollTimer = null;
     var closed = false;
     var seenIds = new Set();
+    var seenMids = new Set();
+    var cfg = getActiveRelayConfig();
+
+    function handlePayload(payload) {
+      if (!payload) return;
+      if (payload._mid) {
+        if (seenMids.has(payload._mid)) return;
+        seenMids.add(payload._mid);
+        if (seenMids.size > 200) {
+          var first = seenMids.values().next().value;
+          seenMids.delete(first);
+        }
+      }
+      onMessage(payload);
+    }
+
+    // 1. Écoute locale inter-onglets
+    var bc = getBroadcastChannel(topic);
+    if (bc) {
+      bc.onmessage = function (e) {
+        if (e.data && typeof e.data === "object") {
+          handlePayload(e.data);
+        }
+      };
+    }
 
     function handleRaw(rawStr) {
       try {
@@ -877,52 +998,102 @@
               seenIds.delete(first);
             }
           }
-          var payload = JSON.parse(raw.message);
-          onMessage(payload);
+          var payload = typeof raw.message === "string" ? JSON.parse(raw.message) : raw.message;
+          handlePayload(payload);
         }
       } catch (e) {}
     }
 
-    function startWs() {
-      if (closed) return;
-      try {
-        ws = new WebSocket(RELAY_WS_BASE + "/" + topic + "/ws?since=2m");
-        ws.onmessage = function (e) {
-          handleRaw(e.data);
-        };
-        ws.onerror = function () {
-          if (!closed && !sse) startSse();
-        };
-        ws.onclose = function () {
-          if (!closed && !sse) {
-            setTimeout(startWs, 1500);
-          }
-        };
-      } catch (e) {
-        startSse();
+    // 2. Écoute réseau
+    if (cfg.mode === "lan") {
+      var lastPollId = 0;
+      function startLanSse() {
+        if (closed) return;
+        try {
+          sse = new EventSource(cfg.base + "/" + topic + "/sse");
+          sse.onmessage = function (e) {
+            handleRaw(e.data);
+          };
+          sse.onerror = function () {
+            if (closed) return;
+            try { sse.close(); } catch (err) {}
+            sse = null;
+            startLanPolling();
+          };
+        } catch (e) {
+          startLanPolling();
+        }
       }
-    }
 
-    function startSse() {
-      if (closed || sse) return;
-      try {
-        sse = new EventSource(RELAY_BASE + "/" + topic + "/sse?since=2m");
-        sse.onmessage = function (e) {
-          handleRaw(e.data);
-        };
-        sse.onerror = function () {
-          if (onError) onError();
-        };
-      } catch (e) {}
-    }
+      function startLanPolling() {
+        if (closed || pollTimer) return;
+        function poll() {
+          if (closed) return;
+          fetch(cfg.base + "/" + topic + "?since=" + lastPollId)
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              if (data && data.messages && data.messages.length) {
+                data.messages.forEach(function (m) {
+                  lastPollId = Math.max(lastPollId, parseInt(m.id, 10) || 0);
+                  try {
+                    var payload = JSON.parse(m.message);
+                    handlePayload(payload);
+                  } catch (err) {}
+                });
+              }
+            })
+            .catch(function () {})
+            .then(function () {
+              if (!closed) pollTimer = setTimeout(poll, 350);
+            });
+        }
+        poll();
+      }
 
-    startWs();
+      startLanSse();
+    } else {
+      function startWs() {
+        if (closed) return;
+        try {
+          ws = new WebSocket(cfg.wsBase + "/" + topic + "/ws?since=2m");
+          ws.onmessage = function (e) {
+            handleRaw(e.data);
+          };
+          ws.onerror = function () {
+            if (!closed && !sse) startSse();
+          };
+          ws.onclose = function () {
+            if (!closed && !sse) {
+              setTimeout(startWs, 1500);
+            }
+          };
+        } catch (e) {
+          startSse();
+        }
+      }
+
+      function startSse() {
+        if (closed || sse) return;
+        try {
+          sse = new EventSource(cfg.base + "/" + topic + "/sse?since=2m");
+          sse.onmessage = function (e) {
+            handleRaw(e.data);
+          };
+          sse.onerror = function () {
+            if (onError) onError();
+          };
+        } catch (e) {}
+      }
+
+      startWs();
+    }
 
     return {
       close: function () {
         closed = true;
         if (ws) { try { ws.close(); } catch (e) {} ws = null; }
         if (sse) { try { sse.close(); } catch (e) {} sse = null; }
+        if (pollTimer) { clearTimeout(pollTimer); pollTimer = null; }
       }
     };
   }
@@ -1026,7 +1197,12 @@
   function joinUrlFor(code) {
     var base = location.href.split("?")[0].split("#")[0].replace(/index\.html$/, "");
     if (!base.endsWith("/")) base += "/";
-    return base + "?room=" + code;
+    var params = ["room=" + encodeURIComponent(code)];
+    if (S.netMode === "lan") {
+      params.push("net=lan");
+      if (S.lanHost) params.push("lan_host=" + encodeURIComponent(S.lanHost));
+    }
+    return base + "?" + params.join("&");
   }
 
   function renderQR() {
@@ -1132,91 +1308,288 @@
   }
 
   /* ============================================================
-     HOST — réglages & démarrage
+     HOST — sélection multiple des quiz & réglages
      ============================================================ */
+  var selectedQuizIds = new Set();
+
+  function getSelectedQuizIds() {
+    return Array.from(selectedQuizIds);
+  }
+
   function populateQuizSelect(cfg) {
     CFG.subjects = cfg.subjects || [];
     CFG.quizzes = cfg.quizzes || [];
-    var subjectsById = {};
-    CFG.subjects.forEach(function (s) { subjectsById[s.id] = s; });
 
-    // 1. Matière → liste des matières qui ont au moins un questionnaire
+    // Matières disponibles
     var bySubject = {};
     CFG.quizzes.forEach(function (q) {
       if (!bySubject[q.subject]) bySubject[q.subject] = [];
       bySubject[q.subject].push(q);
     });
     var matSel = $("setup-matiere");
-    var matHtml = '<option value="__all__">🌍 Toutes les matières</option>';
-    CFG.subjects.forEach(function (s) {
-      if (!bySubject[s.id]) return;
-      matHtml += '<option value="' + esc(s.id) + '">' +
-        esc((s.icon || "📁") + " " + s.name) + " (" + bySubject[s.id].length + ")</option>";
-    });
-    matSel.innerHTML = matHtml;
-
-    // 2. Questionnaire → filtré par la matière sélectionnée
-    var quizSel = $("setup-quiz");
-    function fillQuizOptions() {
-      var mat = matSel.value;
-      var list = CFG.quizzes.filter(function (q) {
-        return mat === "__all__" || q.subject === mat;
+    if (matSel) {
+      var matHtml = '<option value="__all__">🌍 Toutes les matières</option>';
+      CFG.subjects.forEach(function (s) {
+        if (!bySubject[s.id]) return;
+        matHtml += '<option value="' + esc(s.id) + '">' +
+          esc((s.icon || "📁") + " " + s.name) + " (" + bySubject[s.id].length + ")</option>";
       });
+      matSel.innerHTML = matHtml;
+      matSel.onchange = renderQuizList;
+    }
+
+    // Par défaut, si aucun quiz sélectionné, sélectionner le premier quiz
+    if (selectedQuizIds.size === 0 && CFG.quizzes.length > 0) {
+      selectedQuizIds.add(CFG.quizzes[0].id);
+    }
+
+    // Recherche
+    var searchInput = $("setup-quiz-search");
+    if (searchInput) {
+      searchInput.oninput = renderQuizList;
+    }
+
+    // Boutons tout cocher / tout décocher
+    var btnSelectAll = $("btn-select-all-quizzes");
+    if (btnSelectAll) {
+      btnSelectAll.onclick = function () {
+        getCurrentlyFilteredQuizzes().forEach(function (q) {
+          selectedQuizIds.add(q.id);
+        });
+        renderQuizList();
+      };
+    }
+    var btnDeselectAll = $("btn-deselect-all-quizzes");
+    if (btnDeselectAll) {
+      btnDeselectAll.onclick = function () {
+        getCurrentlyFilteredQuizzes().forEach(function (q) {
+          selectedQuizIds.delete(q.id);
+        });
+        renderQuizList();
+      };
+    }
+
+    // Rendu initial
+    renderQuizList();
+  }
+
+  function getCurrentlyFilteredQuizzes() {
+    var matSel = $("setup-matiere");
+    var activeMat = matSel ? matSel.value : "__all__";
+    var searchInput = $("setup-quiz-search");
+    var query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+
+    var subjectsById = {};
+    (CFG.subjects || []).forEach(function (s) { subjectsById[s.id] = s; });
+
+    return (CFG.quizzes || []).filter(function (q) {
+      if (activeMat !== "__all__" && q.subject !== activeMat) return false;
+      if (query) {
+        var t = (q.title || "").toLowerCase();
+        var sName = subjectsById[q.subject] ? subjectsById[q.subject].name.toLowerCase() : "";
+        if (!t.includes(query) && !sName.includes(query)) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderQuizList() {
+    var container = $("setup-quizzes-list");
+    if (!container) return;
+
+    var subjectsById = {};
+    (CFG.subjects || []).forEach(function (s) { subjectsById[s.id] = s; });
+
+    var list = getCurrentlyFilteredQuizzes();
+
+    if (list.length === 0) {
+      container.innerHTML = '<div class="mp-dim" style="padding:0.8rem;text-align:center;">Aucun questionnaire trouvé.</div>';
+    } else {
       var html = "";
       list.forEach(function (q) {
         var s = subjectsById[q.subject];
-        var label = (s ? s.icon + " " : "") + q.title + " (" + (q.questionsCount || "?") + " q)";
-        html += '<option value="' + esc(q.id) + '">' + esc(label) + "</option>";
+        var icon = (s && s.icon) ? s.icon : "📁";
+        var isChecked = selectedQuizIds.has(q.id);
+        var count = q.questionsCount || (q.cats ? countQuizQuestions(q.cats) : "?");
+        var subName = s ? s.name : (q.subject === "__imported__" ? "Quiz importé" : q.subject || "Général");
+        html += '<label class="mp-quiz-item' + (isChecked ? " is-checked" : "") + '" data-quiz-id="' + esc(q.id) + '">' +
+          '<input type="checkbox" class="mp-quiz-checkbox" value="' + esc(q.id) + '"' + (isChecked ? " checked" : "") + ' />' +
+          '<span class="mp-quiz-item-icon">' + esc(icon) + '</span>' +
+          '<div class="mp-quiz-item-info">' +
+            '<div class="mp-quiz-item-title">' + esc(q.title) + '</div>' +
+            '<div class="mp-quiz-item-sub">' + esc(subName) + ' · ' + count + ' questions</div>' +
+          '</div>' +
+          '<span class="mp-quiz-badge">' + count + ' q</span>' +
+        '</label>';
       });
-      quizSel.innerHTML = html || '<option value="">Aucun questionnaire</option>';
-      addImportedQuizOption(true); // le quiz importé reste toujours accessible
-      quizSel.onchange = populateCatSelect;
-      populateCatSelect();
+      container.innerHTML = html;
     }
-    matSel.onchange = fillQuizOptions;
-    fillQuizOptions();
+
+    container.querySelectorAll(".mp-quiz-checkbox").forEach(function (cb) {
+      cb.onchange = function () {
+        var id = cb.value;
+        if (cb.checked) {
+          selectedQuizIds.add(id);
+        } else {
+          selectedQuizIds.delete(id);
+        }
+        var item = cb.closest(".mp-quiz-item");
+        if (item) item.classList.toggle("is-checked", cb.checked);
+        updateQuizSummary();
+      };
+    });
+
+    updateQuizSummary();
   }
 
-  function populateCatSelect() {
-    var quizId = $("setup-quiz").value;
+  function updateQuizSummary() {
+    var countEl = $("setup-quizzes-count");
+    var totalEl = $("setup-quizzes-total-questions");
+    var catField = $("setup-cat-field");
+    var nSelected = selectedQuizIds.size;
+
+    if (countEl) {
+      countEl.textContent = nSelected + " questionnaire" + (nSelected > 1 ? "s" : "") + " sélectionné" + (nSelected > 1 ? "s" : "");
+    }
+
+    var totalQuestions = 0;
+    var selectedList = (CFG.quizzes || []).filter(function (q) { return selectedQuizIds.has(q.id); });
+    selectedList.forEach(function (q) {
+      totalQuestions += (q.questionsCount || (q.cats ? countQuizQuestions(q.cats) : 0));
+    });
+    S.totalAvailable = totalQuestions;
+
+    if (totalEl) {
+      totalEl.textContent = "(" + totalQuestions + " question" + (totalQuestions > 1 ? "s" : "") + " au total)";
+    }
+
+    // Gestion du champ catégorie
+    if (nSelected === 1) {
+      if (catField) catField.classList.remove("hidden");
+      populateCatSelectFor(selectedList[0].id);
+    } else {
+      if (catField) {
+        var catSel = $("setup-cat");
+        if (nSelected > 1) {
+          catField.classList.remove("hidden");
+          if (catSel) catSel.innerHTML = '<option value="all">🎲 Toutes les catégories de tous les quiz sélectionnés</option>';
+        } else {
+          catField.classList.add("hidden");
+        }
+      }
+    }
+
+    updateLimitHint();
+
+    var btnStart = $("btn-start");
+    if (btnStart) {
+      btnStart.disabled = (nSelected === 0 || activePlayers().length < 1);
+    }
+  }
+
+  function populateCatSelectFor(quizId) {
     var catSel = $("setup-cat");
-    if (!quizId) { catSel.innerHTML = ""; return; }
-    catSel.innerHTML = '<option value="all">⏳ Chargement…</option>';
+    if (!catSel || !quizId) return;
+    catSel.innerHTML = '<option value="all">⏳ Chargement des catégories…</option>';
     loadQuizCats(quizId)
       .then(function (entry) {
-        var html = "";
+        var html = '<option value="all">🎲 Toutes les catégories (mélange)</option>';
         entry.cats.forEach(function (c, i) {
           html += '<option value="' + i + '">' + esc(c.name) + " (" + c.questions.length + " q)</option>";
         });
-        html = '<option value="all">🎲 Toutes les catégories (mélange)</option>' + html;
         catSel.innerHTML = html;
         setStatus($("setup-status"), "");
       })
       .catch(function (err) {
         catSel.innerHTML = '<option value="all">Toutes les catégories</option>';
-        setStatus($("setup-status"), "Erreur de chargement : " + err.message, "is-error");
       });
   }
 
-  function buildPool() {
-    var quizId = $("setup-quiz").value;
-    var scope = $("setup-cat").value;
-    var limit = parseInt($("setup-limit").value, 10) || 0;
-    if (!quizId) return Promise.reject(new Error("Choisis un questionnaire."));
-    return loadQuizCats(quizId).then(function (entry) {
-      var qs = [];
-      if (scope === "all") {
-        entry.cats.forEach(function (c) { qs = qs.concat(c.questions); });
+  function updateLimitHint() {
+    var hint = $("setup-limit-hint");
+    var input = $("setup-limit-input");
+    if (!hint || !input) return;
+    var total = S.totalAvailable || 0;
+    var currentVal = parseInt(input.value, 10);
+
+    if (isNaN(currentVal) || currentVal <= 0) {
+      hint.textContent = "Toutes les questions seront jouées (total : " + total + " questions).";
+    } else if (currentVal > total && total > 0) {
+      hint.textContent = "Tu as demandé " + currentVal + " questions, mais seulement " + total + " sont disponibles : toutes les " + total + " seront jouées.";
+    } else {
+      hint.textContent = "Exactement " + currentVal + " question" + (currentVal > 1 ? "s seront tirées" : " sera tirée") + " au hasard parmi les " + total + " disponibles.";
+    }
+
+    document.querySelectorAll(".mp-preset-btn").forEach(function (btn) {
+      var val = btn.dataset.val;
+      if (val === "all" || val === "max") {
+        btn.classList.toggle("active", currentVal >= total && total > 0);
       } else {
-        qs = entry.cats[Number(scope)] ? entry.cats[Number(scope)].questions.slice() : [];
+        btn.classList.toggle("active", Number(val) === currentVal);
       }
-      qs = shuffle(qs.slice());
-      if (limit > 0 && qs.length > limit) qs = qs.slice(0, limit);
-      if (qs.length === 0) throw new Error("Aucune question dans cette sélection.");
+    });
+  }
+
+  function buildPool() {
+    var quizIds = getSelectedQuizIds();
+    if (!quizIds || quizIds.length === 0) {
+      return Promise.reject(new Error("Choisis au moins un questionnaire."));
+    }
+    var scope = $("setup-cat") ? $("setup-cat").value : "all";
+    var limitInput = $("setup-limit-input");
+    var limit = limitInput ? parseInt(limitInput.value, 10) : 20;
+    if (isNaN(limit) || limit <= 0) limit = 0; // 0 = toutes
+
+    return Promise.all(quizIds.map(function (qid) {
+      return loadQuizCats(qid);
+    })).then(function (entries) {
+      var allQs = [];
+      var titles = [];
+
+      entries.forEach(function (entry) {
+        titles.push(entry.meta.title);
+        if (entries.length === 1 && scope !== "all") {
+          var catIndex = Number(scope);
+          if (entry.cats[catIndex] && entry.cats[catIndex].questions) {
+            allQs = allQs.concat(entry.cats[catIndex].questions);
+          }
+        } else {
+          entry.cats.forEach(function (c) {
+            if (c.questions) allQs = allQs.concat(c.questions);
+          });
+        }
+      });
+
+      if (allQs.length === 0) {
+        throw new Error("Aucune question dans la sélection.");
+      }
+
+      var shuffled = shuffle(allQs.slice());
+      if (limit > 0 && shuffled.length > limit) {
+        shuffled = shuffled.slice(0, limit);
+      }
+
+      var summaryTitle = "";
+      if (entries.length === 1) {
+        summaryTitle = entries[0].meta.title;
+      } else {
+        summaryTitle = entries.length + " questionnaires combinés";
+      }
+
+      var catLabel = "";
+      if (entries.length === 1 && scope !== "all") {
+        var catIndex = Number(scope);
+        catLabel = entries[0].cats[catIndex] ? entries[0].cats[catIndex].name : "Catégorie";
+      } else if (entries.length === 1) {
+        catLabel = "Toutes les catégories";
+      } else {
+        catLabel = entries.length + " quiz (" + shuffled.length + " questions)";
+      }
+
       return {
-        pool: qs,
-        meta: entry.meta,
-        catLabel: scope === "all" ? "Toutes les catégories" : entry.cats[Number(scope)].name
+        pool: shuffled,
+        meta: { title: summaryTitle },
+        catLabel: catLabel
       };
     });
   }
@@ -1654,8 +2027,8 @@
      CLIENT
      ============================================================ */
   function clientJoin() {
-    if (!navigator.onLine) {
-      setStatus($("home-status"), "Connexion Internet requise pour le multijoueur.", "is-error");
+    if (!navigator.onLine && S.netMode !== "lan") {
+      setStatus($("home-status"), "Connexion Internet requise en mode Internet. Pour jouer hors-ligne, sélectionne 'Réseau Local (LAN)'.", "is-error");
       return;
     }
     if (!coreReady()) {
@@ -1669,8 +2042,9 @@
       return;
     }
     $("btn-join").disabled = true;
-    setStatus($("home-status"), "Connexion à la partie " + code + "…");
-    track("multiplayer_join_attempt");
+    var netNote = S.netMode === "lan" ? "en LAN" : "";
+    setStatus($("home-status"), "Connexion à la partie " + code + " " + netNote + "…");
+    track("multiplayer_join_attempt", { netMode: S.netMode });
 
     if (S.conn) { try { S.conn.close(); } catch (e) {} }
     var conn = createPlayerRelay(code, name);
@@ -2286,6 +2660,107 @@
       }
     });
 
+    // Sélecteur Mode Réseau (Internet vs LAN)
+    var tabCloud = $("tab-net-cloud");
+    var tabLan = $("tab-net-lan");
+    var lanPanel = $("lan-config-panel");
+
+    function setNetMode(mode) {
+      S.netMode = mode;
+      try { localStorage.setItem("mp_net_mode", mode); } catch (e) {}
+      if (tabCloud) {
+        tabCloud.classList.toggle("active", mode === "cloud");
+        tabCloud.setAttribute("aria-selected", mode === "cloud" ? "true" : "false");
+      }
+      if (tabLan) {
+        tabLan.classList.toggle("active", mode === "lan");
+        tabLan.setAttribute("aria-selected", mode === "lan" ? "true" : "false");
+      }
+      if (lanPanel) {
+        lanPanel.classList.toggle("hidden", mode !== "lan");
+      }
+      updateNetStatus();
+    }
+
+    if (tabCloud) {
+      tabCloud.onclick = function () { setNetMode("cloud"); };
+    }
+    if (tabLan) {
+      tabLan.onclick = function () { setNetMode("lan"); };
+    }
+
+    var lanServerInput = $("lan-server-input");
+    if (lanServerInput) {
+      var savedLan = "";
+      try { savedLan = localStorage.getItem("mp_lan_server") || ""; } catch (e) {}
+      if (!savedLan && location.protocol.startsWith("http")) {
+        savedLan = location.origin;
+      }
+      lanServerInput.value = savedLan;
+      S.lanHost = savedLan;
+
+      var btnLanApply = $("btn-lan-apply");
+      if (btnLanApply) {
+        btnLanApply.onclick = function () {
+          var val = lanServerInput.value.trim().replace(/\/+$/, "");
+          S.lanHost = val;
+          try { localStorage.setItem("mp_lan_server", val); } catch (e) {}
+          setStatus($("lan-test-status"), "✅ Adresse LAN enregistrée : " + val, "is-ok");
+        };
+      }
+
+      var btnLanTest = $("btn-lan-test");
+      if (btnLanTest) {
+        btnLanTest.onclick = function () {
+          var val = (lanServerInput.value.trim().replace(/\/+$/, "")) || location.origin;
+          setStatus($("lan-test-status"), "Test de connexion au serveur LAN…");
+          fetch(val + "/api/relay/ping", { mode: "cors" })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              if (data && data.ok) {
+                setStatus($("lan-test-status"), "✅ Serveur LAN actif et connecté !", "is-ok");
+              } else {
+                setStatus($("lan-test-status"), "⚠️ Réponse inattendue du serveur LAN.", "is-error");
+              }
+            })
+            .catch(function (err) {
+              setStatus($("lan-test-status"), "❌ Serveur LAN injoignable (" + err.message + "). Lancez ./run.sh sur l'hôte.", "is-error");
+            });
+        };
+      }
+    }
+
+    // Réglage nombre de questions libre
+    var limitInput = $("setup-limit-input");
+    if (limitInput) {
+      limitInput.addEventListener("input", function () {
+        updateLimitHint();
+      });
+    }
+
+    var btnLimitAll = $("btn-limit-all");
+    if (btnLimitAll) {
+      btnLimitAll.onclick = function () {
+        if (limitInput) {
+          limitInput.value = S.totalAvailable > 0 ? S.totalAvailable : 20;
+          updateLimitHint();
+        }
+      };
+    }
+
+    document.querySelectorAll(".mp-preset-btn").forEach(function (btn) {
+      btn.onclick = function () {
+        if (!limitInput) return;
+        var val = btn.dataset.val;
+        if (val === "all" || val === "max") {
+          limitInput.value = S.totalAvailable > 0 ? S.totalAvailable : 20;
+        } else {
+          limitInput.value = Number(val);
+        }
+        updateLimitHint();
+      };
+    });
+
     $("btn-again").onclick = function () {
       if (S.role === "host") hostResetToLobby();
       else backToLobbyWait();
@@ -2294,8 +2769,8 @@
     // Réseau & Reconnexion
     function syncNet() {
       updateNetStatus();
-      if (!navigator.onLine) {
-        setStatus($("home-status"), "Hors ligne : le multijoueur nécessite Internet.", "is-error");
+      if (!navigator.onLine && S.netMode !== "lan") {
+        setStatus($("home-status"), "Hors ligne : le mode Internet nécessite une connexion.", "is-error");
       }
     }
     window.addEventListener("online", syncNet);
@@ -2314,8 +2789,37 @@
     });
     window.addEventListener("focus", handleWake);
 
+    // Initialisation du mode réseau (détection automatique ou URL)
+    var urlParams = new URLSearchParams(window.location.search);
+    var urlNet = urlParams.get("net");
+    var urlLanHost = urlParams.get("lan_host");
+    if (urlLanHost) {
+      S.lanHost = decodeURIComponent(urlLanHost);
+      if (lanServerInput) lanServerInput.value = S.lanHost;
+    }
+
+    var host = location.hostname || "";
+    var isPrivateLan = host === "localhost" || host === "127.0.0.1" ||
+      /^192\.168\./.test(host) || /^10\./.test(host) || /^172\.(1[6-9]|2\d|3[0-1])\./.test(host) || /\.local$/.test(host);
+
+    var initialMode = "cloud";
+    if (urlNet === "lan") {
+      initialMode = "lan";
+    } else if (urlNet === "cloud") {
+      initialMode = "cloud";
+    } else {
+      var savedMode = "";
+      try { savedMode = localStorage.getItem("mp_net_mode"); } catch (e) {}
+      if (savedMode === "lan" || savedMode === "cloud") {
+        initialMode = savedMode;
+      } else if (isPrivateLan) {
+        initialMode = "lan";
+      }
+    }
+    setNetMode(initialMode);
+
     // Lien de rejoignage direct ?room=CODE (depuis le QR code)
-    var room = new URLSearchParams(window.location.search).get("room");
+    var room = urlParams.get("room");
     if (room) {
       $("join-code").value = room.toUpperCase();
       setTimeout(function () { $("join-name").focus(); }, 250);

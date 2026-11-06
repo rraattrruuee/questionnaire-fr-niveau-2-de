@@ -84,12 +84,16 @@ if [ "$OPEN_BROWSER" -eq 1 ]; then
   ) &
 fi
 
-# --- Serveur Python (no-cache) ---
+# --- Serveur Python (no-cache + relais multijoueur LAN) ---
 exec "$PY" - "$PORT" "$DIR" <<'PYEOF'
 import http.server
 import socketserver
 import sys
 import os
+import json
+import time
+import threading
+import urllib.parse
 
 try:
     port = int(sys.argv[1])
@@ -97,10 +101,135 @@ except (IndexError, ValueError):
     port = 8000
 directory = sys.argv[2] if len(sys.argv) > 2 else os.getcwd()
 
+# Relais LAN en mémoire pour le multijoueur local (100% hors-ligne)
+RELAY_STORE = {}
+RELAY_LOCK = threading.Lock()
+RELAY_NOTIFY = threading.Condition(RELAY_LOCK)
+RELAY_MSG_ID = 0
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=directory, **kwargs)
+
+    def do_OPTIONS(self):
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, Cache-Control")
+        self.send_header("Access-Control-Max-Age", "86400")
+        self.end_headers()
+
+    def do_POST(self):
+        global RELAY_MSG_ID
+        parsed = urllib.parse.urlparse(self.path)
+        path = parsed.path
+        if path.startswith("/api/relay/"):
+            topic = path[len("/api/relay/"):].strip("/")
+            content_length = int(self.headers.get("Content-Length", 0))
+            body_bytes = self.rfile.read(content_length)
+            body_str = body_bytes.decode("utf-8", errors="replace")
+
+            with RELAY_NOTIFY:
+                RELAY_MSG_ID += 1
+                msg_entry = {
+                    "id": str(RELAY_MSG_ID),
+                    "time": time.time(),
+                    "message": body_str
+                }
+                if topic not in RELAY_STORE:
+                    RELAY_STORE[topic] = []
+                RELAY_STORE[topic].append(msg_entry)
+                if len(RELAY_STORE[topic]) > 200:
+                    RELAY_STORE[topic] = RELAY_STORE[topic][-200:]
+                RELAY_NOTIFY.notify_all()
+
+            resp = json.dumps({"ok": True, "id": str(RELAY_MSG_ID)}).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(resp)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(resp)
+            return
+
+        super().do_POST()
+
+    def do_GET(self):
+        parsed = urllib.parse.urlparse(self.path)
+        path = parsed.path
+
+        if path == "/api/relay/ping" or path == "/api/relay":
+            resp = json.dumps({"ok": True, "server": "qfr2-lan-relay"}).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(resp)
+            return
+
+        if path.startswith("/api/relay/"):
+            subpath = path[len("/api/relay/"):].strip("/")
+            is_sse = subpath.endswith("/sse")
+            topic = subpath[:-4] if is_sse else subpath
+
+            if is_sse:
+                # Mode Server-Sent Events (SSE)
+                self.send_response(200)
+                self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+                self.send_header("Cache-Control", "no-cache, no-transform")
+                self.send_header("Connection", "keep-alive")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+
+                last_seen_id = 0
+                now = time.time()
+                with RELAY_LOCK:
+                    msgs = [m for m in RELAY_STORE.get(topic, []) if now - m["time"] < 120]
+                    if msgs:
+                        last_seen_id = int(msgs[-1]["id"])
+
+                try:
+                    for m in msgs:
+                        payload = json.dumps({"event": "message", "id": m["id"], "message": m["message"]})
+                        self.wfile.write(f"data: {payload}\n\n".encode("utf-8"))
+                        self.wfile.flush()
+
+                    while True:
+                        new_msgs = []
+                        with RELAY_NOTIFY:
+                            RELAY_NOTIFY.wait(timeout=10.0)
+                            all_t = RELAY_STORE.get(topic, [])
+                            new_msgs = [m for m in all_t if int(m["id"]) > last_seen_id]
+                            if new_msgs:
+                                last_seen_id = int(new_msgs[-1]["id"])
+
+                        if new_msgs:
+                            for m in new_msgs:
+                                payload = json.dumps({"event": "message", "id": m["id"], "message": m["message"]})
+                                self.wfile.write(f"data: {payload}\n\n".encode("utf-8"))
+                                self.wfile.flush()
+                        else:
+                            self.wfile.write(b": keepalive\n\n")
+                            self.wfile.flush()
+                except (BrokenPipeError, ConnectionResetError, OSError):
+                    pass
+                return
+
+            else:
+                # Mode polling JSON
+                query = urllib.parse.parse_qs(parsed.query)
+                since_id = int(query.get("since", [0])[0]) if query.get("since") else 0
+                with RELAY_LOCK:
+                    msgs = [m for m in RELAY_STORE.get(topic, []) if int(m["id"]) > since_id]
+                resp = json.dumps({"messages": msgs}).encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(resp)
+                return
+
+        super().do_GET()
 
     def end_headers(self):
         # Empeche le navigateur de mettre en cache pendant les tests
@@ -110,6 +239,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
     def log_message(self, fmt, *args):
+        # N'affiche pas les pings de relais pour garder la console lisible
+        if "/api/relay/" in (args[0] if args else ""):
+            return
         sys.stderr.write("  " + (fmt % args) + "\n")
 
 
@@ -129,7 +261,8 @@ class Server(socketserver.ThreadingTCPServer):
 
 try:
     with Server(("", port), Handler) as httpd:
-        print("  Serveur actif sur le port %d  (Ctrl+C pour arreter)\n" % port)
+        print("  Serveur actif sur le port %d  (Ctrl+C pour arreter)" % port)
+        print("  Relais multijoueur LAN actif sur /api/relay/\n")
         httpd.serve_forever()
 except KeyboardInterrupt:
     print("\n  Serveur arrete.")
