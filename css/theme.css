@@ -266,12 +266,42 @@ svg {
 .theme-toggle-icon {
   font-size: 1.05rem;
   line-height: 1;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
   transition: transform 0.4s ease;
+}
+
+.theme-toggle-icon .papicon,
+.theme-toggle-icon svg,
+.theme-toggle-icon img {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
 }
 
 .theme-toggle[data-mode="light"] .theme-toggle-icon {
   transform: rotate(0deg);
+}
+
+/* ---------- Papicons (https://icons.papillon.bzh/) ---------- */
+.papicon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.22em;
+  fill: currentColor;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.btn .papicon,
+.bouton-lien .papicon,
+.label-button .papicon {
+  margin-right: 0.35rem;
+  vertical-align: -0.18em;
 }
 
 /* ---------- Buttons ---------- */

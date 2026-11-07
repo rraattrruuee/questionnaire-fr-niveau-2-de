@@ -79,6 +79,27 @@
 .mp-card-icon {
   font-size: 1.8rem;
   margin-bottom: 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-card-icon .papicon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.mp-player-chip .papicon {
+  width: 1.05rem;
+  height: 1.05rem;
+  vertical-align: -0.18em;
+  margin-right: 0.3rem;
+}
+
+.mp-quiz-item-icon .papicon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
 }
 
 /* ---------- Champs ---------- */

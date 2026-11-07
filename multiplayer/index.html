@@ -36,9 +36,9 @@
                     <span>Questionnaires <span class="brand-sub">2nde</span></span>
                 </a>
                 <div class="topbar-actions">
-                    <span id="net-status" class="mp-net" title="État de la connexion">🌐 En ligne</span>
+                    <span id="net-status" class="mp-net" title="État de la connexion"><img src="../assets/papicons/globe.svg" class="papicon" alt="" /> En ligne</span>
                     <button class="theme-toggle" type="button" data-theme-toggle>
-                        <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                        <span class="theme-toggle-icon" aria-hidden="true"></span>
                         <span class="theme-toggle-label">Thème clair</span>
                     </button>
                 </div>
@@ -49,7 +49,7 @@
             <!-- ================= ACCUEIL ================= -->
             <section id="screen-home" class="mp-screen">
                 <div class="mp-hero">
-                    <h1>🎮 Multijoueur en direct</h1>
+                    <h1><img src="../assets/papicons/play.svg" class="papicon" alt="" /> Multijoueur en direct</h1>
                     <p>
                         Un joueur <strong>héberge</strong> la partie, les autres <strong>rejoignent</strong>
                         par QR code. Deux modes : <em>tous sur la même question</em>, ou
@@ -61,21 +61,21 @@
                 <div class="mp-net-selector">
                     <div class="mp-net-tabs" role="tablist" aria-label="Choix du réseau">
                         <button type="button" class="mp-net-tab active" data-net="cloud" id="tab-net-cloud" role="tab" aria-selected="true">
-                            🌐 Internet (Relais universel)
+                            <img src="../assets/papicons/globe.svg" class="papicon" alt="" /> Internet (Relais universel)
                         </button>
                         <button type="button" class="mp-net-tab" data-net="lan" id="tab-net-lan" role="tab" aria-selected="false">
-                            🏠 Réseau Local (LAN direct)
+                            <img src="../assets/papicons/home.svg" class="papicon" alt="" /> Réseau Local (LAN direct)
                         </button>
                     </div>
 
                     <div id="lan-config-panel" class="mp-lan-panel hidden">
-                        <div class="mp-lan-badge">🏠 Mode Réseau Local (LAN) activé</div>
+                        <div class="mp-lan-badge"><img src="../assets/papicons/home.svg" class="papicon" alt="" /> Mode Réseau Local (LAN) activé</div>
                         <p class="mp-lan-desc">
                             Fonctionne <strong>directement depuis le site web en JavaScript</strong> (aucun serveur Python requis !).<br>
                             Tous les joueurs connectés au même Wi-Fi, partage de connexion ou réseau local peuvent se rejoindre instantanément par le code ou le QR code.
                         </p>
                         <details class="mp-lan-advanced">
-                            <summary>⚙️ Optionnel : utiliser un serveur local Node.js (<code>node server.js</code>)</summary>
+                            <summary><img src="../assets/papicons/gears.svg" class="papicon" alt="" /> Optionnel : utiliser un serveur local Node.js (<code>node server.js</code>)</summary>
                             <label class="mp-field mp-lan-field">
                                 <span>Adresse personnalisée du serveur Node.js (optionnel) :</span>
                                 <div class="mp-lan-ip-row">
@@ -91,13 +91,13 @@
 
                 <div class="mp-cards">
                     <div class="mp-card">
-                        <div class="mp-card-icon">🎛️</div>
+                        <div class="mp-card-icon"><img src="../assets/papicons/crown.svg" class="papicon" alt="" /></div>
                         <h2>Créer une partie</h2>
                         <p>Tu héberges la partie : QR code, questions, classement et scores finaux.</p>
-                        <button id="btn-create" class="btn" type="button">🎮 Créer une partie</button>
+                        <button id="btn-create" class="btn" type="button"><img src="../assets/papicons/play.svg" class="papicon" alt="" /> Créer une partie</button>
                     </div>
                     <div class="mp-card">
-                        <div class="mp-card-icon">🔗</div>
+                        <div class="mp-card-icon"><img src="../assets/papicons/link.svg" class="papicon" alt="" /></div>
                         <h2>Rejoindre une partie</h2>
                         <p>Entre le code affiché par l'hôte (ou scanne son QR code).</p>
                         <label class="mp-field">
@@ -110,8 +110,8 @@
                             <input id="join-name" maxlength="15" autocomplete="off" spellcheck="false"
                                    placeholder="Alex" />
                         </label>
-                        <button id="btn-join" class="btn" type="button">🔗 Rejoindre</button>
-                        <button id="btn-scan" class="btn btn-ghost mp-scan-btn" type="button">📷 Scanner le QR code</button>
+                        <button id="btn-join" class="btn" type="button"><img src="../assets/papicons/link.svg" class="papicon" alt="" /> Rejoindre</button>
+                        <button id="btn-scan" class="btn btn-ghost mp-scan-btn" type="button"><img src="../assets/papicons/camera.svg" class="papicon" alt="" /> Scanner le QR code</button>
                     </div>
                 </div>
 
@@ -124,7 +124,7 @@
                     <div class="mp-card mp-qr-card">
                         <h2 id="lobby-title">Partie créée !</h2>
                         <div class="mp-lobby-badge-wrap">
-                            <span id="lobby-net-badge" class="mp-chip">🌐 Mode Internet</span>
+                            <span id="lobby-net-badge" class="mp-chip"><img src="../assets/papicons/globe.svg" class="papicon" alt="" /> Mode Internet</span>
                         </div>
                         <div id="qr-holder" class="mp-qr"><span class="mp-dim">Génération du QR code…</span></div>
                         <div id="room-code" class="mp-code">•••••</div>
@@ -143,7 +143,7 @@
                         <div id="player-list" class="mp-players"></div>
 
                         <div id="host-setup" class="mp-setup">
-                            <h3>⚙️ Réglages de la partie</h3>
+                            <h3><img src="../assets/papicons/gears.svg" class="papicon" alt="" /> Réglages de la partie</h3>
 
                             <div class="mp-modes">
                                 <button type="button" class="mp-mode active" data-mode="1">
@@ -210,7 +210,7 @@
 
                             <label class="mp-host-play" title="L'hôte participe aussi au quiz, avec les autres joueurs">
                                 <input type="checkbox" id="host-plays" />
-                                <span>🎮 Je veux jouer aussi (l'hôte participe)</span>
+                                <span><img src="../assets/papicons/play.svg" class="papicon" alt="" /> Je veux jouer aussi (l'hôte participe)</span>
                             </label>
 
                             <label class="mp-host-play" title="Une bonne réponse vaut 1 point + 1/rang selon ta rapidité (le plus rapide gagne le plus). Désactivé : 1 point par bonne réponse.">
@@ -284,7 +284,7 @@
                         <div id="g-reveal" class="mp-reveal hidden"></div>
 
                         <div id="g-host-note" class="mp-host-note hidden">
-                            🎛️ Tu es l'hôte : tu ne réponds pas, tu pilotes la partie.
+                            <img src="../assets/papicons/crown.svg" class="papicon" alt="" /> Tu es l'hôte : tu ne réponds pas, tu pilotes la partie.
                         </div>
 
                         <div class="main-btn-container">
@@ -324,7 +324,7 @@
         <div id="scan-overlay" class="mp-scan-overlay hidden" role="dialog" aria-modal="true" aria-label="Scanner un QR code">
             <div class="mp-scan-panel">
                 <div class="mp-scan-head">
-                    <h3>📷 Scanne le QR code de l'hôte</h3>
+                    <h3><img src="../assets/papicons/camera.svg" class="papicon" alt="" /> Scanne le QR code de l'hôte</h3>
                     <button id="scan-close" class="mp-scan-close" type="button" aria-label="Fermer le scanner">✕</button>
                 </div>
                 <div class="mp-scan-view">

@@ -31,7 +31,7 @@
                     <span>Questionnaires <span class="brand-sub">2nde</span></span>
                 </a>
                 <button class="theme-toggle" type="button" data-theme-toggle>
-                    <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+                    <span class="theme-toggle-icon" aria-hidden="true"></span>
                     <span class="theme-toggle-label">Thème clair</span>
                 </button>
             </div>
@@ -41,19 +41,19 @@
             <div class="quiz-nav-bar">
                 <button id="back-btn" class="btn btn-ghost" type="button">← Retour</button>
                 <div id="offline-badge" class="offline-badge hidden">
-                    <span>⚡ Mode hors-ligne (cache local)</span>
+                    <span><img src="assets/papicons/sparkles.svg" class="papicon" alt="" /> Mode hors-ligne (cache local)</span>
                 </div>
             </div>
 
             <!-- Boite de reprise de session active -->
             <div id="resume-area" class="resume-area hidden">
                 <div class="resume-card">
-                    <div class="resume-icon">⚡</div>
+                    <div class="resume-icon"><img src="assets/papicons/play.svg" class="papicon" alt="" /></div>
                     <h2>Partie en cours retrouvée !</h2>
                     <p id="resume-description">Vous aviez une partie en cours. Souhaitez-vous reprendre là où vous vous étiez arrêté ?</p>
                     <div class="resume-actions">
-                        <button id="resume-continue-btn" class="btn-primary" type="button">▶ Reprendre ma partie</button>
-                        <button id="resume-restart-btn" class="btn btn-ghost" type="button">🔄 Recommencer depuis le début</button>
+                        <button id="resume-continue-btn" class="btn-primary" type="button"><img src="assets/papicons/play.svg" class="papicon" alt="" /> Reprendre ma partie</button>
+                        <button id="resume-restart-btn" class="btn btn-ghost" type="button"><img src="assets/papicons/gears.svg" class="papicon" alt="" /> Recommencer depuis le début</button>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <!-- Message d'information hors ligne si indisponible -->
             <div id="offline-error-area" class="resume-area hidden">
                 <div class="resume-card">
-                    <div class="resume-icon">📡</div>
+                    <div class="resume-icon"><img src="assets/papicons/alert-circle.svg" class="papicon" alt="" /></div>
                     <h2>Questionnaire non disponible</h2>
                     <p>Ce questionnaire n'a pas encore été mis en cache localement et vous êtes actuellement hors-ligne. Connectez-vous à Internet une première fois pour le mettre en cache automatique.</p>
                     <div class="resume-actions">
@@ -99,9 +99,9 @@
 
                 <div id="notepad-container" class="notepad-container hidden">
                     <div class="notepad-header">
-                        <span class="notepad-icon">📝</span>
+                        <span class="notepad-icon"><img src="assets/papicons/pen.svg" class="papicon" alt="" /></span>
                         <span class="notepad-title">Brouillon / Calculs</span>
-                        <button type="button" id="notepad-clear" class="notepad-clear" title="Effacer">🗑</button>
+                        <button type="button" id="notepad-clear" class="notepad-clear" title="Effacer"><img src="assets/papicons/trash.svg" class="papicon" alt="" /></button>
                     </div>
                     <textarea id="notepad-textarea" class="notepad-textarea" placeholder="Espace de calcul..." spellcheck="false"></textarea>
                 </div>

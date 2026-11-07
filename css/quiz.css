@@ -860,7 +860,23 @@ body {
   color: var(--quiz-text-muted, #888);
 }
 
-.notepad-icon { font-size: 1rem; }
+.notepad-icon {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.notepad-icon .papicon {
+  width: 1.15rem;
+  height: 1.15rem;
+  vertical-align: -0.15em;
+}
+
+.notepad-clear .papicon {
+  width: 1.05rem;
+  height: 1.05rem;
+  vertical-align: -0.15em;
+}
 
 .notepad-title { flex: 1; }
 
@@ -960,8 +976,15 @@ body {
 .resume-icon {
   font-size: 2.6rem;
   margin-bottom: 0.8rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   animation: resumeIconPulse 1.8s ease-in-out infinite;
+}
+
+.resume-icon .papicon {
+  width: 3.2rem;
+  height: 3.2rem;
 }
 
 @keyframes resumeIconPulse {

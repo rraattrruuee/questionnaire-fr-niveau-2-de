@@ -204,7 +204,7 @@
 
     const title = document.createElement("h2");
     title.className = "menu-title";
-    title.textContent = "✨ Nouveautés";
+    title.innerHTML = '<img src="assets/papicons/sparkles.svg" class="papicon" alt="" /> Nouveautés';
     section.appendChild(title);
 
     recent.forEach((quiz) => {
@@ -221,7 +221,7 @@
 
     const title = document.createElement("h2");
     title.className = "menu-title";
-    title.textContent = titleText;
+    title.innerHTML = titleText;
     section.appendChild(title);
 
     items.forEach(function (item) {
@@ -347,7 +347,7 @@
     // 2) Outils
     if (tools.length > 0) {
       sectionsContainer.appendChild(
-        buildLinkSection("tools", "🛠️ Outils", tools)
+        buildLinkSection("tools", '<img src="assets/papicons/gears.svg" class="papicon" alt="" /> Outils', tools)
       );
     }
 
@@ -381,7 +381,7 @@
     // 4) Ressources
     if (resources.length > 0) {
       sectionsContainer.appendChild(
-        buildLinkSection("resources", "🌐 Ressources", resources)
+        buildLinkSection("resources", '<img src="assets/papicons/globe.svg" class="papicon" alt="" /> Ressources', resources)
       );
     }
 
@@ -397,7 +397,7 @@
       const recentBtn = document.createElement("button");
       recentBtn.className = "label-button tab-recent";
       recentBtn.dataset.target = "nouveautes";
-      recentBtn.textContent = "✨ Nouveautés";
+      recentBtn.innerHTML = '<img src="assets/papicons/sparkles.svg" class="papicon" alt="" /> Nouveautés';
       labelsContainer.insertBefore(recentBtn, allBtn);
     }
 
@@ -410,14 +410,14 @@
     });
 
     [
-      { id: "tools", label: "🛠️ Outils" },
-      { id: "resources", label: "🌐 Ressources" }
+      { id: "tools", label: '<img src="assets/papicons/gears.svg" class="papicon" alt="" /> Outils' },
+      { id: "resources", label: '<img src="assets/papicons/globe.svg" class="papicon" alt="" /> Ressources' }
     ].forEach(function (extra) {
       if (!document.getElementById(extra.id)) return;
       const btn = document.createElement("button");
       btn.className = "label-button";
       btn.dataset.target = extra.id;
-      btn.textContent = extra.label;
+      btn.innerHTML = extra.label;
       labelsContainer.appendChild(btn);
     });
 

@@ -537,15 +537,15 @@
     if (!list) return;
     var hostLabel = esc(S.hostName || "Hôte");
     var hostChip = S.hostAsPlayer
-      ? '<span class="mp-player-chip is-host is-playing">🎛️ ' + hostLabel + ' <span class="mp-chip">joueur</span></span>'
-      : '<span class="mp-player-chip is-host">🎛️ ' + hostLabel + '</span>';
+      ? '<span class="mp-player-chip is-host is-playing"><img src="../assets/papicons/crown.svg" class="papicon" alt="" /> ' + hostLabel + ' <span class="mp-chip">joueur</span></span>'
+      : '<span class="mp-player-chip is-host"><img src="../assets/papicons/crown.svg" class="papicon" alt="" /> ' + hostLabel + '</span>';
     var html = hostChip;
     S.players.forEach(function (p) {
       if (p.isHost) return; // déjà affiché par le chip hôte
       var cls = "mp-player-chip";
       if (S.role === "client" && p.pid === S.myPid) cls += " is-me";
       if (p.gone) cls += " is-out";
-      html += '<span class="' + cls + '">🎮 ' + esc(p.n) + "</span>";
+      html += '<span class="' + cls + '"><img src="../assets/papicons/user.svg" class="papicon" alt="" /> ' + esc(p.n) + "</span>";
     });
     list.innerHTML = html;
     var countEl = $("player-count");
@@ -1425,13 +1425,13 @@
       var html = "";
       list.forEach(function (q) {
         var s = subjectsById[q.subject];
-        var icon = (s && s.icon) ? s.icon : "📁";
+        var icon = (s && s.icon) ? s.icon : '<img src="../assets/papicons/folder.svg" class="papicon" alt="" />';
         var isChecked = selectedQuizIds.has(q.id);
         var count = q.questionsCount || (q.cats ? countQuizQuestions(q.cats) : "?");
         var subName = s ? s.name : (q.subject === "__imported__" ? "Quiz importé" : q.subject || "Général");
         html += '<label class="mp-quiz-item' + (isChecked ? " is-checked" : "") + '" data-quiz-id="' + esc(q.id) + '">' +
           '<input type="checkbox" class="mp-quiz-checkbox" value="' + esc(q.id) + '"' + (isChecked ? " checked" : "") + ' />' +
-          '<span class="mp-quiz-item-icon">' + esc(icon) + '</span>' +
+          '<span class="mp-quiz-item-icon">' + (icon.indexOf("<") !== -1 ? icon : esc(icon)) + '</span>' +
           '<div class="mp-quiz-item-info">' +
             '<div class="mp-quiz-item-title">' + esc(q.title) + '</div>' +
             '<div class="mp-quiz-item-sub">' + esc(subName) + ' · ' + count + ' questions</div>' +
@@ -2098,7 +2098,7 @@
           $("btn-copy").classList.add("hidden");
           $("lobby-title").textContent = "Connecté à la partie !";
           $("room-code").textContent = code;
-          $("player-list").innerHTML = '<span class="mp-player-chip is-host">🎛️ Hôte</span>';
+          $("player-list").innerHTML = '<span class="mp-player-chip is-host"><img src="../assets/papicons/crown.svg" class="papicon" alt="" /> Hôte</span>';
           $("player-count").textContent = "…";
           setStatus($("lobby-status"), "En attente de l'hôte pour le début de la partie…");
           track("multiplayer_join_ok");
@@ -2201,14 +2201,14 @@
       case "L": {
         var hostLabel = esc(msg.hostName || "Hôte");
         var hostChip = msg.hostPlays
-          ? '<span class="mp-player-chip is-host is-playing">🎛️ ' + hostLabel + ' <span class="mp-chip">joueur</span></span>'
-          : '<span class="mp-player-chip is-host">🎛️ ' + hostLabel + '</span>';
+          ? '<span class="mp-player-chip is-host is-playing"><img src="../assets/papicons/crown.svg" class="papicon" alt="" /> ' + hostLabel + ' <span class="mp-chip">joueur</span></span>'
+          : '<span class="mp-player-chip is-host"><img src="../assets/papicons/crown.svg" class="papicon" alt="" /> ' + hostLabel + '</span>';
         var html = hostChip;
         (msg.players || []).forEach(function (p) {
           var cls = "mp-player-chip";
           if (p.pid === S.myPid) cls += " is-me";
           if (p.gone) cls += " is-out";
-          html += '<span class="' + cls + '">🎮 ' + esc(p.n) + "</span>";
+          html += '<span class="' + cls + '"><img src="../assets/papicons/user.svg" class="papicon" alt="" /> ' + esc(p.n) + "</span>";
         });
         $("player-list").innerHTML = html;
         var alive = (msg.players || []).filter(function (p) { return !p.gone; }).length +

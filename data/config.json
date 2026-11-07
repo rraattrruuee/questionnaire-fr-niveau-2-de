@@ -29,14 +29,14 @@
     {
       "id": "ses",
       "name": "Sciences Economiques & Sociales",
-      "icon": "📊",
+      "icon": "📈",
       "color": "#E67E22",
       "description": "Economie, sociologie et sciences politiques"
     },
     {
       "id": "histoire-geo",
       "name": "Histoire-Geographie",
-      "icon": "📜",
+      "icon": "🏛️",
       "color": "#8B4513",
       "description": "Histoire, geographie et geopolitique"
     },
@@ -284,7 +284,7 @@
       "title": "QuizMaster Dynamique - Generateur & Importateur",
       "description": "Generez des questionnaires via IA, importez des JSON, testez et exportez en HTML autonome",
       "url": "quizmaster.html",
-      "icon": "⚡",
+      "icon": "✨",
       "color": "#f59e0b"
     }
   ],
