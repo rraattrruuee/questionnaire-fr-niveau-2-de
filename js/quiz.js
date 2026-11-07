@@ -926,7 +926,7 @@
       : "";
 
     if (isCorrect) {
-      feedback.innerHTML = '<div class="feedback-title">✅ Bravo !</div>' + solutionHTML;
+      feedback.innerHTML = '<div class="feedback-title"><img src="assets/papicons/check.svg" class="papicon" alt="" /> Bravo !</div>' + solutionHTML;
       feedback.classList.add("feedback-correct");
       block.classList.add("is-correct");
     } else {
@@ -936,7 +936,7 @@
           ? "Bonne réponse : " + correctAnswerHTML
           : "";
       feedback.innerHTML =
-        '<div class="feedback-title">❌ Faux.</div>' +
+        '<div class="feedback-title"><img src="assets/papicons/cross.svg" class="papicon" alt="" /> Faux.</div>' +
         (correction ? '<div class="feedback-answer">' + correction + "</div>" : "") +
         solutionHTML;
       feedback.classList.add("feedback-incorrect");
@@ -1021,25 +1021,63 @@
       card.style.animationDelay = Math.min(idx * 0.035, 0.45) + "s";
 
       var statusBadge = item.isCorrect
-        ? '<span class="badge-status is-correct"><img src="assets/papicons/check.svg" class="papicon" alt="" /> Correct</span>'
-        : '<span class="badge-status is-incorrect"><img src="assets/papicons/cross.svg" class="papicon" alt="" /> Faux</span>';
+        ? '<span class="badge-status is-correct"><img src="assets/papicons/check.svg" class="papicon" alt="" /> Bonne réponse</span>'
+        : '<span class="badge-status is-incorrect"><img src="assets/papicons/cross.svg" class="papicon" alt="" /> Mauvaise réponse</span>';
       var userAns = item.userAnswer ? item.userAnswer : "(Aucune réponse)";
       var expectedAns = item.correctAnswer ? item.correctAnswer : "";
 
+      var answersHtml = "";
+      if (item.isCorrect) {
+        answersHtml =
+          '<div class="performed-ans-row is-user-correct">' +
+            '<span class="ans-label">Votre réponse :</span>' +
+            '<div class="ans-pill is-correct">' +
+              '<img src="assets/papicons/check.svg" class="papicon" alt="" />' +
+              '<span class="ans-text">' + userAns + '</span>' +
+            '</div>' +
+          '</div>';
+      } else {
+        answersHtml =
+          '<div class="performed-ans-row is-user-wrong">' +
+            '<span class="ans-label">Votre réponse :</span>' +
+            '<div class="ans-pill is-wrong">' +
+              '<img src="assets/papicons/cross.svg" class="papicon" alt="" />' +
+              '<span class="ans-text">' + userAns + '</span>' +
+            '</div>' +
+          '</div>';
+
+        if (expectedAns) {
+          answersHtml +=
+            '<div class="performed-ans-row is-expected">' +
+              '<span class="ans-label">Bonne réponse :</span>' +
+              '<div class="ans-pill is-correct">' +
+                '<img src="assets/papicons/check.svg" class="papicon" alt="" />' +
+                '<span class="ans-text">' + expectedAns + '</span>' +
+              '</div>' +
+            '</div>';
+        }
+      }
+
+      var solutionHtml = "";
+      if (item.solution) {
+        solutionHtml =
+          '<div class="performed-solution">' +
+            '<div class="performed-solution-title">' +
+              '<img src="assets/papicons/info.svg" class="papicon" alt="" />' +
+              '<span>Explication</span>' +
+            '</div>' +
+            '<div class="performed-solution-body">' + item.solution + '</div>' +
+          '</div>';
+      }
+
       var html =
         '<div class="performed-card-header">' +
-          '<span>Question ' + item.questionNumber + '</span>' +
+          '<span class="performed-card-num">Question ' + item.questionNumber + '</span>' +
           statusBadge +
         '</div>' +
         '<div class="performed-q-text">' + item.questionText + '</div>' +
-        '<div class="performed-user-answer"><strong>Votre réponse :</strong> ' + userAns + '</div>';
-
-      if (!item.isCorrect && expectedAns) {
-        html += '<div class="performed-expected-answer"><strong>Bonne réponse :</strong> ' + expectedAns + '</div>';
-      }
-      if (item.solution) {
-        html += '<div class="solution">' + item.solution + '</div>';
-      }
+        '<div class="performed-answers-area">' + answersHtml + '</div>' +
+        solutionHtml;
 
       card.innerHTML = html;
       listEl.appendChild(card);
