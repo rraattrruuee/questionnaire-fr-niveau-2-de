@@ -47,6 +47,9 @@
 
   --ring: 0 0 0 3px rgba(34, 197, 94, 0.35);
 
+  /* Papicons filter in dark mode: turns black SVG into crisp light #ebebeb */
+  --papicon-filter: brightness(0) invert(0.92);
+
   /* ---- Legacy aliases (used by portal.css) ---- */
   --couleur-fond: var(--bg);
   --couleur-fond-alt: var(--bg-2);
@@ -100,6 +103,9 @@
   --scrim: rgba(15, 27, 45, 0.45);
 
   --ring: 0 0 0 3px rgba(21, 128, 61, 0.25);
+
+  /* Papicons filter in light mode: clean dark #1f2937 */
+  --papicon-filter: brightness(0) invert(0.12);
 
   --ombre-neon: 0 0 8px rgba(21, 128, 61, 0.2);
   --ombre-neon-intense: 0 0 18px rgba(21, 128, 61, 0.3);
@@ -293,8 +299,41 @@ svg {
   height: 1.2em;
   vertical-align: -0.22em;
   fill: currentColor;
+  color: inherit;
   flex-shrink: 0;
   object-fit: contain;
+}
+
+/* Prise en charge automatique thème clair ET thème sombre pour les balises <img> */
+img.papicon {
+  filter: var(--papicon-filter, none);
+  transition: filter 0.25s ease;
+}
+
+/* Boutons avec texte blanc en thème clair */
+[data-theme="light"] .btn:not(.btn-ghost) img.papicon,
+[data-theme="light"] .btn-primary img.papicon,
+[data-theme="light"] .badge-new img.papicon,
+[data-theme="light"] .label-button.active img.papicon {
+  filter: brightness(0) invert(1);
+}
+
+/* Boutons avec texte sombre en thème sombre (vert fluo avec texte contrasté sombre) */
+[data-theme="dark"] .btn:not(.btn-ghost):not(.btn-primary) img.papicon,
+[data-theme="dark"] .label-button.active img.papicon {
+  filter: brightness(0) invert(0.04);
+}
+
+/* Boutons primaire toujours blancs (ex : reprise de session) */
+.resume-actions .btn-primary img.papicon {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Boutons fantômes et cartes */
+.btn.btn-ghost img.papicon,
+.theme-toggle img.papicon,
+.mp-card img.papicon {
+  filter: var(--papicon-filter, none);
 }
 
 .btn .papicon,
