@@ -124,8 +124,10 @@
 
                 <!-- Récapitulatif des questions effectuées dans cette partie -->
                 <div id="performed-summary-box" class="performed-summary hidden">
-                    <button id="toggle-performed-btn" class="performed-toggle-btn" type="button">
-                        📋 Voir les questions de cette partie
+                    <button id="toggle-performed-btn" class="performed-toggle-btn" type="button" aria-expanded="false">
+                        <span class="performed-btn-icon"><img src="assets/papicons/tasks.svg" class="papicon" alt="" /></span>
+                        <span class="performed-btn-text">Voir les questions de cette partie</span>
+                        <span class="performed-btn-chevron"><img src="assets/papicons/chevron-down.svg" class="papicon" alt="" /></span>
                     </button>
                     <div id="performed-list" class="performed-list hidden"></div>
                 </div>

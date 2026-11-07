@@ -1015,17 +1015,21 @@
     summaryBox.classList.remove("hidden");
     listEl.innerHTML = "";
 
-    performedList.forEach(function (item) {
+    performedList.forEach(function (item, idx) {
       var card = document.createElement("div");
       card.className = "performed-card " + (item.isCorrect ? "correct" : "incorrect");
-      var statusBadge = item.isCorrect ? "✅ Correct" : "❌ Faux";
+      card.style.animationDelay = Math.min(idx * 0.035, 0.45) + "s";
+
+      var statusBadge = item.isCorrect
+        ? '<span class="badge-status is-correct"><img src="assets/papicons/check.svg" class="papicon" alt="" /> Correct</span>'
+        : '<span class="badge-status is-incorrect"><img src="assets/papicons/cross.svg" class="papicon" alt="" /> Faux</span>';
       var userAns = item.userAnswer ? item.userAnswer : "(Aucune réponse)";
       var expectedAns = item.correctAnswer ? item.correctAnswer : "";
 
       var html =
         '<div class="performed-card-header">' +
           '<span>Question ' + item.questionNumber + '</span>' +
-          '<span class="badge-status">' + statusBadge + '</span>' +
+          statusBadge +
         '</div>' +
         '<div class="performed-q-text">' + item.questionText + '</div>' +
         '<div class="performed-user-answer"><strong>Votre réponse :</strong> ' + userAns + '</div>';
@@ -1043,9 +1047,18 @@
 
     toggleBtn.onclick = function () {
       var isHidden = listEl.classList.toggle("hidden");
-      toggleBtn.textContent = isHidden
-        ? "📋 Voir les questions de cette partie"
-        : "▲ Masquer les questions de cette partie";
+      var isOpen = !isHidden;
+      toggleBtn.classList.toggle("is-open", isOpen);
+      toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      var textEl = toggleBtn.querySelector(".performed-btn-text");
+      if (textEl) {
+        textEl.textContent = isOpen
+          ? "Masquer les questions de cette partie"
+          : "Voir les questions de cette partie";
+      }
+      toggleBtn.classList.remove("is-clicked");
+      void toggleBtn.offsetWidth;
+      toggleBtn.classList.add("is-clicked");
     };
   }
 
