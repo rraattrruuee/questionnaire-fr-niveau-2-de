@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="helixBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="420" rx="16" fill="url(#helixBg)" stroke="#334155" stroke-width="2" />
+
+  <!-- Titre -->
+  <text x="380" y="36" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold">
+    Structure de l'ADN : Les 4 nucléotides et leur complémentarité
+  </text>
+  <text x="380" y="58" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+    Deux chaînes de nucléotides complémentaires enroulées en double hélice
+  </text>
+
+  <!-- Panneau gauche : Les 4 nucléotides -->
+  <g transform="translate(35, 80)">
+    <rect width="210" height="235" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.2" />
+    <text x="105" y="26" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Les 4 nucléotides</text>
+    
+    <!-- Adénine (A) -->
+    <g transform="translate(20, 40)">
+      <rect width="80" height="34" rx="6" fill="#ef4444" />
+      <polygon points="80,11 88,17 80,23" fill="#ef4444" />
+      <text x="40" y="22" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Adénine (A)</text>
+    </g>
+    <!-- Thymine (T) -->
+    <g transform="translate(112, 40)">
+      <polygon points="8,11 0,17 8,23" fill="#1e293b" />
+      <rect x="8" width="75" height="34" rx="6" fill="#3b82f6" />
+      <path d="M 8,11 L 16,17 L 8,23 Z" fill="#1e293b" />
+      <text x="48" y="22" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Thymine (T)</text>
+    </g>
+
+    <!-- Guanine (G) -->
+    <g transform="translate(20, 88)">
+      <rect width="80" height="34" rx="6" fill="#f59e0b" />
+      <circle cx="80" cy="17" r="6" fill="#f59e0b" />
+      <text x="40" y="22" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Guanine (G)</text>
+    </g>
+    <!-- Cytosine (C) -->
+    <g transform="translate(112, 88)">
+      <rect x="8" width="75" height="34" rx="6" fill="#10b981" />
+      <circle cx="8" cy="17" r="6" fill="#1e293b" />
+      <text x="48" y="22" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Cytosine (C)</text>
+    </g>
+
+    <!-- Règle de complémentarité -->
+    <g transform="translate(15, 140)">
+      <rect width="180" height="75" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1" />
+      <text x="90" y="22" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Règle d'appariement :</text>
+      <text x="90" y="44" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+        <tspan fill="#ef4444">A</tspan> ——— <tspan fill="#3b82f6">T</tspan>
+      </text>
+      <text x="90" y="63" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+        <tspan fill="#f59e0b">G</tspan> ——— <tspan fill="#10b981">C</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Panneau central : L'échelle de l'ADN déroulé -->
+  <g transform="translate(265, 80)">
+    <rect width="250" height="235" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.2" />
+    <text x="125" y="26" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Échelle de nucléotides</text>
+    
+    <!-- Montant Brin 1 -->
+    <rect x="25" y="45" width="12" height="175" rx="5" fill="#64748b" />
+    <text x="31" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">Brin 1</text>
+    
+    <!-- Montant Brin 2 -->
+    <rect x="213" y="45" width="12" height="175" rx="5" fill="#64748b" />
+    <text x="219" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">Brin 2</text>
+
+    <!-- Échelons de paires (A-T, G-C, T-A, C-G, A-T) -->
+    <!-- Paire 1 : A - T -->
+    <g transform="translate(37, 52)">
+      <rect x="0" y="0" width="85" height="22" rx="4" fill="#ef4444" />
+      <text x="42" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">A</text>
+      <line x1="85" y1="11" x2="91" y2="11" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="2,2" />
+      <rect x="91" y="0" width="85" height="22" rx="4" fill="#3b82f6" />
+      <text x="133" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">T</text>
+    </g>
+
+    <!-- Paire 2 : C - G -->
+    <g transform="translate(37, 86)">
+      <rect x="0" y="0" width="85" height="22" rx="4" fill="#10b981" />
+      <text x="42" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">C</text>
+      <line x1="85" y1="11" x2="91" y2="11" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="2,2" />
+      <rect x="91" y="0" width="85" height="22" rx="4" fill="#f59e0b" />
+      <text x="133" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">G</text>
+    </g>
+
+    <!-- Paire 3 : G - C -->
+    <g transform="translate(37, 120)">
+      <rect x="0" y="0" width="85" height="22" rx="4" fill="#f59e0b" />
+      <text x="42" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">G</text>
+      <line x1="85" y1="11" x2="91" y2="11" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="2,2" />
+      <rect x="91" y="0" width="85" height="22" rx="4" fill="#10b981" />
+      <text x="133" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">C</text>
+    </g>
+
+    <!-- Paire 4 : T - A -->
+    <g transform="translate(37, 154)">
+      <rect x="0" y="0" width="85" height="22" rx="4" fill="#3b82f6" />
+      <text x="42" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">T</text>
+      <line x1="85" y1="11" x2="91" y2="11" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="2,2" />
+      <rect x="91" y="0" width="85" height="22" rx="4" fill="#ef4444" />
+      <text x="133" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">A</text>
+    </g>
+
+    <!-- Paire 5 : A - T -->
+    <g transform="translate(37, 188)">
+      <rect x="0" y="0" width="85" height="22" rx="4" fill="#ef4444" />
+      <text x="42" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">A</text>
+      <line x1="85" y1="11" x2="91" y2="11" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="2,2" />
+      <rect x="91" y="0" width="85" height="22" rx="4" fill="#3b82f6" />
+      <text x="133" y="15" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">T</text>
+    </g>
+  </g>
+
+  <!-- Panneau droit : La double hélice -->
+  <g transform="translate(535, 80)">
+    <rect width="190" height="235" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.2" />
+    <text x="95" y="26" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Double Hélice</text>
+    
+    <!-- Dessin d'hélice entrelacée -->
+    <g transform="translate(95, 45)">
+      <!-- Échelons de l'hélice -->
+      <line x1="-35" y1="15" x2="35" y2="15" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+      <line x1="-28" y1="40" x2="28" y2="40" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+      <line x1="-5" y1="65" x2="5" y2="65" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+      <line x1="-28" y1="90" x2="28" y2="90" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" />
+      <line x1="-35" y1="115" x2="35" y2="115" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+      <line x1="-28" y1="140" x2="28" y2="140" stroke="#10b981" stroke-width="4" stroke-linecap="round" />
+      <line x1="-5" y1="165" x2="5" y2="165" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+
+      <!-- Brin 1 sinusoïde -->
+      <path d="M -35,5 C 45,55 -45,115 35,165" fill="none" stroke="#60a5fa" stroke-width="5" stroke-linecap="round" />
+      <!-- Brin 2 sinusoïde inverse -->
+      <path d="M 35,5 C -45,55 45,115 -35,165" fill="none" stroke="#f472b6" stroke-width="5" stroke-linecap="round" />
+    </g>
+
+    <text x="95" y="222" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">Enroulement hélicoïdal</text>
+  </g>
+
+  <!-- Bandeau résumé bas -->
+  <g transform="translate(35, 330)">
+    <rect width="690" height="65" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
+    <text x="345" y="24" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+      Chiffres clés &amp; Complémentarité
+    </text>
+    <text x="345" y="44" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
+      Une cellule humaine renferme plus de <tspan fill="#facc15" font-weight="bold">6 milliards de paires de nucléotides</tspan>.
+    </text>
+    <text x="345" y="58" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">
+      La connaissance de la séquence d'un brin permet de déduire instantanément celle du brin opposé grâce à la complémentarité A-T et C-G.
+    </text>
+  </g>
+</svg>

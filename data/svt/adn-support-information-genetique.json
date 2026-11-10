@@ -1,0 +1,510 @@
+{
+  "subject": "svt",
+  "title": "L'ADN, support de l'information génétique",
+  "description": "Structure en double hélice, nucléotides (A, T, C, G), universalité du code, gènes et spécialisation cellulaire (SVT Seconde).",
+  "categories": [
+    {
+      "category": "Une information exploitable & universalité de l'ADN",
+      "questions": [
+        {
+          "text": "D'après les expériences de transgénèse, qu'est-ce qu'un gène à l'échelle moléculaire ?",
+          "type": "mcq",
+          "options": [
+            "Un fragment précis d'ADN portant une information codant une fonction cellulaire",
+            "Une molécule lipidique isolée assurant la protection mécanique de la cellule",
+            "Un organite cytoplasmique volumineux chargé de stocker l'énergie nutritive",
+            "Une protéine globulaire membranaire transportant les minéraux sanguins"
+          ],
+          "correct": 0,
+          "solution": "Un gène est une unité d'information génétique constituée d'un fragment précis d'ADN, capable d'être exploité par la cellule pour accomplir une fonction ou fabriquer une molécule."
+        },
+        {
+          "text": "Dans l'expérience de transgénèse présentée dans le schéma ci-dessous, quel organisme fournit le gène de la bioluminescence ?",
+          "type": "mcq",
+          "options": [
+            "Une méduse bioluminescente naturellement dotée du gène codant la protéine fluorescente",
+            "Une souris adulte de laboratoire sélectionnée pour ses capacités exceptionnelles de brillance",
+            "Une colonie bactérienne modifiée artificiellement en laboratoire de biotechnologie avancée",
+            "Une algue unicellulaire microscopique prélevée dans les abysses de l'océan Pacifique"
+          ],
+          "correct": 0,
+          "solution": "Le gène responsable de la bioluminescence est prélevé chez certaines méduses (comme Aequorea victoria) puis transféré chez le receveur.",
+          "image": "assets/images/svt/adn-transgenese-meduse-souris.svg"
+        },
+        {
+          "text": "À quel stade du développement le gène de la bioluminescence est-il introduit chez la souris receveuse ?",
+          "type": "mcq",
+          "options": [
+            "Au stade de cellule-œuf unique afin que le gène soit transmis à toutes les cellules filles",
+            "Au stade de souris adulte complètement formée lors d'une simple injection intraveineuse",
+            "Au stade de fœtus avancé juste quelques heures avant la naissance des souriceaux",
+            "Au stade de jeune souriceau sevré pendant la phase de croissance post-natale rapide"
+          ],
+          "correct": 0,
+          "solution": "En introduisant le gène dans la cellule-œuf, celui-ci est dupliqué et transmis à l'ensemble des cellules de l'organisme au cours des divisions cellulaires successives."
+        },
+        {
+          "text": "Quelle propriété fondamentale de la molécule d'ADN est rigoureusement prouvée par la réussite d'un transfert de gène entre deux espèces distinctes ?",
+          "type": "mcq",
+          "options": [
+            "L'universalité de la molécule d'ADN partagée par tous les êtres vivants de la Terre",
+            "L'immutabilité absolue des séquences génétiques face à tout changement environnemental",
+            "La destruction instantanée de tout fragment d'acide nucléique étranger par la cellule",
+            "L'impossibilité d'échanger des gènes fonctionnels en dehors d'une même espèce biologique"
+          ],
+          "correct": 0,
+          "solution": "Le fait qu'une cellule de souris puisse déchiffrer et exprimer un gène issu d'une méduse démontre que l'ADN constitue le langage génétique universel de l'ensemble du monde vivant."
+        },
+        {
+          "text": "Le transfert d'un fragment d'ADN d'un individu à un autre confère à l'organisme receveur une nouvelle potentialité biologique.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : l'organisme receveur peut désormais exploiter ce gène étranger et exprimer une propriété nouvelle qu'il ne possédait pas auparavant."
+        },
+        {
+          "text": "La réussite d'une transgénèse prouve que chaque espèce biologique utilise un code chimique totalement différent pour ses gènes.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : elle prouve exactement le contraire, c'est-à-dire l'universalité de la molécule d'ADN et du code génétique chez tous les êtres vivants."
+        },
+        {
+          "text": "Dans une cellule eucaryote (comme une cellule animale ou végétale), où se situe majoritairement l'ADN portant les gènes ?",
+          "type": "mcq",
+          "options": [
+            "Dans le noyau cellulaire délimité par une enveloppe protectrice",
+            "Libre et dispersé au hasard dans tout le liquide cytoplasmique",
+            "Exclusivement fixé sur la face externe de la membrane plasmique",
+            "À l'intérieur des vacuoles de réserve de substances digestives"
+          ],
+          "correct": 0,
+          "solution": "Chez les eucaryotes, l'information génétique sous forme d'ADN est logée au sein du noyau cellulaire qui régule les activités de la cellule."
+        },
+        {
+          "text": "Comment nomme-t-on la technique biotechnologique consistant à transférer un gène d'une espèce donneuse vers une espèce receveuse ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "transgenese",
+            "la transgenese",
+            "transgénèse",
+            "la transgénèse",
+            "transfert de gene",
+            "transfert de gène"
+          ],
+          "solution": "Cette manipulation est appelée transgénèse (ou transfert de gène)."
+        },
+        {
+          "text": "Pourquoi dit-on que l'ADN « gouverne l'activité cellulaire » ?",
+          "type": "mcq",
+          "options": [
+            "Car ses gènes renferment les instructions nécessaires à la synthèse des molécules utiles à la cellule",
+            "Car il fournit directement l'ensemble des calories énergétiques indispensables aux mouvements de la cellule",
+            "Car sa structure rigide forme le squelette mécanique externe maintenant la cellule en suspension aqueuse",
+            "Car il détruit continuellement les nutriments absorbés pour empêcher l'accumulation de graisses toxiques"
+          ],
+          "correct": 0,
+          "solution": "L'ADN dicte l'activité cellulaire en codant pour des molécules (notamment les protéines) qui assurent les fonctions et le métabolisme de la cellule."
+        },
+        {
+          "text": "Chez une souris transgénique issue d'une cellule-œuf modifiée, toutes les cellules de son corps contiennent le gène transféré.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : toutes les cellules de l'adulte dérivant de la cellule-œuf par divisions conformes (mitoses), elles héritent toutes du transgène."
+        }
+      ]
+    },
+    {
+      "category": "Structure de l'ADN & complémentarité des nucléotides",
+      "questions": [
+        {
+          "text": "Que signifie précisément le sigle biologique ADN ?",
+          "type": "mcq",
+          "options": [
+            "Acide DésoxyriboNucléique, molécule constitutive du matériel génétique",
+            "Acide Déshydrogéné Nucléaire, composé servant au stockage des lipides",
+            "Association Dissociée de Nucléoles, filament régulant la respiration",
+            "Agent Dynamique Naturel, complexe enzymatique catalysant les sucres"
+          ],
+          "correct": 0,
+          "solution": "ADN est l'acronyme d'Acide DésoxyriboNucléique."
+        },
+        {
+          "text": "En observant le schéma de structure de l'ADN ci-dessous, quelle est la règle stricte d'appariement des bases complémentaires ?",
+          "type": "mcq",
+          "options": [
+            "L'Adénine (A) s'associe toujours avec la Thymine (T), et la Guanine (G) avec la Cytosine (C)",
+            "L'Adénine (A) s'associe toujours avec la Guanine (G), et la Thymine (T) avec la Cytosine (C)",
+            "L'Adénine (A) s'associe toujours avec la Cytosine (C), et la Thymine (T) avec la Guanine (G)",
+            "Chaque nucléotide s'associe indifféremment et au hasard avec n'importe lequel des trois autres"
+          ],
+          "correct": 0,
+          "solution": "La complémentarité des bases azotées est stricte : A est toujours en vis-à-vis de T, et G est toujours apparié avec C.",
+          "image": "assets/images/svt/adn-double-helice-nucleotides.svg"
+        },
+        {
+          "text": "Quelles sont les 4 sous-unités élémentaires (nucléotides) qui constituent l'ADN ?",
+          "type": "mcq",
+          "options": [
+            "L'Adénine (A), la Thymine (T), la Cytosine (C) et la Guanine (G)",
+            "L'Alanine (A), la Tyrosine (T), la Cystéine (C) et la Glycine (G)",
+            "L'Amidon (A), la Triglycéride (T), le Cholestérol (C) et le Glucose (G)",
+            "L'Ammoniac (A), la Taurine (T), le Chlorure (C) et le Glycogène (G)"
+          ],
+          "correct": 0,
+          "solution": "Les 4 nucléotides de l'ADN se distinguent par leur base azotée : Adénine (A), Thymine (T), Cytosine (C) et Guanine (G)."
+        },
+        {
+          "text": "Si un brin d'ADN présente la séquence de nucléotides 5'- A - T - G - C - C - A - 3', quelle sera la séquence rigoureusement complémentaire sur le brin opposé ?",
+          "type": "mcq",
+          "options": [
+            "T - A - C - G - G - T, respectant les règles d'appariement A-T et C-G",
+            "A - T - G - C - C - A, possédant une séquence parfaitement identique",
+            "G - C - A - T - T - G, associant les purines et pyrimidines sans règle",
+            "C - G - T - A - A - C, inversant aléatoirement l'ordre des nucléotides"
+          ],
+          "correct": 0,
+          "solution": "En appliquant A face à T et C face à G : A->T, T->A, G->C, C->G, C->G, A->T, ce qui donne T-A-C-G-G-T."
+        },
+        {
+          "text": "Quelle est la forme spatiale caractéristique adoptée par les deux chaînes de nucléotides de l'ADN ?",
+          "type": "mcq",
+          "options": [
+            "Une double hélice entrelacée formant une structure spiralée tridimensionnelle",
+            "Un ruban plat circulaire complètement refermé sans aucune torsion spatiale",
+            "Une triple chaîne parallèle rectiligne formant un feuillet rigide et cassant",
+            "Une sphère compacte totalement imperméable sans aucun axe de symétrie"
+          ],
+          "correct": 0,
+          "solution": "L'ADN est constitué de deux brins enroulés l'un autour de l'autre en une double hélice (découverte par Watson et Crick en 1953)."
+        },
+        {
+          "text": "Environ combien de paires de nucléotides contient l'ensemble des molécules d'ADN d'une seule cellule humaine ?",
+          "type": "mcq",
+          "options": [
+            "Plus de 6 milliards de paires de nucléotides réparties sur 46 chromosomes",
+            "Environ 600 000 paires de nucléotides localisées dans les mitochondries",
+            "Près de 60 000 paires de nucléotides concentrées sur une seule hélice",
+            "Moins de 6 000 paires de nucléotides dispersées au sein du cytoplasme"
+          ],
+          "correct": 0,
+          "solution": "Le génome diploïde d'une cellule humaine compte plus de 6 milliards de paires de nucléotides (environ 3 milliards par lot haploïde)."
+        },
+        {
+          "text": "Quelle est la taille moyenne estimée d'un gène dans l'espèce humaine ?",
+          "type": "mcq",
+          "options": [
+            "Quelques dizaines de milliers de paires de nucléotides en moyenne",
+            "Exactement 4 paires de nucléotides correspondant aux quatre bases",
+            "Seulement 20 à 30 paires de nucléotides pour l'ensemble du gène",
+            "Plusieurs centaines de milliards de paires de nucléotides par gène"
+          ],
+          "correct": 0,
+          "solution": "Un gène moyen mesure quelques dizaines de milliers de paires de nucléotides (certains comme le gène de la dystrophine dépassent même 2 millions de paires)."
+        },
+        {
+          "text": "Une seule et même molécule d'ADN peut comporter plusieurs centaines voire plusieurs milliers de gènes différents.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : chaque chromosome est formé d'une longue molécule d'ADN hébergeant de très nombreux gènes disposés les uns à la suite des autres."
+        },
+        {
+          "text": "Dans l'ADN, la quantité de nucléotides à Adénine (A) est toujours égale à la quantité de nucléotides à Thymine (T).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : comme A s'apparie toujours avec T dans la double hélice, il y a exactement autant de molécules d'Adénine que de Thymine (%A = %T)."
+        },
+        {
+          "text": "Quel nucléotide s'associe systématiquement avec la Guanine (G) dans la double hélice d'ADN ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "cytosine",
+            "la cytosine",
+            "c"
+          ],
+          "solution": "La Guanine (G) s'associe toujours avec la Cytosine (C)."
+        },
+        {
+          "text": "Quel nucléotide s'associe systématiquement avec l'Adénine (A) dans la molécule d'ADN ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "thymine",
+            "la thymine",
+            "t"
+          ],
+          "solution": "L'Adénine (A) s'associe toujours avec la Thymine (T)."
+        }
+      ]
+    },
+    {
+      "category": "Séquence des nucléotides & message codé",
+      "questions": [
+        {
+          "text": "Qu'appelle-t-on précisément la « séquence » d'un fragment d'ADN ?",
+          "type": "mcq",
+          "options": [
+            "L'ordre linéaire précis dans lequel se succèdent les nucléotides le long du brin",
+            "Le poids moléculaire global mesuré en grammes par litre de solution aqueuse",
+            "Le diamètre microscopique externe mesuré au centre de la double hélice",
+            "Le nombre total de lipides entourant la molécule d'acide désoxyribonucléique"
+          ],
+          "correct": 0,
+          "solution": "La séquence d'un brin d'ADN correspond à l'enchaînement ordonné de ses nucléotides (par exemple A-T-C-G-A-A...)."
+        },
+        {
+          "text": "D'après le schéma comparatif ci-dessous, par quoi se distinguent deux gènes différents situés sur l'ADN ?",
+          "type": "mcq",
+          "options": [
+            "Par l'ordre et le nombre de nucléotides qui composent leur séquence respective",
+            "Par la présence de bases chimiques inconnues absentes dans le reste du génome",
+            "Par la couleur visible des nucléotides observable directement au microscope",
+            "Par l'épaisseur variable de la membrane phospholipidique qui les enveloppe"
+          ],
+          "correct": 0,
+          "solution": "Deux gènes diffèrent par leur séquence (l'ordre des nucléotides) et par leur longueur, ce qui détermine des messages génétiques distincts.",
+          "image": "assets/images/svt/adn-sequence-et-diversite-genes.svg"
+        },
+        {
+          "text": "Pourquoi dit-on que l'ADN possède une « capacité de codage virtuellement illimitée » ?",
+          "type": "mcq",
+          "options": [
+            "Car la combinatoire permise par la succession des 4 nucléotides sur de longues séquences est infinie",
+            "Car le noyau cellulaire fabrique de nouveaux types d'atomes chimiques inexistants dans la nature",
+            "Car la molécule d'ADN grandit continuellement sans jamais s'arrêter durant toute la vie de l'organisme",
+            "Car chaque nucléotide peut changer spontanément d'identité chimique à chaque seconde d'activité"
+          ],
+          "correct": 0,
+          "solution": "Avec 4 lettres (A, T, C, G) sur des milliers de positions, le nombre de combinaisons possibles est gigantesque (4^N), offrant une diversité infinie d'informations codées."
+        },
+        {
+          "text": "C'est la nature chimique différente des nucléotides qui change d'un gène à l'autre, et non leur ordre d'enchaînement.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : tous les gènes sont composés des 4 mêmes nucléotides (A, T, C, G) ; c'est uniquement leur ordre d'enchaînement (la séquence) qui change."
+        },
+        {
+          "text": "Le plus grand gène connu dans l'espèce humaine mesure plus de 2 millions de paires de nucléotides.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : il s'agit du gène de la dystrophine (impliqué dans la myopathie de Duchenne), qui dépasse 2 millions de paires de nucléotides."
+        },
+        {
+          "text": "Quelle est l'origine biologique commune de l'ensemble des cellules d'un être humain ?",
+          "type": "mcq",
+          "options": [
+            "Elles proviennent toutes d'une cellule-œuf unique par divisions cellulaires successives",
+            "Elles sont formées indépendamment par assemblage direct de nutriments alimentaires",
+            "Elles dérivent de bactéries symbiotiques capturées au cours des premiers jours de la vie",
+            "Elles sont synthétisées spontanément par le foie dès la fin du développement fœtal"
+          ],
+          "correct": 0,
+          "solution": "Toutes les cellules d'un individu pluricellulaire sont issues de la cellule-œuf initiale par des mitoses successives."
+        },
+        {
+          "text": "Puisque toutes les cellules d'un individu dérivent de la même cellule-œuf par mitose, que peut-on affirmer sur leur contenu génétique ?",
+          "type": "mcq",
+          "options": [
+            "Toutes les cellules d'un individu possèdent rigoureusement la même information génétique initiale",
+            "Chaque organe reçoit uniquement les gènes utiles et détruit systématiquement tous les autres",
+            "Les cellules perdent la moitié de leur ADN à chaque division cellulaire au cours de la croissance",
+            "Seuls les globules blancs conservent de l'ADN, les autres cellules en étant totalement dépourvues"
+          ],
+          "correct": 0,
+          "solution": "Toutes les cellules d'un individu possèdent l'intégralité du génome hérité de la cellule-œuf initiale."
+        },
+        {
+          "text": "Posséder un gène dans son ADN garantit qu'il est obligatoirement exprimé et utilisé en permanence par la cellule.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : posséder un gène est une potentialité d'information ; un gène peut être actif ou rester inexploité (silencieux) selon le type cellulaire."
+        },
+        {
+          "text": "Quel mot désigne le message génétique porté par l'ordre précis d'enchaînement des bases A, T, C et G ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "sequence",
+            "la sequence",
+            "séquence",
+            "la séquence",
+            "sequence nucleotidique",
+            "séquence nucléotidique"
+          ],
+          "solution": "Il s'agit de la séquence (ou séquence nucléotidique)."
+        },
+        {
+          "text": "Lorsqu'un chromosome se condense avant une division cellulaire, de quoi est-il constitué au niveau moléculaire ?",
+          "type": "mcq",
+          "options": [
+            "D'une longue molécule d'ADN enroulée et surenroulée autour de protéines",
+            "D'une succession de vacuoles d'eau sous forte pression osmotique interne",
+            "D'un empilement de microcristaux minéraux de phosphate de calcium solide",
+            "D'une double membrane lipidique vide de toute molécule d'acide nucléique"
+          ],
+          "correct": 0,
+          "solution": "Un chromosome est constitué d'une molécule d'ADN très longue, compactée et enroulée autour de protéines (histones)."
+        }
+      ]
+    },
+    {
+      "category": "Spécialisation cellulaire & expression des gènes",
+      "questions": [
+        {
+          "text": "En observant le schéma ci-dessous, que signifie l'expression d'un gène pour une cellule spécialisée ?",
+          "type": "mcq",
+          "options": [
+            "La cellule utilise activement l'information de ce gène pour fabriquer ses propres molécules",
+            "La cellule détruit définitivement ce gène pour éviter toute mutation lors des divisions",
+            "La cellule expulse ce gène à l'extérieur de sa membrane pour communiquer avec ses voisines",
+            "La cellule duplique ce gène un million de fois jusqu'à remplir complètement son cytoplasme"
+          ],
+          "correct": 0,
+          "solution": "Un gène s'exprime lorsque la cellule lit son message pour fabriquer les molécules (protéines) nécessaires à son fonctionnement.",
+          "image": "assets/images/svt/adn-expression-differenciation.svg"
+        },
+        {
+          "text": "Quelle fraction approximative de l'ADN présent dans son noyau une cellule spécialisée exprime-t-elle à un moment donné ?",
+          "type": "mcq",
+          "options": [
+            "Seulement 1 à 2 % de son ADN total est exprimé à un instant donné",
+            "Environ 98 à 100 % de son ADN est exprimé en permanence dans la cellule",
+            "Strictement 50 % de son ADN est exprimé chez tous les tissus vivants",
+            "Exactement 25 % de son ADN correspondant à un seul quart des chromosomes"
+          ],
+          "correct": 0,
+          "solution": "Une cellule spécialisée n'exprime qu'une très petite partie de son génome (de l'ordre de 1 à 2 % de son ADN) correspondant à ses fonctions propres."
+        },
+        {
+          "text": "Dans la moelle osseuse, les cellules souches sanguines se spécialisent. Quel gène s'exprime particulièrement dans les hématies (globules rouges) ?",
+          "type": "mcq",
+          "options": [
+            "Le gène codant l'hémoglobine, protéine assurant le transport du dioxygène dans le sang",
+            "Le gène codant la kératine, protéine protectrice composant l'épiderme et les cheveux",
+            "Le gène codant la myosine, protéine motrice contractile des fibres musculaires squelettiques",
+            "Le gène codant la chlorophylle, pigment photorécepteur captant l'énergie lumineuse solaire"
+          ],
+          "correct": 0,
+          "solution": "Les hématies expriment activement les gènes de l'hémoglobine, ce qui leur permet de transporter le dioxygène dans l'organisme."
+        },
+        {
+          "text": "Bien qu'un neurone possède le gène de l'hémoglobine dans son noyau, pourquoi ne produit-il pas d'hémoglobine ?",
+          "type": "mcq",
+          "options": [
+            "Parce que ce gène est silencieux (non exprimé) dans le tissu nerveux",
+            "Parce que le gène de l'hémoglobine a été détruit lors de la formation du cerveau",
+            "Parce que le neurone ne possède aucun chromosome dans son cytoplasme",
+            "Parce que l'hémoglobine est transformée immédiatement en lipides membranaires"
+          ],
+          "correct": 0,
+          "solution": "Toutes les cellules ont le gène de l'hémoglobine, mais il est réprimé (éteint) dans les neurones, qui n'expriment que les gènes nécessaires aux fonctions nerveuses."
+        },
+        {
+          "text": "Environ combien de types cellulaires spécialisés différents compte l'organisme d'un être humain adulte ?",
+          "type": "mcq",
+          "options": [
+            "Plus de 250 types cellulaires différents aux formes et fonctions spécialisées",
+            "Exactement 4 types cellulaires correspondant aux quatre groupes sanguins majeurs",
+            "Seulement 10 types cellulaires correspondant aux dix grands appareils anatomiques",
+            "Plus de 10 millions de types cellulaires distincts sans aucun ancêtre commun"
+          ],
+          "correct": 0,
+          "solution": "L'espèce humaine possède plus de 250 types cellulaires distincts (neurones, hématies, cellules musculaires, hépatocytes, ostéocytes...)."
+        },
+        {
+          "text": "Au tout début du développement embryonnaire, les premières cellules formées sont peu ou pas différenciées.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : l'embryon est initialement composé de cellules souches indifférenciées qui possèdent toutes la même potentialité avant de se spécialiser."
+        },
+        {
+          "text": "Deux cellules d'un même individu ayant des fonctions différentes (ex. neurone et cellule de peau) possèdent des molécules d'ADN fondamentalement différentes.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : elles possèdent exactement les mêmes molécules d'ADN dans leur noyau, mais elles n'en expriment pas les mêmes gènes."
+        },
+        {
+          "text": "Quel est l'autre nom usuel donné aux hématies, ces cellules sanguines spécialisées dans le transport des gaz respiratoires ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "globules rouges",
+            "globule rouge",
+            "les globules rouges",
+            "le globule rouge",
+            "erythrocytes",
+            "érythrocytes"
+          ],
+          "solution": "Les hématies sont couramment appelées globules rouges (ou érythrocytes)."
+        },
+        {
+          "text": "Comment les cellules acquièrent-elles leurs différences de forme et de fonction au cours du développement embryonnaire ?",
+          "type": "mcq",
+          "options": [
+            "En exprimant sélectivement des gènes différents selon leur localisation dans l'embryon",
+            "En absorbant des morceaux d'ADN présents dans le liquide amniotique nourricier",
+            "En éliminant physiquement les chromosomes inutiles hors de leur cytoplasme",
+            "En modifiant chimiquement la structure de leurs bases azotées A, T, C et G"
+          ],
+          "correct": 0,
+          "solution": "C'est l'expression différentielle des gènes dans l'espace et le temps embryonnaire qui pilote la spécialisation des cellules."
+        },
+        {
+          "text": "Chez l'adulte, les cellules de la moelle osseuse conservent la capacité de se multiplier et de se spécialiser en différentes cellules sanguines.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : les cellules souches de la moelle osseuse se renouvellent continuellement et se différencient en hématies, leucocytes ou plaquettes."
+        }
+      ]
+    }
+  ]
+}

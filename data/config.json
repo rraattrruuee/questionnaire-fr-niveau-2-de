@@ -276,6 +276,16 @@
       "description": "Crise de la République, Octave-Auguste et le principat, romanisation, édit de Caracalla (212), essor et officialisation du christianisme (313-395).",
       "tags": ["histoire", "rome", "empire-romain", "republique", "auguste", "christianisme", "caracalla"],
       "added": "2026-11-06"
+    },
+    {
+      "id": "svt-adn-support-information-genetique",
+      "title": "L'ADN, support de l'information génétique",
+      "subject": "svt",
+      "file": "data/svt/adn-support-information-genetique.json",
+      "questionsCount": 41,
+      "description": "Structure en double hélice, nucléotides (A, T, C, G), universalité du code, gènes et spécialisation cellulaire (SVT Seconde).",
+      "tags": ["svt", "adn", "genetique", "nucleotides", "transgenese", "cellule"],
+      "added": "2026-11-10"
     }
   ],
   "tools": [

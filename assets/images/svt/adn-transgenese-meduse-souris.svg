@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="glowJelly" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="740" height="400" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="2" />
+
+  <!-- Titre -->
+  <text x="370" y="38" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold">
+    Expérience de transgénèse : Universalité de l'ADN
+  </text>
+  <text x="370" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+    Transfert du gène de la bioluminescence d'une méduse à une souris
+  </text>
+
+  <!-- Étape 1 : Organisme donneur (Méduse) -->
+  <g transform="translate(40, 85)">
+    <rect width="180" height="230" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="90" y="26" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">1. Organisme donneur</text>
+    
+    <!-- Dessin méduse stylisée fluorescente -->
+    <path d="M 50,85 Q 90,45 130,85 Q 115,95 90,90 Q 65,95 50,85 Z" fill="#22c55e" fill-opacity="0.8" filter="url(#neonGlow)" />
+    <path d="M 65,95 Q 60,135 68,150" stroke="#4ade80" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 80,92 Q 85,140 80,155" stroke="#4ade80" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 100,92 Q 95,140 102,155" stroke="#4ade80" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 115,95 Q 120,135 112,150" stroke="#4ade80" stroke-width="3" stroke-linecap="round" fill="none" />
+
+    <text x="90" y="180" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Méduse fluorescente</text>
+    <rect x="25" y="195" width="130" height="22" rx="6" fill="#065f46" />
+    <text x="90" y="210" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Gène GFP (bioluminescence)</text>
+  </g>
+
+  <!-- Flèche 1 -> 2 avec fragment ADN -->
+  <g transform="translate(225, 175)">
+    <path d="M 0,25 L 50,25" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="4,3" />
+    <polygon points="50,20 62,25 50,30" fill="#38bdf8" />
+    <!-- Mini ADN -->
+    <rect x="8" y="-5" width="38" height="18" rx="4" fill="#0284c7" />
+    <text x="27" y="8" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">Gène</text>
+  </g>
+
+  <!-- Étape 2 : Récepteur (Cellule-œuf de souris) -->
+  <g transform="translate(290, 85)">
+    <rect width="180" height="230" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="90" y="26" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">2. Injection dans l'œuf</text>
+    
+    <!-- Cellule oeuf -->
+    <circle cx="90" cy="105" r="50" fill="#fbbf24" fill-opacity="0.15" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="90" cy="105" r="26" fill="#f59e0b" fill-opacity="0.3" stroke="#f59e0b" stroke-width="1.5" />
+    <!-- Noyau et ADN intégré -->
+    <path d="M 78,100 Q 90,92 102,100 Q 90,115 78,108" fill="none" stroke="#22c55e" stroke-width="3" />
+    
+    <!-- Pipette de micro-injection -->
+    <path d="M 15,65 L 75,98" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" />
+    <polygon points="75,98 72,94 77,93" fill="#94a3b8" />
+
+    <text x="90" y="180" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Cellule-œuf de souris</text>
+    <text x="90" y="200" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Intégration du gène</text>
+    <text x="90" y="215" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">dans le noyau receveur</text>
+  </g>
+
+  <!-- Flèche 2 -> 3 -->
+  <g transform="translate(475, 175)">
+    <path d="M 0,25 L 45,25" stroke="#38bdf8" stroke-width="2.5" />
+    <polygon points="45,20 57,25 45,30" fill="#38bdf8" />
+    <text x="25" y="12" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">Divisions</text>
+  </g>
+
+  <!-- Étape 3 : Organisme transgénique -->
+  <g transform="translate(535, 85)">
+    <rect width="170" height="230" rx="12" fill="#1e293b" stroke="#22c55e" stroke-width="1.5" />
+    <text x="85" y="26" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">3. Organisme transgénique</text>
+    
+    <!-- Dessin souris fluorescente -->
+    <ellipse cx="85" cy="115" rx="42" ry="28" fill="#22c55e" fill-opacity="0.85" filter="url(#neonGlow)" />
+    <!-- Tête -->
+    <circle cx="50" cy="115" r="20" fill="#22c55e" filter="url(#neonGlow)" />
+    <!-- Oreilles -->
+    <circle cx="45" cy="98" r="9" fill="#16a34a" />
+    <circle cx="58" cy="98" r="9" fill="#16a34a" />
+    <!-- Œil -->
+    <circle cx="42" cy="112" r="3" fill="#0f172a" />
+    <!-- Museau -->
+    <polygon points="30,118 35,114 35,122" fill="#ec4899" />
+    <!-- Queue -->
+    <path d="M 125,120 Q 150,135 145,100" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" />
+
+    <text x="85" y="180" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Souris fluorescente</text>
+    <rect x="15" y="195" width="140" height="22" rx="6" fill="#065f46" />
+    <text x="85" y="210" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Expression du gène médusaire</text>
+  </g>
+
+  <!-- Bandeau conclusion pédagogique -->
+  <g transform="translate(40, 330)">
+    <rect width="665" height="52" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+    <text x="332" y="23" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+      Conclusion fondamentale : L'ADN est une molécule universelle
+    </text>
+    <text x="332" y="42" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11">
+      Le langage génétique est commun à l'ensemble du monde vivant : un gène est déchiffrable et exprimable par une autre espèce.
+    </text>
+  </g>
+</svg>

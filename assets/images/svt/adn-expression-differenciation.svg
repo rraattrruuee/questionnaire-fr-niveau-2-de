@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="100%" height="100%">
+  <defs>
+    <linearGradient id="diffBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="410" rx="16" fill="url(#diffBg)" stroke="#334155" stroke-width="2" />
+
+  <!-- Titre -->
+  <text x="380" y="34" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="bold">
+    Différenciation cellulaire &amp; Expression sélective des gènes
+  </text>
+  <text x="380" y="54" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+    Toutes les cellules possèdent la totalité de l'ADN, mais n'expriment que 1 à 2 % de leurs gènes
+  </text>
+
+  <!-- Cellule souche initiale -->
+  <g transform="translate(45, 80)">
+    <rect width="200" height="235" rx="12" fill="#1e293b" stroke="#e2e8f0" stroke-width="1.2" />
+    <text x="100" y="24" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Cellule souche initiale</text>
+    <text x="100" y="40" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">(Non différenciée)</text>
+
+    <!-- Dessin cellule souche -->
+    <circle cx="100" cy="115" r="55" fill="#fef08a" fill-opacity="0.2" stroke="#eab308" stroke-width="2" />
+    <circle cx="100" cy="115" r="28" fill="#eab308" fill-opacity="0.35" stroke="#ca8a04" stroke-width="1.5" />
+    <!-- Gènes représentés par des points -->
+    <circle cx="90" cy="108" r="4" fill="#cbd5e1" />
+    <circle cx="105" cy="105" r="4" fill="#cbd5e1" />
+    <circle cx="112" cy="118" r="4" fill="#cbd5e1" />
+    <circle cx="95" cy="124" r="4" fill="#cbd5e1" />
+    <circle cx="86" cy="118" r="4" fill="#cbd5e1" />
+
+    <rect x="15" y="185" width="170" height="38" rx="6" fill="#0f172a" />
+    <text x="100" y="200" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">100 % de l'ADN présent</text>
+    <text x="100" y="214" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9">Gènes inexploités / à l'état latent</text>
+  </g>
+
+  <!-- Flèches de différenciation -->
+  <g transform="translate(255, 140)">
+    <!-- Flèche vers Hématie -->
+    <path d="M 0,20 Q 30,0 60,-20" fill="none" stroke="#ef4444" stroke-width="2.5" />
+    <polygon points="60,-24 66,-16 57,-16" fill="#ef4444" />
+    
+    <!-- Flèche vers Neurone -->
+    <path d="M 0,80 Q 30,100 60,120" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+    <polygon points="57,116 66,116 60,124" fill="#38bdf8" />
+
+    <text x="35" y="48" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Expression</text>
+    <text x="35" y="62" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">différentielle</text>
+  </g>
+
+  <!-- Cellule spécialisée 1 : Hématie (Globule rouge) -->
+  <g transform="translate(330, 75)">
+    <rect width="385" height="115" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" />
+    
+    <!-- Dessin hématie -->
+    <ellipse cx="65" cy="58" rx="40" ry="24" fill="#dc2626" />
+    <ellipse cx="65" cy="58" rx="20" ry="12" fill="#b91c1c" />
+    <text x="65" y="100" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Hématie (Globule rouge)</text>
+
+    <!-- Détail gènes exprimés -->
+    <g transform="translate(130, 20)">
+      <text x="0" y="16" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Spécialisation sanguine :</text>
+      <circle cx="8" cy="38" r="5" fill="#22c55e" />
+      <text x="20" y="42" fill="#86efac" font-family="system-ui, sans-serif" font-size="11">Gènes de l'hémoglobine : <tspan font-weight="bold">ACTIFS (exprimés)</tspan></text>
+      
+      <circle cx="8" cy="62" r="5" fill="#64748b" />
+      <text x="20" y="66" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Gènes des neurotransmetteurs : <tspan font-weight="bold">ÉTEINTS (non exprimés)</tspan></text>
+    </g>
+  </g>
+
+  <!-- Cellule spécialisée 2 : Neurone -->
+  <g transform="translate(330, 205)">
+    <rect width="385" height="115" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    
+    <!-- Dessin neurone stylisé -->
+    <circle cx="65" cy="50" r="14" fill="#0284c7" />
+    <!-- Prolongements dendrites/axone -->
+    <line x1="65" y1="36" x2="65" y2="18" stroke="#38bdf8" stroke-width="2.5" />
+    <line x1="53" y1="42" x2="35" y2="30" stroke="#38bdf8" stroke-width="2.5" />
+    <line x1="77" y1="42" x2="95" y2="30" stroke="#38bdf8" stroke-width="2.5" />
+    <line x1="53" y1="58" x2="38" y2="70" stroke="#38bdf8" stroke-width="2.5" />
+    <line x1="77" y1="58" x2="105" y2="68" stroke="#38bdf8" stroke-width="3" />
+    <text x="65" y="100" text-anchor="middle" fill="#7dd3fc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Neurone</text>
+
+    <!-- Détail gènes exprimés -->
+    <g transform="translate(130, 20)">
+      <text x="0" y="16" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Spécialisation nerveuse :</text>
+      <circle cx="8" cy="38" r="5" fill="#22c55e" />
+      <text x="20" y="42" fill="#86efac" font-family="system-ui, sans-serif" font-size="11">Gènes des neurotransmetteurs : <tspan font-weight="bold">ACTIFS (exprimés)</tspan></text>
+      
+      <circle cx="8" cy="62" r="5" fill="#64748b" />
+      <text x="20" y="66" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Gènes de l'hémoglobine : <tspan font-weight="bold">ÉTEINTS (non exprimés)</tspan></text>
+    </g>
+  </g>
+
+  <!-- Bandeau résumé bas -->
+  <g transform="translate(45, 335)">
+    <rect width="670" height="60" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
+    <text x="335" y="23" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      Règle fondamentale du vivant pluricellulaire
+    </text>
+    <text x="335" y="42" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
+      Dans une cellule spécialisée, seulement <tspan fill="#4ade80" font-weight="bold">1 à 2 % des gènes</tspan> sont exprimés à un instant donné.
+      L'espèce humaine compte plus de <tspan fill="#facc15" font-weight="bold">250 types cellulaires distincts</tspan>.
+    </text>
+  </g>
+</svg>
