@@ -286,6 +286,16 @@
       "description": "Structure en double hélice, nucléotides (A, T, C, G), universalité du code, gènes et spécialisation cellulaire (SVT Seconde).",
       "tags": ["svt", "adn", "genetique", "nucleotides", "transgenese", "cellule"],
       "added": "2026-11-10"
+    },
+    {
+      "id": "ses-socialisation-demarche-outils",
+      "title": "Socialisation, démarche sociologique et outils quantitatifs",
+      "subject": "ses",
+      "file": "data/ses/socialisation-demarche-outils.json",
+      "questionsCount": 45,
+      "description": "Processus et instances de socialisation, capitaux de Bourdieu, genre, démarche scientifique en SES et calculs statistiques (SES Seconde).",
+      "tags": ["ses", "socialisation", "bourdieu", "demarche-scientifique", "correlation", "causalite", "coefficient-multiplicateur"],
+      "added": "2026-11-11"
     }
   ],
   "tools": [

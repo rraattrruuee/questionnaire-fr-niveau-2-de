@@ -1,0 +1,556 @@
+{
+  "subject": "ses",
+  "title": "Socialisation, démarche sociologique et outils quantitatifs",
+  "description": "Processus et instances de socialisation, capitaux de Bourdieu, genre, démarche scientifique en SES et calculs statistiques (SES Seconde).",
+  "notepad": true,
+  "categories": [
+    {
+      "category": "Chapitre 2 — La socialisation et ses processus",
+      "questions": [
+        {
+          "text": "En sociologie, comment définit-on précisément le processus de socialisation ?",
+          "type": "mcq",
+          "options": [
+            "L'intériorisation progressive des manières de faire, de penser et d'agir au cours des interactions avec l'environnement social",
+            "L'apprentissage obligatoire du droit pénal et du code civil pour éviter de commettre des infractions dans l'espace public",
+            "L'enrichissement financier rapide permettant à un individu d'accéder au rang de dirigeant d'une grande entreprise privée",
+            "La participation bénévole et exclusive à des activités politiques au sein d'une organisation syndicale ou associative"
+          ],
+          "correct": 0,
+          "solution": "La socialisation est le processus par lequel l'individu intériorise les normes, valeurs et façons de penser de sa société au fil de ses interactions sociales."
+        },
+        {
+          "text": "En quoi l'éducation familiale constitue-t-elle un cas particulier au sein de la socialisation primaire ?",
+          "type": "mcq",
+          "options": [
+            "Les parents ajoutent une intention pédagogique explicite et réfléchie à la transmission des comportements quotidiens",
+            "Les parents laissent l'enfant totalement libre sans jamais intervenir dans le choix de ses activités ou de ses fréquentations",
+            "L'éducation ne repose que sur la sanction juridique officielle appliquée directement par les forces de l'ordre à domicile",
+            "Elle commence uniquement à l'adolescence lorsque le jeune adulte quitte le système scolaire pour entrer sur le marché de l'emploi"
+          ],
+          "correct": 0,
+          "solution": "L'éducation est une modalité spécifique de socialisation car les éducateurs (principalement les parents) agissent avec une intention consciente de transmettre des valeurs."
+        },
+        {
+          "text": "Par quels mécanismes principaux un enfant apprend-il les règles de vie durant la socialisation primaire ?",
+          "type": "mcq",
+          "options": [
+            "Par l'observation attentive, l'apprentissage régulier et l'imitation spontanée de son entourage proche (parents, fratrie)",
+            "Par la signature solennelle d'un contrat commercial dès la petite enfance engageant sa responsabilité financière directe",
+            "Par l'adhésion obligatoire à un parti politique dès l'âge de six ans pour participer au débat démocratique national",
+            "Par l'isolement complet dans une pièce fermée à l'écart de tout contact humain pour forger son indépendance naturelle"
+          ],
+          "correct": 0,
+          "solution": "L'enfant apprend en observant, en imitant les adultes et les membres de sa fratrie, et en recevant des encouragements ou des rappels à l'ordre."
+        },
+        {
+          "text": "Que désigne la notion sociologique de « déterminisme social » ?",
+          "type": "mcq",
+          "options": [
+            "L'influence déterminante des facteurs sociaux sur les choix et comportements individuels, limitant la liberté absolue d'action",
+            "L'obligation juridique stricte inscrite dans la Constitution obligeant chaque citoyen à épouser une personne de sa classe sociale",
+            "La capacité magique d'un individu à prédire avec une certitude totale l'avenir économique de l'ensemble de ses futurs descendants",
+            "Le fait que le milieu social d'origine n'exerce strictement aucune influence sur les diplômes, les loisirs ou les goûts de l'individu"
+          ],
+          "correct": 0,
+          "solution": "Le déterminisme social met en lumière le fait que nos goûts, opinions et choix de vie sont largement conditionnés par le milieu social dans lequel nous avons grandi."
+        },
+        {
+          "text": "Qu'appelle-t-on une « instance de socialisation » en sciences économiques et sociales ?",
+          "type": "mcq",
+          "options": [
+            "Un cadre ou une institution sociale dans lequel se déroulent les interactions transmettant normes et valeurs aux individus",
+            "Un tribunal judiciaire spécialisé chargé d'évaluer le montant des amendes pour manquement à la politesse dans les transports",
+            "Un compte bancaire bloqué réservé au paiement des études universitaires des enfants issus des catégories les plus modestes",
+            "Un règlement intérieur strict affiché dans les gares et aéroports pour guider les voyageurs étrangers en transit touristique"
+          ],
+          "correct": 0,
+          "solution": "Une instance de socialisation est un lieu ou un groupe socialisateur : la famille, l'école, les groupes de pairs, les médias, le monde du travail..."
+        },
+        {
+          "text": "Parmi les propositions suivantes, quelles sont les deux instances majeures intervenant dès l'enfance dans la socialisation ?",
+          "type": "mcq",
+          "options": [
+            "La famille et l'école (comprenant les enseignants mais aussi et surtout le groupe de pairs)",
+            "Le tribunal correctionnel et la chambre de commerce et d'industrie de la région administrative",
+            "Le cabinet notarial et la banque mutualiste gérant les comptes d'épargne des jeunes enfants",
+            "Le conseil d'administration d'une multinationale et l'assemblée des actionnaires financiers"
+          ],
+          "correct": 0,
+          "solution": "La famille et l'école (avec les groupes de pairs, c'est-à-dire les camarades de même âge) sont les instances fondamentales de la socialisation primaire."
+        },
+        {
+          "text": "La socialisation remplit une double fonction sociale : assurer la reproduction de la société et maintenir la cohésion sociale.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : en inculquant des valeurs et des règles partagées, la socialisation assure l'intégration des personnes et la pérennité de l'ordre social."
+        },
+        {
+          "text": "La socialisation d'un individu s'arrête définitivement à l'âge de 18 ans et n'évolue plus jamais durant le reste de son existence.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : la socialisation est un processus continu qui se poursuit tout au long de la vie (socialisation secondaire : travail, couple, nouvelles rencontres, lectures)."
+        },
+        {
+          "text": "Comment qualifie-t-on la première phase de socialisation qui s'effectue durant l'enfance et l'adolescence au sein de la famille et de l'école ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "socialisation primaire",
+            "la socialisation primaire",
+            "primaire"
+          ],
+          "solution": "Il s'agit de la socialisation primaire (qui précède la socialisation secondaire de l'âge adulte)."
+        },
+        {
+          "text": "Quelle est la fonction essentielle de la socialisation pour la personnalité d'un individu ?",
+          "type": "mcq",
+          "options": [
+            "Favoriser l'adaptation harmonieuse de la personnalité de l'individu aux exigences de la société dans laquelle il est amené à vivre",
+            "Uniformiser l'apparence physique de chaque citoyen pour que tout le monde porte rigoureusement le même costume au travail",
+            "Supprimer totalement les émotions et sentiments humains au profit d'un comportement calculé et purement mathématique",
+            "Forcer chaque individu à oublier sa langue maternelle pour adopter une langue internationale imposée par décret royal"
+          ],
+          "correct": 0,
+          "solution": "La socialisation construit l'identité de l'individu et lui permet de s'adapter et de fonctionner sereinement au sein de son groupe social."
+        },
+        {
+          "text": "Dans la socialisation à l'école, les camarades du même âge (groupe de pairs) jouent un rôle socialisateur souvent aussi fort que les professeurs.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : le groupe de pairs transmet des codes vestimentaires, du vocabulaire, des goûts musicaux et des règles de conduite très influents."
+        }
+      ]
+    },
+    {
+      "category": "Chapitre 2 — Différenciation sociale, capitaux et genre",
+      "questions": [
+        {
+          "text": "En observant le schéma des 4 formes de capitaux ci-dessous, quel sociologue français a théorisé ces concepts fondamentaux ?",
+          "type": "mcq",
+          "options": [
+            "Pierre Bourdieu, qui a mis en lumière la reproduction des hiérarchies sociales",
+            "Émile Durkheim, qui a fondé l'école sociologique sur l'analyse de la solidarité",
+            "Max Weber, qui a analysé le lien entre éthique protestante et capitalisme moderne",
+            "Alexis de Tocqueville, qui a étudié l'égalisation des conditions en Amérique"
+          ],
+          "correct": 0,
+          "solution": "Pierre Bourdieu a développé la théorie des capitaux (économique, culturel, social et symbolique) pour expliquer les mécanismes de reproduction sociale.",
+          "image": "assets/images/ses/bourdieu-formes-de-capitaux.svg"
+        },
+        {
+          "text": "Quels sont les trois grands milieux sociaux traditionnellement distingués par les sociologues ?",
+          "type": "mcq",
+          "options": [
+            "Les catégories populaires, les catégories moyennes et les catégories supérieures",
+            "Les personnes résidant au nord, les habitants du centre et les citoyens du sud du pays",
+            "Les amateurs de musique classique, les passionnés de rock et les auditeurs de podcasts",
+            "Les propriétaires de véhicules thermiques, d'automobiles hybrides et de vélos urbains"
+          ],
+          "correct": 0,
+          "solution": "Les sociologues classent généralement les milieux sociaux en catégories populaires (ouvriers, employés), moyennes (professions intermédiaires) et supérieures (cadres, professions libérales)."
+        },
+        {
+          "text": "Selon Pierre Bourdieu, de quoi est constitué le « capital économique » d'une famille ?",
+          "type": "mcq",
+          "options": [
+            "Des revenus du travail, du patrimoine financier, des biens immobiliers et de l'argent accumulé",
+            "Du nombre de livres présents dans la bibliothèque du salon et des visites régulières au musée d'art",
+            "Du carnet d'adresses relationnel et des relations professionnelles d'amitié influentes",
+            "Du prestige moral et de la réputation de dignité reconnue publiquement par le voisinage"
+          ],
+          "correct": 0,
+          "solution": "Le capital économique regroupe l'ensemble des ressources financières, monétaires et patrimoniales (biens, actions, épargne, immobilier)."
+        },
+        {
+          "text": "Qu'englobe précisément le « capital culturel » selon les travaux de Pierre Bourdieu ?",
+          "type": "mcq",
+          "options": [
+            "Les diplômes scolaires, les livres lus, les pratiques artistiques et la maîtrise de la langue légitime",
+            "Le montant total des livrets d'épargne bancaires et des investissements en actions cotées en bourse",
+            "Le nombre d'abonnés sur les réseaux sociaux et la fréquence des sorties en boîte de nuit le week-end",
+            "La possession physique d'une voiture de luxe et d'une résidence secondaire au bord de la Méditerranée"
+          ],
+          "correct": 0,
+          "solution": "Le capital culturel comprend les diplômes (institutionnalisé), les biens culturels (livres, œuvres d'art) et les dispositions corporelles/linguistiques intériorisées."
+        },
+        {
+          "text": "Comment définit-on le « capital social » dans la théorie sociologique de Pierre Bourdieu ?",
+          "type": "mcq",
+          "options": [
+            "Le réseau durable de relations d'amitié, de connaissances utiles et d'appuis professionnels mobilisables",
+            "La somme des cotisations sociales prélevées sur le salaire brut pour financer les retraites publiques",
+            "Le nombre total de collègues de travail travaillant dans le même open space au sein de l'entreprise",
+            "L'ensemble des aides financières accordées par la caisse d'allocations familiales aux ménages modestes"
+          ],
+          "correct": 0,
+          "solution": "Le capital social désigne le réseau de relations sociales et professionnelles qu'un individu ou une famille peut mobiliser pour obtenir un emploi, un logement ou une opportunité."
+        },
+        {
+          "text": "À quoi correspond le « capital symbolique » selon Pierre Bourdieu ?",
+          "type": "mcq",
+          "options": [
+            "Au prestige, à la reconnaissance sociale, à l'honneur et à la réputation accordés par les autres",
+            "Aux pièces de monnaie anciennes frappées d'un symbole héraldique conservées dans un coffre-fort",
+            "Aux écussons et drapeaux brodés arborés par les fonctionnaires lors des défilés officiels d'État",
+            "À la monnaie virtuelle utilisée exclusivement dans les jeux vidéo multijoueurs en ligne"
+          ],
+          "correct": 0,
+          "solution": "Le capital symbolique est la forme prise par les autres capitaux lorsqu'ils sont reconnus comme légitimes et prestigieux aux yeux de la société."
+        },
+        {
+          "text": "Comment nomme-t-on un individu connaissant une trajectoire sociale « improbable », s'élevant très nettement au-dessus de son milieu social d'origine ?",
+          "type": "mcq",
+          "options": [
+            "Un transfuge de classe (ou migrant de classe)",
+            "Un renégat civique condamné par le tribunal",
+            "Un héritier dynastique conservant ses rentes",
+            "Un conformiste passif évitant tout changement"
+          ],
+          "correct": 0,
+          "solution": "Un transfuge de classe désigne une personne dont le parcours social s'éloigne des statistiques prévisibles de son milieu d'origine (ex. parcours exceptionnel d'un rappeur ou d'un intellectuel issu d'un milieu très populaire)."
+        },
+        {
+          "text": "En quoi la socialisation est-elle « différenciée selon le genre » dès la petite enfance ?",
+          "type": "mcq",
+          "options": [
+            "La société étiquette certains comportements, jouets, vêtements ou attitudes comme masculins et d'autres comme féminins",
+            "Les garçons reçoivent obligatoirement un enseignement de physique-chimie et les filles uniquement des cours de couture",
+            "La loi impose aux pères d'éduquer uniquement leurs fils et aux mères d'éduquer exclusivement leurs filles à la maison",
+            "Les filles ont le droit de voter dès l'âge de seize ans alors que les garçons doivent attendre la majorité à vingt-et-un ans"
+          ],
+          "correct": 0,
+          "solution": "La socialisation de genre transmet des stéréotypes et des attentes différentes selon le sexe biologique, influençant dès l'enfance les goûts, les loisirs, les études et les métiers."
+        },
+        {
+          "text": "La socialisation différenciée selon le milieu social n'a aucun impact sur les activités de loisirs ni sur les choix d'études des jeunes.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : le milieu social d'origine influence puissamment les pratiques de loisir, le niveau de diplôme visé et l'orientation professionnelle future."
+        },
+        {
+          "text": "Quel mot désigne l'ensemble des représentations sociales qui attribue des rôles et attitudes dits 'masculins' ou 'féminins' aux individus ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "genre",
+            "le genre"
+          ],
+          "solution": "Il s'agit du concept sociologique de genre (distinct du sexe biologique)."
+        },
+        {
+          "text": "Deux enfants nés dans le même pays partent exactement avec les mêmes chances d'atteindre les plus hautes fonctions sociales, indépendamment des capitaux de leurs parents.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : les travaux sociologiques de Bourdieu ont démontré que les capitaux économique, culturel et social transmis par les parents créent une forte inégalité des chances et une reproduction sociale."
+        }
+      ]
+    },
+    {
+      "category": "Chapitre 1 — Démarche scientifique, questionnements et modèles en SES",
+      "questions": [
+        {
+          "text": "Quelles sont les trois grandes disciplines scientifiques qui composent l'enseignement de SES au lycée ?",
+          "type": "mcq",
+          "options": [
+            "L'économie, la sociologie et la science politique",
+            "L'histoire, la géographie physique et la géologie",
+            "La psychologie clinique, la psychanalyse et la médecine",
+            "Le droit pénal, les mathématiques pures et la finance"
+          ],
+          "correct": 0,
+          "solution": "Les SES combinent l'économie, la sociologie et la science politique pour analyser le monde contemporain."
+        },
+        {
+          "text": "Quelle est l'interrogation fondamentale qui définit le cœur de la science économique ?",
+          "type": "mcq",
+          "options": [
+            "Comment allouer efficacement des ressources rares face à des besoins humains illimités ?",
+            "Comment fabriquer des pièces de monnaie en argent massif sans utiliser d'outils industriels ?",
+            "Quelle est la meilleure technique de persuasion oratoire pour convaincre un auditoire récalcitrant ?",
+            "Par quel moyen magique peut-on éliminer l'obligation de travailler pour l'ensemble des humains ?"
+          ],
+          "correct": 0,
+          "solution": "L'économie étudie l'allocation des ressources rares (terre, travail, capital) et les arbitrages pour répondre aux besoins."
+        },
+        {
+          "text": "Quelles sont les trois grandes ressources productives considérées comme limitées en quantité en économie ?",
+          "type": "mcq",
+          "options": [
+            "La terre (ressources naturelles), le travail humain et le capital technique",
+            "L'imagination poétique, la générosité morale et la bonne humeur quotidienne",
+            "Les billets de banque imprimés, les chèques de caution et les pièces de collection",
+            "La lumière du soleil, l'air ambiant et les vagues marines de l'océan Atlantique"
+          ],
+          "correct": 0,
+          "solution": "Les ressources économiques traditionnelles sont la terre (ressources naturelles), le travail (main-d'œuvre) et le capital (machines, bâtiments, équipements)."
+        },
+        {
+          "text": "Quelle est la modalité prédominante d'allocation des ressources dans les économies contemporaines ?",
+          "type": "mcq",
+          "options": [
+            "Le marché et le système de fixation des prix par la rencontre de l'offre et de la demande",
+            "Le tirage au sort hebdomadaire effectué sous le contrôle d'un huissier de justice indépendant",
+            "La distribution autoritaire et gratuite de tous les produits par décision exclusive du préfet",
+            "Le troc direct de coquillages marins contre des sacs de céréales entre voisins immédiats"
+          ],
+          "correct": 0,
+          "solution": "Aujourd'hui, le mécanisme principal d'allocation des biens et services est le marché régulé par le système des prix."
+        },
+        {
+          "text": "Quelles sont les deux questions de base qui guident la recherche en sociologie ?",
+          "type": "mcq",
+          "options": [
+            "« Comment fait-on société ? » et « Comment explique-t-on les comportements sociaux ? »",
+            "« Quel est le cours de l'or en bourse ? » et « Comment maximiser le profit d'un livret A ? »",
+            "« Comment programmer un algorithme informatique ? » et « Quel serveur héberge le réseau ? »",
+            "« Quelle est la formule chimique de l'ozone ? » et « Comment purifier une eau boueuse ? »"
+          ],
+          "correct": 0,
+          "solution": "La sociologie analyse comment les individus parviennent à vivre ensemble (faire société) et ce qui détermine leurs conduites sociales."
+        },
+        {
+          "text": "Quel est l'objet d'étude central de la science politique ?",
+          "type": "mcq",
+          "options": [
+            "Comprendre comment se conquiert, s'organise et s'exerce le pouvoir politique au sein d'une société",
+            "Rédiger des slogans publicitaires attrayants pour vendre des voitures sur les chaînes de télévision",
+            "Établir les règles architecturales de construction des ponts suspendus au-dessus des fleuves",
+            "Mesurer la vitesse de rotation de la Terre autour du Soleil lors du solstice d'hiver boréal"
+          ],
+          "correct": 0,
+          "solution": "La science politique étudie le pouvoir politique, les institutions républicaines (parlement, gouvernement), les partis et le vote."
+        },
+        {
+          "text": "En observant le schéma de la démarche scientifique ci-dessous, quel est l'ordre exact des 4 étapes suivies par les chercheurs en SES ?",
+          "type": "mcq",
+          "options": [
+            "Formulation d'hypothèses ➔ Réalisation d'enquêtes ou modélisation ➔ Confrontation aux faits ➔ Conclusion",
+            "Affirmation d'une certitude morale ➔ Condamnation des contradicteurs ➔ Rédaction d'un tract ➔ Publication",
+            "Vote parlementaire à main levée ➔ Choix du budget public ➔ Nomination des ministres ➔ Enquête préliminaire",
+            "Calcul d'un profit commercial ➔ Emprunt bancaire immédiat ➔ Achat d'usines ➔ Déduction des charges salariales"
+          ],
+          "correct": 0,
+          "solution": "La démarche scientifique en SES repose sur la formulation d'hypothèses, leur mise à l'épreuve par l'enquête ou le modèle, la confrontation aux données empiriques et la conclusion.",
+          "image": "assets/images/ses/demarche-scientifique-ses.svg"
+        },
+        {
+          "text": "Qu'est-ce qu'un « échantillon représentatif » lors de la réalisation d'une enquête sociologique ?",
+          "type": "mcq",
+          "options": [
+            "Un groupe réduit d'individus reproduisant fidèlement les proportions de la population globale (âge, genre, classe, lieu)",
+            "Un rassemblement de personnes sélectionnées uniquement parmi les amis personnels et voisins proches du sociologue",
+            "Un groupe composé exclusivement d'étudiants d'une même université parisienne ayant accepté de répondre en ligne",
+            "Une liste alphabétique des citoyens les plus fortunés payant le montant le plus élevé d'impôt sur la fortune"
+          ],
+          "correct": 0,
+          "solution": "Un échantillon est représentatif s'il est une réduction fidèle de la population étudiée (mêmes quotas d'âge, catégories socioprofessionnelles, sexes, lieux de résidence)."
+        },
+        {
+          "text": "Qu'est-ce qu'un « modèle » en sciences économiques et sociales ?",
+          "type": "mcq",
+          "options": [
+            "Une représentation simplifiée de la réalité permettant d'isoler des mécanismes et de tester des hypothèses",
+            "Un objectif moral et éthique parfait que l'ensemble des citoyens doit chercher à imiter à tout prix",
+            "Une photographie exacte et intégrale sans aucun filtre de chaque seconde de la vie d'une nation",
+            "Une réplique miniature en résine plastique exposée sous une cloche de verre dans un musée d'art"
+          ],
+          "correct": 0,
+          "solution": "Un modèle n'est ni la réalité complète ni un idéal moral : c'est une simplification méthodologique (ex. le modèle du marché en économie)."
+        },
+        {
+          "text": "D'après le schéma ci-dessous, pourquoi l'affirmation « les ventes de glaces provoquent les coups de soleil » est-elle scientifiquement erronée ?",
+          "type": "mcq",
+          "options": [
+            "Parce qu'il s'agit d'une simple corrélation statistique due à une variable confondante commune : la chaleur estivale",
+            "Parce que la crème glacée contient des molécules chimiques qui protègent miraculeusement la peau contre les rayons ultraviolets",
+            "Parce que les coups de soleil ne peuvent exister que chez les personnes qui ne consomment strictement aucun aliment sucré",
+            "Parce que la loi française interdit formellement de manger des glaces sur les plages publiques surveillées en été"
+          ],
+          "correct": 0,
+          "solution": "Corrélation n'est pas causalité : les deux variables augmentent ensemble en été en raison d'une troisième variable (la chaleur et le soleil) qui cause les deux phénomènes.",
+          "image": "assets/images/ses/correlation-vs-causalite.svg"
+        },
+        {
+          "text": "Une corrélation positive entre deux variables A et B prouve de manière indiscutable que la variable A est la cause directe de la variable B.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : corrélation n'est pas causalité ! Deux variables peuvent être corrélées par simple coïncidence ou à cause d'une variable confondante cachée."
+        },
+        {
+          "text": "Quel adjectif qualifie une enquête sociologique reposant sur des données statistiques chiffrées (par opposition à une enquête qualitative par entretiens) ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "quantitative",
+            "une enquete quantitative",
+            "enquête quantitative",
+            "une enquête quantitative"
+          ],
+          "solution": "Une enquête basée sur des statistiques chiffrées est une enquête quantitative."
+        }
+      ]
+    },
+    {
+      "category": "Fiche Méthodologie N°1 — Outils statistiques et calculs en SES",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "En observant le récapitulatif méthodologique ci-dessous, quelle est la formule de calcul du Coefficient Multiplicateur (CM) ?",
+          "type": "mcq",
+          "options": [
+            "CM = Valeur d'arrivée / Valeur de départ (Va / Vd)",
+            "CM = Valeur de départ / Valeur d'arrivée (Vd / Va)",
+            "CM = Valeur d'arrivée × Valeur de départ (Va × Vd)",
+            "CM = Valeur d'arrivée + Valeur de départ (Va + Vd)"
+          ],
+          "correct": 0,
+          "solution": "Le coefficient multiplicateur se calcule toujours en divisant la valeur d'arrivée par la valeur de départ : CM = Va / Vd.",
+          "image": "assets/images/ses/calcul-variation-coeff-multiplicateur.svg"
+        },
+        {
+          "text": "Si le prix d'un livre scolaire passe de 20 € à 24 €, quel est le coefficient multiplicateur mesurant cette hausse ?",
+          "type": "mcq",
+          "options": [
+            "1,2 car 24 / 20 = 1,2",
+            "0,8 car 20 / 24 = 0,8",
+            "4,0 car 24 - 20 = 4,0",
+            "44,0 car 24 + 20 = 44,0"
+          ],
+          "correct": 0,
+          "solution": "Va / Vd = 24 / 20 = 1,2. Le prix a donc été multiplié par 1,2."
+        },
+        {
+          "text": "Si un bien connaît un coefficient multiplicateur de 1,2, quelle est sa variation exprimée en pourcentage ?",
+          "type": "mcq",
+          "options": [
+            "+20 % car la variation en pourcentage est égale à (CM - 1) × 100 = (1,2 - 1) × 100 = 20 %",
+            "+120 % car le pourcentage de hausse correspond directement au coefficient multiplicateur multiplié par 100",
+            "+1,2 % car la variation est simplement le chiffre brut du coefficient sans aucune modification",
+            "+2 % car on retire le chiffre des dizaines pour obtenir le résultat de l'augmentation finale"
+          ],
+          "correct": 0,
+          "solution": "La variation en pourcentage est donnée par (Va/Vd - 1) = CM - 1. Avec CM = 1,2, on a 1,2 - 1 = +0,2, soit une hausse de +20 %."
+        },
+        {
+          "text": "Le prix d'un vêtement passe de 100 € à 80 €. Quel est le coefficient multiplicateur de cette évolution et que signifie-t-il ?",
+          "type": "mcq",
+          "options": [
+            "CM = 0,8 (80/100). Un CM inférieur à 1 indique toujours une baisse, correspondant ici à -20 %",
+            "CM = -0,8 car une diminution de prix impose obligatoirement de mettre un signe négatif devant le coefficient",
+            "CM = 1,25 car on divise systématiquement le chiffre le plus grand par le plus petit quelle que soit la date",
+            "CM = 20 car la variation en euros bruts est équivalente à la valeur numérique exacte du coefficient"
+          ],
+          "correct": 0,
+          "solution": "Une baisse correspond à un coefficient multiplicateur compris entre 0 et 1 (ici 80/100 = 0,8). Un CM n'est jamais négatif !"
+        },
+        {
+          "text": "Un coefficient multiplicateur peut être négatif si la valeur étudiée a diminué au cours de la période.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux : un coefficient multiplicateur n'est jamais négatif ! Une baisse correspond à un CM inférieur à 1 (ex. 0,8 pour une baisse de 20 %)."
+        },
+        {
+          "text": "Un salaire subit une première hausse de 30 %, puis une seconde de 15 %, et enfin une troisième de 20 %. Comment calcule-t-on la hausse globale ?",
+          "type": "mcq",
+          "options": [
+            "En multipliant les coefficients multiplicateurs : 1,30 × 1,15 × 1,20 = 1,794, soit une hausse globale de +79,4 %",
+            "En additionnant simplement les pourcentages bruts : 30 + 15 + 20 = 65 %, car les pourcentages s'additionnent toujours",
+            "En faisant la moyenne arithmétique simple : (30 + 15 + 20) / 3 = 21,6 %, valeur moyenne de chaque année",
+            "En multipliant les pourcentages bruts : 30 × 15 × 20 = 9 000 %, traduisant une croissance exponentielle incontrôlable"
+          ],
+          "correct": 0,
+          "solution": "Règle d'or en SES : on ne peut jamais additionner des pourcentages de variation ! On doit passer par la multiplication des coefficients multiplicateurs (1,30 × 1,15 × 1,20 = 1,794, soit +79,4 %)."
+        },
+        {
+          "text": "Il est formellement interdit d'additionner des pourcentages qui représentent des variations successives dans le temps.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : des hausses successives se composent en multipliant les coefficients multiplicateurs, jamais en additionnant les pourcentages."
+        },
+        {
+          "text": "On a le droit d'additionner des pourcentages de répartition s'ils portent sur une même population et des intervalles qui se suivent.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai : si 7 % des forêts ont moins de 1 hectare et 32 % ont entre 1 et 10 hectares, alors 7 + 32 = 39 % des forêts ont moins de 10 hectares."
+        },
+        {
+          "text": "Selon la fiche méthodologique n°1, quels éléments indispensables doit-on toujours présenter pour introduire un document statistique en SES ?",
+          "type": "mcq",
+          "options": [
+            "La nature du document, le titre, la source, l'unité, le champ (zone géographique), la période et la date de publication",
+            "Le nom de l'imprimeur, la marque de l'ordinateur utilisé pour saisir les données et la couleur du papier original",
+            "Le montant payé au statisticien pour réaliser l'enquête et le numéro de téléphone personnel de l'auteur de l'article",
+            "L'avis politique personnel du lecteur sur le sujet et le nom de ses professeurs d'économie et d'histoire du collège"
+          ],
+          "correct": 0,
+          "solution": "Pour présenter un document, on doit rigoureusement énoncer : Nature, Titre, Source, Unité, Champ géographique, Période étudiée et Date de parution."
+        },
+        {
+          "text": "Comment appelle-t-on le résultat obtenu en divisant la valeur d'arrivée par la valeur de départ (Va / Vd) ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "coefficient multiplicateur",
+            "le coefficient multiplicateur",
+            "coeff multiplicateur",
+            "coeff multi"
+          ],
+          "solution": "Le rapport Va / Vd est le coefficient multiplicateur."
+        },
+        {
+          "text": "Si une boutique applique une remise promotionnelle de -20 % sur l'ensemble de ses articles, combien paierez-vous pour un produit qui coûtait 1 € ?",
+          "type": "mcq",
+          "options": [
+            "80 centimes, car multiplier par le coefficient 0,8 donne 0,80 €",
+            "20 centimes, car la remise correspond au prix payé à la caisse",
+            "1,20 euro, car le commerçant répercute la taxe sur le client",
+            "98 centimes, car le rabais ne s'applique que sur les centimes"
+          ],
+          "correct": 0,
+          "solution": "Une réduction de 20 % correspond à un CM de 1 - 0,20 = 0,80. Pour 1 €, on paiera 1 × 0,80 = 0,80 € (80 centimes)."
+        }
+      ]
+    }
+  ]
+}

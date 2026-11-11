@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="demBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="380" rx="16" fill="url(#demBg)" stroke="#334155" stroke-width="2" />
+
+  <!-- Titre -->
+  <text x="380" y="36" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold">
+    La démarche scientifique en Sciences Économiques &amp; Sociales
+  </text>
+  <text x="380" y="58" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+    Le sociologue, l'économiste et le politiste ne se contentent pas d'avoir des opinions : ils testent des hypothèses
+  </text>
+
+  <!-- Les 4 étapes en frise chronologique -->
+  <g transform="translate(30, 90)">
+    <!-- Étape 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="155" height="180" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+      <circle cx="77" cy="32" r="16" fill="#0284c7" />
+      <text x="77" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">1</text>
+      <text x="77" y="68" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Formulation</text>
+      <text x="77" y="84" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">d'hypothèses</text>
+      
+      <text x="12" y="112" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Questionnement initial</text>
+      <text x="12" y="130" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Suppositions logiques</text>
+      <text x="12" y="148" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Propositions à tester</text>
+    </g>
+
+    <!-- Flèche 1 -> 2 -->
+    <g transform="translate(160, 80)">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#64748b" stroke-width="3" />
+      <polygon points="20,-5 27,0 20,5" fill="#64748b" />
+    </g>
+
+    <!-- Étape 2 -->
+    <g transform="translate(190, 0)">
+      <rect width="155" height="180" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+      <circle cx="77" cy="32" r="16" fill="#d97706" />
+      <text x="77" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">2</text>
+      <text x="77" y="68" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Enquêtes ou</text>
+      <text x="77" y="84" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Modélisation</text>
+      
+      <text x="12" y="112" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Enquêtes stats (quanti)</text>
+      <text x="12" y="130" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Entretiens (quali)</text>
+      <text x="12" y="148" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Modèles simplifiés</text>
+    </g>
+
+    <!-- Flèche 2 -> 3 -->
+    <g transform="translate(350, 80)">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#64748b" stroke-width="3" />
+      <polygon points="20,-5 27,0 20,5" fill="#64748b" />
+    </g>
+
+    <!-- Étape 3 -->
+    <g transform="translate(380, 0)">
+      <rect width="155" height="180" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
+      <circle cx="77" cy="32" r="16" fill="#7e22ce" />
+      <text x="77" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">3</text>
+      <text x="77" y="68" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Confrontation</text>
+      <text x="77" y="84" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">aux faits</text>
+      
+      <text x="12" y="112" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Comparaison données</text>
+      <text x="12" y="130" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Épreuve de la réalité</text>
+      <text x="12" y="148" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Échantillon représentatif</text>
+    </g>
+
+    <!-- Flèche 3 -> 4 -->
+    <g transform="translate(540, 80)">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#64748b" stroke-width="3" />
+      <polygon points="20,-5 27,0 20,5" fill="#64748b" />
+    </g>
+
+    <!-- Étape 4 -->
+    <g transform="translate(570, 0)">
+      <rect width="150" height="180" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+      <circle cx="75" cy="32" r="16" fill="#047857" />
+      <text x="75" y="38" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">4</text>
+      <text x="75" y="68" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Conclusion &amp;</text>
+      <text x="75" y="84" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Validation</text>
+      
+      <text x="10" y="112" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Hypothèse confirmée</text>
+      <text x="10" y="130" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Ou réfutée / révisée</text>
+      <text x="10" y="148" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">• Éclairage des politiques</text>
+    </g>
+  </g>
+
+  <!-- Bandeau résumé bas -->
+  <g transform="translate(30, 295)">
+    <rect width="700" height="60" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
+    <text x="350" y="24" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      Qu'est-ce qu'un modèle en économie et sociologie ?
+    </text>
+    <text x="350" y="44" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
+      Une <tspan fill="#facc15" font-weight="bold">représentation simplifiée de la réalité</tspan> (ni la réalité brute, ni un idéal à atteindre) servant à comprendre des mécanismes et à anticiper.
+    </text>
+  </g>
+</svg>

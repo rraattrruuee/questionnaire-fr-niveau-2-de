@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sesBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="420" rx="16" fill="url(#sesBg)" stroke="#334155" stroke-width="2" />
+
+  <!-- Titre -->
+  <text x="380" y="36" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold">
+    Les 4 formes de capitaux selon Pierre Bourdieu
+  </text>
+  <text x="380" y="58" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+    Théorie de la reproduction sociale et des hiérarchies dans la société
+  </text>
+
+  <!-- 1. Capital Économique -->
+  <g transform="translate(40, 80)">
+    <rect width="320" height="115" rx="12" fill="#1e293b" stroke="#eab308" stroke-width="1.5" />
+    <circle cx="36" cy="36" r="18" fill="#ca8a04" fill-opacity="0.3" />
+    <text x="36" y="42" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">💰</text>
+    <text x="68" y="32" fill="#facc15" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Capital économique</text>
+    <text x="68" y="50" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Ressources matérielles et financières</text>
+    
+    <text x="20" y="80" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Revenus, patrimoine et argent disponible</text>
+    <text x="20" y="98" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Biens immobiliers, entreprises, titres financiers</text>
+  </g>
+
+  <!-- 2. Capital Culturel -->
+  <g transform="translate(400, 80)">
+    <rect width="320" height="115" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+    <circle cx="36" cy="36" r="18" fill="#1d4ed8" fill-opacity="0.3" />
+    <text x="36" y="42" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">📚</text>
+    <text x="68" y="32" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Capital culturel</text>
+    <text x="68" y="50" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Savoirs, compétences et dispositions</text>
+    
+    <text x="20" y="80" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Diplômes et niveau d'études scolaires</text>
+    <text x="20" y="98" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Pratiques artistiques, lectures, visites de musées</text>
+  </g>
+
+  <!-- 3. Capital Social -->
+  <g transform="translate(40, 215)">
+    <rect width="320" height="115" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="36" cy="36" r="18" fill="#047857" fill-opacity="0.3" />
+    <text x="36" y="42" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">🤝</text>
+    <text x="68" y="32" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Capital social</text>
+    <text x="68" y="50" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Réseau relationnel mobilisable</text>
+    
+    <text x="20" y="80" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Réseaux d'amitiés et relations familiales</text>
+    <text x="20" y="98" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Contacts et relations professionnelles utiles</text>
+  </g>
+
+  <!-- 4. Capital Symbolique -->
+  <g transform="translate(400, 215)">
+    <rect width="320" height="115" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
+    <circle cx="36" cy="36" r="18" fill="#6b21a8" fill-opacity="0.3" />
+    <text x="36" y="42" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">🎖️</text>
+    <text x="68" y="32" fill="#c084fc" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Capital symbolique</text>
+    <text x="68" y="50" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Légitimité et considération accordée</text>
+    
+    <text x="20" y="80" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Prestige, réputation et honneur social</text>
+    <text x="20" y="98" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">• Reconnaissance publique et image de marque</text>
+  </g>
+
+  <!-- Bandeau Synthèse -->
+  <g transform="translate(40, 345)">
+    <rect width="680" height="55" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
+    <text x="340" y="22" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      Conséquence sociologique majeure : Inégalité des chances &amp; Reproduction sociale
+    </text>
+    <text x="340" y="40" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11">
+      Le volume et la structure de ces capitaux transmis par la famille déterminent la trajectoire sociale des individus.
+    </text>
+  </g>
+</svg>

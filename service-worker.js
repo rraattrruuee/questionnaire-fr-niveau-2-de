@@ -1,5 +1,9 @@
 // BEGIN_ASSETS
 const STATIC_ASSETS = [
+  "./assets/images/ses/bourdieu-formes-de-capitaux.svg",
+  "./assets/images/ses/calcul-variation-coeff-multiplicateur.svg",
+  "./assets/images/ses/correlation-vs-causalite.svg",
+  "./assets/images/ses/demarche-scientifique-ses.svg",
   "./assets/images/svt/adn-double-helice-nucleotides.svg",
   "./assets/images/svt/adn-expression-differenciation.svg",
   "./assets/images/svt/adn-sequence-et-diversite-genes.svg",
@@ -140,6 +144,7 @@ const STATIC_ASSETS = [
   "./data/physique-chimie/atomes-molecules.json",
   "./data/physique-chimie/noyau-atome-config-electronique.json",
   "./data/ses/introduction-chapitre1-eco1.json",
+  "./data/ses/socialisation-demarche-outils.json",
   "./data/svt/adn-support-information-genetique.json",
   "./data/svt/organes-microscope-matrice-extracellulaire.json",
   "./index.html",
@@ -166,7 +171,7 @@ const STATIC_ASSETS = [
 // END_ASSETS
 
 const CACHE_PREFIX = "quiz-cache-";
-const CACHE_NAME = "quiz-cache-1794305448";
+const CACHE_NAME = "quiz-cache-1794411840";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {

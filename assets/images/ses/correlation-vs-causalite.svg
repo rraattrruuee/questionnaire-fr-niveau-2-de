@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="100%" height="100%">
+  <defs>
+    <linearGradient id="corBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="760" height="410" rx="16" fill="url(#corBg)" stroke="#334155" stroke-width="2" />
+
+  <!-- Titre -->
+  <text x="380" y="34" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold">
+    Méthode : Corrélation n'est pas Causalité
+  </text>
+  <text x="380" y="54" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
+    Deux variables peuvent varier ensemble sans qu'aucune ne soit la cause de l'autre
+  </text>
+
+  <!-- Schéma 1 : La corrélation apparente -->
+  <g transform="translate(45, 75)">
+    <rect width="315" height="235" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.3" />
+    <text x="157" y="26" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+      1. Corrélation statistique
+    </text>
+    
+    <!-- Variable A -->
+    <rect x="25" y="48" width="265" height="42" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1" />
+    <text x="157" y="74" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      Variable A : Ventes de glaces 🍦
+    </text>
+
+    <!-- Flèche bidirectionnelle corrélation -->
+    <g transform="translate(157, 98)">
+      <line x1="0" y1="0" x2="0" y2="35" stroke="#f59e0b" stroke-width="3" stroke-dasharray="4,4" />
+      <polygon points="-5,5 0,-2 5,5" fill="#f59e0b" />
+      <polygon points="-5,30 0,37 5,30" fill="#f59e0b" />
+      <text x="18" y="22" fill="#facc15" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Lien statistique</text>
+    </g>
+
+    <!-- Variable B -->
+    <rect x="25" y="142" width="265" height="42" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1" />
+    <text x="157" y="168" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      Variable B : Nombre de coups de soleil ☀️
+    </text>
+
+    <!-- Fausse conclusion -->
+    <rect x="20" y="196" width="275" height="28" rx="6" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1" />
+    <text x="157" y="214" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      ❌ Faux : Manger une glace ne brûle pas la peau !
+    </text>
+  </g>
+
+  <!-- Schéma 2 : La véritable causalité avec variable confondante -->
+  <g transform="translate(400, 75)">
+    <rect width="315" height="235" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.3" />
+    <text x="157" y="26" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
+      2. Causalité &amp; Variable confondante
+    </text>
+    
+    <!-- Variable déterminante / confondante au sommet -->
+    <rect x="25" y="42" width="265" height="45" rx="8" fill="#065f46" stroke="#34d399" stroke-width="1.5" />
+    <text x="157" y="62" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      Variable déterminante / confondante :
+    </text>
+    <text x="157" y="78" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      La chaleur estivale &amp; l'ensoleillement 🌡️
+    </text>
+
+    <!-- Flèche cause vers A -->
+    <path d="M 90,92 L 60,135" stroke="#34d399" stroke-width="2.5" />
+    <polygon points="56,132 60,140 65,134" fill="#34d399" />
+    <text x="45" y="112" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Cause</text>
+
+    <!-- Flèche cause vers B -->
+    <path d="M 225,92 L 255,135" stroke="#34d399" stroke-width="2.5" />
+    <polygon points="250,134 255,140 259,132" fill="#34d399" />
+    <text x="258" y="112" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Cause</text>
+
+    <!-- Deux effets côte à côte -->
+    <g transform="translate(15, 142)">
+      <rect x="0" y="0" width="135" height="45" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1" />
+      <text x="67" y="20" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Effet A :</text>
+      <text x="67" y="35" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">Achats de glaces</text>
+    </g>
+
+    <g transform="translate(165, 142)">
+      <rect x="0" y="0" width="135" height="45" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1" />
+      <text x="67" y="20" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Effet B :</text>
+      <text x="67" y="35" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10">Coups de soleil</text>
+    </g>
+
+    <!-- Explication -->
+    <rect x="20" y="196" width="275" height="28" rx="6" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1" />
+    <text x="157" y="214" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      ✅ Vrai : Une cause commune explique la corrélation !
+    </text>
+  </g>
+
+  <!-- Bandeau résumé bas -->
+  <g transform="translate(45, 325)">
+    <rect width="670" height="65" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
+    <text x="335" y="24" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
+      Définitions rigoureuses du cours de SES
+    </text>
+    <text x="335" y="43" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
+      • <tspan fill="#facc15" font-weight="bold">Corrélation positive</tspan> : les variables évoluent dans le même sens. • <tspan fill="#f87171" font-weight="bold">Corrélation négative</tspan> : sens opposé.
+    </text>
+    <text x="335" y="58" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">
+      • <tspan fill="#4ade80" font-weight="bold">Causalité</tspan> : relation directe prouvant qu'une variable produit ou entraîne l'autre.
+    </text>
+  </g>
+</svg>

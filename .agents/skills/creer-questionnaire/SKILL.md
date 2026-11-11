@@ -274,3 +274,24 @@ au lieu de son index.
 
 **Règle absolue** : ne jamais réimplémenter `Q()`/`VF()`/`TXT()` à la main dans
 un script `/tmp/opencode/make_*.py`. Toujours importer `scripts/quiz_lib.py`.
+
+## 11. Graphiques et schémas vectoriels SVG
+
+Quand un cours comporte des schémas conceptuels, des expériences, des modèles, des organigrammes ou des graphiques méthodologiques (SVT, SES, Physique-Chimie, Histoire-Géo, Maths, etc.), créer des fichiers SVG dédiés sur mesure pour illustrer les questions.
+
+### Bonnes pratiques SVG du projet :
+1. **Emplacement** : ranger les fichiers dans `assets/images/<matiere>/<nom-du-schema>.svg` (ex. `assets/images/ses/schema-socialisation-bourdieu.svg`).
+2. **Attributs racines** : toujours inclure `viewBox="0 0 L H"`, `width="100%"` et `height="100%"` pour garantir une adaptabilité responsive fluide sur smartphone comme sur grand écran.
+3. **Typographie** : utiliser `font-family="system-ui, -apple-system, sans-serif"`, avec des tailles de texte adaptées et lisibles (10px à 18px).
+4. **Contraste et esthétique** : adopter un fond soigné (`#0f172a` ou dégradé `#0b1329` vers `#1e293b`) avec cadre (`#334155`), des textes nets (`#f8fafc`, `#cbd5e1`) et des couleurs thématiques franches (`#38bdf8`, `#10b981`, `#f59e0b`, `#ef4444`, `#a855f7`).
+5. **Association dans le questionnaire** :
+   Dans le script Python :
+   ```python
+   Q("En observant le schéma ci-dessous, quelle est...",
+     ["Option A", "Option B", "Option C", "Option D"],
+     "Option A",
+     "Explication...",
+     image="assets/images/<matiere>/mon-schema.svg")
+   ```
+6. **Mise en cache PWA automatique** :
+   Le script `bash scripts/generate-sw.sh` scanne récursivement tous les fichiers `.svg` sous `assets/` et les ajoute à `STATIC_ASSETS` dans `service-worker.js`.
