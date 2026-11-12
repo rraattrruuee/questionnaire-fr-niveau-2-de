@@ -1,7 +1,7 @@
 {
   "subject": "ses",
   "title": "Socialisation, démarche sociologique et outils quantitatifs",
-  "description": "Processus et instances de socialisation, capitaux de Bourdieu, genre, démarche scientifique en SES et calculs statistiques (SES Seconde).",
+  "description": "Processus et instances de socialisation, capitaux de Bourdieu, genre, démarche scientifique en SES, calculs de variations, indices et vocabulaire clé (SES Seconde - Karine CHAKIR).",
   "notepad": true,
   "categories": [
     {
@@ -419,136 +419,306 @@
       ]
     },
     {
-      "category": "Fiche Méthodologie N°1 — Outils statistiques et calculs en SES",
+      "category": "Fiche Méthodologie N°1 — Variations, indices et calculs (Karine CHAKIR)",
       "notepad": true,
       "questions": [
         {
-          "text": "En observant le récapitulatif méthodologique ci-dessous, quelle est la formule de calcul du Coefficient Multiplicateur (CM) ?",
+          "text": "Le prix du café passe de 2,00 € fin août à 2,30 € début septembre. Quelle est la variation absolue en euros ?",
           "type": "mcq",
           "options": [
-            "CM = Valeur d'arrivée / Valeur de départ (Va / Vd)",
-            "CM = Valeur de départ / Valeur d'arrivée (Vd / Va)",
-            "CM = Valeur d'arrivée × Valeur de départ (Va × Vd)",
-            "CM = Valeur d'arrivée + Valeur de départ (Va + Vd)"
+            "Le prix a augmenté de 0,30 € (soit une hausse de 30 centimes d'euro)",
+            "Le prix a diminué de 0,30 € suite à une baisse de la demande au comptoir",
+            "Le prix a augmenté de 1,15 € correspondant au coefficient multiplicateur",
+            "Le prix est resté strictement stable à 2,00 € sans aucune modification"
           ],
           "correct": 0,
-          "solution": "Le coefficient multiplicateur se calcule toujours en divisant la valeur d'arrivée par la valeur de départ : CM = Va / Vd.",
-          "image": "assets/images/ses/calcul-variation-coeff-multiplicateur.svg"
+          "solution": "Variation absolue = Valeur d'arrivée - Valeur de départ = 2,30 € - 2,00 € = +0,30 € (ou 30 centimes)."
         },
         {
-          "text": "Si le prix d'un livre scolaire passe de 20 € à 24 €, quel est le coefficient multiplicateur mesurant cette hausse ?",
+          "text": "Quel est le coefficient multiplicateur permettant de passer du prix du café de fin août (2 €) à celui de début septembre (2,30 €) ?",
           "type": "mcq",
           "options": [
-            "1,2 car 24 / 20 = 1,2",
-            "0,8 car 20 / 24 = 0,8",
-            "4,0 car 24 - 20 = 4,0",
-            "44,0 car 24 + 20 = 44,0"
+            "1,15 car le coefficient multiplicateur est égal à Va / Vd = 2,30 / 2 = 1,15",
+            "0,87 car on divise la valeur de départ par la valeur d'arrivée : 2 / 2,30 = 0,87",
+            "0,30 car le coefficient correspond exactement à la soustraction des deux prix",
+            "1,30 car on additionne la valeur de départ avec le montant des centimes d'euro"
           ],
           "correct": 0,
-          "solution": "Va / Vd = 24 / 20 = 1,2. Le prix a donc été multiplié par 1,2."
+          "solution": "Coeff Multi = Va / Vd = 2,30 / 2 = 1,15. En appliquant le CM à la valeur de départ, on retrouve l'arrivée : 2 × 1,15 = 2,30 €."
         },
         {
-          "text": "Si un bien connaît un coefficient multiplicateur de 1,2, quelle est sa variation exprimée en pourcentage ?",
+          "text": "Quelle est l'augmentation en pourcentage du prix de ce café (de 2 € à 2,30 €), selon la formule rigoureuse de la fiche méthode ?",
           "type": "mcq",
           "options": [
-            "+20 % car la variation en pourcentage est égale à (CM - 1) × 100 = (1,2 - 1) × 100 = 20 %",
-            "+120 % car le pourcentage de hausse correspond directement au coefficient multiplicateur multiplié par 100",
-            "+1,2 % car la variation est simplement le chiffre brut du coefficient sans aucune modification",
-            "+2 % car on retire le chiffre des dizaines pour obtenir le résultat de l'augmentation finale"
+            "+15 % car Var = (Va / Vd) - 1 = (2,30 / 2) - 1 = 1,15 - 1 = 0,15, ce qui fait 15 %",
+            "+30 % car l'augmentation en pourcentage est égale au nombre brut de centimes d'euro",
+            "+115 % car le taux de variation correspond directement au coefficient multiplicateur",
+            "+1,15 % car on reporte le coefficient tel quel sans en soustraire l'unité de base"
           ],
           "correct": 0,
-          "solution": "La variation en pourcentage est donnée par (Va/Vd - 1) = CM - 1. Avec CM = 1,2, on a 1,2 - 1 = +0,2, soit une hausse de +20 %."
+          "solution": "Var = (Va - Vd) / Vd = Va/Vd - 1 = 1,15 - 1 = 0,15 = 15 %. Inutile d'ajouter 'x100' pour être rigoureux."
         },
         {
-          "text": "Le prix d'un vêtement passe de 100 € à 80 €. Quel est le coefficient multiplicateur de cette évolution et que signifie-t-il ?",
+          "text": "En prenant le prix du café fin août (2 €) comme base 100, quel est l'indice du prix du café début septembre (2,30 €) ?",
           "type": "mcq",
           "options": [
-            "CM = 0,8 (80/100). Un CM inférieur à 1 indique toujours une baisse, correspondant ici à -20 %",
-            "CM = -0,8 car une diminution de prix impose obligatoirement de mettre un signe négatif devant le coefficient",
-            "CM = 1,25 car on divise systématiquement le chiffre le plus grand par le plus petit quelle que soit la date",
-            "CM = 20 car la variation en euros bruts est équivalente à la valeur numérique exacte du coefficient"
+            "Indice 115, car l'indice de la nouvelle valeur est égal à 100 × CM = 100 × 1,15 = 115",
+            "Indice 15, car l'indice correspond uniquement au pourcentage de variation calculé",
+            "Indice 230, car on multiplie la valeur d'arrivée en euros par cent sans autre calcul",
+            "Indice 85, car on retire la variation de 15 % à la valeur de référence de base 100"
           ],
           "correct": 0,
-          "solution": "Une baisse correspond à un coefficient multiplicateur compris entre 0 et 1 (ici 80/100 = 0,8). Un CM n'est jamais négatif !"
+          "solution": "L'ancien prix (2 €) devient 100. L'indice du nouveau prix = 100 × CM = 100 × 1,15 = 115 (base 100 en août).",
+          "image": "assets/images/ses/indices-pib-nominal-et-reel.svg"
         },
         {
-          "text": "Un coefficient multiplicateur peut être négatif si la valeur étudiée a diminué au cours de la période.",
+          "text": "En 2025, le PIB nominal augmente de 1,9 % et l'inflation de 1,1 %. Comment calcule-t-on rigoureusement l'évolution du PIB réel (déflaté) ?",
+          "type": "mcq",
+          "options": [
+            "On divise les coefficients multiplicateurs : 1,019 / 1,011 = 1,007913, soit une hausse réelle de +0,7913 %",
+            "On soustrait simplement les taux : 1,9 % - 1,1 % = 0,80 %, formule parfaitement exacte en économie",
+            "On additionne les deux taux : 1,9 % + 1,1 % = 3,00 %, traduisant l'impact combiné des deux hausses",
+            "On multiplie les deux pourcentages bruts : 1,9 × 1,1 = 2,09 %, reflétant la croissance nominale"
+          ],
+          "correct": 0,
+          "solution": "Pour déflater une grandeur nominale, on divise les CM : CM réel = CM nominal / CM inflation = 1,019 / 1,011 = 1,007913 ➔ +0,7913 % (la soustraction 1,9 - 1,1 = 0,8 % n'est qu'une approximation)."
+        },
+        {
+          "text": "Le prix du litre de lait augmente de 1 % en 2022, puis 0,5 % en 2023, puis 0,7 % en 2024. Quelle est la hausse cumulée exacte ?",
+          "type": "mcq",
+          "options": [
+            "2,21 % car on multiplie les CM en chaîne : 1,01 × 1,005 × 1,007 = 1,0221, ce qui correspond à +2,21 %",
+            "2,20 % car on additionne directement les pourcentages annuels : 1 % + 0,5 % + 0,7 % = 2,20 %",
+            "0,35 % car on effectue la moyenne arithmétique des trois taux de variation observés",
+            "3,50 % car on applique une majoration forfaitaire pour compenser les arrondis statistiques"
+          ],
+          "correct": 0,
+          "solution": "On ne doit jamais additionner des pourcentages de variation ! En multipliant les CM : 1,01 × 1,005 × 1,007 = 1,0221 ➔ +2,21 %."
+        },
+        {
+          "text": "En période de forte inflation, le prix du lait augmente de 20 % en 2022, 25 % en 2023 et 28 % en 2024. Quelle est la hausse cumulée exacte ?",
+          "type": "mcq",
+          "options": [
+            "92 % car le produit des coefficients multiplicateurs est 1,20 × 1,25 × 1,28 = 1,92, soit +92 %",
+            "73 % car l'addition directe donne 20 % + 25 % + 28 % = 73 % de hausse sur l'ensemble des trois ans",
+            "24,3 % car le taux d'inflation moyen annuel équivaut au tiers de la somme des trois pourcentages",
+            "128 % car on retient uniquement la valeur la plus élevée atteinte lors de la dernière année"
+          ],
+          "correct": 0,
+          "solution": "L'addition 20+25+28=73% est fausse et sous-estime gravement la hausse. En multipliant les CM : 1,20 × 1,25 × 1,28 = 1,92 ➔ +92 % (presque un doublement !)."
+        },
+        {
+          "text": "À quel coefficient multiplicateur correspond une baisse de prix de 25 % ?",
+          "type": "mcq",
+          "options": [
+            "CM = 0,75 car 1 - 0,25 = 0,75 (on paie 0,75 € ce que l'on payait 1 € auparavant)",
+            "CM = -0,25 car une diminution exige systématiquement un signe négatif devant le chiffre",
+            "CM = -1,25 car on retire le pourcentage à la valeur de référence de deux euros",
+            "CM = 1,75 car on inverse la variation pour obtenir un résultat supérieur à l'unité"
+          ],
+          "correct": 0,
+          "solution": "Une baisse de 25 % équivaut à un coefficient multiplicateur de 1 - 0,25 = 0,75. Le CM reste positif et inférieur à 1."
+        },
+        {
+          "text": "Dans le tableau ci-dessous, le PIB d'un pays augmente de 10 milliards d'euros chaque année (1000, 1010, 1020, 1030, 1040). Quel est le constat sur la variation annuelle en pourcentage ?",
+          "type": "mcq",
+          "options": [
+            "La variation en pourcentage diminue chaque année (1 %, puis 0,99 %, puis 0,98 %, puis 0,97 %) car la base de départ grandit",
+            "La variation en pourcentage reste strictement constante à 1 % par an puisque la hausse absolue en milliards est identique",
+            "La variation en pourcentage augmente chaque année pour atteindre plus de 10 % en fin de période de mesure",
+            "La variation en pourcentage devient négative dès la troisième année en raison de l'épuisement des gains de productivité"
+          ],
+          "correct": 0,
+          "solution": "Même si la hausse absolue est identique (+10 Mds/an), le taux de variation diminue (10/1000=1%, 10/1010=0,99%, 10/1020=0,98%, 10/1030=0,97%) car le dénominateur augmente chaque année.",
+          "image": "assets/images/ses/indices-pib-nominal-et-reel.svg"
+        },
+        {
+          "text": "Sur la propriété forestière en France en 2021, 7 % des forêts ont moins de 1 ha et 32 % ont de 1 à moins de 10 ha. Pourquoi peut-on additionner ces pourcentages (7 + 32 = 39 %) ?",
+          "type": "mcq",
+          "options": [
+            "Parce qu'il s'agit de pourcentages de répartition portant sur une même population et des intervalles qui se suivent",
+            "Parce que la loi autorise les arrondis dans le domaine de la sylviculture et des exploitations agricoles de bois",
+            "Parce que les forêts françaises sont réparties de manière parfaitement symétrique sur l'ensemble du territoire national",
+            "Parce que le ministère de l'Économie interdit formellement de multiplier les pourcentages inférieurs à cinquante pour cent"
+          ],
+          "correct": 0,
+          "solution": "On PEUT additionner des pourcentages de répartition lorsqu'ils concernent la même population d'origine et des tranches disjointes contiguës (ici < 1 ha et 1 à <10 ha)."
+        },
+        {
+          "text": "Un coefficient multiplicateur peut être négatif si une entreprise enregistre des pertes de chiffre d'affaires.",
           "type": "mcq",
           "options": [
             "Faux",
             "Vrai"
           ],
           "correct": 0,
-          "solution": "Faux : un coefficient multiplicateur n'est jamais négatif ! Une baisse correspond à un CM inférieur à 1 (ex. 0,8 pour une baisse de 20 %)."
+          "solution": "Faux : un coefficient multiplicateur n'est jamais négatif ! Une baisse correspond à un CM compris entre 0 et 1 (ex. 0,8 pour une baisse de 20 %)."
         },
         {
-          "text": "Un salaire subit une première hausse de 30 %, puis une seconde de 15 %, et enfin une troisième de 20 %. Comment calcule-t-on la hausse globale ?",
-          "type": "mcq",
-          "options": [
-            "En multipliant les coefficients multiplicateurs : 1,30 × 1,15 × 1,20 = 1,794, soit une hausse globale de +79,4 %",
-            "En additionnant simplement les pourcentages bruts : 30 + 15 + 20 = 65 %, car les pourcentages s'additionnent toujours",
-            "En faisant la moyenne arithmétique simple : (30 + 15 + 20) / 3 = 21,6 %, valeur moyenne de chaque année",
-            "En multipliant les pourcentages bruts : 30 × 15 × 20 = 9 000 %, traduisant une croissance exponentielle incontrôlable"
-          ],
-          "correct": 0,
-          "solution": "Règle d'or en SES : on ne peut jamais additionner des pourcentages de variation ! On doit passer par la multiplication des coefficients multiplicateurs (1,30 × 1,15 × 1,20 = 1,794, soit +79,4 %)."
-        },
-        {
-          "text": "Il est formellement interdit d'additionner des pourcentages qui représentent des variations successives dans le temps.",
-          "type": "mcq",
-          "options": [
-            "Vrai",
-            "Faux"
-          ],
-          "correct": 0,
-          "solution": "Vrai : des hausses successives se composent en multipliant les coefficients multiplicateurs, jamais en additionnant les pourcentages."
-        },
-        {
-          "text": "On a le droit d'additionner des pourcentages de répartition s'ils portent sur une même population et des intervalles qui se suivent.",
-          "type": "mcq",
-          "options": [
-            "Vrai",
-            "Faux"
-          ],
-          "correct": 0,
-          "solution": "Vrai : si 7 % des forêts ont moins de 1 hectare et 32 % ont entre 1 et 10 hectares, alors 7 + 32 = 39 % des forêts ont moins de 10 hectares."
-        },
-        {
-          "text": "Selon la fiche méthodologique n°1, quels éléments indispensables doit-on toujours présenter pour introduire un document statistique en SES ?",
-          "type": "mcq",
-          "options": [
-            "La nature du document, le titre, la source, l'unité, le champ (zone géographique), la période et la date de publication",
-            "Le nom de l'imprimeur, la marque de l'ordinateur utilisé pour saisir les données et la couleur du papier original",
-            "Le montant payé au statisticien pour réaliser l'enquête et le numéro de téléphone personnel de l'auteur de l'article",
-            "L'avis politique personnel du lecteur sur le sujet et le nom de ses professeurs d'économie et d'histoire du collège"
-          ],
-          "correct": 0,
-          "solution": "Pour présenter un document, on doit rigoureusement énoncer : Nature, Titre, Source, Unité, Champ géographique, Période étudiée et Date de parution."
-        },
-        {
-          "text": "Comment appelle-t-on le résultat obtenu en divisant la valeur d'arrivée par la valeur de départ (Va / Vd) ?",
+          "text": "Si une grandeur a pour coefficient multiplicateur 1,05, quelle est sa hausse en pourcentage ?",
           "type": "text",
           "options": [],
           "correct": 0,
           "accepted": [
-            "coefficient multiplicateur",
-            "le coefficient multiplicateur",
-            "coeff multiplicateur",
-            "coeff multi"
+            "5%",
+            "5 %",
+            "+5%",
+            "+5 %",
+            "5"
           ],
-          "solution": "Le rapport Va / Vd est le coefficient multiplicateur."
-        },
+          "solution": "CM - 1 = 1,05 - 1 = 0,05, soit une hausse de 5 %."
+        }
+      ]
+    },
+    {
+      "category": "Vocabulaire et définitions clés à retenir",
+      "questions": [
         {
-          "text": "Si une boutique applique une remise promotionnelle de -20 % sur l'ensemble de ses articles, combien paierez-vous pour un produit qui coûtait 1 € ?",
+          "text": "Définition : Quel terme désigne l'influence des facteurs sociaux limitant la liberté d'action et orientant les choix d'un individu ?",
           "type": "mcq",
           "options": [
-            "80 centimes, car multiplier par le coefficient 0,8 donne 0,80 €",
-            "20 centimes, car la remise correspond au prix payé à la caisse",
-            "1,20 euro, car le commerçant répercute la taxe sur le client",
-            "98 centimes, car le rabais ne s'applique que sur les centimes"
+            "Le déterminisme social",
+            "L'individualisme méthodologique",
+            "L'arbitrage budgétaire",
+            "Le capital symbolique"
           ],
           "correct": 0,
-          "solution": "Une réduction de 20 % correspond à un CM de 1 - 0,20 = 0,80. Pour 1 €, on paiera 1 × 0,80 = 0,80 € (80 centimes)."
+          "solution": "Le déterminisme social est le concept montrant que les choix individuels sont fortement influencés et contraints par le contexte social d'origine."
+        },
+        {
+          "text": "Définition : Quel terme désigne un ensemble d'individus qui reproduit à l'identique les caractéristiques d'une population globale pour un sondage ?",
+          "type": "mcq",
+          "options": [
+            "Un échantillon représentatif",
+            "Un groupe de pairs informel",
+            "Une instance de socialisation",
+            "Un milieu social supérieur"
+          ],
+          "correct": 0,
+          "solution": "L'échantillon représentatif est un sous-ensemble construit de sorte que les variables (sexe, âge, profession, lieu) soient dans les mêmes proportions que dans la population mère."
+        },
+        {
+          "text": "Définition : Comment nomme-t-on en économie une représentation simplifiée de la réalité permettant d'isoler des mécanismes et d'anticiper des évolutions ?",
+          "type": "mcq",
+          "options": [
+            "Un modèle scientifique",
+            "Une instance politique",
+            "Un échantillon qualitatif",
+            "Un transfuge de classe"
+          ],
+          "correct": 0,
+          "solution": "Un modèle (comme le modèle du marché) est une simplification théorique permettant d'étudier les interactions entre différentes variables."
+        },
+        {
+          "text": "Définition : Quel concept de Pierre Bourdieu désigne l'ensemble des titres scolaires, des pratiques artistiques et des livres d'un individu ?",
+          "type": "mcq",
+          "options": [
+            "Le capital culturel",
+            "Le capital économique",
+            "Le capital symbolique",
+            "Le capital social"
+          ],
+          "correct": 0,
+          "solution": "Le capital culturel renvoie aux savoirs, diplômes, compétences et pratiques culturelles valorisées par la société."
+        },
+        {
+          "text": "Définition : Quel concept de Pierre Bourdieu désigne l'ensemble des relations d'amitié, du carnet d'adresses et des appuis professionnels mobilisables ?",
+          "type": "mcq",
+          "options": [
+            "Le capital social",
+            "Le capital culturel",
+            "Le capital économique",
+            "Le capital symbolique"
+          ],
+          "correct": 0,
+          "solution": "Le capital social est l'ensemble des ressources relationnelles et des réseaux qu'un individu peut mobiliser à son profit."
+        },
+        {
+          "text": "Définition : Quel concept de Pierre Bourdieu désigne le prestige, l'honneur, la réputation et la reconnaissance accordés à une personne ?",
+          "type": "mcq",
+          "options": [
+            "Le capital symbolique",
+            "Le capital économique",
+            "Le capital culturel",
+            "Le capital social"
+          ],
+          "correct": 0,
+          "solution": "Le capital symbolique est la forme prise par les autres capitaux lorsqu'ils sont perçus comme légitimes et prestigieux dans la société."
+        },
+        {
+          "text": "Définition : Comment nomme-t-on une personne qui change de milieu social et connaît une trajectoire qualifiée d'improbable par rapport aux statistiques ?",
+          "type": "mcq",
+          "options": [
+            "Un transfuge de classe",
+            "Un agent économique",
+            "Un politiste certifié",
+            "Un pair socialisateur"
+          ],
+          "correct": 0,
+          "solution": "Le transfuge de classe (ou migrant de classe) désigne un individu qui quitte son milieu social d'origine (par exemple une ascension sociale spectaculaire)."
+        },
+        {
+          "text": "Définition : Quel terme sociologique désigne l'ensemble des représentations associant certains rôles et attitudes au féminin ou au masculin ?",
+          "type": "mcq",
+          "options": [
+            "Le genre",
+            "Le sexe",
+            "L'habitus",
+            "L'instance"
+          ],
+          "correct": 0,
+          "solution": "Le genre est la construction sociale des rôles masculins et féminins, distincte du sexe biologique."
+        },
+        {
+          "text": "Définition : Comment qualifie-t-on une troisième variable cachée qui explique à elle seule la liaison statistique observée entre deux autres variables ?",
+          "type": "mcq",
+          "options": [
+            "Une variable confondante (ou déterminante)",
+            "Une variable dépendante (ou nominale)",
+            "Une variable quantitative (ou discrète)",
+            "Une variable résiduelle (ou marginale)"
+          ],
+          "correct": 0,
+          "solution": "Une variable confondante (ou variable déterminante) est la cause commune sous-jacente qui crée une corrélation trompeuse entre deux variables."
+        },
+        {
+          "text": "Définition : Quel outil statistique s'obtient en divisant la valeur d'arrivée par la valeur de départ (Va / Vd) ?",
+          "type": "mcq",
+          "options": [
+            "Le coefficient multiplicateur",
+            "Le taux de variation brut",
+            "L'indice de base centenaire",
+            "Le pourcentage de répartition"
+          ],
+          "correct": 0,
+          "solution": "Le coefficient multiplicateur est le rapport Va / Vd indiquant par combien une grandeur a été multipliée."
+        },
+        {
+          "text": "Définition : Quelle grandeur conventionnelle transforme une valeur de référence en 100 afin de suivre plus facilement son évolution dans le temps ?",
+          "type": "mcq",
+          "options": [
+            "L'indice base 100",
+            "Le taux marginal",
+            "Le solde nominal",
+            "Le quartile moyen"
+          ],
+          "correct": 0,
+          "solution": "L'indice base 100 permet de fixer une période ou un prix de départ à 100 pour rendre les comparaisons visuelles et immédiates."
+        },
+        {
+          "text": "Quel mot désigne le fait d'éliminer l'effet de l'inflation sur une grandeur nominale pour obtenir sa valeur réelle ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "deflater",
+            "déflater",
+            "la deflation",
+            "la déflation",
+            "deflation",
+            "déflation"
+          ],
+          "solution": "Déflater une série statistique consiste à corriger l'effet de la hausse des prix (inflation) pour mesurer l'évolution réelle."
         }
       ]
     }

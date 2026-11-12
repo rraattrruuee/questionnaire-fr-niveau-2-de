@@ -4,6 +4,7 @@ const STATIC_ASSETS = [
   "./assets/images/ses/calcul-variation-coeff-multiplicateur.svg",
   "./assets/images/ses/correlation-vs-causalite.svg",
   "./assets/images/ses/demarche-scientifique-ses.svg",
+  "./assets/images/ses/indices-pib-nominal-et-reel.svg",
   "./assets/images/svt/adn-double-helice-nucleotides.svg",
   "./assets/images/svt/adn-expression-differenciation.svg",
   "./assets/images/svt/adn-sequence-et-diversite-genes.svg",
@@ -11,8 +12,8 @@ const STATIC_ASSETS = [
   "./assets/papicons/accessibility.svg",
   "./assets/papicons/add.svg",
   "./assets/papicons/alert-circle.svg",
-  "./assets/papicons/alert-triangle.svg",
   "./assets/papicons/alert.svg",
+  "./assets/papicons/alert-triangle.svg",
   "./assets/papicons/apple.svg",
   "./assets/papicons/archive.svg",
   "./assets/papicons/arrow-down-box.svg",
@@ -20,15 +21,15 @@ const STATIC_ASSETS = [
   "./assets/papicons/arrow-left-box.svg",
   "./assets/papicons/arrow-left-down-box.svg",
   "./assets/papicons/arrow-left-down.svg",
+  "./assets/papicons/arrow-left.svg",
   "./assets/papicons/arrow-left-up-box.svg",
   "./assets/papicons/arrow-left-up.svg",
-  "./assets/papicons/arrow-left.svg",
   "./assets/papicons/arrow-right-box.svg",
   "./assets/papicons/arrow-right-down-box.svg",
   "./assets/papicons/arrow-right-down.svg",
+  "./assets/papicons/arrow-right.svg",
   "./assets/papicons/arrow-right-up-box.svg",
   "./assets/papicons/arrow-right-up.svg",
-  "./assets/papicons/arrow-right.svg",
   "./assets/papicons/arrow-up-box.svg",
   "./assets/papicons/arrow-up.svg",
   "./assets/papicons/bell.svg",
@@ -38,8 +39,8 @@ const STATIC_ASSETS = [
   "./assets/papicons/butterfly.svg",
   "./assets/papicons/calendar.svg",
   "./assets/papicons/camera.svg",
-  "./assets/papicons/car.svg",
   "./assets/papicons/card.svg",
+  "./assets/papicons/car.svg",
   "./assets/papicons/chair.svg",
   "./assets/papicons/check.svg",
   "./assets/papicons/chevron-down.svg",
@@ -107,8 +108,8 @@ const STATIC_ASSETS = [
   "./assets/papicons/sparkles.svg",
   "./assets/papicons/sprite.svg",
   "./assets/papicons/star.svg",
-  "./assets/papicons/sun.svg",
   "./assets/papicons/sunrise.svg",
+  "./assets/papicons/sun.svg",
   "./assets/papicons/tasks.svg",
   "./assets/papicons/text-bubble.svg",
   "./assets/papicons/trash.svg",
@@ -171,7 +172,7 @@ const STATIC_ASSETS = [
 // END_ASSETS
 
 const CACHE_PREFIX = "quiz-cache-";
-const CACHE_NAME = "quiz-cache-1794412436";
+const CACHE_NAME = "quiz-cache-1794479311";
 const META_KEY = "__cache-meta__";
 
 function notifyClients(msg) {
