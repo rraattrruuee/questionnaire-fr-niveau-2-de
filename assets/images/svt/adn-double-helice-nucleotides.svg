@@ -51,12 +51,12 @@
     <!-- Règle de complémentarité -->
     <g transform="translate(15, 140)">
       <rect width="180" height="75" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1" />
-      <text x="90" y="22" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Règle d'appariement :</text>
-      <text x="90" y="44" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-        <tspan fill="#ef4444">A</tspan> ——— <tspan fill="#3b82f6">T</tspan>
+      <text x="90" y="22" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Emboîtement moléculaire :</text>
+      <text x="90" y="44" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11">
+        Observez les formes clés/serrures
       </text>
-      <text x="90" y="63" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-        <tspan fill="#f59e0b">G</tspan> ——— <tspan fill="#10b981">C</tspan>
+      <text x="90" y="62" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11">
+        sur l'échelle centrale d'ADN
       </text>
     </g>
   </g>
@@ -150,13 +150,13 @@
   <g transform="translate(35, 330)">
     <rect width="690" height="65" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
     <text x="345" y="24" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-      Chiffres clés &amp; Complémentarité
+      Structure hélicoïdale &amp; Appariement des brins
     </text>
     <text x="345" y="44" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
-      Une cellule humaine renferme plus de <tspan fill="#facc15" font-weight="bold">6 milliards de paires de nucléotides</tspan>.
+      Une cellule humaine renferme plus de <tspan fill="#facc15" font-weight="bold">6 milliards de paires de bases azotées</tspan>.
     </text>
     <text x="345" y="58" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">
-      La connaissance de la séquence d'un brin permet de déduire instantanément celle du brin opposé grâce à la complémentarité A-T et C-G.
+      La géométrie spatiale des molécules assure la cohésion des deux brins grâce à des liaisons hydrogène face à face.
     </text>
   </g>
 </svg>

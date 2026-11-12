@@ -44,9 +44,9 @@
     </text>
 
     <!-- Fausse conclusion -->
-    <rect x="20" y="196" width="275" height="28" rx="6" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1" />
-    <text x="157" y="214" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
-      ❌ Faux : Manger une glace ne brûle pas la peau !
+    <rect x="20" y="196" width="275" height="28" rx="6" fill="#334155" fill-opacity="0.4" stroke="#64748b" stroke-width="1" />
+    <text x="157" y="214" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
+      Hypothèse directe : Relation présumée entre A et B
     </text>
   </g>
 
@@ -90,9 +90,9 @@
     </g>
 
     <!-- Explication -->
-    <rect x="20" y="196" width="275" height="28" rx="6" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1" />
+    <rect x="20" y="196" width="275" height="28" rx="6" fill="#065f46" fill-opacity="0.3" stroke="#059669" stroke-width="1" />
     <text x="157" y="214" text-anchor="middle" fill="#86efac" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
-      ✅ Vrai : Une cause commune explique la corrélation !
+      Schéma causal : Action simultanée sur A et B
     </text>
   </g>
 

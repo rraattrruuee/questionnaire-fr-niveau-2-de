@@ -20,7 +20,7 @@
   <g transform="translate(35, 75)">
     <rect width="335" height="150" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.3" />
     <text x="167" y="24" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-      1. L'Indice de prix base 100
+      1. Méthode : Indice de prix base 100
     </text>
     
     <rect x="18" y="36" width="299" height="32" rx="6" fill="#0f172a" />
@@ -29,13 +29,13 @@
     </text>
 
     <text x="25" y="90" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
-      • Café à 2,00 € en août ➔ <tspan fill="#38bdf8" font-weight="bold">Indice 100</tspan> (période de base)
+      • Café à 2,00 € en août ➔ <tspan fill="#38bdf8" font-weight="bold">Indice 100</tspan> (période de référence)
     </text>
     <text x="25" y="110" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
-      • Café à 2,30 € en sept (CM = 1,15) ➔ <tspan fill="#4ade80" font-weight="bold">Indice 115</tspan>
+      • Café à 2,30 € en sept (CM = 2,30 / 2,00 = 1,15) ➔ <tspan fill="#38bdf8" font-weight="bold">Indice = ?</tspan>
     </text>
     <text x="25" y="128" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">
-      Phrase : « L'indice de prix est de 115 en septembre, base 100 en août ».
+      Application : Multiplier la base 100 par le coefficient multiplicateur.
     </text>
   </g>
 
@@ -43,7 +43,7 @@
   <g transform="translate(390, 75)">
     <rect width="335" height="150" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.3" />
     <text x="167" y="24" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-      2. PIB réel : Diviser les CM
+      2. Méthode : Calcul du PIB réel
     </text>
     
     <rect x="18" y="36" width="299" height="32" rx="6" fill="#0f172a" />
@@ -54,11 +54,11 @@
     <text x="25" y="90" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
       • PIB nominal +1,9 % (CM = 1,019) &amp; Inflation +1,1 % (CM = 1,011)
     </text>
-    <text x="25" y="110" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
-      • 1,019 / 1,011 = 1,007913 ➔ Hausse réelle de 0,7913 %
+    <text x="25" y="110" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
+      • Rapport des CM : 1,019 / 1,011 = 1,007913
     </text>
     <text x="25" y="128" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="10">
-      ⚠️ Ne jamais soustraire 1,9 - 1,1 = 0,8 % (ce n'est qu'une approximation).
+      ⚠️ Règle : Ne jamais soustraire 1,9 - 1,1 (seul le quotient des CM est rigoureux).
     </text>
   </g>
 
@@ -66,7 +66,7 @@
   <g transform="translate(35, 238)">
     <rect width="690" height="125" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.3" />
     <text x="345" y="24" text-anchor="middle" fill="#facc15" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-      3. Même hausse en valeur (+10 Mds/an) ➔ Taux de variation en % décroissant !
+      3. Évolution du PIB en valeur absolue (+10 Mds € / an)
     </text>
 
     <!-- Tableau -->
@@ -82,49 +82,49 @@
       <text x="340" y="16" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Coeff Multiplicateur</text>
 
       <rect x="435" y="0" width="195" height="24" fill="#0f172a" />
-      <text x="532" y="16" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Variation annuelle en %</text>
+      <text x="532" y="16" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Taux de variation (CM - 1)</text>
 
       <!-- Lignes du tableau -->
       <!-- 2021 -->
       <text x="60" y="40" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">2021</text>
       <text x="185" y="40" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">1 000 Mds €</text>
       <text x="340" y="40" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="11">—</text>
-      <text x="532" y="40" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="11">Base</text>
+      <text x="532" y="40" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="11">Base 100</text>
 
       <!-- 2022 -->
       <text x="60" y="56" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">2022</text>
       <text x="185" y="56" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">1 010 Mds €</text>
       <text x="340" y="56" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="11">1010 / 1000 = 1,0100</text>
-      <text x="532" y="56" text-anchor="middle" fill="#4ade80" font-family="sans-serif" font-size="11" font-weight="bold">+1,00 %</text>
+      <text x="532" y="56" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="11">1,0100 - 1 = ? %</text>
 
       <!-- 2023 -->
       <text x="60" y="72" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">2023</text>
       <text x="185" y="72" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">1 020 Mds €</text>
       <text x="340" y="72" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="11">1020 / 1010 = 1,0099</text>
-      <text x="532" y="72" text-anchor="middle" fill="#facc15" font-family="sans-serif" font-size="11" font-weight="bold">+0,99 %</text>
+      <text x="532" y="72" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="11">1,0099 - 1 = ? %</text>
 
       <!-- 2024 -->
       <text x="60" y="88" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">2024</text>
       <text x="185" y="88" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">1 030 Mds €</text>
       <text x="340" y="88" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="11">1030 / 1020 = 1,0098</text>
-      <text x="532" y="88" text-anchor="middle" fill="#facc15" font-family="sans-serif" font-size="11" font-weight="bold">+0,98 %</text>
+      <text x="532" y="88" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="11">1,0098 - 1 = ? %</text>
 
       <!-- 2025 -->
       <text x="60" y="104" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">2025</text>
       <text x="185" y="104" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11">1 040 Mds €</text>
       <text x="340" y="104" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="11">1040 / 1030 = 1,0097</text>
-      <text x="532" y="104" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">+0,97 %</text>
+      <text x="532" y="104" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="11">1,0097 - 1 = ? %</text>
     </g>
   </g>
 
-  <!-- Bandeau bas : Variation globale cumulée -->
+  <!-- Bandeau bas : Analyse -->
   <g transform="translate(35, 372)">
     <rect width="690" height="46" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1" />
     <text x="345" y="20" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">
-      Variation cumulée 2021-2025 :
+      Analyse d'évolution relative :
     </text>
     <text x="345" y="36" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11">
-      Produit des CM : 1,01 × 1,0099 × 1,0098 × 1,0097 = 1,03998 ➔ <tspan fill="#4ade80" font-weight="bold">+3,998 %</tspan> (ou 1040 / 1000 = 1,04 ➔ +4,0 %).
+      Observez la tendance du coefficient multiplicateur d'une année sur l'autre alors que le montant en milliards augmente à pas constant (+10).
     </text>
   </g>
 </svg>

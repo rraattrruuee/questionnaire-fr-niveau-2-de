@@ -93,10 +93,10 @@
   <g transform="translate(30, 295)">
     <rect width="700" height="60" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
     <text x="350" y="24" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
-      Qu'est-ce qu'un modèle en économie et sociologie ?
+      Règle de rigueur scientifique en SES
     </text>
     <text x="350" y="44" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
-      Une <tspan fill="#facc15" font-weight="bold">représentation simplifiée de la réalité</tspan> (ni la réalité brute, ni un idéal à atteindre) servant à comprendre des mécanismes et à anticiper.
+      Toute proposition théorique doit être mise à l'épreuve de données empiriques vérifiables (enquêtes, statistiques, observations).
     </text>
   </g>
 </svg>

@@ -10,10 +10,10 @@
 
   <!-- Titre -->
   <text x="380" y="34" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="bold">
-    Différenciation cellulaire &amp; Expression sélective des gènes
+    Différenciation cellulaire &amp; Spécialisation tissulaire
   </text>
   <text x="380" y="54" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
-    Toutes les cellules possèdent la totalité de l'ADN, mais n'expriment que 1 à 2 % de leurs gènes
+    Toutes les cellules d'un même organisme partagent le même patrimoine génétique complet
   </text>
 
   <!-- Cellule souche initiale -->
@@ -100,11 +100,10 @@
   <g transform="translate(45, 335)">
     <rect width="670" height="60" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
     <text x="335" y="23" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
-      Règle fondamentale du vivant pluricellulaire
+      Principe de la différenciation cellulaire
     </text>
     <text x="335" y="42" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
-      Dans une cellule spécialisée, seulement <tspan fill="#4ade80" font-weight="bold">1 à 2 % des gènes</tspan> sont exprimés à un instant donné.
-      L'espèce humaine compte plus de <tspan fill="#facc15" font-weight="bold">250 types cellulaires distincts</tspan>.
+      L'identité et la fonction spécifique d'une cellule mature dépendent des gènes activés ou maintenus sous silence.
     </text>
   </g>
 </svg>

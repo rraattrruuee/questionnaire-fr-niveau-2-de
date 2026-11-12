@@ -19,10 +19,10 @@
 
   <!-- Titre -->
   <text x="370" y="38" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold">
-    Expérience de transgénèse : Universalité de l'ADN
+    Protocole expérimental : La transgénèse inter-espèces
   </text>
   <text x="370" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
-    Transfert du gène de la bioluminescence d'une méduse à une souris
+    Transfert et expression d'un gène d'un organisme donneur vers un organisme receveur
   </text>
 
   <!-- Étape 1 : Organisme donneur (Méduse) -->
@@ -106,10 +106,10 @@
   <g transform="translate(40, 330)">
     <rect width="665" height="52" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
     <text x="332" y="23" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">
-      Conclusion fondamentale : L'ADN est une molécule universelle
+      Protocole biotechnologique de transfert génétique
     </text>
     <text x="332" y="42" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11">
-      Le langage génétique est commun à l'ensemble du monde vivant : un gène est déchiffrable et exprimable par une autre espèce.
+      Un fragment d'ADN étranger prélevé chez le donneur est inséré dans le génome de l'œuf receveur et transmis à sa descendance.
     </text>
   </g>
 </svg>

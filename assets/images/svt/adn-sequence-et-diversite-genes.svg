@@ -10,10 +10,10 @@
 
   <!-- Titre -->
   <text x="380" y="34" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="bold">
-    L'ordre des nucléotides : Le message codé des gènes
+    L'organisation moléculaire des gènes le long de l'ADN
   </text>
   <text x="380" y="54" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">
-    Deux gènes différents se distinguent par leur longueur et leur séquence de nucléotides
+    Comparaison de la structure de deux portions d'ADN codant pour des fonctions distinctes
   </text>
 
   <!-- Du chromosome à la double hélice -->
@@ -81,10 +81,10 @@
   <g transform="translate(40, 325)">
     <rect width="680" height="50" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.2" />
     <text x="340" y="22" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">
-      Capacité de codage illimitée
+      Observation comparative des deux portions d'ADN
     </text>
     <text x="340" y="40" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11">
-      Ce n'est pas la nature chimique des nucléotides qui change, mais leur <tspan fill="#facc15" font-weight="bold">ordre d'enchaînement linéaire</tspan>.
+      Les quatre mêmes nucléotides constitutifs sont utilisés dans chaque gène.
     </text>
   </g>
 </svg>

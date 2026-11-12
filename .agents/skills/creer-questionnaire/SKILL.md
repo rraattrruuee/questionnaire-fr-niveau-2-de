@@ -84,6 +84,7 @@ description: Créer ou étendre un questionnaire dans ce projet PWA (questionnai
 | **`title` aligné** | Le `title` du fichier doit être identique à celui de `config.json`. |
 | **Questions autonomes** | Une question doit être répondable seule à l'écran. Jamais de référence à un contenu non joint (image absente, extrait non recopié, question précédente). Voir §9. |
 | **Longueur homogène des options** | Pour chaque question QCM, toutes les options de réponse (`options`) doivent avoir **approximativement la même longueur** (nombre de caractères comparable) et le même degré de précision/détail. Interdit d'avoir une bonne réponse 2 ou 3 fois plus longue, plus complète ou plus développée que les distracteurs (ou inversement), car cela donne un indice visuel immédiat qui fausse l'évaluation. |
+| **Zéro spoiler dans les SVG / images** | **Interdiction formelle** de donner la réponse à la question dans le graphique joint (titre spoiler, résultat du calcul déjà écrit, conclusion affichée dans un bandeau, mention « ✅ Vrai » / « ❌ Faux »). Le SVG est un document de travail/observation, la réponse appartient à l'élève et la justification au champ `solution`. |
 | **UTF-8 sans escape** | `json.dump(..., ensure_ascii=False, indent=2)`. |
 | **ASCII pour les IDs** | `id` et `file` sans accents/espaces. |
 
@@ -219,6 +220,7 @@ nohup chromium --headless=new --no-sandbox --disable-gpu \
 
 - [ ] **`date +%F` exécuté** et sa sortie exacte utilisée pour `added`
 - [ ] Chaque question testée « seule à l'écran » : répondable sans aucun contenu externe non joint
+- [ ] **Zéro spoiler dans les SVG/images** : aucun graphique ne donne la réponse à la question qu'il illustre
 - [ ] Fichier JSON créé dans `data/<matiere>/`, UTF-8, `indent=2`
 - [ ] Entrée ajoutée à `data/config.json` (`quizzes`) avec `questionsCount` exact
 - [ ] Matière présente dans `config.subjects` (sinon ajoutée)
@@ -295,3 +297,10 @@ Quand un cours comporte des schémas conceptuels, des expériences, des modèles
    ```
 6. **Mise en cache PWA automatique** :
    Le script `bash scripts/generate-sw.sh` scanne récursivement tous les fichiers `.svg` sous `assets/` et les ajoute à `STATIC_ASSETS` dans `service-worker.js`.
+
+### 🚨 Règle absolue anti-spoiler (JAMAIS la réponse dans le SVG) :
+Le fichier SVG doit être un **document de travail, d'observation ou d'analyse** (données brutes d'un tableau, schéma d'une expérience, protocole, axes d'un graphique, modèle théorique non résolu), et **JAMAIS un corrigé pré-rempli**.
+- **Interdit** : faire figurer le calcul résolu ou le résultat chiffré exact demandé dans la question (ex. ne pas écrire `➔ Indice 115` dans un graphique qui demande de calculer l'indice, ni inscrire les pourcentages calculés dans un tableau de valeurs brutes).
+- **Interdit** : écrire dans le titre, un sous-titre ou un bandeau de bas de page la conclusion que l'élève doit trouver (ex. écrire « Conclusion : L'ADN est universel » si la question demande ce que prouve l'expérience, ou « Selon Pierre Bourdieu » si la question demande qui est l'auteur).
+- **Interdit** : ajouter des mentions « ✅ Vrai : ... » ou « ❌ Faux : ... » qui éventent la réponse.
+- **Obligatoire** : laisser l'élève observer les données ou le schéma et faire le raisonnement par lui-même. Les explications et conclusions complètes ont leur place exclusive dans le champ `"solution"` du quiz, qui n'apparaît qu'après que l'élève a répondu.
