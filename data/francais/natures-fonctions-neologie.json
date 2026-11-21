@@ -1,0 +1,1280 @@
+{
+  "subject": "francais",
+  "title": "Natures, fonctions et modes de néologie",
+  "description": "Classes grammaticales (natures), fonctions dans la phrase et formation du lexique : mots simples, dérivation (préfixes latins/grecs, suffixes), composition populaire/savante, radicaux et conversion.",
+  "categories": [
+    {
+      "category": "Natures grammaticales (classes de mots)",
+      "questions": [
+        {
+          "text": "Quelle distinction fondamentale oppose la nature et la fonction d'un mot ?",
+          "type": "mcq",
+          "options": [
+            "La nature est son identité fixe ; la fonction est son rôle dans la phrase",
+            "La nature dépend du temps verbal ; la fonction dépend de l'orthographe",
+            "La nature concerne uniquement les verbes ; la fonction concerne les noms",
+            "La nature varie selon la phrase ; la fonction reste fixe dans le dictionnaire"
+          ],
+          "correct": 0,
+          "solution": "La nature (classe grammaticale : nom, verbe, adjectif...) est permanente dans le dictionnaire, alors que la fonction (sujet, COD, épithète...) dépend de la phrase."
+        },
+        {
+          "text": "Parmi ces listes, laquelle ne contient que des classes grammaticales VARIABLES ?",
+          "type": "mcq",
+          "options": [
+            "Nom, adjectif, déterminant, pronom, verbe",
+            "Nom, adverbe, préposition, pronom, verbe",
+            "Adjectif, conjonction, déterminant, nom, verbe",
+            "Pronom, préposition, adjectif, adverbe, nom"
+          ],
+          "correct": 0,
+          "solution": "Les 5 classes variables (qui varient en genre, nombre, personne ou temps) sont : nom, déterminant, pronom, adjectif et verbe."
+        },
+        {
+          "text": "Dans la phrase « Les élèves lisent attentivement un roman », quelle est la nature du mot « attentivement » ?",
+          "type": "mcq",
+          "options": [
+            "Un adverbe de manière (mot invariable)",
+            "Un adjectif qualificatif (mot variable)",
+            "Une préposition de lieu (mot invariable)",
+            "Un nom commun masculin (mot variable)"
+          ],
+          "correct": 0,
+          "solution": "« Attentivement » modifie le sens du verbe « lisent » et est invariable : c'est un adverbe de manière."
+        },
+        {
+          "text": "Dans « Il parle à son frère depuis une heure », quelle est la nature de « à » et « depuis » ?",
+          "type": "mcq",
+          "options": [
+            "Des prépositions (mots invariables)",
+            "Des adverbes de temps (mots invariables)",
+            "Des conjonctions de coordination",
+            "Des déterminants articles définis"
+          ],
+          "correct": 0,
+          "solution": "« À » et « depuis » introduisent des groupes nominaux compléments : ce sont des prépositions."
+        },
+        {
+          "text": "Dans « Je le lui ai dit hier », quelle est la nature exacte de « le » et « lui » ?",
+          "type": "mcq",
+          "options": [
+            "Des pronoms personnels",
+            "Des déterminants articles définis",
+            "Des adjectifs démonstratifs",
+            "Des adverbes de quantité"
+          ],
+          "correct": 0,
+          "solution": "Placés devant le verbe « ai dit », « le » et « lui » remplacent des groupes nominaux : ce sont des pronoms personnels (et non des articles)."
+        },
+        {
+          "text": "Dans « Leur maison est grande, je leur rendrai visite », quelles sont les natures successives des deux « leur » ?",
+          "type": "mcq",
+          "options": [
+            "Déterminant possessif puis pronom personnel",
+            "Pronom personnel puis déterminant possessif",
+            "Pronom possessif puis adjectif qualificatif",
+            "Adverbe de lieu puis conjonction de coordination"
+          ],
+          "correct": 0,
+          "solution": "« Leur maison » : devant un nom, c'est un déterminant possessif (variable). « Je leur rendrai visite » : devant un verbe (= à eux), c'est un pronom personnel (invariable)."
+        },
+        {
+          "text": "Dans « Le livre que tu m'as prêté est passionnant », quelle est la nature de « que » ?",
+          "type": "mcq",
+          "options": [
+            "Un pronom relatif (ayant « le livre » pour antécédent)",
+            "Une conjonction de subordination introduisant une complétive",
+            "Un pronom interrogatif direct en début de proposition",
+            "Un adverbe d'intensité modifiant le verbe prêter"
+          ],
+          "correct": 0,
+          "solution": "« Que » reprend le nom antécédent « le livre » et introduit une proposition subordonnée relative : c'est un pronom relatif."
+        },
+        {
+          "text": "Dans « Je sais que tu réussiras cet exercice », quelle est la nature de « que » ?",
+          "type": "mcq",
+          "options": [
+            "Une conjonction de subordination",
+            "Un pronom relatif sans antécédent",
+            "Une conjonction de coordination",
+            "Un pronom personnel complément"
+          ],
+          "correct": 0,
+          "solution": "« Que » suit le verbe « sais » (il n'a pas d'antécédent nominal) et introduit une subordonnée complétive : c'est une conjonction de subordination."
+        },
+        {
+          "text": "Quelle est la nature des mots suivants : « mais, ou, et, donc, or, ni, car » ?",
+          "type": "mcq",
+          "options": [
+            "Des conjonctions de coordination",
+            "Des conjonctions de subordination",
+            "Des prépositions de liaison",
+            "Des adverbes de phrase"
+          ],
+          "correct": 0,
+          "solution": "Ces sept mots invariables relient deux éléments de même fonction ou deux propositions indépendantes : ce sont les conjonctions de coordination."
+        },
+        {
+          "text": "Dans « Ce roman est tout abîmé », quelle est la nature du mot « tout » ?",
+          "type": "mcq",
+          "options": [
+            "Un adverbe d'intensité (= tout à fait)",
+            "Un déterminant indéfini masculin singulier",
+            "Un pronom indéfini sujet du verbe",
+            "Un adjectif qualificatif attribut"
+          ],
+          "correct": 0,
+          "solution": "Placé devant l'adjectif « abîmé », « tout » signifie « tout à fait / entièrement » : c'est un adverbe."
+        },
+        {
+          "text": "Dans « Chaque matin, il boit du café », quelle est la nature précise de « du » ?",
+          "type": "mcq",
+          "options": [
+            "Un article partitif",
+            "Un article défini contracté (de + le)",
+            "Un déterminant démonstratif",
+            "Un pronom personnel élidé"
+          ],
+          "correct": 0,
+          "solution": "Devant une réalité indénombrable (« café »), « du » désigne une quantité indéterminée (« une certaine quantité de ») : c'est un article partitif."
+        },
+        {
+          "text": "Dans « Il revient du cinéma à pied », quelle est la nature précise de « du » ?",
+          "type": "mcq",
+          "options": [
+            "Un article défini contracté (de + le)",
+            "Un article partitif indénombrable",
+            "Un déterminant possessif singulier",
+            "Une conjonction de subordination"
+          ],
+          "correct": 0,
+          "solution": "Ici « revenir de + le cinéma » se contracte en « du » : c'est un article défini contracté."
+        },
+        {
+          "text": "Dans « Celui-ci semble plus ancien que celui-là », quelle est la nature de « celui-ci » ?",
+          "type": "mcq",
+          "options": [
+            "Un pronom démonstratif",
+            "Un déterminant démonstratif",
+            "Un pronom possessif",
+            "Un adjectif qualificatif"
+          ],
+          "correct": 0,
+          "solution": "« Celui-ci » remplace un nom déjà mentionné sans l'accompagner : c'est un pronom démonstratif."
+        },
+        {
+          "text": "Dans « Bien qu'il pleuve, nous sortons », quelle est la nature de « bien que » ?",
+          "type": "mcq",
+          "options": [
+            "Une locution conjonctive de subordination",
+            "Une locution prépositive de cause",
+            "Une conjonction de coordination",
+            "Un adverbe de concession"
+          ],
+          "correct": 0,
+          "solution": "« Bien que » introduit une proposition subordonnée circonstancielle d'opposition/concession au subjonctif : c'est une locution conjonctive de subordination."
+        },
+        {
+          "text": "Dans « Hélas ! Le château a brûlé », quelle est la nature du mot « Hélas » ?",
+          "type": "mcq",
+          "options": [
+            "Une interjection",
+            "Un adverbe de temps",
+            "Une préposition",
+            "Un pronom exclamatif"
+          ],
+          "correct": 0,
+          "solution": "« Hélas ! » exprime un sentiment vif (regret, plainte) de manière autonome et invariable : c'est une interjection."
+        },
+        {
+          "text": "Les prépositions, les adverbes, les conjonctions et les interjections appartiennent tous aux classes de mots invariables.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! Aucune de ces quatre classes ne prend de marque de genre, de nombre ou de conjugaison."
+        },
+        {
+          "text": "Dans « Elle porte une robe orange », le mot « orange » est un nom commun employé comme sujet.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! « Orange » qualifie le nom « robe » : c'est un adjectif qualificatif (issu d'un nom de fruit par conversion, et donc invariable)."
+        },
+        {
+          "text": "Quelle classe grammaticale accompagne toujours un nom pour en indiquer le genre, le nombre et l'actualisation (ex. « un », « cette », « mes ») ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "déterminant",
+            "le déterminant",
+            "un déterminant",
+            "determinant"
+          ],
+          "solution": "Le déterminant précède le nom et s'accorde avec lui en genre et en nombre."
+        }
+      ]
+    },
+    {
+      "category": "Fonctions grammaticales dans la phrase",
+      "questions": [
+        {
+          "text": "Dans « Dans la forêt résonne un hurlement sinistre », quelle est la fonction de « un hurlement sinistre » ?",
+          "type": "mcq",
+          "options": [
+            "Sujet inversé du verbe « résonne »",
+            "Complément d'objet direct (COD) du verbe",
+            "Attribut du sujet « la forêt »",
+            "Complément circonstanciel de manière"
+          ],
+          "correct": 0,
+          "solution": "Qu'est-ce qui résonne dans la forêt ? Un hurlement sinistre ! Placé après le verbe, c'est un sujet inversé."
+        },
+        {
+          "text": "Dans « L'élève a lu ce roman policier avec passion », quelle est la fonction de « ce roman policier » ?",
+          "type": "mcq",
+          "options": [
+            "Complément d'objet direct (COD)",
+            "Complément d'objet indirect (COI)",
+            "Attribut du sujet",
+            "Complément circonstanciel de moyen"
+          ],
+          "correct": 0,
+          "solution": "L'élève a lu QUOI ? « Ce roman policier ». Relié directement au verbe sans préposition, c'est le COD."
+        },
+        {
+          "text": "Dans « Il se souvient parfaitement de cette légende », quelle est la fonction de « de cette légende » ?",
+          "type": "mcq",
+          "options": [
+            "Complément d'objet indirect (COI)",
+            "Complément du nom « parfaitement »",
+            "Complément circonstanciel de cause",
+            "Complément d'agent du verbe"
+          ],
+          "correct": 0,
+          "solution": "Il se souvient DE QUOI ? « De cette légende ». Introduit par la préposition « de » après le verbe, c'est un COI."
+        },
+        {
+          "text": "Dans « Ce château médiéval paraît abandonné », quelle est la fonction de « abandonné » ?",
+          "type": "mcq",
+          "options": [
+            "Attribut du sujet « Ce château médiéval »",
+            "Épithète liée du nom « château »",
+            "Complément d'objet direct du verbe",
+            "Complément circonstanciel de lieu"
+          ],
+          "correct": 0,
+          "solution": "« Paraître » est un verbe d'état (attributif). « Abandonné » qualifie le sujet par l'intermédiaire du verbe d'état : c'est un attribut du sujet."
+        },
+        {
+          "text": "Dans « Les critiques trouvent ce film fascinant », quelle est la fonction de « fascinant » ?",
+          "type": "mcq",
+          "options": [
+            "Attribut du complément d'objet direct (COD)",
+            "Attribut du sujet « Les critiques »",
+            "Épithète détachée du nom « film »",
+            "Complément circonstanciel de manière"
+          ],
+          "correct": 0,
+          "solution": "Avec le verbe de jugement « trouver », l'adjectif « fascinant » exprime une caractéristique attribuée au COD « ce film » : c'est un attribut du COD."
+        },
+        {
+          "text": "Dans « Une silhouette inquiétante apparut dans la brume », quelle est la fonction de « inquiétante » ?",
+          "type": "mcq",
+          "options": [
+            "Épithète liée du nom « silhouette »",
+            "Attribut du sujet « Une silhouette »",
+            "Apposition détachée par une virgule",
+            "Complément du nom « brume »"
+          ],
+          "correct": 0,
+          "solution": "Placé directement à côté du nom « silhouette » dans le même groupe nominal sans verbe d'état ni virgule, « inquiétante » est épithète liée."
+        },
+        {
+          "text": "Dans « Épuisé par sa course, le voyageur s'arrêta », quelle est la fonction de « Épuisé par sa course » ?",
+          "type": "mcq",
+          "options": [
+            "Épithète détachée (ou apposition) du nom « voyageur »",
+            "Attribut du sujet du verbe « s'arrêta »",
+            "Complément d'objet direct antéposé",
+            "Complément d'agent du participe passé"
+          ],
+          "correct": 0,
+          "solution": "Séparé du nom « le voyageur » par une virgule, ce groupe adjectival est épithète détachée (ou mis en apposition)."
+        },
+        {
+          "text": "Dans « Le chapeau de paille protège du soleil », quelle est la fonction de « de paille » ?",
+          "type": "mcq",
+          "options": [
+            "Complément du nom « chapeau »",
+            "Complément d'objet indirect de « protège »",
+            "Complément circonstanciel de matière",
+            "Attribut du sujet « Le chapeau »"
+          ],
+          "correct": 0,
+          "solution": "Introduit par la préposition « de », le groupe « de paille » complète et précise le nom « chapeau » : c'est un complément du nom."
+        },
+        {
+          "text": "Dans « Le château fut visité par de nombreux touristes », quelle est la fonction de « par de nombreux touristes » ?",
+          "type": "mcq",
+          "options": [
+            "Complément d'agent (phrase à la voix passive)",
+            "Complément circonstanciel de moyen",
+            "Complément d'objet indirect (COI)",
+            "Sujet réel de la forme impersonnelle"
+          ],
+          "correct": 0,
+          "solution": "La phrase est à la voix passive (« fut visité ») ; « par de nombreux touristes » désigne celui qui accomplit l'action : c'est le complément d'agent."
+        },
+        {
+          "text": "Dans « Il a agi par pure jalousie », quelle est la fonction de « par pure jalousie » ?",
+          "type": "mcq",
+          "options": [
+            "Complément circonstanciel de cause",
+            "Complément circonstanciel de but",
+            "Complément d'agent de la voix passive",
+            "Complément d'objet indirect du verbe"
+          ],
+          "correct": 0,
+          "solution": "Pourquoi a-t-il agi ainsi ? « Par pure jalousie » indique la raison de l'action : c'est un complément circonstanciel de cause."
+        },
+        {
+          "text": "Dans « Elle révise ses fiches afin de réussir son contrôle », quelle est la fonction de « afin de réussir son contrôle » ?",
+          "type": "mcq",
+          "options": [
+            "Complément circonstanciel de but",
+            "Complément circonstanciel de cause",
+            "Complément circonstanciel de conséquence",
+            "Complément d'objet direct de « révise »"
+          ],
+          "correct": 0,
+          "solution": "« Afin de + infinitif » exprime l'objectif visé par l'action : c'est un complément circonstanciel de but."
+        },
+        {
+          "text": "Dans « Il a offert un bouquet de roses à sa mère », quelles sont les fonctions respectives de « un bouquet de roses » et « à sa mère » ?",
+          "type": "mcq",
+          "options": [
+            "COD puis COS (complément d'objet second)",
+            "Sujet inversé puis attribut du sujet",
+            "COI puis complément circonstanciel de but",
+            "Attribut du COD puis complément du nom"
+          ],
+          "correct": 0,
+          "solution": "Avec le verbe « offrir quelque chose (COD) à quelqu'un (COS) », le second complément d'objet indirect est appelé complément d'objet second (COS)."
+        },
+        {
+          "text": "Dans « Lire des romans développe le vocabulaire », quelle est la fonction du groupe infinitif « Lire des romans » ?",
+          "type": "mcq",
+          "options": [
+            "Sujet du verbe « développe »",
+            "Complément d'objet direct de « développe »",
+            "Complément circonstanciel de moyen",
+            "Attribut du sujet « le vocabulaire »"
+          ],
+          "correct": 0,
+          "solution": "Qu'est-ce qui développe le vocabulaire ? « Lire des romans ». Un infinitif ou groupe infinitif peut être sujet d'un verbe."
+        },
+        {
+          "text": "Dans « Malgré la pluie battante, ils ont continué la marche », quelle est la fonction de « Malgré la pluie battante » ?",
+          "type": "mcq",
+          "options": [
+            "Complément circonstanciel d'opposition / concession",
+            "Complément circonstanciel de condition",
+            "Complément circonstanciel de conséquence",
+            "Complément circonstanciel de temps"
+          ],
+          "correct": 0,
+          "solution": "Introduit par la préposition « malgré », ce groupe exprime un obstacle qui n'empêche pas l'action : c'est un CC d'opposition (ou concession)."
+        },
+        {
+          "text": "Parmi ces listes de verbes, laquelle ne contient que des verbes d'état (pouvant introduire un attribut du sujet) ?",
+          "type": "mcq",
+          "options": [
+            "Être, paraître, sembler, devenir, demeurer, rester",
+            "Être, manger, courir, devenir, dormir, rester",
+            "Paraître, offrir, sembler, lire, demeurer, voir",
+            "Devenir, prendre, rester, écrire, sembler, partir"
+          ],
+          "correct": 0,
+          "solution": "Les principaux verbes d'état sont : être, paraître, sembler, devenir, demeurer, rester, avoir l'air, passer pour."
+        },
+        {
+          "text": "Un complément circonstanciel peut généralement être déplacé ou supprimé sans rendre la phrase grammaticalement incorrecte.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! C'est le test de mobilité et d'effacement qui permet de distinguer un complément circonstanciel d'un complément d'objet (essentiel)."
+        },
+        {
+          "text": "Dans la phrase « Paris, la capitale de la France, attire les visiteurs », le groupe « la capitale de la France » est un attribut du sujet.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! Il n'y a pas de verbe d'état entre « Paris » et « la capitale de la France » : ce groupe nominal séparé par des virgules est une apposition."
+        },
+        {
+          "text": "Quelle est la fonction du mot « mystérieuse » dans « Une lettre mystérieuse arriva ce matin » ? (2 mots)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "épithète liée",
+            "epithete liee",
+            "épithète"
+          ],
+          "solution": "Placé directement après le nom « lettre » dans le groupe nominal, « mystérieuse » a la fonction d'épithète liée."
+        }
+      ]
+    },
+    {
+      "category": "Organisation du lexique — Mots simples, dérivation et conversion",
+      "questions": [
+        {
+          "text": "Selon le cours, en quelles deux grandes catégories s'organise le lexique français ?",
+          "type": "mcq",
+          "options": [
+            "Les mots simples et les mots construits",
+            "Les mots anciens et les mots inventés",
+            "Les mots courts et les mots composés",
+            "Les mots savants et les mots familiers"
+          ],
+          "correct": 0,
+          "solution": "Le lexique français se divise en mots simples (issus des langues anciennes ou modernes) et mots construits (dérivation, composition, conversion)."
+        },
+        {
+          "text": "Quelle est la différence entre un mot héréditaire et un mot emprunté parmi les mots simples ?",
+          "type": "mcq",
+          "options": [
+            "L'héréditaire a évolué phonétiquement ; l'emprunté est resté quasi intact",
+            "L'héréditaire vient du grec ; l'emprunté vient uniquement de l'anglais",
+            "L'héréditaire comporte un préfixe ; l'emprunté comporte un suffixe",
+            "L'héréditaire est invariable ; l'emprunté s'accorde toujours au pluriel"
+          ],
+          "correct": 0,
+          "solution": "Un mot héréditaire a subi une transformation en passant d'une autre langue au français (ex. *fragilis* > *frêle*), tandis qu'un mot emprunté est passé quasi intact (ex. *fragilis* > *fragile*)."
+        },
+        {
+          "text": "De quelle langue provient la grande majorité des mots français (comme « champ », « table », « urbain ») ?",
+          "type": "mcq",
+          "options": [
+            "Du latin",
+            "Du grec ancien",
+            "De l'allemand",
+            "De l'espagnol"
+          ],
+          "correct": 0,
+          "solution": "La majorité du lexique français provient du latin : *campus* > champ/camp, *tabula* > table/tableau, *urbs* > urbain."
+        },
+        {
+          "text": "Dans le couple issu du latin « fragilis » : « frêle » et « fragile », lequel est le mot héréditaire et lequel est le mot emprunté ?",
+          "type": "mcq",
+          "options": [
+            "« Frêle » est héréditaire ; « fragile » est emprunté",
+            "« Fragile » est héréditaire ; « frêle » est emprunté",
+            "Les deux sont des mots construits par dérivation",
+            "Les deux sont des emprunts directs à l'allemand"
+          ],
+          "correct": 0,
+          "solution": "« Frêle » a subi une forte transformation phonétique depuis *fragilis* (mot héréditaire), alors que « fragile » est un emprunt savant resté proche du latin (doublet étymologique)."
+        },
+        {
+          "text": "D'après le cours, de quelle langue proviennent respectivement le mot héréditaire « savon » et le mot emprunté « dialogue » ?",
+          "type": "mcq",
+          "options": [
+            "« Savon » de l'allemand (seife) et « dialogue » du grec (dialogos)",
+            "« Savon » du grec (dialogos) et « dialogue » du latin (tabula)",
+            "« Savon » de l'anglais (soap) et « dialogue » de l'espagnol",
+            "« Savon » du latin (urbs) et « dialogue » de l'allemand (seife)"
+          ],
+          "correct": 0,
+          "solution": "Le cours cite l'exemple de *savon* (issu du germanique/allemand *seife*) comme mot transformé, et de *dialogue* (issu du grec *dialogos*) comme emprunt resté quasi intact."
+        },
+        {
+          "text": "Quels sont les 3 procédés de formation des mots construits ?",
+          "type": "mcq",
+          "options": [
+            "La dérivation, la composition et la conversion",
+            "L'emprunt, l'héritage et la traduction",
+            "La phonétique, la syntaxe et la ponctuation",
+            "L'apposition, l'épithète et la coordination"
+          ],
+          "correct": 0,
+          "solution": "Les mots construits se forment par dérivation (préfixes/suffixes), composition (populaire/savante) ou conversion."
+        },
+        {
+          "text": "Dans la dérivation (ex. : « bord » → « rebord », « abordage »), quel élément porte le sens principal du mot ?",
+          "type": "mcq",
+          "options": [
+            "Le radical",
+            "Le préfixe",
+            "Le suffixe",
+            "La désinence"
+          ],
+          "correct": 0,
+          "solution": "Le radical (ici « bord ») porte le sens principal du mot ; les préfixes et suffixes viennent s'y greffer."
+        },
+        {
+          "text": "Quel est le rôle principal d'un préfixe (ex. : « possible » → « impossible ») ?",
+          "type": "mcq",
+          "options": [
+            "Se placer devant le radical et modifier le sens du mot",
+            "Se placer après le radical et changer sa classe grammaticale",
+            "Remplacer le radical pour créer un emprunt étranger",
+            "Accorder le nom composé au pluriel devant une préposition"
+          ],
+          "correct": 0,
+          "solution": "Un préfixe se place devant le radical : il modifie le sens (ici négation : « qui n'est pas possible »), mais conserve en général la même classe grammaticale."
+        },
+        {
+          "text": "Quel est le rôle principal d'un suffixe (ex. : « aimer » → « aimable ») ?",
+          "type": "mcq",
+          "options": [
+            "Se placer après le radical et modifier la classe grammaticale du mot",
+            "Se placer devant le radical sans changer la classe grammaticale",
+            "Transformer un mot français moderne en radical grec ancien",
+            "Supprimer le sens du radical pour former un mot simple"
+          ],
+          "correct": 0,
+          "solution": "Le suffixe se place après le radical, modifie la classe grammaticale (ici verbe *aimer* → adjectif *aimable*) et ajoute souvent une nuance (« qui peut être aimé »)."
+        },
+        {
+          "text": "Comment nomme-t-on la formation d'un mot comme « imbattable » ou « déraisonnable » qui ajoute simultanément un préfixe et un suffixe ?",
+          "type": "mcq",
+          "options": [
+            "Une dérivation parasynthétique",
+            "Une composition savante grecque",
+            "Une conversion par antonymie",
+            "Un emprunt héréditaire direct"
+          ],
+          "correct": 0,
+          "solution": "L'ajout simultané d'un préfixe (*im-*, *dé-*) et d'un suffixe (*-able*) autour d'un radical s'appelle la dérivation parasynthétique."
+        },
+        {
+          "text": "Qu'est-ce que la conversion (ou dérivation impropre) en néologie ?",
+          "type": "mcq",
+          "options": [
+            "Changer la classe grammaticale d'un mot sans modifier sa forme",
+            "Souder deux radicaux grecs pour former un terme scientifique",
+            "Traduire mot à mot une expression étrangère en français",
+            "Remplacer un préfixe latin par son équivalent grec"
+          ],
+          "correct": 0,
+          "solution": "La conversion fait passer un mot d'une classe grammaticale à une autre sans ajout de préfixe ni de suffixe : ex. l'adjectif « vrai » → le nom « le vrai », l'infinitif « dîner » → le nom « un dîner »."
+        },
+        {
+          "text": "Quel exemple illustre une conversion (dérivation impropre) ?",
+          "type": "mcq",
+          "options": [
+            "L'infinitif « rire » devenu le nom « un rire »",
+            "Le nom « bord » devenu le nom « rebord »",
+            "Le nom « fleur » devenu « chou-fleur »",
+            "Le radical « bio » associé à « graphie »"
+          ],
+          "correct": 0,
+          "solution": "« Un rire » change de classe grammaticale (verbe → nom) sans aucun ajout d'affixe : c'est une conversion. (« Rebord » = dérivation ; « chou-fleur » = composition populaire ; « biographie » = composition savante)."
+        },
+        {
+          "text": "Parmi ces mots, lequel est formé par dérivation suffixale à partir du nom « courage » ?",
+          "type": "mcq",
+          "options": [
+            "courageusement",
+            "décourager",
+            "garde-corps",
+            "le courage"
+          ],
+          "correct": 0,
+          "solution": "« Courage » + suffixe « -eux » → « courageux » + suffixe « -ment » → « courageusement » (nom → adjectif → adverbe)."
+        },
+        {
+          "text": "Quel couple illustre le mieux des « doublets étymologiques » issus du latin *campus* ?",
+          "type": "mcq",
+          "options": [
+            "« champ » (héréditaire) et « camp » (emprunté)",
+            "« bord » (héréditaire) et « rebord » (dérivé)",
+            "« table » (grec) et « tableau » (allemand)",
+            "« fragile » (anglais) et « frêle » (espagnol)"
+          ],
+          "correct": 0,
+          "solution": "Du latin *campus*, le français a formé par voie populaire « champ » (héréditaire) et par emprunt « camp » (et même « campus »)."
+        },
+        {
+          "text": "Le mot « tableau » est un mot dérivé par suffixation formé à partir de « table » (issu du latin *tabula*).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! *Tabula* a donné le mot simple « table », sur lequel a été construit « tableau » avec le suffixe diminutif « -eau »."
+        },
+        {
+          "text": "Un préfixe change systématiquement la classe grammaticale du mot auquel il s'ajoute (par exemple un verbe devient un nom).",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! Contrairement au suffixe, le préfixe modifie le sens du mot mais conserve généralement sa classe grammaticale (ex. : *possible* adjectif → *impossible* adjectif)."
+        },
+        {
+          "text": "Comment appelle-t-on le procédé qui consiste à faire passer un mot dans une autre classe grammaticale sans ajouter ni préfixe ni suffixe (ex. « le vrai », « un dîner ») ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "conversion",
+            "la conversion",
+            "dérivation impropre",
+            "la dérivation impropre"
+          ],
+          "solution": "Ce procédé s'appelle la conversion (ou dérivation impropre)."
+        },
+        {
+          "text": "Dans le mot dérivé « abordage », quel est le radical de base ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "bord"
+          ],
+          "solution": "Le mot « abordage » est construit sur le radical « bord » avec le préfixe « a- » et le suffixe « -age »."
+        }
+      ]
+    },
+    {
+      "category": "Préfixes latins et grecs (sens et correspondances)",
+      "questions": [
+        {
+          "text": "Quel préfixe grec correspond au préfixe latin de négation « in- / im- / il- / ir- » (ex. : irréel, illettré) ?",
+          "type": "mcq",
+          "options": [
+            "a- / an- (ex. : analphabète, amorphe)",
+            "dys- (ex. : dysfonctionnement, dyslexie)",
+            "hypo- (ex. : hypothermie, hypoglycémie)",
+            "méta- (ex. : métamorphose, métaphore)"
+          ],
+          "correct": 0,
+          "solution": "Pour la négation / le contraire : le latin emploie « in-/im-/il-/ir- » et le grec « a-/an- » (privatif)."
+        },
+        {
+          "text": "Quel couple de préfixes (latin / grec) exprime l'idée de « séparation » ou de dysfonctionnement ?",
+          "type": "mcq",
+          "options": [
+            "Latin dis-/des- (distraction) et grec dys- (dysfonctionnement)",
+            "Latin con-/com- (compagnie) et grec sym- (symphonie)",
+            "Latin super-/sur- (surface) et grec hyper- (hypersensibilité)",
+            "Latin sub-/sous- (soustraction) et grec hypo- (hypothermie)"
+          ],
+          "correct": 0,
+          "solution": "La séparation / difficulté s'exprime en latin par « dis-/des- » (*distraction*, *distorsion*, *désaccord*) et en grec par « dys- » (*dysfonctionnement*, *dyslexie*)."
+        },
+        {
+          "text": "Quel sens partagent le préfixe latin « con- / com- » (compétition, compagnie) et le préfixe grec « sym- / syn- » (symphonie, synthèse) ?",
+          "type": "mcq",
+          "options": [
+            "L'accompagnement / ensemble / avec",
+            "La négation / contraire / sans",
+            "L'excès / au-dessus / supérieur",
+            "Le manque / en dessous / inférieur"
+          ],
+          "correct": 0,
+          "solution": "« Con-/com- » (latin) et « sym-/syn- » (grec) signifient « avec / ensemble / accompagnement » (ex. : *symphonie* = sons ensemble ; *compagnie* = qui partage le pain)."
+        },
+        {
+          "text": "Quel préfixe grec a le même sens « au-dessus / excès » que les préfixes latins « super- / sur- » (surface, surnaturel) ?",
+          "type": "mcq",
+          "options": [
+            "hyper- (ex. : hypersensibilité, hyperactif)",
+            "hypo- (ex. : hypothermie, hypoglycémie)",
+            "méta- (ex. : métamorphose, métallurgie)",
+            "dys- (ex. : dysfonctionnement, dysorthographie)"
+          ],
+          "correct": 0,
+          "solution": "« Super-/sur- » (latin) et « hyper- » (grec) signifient « au-dessus / en excès »."
+        },
+        {
+          "text": "Quel préfixe grec a le même sens « en dessous / insuffisance » que les préfixes latins « sub- / sous- » (soustraction, sous-marin) ?",
+          "type": "mcq",
+          "options": [
+            "hypo- (ex. : hypothermie, hypotension)",
+            "hyper- (ex. : hypertension, hypermarché)",
+            "sym- (ex. : sympathie, symbiose)",
+            "a- / an- (ex. : aphone, anonyme)"
+          ],
+          "correct": 0,
+          "solution": "« Sub-/sous- » (latin) et « hypo- » (grec) signifient « en dessous / manque » (ex. : *hypothermie* = température corporelle trop basse)."
+        },
+        {
+          "text": "Quel sens commun unit le préfixe latin « trans- » (transgénique) et le préfixe grec « méta- » (métamorphose) ?",
+          "type": "mcq",
+          "options": [
+            "À travers / au-delà / changement",
+            "En arrière / retour / répétition",
+            "En dessous / diminution / manque",
+            "Avec / union / accompagnement"
+          ],
+          "correct": 0,
+          "solution": "« Trans- » (latin : *transgénique*, *transformer*) et « méta- » (grec : *métamorphose*, *métallurgie*) expriment le passage « à travers » ou le « changement »."
+        },
+        {
+          "text": "Pourquoi le préfixe négatif latin « in- » devient-il « il- » dans « illettré » et « ir- » dans « irréel » ?",
+          "type": "mcq",
+          "options": [
+            "Par assimilation devant les consonnes l et r",
+            "Parce qu'il s'agit en réalité d'un préfixe grec",
+            "Parce que le mot vient d'un emprunt à l'anglais",
+            "Pour modifier la classe grammaticale en adverbe"
+          ],
+          "correct": 0,
+          "solution": "Le préfixe latin « in- » s'adapte à la consonne suivante : « im- » devant m/b/p (*impossible*), « il- » devant l (*illégal*, *illettré*), « ir- » devant r (*irréel*, *irrésistible*)."
+        },
+        {
+          "text": "Que signifie étymologiquement le mot « analphabète » grâce à son préfixe grec ?",
+          "type": "mcq",
+          "options": [
+            "Qui ne connaît pas l'alphabet (a-/an- = privation)",
+            "Qui connaît parfaitement deux alphabets (an- = double)",
+            "Qui enseigne l'alphabet au-dessus des autres (an- = excès)",
+            "Qui transforme l'alphabet ancien (an- = changement)"
+          ],
+          "correct": 0,
+          "solution": "« An- » est la forme du préfixe privatif grec « a- » devant une voyelle : « analphabète » = qui ne sait ni lire ni écrire l'alphabet."
+        },
+        {
+          "text": "Quelle est la différence de sens entre « hypertension » et « hypotension » ?",
+          "type": "mcq",
+          "options": [
+            "Hyper- = tension trop élevée ; hypo- = tension trop basse",
+            "Hyper- = tension normale ; hypo- = absence de tension",
+            "Hyper- = tension passagère ; hypo- = tension chronique",
+            "Hyper- = tension nerveuse ; hypo- = tension musculaire"
+          ],
+          "correct": 0,
+          "solution": "« Hyper- » indique un excès (au-dessus) et « hypo- » indique une insuffisance (en dessous)."
+        },
+        {
+          "text": "Lequel de ces mots contient le préfixe grec signifiant « avec / ensemble » ?",
+          "type": "mcq",
+          "options": [
+            "sympathie (ou synchronisation)",
+            "distorsion (ou distraction)",
+            "transgénique (ou transport)",
+            "subalterne (ou soustraction)"
+          ],
+          "correct": 0,
+          "solution": "« Sym- » / « syn- » vient du grec *sun* (« avec / ensemble ») : *sympathie* = souffrir/ressentir avec ; *synchronisation* = en même temps."
+        },
+        {
+          "text": "Dans quel mot le préfixe « trans- » exprime-t-il l'idée de changement ou de passage « d'un côté à l'autre » ?",
+          "type": "mcq",
+          "options": [
+            "transatlantique et transformer",
+            "soustraction et subordonné",
+            "compagnie et compétition",
+            "irréel et impossible"
+          ],
+          "correct": 0,
+          "solution": "« Trans- » signifie « à travers / au-delà / changement » : *transatlantique* (à travers l'Atlantique), *transformer* (changer de forme), *transgénique*."
+        },
+        {
+          "text": "Que signifie le préfixe grec « dys- » dans les mots « dysfonctionnement », « dyslexie » ou « dysorthographie » ?",
+          "type": "mcq",
+          "options": [
+            "Une difficulté, une anomalie ou une séparation",
+            "Une réussite exceptionnelle ou un excès",
+            "Une répétition identique dans le temps",
+            "Une opposition totale ou une négation simple"
+          ],
+          "correct": 0,
+          "solution": "Le préfixe grec « dys- » indique un trouble, une difficulté ou un mauvais fonctionnement."
+        },
+        {
+          "text": "Les préfixes latins « sub- / sous- » et le préfixe grec « hypo- » partagent tous deux le sens de « dessous / en deçà ».",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! Ex. : *sous-marin*, *subaquatique* (latin) et *hypothermie*, *hypoderme* (grec)."
+        },
+        {
+          "text": "Dans le mot « métamorphose », le préfixe « méta- » signifie « en dessous ».",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! « Méta- » signifie « changement / à travers / au-delà » : *métamorphose* = changement de forme."
+        },
+        {
+          "text": "Quel préfixe grec de 4 lettres (sans tiret) signifie « au-dessus / excès », comme dans « hypersensibilité » ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "hyper"
+          ],
+          "solution": "Le préfixe grec « hyper- » signifie « au-dessus / en excès » (équivalent du latin « super-/sur- »)."
+        },
+        {
+          "text": "Quel préfixe grec de 4 lettres (sans tiret) signifie « en dessous / manque », comme dans « hypothermie » ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "hypo"
+          ],
+          "solution": "Le préfixe grec « hypo- » signifie « en dessous / insuffisance » (équivalent du latin « sub-/sous- »)."
+        }
+      ]
+    },
+    {
+      "category": "Composition populaire et règles du pluriel",
+      "questions": [
+        {
+          "text": "De quelles 4 façons graphiques les mots de la composition populaire peuvent-ils être reliés ?",
+          "type": "mcq",
+          "options": [
+            "Blanc typographique, tiret, préposition ou soudure",
+            "Virgule, point-virgule, parenthèses ou apostrophe",
+            "Préfixe latin, suffixe grec, radical ou conversion",
+            "Majuscule, italique, guillemets ou deux-points"
+          ],
+          "correct": 0,
+          "solution": "Exemples du cours : blanc typographique (*chaise longue*), tiret (*porte-bagages*), préposition (*crayon à papier*), soudure (*portefeuille*)."
+        },
+        {
+          "text": "Parmi ces 4 mots composés, lequel illustre une composition par « soudure » ?",
+          "type": "mcq",
+          "options": [
+            "portefeuille (ou bonhomme)",
+            "chaise longue (ou compte rendu)",
+            "porte-bagages (ou chou-fleur)",
+            "crayon à papier (ou chef-d'œuvre)"
+          ],
+          "correct": 0,
+          "solution": "Un mot composé soudé réunit ses éléments en un seul mot sans espace ni trait d'union : *portefeuille*, *bonhomme*, *vinaigre*, *gentilhomme*."
+        },
+        {
+          "text": "Dans un mot composé populaire sans préposition, quelles classes de mots peuvent prendre la marque du pluriel ?",
+          "type": "mcq",
+          "options": [
+            "Uniquement les noms et les adjectifs",
+            "Uniquement les verbes et les adverbes",
+            "Toutes les classes de mots sans exception",
+            "Uniquement le dernier mot du composé"
+          ],
+          "correct": 0,
+          "solution": "Règle d'or : seuls les noms et les adjectifs s'accordent ; les verbes, adverbes et prépositions restent invariables."
+        },
+        {
+          "text": "Quel est le pluriel correct de « un chou-fleur » et « un rouge-gorge » ?",
+          "type": "mcq",
+          "options": [
+            "Des choux-fleurs et des rouges-gorges",
+            "Des chou-fleurs et des rouge-gorges",
+            "Des choux-fleur et des rouges-gorge",
+            "Des chou-fleur et des rouge-gorge"
+          ],
+          "correct": 0,
+          "solution": "« Chou » (nom) + « fleur » (nom) → les deux s'accordent. « Rouge » (adjectif) + « gorge » (nom) → les deux s'accordent."
+        },
+        {
+          "text": "Quel est le pluriel correct de « une arrière-boutique » ?",
+          "type": "mcq",
+          "options": [
+            "Des arrière-boutiques",
+            "Des arrières-boutiques",
+            "Des arrières-boutique",
+            "Des arrière-boutique"
+          ],
+          "correct": 0,
+          "solution": "« Arrière » est un adverbe/préposition (invariable) et « boutique » est un nom (variable) → « des arrière-boutiques »."
+        },
+        {
+          "text": "Quel est le pluriel correct de « un porte-manteau » (formé d'un verbe + un nom) ?",
+          "type": "mcq",
+          "options": [
+            "Des porte-manteaux",
+            "Des portes-manteaux",
+            "Des portes-manteau",
+            "Des porte-manteau"
+          ],
+          "correct": 0,
+          "solution": "« Porte » est le verbe « porter » (invariable) et « manteau » est un nom (variable) → « des porte-manteaux »."
+        },
+        {
+          "text": "Quelle est la règle d'accord au pluriel lorsqu'une préposition sépare deux noms (ex. : « chef-d'œuvre », « arc-en-ciel ») ?",
+          "type": "mcq",
+          "options": [
+            "Seul le premier nom prend la marque du pluriel",
+            "Seul le second nom prend la marque du pluriel",
+            "Les deux noms prennent la marque du pluriel",
+            "Aucun des deux noms ne prend jamais de pluriel"
+          ],
+          "correct": 0,
+          "solution": "Quand deux noms sont reliés par une préposition (*de*, *d'*, *en*, *à*), seul le premier nom s'accorde : *des chefs-d'œuvre*, *des arcs-en-ciel*, *des pommes de terre*."
+        },
+        {
+          "text": "Quel est le pluriel correct de « un chef-d'œuvre » et « un arc-en-ciel » ?",
+          "type": "mcq",
+          "options": [
+            "Des chefs-d'œuvre et des arcs-en-ciel",
+            "Des chef-d'œuvres et des arc-en-ciels",
+            "Des chefs-d'œuvres et des arcs-en-ciels",
+            "Des chef-d'œuvre et des arc-en-ciel"
+          ],
+          "correct": 0,
+          "solution": "En présence d'une préposition entre deux noms, seul le premier nom s'accorde : *chefs-d'œuvre*, *arcs-en-ciel*."
+        },
+        {
+          "text": "Quel est le pluriel correct de « une chaise longue » et « un coffre-fort » ?",
+          "type": "mcq",
+          "options": [
+            "Des chaises longues et des coffres-forts",
+            "Des chaise longues et des coffre-forts",
+            "Des chaises longue et des coffres-fort",
+            "Des chaise longue et des coffre-fort"
+          ],
+          "correct": 0,
+          "solution": "Les deux mots sont composés d'un nom et d'un adjectif : nom et adjectif prennent tous deux le pluriel."
+        },
+        {
+          "text": "Quel est le pluriel correct de « un laissez-passer » (composé de deux verbes) ?",
+          "type": "mcq",
+          "options": [
+            "Des laissez-passer (totalement invariable)",
+            "Des laissés-passer",
+            "Des laissez-passers",
+            "Des laissés-passers"
+          ],
+          "correct": 0,
+          "solution": "Formé de deux verbes (« laissez » + « passer »), ce nom composé reste totalement invariable au pluriel."
+        },
+        {
+          "text": "Quel est le pluriel correct de « un grand-parent » et « une belle-sœur » ?",
+          "type": "mcq",
+          "options": [
+            "Des grands-parents et des belles-sœurs",
+            "Des grand-parents et des belle-sœurs",
+            "Des grands-parent et des belles-sœur",
+            "Des grand-parent et des belle-sœur"
+          ],
+          "correct": 0,
+          "solution": "Adjectif + nom : les deux éléments s'accordent au pluriel (*des grands-parents*, *des belles-sœurs*)."
+        },
+        {
+          "text": "Dans le mot composé « une pomme de terre », le pluriel s'écrit « des pommes de terre » (sans -s à « terre »).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! Comme il y a une préposition (« de ») entre les deux noms, seul le premier nom (« pommes ») s'accorde."
+        },
+        {
+          "text": "Au pluriel, « un portefeuille » s'écrit « des portes-feuilles ».",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! « Portefeuille » est un mot composé soudé : il suit la règle des noms simples et prend un seul -s final (« des portefeuilles »)."
+        },
+        {
+          "text": "Écrivez au pluriel le nom composé suivant (avec son déterminant « des ») : « un chef-d'œuvre ».",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "des chefs-d'œuvre",
+            "des chefs-d'oeuvre"
+          ],
+          "solution": "Avec la préposition « d' » entre deux noms, seul « chef » prend un -s : « des chefs-d'œuvre »."
+        }
+      ]
+    },
+    {
+      "category": "Composition savante — Radicaux latins et grecs (Exercices)",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "Qu'est-ce qui caractérise la composition savante par rapport à la composition populaire ?",
+          "type": "mcq",
+          "options": [
+            "Elle associe deux radicaux latins ou grecs non autonomes en français",
+            "Elle associe uniquement deux verbes conjugués du français moderne",
+            "Elle relie deux noms français à l'aide d'un trait d'union ou d'un espace",
+            "Elle supprime les radicaux pour ne garder que des préfixes anglais"
+          ],
+          "correct": 0,
+          "solution": "La composition savante réunit deux mots d'origine latine ou grecque qui étaient autonomes dans leur langue d'origine mais ne le sont généralement pas en français (ex. *péri-mètre*)."
+        },
+        {
+          "text": "D'après le cours, quel est le sens littéral du mot composé grec « périmètre » (peri + metron) ?",
+          "type": "mcq",
+          "options": [
+            "La mesure du pourtour (peri = autour + metron = mesure)",
+            "La mesure du centre (peri = milieu + metron = mesure)",
+            "L'étude de la terre (peri = terre + metron = étude)",
+            "La chaleur de l'air (peri = chaleur + metron = air)"
+          ],
+          "correct": 0,
+          "solution": "« Peri » = autour et « metron » = la mesure → « périmètre » = la mesure du pourtour."
+        },
+        {
+          "text": "À partir des radicaux latins « aqua » et « duc », que signifie littéralement un « aqueduc » ?",
+          "type": "mcq",
+          "options": [
+            "Un ouvrage qui conduit l'eau (aqua = eau + duc = conduire)",
+            "Un animal qui vit dans l'eau (aqua = eau + duc = vivre)",
+            "Un produit qui détruit l'eau (aqua = eau + duc = tuer)",
+            "Un récipient qui mesure l'eau (aqua = eau + duc = mesurer)"
+          ],
+          "correct": 0,
+          "solution": "« Aqua » (eau) + « duc » (conduire) = conduit d'eau. (Autre exemple avec *duc* : *viaduc* = qui conduit une voie ; avec *aqua* : *aquarium*, *aquatique*)."
+        },
+        {
+          "text": "Quel radical latin signifie « entendre » et a formé les mots « auditorium », « audible » et « audiovisuel » ?",
+          "type": "mcq",
+          "options": [
+            "audi",
+            "aqua",
+            "fère",
+            "vore"
+          ],
+          "correct": 0,
+          "solution": "Le radical latin « audi » signifie « entendre » (ex. *audition*, *auditeur*, *inaudible*)."
+        },
+        {
+          "text": "Quel radical latin signifie « manger » et permet de former « carnivore », « herbivore » et « omnivore » ?",
+          "type": "mcq",
+          "options": [
+            "-vore",
+            "-fère",
+            "-cide",
+            "-duc"
+          ],
+          "correct": 0,
+          "solution": "« -vore » signifie « manger » : *carnivore* (mange de la chair), *herbivore* (mange de l'herbe), *omnivore* (mange de tout)."
+        },
+        {
+          "text": "Quel radical latin signifie « porter » dans « conifère » (qui porte des cônes), « mammifère » ou « somnifère » ?",
+          "type": "mcq",
+          "options": [
+            "-fère",
+            "-vore",
+            "-cide",
+            "-duc"
+          ],
+          "correct": 0,
+          "solution": "Le radical latin « -fère » signifie « porter / produire » (*mammifère* = qui porte des mamelles ; *somnifère* = qui porte le sommeil)."
+        },
+        {
+          "text": "Quel radical latin signifie « tuer » dans « insecticide », « bactéricide » et « homicide » ?",
+          "type": "mcq",
+          "options": [
+            "-cide",
+            "-fère",
+            "-vore",
+            "-audi"
+          ],
+          "correct": 0,
+          "solution": "Le radical latin « -cide » signifie « tuer » (*insecticide* = qui tue les insectes ; *fongicide* = qui tue les champignons)."
+        },
+        {
+          "text": "À l'aide des radicaux grecs « anthrop » et « phage », que signifie « anthropophage » ?",
+          "type": "mcq",
+          "options": [
+            "Qui mange de la chair humaine (anthrop = humain + phage = mangeur)",
+            "Qui aime l'humanité (anthrop = humain + phage = amour)",
+            "Qui étudie les sociétés humaines (anthrop = humain + phage = étude)",
+            "Qui a peur des êtres humains (anthrop = humain + phage = peur)"
+          ],
+          "correct": 0,
+          "solution": "« Anthrop » (être humain) + « phage » (mangeur) = mangeur d'hommes. (Avec « phil » : *philanthrope* = qui aime l'humanité)."
+        },
+        {
+          "text": "Que signifie le mot « bibliophile » grâce à ses radicaux grecs « bibli » et « phil » ?",
+          "type": "mcq",
+          "options": [
+            "Une personne qui aime les livres (bibli = livre + phil = amour)",
+            "Une personne qui a peur des livres (bibli = livre + phil = peur)",
+            "Une personne qui écrit des livres (bibli = livre + phil = écrire)",
+            "Une personne qui vend des chevaux (bibli = cheval + phil = vendre)"
+          ],
+          "correct": 0,
+          "solution": "« Bibli » (livre) + « phil » (amour) = amateur de beaux livres. (Avec « thèque » = armoire : *bibliothèque*)."
+        },
+        {
+          "text": "Que signifient respectivement les radicaux grecs « bio » et « graph » dans « biographie » ?",
+          "type": "mcq",
+          "options": [
+            "« bio » = vie et « graph » = écrire",
+            "« bio » = livre et « graph » = étude",
+            "« bio » = terre et « graph » = chaleur",
+            "« bio » = temps et « graph » = parole"
+          ],
+          "correct": 0,
+          "solution": "« Biographie » = récit écrit (*graph*) de la vie (*bio*) d'une personne. Autres exemples : *biologie*, *graphologie*, *orthographe*."
+        },
+        {
+          "text": "À partir des radicaux grecs « chrono » et « phobe », que désigne la « chronophobie » ?",
+          "type": "mcq",
+          "options": [
+            "La peur maladive du temps qui passe (chrono = temps + phobe = peur)",
+            "L'étude précise de la mesure du temps (chrono = temps + phobe = étude)",
+            "L'amour passionné des horloges anciennes (chrono = temps + phobe = amour)",
+            "L'écriture d'une histoire dans l'ordre du temps (chrono = temps + phobe = écrire)"
+          ],
+          "correct": 0,
+          "solution": "« Chrono » (temps) + « phobe » (peur) = peur du temps. (Avec « logie » : *chronologie* = étude/ordre des temps)."
+        },
+        {
+          "text": "Quel radical grec signifie « pouvoir » dans « démocratie » (pouvoir du peuple) et « aristocratie » ?",
+          "type": "mcq",
+          "options": [
+            "crato (cratie)",
+            "théo",
+            "géo",
+            "path"
+          ],
+          "correct": 0,
+          "solution": "« Crato » (ou *-cratie*) vient du grec *kratos* (pouvoir, autorité) : *démocratie*, *bureaucratie*, *autocratie*."
+        },
+        {
+          "text": "Quel mot composé grec signifie littéralement « la description / l'écriture de la Terre » ?",
+          "type": "mcq",
+          "options": [
+            "géographie (géo = terre + graph = écrire)",
+            "géologie (géo = terre + logie = étude)",
+            "météorologie (météor + logie = étude)",
+            "bibliographie (bibli = livre + graph = écrire)"
+          ],
+          "correct": 0,
+          "solution": "« Géo » (terre) + « graph » (écrire/décrire) = géographie. « Géologie » signifie « étude de la Terre »."
+        },
+        {
+          "text": "Quel radical grec signifie « cheval » dans « hippodrome » (champ de courses) et « hippique » ?",
+          "type": "mcq",
+          "options": [
+            "hippo",
+            "thermo",
+            "patho",
+            "mono"
+          ],
+          "correct": 0,
+          "solution": "« Hippo » vient du grec *hippos* (cheval) : *hippodrome*, *hippopotame* (cheval de fleuve), *équitation* (équi- en latin)."
+        },
+        {
+          "text": "Que signifient les radicaux grecs « path » et « logie » dans « pathologie » ?",
+          "type": "mcq",
+          "options": [
+            "« path » = souffrance / maladie et « logie » = étude",
+            "« path » = parole / voix et « logie » = écriture",
+            "« path » = chaleur / feu et « logie » = pouvoir",
+            "« path » = dieu / sacré et « logie » = amour"
+          ],
+          "correct": 0,
+          "solution": "« Pathologie » = étude (*logie*) des maladies / souffrances (*path*). Ex. du cours : *psychopathe*, *météorologie*."
+        },
+        {
+          "text": "Que signifie littéralement l'adjectif « aphone » (a- + phone) ?",
+          "type": "mcq",
+          "options": [
+            "Qui a perdu la voix / sans parole (a- = sans + phone = parole)",
+            "Qui parle plusieurs langues (a- = plusieurs + phone = parole)",
+            "Qui écrit sans faire de bruit (a- = sans + phone = écrire)",
+            "Qui craint la lumière du jour (a- = peur + phone = lumière)"
+          ],
+          "correct": 0,
+          "solution": "Préfixe privatif grec « a- » (sans) + radical « phone » (voix, parole) = qui n'a plus de voix. (Autres exemples : *téléphone*, *francophone*, *homophone*)."
+        },
+        {
+          "text": "Que signifie le mot composé « monothéisme » grâce au radical grec « théo » ?",
+          "type": "mcq",
+          "options": [
+            "La croyance en un seul dieu (mono = un seul + théo = dieu)",
+            "La croyance en la chaleur solaire (mono = un seul + théo = chaleur)",
+            "L'étude d'un seul livre sacré (mono = un seul + théo = livre)",
+            "Le pouvoir d'un seul dirigeant (mono = un seul + théo = pouvoir)"
+          ],
+          "correct": 0,
+          "solution": "« Théo » signifie « dieu » (ex. *monothéisme*, *polythéisme*, *théologie*, *athée* = sans dieu)."
+        },
+        {
+          "text": "À partir du radical grec « therm » (chaleur), que désigne une « bactérie thermophile » ?",
+          "type": "mcq",
+          "options": [
+            "Une bactérie qui aime la chaleur (therm = chaleur + phil = amour)",
+            "Une bactérie qui craint la chaleur (therm = chaleur + phil = peur)",
+            "Une bactérie qui détruit les livres (therm = livre + phil = tuer)",
+            "Une bactérie qui mesure le temps (therm = temps + phil = mesurer)"
+          ],
+          "correct": 0,
+          "solution": "« Therm » (chaleur) + « phil » (amour / qui aime) = organisme qui aime les températures élevées. (Contraire : *thermophobe*)."
+        },
+        {
+          "text": "Que signifie le mot « bactériophage » cité dans le cours ?",
+          "type": "mcq",
+          "options": [
+            "Un virus qui détruit / « mange » les bactéries (phage = mangeur)",
+            "Un médicament qui nourrit et protège les bactéries",
+            "Un microscope qui permet de dessiner les bactéries",
+            "Une crainte irrationnelle des bactéries invisibles"
+          ],
+          "correct": 0,
+          "solution": "« Bactério » + « phage » (mangeur) : un bactériophage est un virus qui infecte et détruit les bactéries."
+        },
+        {
+          "text": "Le mot « chronomètre » est un mot composé savant formé des radicaux grecs signifiant « temps » (chrono) et « mesure » (mètre).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! *Chrono* (temps) + *metron* (mesure) = instrument qui mesure le temps."
+        },
+        {
+          "text": "Le radical latin « aqua » et le radical grec « hydro » signifient tous deux « eau » (ex. : aquatique, hydrologie).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! « Aqua » est le radical latin de l'eau (*aquarium*, *aqueduc*) et « hydro » son équivalent grec (*hydrologie*, *hydrophobe*)."
+        },
+        {
+          "text": "Quel mot composé savant (9 lettres) associe les radicaux grecs « bio » (vie) et « logie » (étude) pour désigner la science du vivant ?",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "biologie",
+            "la biologie"
+          ],
+          "solution": "« Bio » (vie) + « logie » (étude) forme « biologie »."
+        }
+      ]
+    }
+  ]
+}

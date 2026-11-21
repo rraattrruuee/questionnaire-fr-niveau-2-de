@@ -296,6 +296,26 @@
       "description": "Processus et instances de socialisation, capitaux de Bourdieu, genre, démarche scientifique en SES, calculs de variations, indices base 100 et vocabulaire clé (SES Seconde - Karine CHAKIR).",
       "tags": ["ses", "socialisation", "bourdieu", "demarche-scientifique", "correlation", "causalite", "coefficient-multiplicateur", "indices", "vocabulaire"],
       "added": "2026-11-12"
+    },
+    {
+      "id": "anglais-vampire-contraste-opposition",
+      "title": "Vampires, contraste et opposition — Vocabulaire & Grammaire",
+      "subject": "anglais",
+      "file": "data/anglais/vampire-contraste-opposition.json",
+      "questionsCount": 122,
+      "description": "Vocabulaire du cours sur les vampires (mots clés, sens multiples, portrait et atmosphère), marqueurs de comparaison/similitude, connecteurs de contraste/opposition, exercices en contexte et traductions FR ↔ EN (122 questions).",
+      "tags": ["anglais", "vocabulaire", "vampire", "contraste", "opposition", "comparaison", "connecteurs", "traduction"],
+      "added": "2026-11-21"
+    },
+    {
+      "id": "francais-natures-fonctions-neologie",
+      "title": "Natures, fonctions et modes de néologie",
+      "subject": "francais",
+      "file": "data/francais/natures-fonctions-neologie.json",
+      "questionsCount": 106,
+      "description": "Classes grammaticales (natures), fonctions dans la phrase et formation du lexique : mots simples, dérivation (préfixes latins/grecs, suffixes), composition populaire/savante, radicaux et conversion (106 questions).",
+      "tags": ["francais", "grammaire", "natures", "fonctions", "neologie", "lexique", "etymologie"],
+      "added": "2026-11-21"
     }
   ],
   "tools": [

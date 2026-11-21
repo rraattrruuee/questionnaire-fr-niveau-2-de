@@ -1,0 +1,1453 @@
+{
+  "subject": "anglais",
+  "title": "Vampires, contraste et opposition — Vocabulaire & Grammaire",
+  "description": "Vocabulaire du cours sur les vampires (mots clés, sens multiples, portrait et atmosphère), marqueurs de comparaison/similitude, connecteurs de contraste/opposition, exercices en contexte et traductions FR ↔ EN.",
+  "categories": [
+    {
+      "category": "Vocabulaire du cours — Le monde du vampire",
+      "questions": [
+        {
+          "text": "Que signifie la préposition anglaise « throughout » (ex. : throughout the night) ?",
+          "type": "mcq",
+          "options": [
+            "À travers ou tout au long de",
+            "Au-dessus ou par-delà de",
+            "En dehors ou à l'écart de",
+            "Avant la fin ou juste après"
+          ],
+          "correct": 0,
+          "solution": "« Throughout » signifie « à travers » (dans l'espace) ou « tout au long de » (dans le temps)."
+        },
+        {
+          "text": "Dans une scène nocturne, que désigne principalement le nom « a dark figure » ?",
+          "type": "mcq",
+          "options": [
+            "Une silhouette sombre ou un personnage",
+            "Une blessure profonde ou une cicatrice",
+            "Une formule magique ou une incantation",
+            "Une lanterne éteinte ou une chandelle"
+          ],
+          "correct": 0,
+          "solution": "« Figure » signifie ici « silhouette » ou « personnage » (il peut aussi signifier « chiffre » ou le verbe « comprendre »)."
+        },
+        {
+          "text": "Outre « silhouette / personnage », quels autres sens courants le mot « figure » a-t-il en anglais ?",
+          "type": "mcq",
+          "options": [
+            "Un chiffre ou le verbe comprendre",
+            "Un cercueil ou le verbe enfermer",
+            "Un miroir ou le verbe refléter",
+            "Une ombre ou le verbe disparaître"
+          ],
+          "correct": 0,
+          "solution": "« Figure » peut aussi signifier « un chiffre / un nombre » (ex. : sales figures) ou « comprendre / estimer » (ex. : to figure out)."
+        },
+        {
+          "text": "Quelle est la traduction exacte du mot « hue » dans « a pale hue » ?",
+          "type": "mcq",
+          "options": [
+            "Une teinte ou une nuance de couleur",
+            "Un cri strident ou un hurlement",
+            "Une odeur forte ou un parfum",
+            "Une cape sombre ou un manteau"
+          ],
+          "correct": 0,
+          "solution": "« Hue » désigne une teinte ou une nuance de couleur (ex. : a reddish hue = une teinte rougeâtre)."
+        },
+        {
+          "text": "Outre « bout / pointe », quels autres sens courants peut avoir le mot anglais « tip » ?",
+          "type": "mcq",
+          "options": [
+            "Un conseil ou un pourboire",
+            "Un piège ou une embuscade",
+            "Un tombeau ou un cercueil",
+            "Un serment ou une promesse"
+          ],
+          "correct": 0,
+          "solution": "« Tip » signifie « bout / pointe » (the tip of his fangs), mais aussi « conseil » (a useful tip) et « pourboire » (to leave a tip)."
+        },
+        {
+          "text": "Comment traduit-on l'expression idiomatique « pitch dark » ?",
+          "type": "mcq",
+          "options": [
+            "Noir comme dans un four (obscurité totale)",
+            "Légèrement brumeux (brouillard matinal)",
+            "Éclairé par la lune (lumière argentée)",
+            "Silencieux comme une tombe (calme plat)"
+          ],
+          "correct": 0,
+          "solution": "« Pitch dark » décrit une obscurité totale, littéralement « noir comme de la poix » (noir comme dans un four)."
+        },
+        {
+          "text": "Quel adjectif anglais signifie « effrayant / qui donne la chair de poule » ?",
+          "type": "mcq",
+          "options": [
+            "spooky",
+            "tiny",
+            "cheerful",
+            "harmless"
+          ],
+          "correct": 0,
+          "solution": "« Spooky » qualifie ce qui est effrayant, sinistre ou qui donne la chair de poule (ex. : a spooky castle)."
+        },
+        {
+          "text": "Que signifie le verbe « to clutch » (ex. : to clutch the cross) ?",
+          "type": "mcq",
+          "options": [
+            "Serrer fort ou s'agripper à",
+            "Laisser tomber ou abandonner",
+            "Briser en mille morceaux",
+            "Cacher sous un vêtement"
+          ],
+          "correct": 0,
+          "solution": "« To clutch » signifie « serrer » ou « s'agripper » (et le nom « clutch » désigne aussi l'embrayage d'une voiture)."
+        },
+        {
+          "text": "En mécanique automobile, quel est l'autre sens du nom « clutch » ?",
+          "type": "mcq",
+          "options": [
+            "L'embrayage",
+            "Le volant",
+            "Le phare",
+            "Le frein"
+          ],
+          "correct": 0,
+          "solution": "Outre « serrer / s'agripper », le mot « clutch » désigne aussi la pédale ou le mécanisme d'embrayage."
+        },
+        {
+          "text": "Quel verbe à particule signifie « se déguiser » ou « bien s'habiller » ?",
+          "type": "mcq",
+          "options": [
+            "to dress up",
+            "to wake up",
+            "to give up",
+            "to show up"
+          ],
+          "correct": 0,
+          "solution": "« To dress up » signifie « se déguiser » (ex. for Halloween) ou « bien s'habiller / se mettre sur son trente-et-un »."
+        },
+        {
+          "text": "Quelle est la différence de sens entre « to imply » et « to refer to » ?",
+          "type": "mcq",
+          "options": [
+            "« Imply » = sous-entendre ; « refer to » = faire allusion à",
+            "« Imply » = ordonner ; « refer to » = refuser poliment",
+            "« Imply » = expliquer ; « refer to » = oublier volontairement",
+            "« Imply » = interdire ; « refer to » = répéter mot pour mot"
+          ],
+          "correct": 0,
+          "solution": "« To imply » signifie « sous-entendre / impliquer », tandis que « to refer to » signifie « se référer à / faire allusion à »."
+        },
+        {
+          "text": "Dans « The author's words imply that the stranger is a vampire », que signifie « imply » ?",
+          "type": "mcq",
+          "options": [
+            "Sous-entendent / impliquent",
+            "Prouvent scientifiquement",
+            "Réfutent catégoriquement",
+            "Passent complètement sous silence"
+          ],
+          "correct": 0,
+          "solution": "« To imply » signifie « sous-entendre / suggérer de manière implicite »."
+        },
+        {
+          "text": "Que veut dire le verbe « to scatter » (ex. : the bats scattered in the sky) ?",
+          "type": "mcq",
+          "options": [
+            "Disperser ou éparpiller",
+            "Rassembler ou regrouper",
+            "Endormir ou paralyser",
+            "Poursuivre ou encercler"
+          ],
+          "correct": 0,
+          "solution": "« To scatter » signifie « disperser » ou « s'éparpiller » dans plusieurs directions."
+        },
+        {
+          "text": "Dans la phrase « I could barely make out a figure in the fog », que signifie « make out » ?",
+          "type": "mcq",
+          "options": [
+            "Distinguer ou discerner difficilement",
+            "Inventer ou imaginer de toutes pièces",
+            "Fuir ou courir très rapidement",
+            "Attirer ou appeler à haute voix"
+          ],
+          "correct": 0,
+          "solution": "« To make out » signifie « distinguer / discerner » (visuellement ou auditivement) et peut aussi signifier « comprendre »."
+        },
+        {
+          "text": "Comment dit-on « semer la terreur / répandre la peur » en anglais ?",
+          "type": "mcq",
+          "options": [
+            "to spread fear",
+            "to hide fear",
+            "to share joy",
+            "to lose hope"
+          ],
+          "correct": 0,
+          "solution": "« To spread fear » signifie littéralement « répandre la peur / semer la terreur »."
+        },
+        {
+          "text": "Quel verbe utilise-t-on pour traduire « craindre quelqu'un / avoir peur de quelqu'un » sans préposition après le verbe ?",
+          "type": "mcq",
+          "options": [
+            "to fear someone",
+            "to trust someone",
+            "to miss someone",
+            "to warn someone"
+          ],
+          "correct": 0,
+          "solution": "« To fear someone » signifie « craindre / avoir peur de quelqu'un ». Attention : on ne met pas de préposition après « fear »."
+        },
+        {
+          "text": "Complétez en anglais : « The villagers locked their doors because Dracula tried to ______ throughout the region. »",
+          "type": "mcq",
+          "options": [
+            "spread fear",
+            "dress up",
+            "make out",
+            "refer to"
+          ],
+          "correct": 0,
+          "solution": "Dracula essayait de « semer la terreur » (« spread fear ») dans toute la région (« throughout the region »)."
+        },
+        {
+          "text": "Complétez en anglais : « When the sun rose, the crows ______ in every direction. »",
+          "type": "mcq",
+          "options": [
+            "scattered",
+            "clutched",
+            "implied",
+            "referred"
+          ],
+          "correct": 0,
+          "solution": "« Scattered » (prétérit de *to scatter*) signifie que les corbeaux se sont dispersés / éparpillés."
+        },
+        {
+          "text": "Traduisez en anglais l'expression : « au lieu de » (suivie d'un nom ou d'un verbe en -ing).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "instead of"
+          ],
+          "solution": "« Instead of » signifie « au lieu de » (ex. : Instead of sleeping, he went out). Sans complément, on emploie « instead » seul."
+        },
+        {
+          "text": "Traduisez en anglais : « à travers / tout au long de » (1 mot).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "throughout"
+          ],
+          "solution": "« Throughout » signifie « à travers / tout au long de » (ex. : throughout the century)."
+        },
+        {
+          "text": "Donnez l'adjectif composé anglais du cours signifiant « noir comme dans un four » (obscurité totale).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "pitch dark",
+            "pitch-dark"
+          ],
+          "solution": "« Pitch dark » (ou « pitch-dark ») signifie « noir comme dans un four »."
+        },
+        {
+          "text": "En anglais, le mot « actually » signifie « actuellement / en ce moment ».",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! C'est un faux-ami classique : « actually » signifie « en fait / en réalité ». « Actuellement » se dit « currently » ou « nowadays »."
+        },
+        {
+          "text": "Le mot « like » peut servir de préposition signifiant « comme » ou « ressembler à » (ex. : He looks like a vampire).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! « Like » introduit une ressemblance ou une comparaison avec un nom ou un pronom."
+        },
+        {
+          "text": "Le verbe « to refer to » se construit toujours avec la préposition « to » devant son complément.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! On dit « to refer to something/someone » (= faire allusion à / se référer à)."
+        }
+      ]
+    },
+    {
+      "category": "Vocabulaire d'application — Portraits, créatures et atmosphère",
+      "questions": [
+        {
+          "text": "Comment traduit-on « un monstre » en anglais ?",
+          "type": "mcq",
+          "options": [
+            "a monster",
+            "a hunter",
+            "a mirror",
+            "a witness"
+          ],
+          "correct": 0,
+          "solution": "« A monster » désigne un monstre (ex. : Dracula is often seen as a monster)."
+        },
+        {
+          "text": "Quelle expression verbale courante traduit « ressembler à quelqu'un » sur le plan physique ?",
+          "type": "mcq",
+          "options": [
+            "to look like someone",
+            "to look for someone",
+            "to look after someone",
+            "to look at someone"
+          ],
+          "correct": 0,
+          "solution": "« To look like someone » = ressembler à quelqu'un. Attention à ne pas confondre avec « look for » (chercher) ou « look after » (s'occuper de)."
+        },
+        {
+          "text": "Quel verbe d'origine latine, plus soutenu que « look like », signifie également « ressembler à » (sans préposition) ?",
+          "type": "mcq",
+          "options": [
+            "to resemble",
+            "to remind",
+            "to remember",
+            "to remain"
+          ],
+          "correct": 0,
+          "solution": "« To resemble someone » signifie « ressembler à quelqu'un » sans utiliser « to » ni « like »."
+        },
+        {
+          "text": "Comment dit-on « la lumière du soleil » en anglais ?",
+          "type": "mcq",
+          "options": [
+            "sunlight",
+            "moonlight",
+            "starlight",
+            "candlelight"
+          ],
+          "correct": 0,
+          "solution": "« Sunlight » (ou « daylight » pour la lumière du jour) désigne la lumière du soleil, mortelle pour de nombreux vampires."
+        },
+        {
+          "text": "Quel nom anglais signifie « l'apparence » (physique ou extérieure) ?",
+          "type": "mcq",
+          "options": [
+            "appearance",
+            "experience",
+            "confidence",
+            "importance"
+          ],
+          "correct": 0,
+          "solution": "« Appearance » signifie « apparence » (ex. : Despite his charming appearance, he is dangerous)."
+        },
+        {
+          "text": "Quel adjectif anglais signifie « charmant / séduisant » ?",
+          "type": "mcq",
+          "options": [
+            "charming",
+            "terrifying",
+            "disgusting",
+            "exhausting"
+          ],
+          "correct": 0,
+          "solution": "« Charming » signifie « charmant » : les vampires modernes ont souvent une apparence charmante malgré leur nature."
+        },
+        {
+          "text": "Comment traduit-on l'adjectif « dangereux » en anglais ?",
+          "type": "mcq",
+          "options": [
+            "dangerous",
+            "generous",
+            "curious",
+            "nervous"
+          ],
+          "correct": 0,
+          "solution": "« Dangerous » signifie « dangereux » (ex. : a dangerous creature)."
+        },
+        {
+          "text": "Quel adjectif anglais traduit « déterminé » (qui ne renonce pas) ?",
+          "type": "mcq",
+          "options": [
+            "determined",
+            "frightened",
+            "confused",
+            "exhausted"
+          ],
+          "correct": 0,
+          "solution": "« Determined » signifie « déterminé / résolu » (ex. : He is determined to survive)."
+        },
+        {
+          "text": "Que signifie le verbe anglais « to seduce » ?",
+          "type": "mcq",
+          "options": [
+            "Séduire / charmer quelqu'un",
+            "Poursuivre / chasser quelqu'un",
+            "Protéger / défendre quelqu'un",
+            "Trahir / dénoncer quelqu'un"
+          ],
+          "correct": 0,
+          "solution": "« To seduce » signifie « séduire » (ex. : The vampire tries to seduce his victims)."
+        },
+        {
+          "text": "Quel adjectif anglais signifie « fascinant » ?",
+          "type": "mcq",
+          "options": [
+            "fascinating",
+            "frightening",
+            "boring",
+            "annoying"
+          ],
+          "correct": 0,
+          "solution": "« Fascinating » signifie « fascinant ». À ne pas confondre avec « frightening » (effrayant)."
+        },
+        {
+          "text": "Quelle est la différence entre « fascinated » et « fascinating » en anglais ?",
+          "type": "mcq",
+          "options": [
+            "« Fascinated » = fasciné (ressenti) ; « fascinating » = fascinant (qui fascine)",
+            "« Fascinated » = effrayé (ressenti) ; « fascinating » = effrayant (qui effraie)",
+            "« Fascinated » s'emploie pour les objets ; « fascinating » pour les humains",
+            "« Fascinated » est un nom commun ; « fascinating » est un adverbe"
+          ],
+          "correct": 0,
+          "solution": "Adjectifs en -ed (sentiment ressenti : *I am fascinated by him*) vs adjectifs en -ing (qualité de la personne/chose : *He is fascinating*)."
+        },
+        {
+          "text": "Comment traduit-on « les crocs » d'un vampire en anglais ?",
+          "type": "mcq",
+          "options": [
+            "fangs",
+            "wings",
+            "claws",
+            "horns"
+          ],
+          "correct": 0,
+          "solution": "« Fangs » désigne les crocs (d'un vampire, d'un loup ou d'un serpent)."
+        },
+        {
+          "text": "Que signifie le verbe « to bite » (prétérit : bit, participe passé : bitten) ?",
+          "type": "mcq",
+          "options": [
+            "Mordre",
+            "Hurler",
+            "Voler",
+            "Disparaître"
+          ],
+          "correct": 0,
+          "solution": "« To bite » signifie « mordre » (ex. : Vampires bite their victims' necks)."
+        },
+        {
+          "text": "Quel adjectif décrit le teint typique d'un vampire qui ne sort jamais au soleil ?",
+          "type": "mcq",
+          "options": [
+            "pale",
+            "tanned",
+            "bright",
+            "warm"
+          ],
+          "correct": 0,
+          "solution": "« Pale » signifie « pâle » (ex. : a pale face / a pale hue)."
+        },
+        {
+          "text": "Comment traduit-on « l'obscurité » ou « les ténèbres » en anglais ?",
+          "type": "mcq",
+          "options": [
+            "darkness",
+            "daylight",
+            "kindness",
+            "weakness"
+          ],
+          "correct": 0,
+          "solution": "« Darkness » est le nom dérivé de « dark » et signifie « l'obscurité / les ténèbres »."
+        },
+        {
+          "text": "Quel synonyme de « to fear » utilise l'adjectif « afraid » ?",
+          "type": "mcq",
+          "options": [
+            "to be afraid of",
+            "to be proud of",
+            "to be fond of",
+            "to be tired of"
+          ],
+          "correct": 0,
+          "solution": "« To be afraid of » signifie « avoir peur de / craindre » (synonyme de « to fear »)."
+        },
+        {
+          "text": "Dans la tradition gothique, quels trois éléments permettent généralement de repousser ou vaincre un vampire ?",
+          "type": "mcq",
+          "options": [
+            "Garlic, a wooden stake and sunlight",
+            "Silver coins, a feather and moonlight",
+            "Salt water, a candle and twilight",
+            "Honey, a golden ring and daylight"
+          ],
+          "correct": 0,
+          "solution": "L'ail (*garlic*), le pieu en bois (*a wooden stake*) et la lumière du soleil (*sunlight*) sont les armes traditionnelles contre les vampires."
+        },
+        {
+          "text": "Que signifie le mot anglais « coffin » dans un récit de vampire ?",
+          "type": "mcq",
+          "options": [
+            "Un cercueil",
+            "Un château",
+            "Un cimetière",
+            "Une chauve-souris"
+          ],
+          "correct": 0,
+          "solution": "« A coffin » signifie « un cercueil » (où dort le vampire pendant la journée)."
+        },
+        {
+          "text": "Que signifie l'adjectif « immortal » (ex. : Vampires are immortal creatures) ?",
+          "type": "mcq",
+          "options": [
+            "Immortel",
+            "Invisible",
+            "Innocente",
+            "Impuissant"
+          ],
+          "correct": 0,
+          "solution": "« Immortal » signifie « immortel » (qui ne peut pas mourir de vieillesse)."
+        },
+        {
+          "text": "Complétez en anglais : « Even though he looks like an ordinary teenager, he is ______ to protect his secret. »",
+          "type": "mcq",
+          "options": [
+            "determined",
+            "spooky",
+            "pitch dark",
+            "scattered"
+          ],
+          "correct": 0,
+          "solution": "« Determined to + verbe » signifie « déterminé à » (protéger son secret)."
+        },
+        {
+          "text": "Traduisez en anglais l'adjectif « fascinant ».",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "fascinating"
+          ],
+          "solution": "« Fascinating » signifie « fascinant »."
+        },
+        {
+          "text": "Traduisez en anglais le verbe « craindre » (base verbale avec ou sans « to »).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "to fear",
+            "fear"
+          ],
+          "solution": "« To fear » signifie « craindre / avoir peur de »."
+        },
+        {
+          "text": "Traduisez en anglais le nom « la lumière du soleil » (1 mot).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "sunlight",
+            "sun light"
+          ],
+          "solution": "« Sunlight » désigne la lumière du soleil."
+        },
+        {
+          "text": "En anglais, « a bat » désigne une chauve-souris, animal souvent associé aux vampires.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! « A bat » = une chauve-souris (ex. : Dracula turns into a bat)."
+        },
+        {
+          "text": "Le mot anglais « bloodthirsty » signifie « qui craint le sang ».",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! « Blood » (sang) + « thirsty » (assoiffé) = « assoiffé de sang / sanguinaire »."
+        }
+      ]
+    },
+    {
+      "category": "Comparaison et similitude — Emploi et syntaxe",
+      "questions": [
+        {
+          "text": "Parmi ces expressions, laquelle sert à exprimer la comparaison ou la similitude ?",
+          "type": "mcq",
+          "options": [
+            "in the same way",
+            "on the contrary",
+            "in contrast",
+            "nevertheless"
+          ],
+          "correct": 0,
+          "solution": "« In the same way » signifie « de la même manière / de la même façon » et exprime la similitude."
+        },
+        {
+          "text": "Quelle est la traduction exacte de « likewise » dans une phrase de comparaison ?",
+          "type": "mcq",
+          "options": [
+            "De même / pareillement",
+            "Au contraire / à l'inverse",
+            "Malgré cela / pourtant",
+            "À la place / au lieu de"
+          ],
+          "correct": 0,
+          "solution": "« Likewise » signifie « de même / pareillement » (ex. : Dracula avoids sunlight; likewise, modern vampires stay indoors)."
+        },
+        {
+          "text": "Quelle préposition s'utilise obligatoirement après « similarly » pour comparer deux noms ?",
+          "type": "mcq",
+          "options": [
+            "to (similarly to)",
+            "at (similarly at)",
+            "of (similarly of)",
+            "by (similarly by)"
+          ],
+          "correct": 0,
+          "solution": "On dit « similarly to » + nom/pronom (de manière similaire à / tout comme)."
+        },
+        {
+          "text": "Quelle est la différence d'emploi entre « like » et « just as » ?",
+          "type": "mcq",
+          "options": [
+            "« Like » précède un nom ; « just as » précède sujet + verbe",
+            "« Like » précède un verbe ; « just as » précède un adjectif",
+            "« Like » exprime l'opposition ; « just as » exprime la cause",
+            "« Like » s'emploie au passé ; « just as » s'emploie au futur"
+          ],
+          "correct": 0,
+          "solution": "On dit « like a ghost » (+ nom/pronom) mais « just as his father did » (+ proposition sujet + verbe)."
+        },
+        {
+          "text": "Que signifie « as well as » dans « Vampires are charming as well as dangerous » ?",
+          "type": "mcq",
+          "options": [
+            "Ainsi que / tout comme",
+            "Au lieu de / plutôt que",
+            "Contrairement à / à l'opposé de",
+            "En dépit de / malgré"
+          ],
+          "correct": 0,
+          "solution": "« As well as » signifie « ainsi que » ou « tout comme » et permet d'ajouter un élément similaire."
+        },
+        {
+          "text": "Complétez : « ______ traditional monsters, this vampire fears sunlight. » (similitude + nom)",
+          "type": "mcq",
+          "options": [
+            "Like",
+            "Unlike",
+            "However",
+            "Instead"
+          ],
+          "correct": 0,
+          "solution": "« Like » + groupe nominal signifie « comme / à l'image de » et marque la similitude."
+        },
+        {
+          "text": "Complétez : « ______ Dracula, Edward Cullen is immortal, even if he doesn't drink human blood. »",
+          "type": "mcq",
+          "options": [
+            "Similarly to",
+            "On the contrary",
+            "Even so",
+            "Nevertheless"
+          ],
+          "correct": 0,
+          "solution": "« Similarly to » est suivi d'un nom propre ou d'un groupe nominal pour exprimer une ressemblance."
+        },
+        {
+          "text": "Complétez : « The bat vanished into the night, ______ the vampire disappeared in the fog. »",
+          "type": "mcq",
+          "options": [
+            "just as",
+            "unlike",
+            "instead of",
+            "however"
+          ],
+          "correct": 0,
+          "solution": "« Just as » introduit une proposition complète (sujet « the vampire » + verbe « disappeared ») : « tout comme »."
+        },
+        {
+          "text": "Complétez : « Bats hunt at night; ______, vampires only go out after sunset. »",
+          "type": "mcq",
+          "options": [
+            "in the same way",
+            "on the contrary",
+            "unlike",
+            "instead"
+          ],
+          "correct": 0,
+          "solution": "« In the same way » (de la même manière) relie deux phrases exprimant des comportements similaires."
+        },
+        {
+          "text": "Complétez : « Nosferatu has a pale hue ______ sharp fangs. »",
+          "type": "mcq",
+          "options": [
+            "as well as",
+            "just as",
+            "on the contrary",
+            "even so"
+          ],
+          "correct": 0,
+          "solution": "« As well as » (« ainsi que ») relie deux groupes nominaux : « un teint pâle ainsi que des crocs acérés »."
+        },
+        {
+          "text": "Complétez : « Traditional vampires sleep in coffins; ______, they avoid garlic and silver. »",
+          "type": "mcq",
+          "options": [
+            "likewise",
+            "unlike",
+            "instead",
+            "however"
+          ],
+          "correct": 0,
+          "solution": "« Likewise » (« de même ») ajoute un fait allant dans le même sens que le précédent."
+        },
+        {
+          "text": "Complétez : « He seduces his victims ______ a spider traps its prey. »",
+          "type": "mcq",
+          "options": [
+            "just as",
+            "similarly to",
+            "likewise",
+            "in contrast"
+          ],
+          "correct": 0,
+          "solution": "Devant la proposition complète « a spider traps its prey » (sujet + verbe), on emploie « just as »."
+        },
+        {
+          "text": "Laquelle de ces phrases anglaises exprime une comparaison grammaticalement CORRECTE ?",
+          "type": "mcq",
+          "options": [
+            "Similarly to his ancestor, the young vampire fears sunlight.",
+            "Similarly his ancestor, the young vampire fears sunlight.",
+            "Likewise his ancestor, the young vampire fears sunlight.",
+            "In the same way his ancestor, the young vampire fears sunlight."
+          ],
+          "correct": 0,
+          "solution": "Devant un groupe nominal (« his ancestor »), il faut « Similarly to » ou « Like » (mais pas *Similarly* seul ni *Likewise* seul)."
+        },
+        {
+          "text": "Les expressions « like », « likewise », « just as » et « as well as » expriment toutes la comparaison ou la similitude.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! Ces quatre outils font partie des marqueurs de comparaison et de similitude."
+        },
+        {
+          "text": "L'expression « similarly to » sert à introduire un contraste fort entre deux personnages.",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! « Similarly to » exprime la ressemblance (similitude). Pour un contraste devant un nom, on utilise « unlike »."
+        },
+        {
+          "text": "Après « as well as », un verbe se met généralement à la forme en -ing (ex. : He scares people as well as biting them).",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! Quand « as well as » est suivi d'un verbe, on emploie la forme en -ing (*as well as biting*)."
+        },
+        {
+          "text": "Complétez avec l'adverbe de similitude en un seul mot : « Dracula is charming; ______, he can be very polite to his guests. »",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "likewise"
+          ],
+          "solution": "« Likewise » (« de même / pareillement ») convient parfaitement après un point-virgule pour renforcer l'idée similaire."
+        },
+        {
+          "text": "Complétez avec 2 mots : « ______ ______ his brother, he has pale skin and dark eyes. » (= de manière similaire à)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "similarly to"
+          ],
+          "solution": "« Similarly to » (+ nom) signifie « de manière similaire à / tout comme »."
+        }
+      ]
+    },
+    {
+      "category": "Connecteurs de contraste et d'opposition — Sens et pièges",
+      "questions": [
+        {
+          "text": "Que signifie « unlike » dans « Unlike his brother, he hates sport » ?",
+          "type": "mcq",
+          "options": [
+            "Contrairement à",
+            "Conformément à",
+            "Parallèlement à",
+            "Grâce à"
+          ],
+          "correct": 0,
+          "solution": "« Unlike » (+ nom ou pronom) signifie « contrairement à » et marque une différence nette."
+        },
+        {
+          "text": "Quel connecteur signifie « cependant » et s'emploie souvent après un point-virgule ou en début de phrase suivi d'une virgule ?",
+          "type": "mcq",
+          "options": [
+            "However",
+            "Unlike",
+            "Instead of",
+            "As well as"
+          ],
+          "correct": 0,
+          "solution": "« However » signifie « cependant / toutefois » (ex. : I like dogs; however, I'm allergic to them)."
+        },
+        {
+          "text": "Comment traduit-on « yet » dans « He is very smart, yet he doesn't do his homework » ?",
+          "type": "mcq",
+          "options": [
+            "Cependant / pourtant",
+            "Ainsi / par conséquent",
+            "En fait / en réalité",
+            "Au lieu de / à la place"
+          ],
+          "correct": 0,
+          "solution": "Employé comme conjonction après une virgule, « yet » signifie « cependant / pourtant »."
+        },
+        {
+          "text": "Quel est le sens exact de « nevertheless » ?",
+          "type": "mcq",
+          "options": [
+            "Néanmoins",
+            "Autrement dit",
+            "Par exemple",
+            "Par conséquent"
+          ],
+          "correct": 0,
+          "solution": "« Nevertheless » signifie « néanmoins / toutefois » et introduit une opposition ou une concession soutenue."
+        },
+        {
+          "text": "Dans « He's tired, but he's still working », quel est le sens de « still » ?",
+          "type": "mcq",
+          "options": [
+            "Pourtant / malgré tout / quand même",
+            "Rarement / presque jamais",
+            "Immobilisé / sans bouger",
+            "Seulement / uniquement"
+          ],
+          "correct": 0,
+          "solution": "Dans ce contexte d'opposition, « still » signifie « pourtant / malgré tout / quand même »."
+        },
+        {
+          "text": "Que signifie l'expression « even so » dans « It was raining; even so, we went out » ?",
+          "type": "mcq",
+          "options": [
+            "Malgré cela",
+            "À cause de cela",
+            "Pendant ce temps",
+            "Avant tout cela"
+          ],
+          "correct": 0,
+          "solution": "« Even so » signifie « malgré cela / même ainsi »."
+        },
+        {
+          "text": "Comment traduit-on la structure double « on the one hand... on the other hand » ?",
+          "type": "mcq",
+          "options": [
+            "D'un côté... d'un autre côté",
+            "D'abord... et ensuite enfin",
+            "Plus souvent... moins souvent",
+            "Au début... à la toute fin"
+          ],
+          "correct": 0,
+          "solution": "« On the one hand..., on the other hand... » permet de peser deux aspects opposés : « d'un côté..., d'un autre côté... »."
+        },
+        {
+          "text": "Dans quel cas précis emploie-t-on « on the contrary » ?",
+          "type": "mcq",
+          "options": [
+            "Pour réfuter une idée négative et affirmer l'exact opposé",
+            "Pour ajouter un deuxième exemple allant dans le même sens",
+            "Pour résumer la conclusion générale d'un récit fantastique",
+            "Pour indiquer l'heure exacte à laquelle un fait se produit"
+          ],
+          "correct": 0,
+          "solution": "« On the contrary » (« au contraire ») sert à contredire ce qui vient d'être nié (ex. : He isn't lazy; on the contrary, he works hard)."
+        },
+        {
+          "text": "Quelle est la différence grammaticale entre « instead » et « instead of » ?",
+          "type": "mcq",
+          "options": [
+            "« Instead » s'emploie seul ; « instead of » précède un nom ou -ing",
+            "« Instead » précède un adjectif ; « instead of » précède un verbe conjugué",
+            "« Instead » exprime la similitude ; « instead of » exprime le temps",
+            "« Instead » est familier ; « instead of » ne s'emploie qu'à l'écrit"
+          ],
+          "correct": 0,
+          "solution": "Ex. : « I didn't go out; instead, I stayed home » vs « Instead of going out, I stayed home »."
+        },
+        {
+          "text": "Quelle locution signifie « en revanche / par contraste » pour opposer deux situations ?",
+          "type": "mcq",
+          "options": [
+            "in contrast",
+            "in the same way",
+            "at first sight",
+            "as a result"
+          ],
+          "correct": 0,
+          "solution": "« In contrast » signifie « en revanche / par contraste » (ex. : In contrast, her sister loves sports)."
+        },
+        {
+          "text": "Dans la phrase « Actually, he isn't a real vampire », que signifie « actually » ?",
+          "type": "mcq",
+          "options": [
+            "En fait / en réalité",
+            "Actuellement / aujourd'hui",
+            "Habituellement / d'ordinaire",
+            "Éventuellement / peut-être"
+          ],
+          "correct": 0,
+          "solution": "« Actually » sert à corriger une impression ou à rétablir la vérité : « en fait / en réalité »."
+        },
+        {
+          "text": "Comment traduit-on « actuellement » en anglais (pour éviter le faux-ami « actually ») ?",
+          "type": "mcq",
+          "options": [
+            "currently / nowadays / at the moment",
+            "actually / really / in fact",
+            "eventually / finally / at last",
+            "possibly / perhaps / maybe"
+          ],
+          "correct": 0,
+          "solution": "« Actuellement » se traduit par « currently », « at the moment » ou « nowadays » (jamais *actually* qui veut dire « en fait »)."
+        },
+        {
+          "text": "Laquelle de ces phrases anglaises contient une ERREUR de grammaire ou de sens ?",
+          "type": "mcq",
+          "options": [
+            "Unlike he is dangerous, he looks charming.",
+            "Unlike Dracula, this vampire doesn't fear garlic.",
+            "He is dangerous; nevertheless, she still loves him.",
+            "It was pitch dark; even so, we could make out a figure."
+          ],
+          "correct": 0,
+          "solution": "« Unlike » est une préposition : il doit être suivi d'un nom ou d'un pronom (*Unlike him / Unlike Dracula*), jamais d'une proposition entière (*he is dangerous*)."
+        },
+        {
+          "text": "Laquelle de ces phrases utilise correctement « instead » ?",
+          "type": "mcq",
+          "options": [
+            "He didn't bite her; instead, he gave her a warning.",
+            "He didn't bite her; instead her, he gave a warning.",
+            "Instead staying at home, he went to the spooky castle.",
+            "He drank tomato juice instead wine at dinner."
+          ],
+          "correct": 0,
+          "solution": "« Instead » sans « of » s'emploie seul (après un point-virgule ou en fin de phrase). Devant un nom ou V-ing, il faut « instead of »."
+        },
+        {
+          "text": "Dans « He is very smart; nevertheless, he refuses to do his homework », par quel connecteur peut-on remplacer « nevertheless » sans changer le sens ?",
+          "type": "mcq",
+          "options": [
+            "however",
+            "likewise",
+            "actually",
+            "instead"
+          ],
+          "correct": 0,
+          "solution": "« Nevertheless » (néanmoins) et « however » (cependant) sont tous deux des adverbes de concession/opposition interchangeables ici."
+        },
+        {
+          "text": "On peut utiliser « on the contrary » pour opposer deux préférences différentes comme « J'aime le thé ; au contraire, ma sœur aime le café ».",
+          "type": "mcq",
+          "options": [
+            "Faux",
+            "Vrai"
+          ],
+          "correct": 0,
+          "solution": "Faux ! Pour opposer deux personnes ou deux faits différents sans nier le premier, on utilise « in contrast », « however » ou « whereas », pas « on the contrary »."
+        },
+        {
+          "text": "L'expression « on the one hand... on the other hand » s'emploie pour présenter deux points de vue contrastés sur un même sujet.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! Elle structure une nuance équilibrée : « D'un côté..., d'un autre côté... »."
+        },
+        {
+          "text": "« Yet » peut signifier « déjà / encore » dans une question ou négation, mais signifie « pourtant / cependant » entre deux propositions.",
+          "type": "mcq",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correct": 0,
+          "solution": "Vrai ! Ex. : *Have you finished yet?* (déjà) vs *He is smart, yet he doesn't work* (pourtant)."
+        },
+        {
+          "text": "Traduisez en anglais l'expression : « malgré cela » (2 mots).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "even so"
+          ],
+          "solution": "« Even so » signifie « malgré cela »."
+        },
+        {
+          "text": "Traduisez en anglais le connecteur : « néanmoins » (1 mot).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "nevertheless"
+          ],
+          "solution": "« Nevertheless » signifie « néanmoins »."
+        }
+      ]
+    },
+    {
+      "category": "Exercices d'application — Phrases à compléter en contexte",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "Complétez : « ______ classic monsters, this vampire does not look scary at all. »",
+          "type": "mcq",
+          "options": [
+            "Unlike",
+            "However",
+            "Instead",
+            "Yet"
+          ],
+          "correct": 0,
+          "solution": "Devant le groupe nominal « classic monsters », on utilise la préposition « Unlike » (« Contrairement à »)."
+        },
+        {
+          "text": "Complétez : « He looks charming; ______, he is extremely dangerous. »",
+          "type": "mcq",
+          "options": [
+            "however",
+            "unlike",
+            "likewise",
+            "instead of"
+          ],
+          "correct": 0,
+          "solution": "Entre deux propositions indépendantes séparées par un point-virgule, on emploie « however » (« cependant »)."
+        },
+        {
+          "text": "Complétez : « The vampire isn't ugly; ______, he is very handsome and charming. »",
+          "type": "mcq",
+          "options": [
+            "on the contrary",
+            "in the same way",
+            "similarly to",
+            "instead of"
+          ],
+          "correct": 0,
+          "solution": "La première proposition est négative (« isn't ugly ») et la seconde affirme l'exact opposé (« handsome ») : on utilise « on the contrary »."
+        },
+        {
+          "text": "Complétez : « Dracula fears sunlight; ______, he still goes out at dusk when he is determined to hunt. »",
+          "type": "mcq",
+          "options": [
+            "nevertheless",
+            "similarly",
+            "likewise",
+            "instead of"
+          ],
+          "correct": 0,
+          "solution": "« Nevertheless » (« néanmoins ») exprime ici la concession entre la peur du soleil et le fait de sortir au crépuscule."
+        },
+        {
+          "text": "Complétez : « It was pitch dark in the spooky castle; ______, she decided to enter. »",
+          "type": "mcq",
+          "options": [
+            "even so",
+            "like",
+            "just as",
+            "as well as"
+          ],
+          "correct": 0,
+          "solution": "« Even so » signifie « malgré cela » et convient après un point-virgule."
+        },
+        {
+          "text": "Complétez : « She didn't run away; ______, she clutched her silver cross. »",
+          "type": "mcq",
+          "options": [
+            "instead",
+            "instead of",
+            "unlike",
+            "however"
+          ],
+          "correct": 0,
+          "solution": "Il n'y a pas de nom après le mot manquant, il est suivi d'une virgule et d'une proposition : on emploie « instead » (« à la place »)."
+        },
+        {
+          "text": "Complétez : « ______ fearing the vampire, the young hero was fascinated by him. »",
+          "type": "mcq",
+          "options": [
+            "Instead of",
+            "Instead",
+            "However",
+            "Even so"
+          ],
+          "correct": 0,
+          "solution": "Devant un verbe en -ing (« fearing »), on utilise obligatoirement la préposition « Instead of » (« Au lieu de »)."
+        },
+        {
+          "text": "Complétez : « ______, the vampire seems fascinating; ______, he remains a dangerous monster. »",
+          "type": "mcq",
+          "options": [
+            "On the one hand / on the other hand",
+            "In the same way / likewise",
+            "On the contrary / instead of",
+            "Similarly to / as well as"
+          ],
+          "correct": 0,
+          "solution": "La structure « On the one hand..., on the other hand... » oppose les deux facettes du personnage."
+        },
+        {
+          "text": "Complétez : « Everyone thinks he is a harmless guest. ______, he is an immortal vampire! »",
+          "type": "mcq",
+          "options": [
+            "Actually",
+            "Likewise",
+            "Similarly",
+            "Unlike"
+          ],
+          "correct": 0,
+          "solution": "« Actually » (« En fait / En réalité ») rectifie une fausse croyance."
+        },
+        {
+          "text": "Complétez : « The monster tries to spread fear throughout the village, ______ he fails to frighten the children. »",
+          "type": "mcq",
+          "options": [
+            "yet",
+            "unlike",
+            "instead of",
+            "similarly to"
+          ],
+          "correct": 0,
+          "solution": "Après une virgule pour relier deux propositions opposées, « yet » (« pourtant / cependant ») est le connecteur idéal."
+        },
+        {
+          "text": "Complétez : « Dracula hates sunlight. ______, the vampire in this modern film loves walking in the daylight. »",
+          "type": "mcq",
+          "options": [
+            "In contrast",
+            "In the same way",
+            "Likewise",
+            "Just as"
+          ],
+          "correct": 0,
+          "solution": "« In contrast » (« En revanche / Par contraste ») oppose deux personnages aux comportements différents."
+        },
+        {
+          "text": "Complétez : « He dressed up ______ a vampire for the party, and he really looked ______ one! »",
+          "type": "mcq",
+          "options": [
+            "as / like",
+            "like / as",
+            "unlike / yet",
+            "instead / still"
+          ],
+          "correct": 0,
+          "solution": "On dit « dress up as » (se déguiser en) et « look like » (ressembler à)."
+        },
+        {
+          "text": "Complétez : « The dark figure stood right in front of me, ______ I couldn't make out its exact hue in the pitch darkness. »",
+          "type": "mcq",
+          "options": [
+            "yet",
+            "unlike",
+            "instead of",
+            "similarly to"
+          ],
+          "correct": 0,
+          "solution": "« Yet » (« pourtant / cependant ») relie deux propositions opposées séparées par une virgule."
+        },
+        {
+          "text": "Complétez : « The hunter knew the castle was spooky, but he ______ walked through the gate. »",
+          "type": "mcq",
+          "options": [
+            "still",
+            "unlike",
+            "instead of",
+            "likewise"
+          ],
+          "correct": 0,
+          "solution": "« Still » (« quand même / malgré tout ») se place souvent entre le sujet et le verbe principal après « but »."
+        },
+        {
+          "text": "Complétez : « She thought the man was trying to help her; ______, he was trying to seduce and bite her. »",
+          "type": "mcq",
+          "options": [
+            "actually",
+            "likewise",
+            "similarly",
+            "unlike"
+          ],
+          "correct": 0,
+          "solution": "« Actually » (« en fait / en réalité ») révèle la vérité cachée derrière l'apparence."
+        },
+        {
+          "text": "Complétez : « ______ drinking human blood, this modern vampire feeds on animal blood. »",
+          "type": "mcq",
+          "options": [
+            "Instead of",
+            "Instead",
+            "However",
+            "Nevertheless"
+          ],
+          "correct": 0,
+          "solution": "Devant le gérondif « drinking », on utilise « Instead of » (« Au lieu de »)."
+        },
+        {
+          "text": "Complétez la phrase du cours : « I like dogs; ________, I'm allergic to them. » (1 mot = cependant)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "however",
+            "yet",
+            "nevertheless"
+          ],
+          "solution": "Dans la phrase modèle du cours : « I like dogs; however, I'm allergic to them. » (« however » = cependant)."
+        },
+        {
+          "text": "Complétez la phrase du cours : « He's tired, but he's ________ working. » (1 mot = malgré tout / quand même)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "still"
+          ],
+          "solution": "Dans la phrase modèle du cours : « He's tired, but he's still working. » (« still » = quand même / malgré tout)."
+        },
+        {
+          "text": "Complétez avec 1 seul mot : « I didn't go out; ________, I stayed home to read a vampire novel. »",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "instead"
+          ],
+          "solution": "« Instead » seul après un point-virgule signifie « à la place / au lieu de cela »."
+        },
+        {
+          "text": "Complétez avec 1 seul mot : « ________ his brother, he hates horror films and spooky stories. » (= Contrairement à)",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "unlike"
+          ],
+          "solution": "« Unlike his brother » = Contrairement à son frère."
+        }
+      ]
+    },
+    {
+      "category": "Traductions et reformulations (FR ↔ EN)",
+      "notepad": true,
+      "questions": [
+        {
+          "text": "Quelle traduction anglaise est la plus fidèle pour : « Il est dangereux ; pourtant, il est fascinant » ?",
+          "type": "mcq",
+          "options": [
+            "He is dangerous; however, he is fascinating.",
+            "He is dangerous; on the contrary, he is fascinating.",
+            "He is dangerous; instead of, he is fascinating.",
+            "He is dangerous; similarly, he is fascinating."
+          ],
+          "correct": 0,
+          "solution": "« However » (ou « yet / nevertheless / still ») traduit l'opposition « pourtant / cependant ». « On the contrary » serait incorrect car la première phrase n'est pas négative."
+        },
+        {
+          "text": "Quelle traduction anglaise correspond à : « Contrairement aux autres monstres, il cherche à séduire ses victimes » ?",
+          "type": "mcq",
+          "options": [
+            "Unlike other monsters, he tries to seduce his victims.",
+            "However other monsters, he tries to seduce his victims.",
+            "Instead other monsters, he tries to seduce his victims.",
+            "Actually other monsters, he tries to seduce his victims."
+          ],
+          "correct": 0,
+          "solution": "« Contrairement à » + nom se traduit par « Unlike »."
+        },
+        {
+          "text": "Quelle traduction anglaise correspond à : « Il n'est pas effrayant ; au contraire, il a une apparence charmante » ?",
+          "type": "mcq",
+          "options": [
+            "He isn't spooky; on the contrary, he has a charming appearance.",
+            "He isn't spooky; in the same way, he has a charming appearance.",
+            "He isn't spooky; instead of, he has a charming appearance.",
+            "He isn't spooky; unlike, he has a charming appearance."
+          ],
+          "correct": 0,
+          "solution": "Après une phrase négative (« isn't spooky »), « au contraire » se traduit par « on the contrary »."
+        },
+        {
+          "text": "Traduisez en français : « Actually, he doesn't look like a monster at all. »",
+          "type": "mcq",
+          "options": [
+            "En fait, il ne ressemble pas du tout à un monstre.",
+            "Actuellement, il ne regarde pas du tout un monstre.",
+            "En revanche, il n'aime pas du tout les monstres.",
+            "Par ailleurs, il ne craint pas du tout les monstres."
+          ],
+          "correct": 0,
+          "solution": "« Actually » = en fait / en réalité ; « look like » = ressembler à ; « not... at all » = pas du tout."
+        },
+        {
+          "text": "Traduisez en français : « She was terrified; even so, she was determined to face him. »",
+          "type": "mcq",
+          "options": [
+            "Elle était terrifiée ; malgré cela, elle était déterminée à l'affronter.",
+            "Elle était terrifiée ; de même, elle était prête à le séduire.",
+            "Elle était terrifiée ; au lieu de cela, elle a choisi de fuir.",
+            "Elle était terrifiée ; au contraire, elle a fermé la porte."
+          ],
+          "correct": 0,
+          "solution": "« Even so » = malgré cela ; « determined to » = déterminée à ; « to face someone » = affronter quelqu'un."
+        },
+        {
+          "text": "Traduisez en anglais : « Au lieu de craindre la lumière du soleil, il sort pendant la journée. »",
+          "type": "mcq",
+          "options": [
+            "Instead of fearing sunlight, he goes out during the day.",
+            "Instead fearing sunlight, he goes out during the day.",
+            "Unlike to fear sunlight, he goes out during the day.",
+            "On the contrary of fearing sunlight, he goes out during the day."
+          ],
+          "correct": 0,
+          "solution": "« Instead of » + V-ing (« fearing ») + « sunlight » (sans article pour désigner la lumière du soleil en général)."
+        },
+        {
+          "text": "Traduisez en anglais : « D'un côté, les vampires sont charmants ; d'un autre côté, ils sèment la terreur. »",
+          "type": "mcq",
+          "options": [
+            "On the one hand, vampires are charming; on the other hand, they spread fear.",
+            "In the same way, vampires are charming; in contrast, they spread fear.",
+            "Unlike vampires are charming; nevertheless, they spread fear.",
+            "On the contrary, vampires are charming; instead, they spread fear."
+          ],
+          "correct": 0,
+          "solution": "On utilise le couple « On the one hand..., on the other hand... » et « to spread fear » (semer la terreur)."
+        },
+        {
+          "text": "Quelle phrase reformule le mieux « Dracula is terrifying, whereas Edward is charming » en utilisant « in contrast » ?",
+          "type": "mcq",
+          "options": [
+            "Dracula is terrifying. In contrast, Edward is charming.",
+            "Dracula is terrifying. In contrast of, Edward is charming.",
+            "Dracula is terrifying; on the contrary, Edward is charming.",
+            "Dracula is terrifying; likewise, Edward is charming."
+          ],
+          "correct": 0,
+          "solution": "« In contrast, ... » (en début de phrase avec virgule) oppose directement deux personnages."
+        },
+        {
+          "text": "Traduisez en français : « In the pitch dark, I could barely make out the tip of his fangs. »",
+          "type": "mcq",
+          "options": [
+            "Dans l'obscurité totale, je distinguais à peine la pointe de ses crocs.",
+            "Dans la pénombre, j'entendais à peine le bruit de ses pas.",
+            "Au clair de lune, je comprenais à peine le sens de ses mots.",
+            "Dans le brouillard, je serrais à peine le manche de mon pieu."
+          ],
+          "correct": 0,
+          "solution": "« Pitch dark » = noir comme dans un four / obscurité totale ; « make out » = distinguer ; « tip » = pointe ; « fangs » = crocs."
+        },
+        {
+          "text": "Traduisez en français : « What do these spooky stories refer to? »",
+          "type": "mcq",
+          "options": [
+            "À quoi ces histoires effrayantes font-elles allusion ?",
+            "Pourquoi ces histoires effrayantes sèment-elles la peur ?",
+            "Comment ces histoires effrayantes se dispersent-elles ?",
+            "Quand ces histoires effrayantes ont-elles commencé ?"
+          ],
+          "correct": 0,
+          "solution": "« Spooky » = effrayant ; « refer to » = faire allusion à / se référer à."
+        },
+        {
+          "text": "Traduisez en anglais : « Tout comme Dracula, ce personnage a un teint pâle et des crocs acérés. »",
+          "type": "mcq",
+          "options": [
+            "Like Dracula, this figure has a pale hue and sharp fangs.",
+            "Just as Dracula, this figure has a pale hue and sharp fangs.",
+            "Likewise Dracula, this figure has a pale hue and sharp fangs.",
+            "Unlike Dracula, this figure has a pale hue and sharp fangs."
+          ],
+          "correct": 0,
+          "solution": "Devant un nom propre seul (« Dracula »), on emploie « Like » (ou « Similarly to »), et non « Just as » qui exige un verbe."
+        },
+        {
+          "text": "Traduisez en anglais : « Il se déguise en vampire ; cependant, ses amis n'ont pas peur de lui. »",
+          "type": "mcq",
+          "options": [
+            "He dresses up as a vampire; however, his friends don't fear him.",
+            "He dresses up like a vampire; instead, his friends don't fear him.",
+            "He clutches a vampire; nevertheless, his friends fear him.",
+            "He refers to a vampire; on the contrary, his friends fear him."
+          ],
+          "correct": 0,
+          "solution": "« To dress up as » = se déguiser en ; « however » = cependant ; « to fear someone » = avoir peur de quelqu'un."
+        },
+        {
+          "text": "Traduisez en anglais (3 mots) : « Elle s'agrippa à la croix » (utiliser « clutch » au prétérit : clutched + the cross).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "she clutched the cross"
+          ],
+          "solution": "« She clutched the cross » (« to clutch » = serrer / s'agripper)."
+        },
+        {
+          "text": "Traduisez en anglais (4 mots) : « Contrairement à son frère » (utiliser « unlike »).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "unlike his brother",
+            "unlike her brother"
+          ],
+          "solution": "« Unlike his/her brother » (phrase modèle du cours : « Unlike his brother, he hates sport »)."
+        },
+        {
+          "text": "Traduisez en anglais (3 mots) : « Au contraire » (expression d'opposition qui réfute une négation).",
+          "type": "text",
+          "options": [],
+          "correct": 0,
+          "accepted": [
+            "on the contrary"
+          ],
+          "solution": "« On the contrary » signifie « au contraire »."
+        }
+      ]
+    }
+  ]
+}
